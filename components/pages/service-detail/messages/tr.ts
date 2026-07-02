@@ -39,7 +39,7 @@ export const serviceDetailsTr = {
   statSupportHint:
     "Yayın sonrası teknik destek, revizyon ve küçük düzenlemeler için ayrılan süre aralığı.",
   statTiersHint:
-    "Temel, Standart ve Pro olmak üzere üç net kapsam seviyesi; ihtiyacınıza göre karşılaştırabilirsiniz.",
+    "Girişim, Profesyonel ve Premium olmak üzere üç net kapsam seviyesi; ihtiyacınıza göre karşılaştırabilirsiniz.",
   statRevisionsHint:
     "Seçtiğiniz pakette tanımlı tasarım ve içerik revizyonu sayısı. Geri bildirimlerinizi liste halinde iletmeniz yeterli; her revizyonda bu maddeler uygulanır.",
   featureDetailLabel: "Özellik detayı",

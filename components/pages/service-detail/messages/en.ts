@@ -39,7 +39,7 @@ export const serviceDetailsEn = {
   statSupportHint:
     "Post-launch support window for technical assistance, revisions and minor updates.",
   statTiersHint:
-    "Three clear scope levels — Basic, Standard and Pro — so you can compare options easily.",
+    "Three clear scope levels — Startup, Professional and Premium — so you can compare options easily.",
   statRevisionsHint:
     "Design and content revisions included in your chosen package. Send your feedback as a single list — each revision covers those items.",
   featureDetailLabel: "Feature detail",

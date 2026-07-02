@@ -6,7 +6,7 @@ export const webPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "14-21",
-        revisions: "2",
+        revisions: "3",
         scope: "1-5",
         featureGroups: [
           {
@@ -43,7 +43,7 @@ export const webPackagesEn = {
       },
       standart: {
         deliveryDays: "21-30",
-        revisions: "4",
+        revisions: "5",
         scope: "1-10",
         featureGroups: [
           {
@@ -91,7 +91,7 @@ export const webPackagesEn = {
       },
       pro: {
         deliveryDays: "30-45",
-        revisions: "6",
+        revisions: "7",
         scope: "∞",
         featureGroups: [
           {

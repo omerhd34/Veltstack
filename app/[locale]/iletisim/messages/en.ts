@@ -34,9 +34,9 @@ export const contactEn = {
   ],
 
   tierOptions: [
-    { value: "temel", label: "Basic" },
-    { value: "standart", label: "Standard" },
-    { value: "pro", label: "Pro" },
+    { value: "temel", label: "Startup" },
+    { value: "standart", label: "Professional" },
+    { value: "pro", label: "Premium" },
     { value: "belirsiz", label: "Not sure yet" },
   ],
 

@@ -34,9 +34,9 @@ export const contactTr = {
   ],
 
   tierOptions: [
-    { value: "temel", label: "Temel" },
-    { value: "standart", label: "Standart" },
-    { value: "pro", label: "Pro" },
+    { value: "temel", label: "Girişim" },
+    { value: "standart", label: "Profesyonel" },
+    { value: "pro", label: "Premium" },
     { value: "belirsiz", label: "Henüz bilmiyorum" },
   ],
 
