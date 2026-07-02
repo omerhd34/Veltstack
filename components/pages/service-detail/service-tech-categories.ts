@@ -57,7 +57,15 @@ export const webSitesiTechCategories: ServiceTechCategoryDefinition[] = [
   },
   {
     key: "database",
-    items: ["MySQL", "Prisma", "MongoDB", "PostgreSQL", "MSSQL", "SQLite", "Railway"],
+    items: [
+      "MySQL",
+      "Prisma",
+      "MongoDB",
+      "PostgreSQL",
+      "MSSQL",
+      "SQLite",
+      "Railway",
+    ],
   },
   {
     key: "devops",
@@ -108,7 +116,15 @@ export const uygulamaGelistirmeTechCategories: ServiceTechCategoryDefinition[] =
     },
     {
       key: "database",
-      items: ["PostgreSQL", "MySQL", "MongoDB", "Prisma", "SQLite", "Redis", "Railway"],
+      items: [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Prisma",
+        "SQLite",
+        "Redis",
+        "Railway",
+      ],
     },
     {
       key: "devops",
