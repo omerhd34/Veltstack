@@ -13,7 +13,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "80+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Çoklu Tarayıcı Uyumluluğu",
               "Temel UI/UX düzeni ve marka renklerine uyarlama",
               "SSL, HTTPS ve temel güvenlik yapılandırması",
@@ -48,7 +48,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "90+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Sayfa geçişleri, scroll efektleri ve mikro animasyonlar",
               "Premium UI bileşenleri, kartlar ve hover durumları",
@@ -97,7 +97,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "95+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
               "Figma tasarımlarına piksel uyumlu arayüz kodlama",
               "Dark / Light mode desteği",
@@ -155,7 +155,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "80+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Çoklu Tarayıcı Uyumluluğu",
               "Temel UI/UX düzeni ve marka renklerine uyarlama",
               "SSL, HTTPS ve temel güvenlik yapılandırması",
@@ -190,7 +190,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "90+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Kurumsal renk paleti ve tipografiye uyumlu arayüz",
               "Kurumsal stile uygun premium bileşenler ve animasyonlar",
@@ -241,7 +241,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "95+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Figma tasarımlarına piksel uyumlu kurumsal arayüz kodlama",
               "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
               "Dark / Light mode desteği",
@@ -308,7 +308,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "80+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Çoklu Tarayıcı Uyumluluğu",
               "Temel UI/UX düzeni ve marka renklerine uyarlama",
               "SSL, HTTPS ve ödeme akışı güvenlik yapılandırması",
@@ -354,7 +354,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "90+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Mobil, tablet ve masaüstünde hızlı alışveriş deneyimi",
               "Premium e-ticaret UI bileşenleri ve filtre animasyonları",
@@ -406,7 +406,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "95+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Figma tasarımlarına piksel uyumlu e-ticaret arayüzü",
               "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
               "Dark / Light mode desteği",

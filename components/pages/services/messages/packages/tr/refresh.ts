@@ -43,7 +43,7 @@ export const refreshPackagesTr = {
           {
             label: "Analiz & Tasarım",
             items: [
-              "90+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Kapsamlı UX ve performans denetimi",
               "Marka kimliğine uygun arayüz yenileme",
@@ -77,7 +77,7 @@ export const refreshPackagesTr = {
           {
             label: "Kapsamlı Yenileme",
             items: [
-              "95+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Next.js tabanlı modern altyapıya geçiş",
               "Özel tasarım ve animasyonlar",
               "Dark / Light mode desteği",
@@ -145,7 +145,7 @@ export const refreshPackagesTr = {
           {
             label: "Tasarım & UX",
             items: [
-              "90+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Bilgi mimarisi yeniden yapılandırma",
               "Premium UI bileşenleri",
@@ -179,7 +179,7 @@ export const refreshPackagesTr = {
           {
             label: "Kurumsal Altyapı Yenileme",
             items: [
-              "95+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Özel geliştirilmiş yüksek hızlı altyapı",
               "Sınırsız dil ve çoklu departman yapısı",
@@ -249,7 +249,7 @@ export const refreshPackagesTr = {
           {
             label: "Mağaza Yenileme",
             items: [
-              "90+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Gelişmiş ürün filtreleme ve arama",
               "Sepet ve ödeme akışı optimizasyonu",
@@ -283,7 +283,7 @@ export const refreshPackagesTr = {
           {
             label: "Kurumsal Mağaza Altyapısı",
             items: [
-              "95+ PageSpeed hedefi için performans iyileştirmeleri",
+              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Ölçeklenebilir modern altyapıya geçiş",
               "Sınırsız dil ve para birimi desteği",

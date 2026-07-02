@@ -75,7 +75,7 @@ export const refreshPackagesEn = {
               "Migration to modern Next.js infrastructure",
               "Custom design and animations",
               "Dark / Light mode support",
-              "90+ PageSpeed score target",
+              "Fast load times and SEO-friendly performance optimization",
             ],
           },
           {

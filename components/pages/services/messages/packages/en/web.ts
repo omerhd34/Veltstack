@@ -13,7 +13,7 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               "Mobile-compatible (responsive) development",
-              "Fast loading and performance optimization",
+              "Fast load times and SEO-friendly performance optimization",
               "SSL certificate and security setup",
               "Cross-browser compatibility testing",
               "Basic UI/UX template adaptation",
@@ -50,7 +50,7 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               "Mobile-compatible (responsive) development",
-              "90+ Google PageSpeed score target",
+              "Fast load times and SEO-friendly performance optimization",
               "Page transition animations and scroll effects",
               "Premium UI components and hover effects",
               "Cross-browser compatibility testing",
@@ -155,7 +155,7 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               "Mobile-compatible development aligned with corporate identity",
-              "Fast loading and performance optimization",
+              "Fast load times and SEO-friendly performance optimization",
               "SSL certificate and security setup",
               "Cross-browser compatibility testing",
               "Basic UI/UX template adaptation",
@@ -194,7 +194,7 @@ export const webPackagesEn = {
             items: [
               "Custom coding aligned with corporate color palette and typography",
               "Mobile-compatible (responsive) development",
-              "90+ Google PageSpeed score target",
+              "Fast load times and SEO-friendly performance optimization",
               "Premium UI components and corporate animations",
               "Cross-browser compatibility testing",
             ],
@@ -310,7 +310,7 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               "Mobile-compatible ecommerce interface",
-              "Fast loading and performance optimization",
+              "Fast load times and SEO-friendly performance optimization",
               "SSL certificate and payment security infrastructure",
               "Cross-browser compatibility testing",
               "Basic UI/UX template adaptation",
@@ -358,7 +358,7 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               "Modern mobile-compatible (responsive) development",
-              "90+ Google PageSpeed score target",
+              "Fast load times and SEO-friendly performance optimization",
               "Premium ecommerce UI components and filter animations",
               "Cross-browser compatibility testing",
             ],
