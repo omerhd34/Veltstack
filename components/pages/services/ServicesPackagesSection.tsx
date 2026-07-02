@@ -2,7 +2,10 @@ import { getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ServicesPackagesPanel } from "./ServicesPackagesPanel";
 import type { PackageCardData } from "./ServicePackageCard";
-import type { PackageCategory } from "./packages-config";
+import {
+  categoryCommonFeaturesKey,
+  type PackageCategory,
+} from "./packages-config";
 
 interface ServicesPackagesSectionProps {
   className?: string;
@@ -77,6 +80,24 @@ export async function ServicesPackagesSection({
     ? activeIntro.p1
     : t("packagesSubtitle");
 
+  const commonFeatures = Object.fromEntries(
+    Object.entries(categoryCommonFeaturesKey).map(([category, featuresKey]) => [
+      category,
+      {
+        title: t(`${featuresKey}Title`),
+        items: t.raw(featuresKey) as string[],
+      },
+    ]),
+  ) as Partial<
+    Record<
+      PackageCategory,
+      {
+        title: string;
+        items: string[];
+      }
+    >
+  >;
+
   return (
     <section
       id="services-packages"
@@ -100,6 +121,7 @@ export async function ServicesPackagesSection({
         <ServicesPackagesPanel
           className={lockedCategory ? "mt-3 md:mt-6" : "mt-12 md:mt-16"}
           lockedCategory={lockedCategory}
+          commonFeatures={commonFeatures}
           labels={{
             tabs,
             tierTemel: t("tierTemel"),
@@ -116,6 +138,7 @@ export async function ServicesPackagesSection({
             statKeywords: t("statKeywords"),
             statProjects: t("statProjects"),
             getQuote: t("getQuote"),
+            deliveryGroupLabel: t("deliveryGroupLabel"),
           }}
           intros={{
             web: {

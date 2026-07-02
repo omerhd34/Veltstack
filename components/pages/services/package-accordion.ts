@@ -1,5 +1,8 @@
 import type { PackageTier } from "./packages-config";
-import type { PackageCardData } from "./ServicePackageCard";
+import type {
+  PackageCardData,
+  PackageFeatureGroup,
+} from "./ServicePackageCard";
 
 export const compactAccordionQuery = "(max-width: 1023px)";
 export const desktopGridQuery = "(min-width: 1024px)";
@@ -20,6 +23,42 @@ export function collectFeatureGroupLabels(
   }
 
   return labels;
+}
+
+export function collectCommonFeatureGroupLabels(
+  packages: PackageCardData[],
+  tier: PackageTier,
+): string[] {
+  return collectFeatureGroupLabels(packages, tier).filter((label) =>
+    packages.every((pkg) =>
+      (pkg.tiers[tier].featureGroups ?? []).some(
+        (group) => group.label === label,
+      ),
+    ),
+  );
+}
+
+export function sortFeatureGroupsForDisplay(
+  groups: PackageFeatureGroup[],
+  commonLabels: string[],
+  deliveryGroupLabel: string,
+): PackageFeatureGroup[] {
+  const commonSet = new Set(commonLabels);
+  const groupByLabel = new Map(groups.map((group) => [group.label, group]));
+
+  const orderedCommon = [...commonLabels];
+  const deliveryIndex = orderedCommon.indexOf(deliveryGroupLabel);
+  if (deliveryIndex >= 0 && deliveryIndex !== orderedCommon.length - 1) {
+    orderedCommon.splice(deliveryIndex, 1);
+    orderedCommon.push(deliveryGroupLabel);
+  }
+
+  const common = orderedCommon
+    .map((label) => groupByLabel.get(label))
+    .filter((group): group is PackageFeatureGroup => !!group);
+  const rest = groups.filter((group) => !commonSet.has(group.label));
+
+  return [...common, ...rest];
 }
 
 export function getDefaultOpenGroups(

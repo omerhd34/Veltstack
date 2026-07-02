@@ -8,11 +8,13 @@ import {
   type PackageTier,
 } from "./packages-config";
 import {
+  collectCommonFeatureGroupLabels,
   compactAccordionQuery,
   getDefaultOpenGroups,
 } from "./package-accordion";
 import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
 import { ServicesPackagesIntro } from "./ServicesPackagesIntro";
+import { PackageCommonFeatures } from "./PackageCommonFeatures";
 import { ServicePackageCard, type PackageCardData } from "./ServicePackageCard";
 import { usePackageGroupHeightSync } from "./usePackageGroupHeightSync";
 
@@ -38,6 +40,7 @@ interface PackagesPanelLabels {
   statKeywords: string;
   statProjects: string;
   getQuote: string;
+  deliveryGroupLabel: string;
 }
 
 interface CategoryPackages {
@@ -58,10 +61,16 @@ interface CategoryIntros {
   maintenance: PackagesIntro;
 }
 
+interface CategoryCommonFeatures {
+  title: string;
+  items: string[];
+}
+
 interface ServicesPackagesPanelProps {
   labels: PackagesPanelLabels;
   intros: CategoryIntros;
   packages: CategoryPackages;
+  commonFeatures?: Partial<Record<PackageCategory, CategoryCommonFeatures>>;
   lockedCategory?: PackageCategory;
   className?: string;
 }
@@ -97,6 +106,7 @@ export function ServicesPackagesPanel({
   labels,
   intros,
   packages,
+  commonFeatures,
   lockedCategory,
   className,
 }: ServicesPackagesPanelProps) {
@@ -115,10 +125,16 @@ export function ServicesPackagesPanel({
   const scopeKey = scopeLabelKey[activeCategory];
   const revisionKey = revisionLabelKey[activeCategory];
   const deliveryKey = deliveryLabelKey[activeCategory];
+  const activeCommonFeatures = commonFeatures?.[activeCategory];
 
   const visiblePackages = useMemo(
     () => slugs.map((slug) => categoryPackages[slug]),
     [categoryPackages, slugs],
+  );
+
+  const commonGroupLabels = useMemo(
+    () => collectCommonFeatureGroupLabels(visiblePackages, activeTier),
+    [visiblePackages, activeTier],
   );
 
   useLayoutEffect(() => {
@@ -137,7 +153,11 @@ export function ServicesPackagesPanel({
 
   const openGroupsKey = [...openGroups].sort().join("\0");
 
-  usePackageGroupHeightSync(gridRef, [activeCategory, activeTier], openGroupsKey);
+  usePackageGroupHeightSync(
+    gridRef,
+    [activeCategory, activeTier],
+    openGroupsKey,
+  );
 
   const toggleGroup = (label: string) => {
     setOpenGroups((prev) => {
@@ -160,6 +180,7 @@ export function ServicesPackagesPanel({
     statRevision: labels[revisionKey] as string,
     statScope: labels[scopeKey] as string,
     getQuote: labels.getQuote,
+    deliveryGroupLabel: labels.deliveryGroupLabel,
     hideMiddleStat: activeCategory === "audit",
   };
 
@@ -182,10 +203,26 @@ export function ServicesPackagesPanel({
         p2={intro.p2}
       />
 
+      {activeCommonFeatures ? (
+        <PackageCommonFeatures
+          title={activeCommonFeatures.title}
+          items={activeCommonFeatures.items}
+          className={lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"}
+        />
+      ) : null}
+
       <div
         ref={gridRef}
         key={activeCategory}
-        className={`${lockedCategory ? "mt-8 md:mt-10" : "mt-14"} grid items-stretch gap-6 lg:gap-5 xl:gap-6 ${
+        className={`${
+          activeCommonFeatures
+            ? lockedCategory
+              ? "mt-5 md:mt-6"
+              : "mt-6 md:mt-8"
+            : lockedCategory
+              ? "mt-8 md:mt-10"
+              : "mt-14"
+        } grid items-stretch gap-6 lg:gap-5 xl:gap-6 ${
           slugs.length === 1 ? "mx-auto w-full max-w-2xl" : "lg:grid-cols-3"
         }`}
       >
@@ -199,6 +236,7 @@ export function ServicesPackagesPanel({
             onTierChange={setActiveTier}
             openGroups={openGroups}
             onToggleGroup={toggleGroup}
+            commonGroupLabels={commonGroupLabels}
           />
         ))}
       </div>

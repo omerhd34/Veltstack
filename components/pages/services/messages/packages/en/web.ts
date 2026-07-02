@@ -12,10 +12,7 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Mobile-compatible (responsive) development",
               "Fast load times and SEO-friendly performance optimization",
-              "SSL certificate and security setup",
-              "Cross-browser compatibility testing",
               "Basic UI/UX template adaptation",
             ],
           },
@@ -23,21 +20,14 @@ export const webPackagesEn = {
             label: "SEO & Integration",
             items: [
               "Basic SEO configuration",
-              "Sitemap setup",
               "Google Analytics 4 (GA4) setup",
               "Google Search Console setup",
               "Contact form and Google Maps integration",
-              "Privacy-compliant cookie policy module (KVKK/GDPR)",
             ],
           },
           {
             label: "Delivery & Support",
-            items: [
-              "Source code delivery",
-              "Hosting setup guide",
-              "Vercel publishing support",
-              "15 days technical support",
-            ],
+            items: ["15 days technical support"],
           },
         ],
       },
@@ -49,23 +39,19 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Mobile-compatible (responsive) development",
               "Fast load times and SEO-friendly performance optimization",
               "Page transition animations and scroll effects",
               "Premium UI components and hover effects",
-              "Cross-browser compatibility testing",
             ],
           },
           {
             label: "SEO & Integration",
             items: [
               "Advanced SEO (meta, OG, schema markup)",
-              "Sitemap setup",
               "Google Search Console connection",
               "Contact form and Google Maps integration",
               "Social media quick contact and sharing",
               "Domain routing and www/non-www setup",
-              "Privacy-compliant cookie policy module (KVKK/GDPR)",
             ],
           },
           {
@@ -80,9 +66,6 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "Vercel publishing support",
-              "Hosting setup guide",
               "30 days technical support",
               "User guide training and documentation",
             ],
@@ -99,7 +82,6 @@ export const webPackagesEn = {
             items: [
               "Custom-built, high-speed infrastructure",
               "Pixel-perfect Figma-to-code implementation",
-              "Mobile-compatible (responsive) development",
               "Dark / Light mode support",
               "PWA (Progressive Web App) support",
               "Custom animation and interaction design",
@@ -112,10 +94,8 @@ export const webPackagesEn = {
               "Comprehensive technical SEO optimization",
               "Google Analytics and Search Console integration",
               "Conversion tracking (forms, clicks, CTAs)",
-              "Sitemap setup",
               "Contact form and Google Maps integration",
               "Open Graph and Twitter Card configuration",
-              "Privacy-compliant cookie policy module (KVKK/GDPR)",
             ],
           },
           {
@@ -130,8 +110,6 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "Vercel publishing support",
               "Hosting and domain setup guide",
               "45 days technical support",
               "User guide training and documentation",
@@ -156,8 +134,6 @@ export const webPackagesEn = {
             items: [
               "Mobile-compatible development aligned with corporate identity",
               "Fast load times and SEO-friendly performance optimization",
-              "SSL certificate and security setup",
-              "Cross-browser compatibility testing",
               "Basic UI/UX template adaptation",
             ],
           },
@@ -165,22 +141,15 @@ export const webPackagesEn = {
             label: "SEO & Integration",
             items: [
               "Basic SEO configuration",
-              "Sitemap setup",
               "Google Analytics 4 (GA4) setup",
               "Google Search Console setup",
               "Contact form and Google Maps integration",
               "Corporate email routing guide",
-              "Privacy-compliant cookie policy module (KVKK/GDPR)",
             ],
           },
           {
             label: "Delivery & Support",
-            items: [
-              "Source code delivery",
-              "Hosting setup guide",
-              "Vercel publishing support",
-              "15 days technical support",
-            ],
+            items: ["15 days technical support"],
           },
         ],
       },
@@ -193,10 +162,8 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               "Custom coding aligned with corporate color palette and typography",
-              "Mobile-compatible (responsive) development",
               "Fast load times and SEO-friendly performance optimization",
               "Premium UI components and corporate animations",
-              "Cross-browser compatibility testing",
             ],
           },
           {
@@ -208,7 +175,6 @@ export const webPackagesEn = {
               "Corporate email routing",
               "WhatsApp and live support button",
               "Social media integration",
-              "Privacy-compliant cookie policy module (KVKK/GDPR)",
             ],
           },
           {
@@ -225,9 +191,6 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "Vercel publishing support",
-              "Hosting setup guide",
               "30 days technical support",
               "User guide training and documentation",
             ],
@@ -244,7 +207,6 @@ export const webPackagesEn = {
             items: [
               "Pixel-perfect corporate Figma-to-code implementation",
               "Custom-built, high-speed infrastructure",
-              "Mobile-compatible (responsive) development",
               "Dark / Light mode support",
               "PWA (Progressive Web App) support",
               "Custom animation and interaction design",
@@ -259,7 +221,6 @@ export const webPackagesEn = {
               "Conversion and form tracking",
               "Google Search Console setup",
               "Schema markup (Organization, BreadcrumbList, etc.)",
-              "Privacy-compliant cookie policy module (KVKK/GDPR)",
             ],
           },
           {
@@ -284,9 +245,6 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "Vercel publishing support",
-              "Hosting setup guide",
               "45 days technical support",
               "User guide training and documentation",
               "Comprehensive user manual documentation",
@@ -309,10 +267,8 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Mobile-compatible ecommerce interface",
               "Fast load times and SEO-friendly performance optimization",
               "SSL certificate and payment security infrastructure",
-              "Cross-browser compatibility testing",
               "Basic UI/UX template adaptation",
             ],
           },
@@ -320,7 +276,6 @@ export const webPackagesEn = {
             label: "SEO & Integration",
             items: [
               "Basic ecommerce SEO configuration",
-              "Sitemap setup",
               "Google Analytics 4 (GA4) setup",
               "Google Search Console setup",
               "Contact form and Google Maps integration",
@@ -328,7 +283,7 @@ export const webPackagesEn = {
             ],
           },
           {
-            label: "Store & Panel",
+            label: "Content & Panel",
             items: [
               "Product listing and detail pages",
               "Category and subcategory management",
@@ -341,9 +296,7 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
               "Hosting and database setup guide",
-              "Vercel publishing support",
               "15 days technical support",
             ],
           },
@@ -357,10 +310,8 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Modern mobile-compatible (responsive) development",
               "Fast load times and SEO-friendly performance optimization",
               "Premium ecommerce UI components and filter animations",
-              "Cross-browser compatibility testing",
             ],
           },
           {
@@ -368,7 +319,7 @@ export const webPackagesEn = {
             items: [
               "Advanced SEO (meta, OG, product schema markup)",
               "Google Search Console and Analytics connection",
-              "Contact form, FAQ and Google Maps integration",
+              "Contact form and Google Maps integration",
               "WhatsApp quick order and support integration",
               "Automated email order notifications",
               "Privacy and legal agreement infrastructure (KVKK/GDPR)",
@@ -390,9 +341,6 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "Vercel publishing support",
-              "Hosting setup guide",
               "30 days technical support",
               "User guide training and documentation",
             ],
@@ -409,7 +357,6 @@ export const webPackagesEn = {
             items: [
               "Pixel-perfect ecommerce Figma-to-code implementation",
               "Custom-built, high-speed scalable infrastructure",
-              "Mobile-compatible (responsive) development",
               "Dark / Light mode support",
               "PWA (Progressive Web App) support",
               "Custom cart and checkout page interaction design",
@@ -451,9 +398,6 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "Vercel publishing and server optimization support",
-              "Advanced hosting / server setup guide",
               "45 days technical support and bug fixes",
               "Comprehensive store management and user guide",
             ],

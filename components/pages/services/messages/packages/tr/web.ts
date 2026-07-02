@@ -2,7 +2,7 @@ export const webPackagesTr = {
   portfolio: {
     title: "Portföy / Tanıtım Web Sitesi",
     description:
-      "Kişisel markanızı veya işinizi öne çıkaran hızlı ve modern tanıtım sitesi.",
+      "Kişisel markanızı veya işletmenizi güven veren modern bir web sitesiyle öne çıkarın.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
@@ -11,31 +11,18 @@ export const webPackagesTr = {
         featureGroups: [
           {
             label: "Tasarım & Geliştirme",
-            items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Çoklu Tarayıcı Uyumluluğu",
-              "Temel UI/UX düzeni ve marka renklerine uyarlama",
-              "SSL, HTTPS ve temel güvenlik yapılandırması",
-            ],
+            items: ["Temel UI/UX düzeni ve marka renklerine uyarlama"],
           },
           {
             label: "SEO & Temel Entegrasyonlar",
             items: [
               "Başlık, açıklama ve temel teknik SEO ayarları",
-              "Sitemap ve robots.txt yapılandırması",
-              "İletişim formu, harita ve hızlı ulaşım bağlantıları",
-              "KVKK uyumlu çerez bildirimi ve politika alanı",
+              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Hosting kurulum adımları ve yayın rehberi",
-              "Vercel üzerinden canlıya alma desteği",
-              "15 gün teknik destek",
-            ],
+            items: ["15 gün teknik destek"],
           },
         ],
       },
@@ -47,24 +34,19 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Sayfa geçişleri, scroll efektleri ve mikro animasyonlar",
               "Premium UI bileşenleri, kartlar ve hover durumları",
-              "Çoklu Tarayıcı Uyumluluğu",
             ],
           },
           {
             label: "SEO & Temel Entegrasyonlar",
             items: [
               "Meta, Open Graph ve schema markup optimizasyonu",
-              "Sitemap ve robots.txt yapılandırması",
               "Google Search Console kurulumu ve doğrulaması",
-              "İletişim formu, harita ve hızlı ulaşım bağlantıları",
+              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
               "Sosyal medya paylaşım ve hızlı iletişim bağlantıları",
               "Domain, www/non-www ve yönlendirme ayarları",
-              "KVKK uyumlu çerez bildirimi ve politika alanı",
             ],
           },
           {
@@ -72,16 +54,13 @@ export const webPackagesTr = {
             items: [
               "Hizmet veya proje galerisi için düzenlenebilir bölüm",
               "Referans ve müşteri yorumu alanları",
-              "Portföy içerikleri için temel yönetim paneli",
-              "En fazla 2 dil için hazır i18n altyapısı",
+              "Portföy içerikleri için temel yönetim paneli (CMS)",
+              "En fazla 2 dil desteği ve dil geçiş altyapısı",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Vercel üzerinden canlıya alma desteği",
-              "Hosting kurulum adımları ve yayın rehberi",
               "30 gün teknik destek",
               "Kullanım kılavuzu ve kısa yönetim eğitimi",
             ],
@@ -96,8 +75,6 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
               "Figma tasarımlarına piksel uyumlu arayüz kodlama",
               "Dark / Light mode desteği",
@@ -112,10 +89,8 @@ export const webPackagesTr = {
               "Kapsamlı teknik SEO, schema ve indeksleme optimizasyonu",
               "Google Analytics 4 ve Search Console entegrasyonu",
               "Dönüşüm takibi (form, tıklama, CTA)",
-              "Sitemap ve robots.txt yapılandırması",
-              "İletişim formu, harita ve hızlı ulaşım bağlantıları",
+              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
               "Open Graph ve sosyal paylaşım kartı yapılandırması",
-              "KVKK uyumlu çerez bildirimi ve politika alanı",
             ],
           },
           {
@@ -123,16 +98,13 @@ export const webPackagesTr = {
             items: [
               "Dinamik portföy yönetim paneli (Kapsamlı CMS)",
               "Blog ve makale yayınlama modülü",
-              "Sınırsız dil desteği ve dil bazlı içerik yönetimi",
               "Proje filtreleme ve kategori yönetimi",
+              "Sınırsız dil desteği ve dil bazlı içerik yönetimi",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Vercel üzerinden canlıya alma desteği",
-              "Hosting, domain ve DNS kurulum rehberi",
               "45 gün teknik destek",
               "Kullanım kılavuzu ve kısa yönetim eğitimi",
             ],
@@ -144,7 +116,7 @@ export const webPackagesTr = {
   corporate: {
     title: "Kurumsal Web Sitesi",
     description:
-      "Marka kimliğinize uygun, güven veren ve yüksek performanslı web çözümü.",
+      "Kurumsal kimliğinizi yansıtan, güven oluşturan ve müşteri kazandırmaya odaklı web sitesi.",
     tiers: {
       temel: {
         deliveryDays: "21-28",
@@ -153,31 +125,18 @@ export const webPackagesTr = {
         featureGroups: [
           {
             label: "Tasarım & Geliştirme",
-            items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Çoklu Tarayıcı Uyumluluğu",
-              "Temel UI/UX düzeni ve marka renklerine uyarlama",
-              "SSL, HTTPS ve temel güvenlik yapılandırması",
-            ],
+            items: ["Temel UI/UX düzeni ve marka renklerine uyarlama"],
           },
           {
             label: "SEO & Temel Entegrasyonlar",
             items: [
               "Başlık, açıklama ve temel teknik SEO ayarları",
-              "Sitemap ve robots.txt yapılandırması",
-              "İletişim formu, harita ve hızlı ulaşım bağlantıları",
-              "KVKK uyumlu çerez bildirimi ve politika alanı",
+              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Hosting kurulum adımları ve yayın rehberi",
-              "Vercel üzerinden canlıya alma desteği",
-              "15 gün teknik destek",
-            ],
+            items: ["15 gün teknik destek"],
           },
         ],
       },
@@ -189,12 +148,9 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
               "Kurumsal renk paleti ve tipografiye uyumlu arayüz",
               "Kurumsal stile uygun premium bileşenler ve animasyonlar",
-              "Çoklu Tarayıcı Uyumluluğu",
             ],
           },
           {
@@ -202,17 +158,16 @@ export const webPackagesTr = {
             items: [
               "Meta, Open Graph ve schema markup optimizasyonu",
               "Google Search Console kurulumu ve doğrulaması",
-              "İletişim formu, harita ve hızlı ulaşım bağlantıları",
+              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
               "Kurumsal e-posta ve form yönlendirmeleri",
               "Canlı destek ve hızlı iletişim erişimleri",
               "Sosyal medya bağlantıları ve paylaşım alanları",
-              "KVKK uyumlu çerez bildirimi ve politika alanı",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Sayfa ve içerikler için yönetim paneli",
+              "Sayfa ve içerikler için yönetim paneli (CMS)",
               "Blog, haber ve duyuru yayınlama modülü",
               "Ekip ve kadro tanıtım sayfaları",
               "Hizmetler, referanslar ve başarı hikayeleri alanları",
@@ -223,9 +178,6 @@ export const webPackagesTr = {
           {
             label: "Teslim & Destek",
             items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Vercel üzerinden canlıya alma desteği",
-              "Hosting kurulum adımları ve yayın rehberi",
               "30 gün teknik destek",
               "Kullanım kılavuzu ve kısa yönetim eğitimi",
             ],
@@ -240,8 +192,6 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Figma tasarımlarına piksel uyumlu kurumsal arayüz kodlama",
               "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
               "Dark / Light mode desteği",
@@ -254,38 +204,34 @@ export const webPackagesTr = {
             label: "SEO & Analitik",
             items: [
               "Kapsamlı teknik SEO, schema ve indeksleme optimizasyonu",
-              "Google Analytics 4 kurulumu",
+              "Google Analytics 4 ve Search Console entegrasyonu",
               "Dönüşüm ve form takibi",
-              "Google Search Console kurulumu ve doğrulaması",
               "Organization, BreadcrumbList ve benzeri schema yapıları",
-              "KVKK uyumlu çerez bildirimi ve politika alanı",
+              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
               "Kapsamlı CMS ve blog altyapısı",
-              "Sınırsız dil desteği ve dil bazlı içerik yönetimi",
-              "Kariyer / İş ilanı modülü ve başvuru formu",
+              "Kariyer / iş ilanı modülü ve başvuru formu",
               "Etkinlik, duyuru ve takvim modülü",
               "Kurumsal doküman indirme bölümü",
               "Video galeri ve medya yönetimi",
+              "Sınırsız dil desteği ve dil bazlı içerik yönetimi",
             ],
           },
           {
             label: "Entegrasyon",
             items: [
               "Canlı destek ve hızlı iletişim entegrasyonu",
-              "CRM ve e-posta pazarlama aracı entegrasyonu",
+              "CRM ve e-posta pazarlama aracı entegrasyonu (Mailchimp vb.)",
               "Üçüncü parti API entegrasyon hazırlığı",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Vercel üzerinden canlıya alma desteği",
-              "Hosting kurulum adımları ve yayın rehberi",
               "45 gün teknik destek",
               "Kapsamlı kullanım kılavuzu dokümanı",
             ],
@@ -297,7 +243,7 @@ export const webPackagesTr = {
   ecommerce: {
     title: "E-Ticaret Web Sitesi",
     description:
-      "Güvenli ödeme, ürün yönetimi ve sipariş takibi sunan ölçeklenebilir altyapı.",
+      "Online satışa hızlı başlamanız için güvenli ödeme altyapısına sahip modern e-ticaret çözümü.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
@@ -306,42 +252,35 @@ export const webPackagesTr = {
         featureGroups: [
           {
             label: "Tasarım & Geliştirme",
-            items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Çoklu Tarayıcı Uyumluluğu",
-              "Temel UI/UX düzeni ve marka renklerine uyarlama",
-              "SSL, HTTPS ve ödeme akışı güvenlik yapılandırması",
-            ],
+            items: ["Temel UI/UX düzeni ve marka renklerine uyarlama"],
           },
           {
             label: "SEO & Temel Entegrasyonlar",
             items: [
               "Başlık, açıklama ve temel teknik SEO ayarları",
-              "Sitemap ve robots.txt yapılandırması",
-              "İletişim formu, harita ve hızlı ulaşım bağlantıları",
-              "KVKK uyumlu çerez bildirimi ve politika alanı",
+              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
             ],
           },
           {
-            label: "Mağaza & Yönetim Paneli",
+            label: "Mağaza & Ödeme",
             items: [
               "Ürün listeleme ve detay sayfaları",
               "Kategori ve alt kategori yönetimi",
               "Sepet ve standart sipariş akışı",
-              "Tekil sanal POS entegrasyonu (PayTR, vb.)",
+              "Sanal POS entegrasyonu (PayTR vb.)",
               "Temel stok takip altyapısı",
+            ],
+          },
+          {
+            label: "İçerik & Yönetim Paneli",
+            items: [
               "Temel mağaza yönetim paneli",
+              "Ürün, kategori ve sipariş yönetimi",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Hosting ve veritabanı kurulum rehberi",
-              "Vercel üzerinden canlıya alma desteği",
-              "15 gün teknik destek",
-            ],
+            items: ["15 gün teknik destek"],
           },
         ],
       },
@@ -353,12 +292,8 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Dark / Light mode desteği",
-              "Mobil, tablet ve masaüstünde hızlı alışveriş deneyimi",
               "Premium e-ticaret UI bileşenleri ve filtre animasyonları",
-              "Çoklu Tarayıcı Uyumluluğu",
             ],
           },
           {
@@ -366,18 +301,16 @@ export const webPackagesTr = {
             items: [
               "Gelişmiş SEO (meta, OG, ürün schema markup)",
               "Google Search Console ve Analytics bağlantısı",
-              "İletişim formu, SSS ve Google Maps entegrasyonu",
-              "Hızlı sipariş ve destek entegrasyonu",
+              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
               "Otomatik e-posta sipariş bildirimleri",
-              "KVKK ve yasal sözleşme altyapıları",
-              "En fazla 2 dil desteği ve dil geçiş altyapısı",
+              "KVKK, mesafeli satış sözleşmesi ve yasal sayfa altyapısı",
             ],
           },
           {
-            label: "Mağaza & Ödeme Akışı",
+            label: "Mağaza & Ödeme",
             items: [
               "Gelişmiş ürün, kategori ve etiket yönetimi",
-              "Çoklu ödeme yöntemi (Kredi Kartı, Havale/EFT)",
+              "Çoklu ödeme yöntemi: sanal POS (PayTR vb.) ve Havale/EFT",
               "Üyelik, giriş, şifre sıfırlama ve profil sayfaları",
               "Sipariş takip ve kullanıcı geçmiş paneli",
               "Kupon, indirim ve kampanya yönetim modülü",
@@ -386,11 +319,16 @@ export const webPackagesTr = {
             ],
           },
           {
+            label: "İçerik & Yönetim Paneli",
+            items: [
+              "Gelişmiş mağaza yönetim paneli (CMS)",
+              "Sipariş, müşteri ve stok yönetimi",
+              "En fazla 2 dil desteği ve dil geçiş altyapısı",
+            ],
+          },
+          {
             label: "Teslim & Destek",
             items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Vercel üzerinden canlıya alma desteği",
-              "Hosting kurulum adımları ve yayın rehberi",
               "30 gün teknik destek",
               "Kullanım kılavuzu ve kısa yönetim eğitimi",
             ],
@@ -405,8 +343,6 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
               "Figma tasarımlarına piksel uyumlu e-ticaret arayüzü",
               "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
               "Dark / Light mode desteği",
@@ -427,32 +363,29 @@ export const webPackagesTr = {
             ],
           },
           {
-            label: "Mağaza & Ödeme Akışı",
+            label: "Mağaza & Ödeme",
             items: [
               "Gelişmiş stok, dinamik varyasyon ve fiyat yönetimi",
-              "Sanal POS, kargo ve lojistik entegrasyonu (Yurtiçi, MNG vb.)",
-              "Terk edilen sepet (Abandoned Cart) hatırlatma e-postaları",
+              "Sanal POS (PayTR vb.), kargo ve lojistik entegrasyonu (Yurtiçi, MNG vb.)",
+              "Terk edilen sepet hatırlatma e-postaları",
               "Ürün yorumu, fotoğraflı değerlendirme ve puanlama sistemi",
-              "Çapraz satış (Cross-sell) ve önerilen ürünler algoritması",
-              "Toplu ürün import / export (Excel/CSV entegrasyonu)",
-              "Fatura ve ön muhasebe/e-arşiv entegrasyon altyapısı",
+              "Çapraz satış ve önerilen ürünler algoritması",
+              "Toplu ürün import / export (Excel/CSV)",
+              "Fatura ve e-arşiv / ön muhasebe entegrasyon altyapısı",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Kapsamlı E-ticaret Yönetim Paneli (Advanced CMS)",
+              "Kapsamlı e-ticaret yönetim paneli (Advanced CMS)",
               "Sınırsız dil ve çoklu para birimi desteği",
-              "Blog / içerik pazarlama modülü",
-              "CRM, SMS ve pazarlama araçları (Mailchimp vb.) bağlantısı",
+              "Blog ve içerik pazarlama modülü",
+              "CRM, SMS ve pazarlama araçları entegrasyonu (Mailchimp vb.)",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "Vercel yayınlama ve sunucu optimizasyon desteği",
-              "Gelişmiş hosting/sunucu kurulum rehberi",
               "45 gün teknik destek ve hata onarımı",
               "Kapsamlı mağaza yönetim ve kullanım kılavuzu",
             ],
