@@ -1,9 +1,17 @@
 "use client";
 
 import type { IconType } from "react-icons";
-import { LuChevronDown, LuCircleCheck, LuMessageCircle } from "react-icons/lu";
+import {
+  LuChevronDown,
+  LuCircleCheck,
+  LuCircleX,
+  LuMessageCircle,
+} from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
-import { sortFeatureGroupsForDisplay } from "./package-accordion";
+import {
+  buildFeatureGroupComparison,
+  sortFeatureGroupsForDisplay,
+} from "./package-accordion";
 import type { PackageTier } from "./packages-config";
 import { cn } from "@/lib/utils";
 
@@ -126,17 +134,38 @@ export function ServicePackageCard({
         >
           <div className="overflow-hidden" data-package-group-content>
             <ul className="flex flex-col gap-2.5 px-2 pb-3.5">
-              {group.items.map((feature) => (
+              {buildFeatureGroupComparison(
+                data.tiers,
+                group.label,
+                activeTier,
+              ).map((feature) => (
                 <li
-                  key={`${activeTier}-${group.label}-${feature}`}
-                  className="flex items-start gap-2.5 text-[0.8125rem] leading-snug text-emerald-50/80"
+                  key={`${activeTier}-${group.label}-${feature.text}`}
+                  className="flex items-start justify-between gap-3 text-[0.8125rem] leading-snug"
                 >
-                  <LuCircleCheck
-                    className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
-                    strokeWidth={2.5}
-                    aria-hidden
-                  />
-                  {feature}
+                  <span
+                    className={cn(
+                      "min-w-0 flex-1",
+                      feature.included
+                        ? "text-emerald-50/85"
+                        : "text-emerald-50/40",
+                    )}
+                  >
+                    {feature.text}
+                  </span>
+                  {feature.included ? (
+                    <LuCircleCheck
+                      className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
+                      strokeWidth={2.5}
+                      aria-hidden
+                    />
+                  ) : (
+                    <LuCircleX
+                      className="mt-0.5 size-3.5 shrink-0 text-red-400"
+                      strokeWidth={2.5}
+                      aria-hidden
+                    />
+                  )}
                 </li>
               ))}
             </ul>
@@ -246,14 +275,14 @@ export function ServicePackageCard({
             {tier.features.map((feature) => (
               <li
                 key={`${activeTier}-${feature}`}
-                className="flex items-start gap-2.5 text-[0.8125rem] leading-snug text-emerald-50/80"
+                className="flex items-start justify-between gap-3 text-[0.8125rem] leading-snug text-emerald-50/85"
               >
+                <span className="min-w-0 flex-1">{feature}</span>
                 <LuCircleCheck
                   className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
                   strokeWidth={2.5}
                   aria-hidden
                 />
-                {feature}
               </li>
             ))}
           </ul>

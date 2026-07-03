@@ -62,17 +62,6 @@ export const servicesPackagesTr = {
     "Güncelleme, yedekleme, güvenlik takibi ve acil müdahale, web sitesi, mobil uygulama ve backend altyapınız için tek çatı altında sürekli destek sunuyorum. Girişim, Profesyonel ve Premium paket seviyeleri farklı ölçek ve ihtiyaçlara göre şekilleniyor.",
   maintenanceIntroP2:
     "Her seviyede izleme, yedekleme ve teknik destek dahildir. İhtiyaçlarınız büyüdükçe bir üst seviyeye geçerek genişletilmiş SLA ve öncelikli teknik destekten yararlanabilirsiniz.",
-  webCommonFeaturesTitle: "Tüm web paketlerinde dahil",
-  webCommonFeatures: [
-    "Duyarlı Kullanıcı Arayüzü (Responsive UI)",
-    "Çoklu Tarayıcı Uyumluluğu",
-    "SSL, HTTPS ve temel güvenlik yapılandırması",
-    "Sitemap ve robots.txt yapılandırması",
-    "Kaynak kodu ve proje dosyalarının teslimi",
-    "Canlı yayına alma desteği",
-    "Hosting kurulum adımları ve yayın rehberi",
-    "KVKK uyumlu çerez bildirimi ve politika alanı",
-  ],
   webPackages: webPackagesTr,
   refreshPackages: refreshPackagesTr,
   appPackages: appPackagesTr,

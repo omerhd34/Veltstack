@@ -92,12 +92,6 @@ export const categoryPackageSlugs: Record<PackageCategory, readonly string[]> =
     maintenance: maintenancePackageSlugs,
   };
 
-export const categoryCommonFeaturesKey: Partial<
-  Record<PackageCategory, "webCommonFeatures">
-> = {
-  web: "webCommonFeatures",
-};
-
 export const categoryIcons: Record<
   PackageCategory,
   Record<string, IconType>

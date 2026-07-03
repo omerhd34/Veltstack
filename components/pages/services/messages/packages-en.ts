@@ -62,17 +62,6 @@ export const servicesPackagesEn = {
     "Updates, backups, security monitoring and emergency response, ongoing support for your website, mobile app and backend infrastructure all in one place. Startup, Professional and Premium tiers scale with your needs.",
   maintenanceIntroP2:
     "Every tier includes monitoring, backups and technical support. Move up to Premium for extended SLA coverage and priority technical support.",
-  webCommonFeaturesTitle: "Included in all web packages",
-  webCommonFeatures: [
-    "Mobile-compatible (responsive) development",
-    "Cross-browser compatibility testing",
-    "SSL certificate and security setup",
-    "Sitemap and robots.txt setup",
-    "Source code delivery",
-    "Live deployment support",
-    "Hosting setup guide",
-    "Privacy-compliant cookie policy module (KVKK/GDPR)",
-  ],
   webPackages: webPackagesEn,
   refreshPackages: refreshPackagesEn,
   appPackages: appPackagesEn,

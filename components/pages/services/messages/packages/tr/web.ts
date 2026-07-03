@@ -1,28 +1,52 @@
+// ---------------------------------------------------------------------------
+// Ortak (paylaşılan) özellik grupları
+// ---------------------------------------------------------------------------
+
+const commonDesignItems = [
+  "Duyarlı (Responsive) Tasarım — Mobil, Tablet ve Masaüstü Uyumu",
+  "Çoklu Tarayıcı Uyumluluğu (Chrome, Safari, Firefox, Edge)",
+  "SSL, HTTPS ve Temel Güvenlik Yapılandırması",
+  "Hızlı Yükleme Süreleri ve SEO Dostu Performans Optimizasyonu",
+] as const;
+
+const commonSeoItems = ["Sitemap ve robots.txt Yapılandırması"] as const;
+
+const commonIntegrationItems = [
+  "KVKK Uyumlu Çerez Bildirimi ve Gizlilik Politikası",
+  "İletişim Formu, Google Maps ve Hızlı Ulaşım Bağlantıları",
+] as const;
+
+const commonDeliveryItems = [
+  "Kaynak Kodu ve Proje Dosyalarının Teslimi",
+  "Canlı Yayına Alma (Deploy) Desteği",
+  "Hosting Kurulum Adımları ve Yayın Rehberi",
+] as const;
+
 export const webPackagesTr = {
+  // =========================================================================
+  // PORTFÖY / TANITIM WEB SİTESİ
+  // =========================================================================
   portfolio: {
     title: "Portföy / Tanıtım Web Sitesi",
     description:
       "Kişisel markanızı veya işletmenizi güven veren modern bir web sitesiyle öne çıkarın.",
     tiers: {
       temel: {
-        deliveryDays: "14-21",
+        deliveryDays: "10-14",
         revisions: "3",
         scope: "1-5",
         featureGroups: [
           {
             label: "Tasarım & Geliştirme",
-            items: ["Temel UI/UX düzeni ve marka renklerine uyarlama"],
+            items: [...commonDesignItems],
           },
           {
-            label: "SEO & Temel Entegrasyonlar",
-            items: [
-              "Başlık, açıklama ve temel teknik SEO ayarları",
-              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
-            ],
+            label: "SEO & Entegrasyon",
+            items: [...commonSeoItems, ...commonIntegrationItems],
           },
           {
             label: "Teslim & Destek",
-            items: ["15 gün teknik destek"],
+            items: [...commonDeliveryItems, "15 Gün Teknik Destek"],
           },
         ],
       },
@@ -34,35 +58,38 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Dark / Light mode desteği",
-              "Sayfa geçişleri, scroll efektleri ve mikro animasyonlar",
-              "Premium UI bileşenleri, kartlar ve hover durumları",
+              ...commonDesignItems,
+              "Dark / Light Mode Desteği",
+              "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
           {
-            label: "SEO & Temel Entegrasyonlar",
+            label: "SEO & Entegrasyon",
             items: [
-              "Meta, Open Graph ve schema markup optimizasyonu",
-              "Google Search Console kurulumu ve doğrulaması",
-              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
-              "Sosyal medya paylaşım ve hızlı iletişim bağlantıları",
-              "Domain, www/non-www ve yönlendirme ayarları",
+              ...commonSeoItems,
+              "Meta, Open Graph ve Schema Markup Optimizasyonu",
+              ...commonIntegrationItems,
+              "Google Search Console Kurulumu ve Doğrulaması",
+              "Google Analytics 4 Entegrasyonu",
+              "Sosyal Medya Paylaşım Bağlantıları",
+              "Domain, www/non-www ve Yönlendirme Ayarları",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Hizmet veya proje galerisi için düzenlenebilir bölüm",
-              "Referans ve müşteri yorumu alanları",
-              "Portföy içerikleri için temel yönetim paneli (CMS)",
-              "En fazla 2 dil desteği ve dil geçiş altyapısı",
+              "Hizmet / Proje Galerisi için Düzenlenebilir Bölüm",
+              "Referans ve Müşteri Yorumu Alanları",
+              "Yönetim Paneli",
+              "En Fazla 2 Dil Desteği",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "30 gün teknik destek",
-              "Kullanım kılavuzu ve kısa yönetim eğitimi",
+              ...commonDeliveryItems,
+              "30 Gün Teknik Destek",
+              "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
             ],
           },
         ],
@@ -75,68 +102,76 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
-              "Figma tasarımlarına piksel uyumlu arayüz kodlama",
-              "Dark / Light mode desteği",
-              "PWA desteği ve uygulama gibi kullanım deneyimi",
-              "Markaya özel animasyon ve mikro etkileşim tasarımı",
-              "Farklı tarayıcı ve cihazlarda kapsamlı uyumluluk testi",
+              ...commonDesignItems,
+              "Dark / Light Mode Desteği",
+              "Figma Tasarımlarına Piksel Uyumlu Arayüz Kodlama",
+              "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
+              "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
             ],
           },
           {
-            label: "SEO & Analitik",
+            label: "SEO & Entegrasyon",
             items: [
-              "Kapsamlı teknik SEO, schema ve indeksleme optimizasyonu",
-              "Google Analytics 4 ve Search Console entegrasyonu",
-              "Dönüşüm takibi (form, tıklama, CTA)",
-              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
-              "Open Graph ve sosyal paylaşım kartı yapılandırması",
+              ...commonSeoItems,
+              "Meta, Open Graph ve Schema Markup Optimizasyonu",
+              "Kapsamlı Teknik SEO ve İndeksleme Optimizasyonu",
+              "Open Graph ve Sosyal Paylaşım Kartı Yapılandırması",
+              ...commonIntegrationItems,
+              "Google Search Console Kurulumu ve Doğrulaması",
+              "Google Analytics 4 Entegrasyonu",
+              "Sosyal Medya Paylaşım Bağlantıları",
+              "Domain, www/non-www ve Yönlendirme Ayarları",
+              "Dönüşüm Takibi (Form, Tıklama, CTA)",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Dinamik portföy yönetim paneli (Kapsamlı CMS)",
-              "Blog ve makale yayınlama modülü",
-              "Proje filtreleme ve kategori yönetimi",
-              "Sınırsız dil desteği ve dil bazlı içerik yönetimi",
+              "Hizmet / Proje Galerisi için Düzenlenebilir Bölüm",
+              "Referans ve Müşteri Yorumu Alanları",
+              "Yönetim Paneli",
+              "Blog ve Makale Yayınlama Modülü",
+              "Proje Filtreleme ve Kategori Yönetimi",
+              "Sınırsız Dil Desteği",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "45 gün teknik destek",
-              "Kullanım kılavuzu ve kısa yönetim eğitimi",
+              ...commonDeliveryItems,
+              "45 Gün Teknik Destek",
+              "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
             ],
           },
         ],
       },
     },
   },
+
+  // =========================================================================
+  // KURUMSAL WEB SİTESİ
+  // =========================================================================
   corporate: {
     title: "Kurumsal Web Sitesi",
     description:
       "Kurumsal kimliğinizi yansıtan, güven oluşturan ve müşteri kazandırmaya odaklı web sitesi.",
     tiers: {
       temel: {
-        deliveryDays: "21-28",
+        deliveryDays: "14-21",
         revisions: "3",
         scope: "1-10",
         featureGroups: [
           {
             label: "Tasarım & Geliştirme",
-            items: ["Temel UI/UX düzeni ve marka renklerine uyarlama"],
+            items: [...commonDesignItems],
           },
           {
-            label: "SEO & Temel Entegrasyonlar",
-            items: [
-              "Başlık, açıklama ve temel teknik SEO ayarları",
-              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
-            ],
+            label: "SEO & Entegrasyon",
+            items: [...commonSeoItems, ...commonIntegrationItems],
           },
           {
             label: "Teslim & Destek",
-            items: ["15 gün teknik destek"],
+            items: [...commonDeliveryItems, "15 Gün Teknik Destek"],
           },
         ],
       },
@@ -148,38 +183,40 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Dark / Light mode desteği",
-              "Kurumsal renk paleti ve tipografiye uyumlu arayüz",
-              "Kurumsal stile uygun premium bileşenler ve animasyonlar",
+              ...commonDesignItems,
+              "Dark / Light Mode Desteği",
+              "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
           {
-            label: "SEO & Temel Entegrasyonlar",
+            label: "SEO & Entegrasyon",
             items: [
-              "Meta, Open Graph ve schema markup optimizasyonu",
-              "Google Search Console kurulumu ve doğrulaması",
-              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
-              "Kurumsal e-posta ve form yönlendirmeleri",
-              "Canlı destek ve hızlı iletişim erişimleri",
-              "Sosyal medya bağlantıları ve paylaşım alanları",
+              ...commonSeoItems,
+              "Meta, Open Graph ve Schema Markup Optimizasyonu",
+              ...commonIntegrationItems,
+              "Google Search Console Kurulumu ve Doğrulaması",
+              "Google Analytics 4 Entegrasyonu",
+              "Kurumsal E-posta ve Form Yönlendirmeleri",
+              "Sosyal Medya Bağlantıları ve Paylaşım Alanları",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Sayfa ve içerikler için yönetim paneli (CMS)",
-              "Blog, haber ve duyuru yayınlama modülü",
-              "Ekip ve kadro tanıtım sayfaları",
-              "Hizmetler, referanslar ve başarı hikayeleri alanları",
-              "Medya, basın kiti ve doküman sayfaları",
-              "En fazla 2 dil desteği ve dil geçiş altyapısı",
+              "Yönetim Paneli",
+              "Blog, Haber ve Duyuru Yayınlama Modülü",
+              "Ekip ve Kadro Tanıtım Sayfaları",
+              "Hizmetler, Referanslar ve Başarı Hikayeleri Alanları",
+              "Medya, Basın Kiti ve Doküman Sayfaları",
+              "En Fazla 2 Dil Desteği",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "30 gün teknik destek",
-              "Kullanım kılavuzu ve kısa yönetim eğitimi",
+              ...commonDeliveryItems,
+              "30 Gün Teknik Destek",
+              "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
             ],
           },
         ],
@@ -192,95 +229,96 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Figma tasarımlarına piksel uyumlu kurumsal arayüz kodlama",
-              "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
-              "Dark / Light mode desteği",
-              "PWA desteği ve uygulama gibi kullanım deneyimi",
-              "Markaya özel animasyon ve mikro etkileşim tasarımı",
-              "Farklı cihazlarda kapsamlı uyumluluk testi",
+              ...commonDesignItems,
+              "Dark / Light Mode Desteği",
+              "Figma Tasarımlarına Piksel Uyumlu Kurumsal Arayüz Kodlama",
+              "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
+              "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
             ],
           },
           {
-            label: "SEO & Analitik",
+            label: "SEO & Entegrasyon",
             items: [
-              "Kapsamlı teknik SEO, schema ve indeksleme optimizasyonu",
-              "Google Analytics 4 ve Search Console entegrasyonu",
-              "Dönüşüm ve form takibi",
-              "Organization, BreadcrumbList ve benzeri schema yapıları",
-              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
+              ...commonSeoItems,
+              "Meta, Open Graph ve Schema Markup Optimizasyonu",
+              "Kapsamlı Teknik SEO ve İndeksleme Optimizasyonu",
+              "Organization, BreadcrumbList ve Benzeri Schema Yapıları",
+              ...commonIntegrationItems,
+              "Google Search Console Kurulumu ve Doğrulaması",
+              "Google Analytics 4 Entegrasyonu",
+              "Kurumsal E-posta ve Form Yönlendirmeleri",
+              "Sosyal Medya Bağlantıları ve Paylaşım Alanları",
+              "Dönüşüm ve Form Takibi",
+              "Canlı Destek ve Hızlı İletişim Entegrasyonu",
+              "CRM ve E-posta Pazarlama Aracı Entegrasyonu (Mailchimp vb.)",
+              "Üçüncü Parti API Entegrasyon Hazırlığı",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Kapsamlı CMS ve blog altyapısı",
-              "Kariyer / iş ilanı modülü ve başvuru formu",
-              "Etkinlik, duyuru ve takvim modülü",
-              "Kurumsal doküman indirme bölümü",
-              "Video galeri ve medya yönetimi",
-              "Sınırsız dil desteği ve dil bazlı içerik yönetimi",
-            ],
-          },
-          {
-            label: "Entegrasyon",
-            items: [
-              "Canlı destek ve hızlı iletişim entegrasyonu",
-              "CRM ve e-posta pazarlama aracı entegrasyonu (Mailchimp vb.)",
-              "Üçüncü parti API entegrasyon hazırlığı",
+              "Blog Altyapısı",
+              "Ekip ve Kadro Tanıtım Sayfaları",
+              "Hizmetler, Referanslar ve Başarı Hikayeleri Alanları",
+              "Kariyer / İş İlanı Modülü ve Başvuru Formu",
+              "Etkinlik, Duyuru ve Takvim Modülü",
+              "Kurumsal Doküman İndirme Bölümü",
+              "Video Galeri ve Medya Yönetimi",
+              "Sınırsız Dil Desteği",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "45 gün teknik destek",
-              "Kapsamlı kullanım kılavuzu dokümanı",
+              ...commonDeliveryItems,
+              "45 Gün Teknik Destek",
+              "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
             ],
           },
         ],
       },
     },
   },
+
+  // =========================================================================
+  // E-TİCARET WEB SİTESİ
+  // =========================================================================
   ecommerce: {
     title: "E-Ticaret Web Sitesi",
     description:
       "Online satışa hızlı başlamanız için güvenli ödeme altyapısına sahip modern e-ticaret çözümü.",
     tiers: {
       temel: {
-        deliveryDays: "28-42",
+        deliveryDays: "21-30",
         revisions: "3",
         scope: "1-15",
         featureGroups: [
           {
             label: "Tasarım & Geliştirme",
-            items: ["Temel UI/UX düzeni ve marka renklerine uyarlama"],
+            items: [...commonDesignItems],
           },
           {
-            label: "SEO & Temel Entegrasyonlar",
-            items: [
-              "Başlık, açıklama ve temel teknik SEO ayarları",
-              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
-            ],
+            label: "SEO & Entegrasyon",
+            items: [...commonSeoItems, ...commonIntegrationItems],
           },
           {
             label: "Mağaza & Ödeme",
             items: [
-              "Ürün listeleme ve detay sayfaları",
-              "Kategori ve alt kategori yönetimi",
-              "Sepet ve standart sipariş akışı",
-              "Sanal POS entegrasyonu (PayTR vb.)",
-              "Temel stok takip altyapısı",
+              "Ürün Listeleme ve Detay Sayfaları",
+              "Kategori ve Alt Kategori Yönetimi",
+              "Sepet ve Sipariş Akışı Yönetimi",
+              "Ödeme Yöntemi",
+              "Temel Stok Takip Altyapısı",
+              "Temel Kargo Firması Entegrasyonu",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
-            items: [
-              "Temel mağaza yönetim paneli",
-              "Ürün, kategori ve sipariş yönetimi",
-            ],
+            items: ["Ürün, Kategori ve Sipariş Yönetimi"],
           },
           {
             label: "Teslim & Destek",
-            items: ["15 gün teknik destek"],
+            items: [...commonDeliveryItems, "15 Gün Teknik Destek"],
           },
         ],
       },
@@ -292,45 +330,51 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Dark / Light mode desteği",
-              "Premium e-ticaret UI bileşenleri ve filtre animasyonları",
+              ...commonDesignItems,
+              "Dark / Light Mode Desteği",
+              "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
           {
-            label: "SEO & Temel Entegrasyonlar",
+            label: "SEO & Entegrasyon",
             items: [
-              "Gelişmiş SEO (meta, OG, ürün schema markup)",
-              "Google Search Console ve Analytics bağlantısı",
-              "İletişim formu, Google Maps ve hızlı ulaşım bağlantıları",
-              "Otomatik e-posta sipariş bildirimleri",
-              "KVKK, mesafeli satış sözleşmesi ve yasal sayfa altyapısı",
+              ...commonSeoItems,
+              "Gelişmiş SEO (Meta, OG, Ürün Schema Markup)",
+              ...commonIntegrationItems,
+              "Google Search Console Kurulumu ve Doğrulaması",
+              "Google Analytics 4 Entegrasyonu",
+              "Otomatik E-posta Sipariş Bildirimleri",
+              "Mesafeli Satış Sözleşmesi ve Yasal Sayfa Altyapısı",
             ],
           },
           {
             label: "Mağaza & Ödeme",
             items: [
-              "Gelişmiş ürün, kategori ve etiket yönetimi",
-              "Çoklu ödeme yöntemi: sanal POS (PayTR vb.) ve Havale/EFT",
-              "Üyelik, giriş, şifre sıfırlama ve profil sayfaları",
-              "Sipariş takip ve kullanıcı geçmiş paneli",
-              "Kupon, indirim ve kampanya yönetim modülü",
-              "Favoriler ve istek listesi özelliği",
-              "Ürün varyasyon desteği (renk, beden, ölçü vb.)",
+              "Gelişmiş Ürün, Kategori ve Etiket Yönetimi",
+              "Sepet ve Sipariş Akışı Yönetimi",
+              "Ödeme Yöntemi",
+              "Gelişmiş Stok Takibi ve Düşük Stok Uyarıları",
+              "Üyelik, Giriş, Şifre Sıfırlama ve Profil Sayfaları",
+              "Sipariş Takip ve Kullanıcı Geçmiş Paneli",
+              "Kupon, İndirim ve Kampanya Yönetim Modülü",
+              "Favoriler ve İstek Listesi Özelliği",
+              "Ürün Varyasyon Desteği (Renk, Beden, Ölçü vb.)",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Gelişmiş mağaza yönetim paneli (CMS)",
-              "Sipariş, müşteri ve stok yönetimi",
-              "En fazla 2 dil desteği ve dil geçiş altyapısı",
+              "Gelişmiş Mağaza Yönetim Paneli (CMS)",
+              "Ürün, Sipariş, Müşteri ve Stok Yönetimi",
+              "En Fazla 2 Dil Desteği",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "30 gün teknik destek",
-              "Kullanım kılavuzu ve kısa yönetim eğitimi",
+              ...commonDeliveryItems,
+              "30 Gün Teknik Destek",
+              "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
             ],
           },
         ],
@@ -343,51 +387,67 @@ export const webPackagesTr = {
           {
             label: "Tasarım & Geliştirme",
             items: [
-              "Figma tasarımlarına piksel uyumlu e-ticaret arayüzü",
-              "Projeye özel, yüksek hızlı ve ölçeklenebilir altyapı",
-              "Dark / Light mode desteği",
-              "PWA desteği ve uygulama gibi kullanım deneyimi",
-              "Özel sepet ve ödeme sayfası interaksiyon tasarımı",
-              "Farklı cihazlarda kapsamlı uyumluluk testi",
+              ...commonDesignItems,
+              "Dark / Light Mode Desteği",
+              "Figma Tasarımlarına Piksel Uyumlu E-Ticaret Arayüzü Kodlama",
+              "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
+              "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
             ],
           },
           {
-            label: "SEO & Analitik",
+            label: "SEO & Entegrasyon",
             items: [
-              "Kapsamlı teknik e-ticaret SEO optimizasyonu",
-              "Google Analytics 4 (GA4) e-ticaret dönüşüm raporlama",
-              "Google Merchant Center / Alışveriş entegrasyon altyapısı",
-              "Dönüşüm, form ve sepet takibi",
-              "Gelişmiş Product, Review ve Offer schema markup",
-              "Google Search Console kurulumu ve doğrulaması",
+              ...commonSeoItems,
+              "Gelişmiş SEO (Meta, OG, Ürün Schema Markup)",
+              "Kapsamlı Teknik E-Ticaret SEO Optimizasyonu",
+              "Gelişmiş Product, Review ve Offer Schema Markup",
+              ...commonIntegrationItems,
+              "Google Search Console Kurulumu ve Doğrulaması",
+              "Google Analytics 4 Entegrasyonu",
+              "Otomatik E-posta Sipariş Bildirimleri",
+              "Mesafeli Satış Sözleşmesi ve Yasal Sayfa Altyapısı",
+              "Google Merchant Center / Alışveriş Entegrasyon Altyapısı",
+              "GA4 E-Ticaret Dönüşüm Raporlama",
+              "Dönüşüm, Form ve Sepet Takibi",
             ],
           },
           {
             label: "Mağaza & Ödeme",
             items: [
-              "Gelişmiş stok, dinamik varyasyon ve fiyat yönetimi",
-              "Sanal POS (PayTR vb.), kargo ve lojistik entegrasyonu (Yurtiçi, MNG vb.)",
-              "Terk edilen sepet hatırlatma e-postaları",
-              "Ürün yorumu, fotoğraflı değerlendirme ve puanlama sistemi",
-              "Çapraz satış ve önerilen ürünler algoritması",
-              "Toplu ürün import / export (Excel/CSV)",
-              "Fatura ve e-arşiv / ön muhasebe entegrasyon altyapısı",
+              "Gelişmiş Ürün, Kategori ve Etiket Yönetimi",
+              "Sepet ve Sipariş Akışı Yönetimi",
+              "Ödeme Yöntemi",
+              "Gelişmiş Stok Takibi ve Düşük Stok Uyarıları",
+              "Üyelik, Giriş, Şifre Sıfırlama ve Profil Sayfaları",
+              "Sipariş Takip ve Kullanıcı Geçmiş Paneli",
+              "Kupon, İndirim ve Kampanya Yönetim Modülü",
+              "Favoriler ve İstek Listesi Özelliği",
+              "Çoklu Kargo Firması ve Lojistik Entegrasyonu (Yurtiçi, MNG vb.)",
+              "Dinamik Varyasyon ve Fiyat Yönetimi",
+              "Terk Edilen Sepet Hatırlatma E-postaları",
+              "Ürün Yorumu, Fotoğraflı Değerlendirme ve Puanlama Sistemi",
+              "Çapraz Satış ve Önerilen Ürünler Algoritması",
+              "Toplu Ürün Import / Export (Excel/CSV)",
+              "Fatura ve E-arşiv / Ön Muhasebe Entegrasyon Altyapısı",
             ],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Kapsamlı e-ticaret yönetim paneli (Advanced CMS)",
-              "Sınırsız dil ve çoklu para birimi desteği",
-              "Blog ve içerik pazarlama modülü",
-              "CRM, SMS ve pazarlama araçları entegrasyonu (Mailchimp vb.)",
+              "Kapsamlı E-Ticaret Yönetim Paneli (Advanced CMS)",
+              "Ürün, Sipariş, Müşteri ve Stok Yönetimi",
+              "Sınırsız Dil Desteği",
+              "Çoklu Para Birimi Desteği",
+              "Blog ve İçerik Pazarlama Modülü",
+              "CRM, SMS ve Pazarlama Araçları Entegrasyonu (Mailchimp vb.)",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "45 gün teknik destek ve hata onarımı",
-              "Kapsamlı mağaza yönetim ve kullanım kılavuzu",
+              ...commonDeliveryItems,
+              "45 Gün Teknik Destek",
+              "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
             ],
           },
         ],

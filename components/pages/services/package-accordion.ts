@@ -2,7 +2,74 @@ import type { PackageTier } from "./packages-config";
 import type {
   PackageCardData,
   PackageFeatureGroup,
+  PackageTierData,
 } from "./ServicePackageCard";
+
+const tierOrder: PackageTier[] = ["temel", "standart", "pro"];
+
+export interface PackageFeatureItem {
+  text: string;
+  included: boolean;
+}
+
+const exclusiveItemPatterns: RegExp[] = [
+  /^\d+\s*(g[üu]n|days?)\b/i,
+  /dil[\s\S]*deste(ğ|g)i/i,
+  /language[\s\S]*support/i,
+];
+
+function matchExclusivePattern(text: string): RegExp | undefined {
+  return exclusiveItemPatterns.find((pattern) => pattern.test(text));
+}
+
+export function buildFeatureGroupComparison(
+  tiers: Record<PackageTier, PackageTierData>,
+  groupLabel: string,
+  activeTier: PackageTier,
+): PackageFeatureItem[] {
+  const ordered: string[] = [];
+  const seen = new Set<string>();
+  const minTierIndex = new Map<string, number>();
+
+  tierOrder.forEach((tierKey, tierIndex) => {
+    const group = tiers[tierKey].featureGroups?.find(
+      (entry) => entry.label === groupLabel,
+    );
+    for (const item of group?.items ?? []) {
+      if (!seen.has(item)) {
+        seen.add(item);
+        ordered.push(item);
+        minTierIndex.set(item, tierIndex);
+      }
+    }
+  });
+
+  const activeItems = new Set(
+    tiers[activeTier].featureGroups?.find((entry) => entry.label === groupLabel)
+      ?.items ?? [],
+  );
+
+  const activeItemByPattern = new Map<RegExp, string>();
+  for (const item of ordered) {
+    if (!activeItems.has(item)) continue;
+    const pattern = matchExclusivePattern(item);
+    if (pattern && !activeItemByPattern.has(pattern)) {
+      activeItemByPattern.set(pattern, item);
+    }
+  }
+
+  const filtered = ordered.filter((item) => {
+    const pattern = matchExclusivePattern(item);
+    if (!pattern) return true;
+    return activeItemByPattern.get(pattern) === item;
+  });
+
+  const activeTierIndex = tierOrder.indexOf(activeTier);
+  return filtered.map((text) => ({
+    text,
+    included: (minTierIndex.get(text) ?? activeTierIndex) <= activeTierIndex,
+  }));
+}
 
 export const compactAccordionQuery = "(max-width: 1023px)";
 export const desktopGridQuery = "(min-width: 1024px)";

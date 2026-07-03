@@ -14,7 +14,6 @@ import {
 } from "./package-accordion";
 import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
 import { ServicesPackagesIntro } from "./ServicesPackagesIntro";
-import { PackageCommonFeatures } from "./PackageCommonFeatures";
 import { ServicePackageCard, type PackageCardData } from "./ServicePackageCard";
 import { usePackageGroupHeightSync } from "./usePackageGroupHeightSync";
 
@@ -61,16 +60,10 @@ interface CategoryIntros {
   maintenance: PackagesIntro;
 }
 
-interface CategoryCommonFeatures {
-  title: string;
-  items: string[];
-}
-
 interface ServicesPackagesPanelProps {
   labels: PackagesPanelLabels;
   intros: CategoryIntros;
   packages: CategoryPackages;
-  commonFeatures?: Partial<Record<PackageCategory, CategoryCommonFeatures>>;
   lockedCategory?: PackageCategory;
   className?: string;
 }
@@ -106,7 +99,6 @@ export function ServicesPackagesPanel({
   labels,
   intros,
   packages,
-  commonFeatures,
   lockedCategory,
   className,
 }: ServicesPackagesPanelProps) {
@@ -125,7 +117,6 @@ export function ServicesPackagesPanel({
   const scopeKey = scopeLabelKey[activeCategory];
   const revisionKey = revisionLabelKey[activeCategory];
   const deliveryKey = deliveryLabelKey[activeCategory];
-  const activeCommonFeatures = commonFeatures?.[activeCategory];
 
   const visiblePackages = useMemo(
     () => slugs.map((slug) => categoryPackages[slug]),
@@ -203,25 +194,11 @@ export function ServicesPackagesPanel({
         p2={intro.p2}
       />
 
-      {activeCommonFeatures ? (
-        <PackageCommonFeatures
-          title={activeCommonFeatures.title}
-          items={activeCommonFeatures.items}
-          className={lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"}
-        />
-      ) : null}
-
       <div
         ref={gridRef}
         key={activeCategory}
         className={`${
-          activeCommonFeatures
-            ? lockedCategory
-              ? "mt-5 md:mt-6"
-              : "mt-6 md:mt-8"
-            : lockedCategory
-              ? "mt-8 md:mt-10"
-              : "mt-14"
+          lockedCategory ? "mt-8 md:mt-10" : "mt-14"
         } grid items-stretch gap-6 lg:gap-5 xl:gap-6 ${
           slugs.length === 1 ? "mx-auto w-full max-w-2xl" : "lg:grid-cols-3"
         }`}

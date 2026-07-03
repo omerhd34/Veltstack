@@ -1,3 +1,20 @@
+const commonDesignItems = [
+  "Mobile-compatible (responsive) development",
+  "Cross-browser compatibility testing",
+  "SSL certificate and security setup",
+] as const;
+
+const commonSeoItems = [
+  "Sitemap and robots.txt setup",
+  "Privacy-compliant cookie policy module (KVKK/GDPR)",
+] as const;
+
+const commonDeliveryItems = [
+  "Source code delivery",
+  "Live deployment support",
+  "Hosting setup guide",
+] as const;
+
 export const webPackagesEn = {
   portfolio: {
     title: "Portfolio / Promotional Website",
@@ -12,13 +29,14 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
+              ...commonDesignItems,
               "Fast load times and SEO-friendly performance optimization",
-              "Basic UI/UX template adaptation",
             ],
           },
           {
             label: "SEO & Integration",
             items: [
+              ...commonSeoItems,
               "Basic SEO configuration",
               "Google Analytics 4 (GA4) setup",
               "Google Search Console setup",
@@ -27,7 +45,7 @@ export const webPackagesEn = {
           },
           {
             label: "Delivery & Support",
-            items: ["15 days technical support"],
+            items: [...commonDeliveryItems, "15 days technical support"],
           },
         ],
       },
@@ -39,14 +57,14 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
+              ...commonDesignItems,
               "Fast load times and SEO-friendly performance optimization",
-              "Page transition animations and scroll effects",
-              "Premium UI components and hover effects",
             ],
           },
           {
             label: "SEO & Integration",
             items: [
+              ...commonSeoItems,
               "Advanced SEO (meta, OG, schema markup)",
               "Google Search Console connection",
               "Contact form and Google Maps integration",
@@ -57,6 +75,7 @@ export const webPackagesEn = {
           {
             label: "Content & Panel",
             items: [
+              "Dark / Light mode support",
               "Services / project gallery section",
               "References and client testimonials section",
               "Basic portfolio management panel (CMS)",
@@ -66,6 +85,7 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
+              ...commonDeliveryItems,
               "30 days technical support",
               "User guide training and documentation",
             ],
@@ -80,17 +100,16 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
+              ...commonDesignItems,
               "Custom-built, high-speed infrastructure",
               "Pixel-perfect Figma-to-code implementation",
-              "Dark / Light mode support",
-              "PWA (Progressive Web App) support",
               "Custom animation and interaction design",
-              "Comprehensive cross-browser and cross-device testing",
             ],
           },
           {
             label: "SEO & Analytics",
             items: [
+              ...commonSeoItems,
               "Comprehensive technical SEO optimization",
               "Google Analytics and Search Console integration",
               "Conversion tracking (forms, clicks, CTAs)",
@@ -101,6 +120,7 @@ export const webPackagesEn = {
           {
             label: "Content & Panel",
             items: [
+              "Dark / Light mode support",
               "Dynamic portfolio management panel (full CMS)",
               "Blog / article module",
               "Multilingual support",
@@ -110,7 +130,7 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Hosting and domain setup guide",
+              ...commonDeliveryItems,
               "45 days technical support",
               "User guide training and documentation",
             ],
@@ -132,14 +152,15 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
+              ...commonDesignItems,
               "Mobile-compatible development aligned with corporate identity",
               "Fast load times and SEO-friendly performance optimization",
-              "Basic UI/UX template adaptation",
             ],
           },
           {
             label: "SEO & Integration",
             items: [
+              ...commonSeoItems,
               "Basic SEO configuration",
               "Google Analytics 4 (GA4) setup",
               "Google Search Console setup",
@@ -149,7 +170,7 @@ export const webPackagesEn = {
           },
           {
             label: "Delivery & Support",
-            items: ["15 days technical support"],
+            items: [...commonDeliveryItems, "15 days technical support"],
           },
         ],
       },
@@ -161,14 +182,14 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Custom coding aligned with corporate color palette and typography",
+              ...commonDesignItems,
               "Fast load times and SEO-friendly performance optimization",
-              "Premium UI components and corporate animations",
             ],
           },
           {
             label: "SEO & Integration",
             items: [
+              ...commonSeoItems,
               "Advanced SEO (meta, OG, schema markup)",
               "Google Search Console connection",
               "Contact form and Google Maps integration",
@@ -180,6 +201,7 @@ export const webPackagesEn = {
           {
             label: "Content & Panel",
             items: [
+              "Dark / Light mode support",
               "CMS content management panel",
               "Blog, news and announcement module",
               "Team / staff profile page",
@@ -191,6 +213,7 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
+              ...commonDeliveryItems,
               "30 days technical support",
               "User guide training and documentation",
             ],
@@ -205,17 +228,16 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
+              ...commonDesignItems,
               "Pixel-perfect corporate Figma-to-code implementation",
               "Custom-built, high-speed infrastructure",
-              "Dark / Light mode support",
-              "PWA (Progressive Web App) support",
               "Custom animation and interaction design",
-              "Cross-browser and cross-device compatibility testing",
             ],
           },
           {
             label: "SEO & Analytics",
             items: [
+              ...commonSeoItems,
               "Comprehensive technical SEO optimization",
               "Google Analytics integration",
               "Conversion and form tracking",
@@ -226,6 +248,7 @@ export const webPackagesEn = {
           {
             label: "Content & Panel",
             items: [
+              "Dark / Light mode support",
               "Full CMS and blog infrastructure",
               "Multilingual support",
               "Career / job posting module and application form",
@@ -245,6 +268,7 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
+              ...commonDeliveryItems,
               "45 days technical support",
               "User guide training and documentation",
               "Comprehensive user manual documentation",
@@ -267,14 +291,15 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
+              ...commonDesignItems,
               "Fast load times and SEO-friendly performance optimization",
               "SSL certificate and payment security infrastructure",
-              "Basic UI/UX template adaptation",
             ],
           },
           {
             label: "SEO & Integration",
             items: [
+              ...commonSeoItems,
               "Basic ecommerce SEO configuration",
               "Google Analytics 4 (GA4) setup",
               "Google Search Console setup",
@@ -296,7 +321,7 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Hosting and database setup guide",
+              ...commonDeliveryItems,
               "15 days technical support",
             ],
           },
@@ -310,13 +335,14 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
+              ...commonDesignItems,
               "Fast load times and SEO-friendly performance optimization",
-              "Premium ecommerce UI components and filter animations",
             ],
           },
           {
             label: "SEO & Integration",
             items: [
+              ...commonSeoItems,
               "Advanced SEO (meta, OG, product schema markup)",
               "Google Search Console and Analytics connection",
               "Contact form and Google Maps integration",
@@ -341,6 +367,7 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
+              ...commonDeliveryItems,
               "30 days technical support",
               "User guide training and documentation",
             ],
@@ -355,17 +382,15 @@ export const webPackagesEn = {
           {
             label: "Development & Design",
             items: [
+              ...commonDesignItems,
               "Pixel-perfect ecommerce Figma-to-code implementation",
               "Custom-built, high-speed scalable infrastructure",
-              "Dark / Light mode support",
-              "PWA (Progressive Web App) support",
-              "Custom cart and checkout page interaction design",
-              "Comprehensive device compatibility testing",
             ],
           },
           {
             label: "SEO & Analytics",
             items: [
+              ...commonSeoItems,
               "Comprehensive technical ecommerce SEO optimization",
               "Google Analytics 4 (GA4) ecommerce conversion reporting",
               "Google Merchant Center / Shopping integration infrastructure",
@@ -377,8 +402,14 @@ export const webPackagesEn = {
           {
             label: "Store & Payment",
             items: [
-              "Advanced stock, dynamic variant and price management",
-              "Payment gateway, shipping and logistics integration (Yurtiçi, MNG, etc.)",
+              "Advanced product, category and tag management",
+              "Multiple payment methods (credit card, bank transfer/EFT)",
+              "Membership, login, password reset and profile pages",
+              "Order tracking and user history panel",
+              "Coupon, discount and campaign management module",
+              "Add to favorites / wishlist",
+              "Dynamic variant and pricing management",
+              "Shipping and logistics integration (Yurtiçi, MNG, etc.)",
               "Abandoned cart reminder emails",
               "Product reviews, photo ratings and scoring system",
               "Cross-sell and recommended products algorithm",
@@ -389,6 +420,7 @@ export const webPackagesEn = {
           {
             label: "Content & Panel",
             items: [
+              "Dark / Light mode support",
               "Full ecommerce management panel (advanced CMS)",
               "Multilingual and multi-currency support",
               "Blog / content marketing module",
@@ -398,6 +430,7 @@ export const webPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
+              ...commonDeliveryItems,
               "45 days technical support and bug fixes",
               "Comprehensive store management and user guide",
             ],
