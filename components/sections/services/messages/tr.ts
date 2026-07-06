@@ -10,6 +10,7 @@ export const servicesHomeTr = {
     "Yayın sonrası teknik destek dahil",
   ],
   servicesCta: "Birlikte planlayalım",
+  servicesAllCta: "Tüm hizmetler",
   servicesSliderPrev: "Önceki hizmet",
   servicesSliderNext: "Sonraki hizmet",
   servicesSliderDot: "Hizmet",

@@ -2,7 +2,7 @@ import { servicesPackagesEn } from "./packages-en";
 
 export const servicesPageEn = {
   heroBadge: "Digital Services",
-  heroTitle: "Clear packages for your web and mobile projects",
+  heroTitle: "Clear packages, clear scope",
   heroSubtitle:
     "Every project type comes in three tiers: Startup, Professional and Premium. Scope, delivery and revisions are defined upfront, large projects scale without limits.",
   heroSubtitleSecondary:

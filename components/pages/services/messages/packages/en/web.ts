@@ -1,18 +1,52 @@
 const commonDesignItems = [
-  "Mobile-compatible (responsive) development",
+  "Responsive development",
   "Cross-browser compatibility testing",
   "SSL certificate and security setup",
+  "Fast load times and SEO-friendly performance optimization",
 ] as const;
 
-const commonSeoItems = [
-  "Sitemap and robots.txt setup",
+const commonSeoItems = ["Sitemap and robots.txt setup"] as const;
+
+const commonIntegrationItems = [
   "Privacy-compliant cookie policy module (KVKK/GDPR)",
+  "Contact form, Google Maps and quick contact links",
 ] as const;
 
 const commonDeliveryItems = [
   "Source code delivery",
   "Live deployment support",
   "Hosting setup guide",
+] as const;
+
+const tierSeoTemelItems = [
+  ...commonSeoItems,
+  ...commonIntegrationItems,
+] as const;
+
+const tierSeoStandartItems = [
+  ...commonSeoItems,
+  "Meta, Open Graph and schema markup optimization",
+  ...commonIntegrationItems,
+  "Google Search Console setup and verification",
+  "Google Analytics 4 (GA4) integration",
+  "Social media links and sharing areas",
+  "Domain, www/non-www and redirect configuration",
+] as const;
+
+const tierSeoProItems = [
+  ...commonSeoItems,
+  "Meta, Open Graph and schema markup optimization",
+  "Comprehensive technical SEO and indexing optimization",
+  "Organization, BreadcrumbList and similar schema structures",
+  ...commonIntegrationItems,
+  "Google Search Console setup and verification",
+  "Google Analytics 4 (GA4) integration",
+  "Social media links and sharing areas",
+  "Domain, www/non-www and redirect configuration",
+  "Conversion tracking (forms, clicks, CTAs)",
+  "Live support and quick contact integration",
+  "CRM and email marketing tool integration (Mailchimp, etc.)",
+  "Third-party API integration readiness",
 ] as const;
 
 export const webPackagesEn = {
@@ -28,20 +62,15 @@ export const webPackagesEn = {
         featureGroups: [
           {
             label: "Development & Design",
-            items: [
-              ...commonDesignItems,
-              "Fast load times and SEO-friendly performance optimization",
-            ],
+            items: [...commonDesignItems],
           },
           {
             label: "SEO & Integration",
-            items: [
-              ...commonSeoItems,
-              "Basic SEO configuration",
-              "Google Analytics 4 (GA4) setup",
-              "Google Search Console setup",
-              "Contact form and Google Maps integration",
-            ],
+            items: [...tierSeoTemelItems],
+          },
+          {
+            label: "Content & Panel",
+            items: [],
           },
           {
             label: "Delivery & Support",
@@ -58,24 +87,17 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               ...commonDesignItems,
-              "Fast load times and SEO-friendly performance optimization",
+              "Dark / Light mode support",
+              "Smooth page transitions and micro-interactions",
             ],
           },
           {
             label: "SEO & Integration",
-            items: [
-              ...commonSeoItems,
-              "Advanced SEO (meta, OG, schema markup)",
-              "Google Search Console connection",
-              "Contact form and Google Maps integration",
-              "Social media quick contact and sharing",
-              "Domain routing and www/non-www setup",
-            ],
+            items: [...tierSeoStandartItems],
           },
           {
             label: "Content & Panel",
             items: [
-              "Dark / Light mode support",
               "Services / project gallery section",
               "References and client testimonials section",
               "Basic portfolio management panel (CMS)",
@@ -101,30 +123,25 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               ...commonDesignItems,
-              "Custom-built, high-speed infrastructure",
+              "Dark / Light mode support",
               "Pixel-perfect Figma-to-code implementation",
-              "Custom animation and interaction design",
+              "Smooth page transitions and micro-interactions",
+              "Scalable infrastructure for high traffic",
             ],
           },
           {
-            label: "SEO & Analytics",
-            items: [
-              ...commonSeoItems,
-              "Comprehensive technical SEO optimization",
-              "Google Analytics and Search Console integration",
-              "Conversion tracking (forms, clicks, CTAs)",
-              "Contact form and Google Maps integration",
-              "Open Graph and Twitter Card configuration",
-            ],
+            label: "SEO & Integration",
+            items: [...tierSeoProItems],
           },
           {
             label: "Content & Panel",
             items: [
-              "Dark / Light mode support",
+              "Services / project gallery section",
+              "References and client testimonials section",
               "Dynamic portfolio management panel (full CMS)",
               "Blog / article module",
-              "Multilingual support",
               "Project filtering and dynamic category system",
+              "Support for up to 5 languages",
             ],
           },
           {
@@ -151,22 +168,15 @@ export const webPackagesEn = {
         featureGroups: [
           {
             label: "Development & Design",
-            items: [
-              ...commonDesignItems,
-              "Mobile-compatible development aligned with corporate identity",
-              "Fast load times and SEO-friendly performance optimization",
-            ],
+            items: [...commonDesignItems],
           },
           {
             label: "SEO & Integration",
-            items: [
-              ...commonSeoItems,
-              "Basic SEO configuration",
-              "Google Analytics 4 (GA4) setup",
-              "Google Search Console setup",
-              "Contact form and Google Maps integration",
-              "Corporate email routing guide",
-            ],
+            items: [...tierSeoTemelItems],
+          },
+          {
+            label: "Content & Panel",
+            items: [],
           },
           {
             label: "Delivery & Support",
@@ -183,26 +193,19 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               ...commonDesignItems,
-              "Fast load times and SEO-friendly performance optimization",
+              "Dark / Light mode support",
+              "Smooth page transitions and micro-interactions",
             ],
           },
           {
             label: "SEO & Integration",
-            items: [
-              ...commonSeoItems,
-              "Advanced SEO (meta, OG, schema markup)",
-              "Google Search Console connection",
-              "Contact form and Google Maps integration",
-              "Corporate email routing",
-              "WhatsApp and live support button",
-              "Social media integration",
-            ],
+            items: [...tierSeoStandartItems],
           },
           {
             label: "Content & Panel",
             items: [
-              "Dark / Light mode support",
               "CMS content management panel",
+              "Corporate email and form routing",
               "Blog, news and announcement module",
               "Team / staff profile page",
               "Services and references section",
@@ -229,40 +232,28 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               ...commonDesignItems,
+              "Dark / Light mode support",
               "Pixel-perfect corporate Figma-to-code implementation",
-              "Custom-built, high-speed infrastructure",
-              "Custom animation and interaction design",
+              "Smooth page transitions and micro-interactions",
+              "Scalable infrastructure for high traffic",
             ],
           },
           {
-            label: "SEO & Analytics",
-            items: [
-              ...commonSeoItems,
-              "Comprehensive technical SEO optimization",
-              "Google Analytics integration",
-              "Conversion and form tracking",
-              "Google Search Console setup",
-              "Schema markup (Organization, BreadcrumbList, etc.)",
-            ],
+            label: "SEO & Integration",
+            items: [...tierSeoProItems],
           },
           {
             label: "Content & Panel",
             items: [
-              "Dark / Light mode support",
               "Full CMS and blog infrastructure",
-              "Multilingual support",
+              "Corporate email and form routing",
+              "Team / staff profile page",
+              "Services and references section",
               "Career / job posting module and application form",
               "Event and announcement calendar",
               "Corporate document download section",
               "Video gallery and media management",
-            ],
-          },
-          {
-            label: "Integration",
-            items: [
-              "Live support / advanced WhatsApp integration",
-              "CRM and email marketing integration",
-              "Third-party API integration readiness",
+              "Support for up to 5 languages",
             ],
           },
           {
@@ -271,7 +262,6 @@ export const webPackagesEn = {
               ...commonDeliveryItems,
               "45 days technical support",
               "User guide training and documentation",
-              "Comprehensive user manual documentation",
             ],
           },
         ],
@@ -292,38 +282,31 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               ...commonDesignItems,
-              "Fast load times and SEO-friendly performance optimization",
               "SSL certificate and payment security infrastructure",
             ],
           },
           {
             label: "SEO & Integration",
-            items: [
-              ...commonSeoItems,
-              "Basic ecommerce SEO configuration",
-              "Google Analytics 4 (GA4) setup",
-              "Google Search Console setup",
-              "Contact form and Google Maps integration",
-              "Privacy, Distance Sales Agreement and cookie module (KVKK/GDPR)",
-            ],
+            items: [...tierSeoTemelItems],
           },
           {
-            label: "Content & Panel",
+            label: "Store & Payment",
             items: [
               "Product listing and detail pages",
               "Category and subcategory management",
               "Cart and standard checkout flow",
               "Single payment gateway integration (PayTR, etc.)",
               "Basic stock tracking infrastructure",
-              "Basic store admin dashboard",
+              "Basic shipping carrier integration",
             ],
           },
           {
+            label: "Content & Panel",
+            items: ["Product, category and order management"],
+          },
+          {
             label: "Delivery & Support",
-            items: [
-              ...commonDeliveryItems,
-              "15 days technical support",
-            ],
+            items: [...commonDeliveryItems, "15 days technical support"],
           },
         ],
       },
@@ -336,32 +319,36 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               ...commonDesignItems,
-              "Fast load times and SEO-friendly performance optimization",
+              "Dark / Light mode support",
+              "Smooth page transitions and micro-interactions",
             ],
           },
           {
             label: "SEO & Integration",
-            items: [
-              ...commonSeoItems,
-              "Advanced SEO (meta, OG, product schema markup)",
-              "Google Search Console and Analytics connection",
-              "Contact form and Google Maps integration",
-              "WhatsApp quick order and support integration",
-              "Automated email order notifications",
-              "Privacy and legal agreement infrastructure (KVKK/GDPR)",
-              "Second language support",
-            ],
+            items: [...tierSeoStandartItems],
           },
           {
             label: "Store & Payment",
             items: [
+              "Automated email order notifications",
+              "Distance sales agreement and legal page infrastructure",
               "Advanced product, category and tag management",
-              "Multiple payment methods (credit card, bank transfer/EFT)",
+              "Cart and checkout flow management",
+              "Payment method integration",
+              "Advanced stock tracking and low-stock alerts",
               "Membership, login, password reset and profile pages",
               "Order tracking and user history panel",
               "Coupon, discount and campaign management module",
               "Add to favorites / wishlist",
               "Product variant support (color, size, dimensions, etc.)",
+            ],
+          },
+          {
+            label: "Content & Panel",
+            items: [
+              "Store admin dashboard",
+              "Product, order, customer and stock management",
+              "Second language support",
             ],
           },
           {
@@ -383,33 +370,31 @@ export const webPackagesEn = {
             label: "Development & Design",
             items: [
               ...commonDesignItems,
+              "Dark / Light mode support",
               "Pixel-perfect ecommerce Figma-to-code implementation",
-              "Custom-built, high-speed scalable infrastructure",
+              "Smooth page transitions and micro-interactions",
+              "Scalable infrastructure for high traffic",
             ],
           },
           {
-            label: "SEO & Analytics",
-            items: [
-              ...commonSeoItems,
-              "Comprehensive technical ecommerce SEO optimization",
-              "Google Analytics 4 (GA4) ecommerce conversion reporting",
-              "Google Merchant Center / Shopping integration infrastructure",
-              "Conversion, form and cart tracking",
-              "Advanced Product, Review and Offer schema markup",
-              "Google Search Console setup",
-            ],
+            label: "SEO & Integration",
+            items: [...tierSeoProItems],
           },
           {
             label: "Store & Payment",
             items: [
+              "Automated email order notifications",
+              "Distance sales agreement and legal page infrastructure",
               "Advanced product, category and tag management",
+              "Cart and checkout flow management",
               "Multiple payment methods (credit card, bank transfer/EFT)",
+              "Advanced stock tracking and low-stock alerts",
               "Membership, login, password reset and profile pages",
               "Order tracking and user history panel",
               "Coupon, discount and campaign management module",
               "Add to favorites / wishlist",
-              "Dynamic variant and pricing management",
               "Shipping and logistics integration (Yurtiçi, MNG, etc.)",
+              "Dynamic variant and pricing management",
               "Abandoned cart reminder emails",
               "Product reviews, photo ratings and scoring system",
               "Cross-sell and recommended products algorithm",
@@ -420,11 +405,12 @@ export const webPackagesEn = {
           {
             label: "Content & Panel",
             items: [
-              "Dark / Light mode support",
               "Full ecommerce management panel (advanced CMS)",
-              "Multilingual and multi-currency support",
+              "Product, order, customer and stock management",
+              "Support for up to 5 languages",
+              "Multi-currency support",
               "Blog / content marketing module",
-              "CRM, SMS and marketing tools connection (Mailchimp, etc.)",
+              "SMS and marketing tools connection (Mailchimp, etc.)",
             ],
           },
           {

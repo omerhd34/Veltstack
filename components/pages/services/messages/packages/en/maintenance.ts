@@ -2,58 +2,59 @@ export const maintenancePackagesEn = {
   maintenanceServices: {
     title: "Maintenance & Support Services",
     description:
-      "Comprehensive ongoing support to keep your website, mobile app and backend infrastructure secure, up to date and always running.",
+      "Regular maintenance, monitoring and technical support to keep your website, mobile app and backend infrastructure secure, up to date and always running.",
     tiers: {
       temel: {
-        deliveryDays: "7-14",
+        deliveryDays: "3-5",
         revisions: "2",
         scope: "1",
         featureGroups: [
           {
             label: "Monitoring & Backup",
             items: [
-              "Monthly file and database backups",
               "Uptime monitoring and outage alerts",
-              "Basic error log monitoring",
-              "Basic content and text updates",
+              "Monthly full backup (files + database)",
+              "Basic error log tracking and critical alerts",
             ],
           },
           {
-            label: "Support & Response",
+            label: "Support & Content",
             items: [
               "Email technical support channel",
-              "Bug fixes within 48 hours",
+              "48-hour response target on business days",
+              "Up to 2 content and text update requests per month",
             ],
           },
         ],
       },
       standart: {
-        deliveryDays: "7-14",
+        deliveryDays: "5-7",
         revisions: "5",
-        scope: "2-3",
+        scope: "1-2",
         featureGroups: [
           {
             label: "Maintenance & Updates",
             items: [
-              "Weekly backups and restore testing",
-              "Package, library and module updates",
-              "Monthly content, image and page revisions",
+              "Weekly automated backups and monthly restore testing",
+              "Framework, package and security patch updates",
               "SSL certificate tracking and renewal",
+              "Monthly content, image and minor page updates",
             ],
           },
           {
             label: "Performance & Security",
             items: [
-              "Core Web Vitals monitoring",
+              "Core Web Vitals and page speed monitoring",
               "Server resource tracking (CPU, RAM, disk)",
-              "Basic security scans and vulnerability checks",
+              "Dependency and basic security scanning",
             ],
           },
           {
             label: "Support & SLA",
             items: [
-              "Priority support via WhatsApp and email",
-              "Bug fixes targeted within 24 hours",
+              "Support via email and WhatsApp",
+              "24-hour response target on business days",
+              "Monthly status summary report",
             ],
           },
         ],
@@ -64,30 +65,29 @@ export const maintenancePackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Proactive & Enterprise Maintenance",
+            label: "Proactive Maintenance",
             items: [
-              "Real-time source code and database backup infrastructure",
-              "CI/CD process maintenance and updates",
-              "AWS, Google Cloud or Azure infrastructure optimization",
-              "Container and cluster infrastructure maintenance support",
+              "Daily automated backups and disaster recovery planning",
+              "CI/CD pipeline maintenance and deploy process management",
+              "Cloud infrastructure monitoring and cost/performance optimization",
               "Extended content and design update support",
             ],
           },
           {
-            label: "Security & SLA",
+            label: "Security & Monitoring",
             items: [
-              "24/7 alerting and monitoring system setup",
-              "High-availability uptime tracking and priority SLA",
-              "Critical incident response targeted within 1 hour",
-              "Firewall and attack monitoring configuration support",
+              "24/7 uptime monitoring and instant alert notifications",
+              "Advanced security scanning and patch management",
+              "Critical incident response targeted within 4 hours",
+              "Server and access security configuration support",
             ],
           },
           {
             label: "Priority Support",
             items: [
               "Priority technical support and proactive maintenance",
-              "Weekly status review meetings",
-              "Custom live system monitoring dashboard",
+              "Monthly strategy and status review call",
+              "Custom status dashboard and detailed monthly reporting",
             ],
           },
         ],

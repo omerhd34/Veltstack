@@ -27,8 +27,8 @@ export const contactTr = {
     { value: "web-sitesi-gelistirme", label: "Web Sitesi Geliştirme" },
     { value: "web-sitesi-yenileme", label: "Web & Uygulama Yenileme" },
     { value: "uygulama-gelistirme", label: "Uygulama Geliştirme" },
-    { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
     { value: "teknik-denetim", label: "Teknik Denetim" },
+    { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
     { value: "bakim-ve-destek", label: "Bakım & Destek" },
     { value: "diger", label: "Diğer / Henüz bilmiyorum" },
   ],
@@ -52,7 +52,7 @@ export const contactTr = {
       { value: "ecommerce", label: "E-Ticaret Sitesi Yenileme" },
     ],
     "uygulama-gelistirme": [
-      { value: "portfolio", label: "Tanıtım / Portföy Uygulaması" },
+      { value: "portfolio", label: "Portföy / Tanıtım Uygulaması" },
       { value: "corporate", label: "Kurumsal Mobil Uygulama" },
       { value: "ecommerce", label: "E-Ticaret Mobil Uygulama" },
     ],

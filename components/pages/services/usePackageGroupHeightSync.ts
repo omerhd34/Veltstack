@@ -51,30 +51,19 @@ export function syncGroupHeights(container: HTMLElement) {
   groupsByLabel.forEach((elements) => {
     const expandedElements = elements.filter(isGroupExpanded);
 
-    if (!expandedElements.length) {
-      let maxCollapsedHeight = 0;
-      elements.forEach((element) => {
-        maxCollapsedHeight = Math.max(
-          maxCollapsedHeight,
-          element.getBoundingClientRect().height,
-        );
-      });
-      elements.forEach((element) => {
-        element.style.minHeight = `${maxCollapsedHeight}px`;
-      });
+    if (expandedElements.length) {
       return;
     }
 
-    let maxExpandedHeight = 0;
-    expandedElements.forEach((element) => {
-      maxExpandedHeight = Math.max(
-        maxExpandedHeight,
+    let maxCollapsedHeight = 0;
+    elements.forEach((element) => {
+      maxCollapsedHeight = Math.max(
+        maxCollapsedHeight,
         element.getBoundingClientRect().height,
       );
     });
-
-    expandedElements.forEach((element) => {
-      element.style.minHeight = `${maxExpandedHeight}px`;
+    elements.forEach((element) => {
+      element.style.minHeight = `${maxCollapsedHeight}px`;
     });
   });
 }

@@ -8,11 +8,13 @@ import {
   type PackageTier,
 } from "./packages-config";
 import {
+  collectAllTierGroupLabels,
   collectCommonFeatureGroupLabels,
   compactAccordionQuery,
   getDefaultOpenGroups,
 } from "./package-accordion";
 import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
+import { ServicesPackageTypeTabs } from "./ServicesPackageTypeTabs";
 import { ServicesPackagesIntro } from "./ServicesPackagesIntro";
 import { ServicePackageCard, type PackageCardData } from "./ServicePackageCard";
 import { usePackageGroupHeightSync } from "./usePackageGroupHeightSync";
@@ -34,6 +36,7 @@ interface PackagesPanelLabels {
   statDeliveryAudit: string;
   statDeliveryUnit: string;
   statRevision: string;
+  statMonthlyRequests: string;
   statPages: string;
   statScreens: string;
   statKeywords: string;
@@ -68,6 +71,8 @@ interface ServicesPackagesPanelProps {
   className?: string;
 }
 
+const tierOrder: PackageTier[] = ["temel", "standart", "pro"];
+
 const deliveryLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   web: "statDelivery",
   refresh: "statDelivery",
@@ -92,7 +97,7 @@ const revisionLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   app: "statRevision",
   seo: "statPages",
   audit: "statPages",
-  maintenance: "statRevision",
+  maintenance: "statMonthlyRequests",
 };
 
 export function ServicesPackagesPanel({
@@ -106,32 +111,67 @@ export function ServicesPackagesPanel({
     lockedCategory ?? "web",
   );
   const activeCategory = lockedCategory ?? category;
+  const slugs = categoryPackageSlugs[activeCategory];
+  const [activePackageSlug, setActivePackageSlug] = useState(slugs[0]);
   const [activeTier, setActiveTier] = useState<PackageTier>("standart");
   const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
   const gridRef = useRef<HTMLDivElement>(null);
 
+  const useTierComparison = true;
+  const resolvedPackageSlug = slugs.includes(activePackageSlug)
+    ? activePackageSlug
+    : slugs[0];
+
   const intro = intros[activeCategory];
   const categoryPackages = packages[activeCategory];
-  const slugs = categoryPackageSlugs[activeCategory];
   const icons = categoryIcons[activeCategory];
   const scopeKey = scopeLabelKey[activeCategory];
   const revisionKey = revisionLabelKey[activeCategory];
   const deliveryKey = deliveryLabelKey[activeCategory];
 
-  const visiblePackages = useMemo(
-    () => slugs.map((slug) => categoryPackages[slug]),
-    [categoryPackages, slugs],
+  const selectedPackage = categoryPackages[resolvedPackageSlug];
+
+  const packageTypeTabs = useMemo(
+    () =>
+      slugs.map((slug) => ({
+        id: slug,
+        label: categoryPackages[slug].title,
+        icon: icons[slug],
+      })),
+    [categoryPackages, icons, slugs],
   );
 
-  const commonGroupLabels = useMemo(
-    () => collectCommonFeatureGroupLabels(visiblePackages, activeTier),
-    [visiblePackages, activeTier],
-  );
+  const visiblePackages = useMemo(() => {
+    if (useTierComparison) {
+      return tierOrder.map(() => selectedPackage);
+    }
+    return slugs.map((slug) => categoryPackages[slug]);
+  }, [categoryPackages, selectedPackage, slugs, useTierComparison]);
+
+  const handleCategoryChange = (newCategory: PackageCategory) => {
+    setCategory(newCategory);
+    setActivePackageSlug(categoryPackageSlugs[newCategory][0]);
+  };
+
+  const commonGroupLabels = useMemo(() => {
+    if (useTierComparison) {
+      return collectAllTierGroupLabels(selectedPackage);
+    }
+    return collectCommonFeatureGroupLabels(visiblePackages, activeTier);
+  }, [activeTier, selectedPackage, useTierComparison, visiblePackages]);
 
   useLayoutEffect(() => {
     const mediaQuery = window.matchMedia(compactAccordionQuery);
 
     const syncOpenGroups = () => {
+      if (useTierComparison) {
+        const labels = collectAllTierGroupLabels(selectedPackage);
+        setOpenGroups(
+          mediaQuery.matches || !labels.length ? new Set() : new Set(labels),
+        );
+        return;
+      }
+
       setOpenGroups(
         getDefaultOpenGroups(visiblePackages, activeTier, mediaQuery.matches),
       );
@@ -140,13 +180,23 @@ export function ServicesPackagesPanel({
     syncOpenGroups();
     mediaQuery.addEventListener("change", syncOpenGroups);
     return () => mediaQuery.removeEventListener("change", syncOpenGroups);
-  }, [activeTier, activeCategory, visiblePackages]);
+  }, [
+    activeTier,
+    activeCategory,
+    selectedPackage,
+    useTierComparison,
+    visiblePackages,
+  ]);
 
   const openGroupsKey = [...openGroups].sort().join("\0");
 
   usePackageGroupHeightSync(
     gridRef,
-    [activeCategory, activeTier],
+    [
+      activeCategory,
+      resolvedPackageSlug,
+      useTierComparison ? "compare" : activeTier,
+    ],
     openGroupsKey,
   );
 
@@ -175,47 +225,133 @@ export function ServicesPackagesPanel({
     hideMiddleStat: activeCategory === "audit",
   };
 
+  const showCategoryTabs = !lockedCategory;
+  const showPackageTypeTabs = slugs.length > 1;
+  const showUnifiedNav =
+    (showCategoryTabs && showPackageTypeTabs) ||
+    (!showCategoryTabs && showPackageTypeTabs);
+
   return (
     <div className={`min-w-0 ${className ?? ""}`}>
-      {!lockedCategory ? (
+      {showCategoryTabs && !showPackageTypeTabs ? (
         <ServicesCategoryTabs
           tabs={labels.tabs}
           active={activeCategory}
-          onChange={setCategory}
+          onChange={handleCategoryChange}
           className="mx-auto w-fit max-w-full"
         />
       ) : null}
 
+      {showUnifiedNav ? (
+        <div className="relative mx-auto w-fit max-w-full rounded-[1.75rem] p-px bg-linear-to-r from-emerald-500/30 via-brand-accent/25 to-emerald-600/30 shadow-[0_12px_48px_rgb(0_0_0/0.12),0_4px_16px_rgb(58_107_82/0.08)]">
+          <div className="relative overflow-hidden rounded-[calc(1.75rem-1px)] bg-[#071510]/97 backdrop-blur-xl">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_-10%,rgb(58_107_82/0.14),transparent_55%)]"
+            />
+            <span
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgb(255_255_255/0.03)_0%,transparent_40%)]"
+            />
+
+            {showCategoryTabs ? (
+              <ServicesCategoryTabs
+                embedded
+                tabs={labels.tabs}
+                active={activeCategory}
+                onChange={handleCategoryChange}
+              />
+            ) : null}
+
+            {showCategoryTabs && showPackageTypeTabs ? (
+              <div
+                aria-hidden
+                className="mx-4 h-px bg-linear-to-r from-transparent via-emerald-700/40 to-transparent"
+              />
+            ) : null}
+
+            {showPackageTypeTabs ? (
+              <ServicesPackageTypeTabs
+                embedded
+                tabs={packageTypeTabs}
+                active={resolvedPackageSlug}
+                onChange={setActivePackageSlug}
+              />
+            ) : null}
+          </div>
+        </div>
+      ) : null}
+
       <ServicesPackagesIntro
-        className={lockedCategory ? "mt-0" : "mt-12 md:mt-14"}
+        className={
+          lockedCategory
+            ? useTierComparison
+              ? "mt-6 md:mt-8"
+              : "mt-0"
+            : useTierComparison
+              ? "mt-10 md:mt-12"
+              : "mt-12 md:mt-14"
+        }
         variant={lockedCategory ? "compact" : "full"}
         title={intro.title}
         p1={intro.p1}
         p2={intro.p2}
       />
 
+      {useTierComparison ? (
+        <div className="mx-auto mt-8 max-w-2xl text-center md:mt-10">
+          <h3 className="font-(family-name:--font-heading) text-xl font-bold tracking-tight text-brand-accent md:text-2xl">
+            {selectedPackage.title}
+          </h3>
+          <span
+            aria-hidden
+            className="mx-auto mt-3 block h-px w-10 bg-linear-to-r from-transparent via-brand-accent/40 to-transparent"
+          />
+          <p className="mt-4 text-sm leading-[1.8] text-muted-foreground md:text-base">
+            {selectedPackage.description}
+          </p>
+        </div>
+      ) : null}
+
       <div
         ref={gridRef}
-        key={activeCategory}
+        key={`${activeCategory}-${resolvedPackageSlug}-${useTierComparison ? "compare" : activeTier}`}
         className={`${
-          lockedCategory ? "mt-8 md:mt-10" : "mt-14"
-        } grid items-stretch gap-6 lg:gap-5 xl:gap-6 ${
-          slugs.length === 1 ? "mx-auto w-full max-w-2xl" : "lg:grid-cols-3"
+          lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"
+        } grid gap-6 lg:gap-5 xl:gap-6 lg:grid-cols-3 ${
+          useTierComparison ? "items-start" : "items-stretch"
         }`}
       >
-        {slugs.map((slug) => (
-          <ServicePackageCard
-            key={`${activeCategory}-${slug}`}
-            icon={icons[slug]}
-            data={categoryPackages[slug]}
-            labels={cardLabels}
-            activeTier={activeTier}
-            onTierChange={setActiveTier}
-            openGroups={openGroups}
-            onToggleGroup={toggleGroup}
-            commonGroupLabels={commonGroupLabels}
-          />
-        ))}
+        {useTierComparison
+          ? tierOrder.map((tierKey) => (
+              <ServicePackageCard
+                key={`${activeCategory}-${resolvedPackageSlug}-${tierKey}`}
+                icon={icons[resolvedPackageSlug]}
+                data={selectedPackage}
+                labels={cardLabels}
+                activeTier={tierKey}
+                openGroups={openGroups}
+                onToggleGroup={toggleGroup}
+                commonGroupLabels={collectCommonFeatureGroupLabels(
+                  [selectedPackage],
+                  tierKey,
+                )}
+                variant="tier-column"
+              />
+            ))
+          : slugs.map((slug) => (
+              <ServicePackageCard
+                key={`${activeCategory}-${slug}`}
+                icon={icons[slug]}
+                data={categoryPackages[slug]}
+                labels={cardLabels}
+                activeTier={activeTier}
+                onTierChange={setActiveTier}
+                openGroups={openGroups}
+                onToggleGroup={toggleGroup}
+                commonGroupLabels={commonGroupLabels}
+              />
+            ))}
       </div>
     </div>
   );

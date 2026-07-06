@@ -46,7 +46,7 @@ export function BlogPreviewScrollCarousel({
       hideSecondRow
       interactionMode="drag"
       alignStart
-      columnsPerView={2}
+      columnsPerView={3}
       loop
       navLabels={{
         prev: t("blogSliderPrev"),

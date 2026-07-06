@@ -1,4 +1,4 @@
-import { LuCircleCheck, LuMessageCircle } from "react-icons/lu";
+import { LuCircleCheck, LuCompass, LuMessageCircle } from "react-icons/lu";
 import { getLocale, getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SectionBadge } from "@/components/ui/SectionBadge";
@@ -14,14 +14,25 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
   const bullets = t.raw("servicesBullets") as string[];
 
   const cta = (
-    <PrimaryCtaLink
-      href="/iletisim"
-      variant="accent"
-      showArrow={false}
-      trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
-    >
-      {t("servicesCta")}
-    </PrimaryCtaLink>
+    <div className="flex flex-wrap gap-4">
+      <PrimaryCtaLink
+        href="/iletisim"
+        variant="accent"
+        showArrow={false}
+        trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
+      >
+        {t("servicesCta")}
+      </PrimaryCtaLink>
+      <PrimaryCtaLink
+        href="/hizmetler"
+        variant="outline"
+        showArrow={false}
+        className="border-white/20 bg-white/10 hover:border-white/30 hover:bg-white/18"
+        leadingIcon={<LuCompass className="size-5" aria-hidden />}
+      >
+        {t("servicesAllCta")}
+      </PrimaryCtaLink>
+    </div>
   );
 
   return (

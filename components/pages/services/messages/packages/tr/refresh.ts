@@ -1,8 +1,56 @@
+// ---------------------------------------------------------------------------
+// Ortak (paylaşılan) özellik grupları — yenileme paketleri
+// ---------------------------------------------------------------------------
+
+const commonRedesignItems = [
+  "Mobil, Tablet ve Masaüstü Uyumlu Arayüz",
+  "SSL, HTTPS ve Güvenlik Yapılandırması",
+  "Hızlı Yükleme Süreleri ve SEO Dostu Performans Optimizasyonu",
+] as const;
+
+const standartDesignExtras = [
+  "Dark / Light Mod Desteği",
+  "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
+] as const;
+
+const commonDeliveryTemel = [
+  "Canlıya Alma ve DNS Geçiş Desteği",
+  "15 Gün Teknik Destek",
+] as const;
+
+const commonDeliveryStandart = [
+  "Kaynak Kodu ve Proje Dosyalarının Teslimi",
+  "Canlıya Alma ve Geçiş Desteği",
+  "30 Gün Teknik Destek",
+] as const;
+
+const commonDeliveryPro = [
+  "Kaynak Kodu ve Proje Dosyalarının Teslimi",
+  "Canlıya Alma ve Geçiş Desteği",
+  "45 Gün Teknik Destek",
+] as const;
+
+const seoMigrationStandartItems = [
+  "Meta, Open Graph ve Schema Verilerinin Korunması",
+  "Gelişmiş Yönlendirme Haritası",
+  "Google Search Console Geçiş Takibi",
+  "Sitemap ve robots.txt Güncellemesi",
+] as const;
+
+const seoMigrationProItems = [
+  ...seoMigrationStandartItems,
+  "Kapsamlı Teknik SEO ve İndeksleme Optimizasyonu",
+  "Google Analytics 4 ve Dönüşüm Takibi",
+] as const;
+
 export const refreshPackagesTr = {
+  // =========================================================================
+  // PORTFÖY / TANITIM SİTESİ YENİLEME
+  // =========================================================================
   portfolio: {
-    title: "Portföy / Tanıtım Sitesi Yenileme",
+    title: "Portföy / Tanıtım",
     description:
-      "Mevcut tanıtım sitenizi modern tasarım, hızlı altyapı ve SEO korumasıyla yenileyin.",
+      "Mevcut tanıtım sitenizi modern tasarım, hızlı altyapı ve SEO korumasıyla yenileyin; içeriklerinizi kaybetmeden güçlü bir dijital vitrin oluşturun.",
     tiers: {
       temel: {
         deliveryDays: "7-14",
@@ -12,26 +60,23 @@ export const refreshPackagesTr = {
           {
             label: "Analiz & Planlama",
             items: [
-              "Mevcut sitenin performans, SEO ve içerik durum analizi",
+              "Mevcut sitenin performans, SEO ve içerik durumu analizi",
               "İçerik envanteri ve migrasyon planı",
-              "URL yapısı ve yönlendirme stratejisi",
+              "URL yapısı ve 301 yönlendirme stratejisi",
             ],
           },
           {
             label: "Yenileme & Migrasyon",
             items: [
-              "Mobil uyumlu modern arayüz",
+              ...commonRedesignItems,
               "Mevcut içeriklerin güvenli aktarımı",
-              "Temel hız, görsel ve önbellek optimizasyonu",
+              "Görsel sıkıştırma ve önbellek optimizasyonu",
               "301 yönlendirme kurulumu",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: [
-              "Canlıya alım ve DNS geçiş desteği",
-              "15 gün teknik destek",
-            ],
+            items: [...commonDeliveryTemel],
           },
         ],
       },
@@ -41,31 +86,22 @@ export const refreshPackagesTr = {
         scope: "1-15",
         featureGroups: [
           {
-            label: "Analiz & Tasarım",
+            label: "Tasarım & UX",
             items: [
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Dark / Light mode desteği",
-              "Kapsamlı UX ve performans denetimi",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
               "Marka kimliğine uygun arayüz yenileme",
-              "Sayfa geçiş animasyonları",
+              "Kapsamlı UX ve performans denetimi",
               "Core Web Vitals iyileştirmesi",
             ],
           },
           {
             label: "SEO & Geçiş Koruması",
-            items: [
-              "Meta ve schema verilerinin korunması",
-              "Gelişmiş yönlendirme haritası",
-              "Search Console geçiş takibi",
-              "Site haritası güncelleme",
-            ],
+            items: [...seoMigrationStandartItems],
           },
           {
             label: "Teslim & Destek",
-            items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "30 gün teknik destek",
-            ],
+            items: [...commonDeliveryStandart],
           },
         ],
       },
@@ -77,37 +113,40 @@ export const refreshPackagesTr = {
           {
             label: "Kapsamlı Yenileme",
             items: [
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Next.js tabanlı modern altyapıya geçiş",
-              "Özel tasarım ve animasyonlar",
-              "Dark / Light mode desteği",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
+              "Next.js Tabanlı Modern Altyapıya Geçiş",
+              "Özel Tasarım ve Animasyonlar",
+              "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
             ],
           },
           {
             label: "SEO & İçerik Yönetimi",
             items: [
-              "Kapsamlı SEO koruma ve güçlendirme",
-              "Dinamik içerik yönetim paneli",
-              "Sınırsız dil desteği altyapısı",
-              "Analytics ve dönüşüm takibi",
+              ...seoMigrationProItems,
+              "Dinamik İçerik Yönetim Paneli",
+              "En Fazla 5 Dil Desteği",
             ],
           },
           {
             label: "Teslim & Destek",
             items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "45 gün teknik destek",
-              "Kullanım kılavuzu eğitimi",
+              ...commonDeliveryPro,
+              "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
             ],
           },
         ],
       },
     },
   },
+
+  // =========================================================================
+  // KURUMSAL SİTE YENİLEME
+  // =========================================================================
   corporate: {
-    title: "Kurumsal Site Yenileme",
+    title: "Kurumsal",
     description:
-      "Kurumsal web sitenizi güncel tasarım, hızlı altyapı ve güvenli geçişle yenileyin.",
+      "Kurumsal web sitenizi güncel tasarım, güvenli altyapı ve planlı geçişle yenileyin; marka güveninizi ve organik görünürlüğünüzü koruyun.",
     tiers: {
       temel: {
         deliveryDays: "10-18",
@@ -125,15 +164,15 @@ export const refreshPackagesTr = {
           {
             label: "Yenileme & Geçiş",
             items: [
+              ...commonRedesignItems,
               "Kurumsal kimliğe uygun arayüz yenileme",
               "İçerik migrasyonu",
-              "Temel performans iyileştirmesi",
-              "SSL ve güvenlik güncellemesi",
+              "Temel performans ve güvenlik güncellemesi",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: ["Canlıya alım desteği", "15 gün teknik destek"],
+            items: [...commonDeliveryTemel],
           },
         ],
       },
@@ -145,11 +184,11 @@ export const refreshPackagesTr = {
           {
             label: "Tasarım & UX",
             items: [
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Dark / Light mode desteği",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
               "Bilgi mimarisi yeniden yapılandırma",
               "Premium UI bileşenleri",
-              "Erişilebilirlik iyileştirmeleri",
+              "Erişilebilirlik (WCAG) iyileştirmeleri",
               "Mobil navigasyon ve içerik deneyimi optimizasyonu",
             ],
           },
@@ -157,17 +196,13 @@ export const refreshPackagesTr = {
             label: "Altyapı & SEO",
             items: [
               "Modern framework geçişi",
-              "SEO sıralama koruma planı",
+              ...seoMigrationStandartItems,
               "Form ve entegrasyon güncellemesi",
-              "Analytics yeniden yapılandırma",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "30 gün teknik destek",
-            ],
+            items: [...commonDeliveryStandart],
           },
         ],
       },
@@ -179,12 +214,12 @@ export const refreshPackagesTr = {
           {
             label: "Kurumsal Altyapı Yenileme",
             items: [
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Dark / Light mode desteği",
-              "Özel geliştirilmiş yüksek hızlı altyapı",
-              "Sınırsız dil ve çoklu departman yapısı",
-              "Gelişmiş CMS ve içerik yönetimi",
-              "API ve üçüncü taraf entegrasyonları",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
+              "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
+              "Gelişmiş CMS ve İçerik Yönetimi",
+              "En Fazla 5 Dil Desteği ve Çoklu Departman Yapısı",
+              "API ve Üçüncü Taraf Entegrasyonları",
             ],
           },
           {
@@ -192,26 +227,26 @@ export const refreshPackagesTr = {
             items: [
               "Kapsamlı güvenlik denetimi ve iyileştirme",
               "CDN ve önbellek optimizasyonu",
-              "KVKK uyumlu çerez modülü",
+              "KVKK Uyumlu Çerez Bildirimi",
               "Yedekleme ve geri yükleme planı",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "45 gün teknik destek",
-              "Ekip eğitimi ve dokümantasyon",
-            ],
+            items: [...commonDeliveryPro, "Ekip Eğitimi ve Dokümantasyon"],
           },
         ],
       },
     },
   },
+
+  // =========================================================================
+  // E-TİCARET SİTESİ YENİLEME
+  // =========================================================================
   ecommerce: {
-    title: "E-Ticaret Sitesi Yenileme",
+    title: "E-Ticaret",
     description:
-      "E-ticaret sitenizi modern altyapı, hızlı ödeme akışları ve SEO korumasıyla yenileyin.",
+      "E-ticaret sitenizi modern altyapı, akıcı ödeme deneyimi ve SEO korumasıyla yenileyin; ürün verilerinizi ve sıralamanızı riske atmadan dönüşüm odaklı bir mağazaya geçin.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
@@ -221,23 +256,27 @@ export const refreshPackagesTr = {
           {
             label: "Analiz & Planlama",
             items: [
-              "Mevcut mağaza performans analizi",
+              "Mevcut mağazanın performans ve dönüşüm analizi",
               "Ürün ve kategori migrasyon planı",
-              "Ödeme ve sipariş akışı denetimi",
+              "Ödeme, sipariş ve kargo akışı denetimi",
             ],
           },
           {
             label: "Yenileme & Geçiş",
             items: [
+              ...commonRedesignItems,
               "Modern e-ticaret arayüzü",
               "Ürün ve kategori aktarımı",
-              "Temel ödeme entegrasyonu güncelleme",
+              "Temel ödeme entegrasyonu güncellemesi",
               "Mobil alışveriş deneyimi iyileştirmesi",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: ["Canlıya alım ve test siparişi", "15 gün teknik destek"],
+            items: [
+              "Canlıya Alma ve Test Siparişi Doğrulaması",
+              ...commonDeliveryTemel.slice(1),
+            ],
           },
         ],
       },
@@ -249,11 +288,11 @@ export const refreshPackagesTr = {
           {
             label: "Mağaza Yenileme",
             items: [
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Dark / Light mode desteği",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
               "Gelişmiş ürün filtreleme ve arama",
               "Sepet ve ödeme akışı optimizasyonu",
-              "Stok ve varyasyon yönetimi güncelleme",
+              "Stok ve varyasyon yönetimi güncellemesi",
               "Kargo entegrasyonu ve teslimat seçenekleri güncellemesi",
             ],
           },
@@ -261,17 +300,14 @@ export const refreshPackagesTr = {
             label: "SEO & Pazarlama",
             items: [
               "Ürün URL ve meta koruma planı",
-              "Product, Offer ve Breadcrumb schema yapılandırması",
-              "Dönüşüm takibi yeniden kurulumu",
-              "Terk edilen sepet altyapısı",
+              "Product, Offer ve Breadcrumb Schema Yapılandırması",
+              "Google Analytics 4 ve dönüşüm takibi yeniden kurulumu",
+              "Terk Edilen Sepet Altyapısı",
             ],
           },
           {
             label: "Teslim & Destek",
-            items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "30 gün teknik destek",
-            ],
+            items: [...commonDeliveryStandart],
           },
         ],
       },
@@ -283,19 +319,19 @@ export const refreshPackagesTr = {
           {
             label: "Kurumsal Mağaza Altyapısı",
             items: [
-              "Hızlı yükleme süreleri ve SEO dostu performans optimizasyonu",
-              "Dark / Light mode desteği",
-              "Ölçeklenebilir modern altyapıya geçiş",
-              "Sınırsız dil ve para birimi desteği",
-              "Gelişmiş kampanya ve promosyon modülü",
-              "ERP, muhasebe ve fatura entegrasyon hazırlığı",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
+              "Ölçeklenebilir Modern Altyapıya Geçiş",
+              "En Fazla 5 Dil ve Çoklu Para Birimi Desteği",
+              "Gelişmiş Kampanya ve Promosyon Modülü",
+              "ERP, Muhasebe ve Fatura Entegrasyon Hazırlığı",
             ],
           },
           {
             label: "Performans & Güvenlik",
             items: [
-              "Yüksek trafik optimizasyonu",
-              "PCI-DSS uyumlu sanal POS entegrasyon altyapısı",
+              "Yüksek trafik ve kampanya dönemi optimizasyonu",
+              "PCI-DSS Uyumlu Sanal POS Entegrasyon Altyapısı",
               "Gelişmiş güvenlik ve fraud koruması",
               "Anlık stok senkronizasyonu",
             ],
@@ -303,9 +339,8 @@ export const refreshPackagesTr = {
           {
             label: "Teslim & Destek",
             items: [
-              "Kaynak kodu ve proje dosyalarının teslimi",
-              "45 gün teknik destek",
-              "Mağaza yönetim eğitimi",
+              ...commonDeliveryPro,
+              "Mağaza Yönetimi Eğitimi ve Dokümantasyon",
             ],
           },
         ],

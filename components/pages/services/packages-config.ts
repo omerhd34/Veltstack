@@ -16,8 +16,8 @@ export const packageCategories = [
   "web",
   "app",
   "refresh",
-  "seo",
   "audit",
+  "seo",
   "maintenance",
 ] as const;
 export type PackageCategory = (typeof packageCategories)[number];

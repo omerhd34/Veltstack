@@ -23,7 +23,7 @@ export function NavbarLogo({ className }: NavbarLogoProps) {
       />
       <span className="font-(family-name:--font-heading) text-[1.6875rem] font-extrabold tracking-[-0.04em] sm:text-[2.25rem]">
         Velt
-        <span className="text-brand-accent">stack</span>
+        <span className="text-brand-accent">Stack</span>
       </span>
     </span>
   );

@@ -12,8 +12,8 @@ export const serviceSlugs = [
   "web-sitesi-gelistirme",
   "web-sitesi-yenileme",
   "uygulama-gelistirme",
-  "seo-hizmetleri",
   "teknik-denetim",
+  "seo-hizmetleri",
   "bakim-ve-destek",
 ] as const;
 
@@ -58,15 +58,6 @@ export const serviceItems: ServiceItemConfig[] = [
     icon: LuSmartphone,
   },
   {
-    slug: "seo-hizmetleri",
-    href: "/hizmetler/seo-hizmetleri",
-    titleKey: "servicesSeoTitle",
-    descKey: "servicesSeoDesc",
-    navDescKey: "serviceSeoDesc",
-    tagKey: "servicesSeoTag",
-    icon: LuSearch,
-  },
-  {
     slug: "teknik-denetim",
     href: "/hizmetler/teknik-denetim",
     titleKey: "servicesAuditTitle",
@@ -74,6 +65,15 @@ export const serviceItems: ServiceItemConfig[] = [
     navDescKey: "serviceAuditDesc",
     tagKey: "servicesAuditTag",
     icon: LuClipboardCheck,
+  },
+  {
+    slug: "seo-hizmetleri",
+    href: "/hizmetler/seo-hizmetleri",
+    titleKey: "servicesSeoTitle",
+    descKey: "servicesSeoDesc",
+    navDescKey: "serviceSeoDesc",
+    tagKey: "servicesSeoTag",
+    icon: LuSearch,
   },
   {
     slug: "bakim-ve-destek",

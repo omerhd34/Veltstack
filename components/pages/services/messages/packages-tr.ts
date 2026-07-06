@@ -6,7 +6,10 @@ import { seoPackagesTr } from "./packages/tr/seo";
 import { webPackagesTr } from "./packages/tr/web";
 
 export const servicesPackagesTr = {
+  packagesBadge: "Paketler",
   packagesTitle: "Hizmetler & Paketler",
+  packagesTitleLead: "Hizmetler &",
+  packagesTitleAccent: "Paketler",
   packagesTitleSuffix: "Paketleri",
   packagesSubtitle:
     "Web sitesi, mobil uygulama, yenileme, SEO, teknik denetim ve bakım alanlarında sunduğumuz hizmet paketlerini inceleyin. Sekmeler arasında geçerek Girişim, Profesyonel ve Premium seviyelerini karşılaştırın; teslim süresi, kapsam ve dahil özellikleri yan yana görüp projenize en uygun seviyeyi kolayca belirleyin.",
@@ -25,6 +28,7 @@ export const servicesPackagesTr = {
   statDeliveryAudit: "Rapor (gün)",
   statDeliveryUnit: "gün",
   statRevision: "Revizyon",
+  statMonthlyRequests: "Aylık Talep",
   statPages: "Sayfa",
   statScreens: "Ekran",
   statKeywords: "Anahtar Kelime",

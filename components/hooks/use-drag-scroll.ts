@@ -1,16 +1,27 @@
 "use client";
 
-import { useCallback, useEffect, useRef, type MouseEvent, type RefObject } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  type MouseEvent as ReactMouseEvent,
+  type RefObject,
+} from "react";
 
 const DRAG_THRESHOLD_PX = 6;
 
 interface UseDragScrollOptions {
   enabled?: boolean;
+  disableOnDesktop?: boolean;
+}
+
+function isLgViewport() {
+  return window.matchMedia("(min-width: 1024px)").matches;
 }
 
 export function useDragScroll(
   viewportRef: RefObject<HTMLElement | null>,
-  { enabled = true }: UseDragScrollOptions = {},
+  { enabled = true, disableOnDesktop = false }: UseDragScrollOptions = {},
 ) {
   const isDraggingRef = useRef(false);
   const startXRef = useRef(0);
@@ -29,6 +40,7 @@ export function useDragScroll(
 
     const onMouseDown = (event: MouseEvent) => {
       if (event.button !== 0) return;
+      if (disableOnDesktop && isLgViewport()) return;
 
       isDraggingRef.current = true;
       didDragRef.current = false;
@@ -71,10 +83,10 @@ export function useDragScroll(
       window.removeEventListener("mouseup", endDrag);
       endDrag();
     };
-  }, [enabled, viewportRef]);
+  }, [disableOnDesktop, enabled, viewportRef]);
 
   const handleClickCapture = useCallback(
-    (event: MouseEvent) => {
+    (event: ReactMouseEvent) => {
       if (!consumeDrag()) return;
       event.preventDefault();
       event.stopPropagation();

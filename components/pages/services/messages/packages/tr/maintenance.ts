@@ -2,58 +2,59 @@ export const maintenancePackagesTr = {
   maintenanceServices: {
     title: "Bakım & Destek Hizmetleri",
     description:
-      "Web sitesi, mobil uygulama ve backend altyapınızın güvenli, güncel ve kesintisiz çalışması için kapsamlı sürekli destek.",
+      "Web sitesi, mobil uygulama ve backend altyapınızın güvenli, güncel ve kesintisiz çalışması için düzenli bakım, izleme ve teknik destek.",
     tiers: {
       temel: {
-        deliveryDays: "7-14",
+        deliveryDays: "3-5",
         revisions: "2",
         scope: "1",
         featureGroups: [
           {
             label: "İzleme & Yedekleme",
             items: [
-              "Aylık dosya ve veritabanı yedeklemesi",
               "Uptime izleme ve kesinti bildirimleri",
-              "Temel hata logları ve kritik uyarı takibi",
-              "Temel içerik ve metin güncellemeleri",
+              "Aylık tam yedekleme (dosya + veritabanı)",
+              "Temel hata log takibi ve kritik uyarılar",
             ],
           },
           {
-            label: "Destek & Müdahale",
+            label: "Destek & İçerik",
             items: [
               "E-posta ile teknik destek kanalı",
-              "48 saat içinde hata giderme",
+              "İş günü içi 48 saat yanıt hedefi",
+              "Aylık 2 içerik ve metin güncelleme talebi",
             ],
           },
         ],
       },
       standart: {
-        deliveryDays: "7-14",
+        deliveryDays: "5-7",
         revisions: "5",
-        scope: "2-3",
+        scope: "1-2",
         featureGroups: [
           {
             label: "Bakım & Güncelleme",
             items: [
-              "Haftalık yedekleme ve geri yükleme testleri",
-              "Paket, kütüphane ve modül güncellemeleri",
-              "Aylık içerik, görsel ve sayfa revizyonları",
+              "Haftalık otomatik yedekleme ve aylık geri yükleme testi",
+              "Framework, paket ve güvenlik yamaları",
               "SSL sertifikası takibi ve yenileme",
+              "Aylık içerik, görsel ve küçük sayfa güncellemeleri",
             ],
           },
           {
             label: "Performans & Güvenlik",
             items: [
               "Core Web Vitals ve sayfa hızı izleme",
-              "CPU, RAM, disk ve trafik kaynak takibi",
-              "Temel güvenlik taramaları ve açık kontrolü",
+              "Sunucu kaynak kullanımı takibi (CPU, RAM, disk)",
+              "Bağımlılık ve temel güvenlik taraması",
             ],
           },
           {
             label: "Destek & SLA",
             items: [
-              "E-posta ve öncelikli destek kanalı",
-              "24 saat içinde hata giderme hedefi",
+              "E-posta ve WhatsApp destek kanalı",
+              "İş günü içi 24 saat yanıt hedefi",
+              "Aylık durum özeti raporu",
             ],
           },
         ],
@@ -64,30 +65,29 @@ export const maintenancePackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Proaktif & Kurumsal Bakım",
+            label: "Proaktif Bakım",
             items: [
-              "Anlık kaynak kodu ve veritabanı yedekleme",
-              "CI/CD süreç bakımı ve güncellemesi",
-              "AWS, Google Cloud veya Azure altyapı optimizasyonu",
-              "Konteyner ve cluster altyapı bakım desteği",
+              "Günlük otomatik yedekleme ve felaket kurtarma planı",
+              "CI/CD pipeline bakımı ve deploy süreç yönetimi",
+              "Bulut altyapı izleme ve maliyet/performans optimizasyonu",
               "Genişletilmiş içerik ve tasarım güncelleme desteği",
             ],
           },
           {
-            label: "Güvenlik & SLA",
+            label: "Güvenlik & İzleme",
             items: [
-              "7/24 uyarı ve izleme sistemi kurulumu",
-              "Yüksek erişilebilirlik hedefli uptime takibi ve öncelikli SLA",
-              "1 saat içinde kritik olaylara müdahale hedefi",
-              "Güvenlik duvarı ve saldırı izleme yapılandırma desteği",
+              "7/24 uptime izleme ve anlık uyarı bildirimleri",
+              "Gelişmiş güvenlik taraması ve yama yönetimi",
+              "Kritik olaylarda 4 saat içi müdahale hedefi",
+              "Sunucu ve erişim güvenliği yapılandırma desteği",
             ],
           },
           {
             label: "Öncelikli Destek",
             items: [
               "Öncelikli teknik destek ve proaktif bakım",
-              "Haftalık durum değerlendirme toplantıları",
-              "Şirkete özel canlı sistem izleme paneli",
+              "Aylık strateji ve durum değerlendirme görüşmesi",
+              "Özel durum paneli ve detaylı aylık raporlama",
             ],
           },
         ],

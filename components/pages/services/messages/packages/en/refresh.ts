@@ -1,8 +1,53 @@
+// ---------------------------------------------------------------------------
+// Shared feature groups — redesign packages
+// ---------------------------------------------------------------------------
+
+const commonRedesignItems = [
+  "Mobile, Tablet and Desktop Responsive Interface",
+  "SSL, HTTPS and Security Configuration",
+  "Fast Load Times and SEO-Friendly Performance Optimization",
+] as const;
+
+const standartDesignExtras = [
+  "Dark / Light Mode Support",
+  "Smooth Page Transitions and Micro-interactions",
+] as const;
+
+const commonDeliveryTemel = [
+  "Go-live and DNS Transition Support",
+  "15 Days Technical Support",
+] as const;
+
+const commonDeliveryStandart = [
+  "Source Code and Project Files Delivery",
+  "Go-live and Migration Support",
+  "30 Days Technical Support",
+] as const;
+
+const commonDeliveryPro = [
+  "Source Code and Project Files Delivery",
+  "Go-live and Migration Support",
+  "45 Days Technical Support",
+] as const;
+
+const seoMigrationStandartItems = [
+  "Meta, Open Graph and Schema Data Preservation",
+  "Advanced Redirect Map",
+  "Search Console Transition Tracking",
+  "Sitemap and robots.txt Update",
+] as const;
+
+const seoMigrationProItems = [
+  ...seoMigrationStandartItems,
+  "Comprehensive Technical SEO and Indexing Optimization",
+  "Google Analytics 4 and Conversion Tracking",
+] as const;
+
 export const refreshPackagesEn = {
   portfolio: {
     title: "Portfolio / Promotional Site Redesign",
     description:
-      "Renew your promotional site with modern design, fast infrastructure and SEO protection.",
+      "Renew your promotional site with modern design, fast infrastructure and SEO protection — build a stronger digital presence without losing your content.",
     tiers: {
       temel: {
         deliveryDays: "7-14",
@@ -12,26 +57,23 @@ export const refreshPackagesEn = {
           {
             label: "Analysis & Planning",
             items: [
-              "Current site performance and SEO analysis",
+              "Current site performance, SEO and content audit",
               "Content inventory and migration plan",
-              "URL structure and redirect strategy",
+              "URL structure and 301 redirect strategy",
             ],
           },
           {
             label: "Redesign & Migration",
             items: [
-              "Mobile-friendly modern interface",
+              ...commonRedesignItems,
               "Safe migration of existing content",
-              "Basic performance optimization",
+              "Image compression and cache optimization",
               "301 redirect setup",
             ],
           },
           {
             label: "Delivery & Support",
-            items: [
-              "Go-live and DNS transition support",
-              "15 days technical support",
-            ],
+            items: [...commonDeliveryTemel],
           },
         ],
       },
@@ -41,26 +83,22 @@ export const refreshPackagesEn = {
         scope: "1-15",
         featureGroups: [
           {
-            label: "Analysis & Design",
+            label: "Design & UX",
             items: [
-              "Comprehensive UX and performance audit",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
               "Brand-aligned interface redesign",
-              "Page transition animations",
+              "Comprehensive UX and performance audit",
               "Core Web Vitals improvement",
             ],
           },
           {
-            label: "SEO & Migration",
-            items: [
-              "Meta and schema data preservation",
-              "Advanced redirect map",
-              "Search Console transition tracking",
-              "Sitemap update",
-            ],
+            label: "SEO & Migration Protection",
+            items: [...seoMigrationStandartItems],
           },
           {
             label: "Delivery & Support",
-            items: ["Source code delivery", "30 days technical support"],
+            items: [...commonDeliveryStandart],
           },
         ],
       },
@@ -72,27 +110,26 @@ export const refreshPackagesEn = {
           {
             label: "Full Redesign",
             items: [
-              "Migration to modern Next.js infrastructure",
-              "Custom design and animations",
-              "Dark / Light mode support",
-              "Fast load times and SEO-friendly performance optimization",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
+              "Migration to Modern Next.js Infrastructure",
+              "Custom Design and Animations",
+              "Scalable Infrastructure for High Traffic",
             ],
           },
           {
-            label: "SEO & CMS",
+            label: "SEO & Content Management",
             items: [
-              "Comprehensive SEO protection and strengthening",
-              "Dynamic content management panel",
-              "Multilingual infrastructure",
-              "Analytics and conversion tracking",
+              ...seoMigrationProItems,
+              "Dynamic Content Management Panel",
+              "Up to 5 Languages Support",
             ],
           },
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "45 days technical support",
-              "User guide training",
+              ...commonDeliveryPro,
+              "User Guide and Short Management Training",
             ],
           },
         ],
@@ -102,7 +139,7 @@ export const refreshPackagesEn = {
   corporate: {
     title: "Corporate Site Redesign",
     description:
-      "Renew your corporate website with current design, fast infrastructure and secure transition.",
+      "Renew your corporate website with current design, secure infrastructure and a planned transition — protect your brand trust and organic visibility.",
     tiers: {
       temel: {
         deliveryDays: "10-18",
@@ -112,23 +149,23 @@ export const refreshPackagesEn = {
           {
             label: "Analysis & Planning",
             items: [
-              "Current site technical and SEO audit",
+              "Current site technical, SEO and security audit",
               "Content and page structure analysis",
               "Transition timeline and risk plan",
             ],
           },
           {
-            label: "Redesign",
+            label: "Redesign & Migration",
             items: [
+              ...commonRedesignItems,
               "Corporate identity-aligned interface refresh",
               "Content migration",
-              "Basic performance improvement",
-              "SSL and security update",
+              "Basic performance and security update",
             ],
           },
           {
             label: "Delivery & Support",
-            items: ["Go-live support", "15 days technical support"],
+            items: [...commonDeliveryTemel],
           },
         ],
       },
@@ -140,24 +177,25 @@ export const refreshPackagesEn = {
           {
             label: "Design & UX",
             items: [
+              ...commonRedesignItems,
+              ...standartDesignExtras,
               "Information architecture restructuring",
               "Premium UI components",
-              "Accessibility improvements",
-              "Mobile experience optimization",
+              "Accessibility (WCAG) improvements",
+              "Mobile navigation and content experience optimization",
             ],
           },
           {
             label: "Infrastructure & SEO",
             items: [
               "Modern framework migration",
-              "SEO ranking protection plan",
+              ...seoMigrationStandartItems,
               "Form and integration update",
-              "Analytics reconfiguration",
             ],
           },
           {
             label: "Delivery & Support",
-            items: ["Source code delivery", "30 days technical support"],
+            items: [...commonDeliveryStandart],
           },
         ],
       },
@@ -167,12 +205,14 @@ export const refreshPackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Corporate Redesign",
+            label: "Corporate Infrastructure Redesign",
             items: [
-              "Custom-built high-speed infrastructure",
-              "Multilingual and multi-department structure",
-              "Advanced CMS and content management",
-              "API and third-party integrations",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
+              "Scalable Infrastructure for High Traffic",
+              "Advanced CMS and Content Management",
+              "Up to 5 Languages and Multi-department Structure",
+              "API and Third-party Integrations",
             ],
           },
           {
@@ -180,16 +220,15 @@ export const refreshPackagesEn = {
             items: [
               "Comprehensive security audit and improvement",
               "CDN and cache optimization",
-              "GDPR compliant cookie module",
+              "GDPR Compliant Cookie Notice",
               "Backup and restore plan",
             ],
           },
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "45 days technical support",
-              "Team training and documentation",
+              ...commonDeliveryPro,
+              "Team Training and Documentation",
             ],
           },
         ],
@@ -199,7 +238,7 @@ export const refreshPackagesEn = {
   ecommerce: {
     title: "Ecommerce Site Redesign",
     description:
-      "Renew your ecommerce site with modern infrastructure, fast checkout flows and SEO protection.",
+      "Renew your ecommerce site with modern infrastructure, smooth checkout and SEO protection — move to a conversion-focused store without risking product data or rankings.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
@@ -209,14 +248,15 @@ export const refreshPackagesEn = {
           {
             label: "Analysis & Planning",
             items: [
-              "Current store performance analysis",
+              "Current store performance and conversion analysis",
               "Product and category migration plan",
-              "Payment and order flow audit",
+              "Payment, order and shipping flow audit",
             ],
           },
           {
-            label: "Redesign",
+            label: "Redesign & Migration",
             items: [
+              ...commonRedesignItems,
               "Modern ecommerce interface",
               "Product and category migration",
               "Basic payment integration update",
@@ -225,7 +265,10 @@ export const refreshPackagesEn = {
           },
           {
             label: "Delivery & Support",
-            items: ["Go-live and test order", "15 days technical support"],
+            items: [
+              "Go-live and Test Order Verification",
+              ...commonDeliveryTemel.slice(1),
+            ],
           },
         ],
       },
@@ -237,24 +280,26 @@ export const refreshPackagesEn = {
           {
             label: "Store Redesign",
             items: [
+              ...commonRedesignItems,
+              ...standartDesignExtras,
               "Advanced product filtering and search",
               "Cart and checkout flow optimization",
               "Stock and variant management update",
-              "Shipping integration refresh",
+              "Shipping integration and delivery options refresh",
             ],
           },
           {
             label: "SEO & Marketing",
             items: [
               "Product URL and meta protection plan",
-              "Ecommerce schema markup",
-              "Conversion tracking reconfiguration",
-              "Abandoned cart infrastructure",
+              "Product, Offer and Breadcrumb Schema Configuration",
+              "Google Analytics 4 and conversion tracking reconfiguration",
+              "Abandoned Cart Infrastructure",
             ],
           },
           {
             label: "Delivery & Support",
-            items: ["Source code delivery", "30 days technical support"],
+            items: [...commonDeliveryStandart],
           },
         ],
       },
@@ -264,19 +309,21 @@ export const refreshPackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Enterprise Ecommerce Redesign",
+            label: "Enterprise Store Infrastructure",
             items: [
-              "Migration to scalable modern infrastructure",
-              "Multilingual and multi-currency support",
-              "Advanced campaign and promo module",
-              "ERP / accounting integration",
+              ...commonRedesignItems,
+              ...standartDesignExtras,
+              "Migration to Scalable Modern Infrastructure",
+              "Up to 5 Languages and Multi-currency Support",
+              "Advanced Campaign and Promotion Module",
+              "ERP, Accounting and Invoice Integration Readiness",
             ],
           },
           {
             label: "Performance & Security",
             items: [
-              "High-traffic optimization",
-              "PCI-DSS compliant virtual POS integration infrastructure",
+              "High-traffic and campaign period optimization",
+              "PCI-DSS Compliant Virtual POS Integration Infrastructure",
               "Advanced security and fraud protection",
               "Real-time stock synchronization",
             ],
@@ -284,9 +331,8 @@ export const refreshPackagesEn = {
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "45 days technical support",
-              "Store management training",
+              ...commonDeliveryPro,
+              "Store Management Training and Documentation",
             ],
           },
         ],

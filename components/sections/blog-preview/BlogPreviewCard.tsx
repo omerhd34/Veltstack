@@ -40,22 +40,24 @@ export function BlogPreviewCard({
         <span className="mb-3 block h-4 shrink-0 text-xs font-semibold leading-4 tracking-[0.15em] text-brand-accent">
           {readingTimeLabel ? toLatinUppercase(readingTimeLabel) : "\u00A0"}
         </span>
-        <h3 className="line-clamp-2 min-h-[calc(1.125rem*1.375*2)] shrink-0 font-(family-name:--font-heading) text-lg font-bold leading-snug text-[#0A0A0F] transition-colors group-hover:text-brand-accent">
+        <h3 className="line-clamp-2 shrink-0 font-(family-name:--font-heading) text-lg font-bold leading-snug text-[#0A0A0F] transition-colors group-hover:text-brand-accent">
           {title}
         </h3>
-        <p className="mt-2.5 line-clamp-2 min-h-[calc(0.875rem*1.625*2)] shrink-0 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-1 line-clamp-2 min-h-[calc(0.875rem*1.625*2)] shrink-0 text-sm leading-relaxed text-muted-foreground">
           {excerpt}
         </p>
-        <div
-          className={cn(
-            "mt-auto flex shrink-0 origin-left items-center gap-1.5 pt-5 text-xs font-semibold text-brand-accent",
-            "transition-[color,transform] duration-300 ease-out",
-            "hover:scale-105 hover:text-[#a8dfc4]",
-            "motion-reduce:hover:scale-100",
-          )}
-        >
-          <span>Devamını oku</span>
-          <LuArrowRight className="size-3 shrink-0" aria-hidden />
+        <div className="mt-auto shrink-0 pt-5">
+          <span
+            className={cn(
+              "inline-flex w-fit items-center gap-1.5 text-xs font-semibold text-brand-accent",
+              "origin-left transition-[color,transform] duration-700 ease-in-out",
+              "hover:scale-105 hover:text-[#a8dfc4]",
+              "motion-reduce:hover:scale-100",
+            )}
+          >
+            <span>Devamını oku</span>
+            <LuArrowRight className="size-3 shrink-0" aria-hidden />
+          </span>
         </div>
       </div>
     </Link>

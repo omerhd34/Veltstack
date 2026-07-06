@@ -16,7 +16,7 @@ export function ServicesPackagesIntro({
   if (variant === "compact") {
     return (
       <div className={`mx-auto max-w-4xl text-center ${className ?? ""}`}>
-        <p className="mx-auto max-w-3xl text-sm leading-relaxed text-muted-foreground/80 md:max-w-4xl md:text-[0.9375rem] md:leading-[1.85]">
+        <p className="mx-auto max-w-3xl text-sm leading-[1.8] text-muted-foreground/85 md:max-w-4xl md:text-[0.9375rem] md:leading-[1.85]">
           {p2}
         </p>
       </div>
@@ -25,13 +25,19 @@ export function ServicesPackagesIntro({
 
   return (
     <div className={`mx-auto max-w-4xl text-center ${className ?? ""}`}>
-      <h3 className="font-(family-name:--font-heading) text-lg font-bold tracking-tight text-brand-accent md:text-xl">
-        {title}
-      </h3>
-      <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground md:max-w-4xl md:text-base md:leading-[1.85]">
+      <div className="mx-auto flex w-fit flex-col items-center">
+        <h3 className="font-(family-name:--font-heading) text-xl font-bold tracking-tight text-brand-accent md:text-2xl">
+          {title}
+        </h3>
+        <span
+          aria-hidden
+          className="mt-3 h-px w-12 bg-linear-to-r from-transparent via-brand-accent/50 to-transparent"
+        />
+      </div>
+      <p className="mx-auto mt-6 max-w-3xl text-sm leading-[1.8] text-muted-foreground md:max-w-4xl md:text-base md:leading-[1.85]">
         {p1}
       </p>
-      <p className="mx-auto mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground/80 md:max-w-4xl md:text-[0.9375rem] md:leading-[1.85]">
+      <p className="mx-auto mt-3 max-w-3xl text-sm leading-[1.8] text-muted-foreground/75 md:max-w-4xl md:text-[0.9375rem] md:leading-[1.85]">
         {p2}
       </p>
     </div>

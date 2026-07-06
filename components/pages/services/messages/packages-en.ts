@@ -6,7 +6,10 @@ import { seoPackagesEn } from "./packages/en/seo";
 import { webPackagesEn } from "./packages/en/web";
 
 export const servicesPackagesEn = {
+  packagesBadge: "Packages",
   packagesTitle: "Services & Packages",
+  packagesTitleLead: "Services &",
+  packagesTitleAccent: "Packages",
   packagesTitleSuffix: "Packages",
   packagesSubtitle:
     "Explore our service packages across website development, mobile apps, redesign, SEO, technical audit and maintenance. Switch between tabs to compare Startup, Professional and Premium tiers side by side — delivery time, scope and included features — and find the level that fits your project.",
@@ -25,6 +28,7 @@ export const servicesPackagesEn = {
   statDeliveryAudit: "Report (days)",
   statDeliveryUnit: "days",
   statRevision: "Revisions",
+  statMonthlyRequests: "Monthly Requests",
   statPages: "Pages",
   statScreens: "Screens",
   statKeywords: "Keywords",

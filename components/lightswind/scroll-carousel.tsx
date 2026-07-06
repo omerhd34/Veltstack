@@ -19,6 +19,18 @@ import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
+function getVisibleColumnCount(columnsPerView: 1 | 2 | 3): number {
+  if (columnsPerView === 1) return 1;
+  if (typeof window === "undefined") return 1;
+
+  const isMd = window.matchMedia("(min-width: 768px)").matches;
+  const isLg = window.matchMedia("(min-width: 1024px)").matches;
+
+  if (!isMd) return 1;
+  if (columnsPerView === 2) return 2;
+  return isLg ? 3 : 2;
+}
+
 export interface FeatureItem {
   id?: string;
   title: string;
@@ -47,7 +59,7 @@ export interface ScrollCarouselProps {
   interactionMode?: "scroll-pin" | "drag";
   navLabels?: ScrollCarouselNavLabels;
   alignStart?: boolean;
-  columnsPerView?: 1 | 2;
+  columnsPerView?: 1 | 2 | 3;
   viewportClassName?: string;
   loop?: boolean;
   progressStyle?: "bar" | "pages" | "none";
@@ -198,6 +210,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
     const cardRefs = useRef<HTMLDivElement[]>([]);
     const cardRefs2 = useRef<HTMLDivElement[]>([]);
     const [isDesktop, setIsDesktop] = useState(false);
+    const [isLgViewport, setIsLgViewport] = useState(false);
     const [dragProgress, setDragProgress] = useState(0);
     const [slideWidth, setSlideWidth] = useState(0);
     const [pageIndicator, setPageIndicator] = useState({
@@ -208,6 +221,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
     const isDragMode = interactionMode === "drag";
     const { handleClickCapture } = useDragScroll(viewportRef, {
       enabled: isDragMode,
+      disableOnDesktop: true,
     });
 
     const features2 = useMemo(
@@ -218,6 +232,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
     useEffect(() => {
       const checkDesktop = () => {
         setIsDesktop(window.matchMedia("(min-width: 768px)").matches);
+        setIsLgViewport(window.matchMedia("(min-width: 1024px)").matches);
       };
 
       checkDesktop();
@@ -257,10 +272,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
       const gap = track
         ? Number.parseFloat(getComputedStyle(track).gap) || 32
         : 32;
-      const pageSize =
-        columnsPerView === 2 && window.matchMedia("(min-width: 768px)").matches
-          ? 2
-          : 1;
+      const pageSize = getVisibleColumnCount(columnsPerView);
       const totalPages = Math.max(1, Math.ceil(features.length / pageSize));
       const pageStep = (firstCard.offsetWidth + gap) * pageSize;
       const edgeThreshold = 8;
@@ -300,7 +312,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
     }, [isDragMode, updateScrollIndicator, features.length, slideWidth]);
 
     useLayoutEffect(() => {
-      if (!isDragMode || columnsPerView !== 2) {
+      if (!isDragMode || columnsPerView === 1) {
         setSlideWidth(0);
         return;
       }
@@ -313,9 +325,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
         const gap = track
           ? Number.parseFloat(getComputedStyle(track).gap) || 32
           : 32;
-        const visibleColumns = window.matchMedia("(min-width: 768px)").matches
-          ? 2
-          : 1;
+        const visibleColumns = getVisibleColumnCount(columnsPerView);
         const nextWidth = Math.floor(
           (viewport.clientWidth - gap * (visibleColumns - 1)) / visibleColumns,
         );
@@ -348,11 +358,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
         const gap = track
           ? Number.parseFloat(getComputedStyle(track).gap) || 32
           : 32;
-        const pageSize =
-          columnsPerView === 2 &&
-          window.matchMedia("(min-width: 768px)").matches
-            ? 2
-            : 1;
+        const pageSize = getVisibleColumnCount(columnsPerView);
         const step = (firstCard.offsetWidth + gap) * pageSize;
         const maxScroll = viewport.scrollWidth - viewport.clientWidth;
         const edgeThreshold = 8;
@@ -382,11 +388,6 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
     const navButtonClass =
       "hidden size-10 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20 disabled:pointer-events-none disabled:opacity-35 md:flex";
 
-    const navButtonOutsideClass = cn(
-      navButtonClass,
-      "absolute top-1/2 z-40 -translate-y-1/2",
-    );
-
     const renderFeatureCards = (
       featureSet: FeatureItem[],
       refs: React.MutableRefObject<HTMLDivElement[]>,
@@ -400,7 +401,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
           }}
           className={cn(
             "feature-card relative z-10 h-full shrink-0 snap-start snap-always transition-all duration-300 ease-in-out",
-            isDragMode && columnsPerView === 2
+            isDragMode && columnsPerView > 1
               ? null
               : isDragMode
                 ? cn(
@@ -411,7 +412,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
             cardClassName,
           )}
           style={
-            isDragMode && columnsPerView === 2 && slideWidth > 0
+            isDragMode && columnsPerView > 1 && slideWidth > 0
               ? { width: slideWidth, flexBasis: slideWidth }
               : undefined
           }
@@ -474,22 +475,32 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
         >
           {isDragMode ? (
             <>
-              <div className={cn("relative w-full", navOutside && "px-0")}>
+              <div
+                className={cn(
+                  "w-full",
+                  navOutside
+                    ? "flex items-center justify-center gap-3 px-4 md:gap-4"
+                    : "relative",
+                )}
+              >
                 {navOutside ? (
                   <button
                     type="button"
                     onClick={() => scrollByCard(-1)}
                     aria-label={navLabels.prev}
-                    className={cn(
-                      navButtonOutsideClass,
-                      "left-0 md:left-1 lg:left-[max(0.5rem,calc((100%-80rem)/2-5rem))]",
-                    )}
+                    className={navButtonClass}
                   >
                     <LuChevronLeft className="size-5" aria-hidden />
                   </button>
                 ) : null}
 
-                <div className={cn(navOutside && "mx-auto w-full max-w-site")}>
+                <div
+                  className={cn(
+                    navOutside
+                      ? "min-w-0 w-full max-w-site"
+                      : "mx-auto w-full max-w-site",
+                  )}
+                >
                   <div
                     className={cn(
                       !navOutside && "flex items-center gap-3 md:gap-4",
@@ -512,7 +523,8 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                       className={cn(
                         "overflow-x-auto overflow-y-hidden",
                         "scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
-                        "cursor-grab snap-x snap-mandatory",
+                        isDragMode && !isLgViewport && "cursor-grab",
+                        "snap-x snap-mandatory",
                         navOutside || !(alignStart && columnsPerView === 1)
                           ? "w-full px-0"
                           : "min-w-0 flex-1 pl-[max(1rem,calc((100%-80rem)/2))] pr-4 md:pr-6",
@@ -524,9 +536,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                         ref={scrollContainerRef}
                         className={cn(
                           "flex w-max flex-row items-stretch gap-6 md:gap-8",
-                          columnsPerView === 2 &&
-                            slideWidth === 0 &&
-                            "invisible",
+                          columnsPerView > 1 && slideWidth === 0 && "invisible",
                         )}
                       >
                         {renderFeatureCards(features, cardRefs, "row-1")}
@@ -551,10 +561,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                     type="button"
                     onClick={() => scrollByCard(1)}
                     aria-label={navLabels.next}
-                    className={cn(
-                      navButtonOutsideClass,
-                      "right-0 md:right-1 lg:right-[max(0.5rem,calc((100%-80rem)/2-5rem))]",
-                    )}
+                    className={navButtonClass}
                   >
                     <LuChevronRight className="size-5" aria-hidden />
                   </button>

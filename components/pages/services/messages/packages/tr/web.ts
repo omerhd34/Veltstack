@@ -1,10 +1,10 @@
-// ---------------------------------------------------------------------------
+﻿// ---------------------------------------------------------------------------
 // Ortak (paylaşılan) özellik grupları
 // ---------------------------------------------------------------------------
 
 const commonDesignItems = [
-  "Duyarlı (Responsive) Tasarım — Mobil, Tablet ve Masaüstü Uyumu",
-  "Çoklu Tarayıcı Uyumluluğu (Chrome, Safari, Firefox, Edge)",
+  "Mobil, Tablet ve Masaüstü Uyumu",
+  "Çoklu Tarayıcı Uyumluluğu",
   "SSL, HTTPS ve Temel Güvenlik Yapılandırması",
   "Hızlı Yükleme Süreleri ve SEO Dostu Performans Optimizasyonu",
 ] as const;
@@ -18,8 +18,39 @@ const commonIntegrationItems = [
 
 const commonDeliveryItems = [
   "Kaynak Kodu ve Proje Dosyalarının Teslimi",
-  "Canlı Yayına Alma (Deploy) Desteği",
+  "Canlı Yayına Alma Desteği",
   "Hosting Kurulum Adımları ve Yayın Rehberi",
+] as const;
+
+const tierSeoTemelItems = [
+  ...commonSeoItems,
+  ...commonIntegrationItems,
+] as const;
+
+const tierSeoStandartItems = [
+  ...commonSeoItems,
+  "Meta, Open Graph ve Schema Markup Optimizasyonu",
+  ...commonIntegrationItems,
+  "Google Search Console Kurulumu ve Doğrulaması",
+  "Google Analytics 4 Entegrasyonu",
+  "Sosyal Medya Bağlantıları ve Paylaşım Alanları",
+  "Domain, www/non-www ve Yönlendirme Ayarları",
+] as const;
+
+const tierSeoProItems = [
+  ...commonSeoItems,
+  "Meta, Open Graph ve Schema Markup Optimizasyonu",
+  "Kapsamlı Teknik SEO ve İndeksleme Optimizasyonu",
+  "Organization, BreadcrumbList ve Benzeri Schema Yapıları",
+  ...commonIntegrationItems,
+  "Google Search Console Kurulumu ve Doğrulaması",
+  "Google Analytics 4 Entegrasyonu",
+  "Sosyal Medya Bağlantıları ve Paylaşım Alanları",
+  "Domain, www/non-www ve Yönlendirme Ayarları",
+  "Dönüşüm Takibi (Form, Tıklama, CTA)",
+  "Canlı Destek ve Hızlı İletişim Entegrasyonu",
+  "CRM ve E-posta Pazarlama Aracı Entegrasyonu (Mailchimp vb.)",
+  "Üçüncü Parti API Entegrasyon Hazırlığı",
 ] as const;
 
 export const webPackagesTr = {
@@ -27,7 +58,7 @@ export const webPackagesTr = {
   // PORTFÖY / TANITIM WEB SİTESİ
   // =========================================================================
   portfolio: {
-    title: "Portföy / Tanıtım Web Sitesi",
+    title: "Portföy / Tanıtım",
     description:
       "Kişisel markanızı veya işletmenizi güven veren modern bir web sitesiyle öne çıkarın.",
     tiers: {
@@ -42,7 +73,11 @@ export const webPackagesTr = {
           },
           {
             label: "SEO & Entegrasyon",
-            items: [...commonSeoItems, ...commonIntegrationItems],
+            items: [...tierSeoTemelItems],
+          },
+          {
+            label: "İçerik & Yönetim Paneli",
+            items: [],
           },
           {
             label: "Teslim & Destek",
@@ -59,21 +94,13 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mode Desteği",
+              "Dark / Light Mod Desteği",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
           {
             label: "SEO & Entegrasyon",
-            items: [
-              ...commonSeoItems,
-              "Meta, Open Graph ve Schema Markup Optimizasyonu",
-              ...commonIntegrationItems,
-              "Google Search Console Kurulumu ve Doğrulaması",
-              "Google Analytics 4 Entegrasyonu",
-              "Sosyal Medya Paylaşım Bağlantıları",
-              "Domain, www/non-www ve Yönlendirme Ayarları",
-            ],
+            items: [...tierSeoStandartItems],
           },
           {
             label: "İçerik & Yönetim Paneli",
@@ -103,7 +130,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mode Desteği",
+              "Dark / Light Mod Desteği",
               "Figma Tasarımlarına Piksel Uyumlu Arayüz Kodlama",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
               "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
@@ -111,18 +138,7 @@ export const webPackagesTr = {
           },
           {
             label: "SEO & Entegrasyon",
-            items: [
-              ...commonSeoItems,
-              "Meta, Open Graph ve Schema Markup Optimizasyonu",
-              "Kapsamlı Teknik SEO ve İndeksleme Optimizasyonu",
-              "Open Graph ve Sosyal Paylaşım Kartı Yapılandırması",
-              ...commonIntegrationItems,
-              "Google Search Console Kurulumu ve Doğrulaması",
-              "Google Analytics 4 Entegrasyonu",
-              "Sosyal Medya Paylaşım Bağlantıları",
-              "Domain, www/non-www ve Yönlendirme Ayarları",
-              "Dönüşüm Takibi (Form, Tıklama, CTA)",
-            ],
+            items: [...tierSeoProItems],
           },
           {
             label: "İçerik & Yönetim Paneli",
@@ -130,9 +146,9 @@ export const webPackagesTr = {
               "Hizmet / Proje Galerisi için Düzenlenebilir Bölüm",
               "Referans ve Müşteri Yorumu Alanları",
               "Yönetim Paneli",
+              "En Fazla 5 Dil Desteği",
               "Blog ve Makale Yayınlama Modülü",
               "Proje Filtreleme ve Kategori Yönetimi",
-              "Sınırsız Dil Desteği",
             ],
           },
           {
@@ -152,7 +168,7 @@ export const webPackagesTr = {
   // KURUMSAL WEB SİTESİ
   // =========================================================================
   corporate: {
-    title: "Kurumsal Web Sitesi",
+    title: "Kurumsal",
     description:
       "Kurumsal kimliğinizi yansıtan, güven oluşturan ve müşteri kazandırmaya odaklı web sitesi.",
     tiers: {
@@ -167,7 +183,11 @@ export const webPackagesTr = {
           },
           {
             label: "SEO & Entegrasyon",
-            items: [...commonSeoItems, ...commonIntegrationItems],
+            items: [...tierSeoTemelItems],
+          },
+          {
+            label: "İçerik & Yönetim Paneli",
+            items: [],
           },
           {
             label: "Teslim & Destek",
@@ -184,26 +204,19 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mode Desteği",
+              "Dark / Light Mod Desteği",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
           {
             label: "SEO & Entegrasyon",
-            items: [
-              ...commonSeoItems,
-              "Meta, Open Graph ve Schema Markup Optimizasyonu",
-              ...commonIntegrationItems,
-              "Google Search Console Kurulumu ve Doğrulaması",
-              "Google Analytics 4 Entegrasyonu",
-              "Kurumsal E-posta ve Form Yönlendirmeleri",
-              "Sosyal Medya Bağlantıları ve Paylaşım Alanları",
-            ],
+            items: [...tierSeoStandartItems],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
               "Yönetim Paneli",
+              "Kurumsal E-posta ve Form Yönlendirmeleri",
               "Blog, Haber ve Duyuru Yayınlama Modülü",
               "Ekip ve Kadro Tanıtım Sayfaları",
               "Hizmetler, Referanslar ve Başarı Hikayeleri Alanları",
@@ -230,7 +243,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mode Desteği",
+              "Dark / Light Mod Desteği",
               "Figma Tasarımlarına Piksel Uyumlu Kurumsal Arayüz Kodlama",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
               "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
@@ -238,33 +251,20 @@ export const webPackagesTr = {
           },
           {
             label: "SEO & Entegrasyon",
-            items: [
-              ...commonSeoItems,
-              "Meta, Open Graph ve Schema Markup Optimizasyonu",
-              "Kapsamlı Teknik SEO ve İndeksleme Optimizasyonu",
-              "Organization, BreadcrumbList ve Benzeri Schema Yapıları",
-              ...commonIntegrationItems,
-              "Google Search Console Kurulumu ve Doğrulaması",
-              "Google Analytics 4 Entegrasyonu",
-              "Kurumsal E-posta ve Form Yönlendirmeleri",
-              "Sosyal Medya Bağlantıları ve Paylaşım Alanları",
-              "Dönüşüm ve Form Takibi",
-              "Canlı Destek ve Hızlı İletişim Entegrasyonu",
-              "CRM ve E-posta Pazarlama Aracı Entegrasyonu (Mailchimp vb.)",
-              "Üçüncü Parti API Entegrasyon Hazırlığı",
-            ],
+            items: [...tierSeoProItems],
           },
           {
             label: "İçerik & Yönetim Paneli",
             items: [
               "Blog Altyapısı",
+              "Kurumsal E-posta ve Form Yönlendirmeleri",
               "Ekip ve Kadro Tanıtım Sayfaları",
               "Hizmetler, Referanslar ve Başarı Hikayeleri Alanları",
               "Kariyer / İş İlanı Modülü ve Başvuru Formu",
               "Etkinlik, Duyuru ve Takvim Modülü",
               "Kurumsal Doküman İndirme Bölümü",
               "Video Galeri ve Medya Yönetimi",
-              "Sınırsız Dil Desteği",
+              "En Fazla 5 Dil Desteği",
             ],
           },
           {
@@ -284,7 +284,7 @@ export const webPackagesTr = {
   // E-TİCARET WEB SİTESİ
   // =========================================================================
   ecommerce: {
-    title: "E-Ticaret Web Sitesi",
+    title: "E-Ticaret",
     description:
       "Online satışa hızlı başlamanız için güvenli ödeme altyapısına sahip modern e-ticaret çözümü.",
     tiers: {
@@ -299,7 +299,7 @@ export const webPackagesTr = {
           },
           {
             label: "SEO & Entegrasyon",
-            items: [...commonSeoItems, ...commonIntegrationItems],
+            items: [...tierSeoTemelItems],
           },
           {
             label: "Mağaza & Ödeme",
@@ -331,25 +331,19 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mode Desteği",
+              "Dark / Light Mod Desteği",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
           {
             label: "SEO & Entegrasyon",
-            items: [
-              ...commonSeoItems,
-              "Gelişmiş SEO (Meta, OG, Ürün Schema Markup)",
-              ...commonIntegrationItems,
-              "Google Search Console Kurulumu ve Doğrulaması",
-              "Google Analytics 4 Entegrasyonu",
-              "Otomatik E-posta Sipariş Bildirimleri",
-              "Mesafeli Satış Sözleşmesi ve Yasal Sayfa Altyapısı",
-            ],
+            items: [...tierSeoStandartItems],
           },
           {
             label: "Mağaza & Ödeme",
             items: [
+              "Otomatik E-posta Sipariş Bildirimleri",
+              "Mesafeli Satış Sözleşmesi ve Yasal Sayfa Altyapısı",
               "Gelişmiş Ürün, Kategori ve Etiket Yönetimi",
               "Sepet ve Sipariş Akışı Yönetimi",
               "Ödeme Yöntemi",
@@ -364,7 +358,7 @@ export const webPackagesTr = {
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Gelişmiş Mağaza Yönetim Paneli (CMS)",
+              "Yönetim Paneli",
               "Ürün, Sipariş, Müşteri ve Stok Yönetimi",
               "En Fazla 2 Dil Desteği",
             ],
@@ -388,7 +382,7 @@ export const webPackagesTr = {
             label: "Tasarım & Geliştirme",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mode Desteği",
+              "Dark / Light Mod Desteği",
               "Figma Tasarımlarına Piksel Uyumlu E-Ticaret Arayüzü Kodlama",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
               "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
@@ -396,27 +390,16 @@ export const webPackagesTr = {
           },
           {
             label: "SEO & Entegrasyon",
-            items: [
-              ...commonSeoItems,
-              "Gelişmiş SEO (Meta, OG, Ürün Schema Markup)",
-              "Kapsamlı Teknik E-Ticaret SEO Optimizasyonu",
-              "Gelişmiş Product, Review ve Offer Schema Markup",
-              ...commonIntegrationItems,
-              "Google Search Console Kurulumu ve Doğrulaması",
-              "Google Analytics 4 Entegrasyonu",
-              "Otomatik E-posta Sipariş Bildirimleri",
-              "Mesafeli Satış Sözleşmesi ve Yasal Sayfa Altyapısı",
-              "Google Merchant Center / Alışveriş Entegrasyon Altyapısı",
-              "GA4 E-Ticaret Dönüşüm Raporlama",
-              "Dönüşüm, Form ve Sepet Takibi",
-            ],
+            items: [...tierSeoProItems],
           },
           {
             label: "Mağaza & Ödeme",
             items: [
+              "Otomatik E-posta Sipariş Bildirimleri",
+              "Mesafeli Satış Sözleşmesi ve Yasal Sayfa Altyapısı",
               "Gelişmiş Ürün, Kategori ve Etiket Yönetimi",
               "Sepet ve Sipariş Akışı Yönetimi",
-              "Ödeme Yöntemi",
+              "Çoklu Ödeme Yöntemi: Sanal POS (PayTR vb.) ve Havale/EFT",
               "Gelişmiş Stok Takibi ve Düşük Stok Uyarıları",
               "Üyelik, Giriş, Şifre Sıfırlama ve Profil Sayfaları",
               "Sipariş Takip ve Kullanıcı Geçmiş Paneli",
@@ -434,9 +417,9 @@ export const webPackagesTr = {
           {
             label: "İçerik & Yönetim Paneli",
             items: [
-              "Kapsamlı E-Ticaret Yönetim Paneli (Advanced CMS)",
+              "Yönetim Paneli",
               "Ürün, Sipariş, Müşteri ve Stok Yönetimi",
-              "Sınırsız Dil Desteği",
+              "En Fazla 5 Dil Desteği",
               "Çoklu Para Birimi Desteği",
               "Blog ve İçerik Pazarlama Modülü",
               "CRM, SMS ve Pazarlama Araçları Entegrasyonu (Mailchimp vb.)",

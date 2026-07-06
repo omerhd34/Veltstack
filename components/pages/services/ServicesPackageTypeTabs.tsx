@@ -1,19 +1,20 @@
 "use client";
 
 import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import type { IconType } from "react-icons";
 import { cn } from "@/lib/utils";
-import { categoryTabIcons, type PackageCategory } from "./packages-config";
 import { ServicesTabScrollFade } from "./ServicesTabScrollFade";
 
-interface TabItem {
-  id: PackageCategory;
+interface PackageTypeTab {
+  id: string;
   label: string;
+  icon: IconType;
 }
 
-interface ServicesCategoryTabsProps {
-  tabs: TabItem[];
-  active: PackageCategory;
-  onChange: (category: PackageCategory) => void;
+interface ServicesPackageTypeTabsProps {
+  tabs: PackageTypeTab[];
+  active: string;
+  onChange: (id: string) => void;
   className?: string;
   embedded?: boolean;
 }
@@ -23,15 +24,15 @@ interface IndicatorStyle {
   width: number;
 }
 
-export function ServicesCategoryTabs({
+export function ServicesPackageTypeTabs({
   tabs,
   active,
   onChange,
   className,
   embedded = false,
-}: ServicesCategoryTabsProps) {
+}: ServicesPackageTypeTabsProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const tabRefs = useRef<Map<PackageCategory, HTMLButtonElement>>(new Map());
+  const tabRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
   const [indicator, setIndicator] = useState<IndicatorStyle>({
     left: 0,
     width: 0,
@@ -79,37 +80,31 @@ export function ServicesCategoryTabs({
     <div
       ref={containerRef}
       className={cn(
-        "relative overflow-x-auto scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none lg:overflow-visible [&::-webkit-scrollbar]:hidden",
-        embedded && "px-2 py-2 sm:px-3",
-        !embedded &&
-          "rounded-[calc(1.75rem-1px)] bg-[#071510]/95 backdrop-blur-md",
+        "relative overflow-x-auto scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden",
+        embedded
+          ? "flex w-full justify-center bg-emerald-950/25 px-2 py-2 sm:px-3"
+          : "rounded-2xl border border-emerald-900/40 bg-[#071510]/60 backdrop-blur-sm",
       )}
       role="tablist"
+      aria-label="Package type"
     >
-      {!embedded ? (
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-0 rounded-[calc(1.75rem-1px)] bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgb(58_107_82/0.12),transparent)]"
-        />
-      ) : null}
-
       <span
         aria-hidden
-        className="absolute top-1.5 bottom-1.5 rounded-full bg-linear-to-r from-brand-accent to-emerald-500 shadow-[0_4px_24px_rgb(58_107_82/0.45),inset_0_1px_0_rgb(255_255_255/0.12)] transition-[left,width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+        className={cn(
+          "absolute top-1.5 bottom-1.5 transition-[left,width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
+          embedded
+            ? "rounded-full bg-white/10 ring-1 ring-white/10 shadow-[inset_0_1px_0_rgb(255_255_255/0.08)]"
+            : "rounded-xl bg-brand-accent/15 ring-1 ring-brand-accent/30",
+        )}
         style={{
           left: indicator.left,
           width: indicator.width,
         }}
       />
 
-      <div
-        className={cn(
-          "relative flex min-w-max items-center gap-0.5 sm:gap-1",
-          embedded && "mx-auto justify-start lg:justify-center",
-        )}
-      >
+      <div className="relative mx-auto flex min-w-max items-center gap-0.5 sm:gap-1">
         {tabs.map((tab) => {
-          const Icon = categoryTabIcons[tab.id];
+          const Icon = tab.icon;
           const isActive = active === tab.id;
 
           return (
@@ -124,18 +119,23 @@ export function ServicesCategoryTabs({
               aria-selected={isActive}
               onClick={() => onChange(tab.id)}
               className={cn(
-                "group relative z-10 flex shrink-0 items-center gap-2 rounded-full px-3.5 py-2.5 text-xs font-semibold tracking-tight transition-[color,transform] duration-300 sm:px-4 sm:py-2.5 sm:text-sm",
+                "group relative z-10 flex shrink-0 items-center gap-1.5 px-3.5 py-2 text-xs font-medium tracking-tight transition-[color,transform] duration-300 sm:gap-2 sm:px-4 sm:py-2 sm:text-sm",
+                embedded ? "rounded-full" : "rounded-xl",
                 isActive
-                  ? "text-white"
-                  : "text-emerald-200/50 hover:text-emerald-100/90 active:scale-[0.98]",
+                  ? embedded
+                    ? "text-emerald-50"
+                    : "text-emerald-50"
+                  : "text-emerald-200/45 hover:text-emerald-100/75 active:scale-[0.98]",
               )}
             >
               <Icon
                 className={cn(
-                  "size-3.5 shrink-0 transition-all duration-300 sm:size-4",
+                  "size-3.5 shrink-0 transition-colors duration-300 sm:size-4",
                   isActive
-                    ? "text-white drop-shadow-[0_0_8px_rgb(255_255_255/0.25)]"
-                    : "text-emerald-400/40 group-hover:text-emerald-300/65",
+                    ? embedded
+                      ? "text-brand-accent"
+                      : "text-brand-accent"
+                    : "text-emerald-400/35 group-hover:text-emerald-300/55",
                 )}
                 strokeWidth={isActive ? 2.25 : 1.75}
                 aria-hidden
@@ -150,21 +150,14 @@ export function ServicesCategoryTabs({
 
   if (embedded) {
     return (
-      <ServicesTabScrollFade className={className}>
+      <ServicesTabScrollFade
+        className={cn("w-full", className)}
+        fadeFrom="#050f0c"
+      >
         {tabList}
       </ServicesTabScrollFade>
     );
   }
 
-  return (
-    <div
-      className={cn(
-        "relative rounded-[1.75rem] p-px shadow-[0_8px_40px_rgb(0_0_0/0.35)]",
-        "bg-linear-to-r from-emerald-500/25 via-brand-accent/20 to-emerald-600/25",
-        className,
-      )}
-    >
-      <ServicesTabScrollFade>{tabList}</ServicesTabScrollFade>
-    </div>
-  );
+  return <div className={cn("relative", className)}>{tabList}</div>;
 }

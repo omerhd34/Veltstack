@@ -1,5 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionBadge } from "@/components/ui/SectionBadge";
+import { toLatinUppercase } from "@/lib/utils";
 import { ServicesPackagesPanel } from "./ServicesPackagesPanel";
 import type { PackageCardData } from "./ServicePackageCard";
 import type { PackageCategory } from "./packages-config";
@@ -31,8 +33,8 @@ export async function ServicesPackagesSection({
     { id: "web", label: t("tabWeb") },
     { id: "app", label: t("tabApp") },
     { id: "refresh", label: t("tabRefresh") },
-    { id: "seo", label: t("tabSeo") },
     { id: "audit", label: t("tabAudit") },
+    { id: "seo", label: t("tabSeo") },
     { id: "maintenance", label: t("tabMaintenance") },
   ];
 
@@ -86,13 +88,33 @@ export async function ServicesPackagesSection({
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-border/60 to-transparent"
       />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[radial-gradient(ellipse_70%_80%_at_50%_0%,rgb(58_107_82/0.06),transparent)]"
+      />
 
       <SiteContainer className="relative min-w-0">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-brand-accent md:text-4xl lg:text-[2.75rem] lg:leading-tight">
-            {sectionTitle}
+          {!lockedCategory ? (
+            <SectionBadge variant="accent-glass">
+              {toLatinUppercase(t("packagesBadge"))}
+            </SectionBadge>
+          ) : null}
+          <h2
+            className={`font-(family-name:--font-heading) text-3xl font-bold tracking-tight md:text-4xl lg:text-[2.75rem] lg:leading-tight ${lockedCategory ? "" : "mt-5"}`}
+          >
+            {lockedCategory ? (
+              <span className="text-brand-accent">{sectionTitle}</span>
+            ) : (
+              <>
+                <span className="text-foreground">{t("packagesTitleLead")} </span>
+                <span className="bg-linear-to-r from-brand-accent via-emerald-600 to-emerald-500 bg-clip-text text-transparent">
+                  {t("packagesTitleAccent")}
+                </span>
+              </>
+            )}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:max-w-3xl md:text-base lg:max-w-4xl">
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-[1.8] text-muted-foreground md:max-w-3xl md:text-base lg:max-w-4xl">
             {sectionSubtitle}
           </p>
         </div>
@@ -111,6 +133,7 @@ export async function ServicesPackagesSection({
             statDeliveryAudit: t("statDeliveryAudit"),
             statDeliveryUnit: t("statDeliveryUnit"),
             statRevision: t("statRevision"),
+            statMonthlyRequests: t("statMonthlyRequests"),
             statPages: t("statPages"),
             statScreens: t("statScreens"),
             statKeywords: t("statKeywords"),

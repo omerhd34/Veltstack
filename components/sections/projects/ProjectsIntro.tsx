@@ -9,7 +9,7 @@ export async function ProjectsIntro({ className }: ProjectsIntroProps) {
   const t = await getTranslations("home");
 
   return (
-    <div className={`w-full max-w-5xl ${className ?? ""}`}>
+    <div className={`w-full max-w-8xl ${className ?? ""}`}>
       <SectionBadge variant="emerald-soft">{t("projectsBadge")}</SectionBadge>
 
       <h2

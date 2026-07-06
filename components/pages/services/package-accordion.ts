@@ -22,6 +22,18 @@ function matchExclusivePattern(text: string): RegExp | undefined {
   return exclusiveItemPatterns.find((pattern) => pattern.test(text));
 }
 
+function getDisplayOrderIndex(item: string, ordered: string[]): number {
+  const pattern = matchExclusivePattern(item);
+  if (!pattern) {
+    return ordered.indexOf(item);
+  }
+
+  const anchorIndex = ordered.findIndex(
+    (candidate) => matchExclusivePattern(candidate) === pattern,
+  );
+  return anchorIndex >= 0 ? anchorIndex : ordered.indexOf(item);
+}
+
 export function buildFeatureGroupComparison(
   tiers: Record<PackageTier, PackageTierData>,
   groupLabel: string,
@@ -61,11 +73,21 @@ export function buildFeatureGroupComparison(
   const filtered = ordered.filter((item) => {
     const pattern = matchExclusivePattern(item);
     if (!pattern) return true;
-    return activeItemByPattern.get(pattern) === item;
+    const activeMatch = activeItemByPattern.get(pattern);
+    if (activeMatch) return activeMatch === item;
+    const lowestVariant = ordered.find(
+      (candidate) => matchExclusivePattern(candidate) === pattern,
+    );
+    return lowestVariant === item;
   });
 
   const activeTierIndex = tierOrder.indexOf(activeTier);
-  return filtered.map((text) => ({
+  const sorted = [...filtered].sort(
+    (a, b) =>
+      getDisplayOrderIndex(a, ordered) - getDisplayOrderIndex(b, ordered),
+  );
+
+  return sorted.map((text) => ({
     text,
     included: (minTierIndex.get(text) ?? activeTierIndex) <= activeTierIndex,
   }));
@@ -138,4 +160,18 @@ export function getDefaultOpenGroups(
     return new Set<string>();
   }
   return new Set(labels);
+}
+
+export function collectAllTierGroupLabels(pkg: PackageCardData): string[] {
+  const labels: string[] = [];
+
+  for (const tierKey of tierOrder) {
+    for (const group of pkg.tiers[tierKey].featureGroups ?? []) {
+      if (!labels.includes(group.label)) {
+        labels.push(group.label);
+      }
+    }
+  }
+
+  return labels;
 }

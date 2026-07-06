@@ -1,119 +1,239 @@
+// ---------------------------------------------------------------------------
+// Shared feature groups
+// ---------------------------------------------------------------------------
+
+const commonDesignTemelItems = [
+  "Cross-Platform iOS and Android Development",
+  "Basic UI/UX and Brand Color Adaptation",
+  "Splash Screen and App Icon Design",
+  "Basic Page Transitions and Navigation",
+  "Fast Launch and Performance Optimization",
+] as const;
+
+const commonDeliveryTemelItems = [
+  "Source Code and Project File Delivery",
+  "Basic App Store and Play Store Publishing Support",
+  "Store Listing Screenshots and Description Support",
+  "Basic User Guide",
+  "15 Days Technical Support",
+] as const;
+
+const commonDeliveryStandartItems = [
+  "Source Code and Project File Delivery",
+  "Basic App Store and Play Store Publishing Support",
+  "Store Listing Screenshots and Description Support",
+  "User Guide and Short Admin Training",
+  "30 Days Technical Support",
+] as const;
+
+const commonDeliveryProItems = [
+  "Source Code and Project File Delivery",
+  "Basic App Store and Play Store Publishing Support",
+  "Store Listing Screenshots and Description Support",
+  "Comprehensive Training and Documentation",
+  "45 Days Technical Support",
+] as const;
+
+const commonSecurityTemelItems = [
+  "SSL Communication and Standard Data Security",
+  "Privacy Policy Consent Screen (KVKK/GDPR)",
+] as const;
+
+// ---------------------------------------------------------------------------
+// Portfolio / promotional app — tier-based features
+// ---------------------------------------------------------------------------
+
+const portfolioFeaturesTemelItems = [
+  "About, Services and Portfolio Gallery Screens",
+  "Contact Form and Quick Access Buttons (Phone, WhatsApp, Email)",
+  "Gallery and Video Content Support",
+  "Social Media Profile Links",
+  "References and Client Testimonials Section",
+] as const;
+
+const portfolioFeaturesStandartItems = [
+  ...portfolioFeaturesTemelItems,
+  "Push Notification Infrastructure",
+  "Basic Offline Usage and Caching",
+  "Up to 2 Languages Support",
+] as const;
+
+const portfolioFeaturesProItems = [
+  ...portfolioFeaturesTemelItems,
+  "Push Notification Infrastructure",
+  "Basic Offline Usage and Caching",
+  "Advanced Push Notification and Announcement Management",
+  "CMS Panel Connection for Dynamic Content",
+  "Deep Link and Content Sharing Support",
+  "Up to 5 Languages Support",
+] as const;
+
+const portfolioIntegrationTemelItems = [
+  "Basic REST API Connection",
+  "Map and Location Display",
+  "Basic Firebase Analytics Setup",
+  ...commonSecurityTemelItems,
+] as const;
+
+const portfolioIntegrationStandartItems = [
+  "Advanced REST API Integration",
+  "Social Media Sharing Integration",
+  "Map and Location Display",
+  "Basic Firebase Analytics Setup",
+  ...commonSecurityTemelItems,
+] as const;
+
+// ---------------------------------------------------------------------------
+// Corporate app — tier-based features
+// ---------------------------------------------------------------------------
+
+const corporateFeaturesTemelItems = [
+  "Announcement, News and Static Content Screens",
+  "Services, Corporate Info and Contact Pages",
+  "Basic User Login and Contact Forms",
+  "Corporate Communication and Support Channels (Phone, Email, Live Chat)",
+  "Gallery and Video Content Support",
+  "PDF and Document Viewing Module",
+] as const;
+
+const corporateFeaturesStandartItems = [
+  ...corporateFeaturesTemelItems,
+  "Grouped Push Notification System",
+  "User Roles and Authorization",
+  "Offline Content Viewing and Synchronization",
+  "Up to 2 Languages Support",
+] as const;
+
+const corporateFeaturesProItems = [
+  ...corporateFeaturesTemelItems,
+  "Grouped Push Notification System",
+  "User Roles and Authorization",
+  "Offline Content Viewing and Synchronization",
+  "Rich Media Interactive Announcements",
+  "Advanced Role-Based Authorization and Intranet Sync",
+  "Survey, Feedback and Satisfaction Module",
+  "Up to 5 Languages Support",
+] as const;
+
+// ---------------------------------------------------------------------------
+// Ecommerce app — tier-based features
+// ---------------------------------------------------------------------------
+
+const ecommerceStoreTemelItems = [
+  "Category and Product Listing Screens",
+  "Product Detail, Image Gallery and Zoom",
+  "Product Search and Basic Filtering",
+  "Stock Status and Price Display",
+  "Cart, Basic Checkout and Order Tracking Flow",
+  "Guest Checkout and Basic User Registration / Login",
+  "Order Status Notification Screen",
+  "Delivery and Shipping Cost Display",
+] as const;
+
+const ecommerceStoreStandartItems = [
+  ...ecommerceStoreTemelItems,
+  "Favorites and Detailed Order History",
+  "Saved Address and Delivery Information Management",
+  "Secure Multi-Payment Flow (Credit Card, Bank Transfer)",
+  "Up to 2 Languages Support",
+] as const;
+
+const ecommerceStoreProItems = [
+  ...ecommerceStoreTemelItems,
+  "Favorites and Detailed Order History",
+  "Saved Address and Delivery Information Management",
+  "Secure Multi-Payment Flow (Credit Card, Bank Transfer)",
+  "Advanced Stock and Dynamic Variant Management",
+  "Product Reviews and Star Rating System",
+  "Unlimited Languages and Multi-Currency Support",
+] as const;
+
 export const appPackagesEn = {
   portfolio: {
     title: "Promotional / Portfolio App",
     description:
-      "Fast promotional app representing your brand on iOS and Android.",
+      "Trust-building iOS and Android app that puts your brand one tap away.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
-        revisions: "2",
+        revisions: "3",
         scope: "1-5",
         featureGroups: [
           {
             label: "Development & Design",
-            items: [
-              "Cross-platform iOS and Android development",
-              "Basic UI/UX template adaptation",
-              "Information and navigation screens",
-              "Fast loading and performance optimization",
-            ],
+            items: [...commonDesignTemelItems],
           },
           {
-            label: "Features & Integration",
-            items: [
-              "Contact / WhatsApp redirect button",
-              "Basic REST API integration",
-              "Privacy-compliant cookie / privacy policy module (KVKK/GDPR)",
-            ],
+            label: "Features & Functions",
+            items: [...portfolioFeaturesTemelItems],
+          },
+          {
+            label: "Integration & Security",
+            items: [...portfolioIntegrationTemelItems],
           },
           {
             label: "Delivery & Support",
-            items: [
-              "Source code delivery",
-              "Basic App Store and Play Store publishing support",
-              "15 days technical support",
-            ],
+            items: [...commonDeliveryTemelItems],
           },
         ],
       },
       standart: {
         deliveryDays: "30-45",
-        revisions: "4",
+        revisions: "5",
         scope: "1-10",
         featureGroups: [
           {
             label: "Development & Design",
             items: [
-              "Cross-platform iOS and Android development",
-              "Premium UI components and page animations",
-              "Compatibility testing across device resolutions",
+              ...commonDesignTemelItems,
+              "Premium UI Components and Modern Interface",
+              "Dark / Light Mode Support",
+              "Advanced Compatibility and Device Testing Across Screen Sizes",
             ],
           },
           {
             label: "Features & Functions",
-            items: [
-              "Push notification infrastructure",
-              "Basic offline support (caching)",
-              "Second language support",
-            ],
+            items: [...portfolioFeaturesStandartItems],
           },
           {
             label: "Integration & Security",
-            items: [
-              "Advanced REST API integration",
-              "Social media integration and sharing",
-              "Privacy-compliant cookie / privacy policy module (KVKK/GDPR)",
-            ],
+            items: [...portfolioIntegrationStandartItems],
           },
           {
             label: "Delivery & Support",
-            items: [
-              "Source code delivery",
-              "App Store and Play Store publishing management",
-              "30 days technical support",
-              "User guide training and documentation",
-            ],
+            items: [...commonDeliveryStandartItems],
           },
         ],
       },
       pro: {
         deliveryDays: "45-60",
-        revisions: "6",
+        revisions: "7",
         scope: "∞",
         featureGroups: [
           {
             label: "Development & Design",
             items: [
-              "Custom-built, high-speed infrastructure",
-              "Pixel-perfect Figma-to-code implementation",
-              "Dark / Light mode device synchronization",
-              "Advanced animations and micro-interactions",
+              "Scalable High-Speed Custom Infrastructure",
+              "Pixel-Perfect Figma-to-Code Implementation",
+              "Advanced Animations and Micro-Interactions",
+              "Dark / Light Mode Support",
             ],
           },
           {
-            label: "Features & Panels",
-            items: [
-              "Push notification and announcement management",
-              "Multilingual support",
-              "CMS connection for dynamic content",
-            ],
+            label: "Features & Functions",
+            items: [...portfolioFeaturesProItems],
           },
           {
             label: "Integration & Security",
             items: [
-              "Custom API integrations",
-              "Google Analytics / Firebase analytics setup",
-              "KVKK and GDPR compliant security infrastructure",
+              "Custom API and Third-Party Integrations",
+              "Firebase and GA4 Analytics Setup",
+              "Full KVKK and GDPR Compliant Security Infrastructure",
             ],
           },
           {
             label: "Delivery & Support",
-            items: [
-              "Source code delivery",
-              "Turnkey App Store and Play Store publishing process",
-              "45 days technical support",
-              "User guide training and documentation",
-            ],
+            items: [...commonDeliveryProItems],
           },
         ],
       },
@@ -122,7 +242,7 @@ export const appPackagesEn = {
   corporate: {
     title: "Corporate Mobile App",
     description:
-      "Reliable corporate mobile platform for employees or customers.",
+      "Reliable corporate mobile experience for your employees or customers.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
@@ -132,28 +252,27 @@ export const appPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Corporate-branded iOS / Android interface",
-              "Announcement, news and content screens",
-              "Device compatibility and performance testing",
-              "Basic UI/UX template adaptation",
+              "Corporate-Branded iOS / Android Interface",
+              "Basic UI/UX and Brand Color Adaptation",
+              "Splash Screen and App Icon Design",
+              "Standard Performance and Device Optimization",
             ],
           },
           {
-            label: "Functions & Security",
+            label: "Features & Functions",
+            items: [...corporateFeaturesTemelItems],
+          },
+          {
+            label: "Integration & Security",
             items: [
-              "Contact, feedback and support form",
-              "Basic authentication (user login) infrastructure",
-              "Basic Firebase analytics setup",
-              "Privacy-compliant cookie / privacy policy module (KVKK/GDPR)",
+              "Basic Firebase Analytics Setup",
+              "Standard Data Encryption",
+              ...commonSecurityTemelItems,
             ],
           },
           {
             label: "Delivery & Support",
-            items: [
-              "Source code delivery",
-              "Basic App Store and Play Store publishing support",
-              "15 days technical support",
-            ],
+            items: [...commonDeliveryTemelItems],
           },
         ],
       },
@@ -165,35 +284,30 @@ export const appPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Custom corporate iOS / Android interface design",
-              "Premium components and smooth navigation",
-              "Advanced performance and battery optimization",
+              "Custom Corporate iOS / Android Interface Design",
+              "Premium Components and Modern Interface",
+              "Dark / Light Mode Support",
+              "Advanced Performance and Battery Optimization",
             ],
           },
           {
-            label: "Features & Management",
-            items: [
-              "User roles and authorization system",
-              "Push notification system (grouped notifications)",
-              "Offline content viewing and synchronization",
-              "Second language support",
-            ],
+            label: "Features & Functions",
+            items: [...corporateFeaturesStandartItems],
           },
           {
             label: "Integration & Security",
             items: [
-              "Secure API integration with existing company systems",
-              "Advanced analytics and error tracking (Crashlytics)",
-              "KVKK compliant data processing and consent module",
+              "Advanced Analytics and Error Tracking (Crashlytics)",
+              "API Integration with Existing Company Systems",
+              "KVKK Compliant Data Processing Module",
             ],
           },
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "App Store and Play Store company account setup and publishing support",
-              "30 days technical support",
-              "User guide training and documentation",
+              ...commonDeliveryStandartItems.slice(0, 2),
+              "App Store and Play Store Company Account Setup",
+              ...commonDeliveryStandartItems.slice(2),
             ],
           },
         ],
@@ -206,38 +320,30 @@ export const appPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Custom-built, high-speed corporate infrastructure",
-              "Pixel-perfect corporate Figma-to-code implementation",
-              "Dark / Light mode support",
-              "Custom interface optimization for tablets (iPad / Android)",
+              "High-Speed Custom Corporate Infrastructure",
+              "Pixel-Perfect Corporate Figma-to-Code Implementation",
+              "Custom Optimization for Tablets",
+              "Dark / Light Mode Support",
             ],
           },
           {
-            label: "Functions & Panels",
-            items: [
-              "Advanced role-based internal authorization",
-              "Rich media news and announcement module",
-              "Two-way synchronization with intranet or corporate networks",
-              "Multilingual support",
-            ],
+            label: "Features & Functions",
+            items: [...corporateFeaturesProItems],
           },
           {
             label: "Integration & Security",
             items: [
-              "Live support or corporate WhatsApp integration",
-              "Biometric login (Face ID, fingerprint) integration",
-              "API readiness for third-party systems (CRM, ERP)",
-              "KVKK compliant cookie and agreement policy",
+              "Third-Party System Integrations (CRM, ERP)",
+              "Biometric Login (Face ID, Fingerprint)",
+              "Full KVKK and GDPR Compliant Security Infrastructure",
             ],
           },
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "App Store and Play Store publishing process management",
-              "45 days technical support",
-              "User guide training and documentation",
-              "Corporate user manual",
+              ...commonDeliveryProItems.slice(0, 3),
+              "Corporate User Manual and Comprehensive Training",
+              "45 Days Technical Support",
             ],
           },
         ],
@@ -257,33 +363,31 @@ export const appPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Ecommerce-focused iOS / Android interface",
-              "Category, product listing and product detail screens",
-              "Fast product image loading optimization",
-              "Basic UI/UX template adaptation",
+              "Ecommerce-Focused iOS / Android Interface",
+              "Basic UI/UX and Brand Color Adaptation",
+              "Splash Screen and App Icon Design",
+              "Fast Product Image Loading Optimization",
             ],
           },
           {
-            label: "Store & Payment",
-            items: [
-              "Cart and basic checkout flow",
-              "Single payment gateway / virtual POS integration",
-              "Basic order tracking screen",
-            ],
+            label: "Store & Functions",
+            items: [...ecommerceStoreTemelItems],
           },
           {
-            label: "Security & Integration",
+            label: "Marketing & Security",
             items: [
-              "SSL data security and API communication",
-              "Privacy, Distance Sales Agreement and privacy policy module (KVKK/GDPR)",
+              "Single Virtual POS / Payment Gateway Integration",
+              "SSL Data Security and Standard API Communication",
+              "Distance Sales Agreement and Privacy Policy Module (KVKK/GDPR)",
+              "Basic Firebase Analytics Setup",
             ],
           },
           {
             label: "Delivery & Support",
             items: [
-              "Source code delivery",
-              "Basic App Store and Play Store publishing support",
-              "15 days technical support",
+              ...commonDeliveryTemelItems.slice(0, 3),
+              "Basic Store User Guide",
+              "15 Days Technical Support",
             ],
           },
         ],
@@ -296,37 +400,27 @@ export const appPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Premium ecommerce iOS / Android interface",
-              "Advanced filtering and search animations",
-              "Performant infinite scroll infrastructure",
+              "Premium Ecommerce iOS / Android Interface",
+              "Advanced Filtering and Infinite Scroll",
+              "Dark / Light Mode Support",
+              "Smooth Category Transitions and Animations",
             ],
           },
           {
-            label: "Store & User",
-            items: [
-              "Membership, login, forgot password and profile management",
-              "Add to favorites / wishlist",
-              "Order history and detailed shipping tracking panel",
-              "Second language support",
-            ],
+            label: "Store & Functions",
+            items: [...ecommerceStoreStandartItems],
           },
           {
-            label: "Marketing & Payment",
+            label: "Marketing & Security",
             items: [
-              "Push notifications (order status and general campaigns)",
-              "Coupon, cart discount and campaign support",
-              "Secure multi-payment flow (credit card, bank transfer)",
-              "Privacy and legal agreement consent infrastructure (KVKK/GDPR)",
+              "Push Notifications for Orders and Campaigns",
+              "Coupon, Cart Discount and Campaign Support",
+              "Advanced Legal Consent Infrastructure (KVKK/GDPR)",
             ],
           },
           {
             label: "Delivery & Support",
-            items: [
-              "Source code delivery",
-              "Publishing process aligned with store guidelines",
-              "30 days technical support",
-              "User guide training and documentation",
-            ],
+            items: [...commonDeliveryStandartItems],
           },
         ],
       },
@@ -338,37 +432,30 @@ export const appPackagesEn = {
           {
             label: "Development & Design",
             items: [
-              "Custom-built, high-speed native-feel infrastructure",
-              "Pixel-perfect ecommerce Figma-to-code implementation",
-              "Dark / Light mode device synchronization",
-              "Custom cart and checkout page interaction design",
+              "Native-Feel High-Speed Custom Infrastructure",
+              "Pixel-Perfect Ecommerce Figma-to-Code Implementation",
+              "Custom Cart and Checkout Page Animations",
+              "Dark / Light Mode Support",
             ],
           },
           {
-            label: "Store & Dynamics",
+            label: "Store & Functions",
+            items: [...ecommerceStoreProItems],
+          },
+          {
+            label: "Marketing & Security",
             items: [
-              "Advanced stock and dynamic variant management (color, size)",
-              "Product reviews and star rating system",
-              "Multilingual and multi-currency support",
+              "Abandoned Cart and Personalized Push Notifications",
+              "GA4 / Firebase Ecommerce Conversion Analytics",
+              "Shipping, Logistics and Apple / Google Pay Integration",
             ],
           },
           {
-            label: "Marketing & Analytics",
+            label: "Delivery & Support",
             items: [
-              "Personalized push notifications and abandoned cart reminders",
-              "Advanced campaign and promo code module",
-              "Ecommerce conversion tracking (Firebase / GA4 ecommerce events)",
-              "Shipping and logistics API integration",
-            ],
-          },
-          {
-            label: "Integration & Support",
-            items: [
-              "KVKK compliant cookie policy and secure data storage",
-              "Apple Pay / Google Pay integration readiness",
-              "Turnkey App Store and Play Store publishing process",
-              "45 days technical support",
-              "User guide training and documentation",
+              ...commonDeliveryProItems.slice(0, 3),
+              "Comprehensive Store Management Training",
+              "45 Days Technical Support",
             ],
           },
         ],

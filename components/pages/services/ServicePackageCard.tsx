@@ -53,10 +53,11 @@ interface ServicePackageCardProps {
   data: PackageCardData;
   labels: PackageCardLabels;
   activeTier: PackageTier;
-  onTierChange: (tier: PackageTier) => void;
+  onTierChange?: (tier: PackageTier) => void;
   openGroups: Set<string>;
   onToggleGroup: (label: string) => void;
   commonGroupLabels?: string[];
+  variant?: "default" | "tier-column";
   className?: string;
 }
 
@@ -77,10 +78,12 @@ export function ServicePackageCard({
   openGroups,
   onToggleGroup,
   commonGroupLabels = [],
+  variant = "default",
   className,
 }: ServicePackageCardProps) {
   const tier = data.tiers[activeTier];
   const isPro = activeTier === "pro";
+  const isTierColumn = variant === "tier-column";
   const featureGroups = sortFeatureGroupsForDisplay(
     tier.featureGroups ?? [],
     commonGroupLabels,
@@ -179,7 +182,8 @@ export function ServicePackageCard({
     <article
       data-package-card
       className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-[#0b1812] text-white transition-all duration-500",
+        "group relative flex flex-col overflow-hidden rounded-2xl border bg-[#0b1812] text-white transition-all duration-500",
+        isTierColumn ? "h-auto" : "h-full",
         isPro
           ? "border-brand-accent/40 shadow-[0_0_48px_rgb(58_107_82/0.12)]"
           : "border-emerald-900/45 hover:border-emerald-700/50 hover:shadow-[0_8px_40px_rgb(0_0_0/0.35)]",
@@ -191,41 +195,51 @@ export function ServicePackageCard({
         className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-brand-accent/6 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
       />
 
-      <div className="relative border-b border-emerald-900/35 p-6">
-        <div className="flex items-start gap-4">
-          <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-brand-accent shadow-[0_4px_20px_rgb(58_107_82/0.35)]">
-            <Icon className="size-5 text-white" strokeWidth={1.75} />
-          </span>
-          <div className="min-w-0">
-            <h3 className="font-(family-name:--font-heading) text-lg font-bold leading-snug tracking-tight">
-              {data.title}
-            </h3>
-            <p className="mt-2 text-sm leading-relaxed text-emerald-50/55">
-              {data.description}
-            </p>
+      {isTierColumn ? (
+        <div className="border-b border-emerald-900/35 px-5 py-5 text-center">
+          <p className="font-(family-name:--font-heading) text-lg font-bold tracking-tight text-white">
+            {labels[tierLabels[activeTier]]}
+          </p>
+        </div>
+      ) : (
+        <>
+          <div className="relative border-b border-emerald-900/35 p-6">
+            <div className="flex items-start gap-4">
+              <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-brand-accent shadow-[0_4px_20px_rgb(58_107_82/0.35)]">
+                <Icon className="size-5 text-white" strokeWidth={1.75} />
+              </span>
+              <div className="min-w-0">
+                <h3 className="font-(family-name:--font-heading) text-lg font-bold leading-snug tracking-tight">
+                  {data.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-emerald-50/55">
+                  {data.description}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div className="border-b border-emerald-900/35 px-4 py-4">
-        <div className="flex rounded-xl border border-emerald-900/50 bg-[#071510]/80 p-1">
-          {tierOrder.map((tierKey) => (
-            <button
-              key={tierKey}
-              type="button"
-              onClick={() => onTierChange(tierKey)}
-              className={cn(
-                "flex-1 rounded-lg px-2 py-2 text-center text-xs font-semibold transition-all duration-300",
-                activeTier === tierKey
-                  ? "bg-brand-accent text-white shadow-sm"
-                  : "text-emerald-200/55 hover:text-emerald-100",
-              )}
-            >
-              {labels[tierLabels[tierKey]]}
-            </button>
-          ))}
-        </div>
-      </div>
+          <div className="border-b border-emerald-900/35 px-4 py-4">
+            <div className="flex rounded-xl border border-emerald-900/50 bg-[#071510]/80 p-1">
+              {tierOrder.map((tierKey) => (
+                <button
+                  key={tierKey}
+                  type="button"
+                  onClick={() => onTierChange?.(tierKey)}
+                  className={cn(
+                    "flex-1 rounded-lg px-2 py-2 text-center text-xs font-semibold transition-all duration-300",
+                    activeTier === tierKey
+                      ? "bg-brand-accent text-white shadow-sm"
+                      : "text-emerald-200/55 hover:text-emerald-100",
+                  )}
+                >
+                  {labels[tierLabels[tierKey]]}
+                </button>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
 
       <div
         className={cn(
@@ -262,9 +276,19 @@ export function ServicePackageCard({
         ))}
       </div>
 
-      <div className="relative flex min-h-0 flex-1 flex-col px-3 py-2 sm:px-4">
+      <div
+        className={cn(
+          "relative flex flex-col px-3 py-2 sm:px-4",
+          !isTierColumn && "min-h-0 flex-1",
+        )}
+      >
         {featureGroups.length ? (
-          <div className="flex min-h-0 flex-1 flex-col">
+          <div
+            className={cn(
+              "flex flex-col",
+              !isTierColumn && "min-h-0 flex-1",
+            )}
+          >
             {featureGroups.map((group, groupIndex) =>
               renderFeatureGroup(group, groupIndex),
             )}
@@ -289,7 +313,7 @@ export function ServicePackageCard({
         ) : null}
       </div>
 
-      <div className="mt-auto p-5 pt-0">
+      <div className={cn("p-5 pt-0", !isTierColumn && "mt-auto")}>
         <Link
           href="/iletisim"
           className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-brand-accent to-emerald-500 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110 hover:shadow-[0_4px_24px_rgb(58_107_82/0.4)]"

@@ -10,6 +10,7 @@ export const servicesHomeEn = {
     "Post-launch technical support included",
   ],
   servicesCta: "Let's plan together",
+  servicesAllCta: "All services",
   servicesSliderPrev: "Previous service",
   servicesSliderNext: "Next service",
   servicesSliderDot: "Service",
