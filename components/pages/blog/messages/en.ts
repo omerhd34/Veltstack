@@ -2,7 +2,7 @@ export const blogPageEn = {
   heroBadge: "Blog",
   heroTitle: "Insights from the digital world",
   heroSubtitle:
-    "Practical content on web development, mobile apps, SEO and digital transformation. We share what we learn from real projects.",
+    "Practical content on web development, mobile apps, SEO and digital transformation. We share lessons from real projects, our technology choices and field-tested methods in plain language.",
   heroImageAlt: "Veltstack blog: developer workspace",
   postCountLabel: "{count} posts",
   searchPlaceholder: "Search posts...",

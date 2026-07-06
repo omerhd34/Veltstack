@@ -24,6 +24,7 @@ interface BlogGridProps {
 
 export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
   const [search, setSearch] = useState("");
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [activeCategory, setActiveCategory] = useState(labels.allCategories);
 
   const categoryKey = locale === "tr" ? "category" : "categoryEn";
@@ -71,17 +72,25 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
                 aria-hidden
               />
               <input
-                type="search"
+                type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
+                onFocus={() => setIsSearchFocused(true)}
+                onBlur={() => setIsSearchFocused(false)}
                 placeholder={labels.searchPlaceholder}
                 className="h-10 w-full rounded-full border border-border bg-card pl-9 pr-10 text-sm text-foreground placeholder:text-muted-foreground focus:border-brand-accent/50 focus:outline-none focus:ring-2 focus:ring-brand-accent/20 transition-all"
               />
               {search && (
                 <button
                   type="button"
+                  onMouseDown={(e) => e.preventDefault()}
                   onClick={() => setSearch("")}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                  className={cn(
+                    "absolute right-3 top-1/2 -translate-y-1/2 transition-colors",
+                    isSearchFocused
+                      ? "text-brand-accent"
+                      : "text-muted-foreground hover:text-foreground",
+                  )}
                   aria-label={labels.clearSearch}
                 >
                   <LuX className="size-4" />

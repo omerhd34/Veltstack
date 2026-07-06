@@ -12,8 +12,18 @@ import { blogPostEntry as veritabaniSecimi } from "./veritabani-secimi";
 import { blogPostEntry as responsiveTasarim } from "./responsive-tasarim";
 import { blogPostEntry as enIyiFreelancerSiteleri } from "./en-iyi-freelancer-siteleri";
 import { blogPostEntry as reactNextjs } from "./react-nextjs";
+import { blogPostEntry as nedenTailwindCss } from "./neden-tailwind-css";
+import { blogPostEntry as nedenIxirhost } from "./neden-ixirhost";
+import { blogPostEntry as nodeJsVePrismaIleBackend } from "./node-js-ve-prisma-ile-backend";
+import { blogPostEntry as webdenMobileGecis } from "./webden-mobile-gecis";
+import { blogPostEntry as uiNedir } from "./ui-nedir";
 
 export const blogPostEntries: BlogPostEntry[] = [
+  uiNedir,
+  webdenMobileGecis,
+  nodeJsVePrismaIleBackend,
+  nedenIxirhost,
+  nedenTailwindCss,
   gelenekselYazilimYapayZeka,
   ozelYazilimCms,
   domainHosting,

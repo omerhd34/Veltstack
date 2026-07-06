@@ -73,12 +73,12 @@
   }
 
   .blog-prose .blog-table-compare-col-feature {
-    width: 34%;
+    width: 20%;
   }
 
   .blog-prose .blog-table-compare-col-domain,
   .blog-prose .blog-table-compare-col-hosting {
-    width: 33%;
+    width: 40%;
   }
 
   .blog-prose .blog-table-compare thead th {
