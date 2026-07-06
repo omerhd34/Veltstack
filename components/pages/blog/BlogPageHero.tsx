@@ -1,3 +1,4 @@
+import { getLocale } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
@@ -11,13 +12,15 @@ interface BlogPageHeroProps {
   postCountLabel: string;
 }
 
-export function BlogPageHero({
+export async function BlogPageHero({
   badge,
   title,
   subtitle,
   imageAlt,
   postCountLabel,
 }: BlogPageHeroProps) {
+  const locale = (await getLocale()) as "tr" | "en";
+
   return (
     <section className="relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-[#050f0c] text-white">
       <div
@@ -41,7 +44,7 @@ export function BlogPageHero({
         <div className="grid min-h-0 flex-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
           <div className="min-w-0 max-w-2xl">
             <SectionBadge variant="emerald-muted">
-              {toLatinUppercase(badge)}
+              {toLatinUppercase(badge, locale)}
             </SectionBadge>
 
             <div
@@ -63,7 +66,7 @@ export function BlogPageHero({
               </span>
               <span className="h-px flex-1 max-w-[80px] bg-emerald-800/40" />
               <span className="text-xs text-emerald-400/50 tracking-widest">
-                {toLatinUppercase("Veltstack")}
+                {toLatinUppercase("Veltstack", locale)}
               </span>
             </div>
           </div>

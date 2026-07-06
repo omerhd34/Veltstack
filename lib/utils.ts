@@ -5,8 +5,11 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function toLatinUppercase(value: string): string {
-  return value.toLocaleUpperCase("en-US").replace(/\u0130/g, "I");
+export function toLatinUppercase(
+  value: string,
+  locale: "tr" | "en" = "en",
+): string {
+  return value.toLocaleUpperCase(locale === "tr" ? "tr-TR" : "en-US");
 }
 
 export function isExternalHref(href: string): boolean {

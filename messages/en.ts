@@ -20,6 +20,8 @@ import { projectsPageEn } from "@/components/pages/projects/messages/en";
 import { pagesEn } from "@/app/[locale]/messages/pages/en";
 import { contactEn } from "@/app/[locale]/iletisim/messages/en";
 import { aboutEn } from "@/app/[locale]/hakkimda/messages/en";
+import { workflowEn } from "@/components/sections/workflow/messages/en";
+import { approachEn } from "@/components/sections/approach/messages/en";
 
 const messages = {
   nav: navEn,
@@ -46,6 +48,8 @@ const messages = {
   contact: contactEn,
   about: aboutEn,
   blogPage: blogPageEn,
+  workflow: workflowEn,
+  approach: approachEn,
 } as const;
 
 export default messages;

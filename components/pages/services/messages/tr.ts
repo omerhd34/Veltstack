@@ -15,12 +15,11 @@ export const servicesPageTr = {
   ctaTitleLead: "Paket seçiminde",
   ctaTitleAccent: "yardım mı lazım?",
   ctaSubtitle:
-    "Ücretsiz görüşmede projenizi dinleyip doğru paketi birlikte belirleyelim.",
+    "Ücretsiz görüşmede projenizi dinleyip doğru paketi birlikte belirleyelim ve 24 saat içinde size dönüş yaparız.",
   ctaPoint1: "Ücretsiz keşif görüşmesi",
   ctaPoint2: "Size özel paket önerisi",
   ctaPoint3: "Net kapsam ve fiyat",
   ctaButton: "Görüşme Planla",
-  ctaNote: "24 saat içinde dönüş",
   stats: [
     {
       value: "3-112",

@@ -37,17 +37,14 @@ export function HeroStatsCards({ stats }: HeroStatsCardsProps) {
             closeDelay={100}
           >
             <HoverCardTrigger asChild>
-              <button
-                type="button"
-                className="w-full rounded-2xl border border-emerald-900/45 bg-[#0a1612]/70 px-4 py-4 text-left backdrop-blur-sm transition-colors hover:border-emerald-700/60 hover:bg-[#0d1c17]/80 sm:px-5 sm:py-5"
-              >
+              <div className="w-full cursor-default rounded-2xl border border-emerald-900/45 bg-[#0a1612]/70 px-4 py-4 text-left backdrop-blur-sm transition-colors hover:border-emerald-700/60 hover:bg-[#0d1c17]/80 sm:px-5 sm:py-5">
                 <p className="font-(family-name:--font-heading) text-2xl font-bold text-white sm:text-3xl">
                   {stat.value}
                 </p>
                 <p className="mt-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-emerald-300/50 sm:text-[0.6875rem]">
                   {stat.label}
                 </p>
-              </button>
+              </div>
             </HoverCardTrigger>
             <HoverCardContent
               side="top"

@@ -60,7 +60,9 @@ export const webPackagesTr = {
   portfolio: {
     title: "Portföy / Tanıtım",
     description:
-      "Kişisel markanızı veya işletmenizi güven veren modern bir web sitesiyle öne çıkarın.",
+      "Kişisel markanızı veya işletmenizi güven veren modern bir web sitesiyle öne çıkarın. Portföyünüzü, hizmetlerinizi ve hikâyenizi ziyaretçilere net ve etkileyici bir vitrinde sunun.",
+    introP2:
+      "Girişim, Profesyonel ve Premium paketleri farklı ölçeklerdeki tanıtım projelerine uyum sağlar. Kapsamı ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "10-14",
@@ -170,7 +172,9 @@ export const webPackagesTr = {
   corporate: {
     title: "Kurumsal",
     description:
-      "Kurumsal kimliğinizi yansıtan, güven oluşturan ve müşteri kazandırmaya odaklı web sitesi.",
+      "Kurumsal kimliğinizi yansıtan, güven oluşturan ve müşteri kazandırmaya odaklı web sitesi. Hizmetlerinizi, ekibinizi ve iletişim kanallarınızı profesyonel bir yapıda ziyaretçilerinize sunun.",
+    introP2:
+      "Girişim, Profesyonel ve Premium paketleri kurumsal web projelerinin farklı ölçeklerine uyum sağlar. Premium seviyede sayfa sınırı olmadan büyüyebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
@@ -286,7 +290,9 @@ export const webPackagesTr = {
   ecommerce: {
     title: "E-Ticaret",
     description:
-      "Online satışa hızlı başlamanız için güvenli ödeme altyapısına sahip modern e-ticaret çözümü.",
+      "Online satışa hızlı başlamanız için güvenli ödeme altyapısına sahip modern e-ticaret çözümü. Ürünlerinizi, siparişlerinizi ve müşteri deneyiminizi tek panelden yönetebileceğiniz ölçeklenebilir bir mağaza kurun.",
+    introP2:
+      "Girişim, Profesyonel ve Premium paketleri farklı ürün katalogları ve sipariş hacimlerine göre şekillenir. Premium'da ürün ve kategori sınırı olmadan ölçeklenebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "21-30",

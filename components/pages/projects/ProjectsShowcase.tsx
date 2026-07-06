@@ -4,8 +4,17 @@ import {
   projectCoverGradients,
   projectImageUrls,
 } from "@/components/sections/projects/project-detail-config";
-import { projectItems } from "@/components/sections/projects/project-items";
+import {
+  projectItems,
+  type ProjectSlug,
+} from "@/components/sections/projects/project-items";
 import { ProjectShowcaseCard } from "./ProjectShowcaseCard";
+
+const featuredProjectSlugs = new Set<ProjectSlug>([
+  "iqfinansai",
+  "yazici-ticaret",
+  "fablessi",
+]);
 
 interface ProjectsShowcaseProps {
   className?: string;
@@ -14,8 +23,6 @@ interface ProjectsShowcaseProps {
 export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
   const tPage = await getTranslations("projectsPage");
   const tHome = await getTranslations("home");
-
-  const [featured, ...rest] = projectItems;
 
   return (
     <section
@@ -44,33 +51,21 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
           </p>
         </header>
 
-        <div className="mt-14 space-y-6">
-          <ProjectShowcaseCard
-            index={1}
-            href={featured.href}
-            title={tHome(featured.titleKey)}
-            description={tHome(featured.descKey)}
-            icon={featured.icon}
-            imageUrl={projectImageUrls[featured.slug]}
-            coverGradient={projectCoverGradients[featured.slug]}
-            featuredLabel={tPage("featuredLabel")}
-            featured
-          />
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {rest.map((project, i) => (
-              <ProjectShowcaseCard
-                key={project.slug}
-                index={i + 2}
-                href={project.href}
-                title={tHome(project.titleKey)}
-                description={tHome(project.descKey)}
-                icon={project.icon}
-                imageUrl={projectImageUrls[project.slug]}
-                coverGradient={projectCoverGradients[project.slug]}
-              />
-            ))}
-          </div>
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {projectItems.map((project, i) => (
+            <ProjectShowcaseCard
+              key={project.slug}
+              index={i + 1}
+              href={project.href}
+              title={tHome(project.titleKey)}
+              description={tHome(project.descKey)}
+              icon={project.icon}
+              imageUrl={projectImageUrls[project.slug]}
+              coverGradient={projectCoverGradients[project.slug]}
+              featuredLabel={tPage("featuredLabel")}
+              showFeaturedBadge={featuredProjectSlugs.has(project.slug)}
+            />
+          ))}
         </div>
       </SiteContainer>
     </section>

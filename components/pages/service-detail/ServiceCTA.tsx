@@ -7,7 +7,6 @@ interface ServiceCTAProps {
   title: string;
   subtitle: string;
   buttonLabel: string;
-  note: string;
   className?: string;
 }
 
@@ -15,7 +14,6 @@ export function ServiceCTA({
   title,
   subtitle,
   buttonLabel,
-  note,
   className,
 }: ServiceCTAProps) {
   return (
@@ -28,13 +26,13 @@ export function ServiceCTA({
       />
 
       <SiteContainer className="relative">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-4xl text-center md:max-w-5xl lg:max-w-6xl">
           <h2 className="font-(family-name:--font-heading) text-3xl font-bold leading-[1.08] tracking-tight text-white md:text-4xl lg:text-5xl">
             {title}
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-white/55">{subtitle}</p>
 
-          <div className="mt-10 flex flex-col items-center gap-4">
+          <div className="mt-10 flex flex-col items-center">
             <Button
               size="lg"
               className="h-13 gap-2 rounded-full bg-brand-accent px-10 text-base font-semibold text-white hover:bg-brand-accent/85"
@@ -45,7 +43,6 @@ export function ServiceCTA({
                 {buttonLabel}
               </Link>
             </Button>
-            <span className="text-sm text-white/45">{note}</span>
           </div>
         </div>
       </SiteContainer>

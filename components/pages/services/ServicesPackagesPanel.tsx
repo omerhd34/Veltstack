@@ -10,7 +10,6 @@ import {
 import {
   collectAllTierGroupLabels,
   collectCommonFeatureGroupLabels,
-  compactAccordionQuery,
   getDefaultOpenGroups,
 } from "./package-accordion";
 import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
@@ -161,25 +160,13 @@ export function ServicesPackagesPanel({
   }, [activeTier, selectedPackage, useTierComparison, visiblePackages]);
 
   useLayoutEffect(() => {
-    const mediaQuery = window.matchMedia(compactAccordionQuery);
+    if (useTierComparison) {
+      const labels = collectAllTierGroupLabels(selectedPackage);
+      setOpenGroups(!labels.length ? new Set() : new Set([labels[0]]));
+      return;
+    }
 
-    const syncOpenGroups = () => {
-      if (useTierComparison) {
-        const labels = collectAllTierGroupLabels(selectedPackage);
-        setOpenGroups(
-          mediaQuery.matches || !labels.length ? new Set() : new Set(labels),
-        );
-        return;
-      }
-
-      setOpenGroups(
-        getDefaultOpenGroups(visiblePackages, activeTier, mediaQuery.matches),
-      );
-    };
-
-    syncOpenGroups();
-    mediaQuery.addEventListener("change", syncOpenGroups);
-    return () => mediaQuery.removeEventListener("change", syncOpenGroups);
+    setOpenGroups(getDefaultOpenGroups(visiblePackages, activeTier));
   }, [
     activeTier,
     activeCategory,
@@ -227,6 +214,13 @@ export function ServicesPackagesPanel({
 
   const showCategoryTabs = !lockedCategory;
   const showPackageTypeTabs = slugs.length > 1;
+  const displayIntro = showPackageTypeTabs
+    ? {
+        title: intro.title,
+        p1: selectedPackage.description,
+        p2: selectedPackage.introP2 ?? intro.p2,
+      }
+    : intro;
   const showUnifiedNav =
     (showCategoryTabs && showPackageTypeTabs) ||
     (!showCategoryTabs && showPackageTypeTabs);
@@ -293,25 +287,10 @@ export function ServicesPackagesPanel({
               : "mt-12 md:mt-14"
         }
         variant={lockedCategory ? "compact" : "full"}
-        title={intro.title}
-        p1={intro.p1}
-        p2={intro.p2}
+        title={displayIntro.title}
+        p1={displayIntro.p1}
+        p2={displayIntro.p2}
       />
-
-      {useTierComparison ? (
-        <div className="mx-auto mt-8 max-w-2xl text-center md:mt-10">
-          <h3 className="font-(family-name:--font-heading) text-xl font-bold tracking-tight text-brand-accent md:text-2xl">
-            {selectedPackage.title}
-          </h3>
-          <span
-            aria-hidden
-            className="mx-auto mt-3 block h-px w-10 bg-linear-to-r from-transparent via-brand-accent/40 to-transparent"
-          />
-          <p className="mt-4 text-sm leading-[1.8] text-muted-foreground md:text-base">
-            {selectedPackage.description}
-          </p>
-        </div>
-      ) : null}
 
       <div
         ref={gridRef}

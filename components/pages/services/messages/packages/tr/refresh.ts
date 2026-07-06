@@ -43,14 +43,170 @@ const seoMigrationProItems = [
   "Google Analytics 4 ve Dönüşüm Takibi",
 ] as const;
 
+const REFRESH_GROUP_ANALYSIS = "Analiz & Planlama";
+const REFRESH_GROUP_DESIGN = "Tasarım & Yenileme";
+const REFRESH_GROUP_SEO = "SEO & Geçiş Koruması";
+const REFRESH_GROUP_DELIVERY = "Teslim & Destek";
+
+// ---------------------------------------------------------------------------
+// Portföy / Tanıtım
+// ---------------------------------------------------------------------------
+
+const portfolioAnalysisTemel = [
+  "Mevcut sitenin performans, SEO ve içerik durumu analizi",
+  "İçerik envanteri ve migrasyon planı",
+  "URL yapısı ve 301 yönlendirme stratejisi",
+] as const;
+
+const portfolioDesignTemel = [
+  ...commonRedesignItems,
+  "Mevcut içeriklerin güvenli aktarımı",
+  "Görsel sıkıştırma ve önbellek optimizasyonu",
+] as const;
+
+const portfolioDesignStandart = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Marka kimliğine uygun arayüz yenileme",
+  "Kapsamlı UX ve performans denetimi",
+  "Core Web Vitals iyileştirmesi",
+] as const;
+
+const portfolioDesignPro = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Next.js Tabanlı Modern Altyapıya Geçiş",
+  "Özel Tasarım ve Animasyonlar",
+  "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
+] as const;
+
+const portfolioSeoTemel = ["301 yönlendirme kurulumu"] as const;
+
+const portfolioSeoProExtras = [
+  "Dinamik İçerik Yönetim Paneli",
+  "En Fazla 5 Dil Desteği",
+] as const;
+
+const portfolioDeliveryProExtras = [
+  "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
+] as const;
+
+// ---------------------------------------------------------------------------
+// Kurumsal
+// ---------------------------------------------------------------------------
+
+const corporateAnalysisTemel = [
+  "Mevcut sitenin teknik, SEO ve güvenlik denetimi",
+  "İçerik ve sayfa yapısı analizi",
+  "Geçiş takvimi ve risk planı",
+] as const;
+
+const corporateDesignTemel = [
+  ...commonRedesignItems,
+  "Kurumsal kimliğe uygun arayüz yenileme",
+  "İçerik migrasyonu",
+  "Temel performans ve güvenlik güncellemesi",
+] as const;
+
+const corporateDesignStandart = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Bilgi mimarisi yeniden yapılandırma",
+  "Premium UI bileşenleri",
+  "Erişilebilirlik (WCAG) iyileştirmeleri",
+  "Mobil navigasyon ve içerik deneyimi optimizasyonu",
+] as const;
+
+const corporateDesignPro = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
+  "Gelişmiş CMS ve İçerik Yönetimi",
+  "En Fazla 5 Dil Desteği ve Çoklu Departman Yapısı",
+  "API ve Üçüncü Taraf Entegrasyonları",
+] as const;
+
+const corporateSeoStandart = [
+  "Modern framework geçişi",
+  ...seoMigrationStandartItems,
+  "Form ve entegrasyon güncellemesi",
+] as const;
+
+const corporateSeoPro = [
+  "Kapsamlı güvenlik denetimi ve iyileştirme",
+  "CDN ve önbellek optimizasyonu",
+  "KVKK Uyumlu Çerez Bildirimi",
+  "Yedekleme ve geri yükleme planı",
+] as const;
+
+const corporateDeliveryProExtras = ["Ekip Eğitimi ve Dokümantasyon"] as const;
+
+// ---------------------------------------------------------------------------
+// E-Ticaret
+// ---------------------------------------------------------------------------
+
+const ecommerceAnalysisTemel = [
+  "Mevcut mağazanın performans ve dönüşüm analizi",
+  "Ürün ve kategori migrasyon planı",
+  "Ödeme, sipariş ve kargo akışı denetimi",
+] as const;
+
+const ecommerceDesignTemel = [
+  ...commonRedesignItems,
+  "Modern e-ticaret arayüzü",
+  "Ürün ve kategori aktarımı",
+  "Temel ödeme entegrasyonu güncellemesi",
+  "Mobil alışveriş deneyimi iyileştirmesi",
+] as const;
+
+const ecommerceDesignStandart = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Gelişmiş ürün filtreleme ve arama",
+  "Sepet ve ödeme akışı optimizasyonu",
+  "Stok ve varyasyon yönetimi güncellemesi",
+  "Kargo entegrasyonu ve teslimat seçenekleri güncellemesi",
+] as const;
+
+const ecommerceDesignPro = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Ölçeklenebilir Modern Altyapıya Geçiş",
+  "En Fazla 5 Dil ve Çoklu Para Birimi Desteği",
+  "Gelişmiş Kampanya ve Promosyon Modülü",
+  "ERP, Muhasebe ve Fatura Entegrasyon Hazırlığı",
+] as const;
+
+const ecommerceSeoStandart = [
+  "Ürün URL ve meta koruma planı",
+  "Product, Offer ve Breadcrumb Schema Yapılandırması",
+  "Google Analytics 4 ve dönüşüm takibi yeniden kurulumu",
+  "Terk Edilen Sepet Altyapısı",
+] as const;
+
+const ecommerceSeoPro = [
+  "Yüksek trafik ve kampanya dönemi optimizasyonu",
+  "PCI-DSS Uyumlu Sanal POS Entegrasyon Altyapısı",
+  "Gelişmiş güvenlik ve fraud koruması",
+  "Anlık stok senkronizasyonu",
+] as const;
+
+const ecommerceDeliveryTemel = [
+  "Canlıya Alma ve Test Siparişi Doğrulaması",
+  "15 Gün Teknik Destek",
+] as const;
+
+const ecommerceDeliveryProExtras = [
+  "Mağaza Yönetimi Eğitimi ve Dokümantasyon",
+] as const;
+
 export const refreshPackagesTr = {
-  // =========================================================================
-  // PORTFÖY / TANITIM SİTESİ YENİLEME
-  // =========================================================================
   portfolio: {
     title: "Portföy / Tanıtım",
     description:
       "Mevcut tanıtım sitenizi modern tasarım, hızlı altyapı ve SEO korumasıyla yenileyin; içeriklerinizi kaybetmeden güçlü bir dijital vitrin oluşturun.",
+    introP2:
+      "Girişim, Profesyonel ve Premium seviyeleriyle tanıtım sitenizin yenileme kapsamını netleştiririz. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
     tiers: {
       temel: {
         deliveryDays: "7-14",
@@ -58,24 +214,19 @@ export const refreshPackagesTr = {
         scope: "1-8",
         featureGroups: [
           {
-            label: "Analiz & Planlama",
-            items: [
-              "Mevcut sitenin performans, SEO ve içerik durumu analizi",
-              "İçerik envanteri ve migrasyon planı",
-              "URL yapısı ve 301 yönlendirme stratejisi",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [...portfolioAnalysisTemel],
           },
           {
-            label: "Yenileme & Migrasyon",
-            items: [
-              ...commonRedesignItems,
-              "Mevcut içeriklerin güvenli aktarımı",
-              "Görsel sıkıştırma ve önbellek optimizasyonu",
-              "301 yönlendirme kurulumu",
-            ],
+            label: REFRESH_GROUP_DESIGN,
+            items: [...portfolioDesignTemel],
           },
           {
-            label: "Teslim & Destek",
+            label: REFRESH_GROUP_SEO,
+            items: [...portfolioSeoTemel],
+          },
+          {
+            label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryTemel],
           },
         ],
@@ -86,21 +237,19 @@ export const refreshPackagesTr = {
         scope: "1-15",
         featureGroups: [
           {
-            label: "Tasarım & UX",
-            items: [
-              ...commonRedesignItems,
-              ...standartDesignExtras,
-              "Marka kimliğine uygun arayüz yenileme",
-              "Kapsamlı UX ve performans denetimi",
-              "Core Web Vitals iyileştirmesi",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [],
           },
           {
-            label: "SEO & Geçiş Koruması",
+            label: REFRESH_GROUP_DESIGN,
+            items: [...portfolioDesignStandart],
+          },
+          {
+            label: REFRESH_GROUP_SEO,
             items: [...seoMigrationStandartItems],
           },
           {
-            label: "Teslim & Destek",
+            label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryStandart],
           },
         ],
@@ -111,42 +260,32 @@ export const refreshPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Kapsamlı Yenileme",
-            items: [
-              ...commonRedesignItems,
-              ...standartDesignExtras,
-              "Next.js Tabanlı Modern Altyapıya Geçiş",
-              "Özel Tasarım ve Animasyonlar",
-              "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [],
           },
           {
-            label: "SEO & İçerik Yönetimi",
-            items: [
-              ...seoMigrationProItems,
-              "Dinamik İçerik Yönetim Paneli",
-              "En Fazla 5 Dil Desteği",
-            ],
+            label: REFRESH_GROUP_DESIGN,
+            items: [...portfolioDesignPro],
           },
           {
-            label: "Teslim & Destek",
-            items: [
-              ...commonDeliveryPro,
-              "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
-            ],
+            label: REFRESH_GROUP_SEO,
+            items: [...seoMigrationProItems, ...portfolioSeoProExtras],
+          },
+          {
+            label: REFRESH_GROUP_DELIVERY,
+            items: [...commonDeliveryPro, ...portfolioDeliveryProExtras],
           },
         ],
       },
     },
   },
 
-  // =========================================================================
-  // KURUMSAL SİTE YENİLEME
-  // =========================================================================
   corporate: {
     title: "Kurumsal",
     description:
       "Kurumsal web sitenizi güncel tasarım, güvenli altyapı ve planlı geçişle yenileyin; marka güveninizi ve organik görünürlüğünüzü koruyun.",
+    introP2:
+      "Girişim, Profesyonel ve Premium seviyeleriyle kurumsal sitenizin yenileme kapsamını netleştiririz. Mevcut içerik ve entegrasyonlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
     tiers: {
       temel: {
         deliveryDays: "10-18",
@@ -154,24 +293,19 @@ export const refreshPackagesTr = {
         scope: "1-15",
         featureGroups: [
           {
-            label: "Analiz & Planlama",
-            items: [
-              "Mevcut sitenin teknik, SEO ve güvenlik denetimi",
-              "İçerik ve sayfa yapısı analizi",
-              "Geçiş takvimi ve risk planı",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [...corporateAnalysisTemel],
           },
           {
-            label: "Yenileme & Geçiş",
-            items: [
-              ...commonRedesignItems,
-              "Kurumsal kimliğe uygun arayüz yenileme",
-              "İçerik migrasyonu",
-              "Temel performans ve güvenlik güncellemesi",
-            ],
+            label: REFRESH_GROUP_DESIGN,
+            items: [...corporateDesignTemel],
           },
           {
-            label: "Teslim & Destek",
+            label: REFRESH_GROUP_SEO,
+            items: [],
+          },
+          {
+            label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryTemel],
           },
         ],
@@ -182,26 +316,19 @@ export const refreshPackagesTr = {
         scope: "1-30",
         featureGroups: [
           {
-            label: "Tasarım & UX",
-            items: [
-              ...commonRedesignItems,
-              ...standartDesignExtras,
-              "Bilgi mimarisi yeniden yapılandırma",
-              "Premium UI bileşenleri",
-              "Erişilebilirlik (WCAG) iyileştirmeleri",
-              "Mobil navigasyon ve içerik deneyimi optimizasyonu",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [],
           },
           {
-            label: "Altyapı & SEO",
-            items: [
-              "Modern framework geçişi",
-              ...seoMigrationStandartItems,
-              "Form ve entegrasyon güncellemesi",
-            ],
+            label: REFRESH_GROUP_DESIGN,
+            items: [...corporateDesignStandart],
           },
           {
-            label: "Teslim & Destek",
+            label: REFRESH_GROUP_SEO,
+            items: [...corporateSeoStandart],
+          },
+          {
+            label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryStandart],
           },
         ],
@@ -212,41 +339,32 @@ export const refreshPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Kurumsal Altyapı Yenileme",
-            items: [
-              ...commonRedesignItems,
-              ...standartDesignExtras,
-              "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
-              "Gelişmiş CMS ve İçerik Yönetimi",
-              "En Fazla 5 Dil Desteği ve Çoklu Departman Yapısı",
-              "API ve Üçüncü Taraf Entegrasyonları",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [],
           },
           {
-            label: "Güvenlik & Performans",
-            items: [
-              "Kapsamlı güvenlik denetimi ve iyileştirme",
-              "CDN ve önbellek optimizasyonu",
-              "KVKK Uyumlu Çerez Bildirimi",
-              "Yedekleme ve geri yükleme planı",
-            ],
+            label: REFRESH_GROUP_DESIGN,
+            items: [...corporateDesignPro],
           },
           {
-            label: "Teslim & Destek",
-            items: [...commonDeliveryPro, "Ekip Eğitimi ve Dokümantasyon"],
+            label: REFRESH_GROUP_SEO,
+            items: [...corporateSeoPro],
+          },
+          {
+            label: REFRESH_GROUP_DELIVERY,
+            items: [...commonDeliveryPro, ...corporateDeliveryProExtras],
           },
         ],
       },
     },
   },
 
-  // =========================================================================
-  // E-TİCARET SİTESİ YENİLEME
-  // =========================================================================
   ecommerce: {
     title: "E-Ticaret",
     description:
       "E-ticaret sitenizi modern altyapı, akıcı ödeme deneyimi ve SEO korumasıyla yenileyin; ürün verilerinizi ve sıralamanızı riske atmadan dönüşüm odaklı bir mağazaya geçin.",
+    introP2:
+      "Girişim, Profesyonel ve Premium seviyeleriyle e-ticaret mağazanızın yenileme kapsamını netleştiririz. Ürün verilerinizi ve organik görünürlüğünüzü koruyarak dönüşüm odaklı bir mağazaya geçiyoruz.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
@@ -254,29 +372,20 @@ export const refreshPackagesTr = {
         scope: "1-20",
         featureGroups: [
           {
-            label: "Analiz & Planlama",
-            items: [
-              "Mevcut mağazanın performans ve dönüşüm analizi",
-              "Ürün ve kategori migrasyon planı",
-              "Ödeme, sipariş ve kargo akışı denetimi",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [...ecommerceAnalysisTemel],
           },
           {
-            label: "Yenileme & Geçiş",
-            items: [
-              ...commonRedesignItems,
-              "Modern e-ticaret arayüzü",
-              "Ürün ve kategori aktarımı",
-              "Temel ödeme entegrasyonu güncellemesi",
-              "Mobil alışveriş deneyimi iyileştirmesi",
-            ],
+            label: REFRESH_GROUP_DESIGN,
+            items: [...ecommerceDesignTemel],
           },
           {
-            label: "Teslim & Destek",
-            items: [
-              "Canlıya Alma ve Test Siparişi Doğrulaması",
-              ...commonDeliveryTemel.slice(1),
-            ],
+            label: REFRESH_GROUP_SEO,
+            items: [],
+          },
+          {
+            label: REFRESH_GROUP_DELIVERY,
+            items: [...ecommerceDeliveryTemel],
           },
         ],
       },
@@ -286,27 +395,19 @@ export const refreshPackagesTr = {
         scope: "1-40",
         featureGroups: [
           {
-            label: "Mağaza Yenileme",
-            items: [
-              ...commonRedesignItems,
-              ...standartDesignExtras,
-              "Gelişmiş ürün filtreleme ve arama",
-              "Sepet ve ödeme akışı optimizasyonu",
-              "Stok ve varyasyon yönetimi güncellemesi",
-              "Kargo entegrasyonu ve teslimat seçenekleri güncellemesi",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [],
           },
           {
-            label: "SEO & Pazarlama",
-            items: [
-              "Ürün URL ve meta koruma planı",
-              "Product, Offer ve Breadcrumb Schema Yapılandırması",
-              "Google Analytics 4 ve dönüşüm takibi yeniden kurulumu",
-              "Terk Edilen Sepet Altyapısı",
-            ],
+            label: REFRESH_GROUP_DESIGN,
+            items: [...ecommerceDesignStandart],
           },
           {
-            label: "Teslim & Destek",
+            label: REFRESH_GROUP_SEO,
+            items: [...ecommerceSeoStandart],
+          },
+          {
+            label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryStandart],
           },
         ],
@@ -317,31 +418,20 @@ export const refreshPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Kurumsal Mağaza Altyapısı",
-            items: [
-              ...commonRedesignItems,
-              ...standartDesignExtras,
-              "Ölçeklenebilir Modern Altyapıya Geçiş",
-              "En Fazla 5 Dil ve Çoklu Para Birimi Desteği",
-              "Gelişmiş Kampanya ve Promosyon Modülü",
-              "ERP, Muhasebe ve Fatura Entegrasyon Hazırlığı",
-            ],
+            label: REFRESH_GROUP_ANALYSIS,
+            items: [],
           },
           {
-            label: "Performans & Güvenlik",
-            items: [
-              "Yüksek trafik ve kampanya dönemi optimizasyonu",
-              "PCI-DSS Uyumlu Sanal POS Entegrasyon Altyapısı",
-              "Gelişmiş güvenlik ve fraud koruması",
-              "Anlık stok senkronizasyonu",
-            ],
+            label: REFRESH_GROUP_DESIGN,
+            items: [...ecommerceDesignPro],
           },
           {
-            label: "Teslim & Destek",
-            items: [
-              ...commonDeliveryPro,
-              "Mağaza Yönetimi Eğitimi ve Dokümantasyon",
-            ],
+            label: REFRESH_GROUP_SEO,
+            items: [...ecommerceSeoPro],
+          },
+          {
+            label: REFRESH_GROUP_DELIVERY,
+            items: [...commonDeliveryPro, ...ecommerceDeliveryProExtras],
           },
         ],
       },

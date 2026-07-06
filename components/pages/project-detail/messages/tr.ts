@@ -16,9 +16,8 @@ export const projectDetailsTr = {
     "Bu projede kullandığım ve benzer ihtiyaçlara yönelik hizmet alanları.",
   ctaTitle: "Benzer bir proje mi planlıyorsunuz?",
   ctaSubtitle:
-    "Finans, e-ticaret veya kurumsal platform ihtiyaçlarınızı birlikte değerlendirelim.",
+    "Finans, e-ticaret veya kurumsal platform ihtiyaçlarınızı ücretsiz ön görüşmede birlikte değerlendirelim ve 24 saat içinde size dönüş yapalım.",
   ctaButton: "Teklif Al",
-  ctaNote: "24 saat içinde yanıt / Ücretsiz ön görüşme",
   breadcrumbHome: "Ana Sayfa",
   breadcrumbProjects: "Projeler",
   iqfinansai: {

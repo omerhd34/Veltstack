@@ -1,4 +1,4 @@
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { toLatinUppercase } from "@/lib/utils";
@@ -16,6 +16,7 @@ export async function ServicesPackagesSection({
   lockedCategory,
 }: ServicesPackagesSectionProps) {
   const t = await getTranslations("servicesPage");
+  const locale = (await getLocale()) as "tr" | "en";
 
   const packages = {
     web: t.raw("webPackages") as Record<string, PackageCardData>,
@@ -97,7 +98,7 @@ export async function ServicesPackagesSection({
         <div className="mx-auto max-w-3xl text-center">
           {!lockedCategory ? (
             <SectionBadge variant="accent-glass">
-              {toLatinUppercase(t("packagesBadge"))}
+              {toLatinUppercase(t("packagesBadge"), locale)}
             </SectionBadge>
           ) : null}
           <h2

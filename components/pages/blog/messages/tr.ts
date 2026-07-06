@@ -25,7 +25,6 @@ export const blogPageTr = {
   ],
   ctaTitle: "Projenizi birlikte hayata geçirelim",
   ctaSubtitle:
-    "Ücretsiz ön görüşmede ihtiyaçlarınızı dinleyip kapsam, süre ve teknoloji yığınını birlikte belirleyelim.",
+    "Ücretsiz ön görüşmede ihtiyaçlarınızı dinleyip kapsam, süre ve teknoloji yığınını birlikte belirleyelim ve 24 saat içinde size dönüş yaparız.",
   ctaButton: "İletişime Geç",
-  ctaNote: "24 saat içinde dönüş",
 } as const;

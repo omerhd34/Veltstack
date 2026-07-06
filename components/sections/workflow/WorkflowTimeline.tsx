@@ -1,40 +1,54 @@
+import type { IconType } from "react-icons";
+import { LuClock } from "react-icons/lu";
 import { BorderTrace } from "@/components/ui/BorderTrace";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { cn } from "@/lib/utils";
-import { ContactSectionBadge } from "./ContactInfo";
 
-interface WorkflowStep {
+export interface WorkflowStep {
   step: string;
   title: string;
   desc: string;
   timing: string;
 }
 
-interface ContactWorkflowSectionProps {
+interface WorkflowTimelineProps {
   badge: string;
   titleLead: string;
   titleAccent: string;
   subtitle: string;
   steps: WorkflowStep[];
   className?: string;
+  sectionId?: string;
+  badgeIcon?: IconType;
 }
 
 const slowTransition =
   "transition-all duration-1000 ease-out motion-reduce:transition-none";
 
-export function ContactWorkflowSection({
+export function WorkflowTimeline({
   badge,
   titleLead,
   titleAccent,
   subtitle,
   steps,
   className,
-}: ContactWorkflowSectionProps) {
+  sectionId = "workflow-section-title",
+  badgeIcon: BadgeIcon = LuClock,
+}: WorkflowTimelineProps) {
+  const showConnector = steps.length <= 4;
+
   return (
     <div className={className}>
       <div className="mx-auto max-w-3xl text-center">
-        <ContactSectionBadge badge={badge} />
+        <SectionBadge variant="accent" className="justify-self-center">
+          <BadgeIcon className="size-3.5 shrink-0" aria-hidden />
+          {badge}
+        </SectionBadge>
 
-        <h2 className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+        <h2
+          id={sectionId}
+          className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-foreground md:text-4xl"
+        >
           {titleLead}
           <br />
           <span className="font-serif font-normal italic text-foreground/85">
@@ -42,16 +56,18 @@ export function ContactWorkflowSection({
           </span>
         </h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+        <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
           {subtitle}
         </p>
       </div>
 
       <ol className="relative mt-14 grid gap-10 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-6">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute top-5 right-[calc(25%-16rem)] left-5 hidden h-px bg-border lg:block"
-        />
+        {showConnector ? (
+          <div
+            aria-hidden
+            className="pointer-events-none absolute top-5 right-[calc(25%-16rem)] left-5 hidden h-px bg-border lg:block"
+          />
+        ) : null}
 
         {steps.map((item) => (
           <li

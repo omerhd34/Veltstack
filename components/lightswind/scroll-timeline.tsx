@@ -220,7 +220,7 @@ function TimelineEventRow({
           onClick={() => onMarkerClick(index)}
           aria-label={event.title}
           className={cn(
-            "group relative w-full overflow-hidden rounded-2xl bg-white p-6 text-left",
+            "group relative flex w-full flex-col overflow-hidden rounded-2xl bg-white p-6 text-left",
             "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99]",
             "shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)]",
             "cursor-pointer transition-all duration-500 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
@@ -256,14 +256,14 @@ function TimelineEventRow({
               {event.title}
             </h3>
           </div>
-          {event.subtitle && (
-            <p className="mt-1 pr-4 font-medium text-foreground/60">
-              {event.subtitle}
-            </p>
-          )}
-          <p className="mt-3 text-[0.9375rem] leading-[1.75] text-foreground/60">
+          <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.75] text-foreground/60">
             {event.description}
           </p>
+          {event.subtitle && (
+            <span className="mt-4 inline-flex self-end rounded-full border border-brand-accent/15 bg-brand-accent/6 px-3 py-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-brand-accent/80">
+              {event.subtitle}
+            </span>
+          )}
         </button>
       </motion.div>
     </div>

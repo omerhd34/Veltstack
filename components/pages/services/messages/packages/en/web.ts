@@ -54,6 +54,8 @@ export const webPackagesEn = {
     title: "Portfolio / Promotional Website",
     description:
       "Fast, modern promotional site that highlights your personal brand or business.",
+    introP2:
+      "Startup, Professional and Premium tiers adapt to promotional projects of different scales. I define scope around your needs and build a structure that can grow with you. If you are unsure which package to choose, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
@@ -160,6 +162,8 @@ export const webPackagesEn = {
     title: "Corporate Website",
     description:
       "Trustworthy, high-performance web solution aligned with your brand identity.",
+    introP2:
+      "Startup, Professional and Premium tiers adapt to corporate web projects of different scales. On Premium, you can grow without page limits. If you are unsure which package to choose, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "21-28",
@@ -272,6 +276,8 @@ export const webPackagesEn = {
     title: "Ecommerce Website",
     description:
       "Scalable infrastructure with secure payments, product management and order tracking.",
+    introP2:
+      "Startup, Professional and Premium tiers scale with different product catalogs and order volumes. On Premium, you can scale without product or category limits. If you are unsure which package to choose, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "28-42",

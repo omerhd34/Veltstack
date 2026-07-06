@@ -1,3 +1,58 @@
+// ---------------------------------------------------------------------------
+// SEO Services — tier-based features
+// ---------------------------------------------------------------------------
+
+const seoOptimizationTemelAudit = [
+  "Site speed, Core Web Vitals and performance analysis",
+  "Title, meta description and heading tag audit",
+  "Mobile compatibility and usability check",
+  "Crawl errors and indexability report",
+] as const;
+
+const seoOptimizationTemelSetup = [
+  "On-page SEO optimization for included pages",
+  "Google Search Console and Google Analytics 4 setup",
+  "Google Business Profile and local search visibility",
+  "Keyword position tracking",
+  "Monthly performance and visibility summary",
+] as const;
+
+const seoOptimizationStandart = [
+  "Technical SEO, site architecture and indexing audit",
+  "Schema and structured data implementation",
+  "Competitor visibility and content gap analysis",
+  "Backlink opportunity and authority assessment",
+  "Monthly content calendar and on-page optimization",
+] as const;
+
+const seoOptimizationPro = [
+  "Unlimited page SEO scope",
+  "Multilingual (hreflang) and multi-domain SEO management",
+  "Log analysis and crawl budget optimization",
+  "Ecommerce product, category and filter page SEO",
+  "Advanced schema and rich result optimization",
+] as const;
+
+const seoAdsStandart = [
+  "Google Ads (Search Network) campaign setup and configuration",
+  "Meta Pixel and basic conversion tracking setup",
+  "Detailed monthly SEO and ad performance report",
+  "Prioritized improvement recommendations and action tracking",
+] as const;
+
+const seoAdsPro = [
+  "100+ keyword position and trend tracking",
+  "Google Ads and Meta Ads campaign management",
+  "Conversion API and advanced conversion tracking setup",
+  "Custom Looker Studio dashboard and reporting",
+  "Weekly performance report",
+  "Monthly strategy call",
+  "Priority technical support",
+] as const;
+
+const SEO_GROUP_OPTIMIZATION = "SEO & Optimization";
+const SEO_GROUP_ADS = "Ads & Reporting";
+
 export const seoPackagesEn = {
   seoServices: {
     title: "Digital Marketing & SEO",
@@ -10,23 +65,15 @@ export const seoPackagesEn = {
         scope: "10-25",
         featureGroups: [
           {
-            label: "Technical Audit & Analysis",
+            label: SEO_GROUP_OPTIMIZATION,
             items: [
-              "Site speed, Core Web Vitals and performance analysis",
-              "Title, meta description and heading tag audit",
-              "Mobile compatibility and usability check",
-              "Crawl errors and indexability report",
+              ...seoOptimizationTemelAudit,
+              ...seoOptimizationTemelSetup,
             ],
           },
           {
-            label: "Setup & Core Optimization",
-            items: [
-              "On-page SEO optimization for included pages",
-              "Google Search Console and Google Analytics 4 setup",
-              "Google Business Profile and local search visibility",
-              "Keyword position tracking",
-              "Monthly performance and visibility summary",
-            ],
+            label: SEO_GROUP_ADS,
+            items: [],
           },
         ],
       },
@@ -36,23 +83,12 @@ export const seoPackagesEn = {
         scope: "25-75",
         featureGroups: [
           {
-            label: "Comprehensive SEO & Content",
-            items: [
-              "Technical SEO, site architecture and indexing audit",
-              "Schema and structured data implementation",
-              "Competitor visibility and content gap analysis",
-              "Backlink opportunity and authority assessment",
-              "Monthly content calendar and on-page optimization",
-            ],
+            label: SEO_GROUP_OPTIMIZATION,
+            items: [...seoOptimizationStandart],
           },
           {
-            label: "Ad Infrastructure & Reporting",
-            items: [
-              "Google Ads (Search Network) campaign setup and configuration",
-              "Meta Pixel and basic conversion tracking setup",
-              "Detailed monthly SEO and ad performance report",
-              "Prioritized improvement recommendations and action tracking",
-            ],
+            label: SEO_GROUP_ADS,
+            items: [...seoAdsStandart],
           },
         ],
       },
@@ -62,26 +98,12 @@ export const seoPackagesEn = {
         scope: "100+",
         featureGroups: [
           {
-            label: "Enterprise SEO & Scale",
-            items: [
-              "Unlimited page SEO scope",
-              "Multilingual (hreflang) and multi-domain SEO management",
-              "Log analysis and crawl budget optimization",
-              "Ecommerce product, category and filter page SEO",
-              "Advanced schema and rich result optimization",
-            ],
+            label: SEO_GROUP_OPTIMIZATION,
+            items: [...seoOptimizationPro],
           },
           {
-            label: "Ad Management & Growth",
-            items: [
-              "100+ keyword position and trend tracking",
-              "Google Ads and Meta Ads campaign management",
-              "Conversion API and advanced conversion tracking setup",
-              "Custom Looker Studio dashboard and reporting",
-              "Weekly performance report",
-              "Monthly strategy call",
-              "Priority technical support",
-            ],
+            label: SEO_GROUP_ADS,
+            items: [...seoAdsPro],
           },
         ],
       },

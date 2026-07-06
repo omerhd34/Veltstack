@@ -103,7 +103,6 @@ export async function ProjectDetailView({
         title={t("ctaTitle")}
         subtitle={t("ctaSubtitle")}
         buttonLabel={t("ctaButton")}
-        note={t("ctaNote")}
       />
     </div>
   );

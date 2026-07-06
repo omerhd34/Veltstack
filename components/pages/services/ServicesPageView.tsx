@@ -3,6 +3,7 @@ import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { ServicesPageHero } from "./ServicesPageHero";
 import { ServicesPackagesSection } from "./ServicesPackagesSection";
 import { ServicesPageCTA } from "./ServicesPageCTA";
+import { ApproachSection } from "@/components/sections/approach";
 
 interface ServicesPageViewProps {
   className?: string;
@@ -24,6 +25,7 @@ export async function ServicesPageView({ className }: ServicesPageViewProps) {
         stats={stats}
       />
       <ServicesPackagesSection />
+      <ApproachSection />
       <ServicesPageCTA
         badge={t("ctaBadge")}
         tagline={t("ctaTagline")}
@@ -33,7 +35,6 @@ export async function ServicesPageView({ className }: ServicesPageViewProps) {
         subtitle={t("ctaSubtitle")}
         highlights={[t("ctaPoint1"), t("ctaPoint2"), t("ctaPoint3")]}
         buttonLabel={t("ctaButton")}
-        note={t("ctaNote")}
       />
     </div>
   );

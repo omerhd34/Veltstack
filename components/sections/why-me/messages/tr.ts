@@ -5,16 +5,16 @@ export const whyMeHomeTr = {
   whyMeSubtitle:
     "Her projede net iletişim, hızlı teslimat ve sürdürülebilir iş sonuçları için uçtan uca çalışıyoruz.",
   whyMeIntro:
-    "Kurumsal web sitesinden mobil uygulamaya, e-ticaret altyapısından SEO stratejisine kadar tüm dijital süreci tek muhatapla yönetiyoruz. Kapsamı baştan netleştiriyor, şeffaf planlama ile ilerliyor, sıkı teslim takvimlerine uyum sağlıyor ve yayın sonrası bakım ile teknik destek sunuyoruz. Böylece projenizin her aşamasında aynı ekip, aynı dil ve öngörülebilir bir iş akışıyla ilerlersiniz.",
+    "Web sitesinden mobil uygulamaya, e-ticaretten SEO'ya tüm dijital süreci tek muhatapla yönetiyoruz. Kapsamı baştan netleştirir, şeffaf ilerler ve yayın sonrası destek sunarız.",
   whyMeSingleTitle: "Tek Muhatap",
   whyMeSingleDesc:
-    "Keşiften yayına kadar tüm süreçte aynı muhatapla ilerlersiniz; böylece proje bağlamı kaybolmaz, kararlar daha hızlı alınır ve ekip içi iletişim her aşamada aynı netlikte devam eder.",
+    "Keşiften yayına kadar aynı muhatapla ilerlersiniz; proje bağlamı kaybolmaz, kararlar hızlı alınır.",
   whyMeFastTitle: "Hızlı Teslimat",
   whyMeFastDesc:
-    "Sıkı terminlere uygun odaklı bir geliştirme süreci yürütürüz; canlıya almayı planlanan takvime sadık tamamlar, yayın sonrası bakım ve büyüme adımlarını da lansman öncesinde birlikte netleştiririz.",
+    "Sıkı terminlere uygun odaklı geliştirme yürütürüz; canlıya alımı planlanan takvime sadık tamamlarız.",
   whyMeSupportTitle: "Teknik Destek",
   whyMeSupportDesc:
-    "Yayın sonrası bakım, performans iyileştirmesi ve teknik destek sunarız; acil sorunlarda hızlı müdahale eder, izleme ve iyileştirme ritmini kurarak canlıya alındıktan sonra da projenizin yanında kalırız.",
+    "Yayın sonrası bakım, performans iyileştirmesi ve teknik destek sunarız; acil sorunlarda hızlı müdahale ederiz.",
   whyMeTransparentTitle: "Şeffaflık",
   whyMeTransparentDesc:
     "Açık iletişim ve şeffaf fiyatlandırma ile ilerleriz; kapsam, takvim ve maliyetleri baştan netleştirir, sürecin her anında ne yaptığımızı paylaşır ve sürpriz ek maliyetlerle karşılaşmamanızı sağlarız.",

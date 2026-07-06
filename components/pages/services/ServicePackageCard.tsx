@@ -32,6 +32,7 @@ export interface PackageTierData {
 export interface PackageCardData {
   title: string;
   description: string;
+  introP2?: string;
   tiers: Record<PackageTier, PackageTierData>;
 }
 
@@ -284,10 +285,7 @@ export function ServicePackageCard({
       >
         {featureGroups.length ? (
           <div
-            className={cn(
-              "flex flex-col",
-              !isTierColumn && "min-h-0 flex-1",
-            )}
+            className={cn("flex flex-col", !isTierColumn && "min-h-0 flex-1")}
           >
             {featureGroups.map((group, groupIndex) =>
               renderFeatureGroup(group, groupIndex),

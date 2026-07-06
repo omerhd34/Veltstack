@@ -1,5 +1,5 @@
 import { LuEye, LuMessageCircle } from "react-icons/lu";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SiteContainer } from "@/components/layout/SiteContainer";
@@ -12,6 +12,7 @@ interface CTASectionProps {
 
 export async function CTASection({ className }: CTASectionProps) {
   const t = await getTranslations("home");
+  const locale = (await getLocale()) as "tr" | "en";
 
   return (
     <section
@@ -55,7 +56,7 @@ export async function CTASection({ className }: CTASectionProps) {
           />
 
           <div className="relative mx-auto max-w-3xl text-center">
-            <SectionBadge>{toLatinUppercase(t("ctaBadge"))}</SectionBadge>
+            <SectionBadge>{toLatinUppercase(t("ctaBadge"), locale)}</SectionBadge>
 
             <h2
               id="home-cta-title"

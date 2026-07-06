@@ -1,12 +1,3 @@
-@keyframes section-decor-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes marquee-scroll {
   0% {
     transform: translateX(0);

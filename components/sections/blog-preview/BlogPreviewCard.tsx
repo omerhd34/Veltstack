@@ -1,3 +1,4 @@
+import { useLocale } from "next-intl";
 import { LuArrowRight } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { BorderTrace } from "@/components/ui/BorderTrace";
@@ -22,6 +23,8 @@ export function BlogPreviewCard({
   image,
   readingTimeLabel,
 }: BlogPreviewCardProps) {
+  const locale = useLocale() as "tr" | "en";
+
   return (
     <Link
       href={href}
@@ -38,7 +41,7 @@ export function BlogPreviewCard({
       </div>
       <div className="flex min-h-0 flex-1 flex-col p-6">
         <span className="mb-3 block h-4 shrink-0 text-xs font-semibold leading-4 tracking-[0.15em] text-brand-accent">
-          {readingTimeLabel ? toLatinUppercase(readingTimeLabel) : "\u00A0"}
+          {readingTimeLabel ? toLatinUppercase(readingTimeLabel, locale) : "\u00A0"}
         </span>
         <h3 className="line-clamp-2 shrink-0 font-(family-name:--font-heading) text-lg font-bold leading-snug text-[#0A0A0F] transition-colors group-hover:text-brand-accent">
           {title}

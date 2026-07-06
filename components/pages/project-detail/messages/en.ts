@@ -16,9 +16,8 @@ export const projectDetailsEn = {
     "Service areas I applied on this project and for similar needs.",
   ctaTitle: "Planning a similar project?",
   ctaSubtitle:
-    "Let's evaluate your finance, e-commerce or corporate platform needs together.",
+    "Let's evaluate your finance, e-commerce or corporate platform needs in a free initial consultation and get back to you within 24 hours.",
   ctaButton: "Get a Quote",
-  ctaNote: "Response within 24 hours / Free initial consultation",
   breadcrumbHome: "Home",
   breadcrumbProjects: "Projects",
   iqfinansai: {

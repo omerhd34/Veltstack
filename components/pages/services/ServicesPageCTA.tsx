@@ -1,9 +1,8 @@
 import { LuMessageCircle } from "react-icons/lu";
-import { TbGitBranch, TbRocket, TbSparkles } from "react-icons/tb";
+import { getLocale } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SiteContainer } from "@/components/layout/SiteContainer";
-import { SectionDecorIcon } from "@/components/ui/SectionDecorIcon";
 import { CTAHighlights } from "@/components/sections/cta/CTAHighlights";
 import { toLatinUppercase } from "@/lib/utils";
 
@@ -11,7 +10,6 @@ interface ServicesPageCTAProps {
   title: string;
   subtitle: string;
   buttonLabel: string;
-  note: string;
   badge?: string;
   tagline?: string;
   titleLead?: string;
@@ -20,11 +18,10 @@ interface ServicesPageCTAProps {
   className?: string;
 }
 
-export function ServicesPageCTA({
+export async function ServicesPageCTA({
   title,
   subtitle,
   buttonLabel,
-  note,
   badge,
   tagline,
   titleLead,
@@ -32,6 +29,7 @@ export function ServicesPageCTA({
   highlights,
   className,
 }: ServicesPageCTAProps) {
+  const locale = (await getLocale()) as "tr" | "en";
   const hasSplitTitle = Boolean(titleLead && titleAccent);
 
   return (
@@ -60,24 +58,6 @@ export function ServicesPageCTA({
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/25 to-transparent"
       />
 
-      <SectionDecorIcon
-        icon={TbGitBranch}
-        tone="accent-muted"
-        className="left-6 top-[18%] -rotate-12 xl:left-14"
-      />
-      <SectionDecorIcon
-        icon={TbRocket}
-        tone="accent"
-        size="md"
-        className="right-8 top-[22%] rotate-6 xl:right-16"
-      />
-      <SectionDecorIcon
-        icon={TbSparkles}
-        tone="accent-muted"
-        size="sm"
-        className="bottom-[18%] left-4 rotate-12 xl:left-12"
-      />
-
       <SiteContainer className="relative">
         <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-[#0A0A0F] px-6 py-14 shadow-[0_24px_80px_rgb(58_107_82/0.12)] md:px-14 md:py-20">
           <div
@@ -93,9 +73,11 @@ export function ServicesPageCTA({
             className="pointer-events-none absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-emerald-400/30 to-transparent md:inset-x-12"
           />
 
-          <div className="relative mx-auto max-w-3xl text-center">
+          <div
+            className={`relative mx-auto text-center ${highlights ? "max-w-5xl" : "max-w-4xl"}`}
+          >
             {badge ? (
-              <SectionBadge>{toLatinUppercase(badge)}</SectionBadge>
+              <SectionBadge>{toLatinUppercase(badge, locale)}</SectionBadge>
             ) : null}
 
             {tagline ? (
@@ -122,15 +104,13 @@ export function ServicesPageCTA({
               )}
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-emerald-50/60 md:text-lg">
+            <p className="mx-auto mt-6 max-w-4xl text-base leading-relaxed text-emerald-50/60 md:max-w-5xl md:text-lg lg:max-w-6xl">
               {subtitle}
             </p>
 
             {highlights ? <CTAHighlights points={highlights} /> : null}
 
-            <div
-              className={`flex flex-col items-center gap-4 ${highlights ? "mt-10" : "mt-8"}`}
-            >
+            <div className={`flex flex-col items-center ${highlights ? "mt-10" : "mt-8"}`}>
               <PrimaryCtaLink
                 href="/iletisim"
                 variant="accent"
@@ -140,7 +120,6 @@ export function ServicesPageCTA({
               >
                 {buttonLabel}
               </PrimaryCtaLink>
-              <span className="text-sm text-white/40">{note}</span>
             </div>
           </div>
         </div>

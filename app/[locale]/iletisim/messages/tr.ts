@@ -112,45 +112,13 @@ export const contactTr = {
     },
     {
       label: "LinkedIn",
-      value: "ömer-halis-demir-7a9b79169/",
+      value: "omerhd1",
       href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
     },
     {
       label: "GitHub",
       value: "omerhd34",
       href: "https://github.com/omerhd34",
-    },
-  ],
-
-  workflowBadge: "Süreç",
-  workflowTitleLead: "Formdan projeye",
-  workflowTitleAccent: "şeffaf ve planlı bir süreç",
-  workflowSubtitle:
-    "Her adımı önceden planlıyor, süreci şeffaf şekilde yönetiyor ve sizi her aşamada bilgilendiriyoruz.",
-  workflowSteps: [
-    {
-      step: "1",
-      title: "Formu Gönderin",
-      desc: "Projeniz hakkında birkaç temel bilgi paylaşmanız yeterli; birkaç dakikada biter.",
-      timing: "1 dakika",
-    },
-    {
-      step: "2",
-      title: "İhtiyaçları Belirleyelim",
-      desc: "Hedeflerinizi analiz ediyor, kapsamı birlikte netleştiriyor ve en uygun çözümü belirliyoruz.",
-      timing: "24 saat",
-    },
-    {
-      step: "3",
-      title: "Teklifi Oluşturalım",
-      desc: "Kapsam, maliyet ve teslim planını içeren detaylı teklifinizi hazırlayıp size iletiyoruz.",
-      timing: "48 saat",
-    },
-    {
-      step: "4",
-      title: "Geliştirmeye Başlayalım",
-      desc: "Onayınızdan sonra geliştirmeye başlıyor ve süreci düzenli paylaşıyoruz.",
-      timing: "Başlangıç",
     },
   ],
 } as const;

@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
-import { ProcessSection } from "@/components/sections/process";
+import { WorkflowSection } from "@/components/sections/workflow";
 import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
 import { AboutContact } from "./AboutContact";
 import { AboutHero } from "./AboutHero";
@@ -48,7 +48,7 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
         subtitle={t("skillsSubtitle")}
         groups={skillGroups}
       />
-      <ProcessSection />
+      <WorkflowSection />
       <AboutContact
         badge={t("contactBadge")}
         title={t("contactTitle")}
@@ -59,7 +59,6 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
         title={t("ctaTitle")}
         subtitle={t("ctaSubtitle")}
         buttonLabel={t("ctaButton")}
-        note={t("ctaNote")}
       />
     </div>
   );

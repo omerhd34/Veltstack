@@ -124,7 +124,6 @@ export const aboutEn = {
   ],
   ctaTitle: "Let's talk about your project",
   ctaSubtitle:
-    "In a free call we'll discuss your needs and define scope, timeline and tech stack together.",
+    "In a free call we'll discuss your needs and define scope, timeline and tech stack together, and get back to you within 24 hours.",
   ctaButton: "Get in Touch",
-  ctaNote: "Response within 24h",
 } as const;

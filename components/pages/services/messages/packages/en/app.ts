@@ -153,6 +153,8 @@ export const appPackagesEn = {
     title: "Promotional / Portfolio App",
     description:
       "Trust-building iOS and Android app that puts your brand one tap away.",
+    introP2:
+      "Startup, Professional and Premium tiers adapt to promotional apps of different scales. We build for iOS and Android in a single project — from store launch to integrations.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
@@ -243,6 +245,8 @@ export const appPackagesEn = {
     title: "Corporate Mobile App",
     description:
       "Reliable corporate mobile experience for your employees or customers.",
+    introP2:
+      "Startup, Professional and Premium tiers adapt to corporate mobile projects of different scales. We build for iOS and Android in a single project.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
@@ -354,6 +358,8 @@ export const appPackagesEn = {
     title: "Ecommerce Mobile App",
     description:
       "Store-ready ecommerce app with payments, products and order management.",
+    introP2:
+      "Startup, Professional and Premium tiers scale with different catalogs and order volumes. If you are unsure which package to choose, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "42-56",

@@ -1,12 +1,25 @@
 import type { IconType } from "react-icons";
-import { LuClock, LuLayers, LuSparkles } from "react-icons/lu";
+import { LuClock, LuLayers, LuSparkles, LuTimer } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 
-const highlightIcons: IconType[] = [LuSparkles, LuClock, LuLayers];
+const highlightIcons: IconType[] = [LuSparkles, LuClock, LuLayers, LuTimer];
+
+type CTAHighlightPoints =
+  | readonly [string]
+  | readonly [string, string]
+  | readonly [string, string, string]
+  | readonly [string, string, string, string];
 
 interface CTAHighlightsProps {
-  points: readonly [string, string] | readonly [string, string, string];
+  points: CTAHighlightPoints;
   className?: string;
+}
+
+function getGridClass(count: number) {
+  if (count === 1) return "mx-auto max-w-xs";
+  if (count === 2) return "mx-auto max-w-xl sm:grid-cols-2";
+  if (count === 3) return "sm:grid-cols-3";
+  return "sm:grid-cols-2 lg:grid-cols-4";
 }
 
 export function CTAHighlights({ points, className }: CTAHighlightsProps) {
@@ -14,14 +27,12 @@ export function CTAHighlights({ points, className }: CTAHighlightsProps) {
     <ul
       className={cn(
         "mt-10 grid gap-3 sm:gap-4",
-        points.length === 2
-          ? "mx-auto max-w-xl sm:grid-cols-2"
-          : "sm:grid-cols-3",
+        getGridClass(points.length),
         className,
       )}
     >
       {points.map((label, index) => {
-        const Icon = highlightIcons[index];
+        const Icon = highlightIcons[index] ?? LuClock;
 
         return (
           <li

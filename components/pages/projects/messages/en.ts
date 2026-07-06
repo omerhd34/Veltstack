@@ -36,30 +36,8 @@ export const projectsPageEn = {
     "Design and development in one line, balanced with performance and measurable results.",
   viewLabel: "View details",
   featuredLabel: "Featured",
-  approachBadge: "Approach",
-  approachTitle: "The same discipline on every project",
-  approachSubtitle:
-    "An end-to-end development process centered on business goals.",
-  approachItems: [
-    {
-      title: "Discovery & Strategy",
-      description:
-        "We clarify business goals, user needs, and technical constraints upfront.",
-    },
-    {
-      title: "Design & Development",
-      description:
-        "UI/UX and code move in sync; performance and accessibility come first.",
-    },
-    {
-      title: "Delivery & Measurement",
-      description:
-        "Post-launch improvement through metrics, SEO, and user feedback.",
-    },
-  ],
   ctaTitle: "Is your project next?",
   ctaSubtitle:
-    "In a free consultation we'll discuss scope, timeline, and the right tech stack together.",
+    "In a free consultation we'll discuss scope, timeline, and the right tech stack together and get back to you within 24 hours.",
   ctaButton: "Schedule a Call",
-  ctaNote: "Response within 24 hours",
 } as const;

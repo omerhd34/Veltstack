@@ -1,3 +1,4 @@
+import { getLocale } from "next-intl/server";
 import Image from "next/image";
 import { LuArrowLeft, LuCalendar, LuClock, LuPenLine } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
@@ -23,7 +24,7 @@ interface BlogDetailHeroProps {
   className?: string;
 }
 
-export function BlogDetailHero({
+export async function BlogDetailHero({
   category,
   date,
   readingTime,
@@ -34,6 +35,8 @@ export function BlogDetailHero({
   writtenByLabel,
   className,
 }: BlogDetailHeroProps) {
+  const locale = (await getLocale()) as "tr" | "en";
+
   return (
     <section
       className={cn(
@@ -116,7 +119,7 @@ export function BlogDetailHero({
               <div className="min-w-0">
                 <p className="flex items-center gap-1.5 text-[0.625rem] font-semibold tracking-[0.14em] text-emerald-400/55">
                   <LuPenLine className="size-3" aria-hidden />
-                  {toLatinUppercase(writtenByLabel)}
+                  {toLatinUppercase(writtenByLabel, locale)}
                 </p>
                 <p className="mt-0.5 text-base font-semibold text-white">
                   {AUTHOR.name}

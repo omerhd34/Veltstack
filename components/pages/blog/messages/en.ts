@@ -25,7 +25,6 @@ export const blogPageEn = {
   ],
   ctaTitle: "Let's bring your project to life together",
   ctaSubtitle:
-    "In a free consultation we'll discuss your needs and define scope, timeline and tech stack together.",
+    "In a free consultation we'll discuss your needs and define scope, timeline and tech stack together, and get back to you within 24 hours.",
   ctaButton: "Get in Touch",
-  ctaNote: "Response within 24 hours",
 } as const;

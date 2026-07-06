@@ -1,4 +1,5 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { WorkflowSection } from "@/components/sections/workflow";
 import { ContactFormFields } from "./ContactFormFields";
 import {
   ContactInfo,
@@ -6,7 +7,6 @@ import {
   ContactSectionHeader,
   ContactSectionTitle,
 } from "./ContactInfo";
-import { ContactWorkflowSection } from "./ContactWorkflowSection";
 
 interface SelectOption {
   value: string;
@@ -17,13 +17,6 @@ interface ContactItem {
   label: string;
   value?: string;
   href?: string;
-}
-
-interface WorkflowStep {
-  step: string;
-  title: string;
-  desc: string;
-  timing: string;
 }
 
 interface ContactFormProps {
@@ -64,12 +57,6 @@ interface ContactFormProps {
   infoTitle: string;
   contactItems: ContactItem[];
 
-  workflowBadge: string;
-  workflowTitleLead: string;
-  workflowTitleAccent: string;
-  workflowSubtitle: string;
-  workflowSteps: WorkflowStep[];
-
   className?: string;
 }
 
@@ -79,11 +66,6 @@ export function ContactForm({
   infoBadge,
   infoTitle,
   contactItems,
-  workflowBadge,
-  workflowTitleLead,
-  workflowTitleAccent,
-  workflowSubtitle,
-  workflowSteps,
   className,
   ...fieldLabels
 }: ContactFormProps) {
@@ -151,13 +133,7 @@ export function ContactForm({
         </div>
 
         <div className="mt-16 rounded-3xl border border-border/60 bg-card p-8 shadow-[0_2px_16px_rgb(0_0_0/0.04)] md:mt-20 md:p-12">
-          <ContactWorkflowSection
-            badge={workflowBadge}
-            titleLead={workflowTitleLead}
-            titleAccent={workflowTitleAccent}
-            subtitle={workflowSubtitle}
-            steps={workflowSteps}
-          />
+          <WorkflowSection contentOnly />
         </div>
       </SiteContainer>
     </section>

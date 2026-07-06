@@ -153,13 +153,12 @@ export function sortFeatureGroupsForDisplay(
 export function getDefaultOpenGroups(
   packages: PackageCardData[],
   tier: PackageTier,
-  isCompact: boolean,
 ) {
   const labels = collectFeatureGroupLabels(packages, tier);
-  if (isCompact || !labels.length) {
+  if (!labels.length) {
     return new Set<string>();
   }
-  return new Set(labels);
+  return new Set([labels[0]]);
 }
 
 export function collectAllTierGroupLabels(pkg: PackageCardData): string[] {

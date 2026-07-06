@@ -52,7 +52,7 @@ export async function BlogPreviewSection({
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-3xl">
             <SectionBadge variant="emerald-label">
-              {toLatinUppercase("Blog")}
+              {toLatinUppercase("Blog", locale)}
             </SectionBadge>
             <h2
               id="blog-preview-section-title"

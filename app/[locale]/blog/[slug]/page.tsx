@@ -160,6 +160,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
               <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-brand-accent">
                 {toLatinUppercase(
                   loc === "tr" ? "İlgili Yazılar" : "Related Posts",
+                  loc,
                 )}
               </span>
               <div className="h-px flex-1 bg-border/60" />
@@ -186,7 +187,6 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         title={t("ctaTitle")}
         subtitle={t("ctaSubtitle")}
         buttonLabel={t("ctaButton")}
-        note={t("ctaNote")}
       />
     </>
   );

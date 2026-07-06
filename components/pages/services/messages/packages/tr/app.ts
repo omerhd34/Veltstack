@@ -152,7 +152,9 @@ export const appPackagesTr = {
   portfolio: {
     title: "Portföy / Tanıtım",
     description:
-      "Markanızı tek dokunuşla tanıtan, güven veren iOS ve Android uygulaması.",
+      "Markanızı tek dokunuşla tanıtan, güven veren iOS ve Android uygulaması. Portföyünüzü, hizmetlerinizi ve iletişim kanallarınızı kullanıcıların cebine taşıyın.",
+    introP2:
+      "Girişim, Profesyonel ve Premium paketleri farklı ölçeklerdeki tanıtım uygulamalarına uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz; mağaza yayınından entegrasyonlara kadar yanınızdayım.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
@@ -242,7 +244,9 @@ export const appPackagesTr = {
   corporate: {
     title: "Kurumsal",
     description:
-      "Çalışanlarınız veya müşterileriniz için güvenilir kurumsal mobil deneyim.",
+      "Çalışanlarınız veya müşterileriniz için güvenilir kurumsal mobil deneyim. İçerik, iletişim ve iş süreçlerinizi iOS ve Android'de tutarlı ve erişilebilir bir arayüzle sunun.",
+    introP2:
+      "Girişim, Profesyonel ve Premium paketleri kurumsal mobil projelerin farklı ölçeklerine uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
@@ -353,7 +357,9 @@ export const appPackagesTr = {
   ecommerce: {
     title: "E-Ticaret",
     description:
-      "Ödeme, ürün ve sipariş yönetimi sunan mağazaya hazır e-ticaret uygulaması.",
+      "Ödeme, ürün ve sipariş yönetimi sunan mağazaya hazır e-ticaret uygulaması. Katalogunuzu, sepet akışınızı ve müşteri yolculuğunu mobilde akıcı ve güven veren bir deneyimle hayata geçirin.",
+    introP2:
+      "Girişim, Profesyonel ve Premium seviyeleriyle farklı katalog ve sipariş hacimlerine göre şekillenen e-ticaret uygulamaları sunuyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "42-56",

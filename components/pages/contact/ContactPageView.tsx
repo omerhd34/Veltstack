@@ -34,13 +34,6 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
     href?: string;
   }[];
 
-  const workflowSteps = t.raw("workflowSteps") as {
-    step: string;
-    title: string;
-    desc: string;
-    timing: string;
-  }[];
-
   return (
     <div className={className}>
       <ContactForm
@@ -78,11 +71,6 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
         infoBadge={t("infoBadge")}
         infoTitle={t("infoTitle")}
         contactItems={contactItems}
-        workflowBadge={t("workflowBadge")}
-        workflowTitleLead={t("workflowTitleLead")}
-        workflowTitleAccent={t("workflowTitleAccent")}
-        workflowSubtitle={t("workflowSubtitle")}
-        workflowSteps={workflowSteps}
       />
     </div>
   );

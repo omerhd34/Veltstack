@@ -9,6 +9,7 @@ import { TechMarqueeSection } from "@/components/sections/tech-marquee"
 import { TestimonialsSection } from "@/components/sections/testimonials"
 import { BlogPreviewSection } from "@/components/sections/blog-preview"
 import { CTASection } from "@/components/sections/cta"
+import { ApproachSection } from "@/components/sections/approach"
 
 interface HomePageProps {
   params: Promise<{ locale: string }>
@@ -26,6 +27,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <ServicesMarqueeSection />
       <WhoWeAreSection />
       <ServicesSection />
+      <ApproachSection />
       <WhyMeSection />
       <ProjectsSection />
       <TechMarqueeSection />

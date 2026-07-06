@@ -5,16 +5,16 @@ export const whyMeHomeEn = {
   whyMeSubtitle:
     "We work end to end for clear communication, fast delivery and sustainable business outcomes on every project.",
   whyMeIntro:
-    "From corporate websites to mobile apps and from e-commerce infrastructure to SEO strategy, we manage the full digital journey through a single point of contact. We define scope upfront, plan transparently, meet tight delivery schedules and provide post-launch maintenance and technical support. That way you move forward with the same team, the same language and a predictable workflow at every stage.",
+    "From websites to mobile apps and e-commerce to SEO, we manage the full digital process through a single point of contact. We define scope upfront, work transparently and provide post-launch support.",
   whyMeSingleTitle: "Single Point of Contact",
   whyMeSingleDesc:
-    "From discovery through launch you work with a single point of contact, so project context is never lost, decisions move faster and communication stays clear and consistent at every stage of the work.",
+    "From discovery to launch you work with one contact; context stays intact and decisions move faster.",
   whyMeFastTitle: "Fast Delivery",
   whyMeFastDesc:
-    "We run a focused delivery process built for tight deadlines, ship on the agreed schedule without slipping and plan the maintenance, optimisation and growth steps well before your product goes live.",
+    "We run focused development on tight timelines and ship on the agreed schedule.",
   whyMeSupportTitle: "Technical Support",
   whyMeSupportDesc:
-    "We provide post-launch maintenance, performance tuning and hands-on technical support, respond quickly when issues arise and keep monitoring and improving your product long after it goes live.",
+    "We provide post-launch maintenance, performance tuning and technical support with fast response when issues arise.",
   whyMeTransparentTitle: "Transparency",
   whyMeTransparentDesc:
     "We work with open communication and transparent pricing from day one, defining scope, timelines and costs upfront so you always know what is happening without surprise charges or unclear scope changes.",
