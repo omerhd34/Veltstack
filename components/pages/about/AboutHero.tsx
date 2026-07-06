@@ -9,7 +9,6 @@ interface AboutHeroProps {
   tagline: string;
   title: string;
   subtitle: string;
-  subtitleSecondary: string;
   imageAlt: string;
   scrollLabel: string;
   stats: HeroStat[];
@@ -21,7 +20,6 @@ export function AboutHero({
   tagline,
   title,
   subtitle,
-  subtitleSecondary,
   imageAlt,
   scrollLabel,
   stats,
@@ -61,9 +59,6 @@ export function AboutHero({
 
             <p className="mt-4 max-w-xl text-sm leading-[1.85] text-emerald-50/75 sm:mt-6 sm:text-base lg:text-lg">
               {subtitle}
-            </p>
-            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
-              {subtitleSecondary}
             </p>
           </div>
 

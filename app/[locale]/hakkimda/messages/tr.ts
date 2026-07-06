@@ -3,9 +3,7 @@ export const aboutTr = {
   heroTagline: "Dijital Ürün Geliştirme",
   heroTitle: "İş hedeflerinize uygun dijital çözümler üretiyoruz.",
   heroSubtitle:
-    "Veltstack; web sitesi, mobil uygulama ve SEO odaklı dijital ürünlerde fikirden canlıya net süreç ve ölçülebilir sonuçla ilerleyen bir geliştirme markasıdır.",
-  heroSubtitleSecondary:
-    "Kurumsal web ve e-ticaret projelerinden performans odaklı altyapıya kadar her teslimatta tasarım, yazılım ve büyüme hedeflerini tek çizgide birleştiriyoruz.",
+    "Veltstack; web sitesi, mobil uygulama ve SEO odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eden bir geliştirme markasıdır.",
   heroImageAlt: "Veltstack dijital geliştirme çalışma alanı",
   scrollLabel: "Devamını oku",
   stats: [
@@ -30,79 +28,12 @@ export const aboutTr = {
       hint: "Web, mobil, SEO, yenileme, denetim ve bakım hizmetlerinde uçtan uca destek sunuyoruz.",
     },
   ],
-  profileBadge: "Veltstack DNA'sı",
-  profileTitle:
-    "Estetiği performansla, yazılımı iş hedefleriyle birleştiriyoruz.",
+  profileBadge: "Temel İlkemiz",
+  profileTitle: "Karar ve kalitede son söz her zaman insanındır.",
   profileParagraphs: [
-    "Teknolojinin ve kullanıcı alışkanlıklarının hızla değiştiği bir ortamda markaların yalnızca dijitalde var olması yetmez. Veltstack olarak her projede kullanıcı deneyimini, sürdürülebilir kodu ve ölçülebilir iş sonuçlarını aynı masada değerlendiriyoruz.",
-    "Klasik ajans kalıplarında sık görülen parçalı teslim yerine uçtan uca sahipleniyoruz: keşif ve kapsam netleştirmeden arayüz tasarımına, API mimarisinden canlıya alım ve SEO altyapısına kadar tüm süreci tek disiplin altında yönetiyoruz.",
-    "Trend peşinde koşmak veya yalnızca görsel teslim etmek yerine gerçek iş problemlerine kalıcı çözümler üretmeyi hedefliyoruz. Performans, erişilebilirlik, bakım kolaylığı ve dönüşüm odaklılık her projemizin temel ölçütleridir.",
-  ],
-  skillsBadge: "Teknoloji",
-  skillsTitle: "Çalıştığımız teknolojiler",
-  skillsSubtitle:
-    "Güncel ve üretime hazır araçlarla web, mobil ve altyapı katmanlarında uçtan uca geliştirme.",
-  skillGroups: [
-    {
-      label: "Frontend",
-      tech: [
-        "HTML",
-        "CSS",
-        "Sass & SCSS",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "Bootstrap",
-        "Redux",
-        "Zustand",
-        "UI",
-      ],
-    },
-    {
-      label: "Backend & Veritabanı",
-      tech: [
-        "Node.js",
-        "Express.js",
-        "REST API",
-        "Prisma",
-        "MySQL",
-        "PostgreSQL",
-        "MongoDB",
-        "MSSQL",
-        "SQLite",
-      ],
-    },
-    {
-      label: "Mobil",
-      tech: [
-        "React Native",
-        "Flutter",
-        "Expo",
-        "App Store",
-        "Google Play",
-        "Android Studio",
-        "Redux Toolkit",
-      ],
-    },
-    {
-      label: "DevOps, SEO & Araçlar",
-      tech: [
-        "Vercel",
-        "Railway",
-        "Render",
-        "Git",
-        "GitHub",
-        "Postman",
-        "cPanel",
-        "Google Analytics",
-        "Google Search",
-        "Google Tag Manager",
-        "PageSpeed Insights",
-        "Figma",
-      ],
-    },
+    "Geleneksel yazılım geliştirme; sağlam mimari, test edilmiş kod ve öngörülebilir süreçler üzerine kuruludur. Yapay zeka üretkenliği artırabilir; ancak iş hedeflerini anlamak, doğru ürün kararlarını vermek ve kullanıcı deneyimini şekillendirmek insan zekasının alanıdır.",
+    "Veltstack olarak tasarım, mimari, kod ve teslim sürecinin büyük bölümünü insan emeği ve mühendislik disipliniyle yürütüyoruz. Yapay zeka yalnızca metinlerdeki yazım hatalarını gözden geçirmek gibi ikincil işlerde, bir projenin en fazla %5'inde devreye girer. İnsan büyüktür; ürün kararlarında ve kalitede son söz her zaman insanındır.",
+    "Yapay zeka destekli hız yerine geleneksel mühendislik disiplinini ve ölçülebilir iş sonuçlarını ön planda tutuyoruz. Performans, erişilebilirlik, bakım kolaylığı ve dönüşüm odaklılık teslim ettiğimiz her projenin temel ölçütleridir.",
   ],
   contactBadge: "İletişim",
   contactTitle: "Bizimle iletişime geçin",
@@ -111,19 +42,25 @@ export const aboutTr = {
   contactItems: [
     { label: "Telefon", value: "+90 507 849 29 03", href: "tel:+905078492903" },
     {
+      label: "WhatsApp",
+      value: "+90 507 849 29 03",
+      href: "https://wa.me/905078492903",
+    },
+    {
       label: "E-posta",
       value: "demirome123@gmail.com",
       href: "mailto:demirome123@gmail.com",
     },
-    { label: "Konum", value: "İstanbul / Türkiye" },
+    {
+      label: "LinkedIn",
+      value: "omerhd1",
+      href: "https://www.linkedin.com/in/omerhd1/",
+    },
     {
       label: "İletişim Formu",
       value: "veltstack.com/iletisim",
       href: "/iletisim",
     },
+    { label: "GitHub", value: "omerhd34", href: "https://github.com/omerhd34" },
   ],
-  ctaTitle: "Projenizi birlikte konuşalım",
-  ctaSubtitle:
-    "Ücretsiz görüşmede ihtiyaçlarınızı dinleyip kapsam, süre ve teknoloji yığınını birlikte belirleyelim ve 24 saat içinde size dönüş yaparız.",
-  ctaButton: "İletişime Geç",
 } as const;

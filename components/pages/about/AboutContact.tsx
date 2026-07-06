@@ -1,9 +1,13 @@
 import {
+  LuGithub,
+  LuLinkedin,
   LuMail,
   LuMapPin,
   LuMessageCircle,
   LuPhone,
 } from "react-icons/lu";
+import { FaWhatsapp } from "react-icons/fa6";
+import type { IconType } from "react-icons";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 
 interface ContactItem {
@@ -20,7 +24,18 @@ interface AboutContactProps {
   className?: string;
 }
 
-const contactIcons = [LuPhone, LuMail, LuMapPin, LuMessageCircle] as const;
+function getContactIcon(item: ContactItem): IconType {
+  if (item.href?.includes("wa.me") || item.href?.includes("whatsapp.com")) {
+    return FaWhatsapp;
+  }
+  if (item.href?.startsWith("tel:")) return LuPhone;
+  if (item.href?.startsWith("mailto:")) return LuMail;
+  if (item.href?.includes("linkedin.com")) return LuLinkedin;
+  if (item.href?.includes("github.com")) return LuGithub;
+  if (item.href === "/iletisim") return LuMessageCircle;
+  if (!item.href) return LuMapPin;
+  return LuMessageCircle;
+}
 
 export function AboutContact({
   badge,
@@ -52,8 +67,8 @@ export function AboutContact({
         </div>
 
         <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map((item, index) => {
-            const Icon = contactIcons[index] ?? LuMail;
+          {items.map((item) => {
+            const Icon = getContactIcon(item);
             const content = (
               <>
                 <div className="flex size-10 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent">

@@ -1,11 +1,10 @@
 import { getTranslations } from "next-intl/server";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { WorkflowSection } from "@/components/sections/workflow";
-import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
 import { AboutContact } from "./AboutContact";
 import { AboutHero } from "./AboutHero";
-import { AboutSkills } from "./AboutSkills";
 import { AboutStory } from "./AboutStory";
+import { TechMarqueeSection } from "@/components/sections/tech-marquee";
 
 interface AboutPageViewProps {
   className?: string;
@@ -15,10 +14,6 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
   const t = await getTranslations("about");
 
   const stats = t.raw("stats") as HeroStat[];
-  const skillGroups = t.raw("skillGroups") as {
-    label: string;
-    tech: string[];
-  }[];
   const contactItems = t.raw("contactItems") as {
     label: string;
     value: string;
@@ -32,7 +27,6 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
         tagline={t("heroTagline")}
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        subtitleSecondary={t("heroSubtitleSecondary")}
         imageAlt={t("heroImageAlt")}
         scrollLabel={t("scrollLabel")}
         stats={stats}
@@ -42,23 +36,13 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
         profileTitle={t("profileTitle")}
         paragraphs={t.raw("profileParagraphs") as string[]}
       />
-      <AboutSkills
-        badge={t("skillsBadge")}
-        title={t("skillsTitle")}
-        subtitle={t("skillsSubtitle")}
-        groups={skillGroups}
-      />
       <WorkflowSection />
+      <TechMarqueeSection />
       <AboutContact
         badge={t("contactBadge")}
         title={t("contactTitle")}
         subtitle={t("contactSubtitle")}
         items={contactItems}
-      />
-      <ServicesPageCTA
-        title={t("ctaTitle")}
-        subtitle={t("ctaSubtitle")}
-        buttonLabel={t("ctaButton")}
       />
     </div>
   );

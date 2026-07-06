@@ -24,10 +24,6 @@ export async function WhyMeIntro({ className }: WhyMeIntroProps) {
       <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
         {t("whyMeSubtitle")}
       </p>
-
-      <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-        {t("whyMeIntro")}
-      </p>
     </div>
   );
 }

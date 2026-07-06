@@ -6,9 +6,6 @@ export {
   techItems,
   techItemCount,
   techCategories,
-  techOrbitCategoryOrder,
   getTechCategoriesForOrbit,
-  primaryTechNames,
-  isPrimaryTechItem,
 } from "./tech-items";
 export { buildTechOrbitItems } from "./build-tech-orbit-items";

@@ -3,9 +3,7 @@ export const whyMeHomeTr = {
   whyMeTitleLead: "Neden",
   whyMeTitleAccent: "Veltstack?",
   whyMeSubtitle:
-    "Her projede net iletişim, hızlı teslimat ve sürdürülebilir iş sonuçları için uçtan uca çalışıyoruz.",
-  whyMeIntro:
-    "Web sitesinden mobil uygulamaya, e-ticaretten SEO'ya tüm dijital süreci tek muhatapla yönetiyoruz. Kapsamı baştan netleştirir, şeffaf ilerler ve yayın sonrası destek sunarız.",
+    "Her projede net iletişim, hızlı teslimat ve sürdürülebilir iş sonuçları için uçtan uca çalışıyoruz. Web sitesinden mobil uygulamaya, e-ticaretten SEO'ya tüm dijital süreci tek muhatapla yönetiyoruz; kapsamı baştan netleştirir, şeffaf ilerler ve yayın sonrası destek sunarız.",
   whyMeSingleTitle: "Tek Muhatap",
   whyMeSingleDesc:
     "Keşiften yayına kadar aynı muhatapla ilerlersiniz; proje bağlamı kaybolmaz, kararlar hızlı alınır.",

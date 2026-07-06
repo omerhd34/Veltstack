@@ -3,9 +3,7 @@ export const whyMeHomeEn = {
   whyMeTitleLead: "Why",
   whyMeTitleAccent: "Veltstack?",
   whyMeSubtitle:
-    "We work end to end for clear communication, fast delivery and sustainable business outcomes on every project.",
-  whyMeIntro:
-    "From websites to mobile apps and e-commerce to SEO, we manage the full digital process through a single point of contact. We define scope upfront, work transparently and provide post-launch support.",
+    "We work end to end for clear communication, fast delivery and sustainable business outcomes on every project. From websites to mobile apps and e-commerce to SEO, we manage the full digital process through a single point of contact; we define scope upfront, work transparently and provide post-launch support.",
   whyMeSingleTitle: "Single Point of Contact",
   whyMeSingleDesc:
     "From discovery to launch you work with one contact; context stays intact and decisions move faster.",

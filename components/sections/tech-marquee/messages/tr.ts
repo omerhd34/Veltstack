@@ -3,12 +3,11 @@ export const techMarqueeHomeTr = {
   techStackTitle: "Güncel araçlar, sağlam mimari,",
   techStackTitleAccent: "ölçeklenebilir altyapı.",
   techStackSubtitle:
-    "Web sitesi ve mobil uygulama projelerinde — altyapıdan SEO'ya, bu araçlarla hızlı, performanslı ve üretime hazır çözümler sunuyoruz.",
-  techStackCount:
-    "<bold>{count}+</bold> kanıtlanmış araç ve teknolojiyle çalışıyoruz.",
-  techCategoryFrontend: "Temel Web & Frontend",
-  techCategoryBackend: "Backend & Veritabanı",
-  techCategoryMobile: "Mobil Geliştirme",
-  techCategoryHosting: "Hosting, Dağıtım & Versiyon Kontrolü",
-  techCategorySeo: "SEO & Dijital Pazarlama",
+    "Web sitesi ve mobil uygulama projelerinde; altyapı, backend, arayüz ve SEO katmanlarına kadar her aşamada güncel araçlarla çalışıyoruz. Hızlı, performanslı ve üretime hazır çözümler sunarak projelerinizi sürdürülebilir şekilde ölçeklendirmenize yardımcı oluyoruz.",
+  techCategoryFrontend: "Web Arayüzü",
+  techCategoryBackend: "API & Sunucu",
+  techCategoryDatabase: "Veri Altyapısı",
+  techCategoryMobile: "Mobil Uygulama",
+  techCategoryHosting: "Hosting & DevOps",
+  techCategorySeo: "SEO & Analitik",
 };
