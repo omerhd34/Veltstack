@@ -2,12 +2,12 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "domain-hosting-tasima",
-  titleTr: "Domain ve Hosting Taşıma Rehberi",
-  titleEn: "Domain and Hosting Migration Guide",
+  titleTr: "Domain ve Hosting Nasıl Taşınır?",
+  titleEn: "How to Migrate Domain and Hosting",
   excerptTr:
-    "Domain veya hosting sağlayıcısı değiştirirken izlemeniz gereken adımları, DNS güncellemesini ve kesintisiz geçiş için dikkat edilecekleri anlatıyoruz.",
+    "Domain veya hosting sağlayıcısı değiştirirken izlemeniz gereken adımları, DNS güncellemesini ve kesintisiz geçiş için dikkat edilecek noktaları anlatıyoruz; e-posta, SSL ve veri yedeğini kaybetmeden, ziyaretçi kaybı yaşamadan taşımayı gerçek deneyimlerimizle adım adım paylaşıyoruz.",
   excerptEn:
-    "Steps for changing domain or hosting providers, updating DNS and ensuring a smooth migration with minimal downtime.",
+    "We walk through the steps for changing domain or hosting providers, updating DNS and ensuring a smooth migration with minimal downtime, showing how to move without losing email, SSL, data backups or visitors, based on our real experience.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/domain-hosting-tasima.png",
@@ -123,7 +123,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Formlar, ödeme ve giriş işlemleri çalışıyor mu?</li>
 <li>E-posta gönderimi ve alımı test edildi mi?</li>
 <li>Google Search Console'da crawl hatası var mı?</li>
-<li Eski URL'ler 301 ile yeni adrese yönlendiriliyor mu?</li>
+<li>Eski URL'ler 301 ile yeni adrese yönlendiriliyor mu?</li>
 </ul>
 
 <h2>SEO ve Kesinti Riski</h2>

@@ -2,7 +2,7 @@ export const blogPageTr = {
   heroBadge: "Blog",
   heroTitle: "Dijital dünyadan içgörüler",
   heroSubtitle:
-    "Web geliştirme, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler. Gerçek projelerden öğrendiklerimizi paylaşıyoruz.",
+    "Web geliştirme, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler üretiyoruz. Gerçek projelerden öğrendiklerimizi, kullandığımız teknoloji tercihlerini ve sahada denenmiş yöntemleri sade bir dille paylaşıyoruz. Teoriyi bir kenara bırakıp doğrudan işe yarayan, uygulanabilir bilgileri sizlerle buluşturuyoruz.",
   heroImageAlt: "Veltstack blog: geliştirici çalışma alanı",
   postCountLabel: "{count} yazı",
   searchPlaceholder: "Yazı ara...",

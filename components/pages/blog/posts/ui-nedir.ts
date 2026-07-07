@@ -7,15 +7,15 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "ui-nedir",
-  titleTr: "UI (Kullanıcı Arayüzü)",
-  titleEn: "UI (User Interface)",
+  titleTr: "UI (Kullanıcı Arayüzü) Nedir?",
+  titleEn: "What Is UI (User Interface)?",
   excerptTr:
-    "Kullanıcı arayüzü (UI) kavramını, UX'ten farkını, modern bileşen kütüphanelerini ve Veltstack'in shadcn/ui ile Lightswind tercihini anlatıyoruz.",
+    "Kullanıcı arayüzü (UI) kavramını, UX'ten farkını, modern bileşen kütüphanelerini ve Veltstack'in shadcn/ui ile Lightswind tercihini anlatıyoruz; iyi bir arayüzün kullanıcı deneyimini, dönüşümü ve marka algısını nasıl etkilediğini gerçek örneklerle birlikte ele alıyoruz.",
   excerptEn:
-    "We explain user interface (UI), how it differs from UX, modern component libraries and why Veltstack chooses shadcn/ui with Lightswind.",
+    "We explain user interface (UI), how it differs from UX, modern component libraries, and why Veltstack chooses shadcn/ui with Lightswind, showing how a good interface shapes user experience, conversion and brand perception through clear, real-world examples.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
-  imageUrl: "/images/blog/",
+  imageUrl: "/images/blog/ui-nedir.png",
   readingTime: 9,
   publishedAt: "2026-07-07",
   featured: true,
@@ -94,10 +94,10 @@ export const blogPostEntry: BlogPostEntry = {
 <h2>Popüler UI Kütüphaneleri</h2>
 <div class="blog-type-grid">
   <div class="blog-type-card">
-    <h4>Shadcn</h4>
+    <h4>shadcn/ui</h4>
     <p>Radix UI primitifleri üzerine kurulu, kopyala-yapıştır React bileşenleri. Tailwind CSS ile yazılır; tam kod kontrolü ve özelleştirme sunar. Veltstack projelerinde temel UI katmanımız.</p>
   </div>
-    <div class="blog-type-card">
+  <div class="blog-type-card">
     <h4>Lightswind</h4>
     <p>Tailwind tabanlı animasyonlu bileşen kütüphanesi. Mikro animasyon ve geçiş efektleri için Veltstack projelerinde shadcn/ui ile birlikte tercih ettiğimiz tamamlayıcı kütüphane.</p>
   </div>

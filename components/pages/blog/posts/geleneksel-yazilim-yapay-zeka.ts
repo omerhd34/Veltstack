@@ -10,9 +10,9 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Geleneksel Yazılım | Yapay Zeka (AI)",
   titleEn: "Traditional Software | AI",
   excerptTr:
-    "Kaliteli yazılımda insan geliştiricinin kod yazmasının neden şart olduğunu; AI'ın yardımcı araç olarak sınırlarını, risklerini ve doğru yaklaşımı detaylı biçimde anlatıyoruz.",
+    "Kaliteli yazılımda insan geliştiricinin kod yazmasının neden şart olduğunu; yapay zekânın yalnızca yardımcı bir araç olarak sınırlarını, risklerini ve doğru kullanım yaklaşımını detaylı biçimde anlatıyor, üretkenliği artırırken kaliteyi nasıl koruyacağınızı gerçek örneklerle ele alıyoruz.",
   excerptEn:
-    "Why a human developer writing code is essential for quality software, where AI helps as a supporting tool only, and what limits and risks to keep in mind.",
+    "Why a human developer writing code is essential for quality software, where AI helps only as a supporting tool, and what limits and risks to keep in mind; we show how to boost productivity while protecting quality with real examples.",
   category: "Yapay Zeka",
   categoryEn: "Artificial Intelligence",
   imageUrl: "/images/blog/geleneksel-yazilim-yapay-zeka.png",

@@ -10,9 +10,9 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Özel Yazılım | CMS",
   titleEn: "Custom Software | CMS",
   excerptTr:
-    "Özel yazılımın CMS'e göre neden şart olduğunu; kaliteli projede bir insanın kod yazmasının neden vazgeçilmez olduğunu örneklerle birlikte anlatıyoruz.",
+    "Özel yazılımın hazır CMS çözümlerine göre neden şart olduğunu; kaliteli, ölçeklenebilir ve güvenli bir projede insan geliştiricinin kod yazmasının neden vazgeçilmez olduğunu; performans, bakım ve özelleştirme avantajlarını gerçek örneklerle birlikte adım adım anlatıyoruz.",
   excerptEn:
-    "Why custom software beats CMS for quality projects, and why a human developer writing code is non-negotiable, with practical examples along the way.",
+    "Why custom software beats ready-made CMS solutions for quality projects, and why a human developer writing real code stays non-negotiable when you need scalability, security and performance; we walk through the maintenance and customization advantages with practical examples.",
   category: "Özel Yazılım",
   categoryEn: "Custom Software",
   imageUrl: "/images/blog/ozel-yazilim-cms.png",

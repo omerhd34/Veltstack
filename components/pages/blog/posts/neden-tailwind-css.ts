@@ -10,12 +10,12 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Neden Tailwind CSS?",
   titleEn: "Why Tailwind CSS?",
   excerptTr:
-    "Bootstrap, Tailwind CSS ve benzeri CSS framework'lerini karşılaştırıyor; modern web projelerinde neden utility-first yaklaşımın tercih edildiğini anlatıyoruz.",
+    "Bootstrap, Tailwind CSS ve benzeri CSS framework'lerini karşılaştırıyoruz; modern web projelerinde neden utility-first yaklaşımı tercih ettiğimizi, geliştirme hızını, bakım kolaylığını ve tasarım tutarlılığını nasıl artırdığını gerçek örneklerle birlikte adım adım anlatıyoruz.",
   excerptEn:
-    "We compare Bootstrap, Tailwind CSS and similar CSS frameworks, and explain why the utility-first approach is our choice for modern web projects.",
+    "We compare Bootstrap, Tailwind CSS and similar CSS frameworks, and explain why the utility-first approach is our choice for modern web projects, showing how it boosts development speed, maintainability and design consistency with practical, real-world examples.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
-  imageUrl: "/images/blog/",
+  imageUrl: "/images/blog/neden-tailwind-css.png",
   readingTime: 9,
   publishedAt: "2026-07-07",
   featured: true,

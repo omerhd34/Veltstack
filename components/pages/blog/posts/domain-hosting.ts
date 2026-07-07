@@ -9,12 +9,12 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "domain-hosting",
-  titleTr: "Domain & Hosting",
-  titleEn: "Domain & Hosting",
+  titleTr: "Domain & Hosting Nedir?",
+  titleEn: "What Are Domain & Hosting?",
   excerptTr:
-    "Domain ve hosting kavramlarını açıklıyor; ikisinin farkını, birlikte nasıl çalıştıklarını ve domain satın alma sürecini adım adım, sade bir dille anlatıyoruz.",
+    "Domain ve hosting kavramlarını sade bir dille açıklıyoruz; ikisinin farkını, birlikte nasıl çalıştıklarını, DNS'in rolünü ve domain satın alma sürecini adım adım ele alıyor, ilk web sitenizi yayına almadan önce bilmeniz gereken her şeyi anlatıyoruz.",
   excerptEn:
-    "We explain domain and hosting concepts, how they differ and work together, and walk you through the domain purchase process step by step in plain language.",
+    "We explain domain and hosting concepts in plain language, covering how they differ and work together, the role of DNS, and the domain purchase process step by step, so you know everything needed before launching your first website.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/domain-hosting.png",
@@ -201,7 +201,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 <p>Domain ve hosting'i aynı firmadan almak yönetimi kolaylaştırır. Projelerimizde <strong>ixirhost</strong> altyapısını kullanıyoruz; domain tescili, DNS, SSL ve hosting hizmetlerini tek panelden yönetebiliyoruz.</p>
 
 <h2>Sonuç</h2>
-<p>Domain sitenizin adresi, hosting ise içeriğinizin evi. İkisi birlikte çalışmadan web siteniz yayına giremez. Doğru isim, güvenilir sağlayıcı ve DNS yapılandırması yeterlidir, kurulum sürecinde destek almak isterseniz bizimle iletişime geçebilirsiniz.</p>
+<p>Domain sitenizin adresi, hosting ise içeriğinizin evi. İkisi birlikte çalışmadan web siteniz yayına giremez. Doğru isim, güvenilir sağlayıcı ve DNS yapılandırması yeterlidir; kurulum sürecinde destek almak isterseniz bizimle iletişime geçebilirsiniz.</p>
 `,
     en: `
 <p>Two building blocks are required to launch a website: a <strong>domain</strong> name and <strong>hosting</strong>. This guide explains what they are, how they differ, how they work together and walks through the domain purchase process step by step.</p>
@@ -382,7 +382,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 <p>Buying both from one provider simplifies management. We use <strong>ixirhost</strong> in our projects, domain registration, DNS, SSL and hosting from a single panel.</p>
 
 <h2>Conclusion</h2>
-<p>Domain is your address, hosting is your home for content. Both are required to go live. The right name, a reliable provider and DNS setup are enough, contact us if you want help with the process.</p>
+<p>Domain is your address, hosting is your home for content. Both are required to go live. The right name, a reliable provider and DNS setup are enough; contact us if you want help with the process.</p>
 `,
   },
 };

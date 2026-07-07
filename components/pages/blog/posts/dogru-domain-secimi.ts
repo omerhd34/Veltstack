@@ -3,12 +3,12 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "dogru-domain-secimi",
-  titleTr: "Doğru Domain Seçimi",
-  titleEn: "Choosing the Right Domain",
+  titleTr: "Doğru Domain Seçimi Nasıl Yapılır?",
+  titleEn: "How to Choose the Right Domain",
   excerptTr:
-    "Markanıza uygun domain adını nasıl belirleyeceğinizi, uzantı seçimini ve sık yapılan hataları pratik bir rehberle paylaşıyoruz; SEO etkisini de ele alıyoruz.",
+    "Markanıza uygun domain adını nasıl belirleyeceğinizi, doğru uzantıyı seçmenin inceliklerini ve sık yapılan hataları pratik bir rehberle paylaşıyoruz; ismin SEO üzerindeki etkisini, akılda kalıcılığı ve marka güvenini artıran ipuçlarını da adım adım örneklerle ele alıyoruz.",
   excerptEn:
-    "A practical guide to picking a domain name that fits your brand, choosing the right extension, avoiding common mistakes and understanding SEO impact.",
+    "A practical guide to picking a domain name that fits your brand, choosing the right extension and avoiding common mistakes, while understanding how your domain affects SEO, memorability and customer trust, with clear step-by-step examples you can apply right away.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/dogru-domain-secimi.png",
@@ -80,7 +80,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 
 <div class="blog-callout">
   <p class="blog-callout-title">Pratik ipucu</p>
-  <p>Domain satın almadan önce birkaok kişiye ismi söyleyip doğru yazıp yazamadıklarını test edin. Yazım hatası yapan her kişi, potansiyel müşteri kaybı demektir.</p>
+  <p>Domain satın almadan önce birkaç kişiye ismi söyleyip doğru yazıp yazamadıklarını test edin. Yazım hatası yapan her kişi, potansiyel müşteri kaybı demektir.</p>
 </div>
 
 <h2>SEO ve Domain İlişkisi</h2>

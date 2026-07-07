@@ -2,12 +2,12 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "en-iyi-sanal-pos-firmalari",
-  titleTr: "En İyi Sanal POS Firmaları",
-  titleEn: "Best Virtual POS Providers",
+  titleTr: "En İyi Sanal POS Firmaları Hangileridir?",
+  titleEn: "Which Are the Best Virtual POS Providers?",
   excerptTr:
-    "Türkiye'de e-ticaret ve online ödeme için PayTR, iyzico, Param, Paynet, Shopier ve iPara sanal POS sağlayıcılarını karşılaştırıyor; doğru entegrasyonu seçmenize yardımcı oluyoruz.",
+    "Türkiye'de e-ticaret ve online ödeme için PayTR, iyzico, Param, Paynet, Shopier ve iPara sanal POS sağlayıcılarını komisyon, entegrasyon kolaylığı ve destek açısından karşılaştırıyoruz; projenize en uygun ödeme altyapısını seçmenize adım adım yardımcı oluyoruz.",
   excerptEn:
-    "We compare PayTR, iyzico, Param, Paynet, Shopier and iPara, Turkey's leading virtual POS providers, to help you pick the right payment integration.",
+    "We compare PayTR, iyzico, Param, Paynet, Shopier and iPara, Turkey's leading virtual POS providers, in terms of commission rates, integration ease and support quality, helping you choose the payment infrastructure that best fits your e-commerce project step by step.",
   category: "Araçlar & İpuçları",
   categoryEn: "Tools & Tips",
   imageUrl: "/images/blog/en-iyi-sanal-pos-firmalari.png",
@@ -52,6 +52,10 @@ export const blogPostEntry: BlogPostEntry = {
   <div class="blog-type-card">
     <h4><a href="https://www.ipara.com/" target="_blank" rel="noopener noreferrer">iPara</a></h4>
     <p>API odaklı sanal POS altyapısı; özel yazılım projelerinde esnek entegrasyon sağlar. Tek çekim, taksit ve 3D Secure desteğiyle e-ticaret sitelerine doğrudan bağlanır.</p>
+  </div>
+  <div class="blog-type-card">
+    <h4><a href="https://www.odeal.com/" target="_blank" rel="noopener noreferrer">Ödeal</a></h4>
+    <p>KOBİ'lere yönelik ödeme çözümleri. Fiziksel POS ve sanal POS'u bir arada sunan entegre paketler; perakende ve online satışı birlikte yürüten işletmeler için uygun.</p>
   </div>
 </div>
 

@@ -7,15 +7,15 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "node-js-ve-prisma-ile-backend",
-  titleTr: "Node.js ve Prisma ile Backend",
-  titleEn: "Backend with Node.js and Prisma",
+  titleTr: "Node.js ve Prisma ile Backend Geliştirme",
+  titleEn: "Backend Development with Node.js and Prisma",
   excerptTr:
-    "Node.js ve Prisma ORM ile backend geliştirmenin temellerini, Next.js Route Handlers ile entegrasyonu ve modern API mimarisini anlatıyoruz.",
+    "Node.js ve Prisma ORM ile backend geliştirmenin temellerini, Next.js Route Handlers ile entegrasyonu ve modern API mimarisini anlatıyoruz; veritabanı modelleme, tip güvenliği, migration yönetimi ve performans konularını gerçek örneklerle birlikte adım adım ele alıyoruz.",
   excerptEn:
-    "We cover backend development with Node.js and Prisma ORM, integration with Next.js Route Handlers and modern API architecture.",
+    "We cover the fundamentals of backend development with Node.js and Prisma ORM, integration with Next.js Route Handlers and modern API architecture, walking through database modeling, type safety, migration management and performance with practical, real-world examples step by step.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
-  imageUrl: "/images/blog/",
+  imageUrl: "/images/blog/node-js-ve-prisma-ile-backend.png",
   readingTime: 10,
   publishedAt: "2026-07-07",
   featured: true,

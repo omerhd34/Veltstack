@@ -10,12 +10,12 @@ export const blogPostEntry: BlogPostEntry = {
   titleTr: "Neden ixirhost?",
   titleEn: "Why ixirhost?",
   excerptTr:
-    "Domain, DNS, SSL ve hosting yönetiminde neden ixirhost altyapısını tercih ettiğimizi; alternatif sağlayıcılarla karşılaştırarak anlatıyoruz.",
+    "Domain, DNS, SSL ve hosting yönetiminde neden ixirhost altyapısını tercih ettiğimizi; hız, güvenlik, destek kalitesi ve fiyat açısından alternatif sağlayıcılarla karşılaştırarak; gerçek proje deneyimlerimizden yola çıkarak avantajları ve dikkat edilmesi gereken noktaları adım adım anlatıyoruz.",
   excerptEn:
-    "We explain why we choose ixirhost for domain, DNS, SSL and hosting management, compared with alternative providers.",
+    "Why we choose the ixirhost infrastructure for domain, DNS, SSL and hosting management; we compare it with alternative providers in terms of speed, security, support quality and pricing, sharing the advantages and caveats drawn from our real project experience.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
-  imageUrl: "/images/blog/ixirhost.webp",
+  imageUrl: "/images/blog/neden-ixirhost.png",
   readingTime: 8,
   publishedAt: "2026-07-07",
   featured: true,
@@ -30,7 +30,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>ixirhost Nedir?</h2>
-<p><a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a>, Türkiye merkezli bir <strong>domain ve hosting sağlayıcısıdır</strong>. Alan adı tescili, DNS yönetimi, SSL sertifikası ve paylaşımlı hosting / VPS hizmetlerini tek müşteri panelinden sunar. cPanel tabanlı hosting paketleri; WordPress, kurumsal site ve klasik PHP projeleri için yaygın kullanılır.</p>
+<p><a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a>, ticari unvanıyla <strong>İksir İnternet Hizmetleri A.Ş.</strong>, Türkiye merkezli bir <strong>domain ve hosting sağlayıcısıdır</strong>. Alan adı tescili, DNS yönetimi, SSL sertifikası ve paylaşımlı hosting / VPS hizmetlerini tek müşteri panelinden sunar. cPanel tabanlı hosting paketleri; WordPress, kurumsal site ve klasik PHP projeleri için yaygın kullanılır.</p>
 <p>Detaylı kavram açıklaması için <a href="/blog/domain-hosting">Domain & Hosting</a> rehberimize bakabilirsiniz.</p>
 
 <h2>ixirhost'un Sunduğu Hizmetler</h2>
@@ -163,7 +163,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>What Is ixirhost?</h2>
-<p><a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a> is a <strong>Turkey-based domain and hosting provider</strong>. It offers domain registration, DNS management, SSL certificates and shared hosting / VPS from a single customer panel. cPanel-based hosting packages are widely used for WordPress, corporate sites and classic PHP projects.</p>
+<p><a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a>, officially registered as <strong>İksir İnternet Hizmetleri A.Ş.</strong>, is a <strong>Turkey-based domain and hosting provider</strong>. It offers domain registration, DNS management, SSL certificates and shared hosting / VPS from a single customer panel. cPanel-based hosting packages are widely used for WordPress, corporate sites and classic PHP projects.</p>
 <p>For detailed concepts see our <a href="/blog/domain-hosting">Domain & Hosting</a> guide.</p>
 
 <h2>Services ixirhost Provides</h2>

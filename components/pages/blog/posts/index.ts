@@ -19,17 +19,17 @@ import { blogPostEntry as webdenMobileGecis } from "./webden-mobile-gecis";
 import { blogPostEntry as uiNedir } from "./ui-nedir";
 
 export const blogPostEntries: BlogPostEntry[] = [
-  uiNedir,
-  webdenMobileGecis,
-  nodeJsVePrismaIleBackend,
-  nedenIxirhost,
-  nedenTailwindCss,
   gelenekselYazilimYapayZeka,
   ozelYazilimCms,
   domainHosting,
   seo,
   vercelDeYayin,
+  nedenIxirhost,
   dogruDomainSecimi,
+  uiNedir,
+  webdenMobileGecis,
+  nodeJsVePrismaIleBackend,
+  nedenTailwindCss,
   domainHostingTasima,
   enIyiSanalPosFirmalari,
   veritabaniSecimi,

@@ -2,14 +2,14 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "vercel-de-yayin",
-  titleTr: "Vercel'de Yayın",
-  titleEn: "Deploying on Vercel",
+  titleTr: "Vercel'de Yayın Nasıl Yapılır?",
+  titleEn: "How to Deploy on Vercel",
   excerptTr:
-    "Next.js projelerini Vercel'e nasıl deploy edeceğinizi adım adım anlatıyor; ortam değişkenleri, özel domain, preview ortamları ve sık karşılaşılan hataları kapsıyoruz.",
+    "Next.js projelerini Vercel'e nasıl deploy edeceğinizi adım adım anlatıyoruz; ortam değişkenleri, özel domain bağlama, preview ortamları, otomatik dağıtım ve sık karşılaşılan hataları kapsıyor, sorunsuz bir yayın süreci için pratik ipuçlarını da paylaşıyoruz.",
   excerptEn:
-    "A step-by-step guide to deploying Next.js projects on Vercel, covering environment variables, custom domains, preview environments and common pitfalls.",
-  category: "Web Geliştirme",
-  categoryEn: "Web Development",
+    "A step-by-step guide to deploying Next.js projects on Vercel, covering environment variables, custom domain setup, preview environments, automatic deployments and common pitfalls, along with practical tips to help you ship a smooth, production-ready release with confidence.",
+  category: "Hosting & Domain",
+  categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/vercel-de-yayin.png",
   readingTime: 9,
   publishedAt: "2026-06-22",

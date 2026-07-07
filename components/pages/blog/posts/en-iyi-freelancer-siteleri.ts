@@ -4,12 +4,12 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "en-iyi-freelancer-siteleri",
-  titleTr: "En İyi Freelancer Siteleri",
-  titleEn: "Best Freelancer Platforms",
+  titleTr: "En İyi Freelancer Siteleri Hangileridir?",
+  titleEn: "Which Are the Best Freelancer Platforms?",
   excerptTr:
-    "Global ve Türkiye'deki en popüler freelance platformlarını karşılaştırıyor; doğru platformu seçmenize yardımcı oluyoruz.",
+    "Global ve Türkiye'deki en popüler freelance platformlarını komisyon oranları, iş hacmi, güvenlik ve ödeme koşulları açısından karşılaştırıyoruz; hem işveren hem de freelancer olarak size en uygun platformu seçmenize adım adım yardımcı oluyoruz.",
   excerptEn:
-    "We compare the most popular freelance platforms globally and in Turkey to help you choose the right one.",
+    "We compare the most popular freelance platforms globally and in Turkey in terms of commission rates, job volume, security and payment terms, helping you choose the right one step by step whether you hire talent or work as a freelancer.",
   category: "Araçlar & İpuçları",
   categoryEn: "Tools & Tips",
   imageUrl: "/images/blog/en-iyi-freelancer-siteleri.png",

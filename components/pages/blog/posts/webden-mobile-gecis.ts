@@ -7,15 +7,15 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "webden-mobile-gecis",
-  titleTr: "Web'den Mobil'e Geçiş",
-  titleEn: "From Web to Mobile",
+  titleTr: "Web'den Mobil'e Geçiş Nasıl Yapılır?",
+  titleEn: "How to Transition from Web to Mobile",
   excerptTr:
-    "Başarılı bir web projesini mobil uygulamaya taşımanın işletmelere sağladığı avantajları; React Native ve Expo ile modern geçiş sürecini anlatıyoruz.",
+    "Başarılı bir web projesini mobil uygulamaya taşımanın işletmelere sağladığı avantajları; React Native ve Expo ile modern geçiş sürecini, kod paylaşımını, mağaza yayın adımlarını ve dikkat edilmesi gereken noktaları gerçek deneyimlerimizden örneklerle birlikte anlatıyoruz.",
   excerptEn:
-    "We explain the business advantages of moving a successful web project to a mobile app and the modern transition process with React Native and Expo.",
+    "We explain the business advantages of turning a successful web project into a mobile app, and the modern transition process with React Native and Expo, covering code sharing, store publishing steps and key pitfalls, illustrated with real examples.",
   category: "Mobil Uygulama",
   categoryEn: "Mobile Apps",
-  imageUrl: "/images/blog/",
+  imageUrl: "/images/blog/webden-mobile-gecis.png",
   readingTime: 10,
   publishedAt: "2026-07-07",
   featured: true,

@@ -2,12 +2,12 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "responsive-tasarim",
-  titleTr: "Mobil Uyumluluk: Responsive",
-  titleEn: "Mobile Compatibility: Responsive",
+  titleTr: "Mobil Uyumluluk: Responsive Nedir?",
+  titleEn: "Mobile Compatibility: What Is Responsive?",
   excerptTr:
-    "Mobil uyumluluk ile responsive tasarım arasındaki farkı, mobile-first yaklaşımı ve gerçekten her ekranda çalışan arayüz için pratik kuralları paylaşıyoruz.",
+    "Mobil uyumluluk ile responsive tasarım arasındaki farkı, mobile-first yaklaşımı ve gerçekten her ekranda kusursuz çalışan bir arayüz için pratik kuralları paylaşıyoruz; breakpoint yönetimi, esnek grid ve görsel optimizasyonunu gerçek örneklerle birlikte adım adım anlatıyoruz.",
   excerptEn:
-    "We explain the difference between mobile-friendly and responsive design, mobile-first approach and practical rules for interfaces that work on every screen.",
+    "We explain the difference between mobile-friendly and responsive design, the mobile-first approach and practical rules for interfaces that truly work on every screen, covering breakpoint management, flexible grids and image optimization with clear, real-world examples step by step.",
   category: "Responsive",
   categoryEn: "Responsive",
   imageUrl: "/images/blog/responsive-tasarim.png",

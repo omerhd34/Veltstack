@@ -2,12 +2,12 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "react-nextjs",
-  titleTr: "React & Next.js",
-  titleEn: "React & Next.js",
+  titleTr: "React ve Next.js Nedir?",
+  titleEn: "What Are React and Next.js?",
   excerptTr:
-    "React ve Next.js'in temellerini, birlikte neden tercih edildiğini ve modern web projelerinde sundukları avantajları anlatıyoruz.",
+    "React ve Next.js'in temellerini, ikisinin birlikte neden tercih edildiğini ve modern web projelerinde sundukları avantajları anlatıyoruz; bileşen mimarisi, sunucu tarafı render, performans ve SEO faydalarını gerçek kullanım senaryolarıyla birlikte sade bir dille ele alıyoruz.",
   excerptEn:
-    "We cover the basics of React and Next.js, why they are used together, and the advantages they bring to modern web projects.",
+    "We cover the fundamentals of React and Next.js, why they are used together, and the advantages they bring to modern web projects, explaining component architecture, server-side rendering, performance and SEO benefits with real-world scenarios in plain, approachable language.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/blog/react-nextjs.png",
