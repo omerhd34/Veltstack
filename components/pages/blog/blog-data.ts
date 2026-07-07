@@ -7,6 +7,16 @@ import { blogPosts } from "./posts";
 const NAV_BLOG_COUNT = 6;
 const FOOTER_BLOG_COUNT = 6;
 
+const BLOG_IMAGE_BASE = "/images/blog/";
+
+export function getBlogListImageUrl(imageUrl: string): string {
+  return imageUrl.replace(BLOG_IMAGE_BASE, `${BLOG_IMAGE_BASE}version1/`);
+}
+
+export function getBlogDetailImageUrl(imageUrl: string): string {
+  return imageUrl.replace(BLOG_IMAGE_BASE, `${BLOG_IMAGE_BASE}version2/`);
+}
+
 export function getAllCategories(locale: "tr" | "en"): string[] {
   const key = locale === "tr" ? "category" : "categoryEn";
   const unique = Array.from(new Set(blogPosts.map((p) => p[key])));

@@ -36,7 +36,7 @@ export function BlogPreviewCard({
       )}
     >
       <BorderTrace durationSec={2.5} />
-      <div className="aspect-16/10 shrink-0 overflow-hidden rounded-t-[calc(1rem-3px)]">
+      <div className="aspect-3/2 shrink-0 overflow-hidden rounded-t-[calc(1rem-3px)]">
         <BlogPreviewImage src={image} alt={title} />
       </div>
       <div className="flex min-h-0 flex-1 flex-col p-6">

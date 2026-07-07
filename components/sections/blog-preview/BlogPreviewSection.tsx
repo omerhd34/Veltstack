@@ -1,7 +1,10 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
-import { blogPosts } from "@/components/pages/blog/blog-data";
+import {
+  blogPosts,
+  getBlogListImageUrl,
+} from "@/components/pages/blog/blog-data";
 import { toLatinUppercase } from "@/lib/utils";
 import { BlogPreviewMoreButton } from "./BlogPreviewMoreButton";
 import { BlogPreviewScrollCarousel } from "./BlogPreviewScrollCarousel";
@@ -27,7 +30,7 @@ export async function BlogPreviewSection({
       title: locale === "tr" ? post.titleTr : post.titleEn,
       excerpt: locale === "tr" ? post.excerptTr : post.excerptEn,
       href: `/blog/${post.slug}`,
-      image: post.imageUrl,
+      image: getBlogListImageUrl(post.imageUrl),
       readingTimeLabel: t("readingTime", { minutes: post.readingTime }),
     }));
 

@@ -1,13 +1,15 @@
 import Image from "next/image";
-import { LuArrowUpRight, LuCalendar, LuClock } from "react-icons/lu";
+import { LuArrowUpRight, LuCalendar, LuClock, LuPenLine } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
 import type { BlogPost } from "./blog-data";
-import { formatDate } from "./blog-data";
+import { formatDate, getBlogListImageUrl } from "./blog-data";
 
 const slowTransition =
   "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+
+const AUTHOR_NAME = "Ömer Halis Demir";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -52,15 +54,15 @@ export function BlogCard({
             ? "rounded-t-[calc(1.5rem-3px)] md:rounded-l-[calc(1.5rem-3px)] md:rounded-tr-none md:rounded-br-none"
             : "rounded-t-[calc(1.5rem-3px)]",
           isHorizontal
-            ? "aspect-16/10 md:aspect-auto md:min-h-[220px] md:w-[42%] lg:min-h-[240px]"
-            : "aspect-16/10",
+            ? "aspect-3/2 md:w-[42%] md:shrink-0 md:self-center"
+            : "aspect-3/2",
         )}
       >
         <Image
-          src={post.imageUrl}
+          src={getBlogListImageUrl(post.imageUrl)}
           alt={title}
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className="object-contain transition-transform duration-700 group-hover:scale-105"
           sizes={
             isHorizontal
               ? "(max-width: 768px) 100vw, 42vw"
@@ -85,22 +87,48 @@ export function BlogCard({
             : "p-6",
         )}
       >
-        <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+        <div
+          className={cn(
+            "flex flex-wrap items-center gap-5 text-muted-foreground",
+            isHorizontal ? "text-sm" : "text-xs",
+          )}
+        >
           <span className="flex items-center gap-1.5">
-            <LuCalendar className="size-3.5 text-brand-accent/70" aria-hidden />
+            <LuCalendar
+              className={cn(
+                "text-brand-accent/70",
+                isHorizontal ? "size-4" : "size-3.5",
+              )}
+              aria-hidden
+            />
             {date}
           </span>
-          <span aria-hidden className="size-1 rounded-full bg-border" />
           <span className="flex items-center gap-1.5">
-            <LuClock className="size-3.5 text-brand-accent/70" aria-hidden />
+            <LuClock
+              className={cn(
+                "text-brand-accent/70",
+                isHorizontal ? "size-4" : "size-3.5",
+              )}
+              aria-hidden
+            />
             {readingTimeLabel}
+          </span>
+          <span className="flex items-center gap-1.5">
+            <LuPenLine
+              className={cn(
+                "text-brand-accent/70",
+                isHorizontal ? "size-4" : "size-3.5",
+              )}
+              aria-hidden
+            />
+            {AUTHOR_NAME}
           </span>
         </div>
 
         <h2
           className={cn(
-            "mt-3 font-(family-name:--font-heading) font-bold leading-tight tracking-tight transition-colors group-hover:text-brand-accent",
-            isHorizontal ? "text-xl lg:text-2xl" : "text-lg",
+            "mt-4 font-(family-name:--font-heading) font-bold leading-tight tracking-tight transition-colors group-hover:text-brand-accent",
+            isHorizontal ? "text-2xl lg:text-3xl" : "text-lg",
           )}
         >
           {title}
@@ -108,14 +136,19 @@ export function BlogCard({
 
         <p
           className={cn(
-            "mt-3 leading-relaxed text-foreground/60",
-            isHorizontal ? "line-clamp-3 text-base" : "line-clamp-2 text-sm",
+            "mt-4 leading-relaxed text-foreground/60",
+            isHorizontal ? "text-lg" : "line-clamp-2 text-sm",
           )}
         >
           {excerpt}
         </p>
 
-        <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-accent">
+        <span
+          className={cn(
+            "mt-6 inline-flex items-center gap-2 font-semibold text-brand-accent",
+            isHorizontal ? "text-base" : "text-sm",
+          )}
+        >
           {readMoreLabel}
           <LuArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </span>

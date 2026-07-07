@@ -7,7 +7,11 @@ import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
 import { BlogCard } from "@/components/pages/blog/BlogCard";
 import { BlogArticleBody } from "@/components/pages/blog-detail/BlogArticleBody";
 import { BlogDetailHero } from "@/components/pages/blog-detail/BlogDetailHero";
-import { blogPosts, formatDate } from "@/components/pages/blog/blog-data";
+import {
+  blogPosts,
+  formatDate,
+  getBlogDetailImageUrl,
+} from "@/components/pages/blog/blog-data";
 import { getBlogArticleContent } from "@/components/pages/blog/blog-articles";
 import { toLatinUppercase } from "@/lib/utils";
 import { getPathname } from "@/i18n/navigation";
@@ -45,7 +49,11 @@ export async function generateMetadata({
       type: "article",
       locale: locale === "tr" ? "tr_TR" : "en_US",
       images: post.imageUrl
-        ? [{ url: `https://www.veltstack.com${post.imageUrl}` }]
+        ? [
+            {
+              url: `https://www.veltstack.com${getBlogDetailImageUrl(post.imageUrl)}`,
+            },
+          ]
         : [],
     },
   };
@@ -83,7 +91,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const placeholderContent =
     loc === "tr"
       ? `
-<p>Bu yazıda, konuyu tüm yönleriyle ele alıyor; praktik örnekler, gerçek proje deneyimlerimiz ve ölçülebilir sonuçlarla birlikte aktarıyoruz.</p>
+<p>Bu yazıda konuyu tüm yönleriyle ele alıyor; pratik örnekler, gerçek proje deneyimlerimiz ve ölçülebilir sonuçlarla birlikte aktarıyoruz.</p>
 
 <h2>Neden Bu Konuyu Seçtik?</h2>
 <p>Müşteri projelerinde sıklıkla karşılaştığımız bu sorun, çoğu zaman küçük bir yapılandırma değişikliğiyle çözülebilir hale geliyor. Biz de bu içeriği hazırlarken benzer durumla karşılaşan herkesin faydalanabileceği bir kılavuz oluşturmayı hedefledik.</p>
@@ -134,13 +142,13 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         readingTime={readingTime}
         title={title}
         excerpt={excerpt}
-        imageUrl={post.imageUrl}
+        imageUrl={getBlogDetailImageUrl(post.imageUrl)}
         imageAlt={title}
         writtenByLabel={t("writtenByLabel")}
       />
 
       <SiteContainer className="py-16 md:py-20">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-7xl">
           <BlogArticleBody html={articleContent} locale={loc} />
 
           <div className="mt-14 border-t border-border pt-8">
