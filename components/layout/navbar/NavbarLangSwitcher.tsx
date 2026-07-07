@@ -1,20 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
-
-const LOCALE_FLAGS = {
-  tr: {
-    src: "/images/language/turkey.png",
-    alt: "Türkçe",
-  },
-  en: {
-    src: "/images/language/united-kingdom.png",
-    alt: "English",
-  },
-} as const;
 
 interface NavbarLangSwitcherProps {
   className?: string;
@@ -26,25 +14,28 @@ export function NavbarLangSwitcher({ className }: NavbarLangSwitcherProps) {
   const tNav = useTranslations("nav");
 
   const nextLocale = locale === "tr" ? "en" : "tr";
-  const flag = LOCALE_FLAGS[locale as keyof typeof LOCALE_FLAGS];
 
   return (
     <Link
       href={pathname}
       locale={nextLocale}
       className={cn(
-        "inline-flex size-10 shrink-0 items-center justify-center rounded-full transition-transform duration-750 ease-out hover:scale-110 active:scale-95 motion-reduce:hover:scale-100",
+        "group relative inline-flex size-11 shrink-0 items-center justify-center rounded-full p-[2px]",
         className,
       )}
       aria-label={nextLocale === "en" ? tNav("switchToEn") : tNav("switchToTr")}
     >
-      <Image
-        src={flag.src}
-        alt={flag.alt}
-        width={32}
-        height={32}
-        className="size-9 rounded-full object-cover ring-1 ring-border/60"
+      <span
+        className="absolute inset-0 rounded-full bg-border opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:animate-[spin_1.2s_linear_infinite] motion-reduce:group-hover:animate-none"
+        style={{
+          background:
+            "conic-gradient(from 0deg, transparent 0deg, var(--border-trace-stroke) 300deg, transparent 360deg)",
+        }}
+        aria-hidden
       />
+      <span className="relative flex size-full items-center justify-center rounded-full border border-border/60 bg-foreground text-xs font-semibold uppercase tracking-wide text-background">
+        {locale.toUpperCase()}
+      </span>
     </Link>
   );
 }
