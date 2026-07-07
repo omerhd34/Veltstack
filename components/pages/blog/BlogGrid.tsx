@@ -62,7 +62,7 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
   }, [posts, categoryKey, labels.allCategories]);
 
   return (
-    <div>
+    <div id="blog-grid" className="scroll-mt-16">
       <div className="sticky top-16 z-30 bg-background/95 backdrop-blur-md border-b border-border/60 py-4">
         <div className="mx-auto max-w-site">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">

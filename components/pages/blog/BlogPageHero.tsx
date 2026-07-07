@@ -1,6 +1,8 @@
 import { getLocale } from "next-intl/server";
+import { LuChevronDown } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
 import { toLatinUppercase } from "@/lib/utils";
 
@@ -8,16 +10,20 @@ interface BlogPageHeroProps {
   badge: string;
   title: string;
   subtitle: string;
+  subtitleSecondary: string;
   imageAlt: string;
-  postCountLabel: string;
+  scrollLabel: string;
+  stats: HeroStat[];
 }
 
 export async function BlogPageHero({
   badge,
   title,
   subtitle,
+  subtitleSecondary,
   imageAlt,
-  postCountLabel,
+  scrollLabel,
+  stats,
 }: BlogPageHeroProps) {
   const locale = (await getLocale()) as "tr" | "en";
 
@@ -59,22 +65,29 @@ export async function BlogPageHero({
             <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/70 sm:text-base lg:text-lg">
               {subtitle}
             </p>
-
-            <div className="mt-8 flex items-center gap-3">
-              <span className="inline-flex items-center rounded-full border border-emerald-800/60 bg-emerald-950/70 px-4 py-2 text-sm font-semibold text-emerald-300 shadow-[0_8px_24px_rgb(0_0_0/0.2)]">
-                {postCountLabel}
-              </span>
-              <span className="h-px flex-1 max-w-[80px] bg-emerald-800/40" />
-              <span className="text-xs text-emerald-400/50 tracking-widest">
-                {toLatinUppercase("Veltstack", locale)}
-              </span>
-            </div>
+            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
+              {subtitleSecondary}
+            </p>
           </div>
 
           <ServicesPageHeroImage
             alt={imageAlt}
             className="mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end"
           />
+        </div>
+
+        <div className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8">
+          <HeroStatsCards stats={stats} />
+
+          <a
+            href="#blog-grid"
+            className="mt-6 flex flex-col items-center gap-1.5 text-emerald-300/50 transition-colors hover:text-emerald-300/80 sm:mt-8"
+          >
+            <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em]">
+              {scrollLabel}
+            </span>
+            <LuChevronDown className="size-4 animate-bounce" aria-hidden />
+          </a>
         </div>
       </SiteContainer>
 

@@ -1,8 +1,15 @@
 import { getTranslations, getLocale } from "next-intl/server";
+import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
-import { blogPosts } from "./blog-data";
+import { blogPosts, getAllCategories, getFeaturedPosts } from "./blog-data";
 import { BlogPageHero } from "./BlogPageHero";
 import { BlogGrid } from "./BlogGrid";
+
+interface BlogHeroStatCopy {
+  label: string;
+  hint: string;
+  unit?: string;
+}
 
 interface BlogPageViewProps {
   className?: string;
@@ -16,6 +23,41 @@ export async function BlogPageView({ className }: BlogPageViewProps) {
     ...post,
     readingTimeLabel: t("readingTime", { minutes: post.readingTime }),
   }));
+
+  const statsCopy = t.raw("heroStats") as {
+    posts: BlogHeroStatCopy;
+    categories: BlogHeroStatCopy;
+    reading: BlogHeroStatCopy;
+    featured: BlogHeroStatCopy;
+  };
+
+  const totalReadingTime = blogPosts.reduce(
+    (sum, post) => sum + post.readingTime,
+    0,
+  );
+
+  const heroStats: HeroStat[] = [
+    {
+      value: String(blogPosts.length),
+      label: statsCopy.posts.label,
+      hint: statsCopy.posts.hint,
+    },
+    {
+      value: String(getAllCategories(locale).length),
+      label: statsCopy.categories.label,
+      hint: statsCopy.categories.hint,
+    },
+    {
+      value: `${totalReadingTime} ${statsCopy.reading.unit ?? ""}`.trim(),
+      label: statsCopy.reading.label,
+      hint: statsCopy.reading.hint,
+    },
+    {
+      value: String(getFeaturedPosts().length),
+      label: statsCopy.featured.label,
+      hint: statsCopy.featured.hint,
+    },
+  ];
 
   const labels = {
     searchPlaceholder: t("searchPlaceholder"),
@@ -33,8 +75,10 @@ export async function BlogPageView({ className }: BlogPageViewProps) {
         badge={t("heroBadge")}
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
+        subtitleSecondary={t("heroSubtitleSecondary")}
         imageAlt={t("heroImageAlt")}
-        postCountLabel={t("postCountLabel", { count: blogPosts.length })}
+        scrollLabel={t("scrollLabel")}
+        stats={heroStats}
       />
 
       <BlogGrid posts={posts} locale={locale} labels={labels} />

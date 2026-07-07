@@ -24,9 +24,9 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
     <div className={className}>
       <AboutHero
         badge={t("heroBadge")}
-        tagline={t("heroTagline")}
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
+        subtitleSecondary={t("heroSubtitleSecondary")}
         imageAlt={t("heroImageAlt")}
         scrollLabel={t("scrollLabel")}
         stats={stats}

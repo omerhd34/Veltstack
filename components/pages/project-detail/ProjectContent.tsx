@@ -30,7 +30,10 @@ export function ProjectContent({
   className,
 }: ProjectContentProps) {
   return (
-    <section className={cn("bg-background py-24 md:py-32", className)}>
+    <section
+      id="project-overview"
+      className={cn("scroll-mt-16 bg-background py-24 md:py-32", className)}
+    >
       <SiteContainer>
         <div className="mx-auto max-w-3xl text-center">
           <SectionBadge variant="accent">

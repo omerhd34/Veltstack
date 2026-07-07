@@ -1,6 +1,12 @@
 import { getLocale } from "next-intl/server";
 import Image from "next/image";
-import { LuArrowLeft, LuCalendar, LuClock, LuPenLine } from "react-icons/lu";
+import {
+  LuArrowLeft,
+  LuCalendar,
+  LuChevronDown,
+  LuClock,
+  LuPenLine,
+} from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
@@ -18,9 +24,11 @@ interface BlogDetailHeroProps {
   readingTime: string;
   title: string;
   excerpt: string;
+  excerptSecondary: string;
   imageUrl: string;
   imageAlt: string;
   writtenByLabel: string;
+  scrollLabel: string;
   className?: string;
 }
 
@@ -30,9 +38,11 @@ export async function BlogDetailHero({
   readingTime,
   title,
   excerpt,
+  excerptSecondary,
   imageUrl,
   imageAlt,
   writtenByLabel,
+  scrollLabel,
   className,
 }: BlogDetailHeroProps) {
   const locale = (await getLocale()) as "tr" | "en";
@@ -105,6 +115,9 @@ export async function BlogDetailHero({
             <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/72 sm:text-base lg:text-lg">
               {excerpt}
             </p>
+            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
+              {excerptSecondary}
+            </p>
 
             <div className="mt-10 inline-flex min-w-70 max-w-md items-center gap-4 rounded-2xl border border-emerald-900/45 bg-[#0a1612]/75 px-5 py-4 sm:min-w-[20rem] sm:max-w-lg sm:px-6 shadow-[0_12px_40px_rgb(0_0_0/0.25)] backdrop-blur-sm">
               <div className="relative size-12 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-accent/35 ring-offset-2 ring-offset-[#0a1612]">
@@ -134,6 +147,18 @@ export async function BlogDetailHero({
             alt={imageAlt}
             className="mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end"
           />
+        </div>
+
+        <div className="mt-auto shrink-0 pt-6 sm:pt-8">
+          <a
+            href="#blog-article"
+            className="flex flex-col items-center gap-1.5 text-emerald-300/50 transition-colors hover:text-emerald-300/80"
+          >
+            <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em]">
+              {scrollLabel}
+            </span>
+            <LuChevronDown className="size-4 animate-bounce" aria-hidden />
+          </a>
         </div>
       </SiteContainer>
 

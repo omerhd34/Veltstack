@@ -6,9 +6,9 @@ import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageH
 
 interface AboutHeroProps {
   badge: string;
-  tagline: string;
   title: string;
   subtitle: string;
+  subtitleSecondary: string;
   imageAlt: string;
   scrollLabel: string;
   stats: HeroStat[];
@@ -17,9 +17,9 @@ interface AboutHeroProps {
 
 export function AboutHero({
   badge,
-  tagline,
   title,
   subtitle,
+  subtitleSecondary,
   imageAlt,
   scrollLabel,
   stats,
@@ -47,18 +47,20 @@ export function AboutHero({
           <div className="min-w-0 max-w-2xl lg:max-w-none">
             <SectionBadge>{badge}</SectionBadge>
 
-            <p className="mt-8 flex items-center gap-3 text-sm font-medium uppercase tracking-[0.18em] text-emerald-300/70 sm:mt-10">
-              <span aria-hidden className="h-px w-8 bg-emerald-500/30" />
-              {tagline}
-              <span aria-hidden className="h-px w-8 bg-emerald-500/30" />
-            </p>
+            <div
+              aria-hidden
+              className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
+            />
 
-            <h1 className="mt-5 font-(family-name:--font-heading) text-[1.875rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[2.875rem]">
+            <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
               {title}
             </h1>
 
             <p className="mt-4 max-w-xl text-sm leading-[1.85] text-emerald-50/75 sm:mt-6 sm:text-base lg:text-lg">
               {subtitle}
+            </p>
+            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
+              {subtitleSecondary}
             </p>
           </div>
 

@@ -33,7 +33,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   const title = locale === "tr" ? post.titleTr : post.titleEn;
-  const desc = locale === "tr" ? post.excerptTr : post.excerptEn;
+  const desc = locale === "tr" ? post.excerptShortTr : post.excerptShortEn;
   const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
     href: `/blog/${slug}`,
@@ -70,7 +70,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const loc = locale as "tr" | "en";
 
   const title = loc === "tr" ? post.titleTr : post.titleEn;
-  const excerpt = loc === "tr" ? post.excerptTr : post.excerptEn;
+  const excerpt = loc === "tr" ? post.excerptShortTr : post.excerptShortEn;
   const category = loc === "tr" ? post.category : post.categoryEn;
   const date = formatDate(post.publishedAt, loc);
   const readingTime = t("readingTime", { minutes: post.readingTime });
@@ -142,12 +142,14 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         readingTime={readingTime}
         title={title}
         excerpt={excerpt}
+        excerptSecondary={t("articleSubtitleSecondary")}
         imageUrl={getBlogDetailImageUrl(post.imageUrl)}
         imageAlt={title}
         writtenByLabel={t("writtenByLabel")}
+        scrollLabel={t("articleScrollLabel")}
       />
 
-      <SiteContainer className="py-16 md:py-20">
+      <SiteContainer id="blog-article" className="scroll-mt-16 py-16 md:py-20">
         <div className="mx-auto max-w-7xl">
           <BlogArticleBody html={articleContent} locale={loc} />
 

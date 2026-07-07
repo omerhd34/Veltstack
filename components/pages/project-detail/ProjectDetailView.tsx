@@ -72,9 +72,11 @@ export async function ProjectDetailView({
         badge={t(`${slug}.heroBadge`)}
         title={t(`${slug}.heroTitle`)}
         subtitle={t(`${slug}.heroSubtitle`)}
+        subtitleSecondary={t("heroSubtitleSecondary")}
         metrics={metrics}
         demoUrl={projectDemoUrls[slug]}
         demoLabel={t("demo")}
+        scrollLabel={t("scrollLabel")}
         imageUrl={projectImageUrls[slug]}
         coverGradient={projectCoverGradients[slug]}
         icon={project.icon}

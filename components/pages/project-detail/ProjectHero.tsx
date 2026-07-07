@@ -1,17 +1,20 @@
 import type { IconType } from "react-icons";
-import { LuExternalLink } from "react-icons/lu";
+import { LuChevronDown, LuExternalLink } from "react-icons/lu";
 import Image from "next/image";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { HeroStatsCards } from "@/components/ui/HeroStatsCards";
 import { cn } from "@/lib/utils";
 
 interface ProjectHeroProps {
   badge: string;
   title: string;
   subtitle: string;
+  subtitleSecondary: string;
   metrics: { value: string; label: string }[];
   demoUrl?: string;
   demoLabel: string;
+  scrollLabel: string;
   imageUrl?: string;
   coverGradient: string;
   icon: IconType;
@@ -22,9 +25,11 @@ export function ProjectHero({
   badge,
   title,
   subtitle,
+  subtitleSecondary,
   metrics,
   demoUrl,
   demoLabel,
+  scrollLabel,
   imageUrl,
   coverGradient,
   icon: Icon,
@@ -55,32 +60,24 @@ export function ProjectHero({
           <div className="min-w-0">
             <SectionBadge>{badge}</SectionBadge>
 
-            <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3.25rem]">
+            <div
+              aria-hidden
+              className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
+            />
+
+            <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
               {title}
             </h1>
 
             <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/75 sm:text-base lg:text-lg">
               {subtitle}
             </p>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {metrics.map((metric) => (
-                <div
-                  key={`${metric.label}-${metric.value}`}
-                  className="rounded-2xl border border-emerald-900/45 bg-[#0a1612]/70 px-4 py-4"
-                >
-                  <p className="text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-emerald-300/50">
-                    {metric.label}
-                  </p>
-                  <p className="mt-1 font-(family-name:--font-heading) text-lg font-bold text-white">
-                    {metric.value}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
+              {subtitleSecondary}
+            </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-lg lg:max-w-none lg:justify-self-end">
+          <div className="relative mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end">
             <div
               aria-hidden
               className="absolute -inset-3 rounded-[2rem] bg-linear-to-br from-brand-accent/20 via-transparent to-emerald-600/10 blur-2xl"
@@ -114,6 +111,20 @@ export function ProjectHero({
             )}
           </div>
         </div>
+
+        <div className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8">
+          <HeroStatsCards stats={metrics} />
+
+          <a
+            href="#project-overview"
+            className="mt-6 flex flex-col items-center gap-1.5 text-emerald-300/50 transition-colors hover:text-emerald-300/80 sm:mt-8"
+          >
+            <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em]">
+              {scrollLabel}
+            </span>
+            <LuChevronDown className="size-4 animate-bounce" aria-hidden />
+          </a>
+        </div>
       </SiteContainer>
     </section>
   );
@@ -135,7 +146,7 @@ function PreviewFrame({
   return (
     <div
       className={cn(
-        "relative aspect-16/10 overflow-hidden rounded-3xl border border-emerald-700/30 shadow-[0_24px_80px_rgb(0_0_0/0.45)] transition-transform duration-500 group-hover/preview:scale-[1.01]",
+        "relative h-[min(32vh,280px)] w-full overflow-hidden rounded-3xl border border-emerald-700/30 shadow-[0_24px_80px_rgb(0_0_0/0.45)] transition-transform duration-500 group-hover/preview:scale-[1.01] sm:h-[min(36vh,320px)] lg:h-[min(42vh,380px)]",
         !imageUrl && cn("bg-linear-to-br", coverGradient),
       )}
     >
