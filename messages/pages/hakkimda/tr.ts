@@ -4,6 +4,8 @@ export const aboutTr = {
   heroTitle: "İş hedeflerinize uygun dijital çözümler üretiyoruz.",
   heroSubtitle:
     "Veltstack; web sitesi, mobil uygulama ve SEO odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eden bir geliştirme markasıdır.",
+  heroSubtitleSecondary:
+    "Kurumsal web ve e-ticaretten performans odaklı altyapılara kadar tasarım, yazılım ve büyüme hedeflerini tek bir teslim çizgisinde birleştiriyoruz.",
   heroImageAlt: "Veltstack dijital geliştirme çalışma alanı",
   scrollLabel: "Devamını oku",
   stats: [

@@ -1,5 +1,8 @@
 export const projectDetailsEn = {
   demo: "View Live Site",
+  heroSubtitleSecondary:
+    "Below you can explore the project's business problem, solution approach, technical details and key features alongside measurable metrics.",
+  scrollLabel: "View details",
   showMore: "Show More",
   showLess: "Show Less",
   detailsTitle: "Project Details",

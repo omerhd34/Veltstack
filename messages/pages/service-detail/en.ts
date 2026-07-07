@@ -5,7 +5,7 @@ import {
   uygulamaGelistirmeProcessEn,
   webSitesiGelistirmeProcessEn,
   webSitesiYenilemeProcessEn,
-} from "../service-process-items/en";
+} from "@/components/pages/service-detail/service-process-items/en";
 
 export const serviceDetailsEn = {
   featuresTitle: "What We Offer",

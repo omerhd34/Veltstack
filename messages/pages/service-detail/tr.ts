@@ -5,7 +5,7 @@ import {
   uygulamaGelistirmeProcessTr,
   webSitesiGelistirmeProcessTr,
   webSitesiYenilemeProcessTr,
-} from "../service-process-items/tr";
+} from "@/components/pages/service-detail/service-process-items/tr";
 
 export const serviceDetailsTr = {
   featuresTitle: "Neler Sunuyoruz",

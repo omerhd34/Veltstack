@@ -12,14 +12,14 @@ import { blogPreviewHomeTr } from "@/components/sections/blog-preview/messages/t
 import { ctaHomeTr } from "@/components/sections/cta/messages/tr";
 import { clientLogosHomeTr } from "@/components/sections/client-logos/messages/tr";
 import { techMarqueeHomeTr } from "@/components/sections/tech-marquee/messages/tr";
-import { projectDetailsTr } from "@/components/pages/project-detail/messages/tr";
-import { serviceDetailsTr } from "@/components/pages/service-detail/messages/tr";
-import { servicesPageTr } from "@/components/pages/services/messages/tr";
-import { projectsPageTr } from "@/components/pages/projects/messages/tr";
-import { pagesTr } from "@/app/[locale]/messages/pages/tr";
-import { contactTr } from "@/app/[locale]/iletisim/messages/tr";
-import { aboutTr } from "@/app/[locale]/hakkimda/messages/tr";
-import { blogPageTr } from "@/components/pages/blog/messages/tr";
+import { projectDetailsTr } from "@/messages/pages/project-detail/tr";
+import { serviceDetailsTr } from "@/messages/pages/service-detail/tr";
+import { servicesPageTr } from "@/messages/pages/services/tr";
+import { projectsPageTr } from "@/messages/pages/projects/tr";
+import { pagesTr } from "@/messages/pages/meta/tr";
+import { contactTr } from "@/messages/pages/iletisim/tr";
+import { aboutTr } from "@/messages/pages/hakkimda/tr";
+import { blogPageTr } from "@/messages/pages/blog/tr";
 import { workflowTr } from "@/components/sections/workflow/messages/tr";
 import { approachTr } from "@/components/sections/approach/messages/tr";
 

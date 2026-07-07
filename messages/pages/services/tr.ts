@@ -33,7 +33,7 @@ export const servicesPageTr = {
     },
     {
       value: "6",
-      label: "Hizmet Tipi",
+      label: "Hizmet Alanı",
       hint: "Web sitesi, uygulama, yenileme, SEO, teknik denetim ve bakım dahil altı farklı hizmet kategorisi.",
     },
     {

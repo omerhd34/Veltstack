@@ -1,4 +1,4 @@
-import { blogPageEn } from "@/components/pages/blog/messages/en";
+import { blogPageEn } from "@/messages/pages/blog/en";
 import { navEn } from "@/components/layout/navbar/messages/en";
 import { footerEn } from "@/components/layout/footer/messages/en";
 import { heroHomeEn } from "@/components/sections/hero/messages/en";
@@ -13,13 +13,13 @@ import { blogPreviewHomeEn } from "@/components/sections/blog-preview/messages/e
 import { ctaHomeEn } from "@/components/sections/cta/messages/en";
 import { clientLogosHomeEn } from "@/components/sections/client-logos/messages/en";
 import { techMarqueeHomeEn } from "@/components/sections/tech-marquee/messages/en";
-import { projectDetailsEn } from "@/components/pages/project-detail/messages/en";
-import { serviceDetailsEn } from "@/components/pages/service-detail/messages/en";
-import { servicesPageEn } from "@/components/pages/services/messages/en";
-import { projectsPageEn } from "@/components/pages/projects/messages/en";
-import { pagesEn } from "@/app/[locale]/messages/pages/en";
-import { contactEn } from "@/app/[locale]/iletisim/messages/en";
-import { aboutEn } from "@/app/[locale]/hakkimda/messages/en";
+import { projectDetailsEn } from "@/messages/pages/project-detail/en";
+import { serviceDetailsEn } from "@/messages/pages/service-detail/en";
+import { servicesPageEn } from "@/messages/pages/services/en";
+import { projectsPageEn } from "@/messages/pages/projects/en";
+import { pagesEn } from "@/messages/pages/meta/en";
+import { contactEn } from "@/messages/pages/iletisim/en";
+import { aboutEn } from "@/messages/pages/hakkimda/en";
 import { workflowEn } from "@/components/sections/workflow/messages/en";
 import { approachEn } from "@/components/sections/approach/messages/en";
 
