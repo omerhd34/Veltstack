@@ -8,12 +8,15 @@ export const blogPostEntry: BlogPostEntry = {
     "React ve Next.js'in temellerini, ikisinin birlikte neden tercih edildiğini ve modern web projelerinde sundukları avantajları anlatıyoruz; bileşen mimarisi, sunucu tarafı render, performans ve SEO faydalarını gerçek kullanım senaryolarıyla birlikte sade bir dille ele alıyoruz.",
   excerptEn:
     "We cover the fundamentals of React and Next.js, why they are used together, and the advantages they bring to modern web projects, explaining component architecture, server-side rendering, performance and SEO benefits with real-world scenarios in plain, approachable language.",
+  excerptShortTr:
+    "React ve Next.js'in temellerini ve ikisinin birlikte sunduğu avantajları sade bir dille anlatıyoruz.",
+  excerptShortEn:
+    "The fundamentals of React and Next.js and the advantages of using them together, in plain language.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/blog/react-nextjs.png",
   readingTime: 10,
   publishedAt: "2026-06-21",
-  featured: true,
   content: {
     tr: `
 <p>Modern web uygulamalarında en çok tercih edilen ikili <strong>React</strong> ve <strong>Next.js</strong>. Peki React nedir, Next.js ne işe yarar ve neden birlikte kullanılırlar? Bu yazıda temel kavramları, farkları ve proje seçiminde dikkat edilmesi gerekenleri paylaşıyoruz.</p>

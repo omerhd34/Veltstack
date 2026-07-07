@@ -13,12 +13,15 @@ export const blogPostEntry: BlogPostEntry = {
     "Node.js ve Prisma ORM ile backend geliştirmenin temellerini, Next.js Route Handlers ile entegrasyonu ve modern API mimarisini anlatıyoruz; veritabanı modelleme, tip güvenliği, migration yönetimi ve performans konularını gerçek örneklerle birlikte adım adım ele alıyoruz.",
   excerptEn:
     "We cover the fundamentals of backend development with Node.js and Prisma ORM, integration with Next.js Route Handlers and modern API architecture, walking through database modeling, type safety, migration management and performance with practical, real-world examples step by step.",
+  excerptShortTr:
+    "Node.js ve Prisma ile modern backend ve API mimarisinin temellerini gerçek örneklerle anlatıyoruz.",
+  excerptShortEn:
+    "The fundamentals of modern backend and API architecture with Node.js and Prisma, explained with real examples.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/blog/node-js-ve-prisma-ile-backend.png",
   readingTime: 10,
   publishedAt: "2026-07-07",
-  featured: true,
   content: {
     tr: `
 <p>Modern web uygulamasının kalbi <strong>backend</strong> katmanıdır: veritabanı işlemleri, kimlik doğrulama, ödeme entegrasyonları ve iş mantığı burada çalışır. Veltstack projelerinde bu katmanı <strong>Node.js</strong> ve <strong>Prisma ORM</strong> ile inşa ediyoruz. Bu yazıda Node.js'in ne olduğunu, Prisma'nın neden tercih edildiğini ve Next.js ile nasıl bir arada çalıştığını anlatıyoruz.</p>

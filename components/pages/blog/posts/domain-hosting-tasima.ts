@@ -8,12 +8,15 @@ export const blogPostEntry: BlogPostEntry = {
     "Domain veya hosting sağlayıcısı değiştirirken izlemeniz gereken adımları, DNS güncellemesini ve kesintisiz geçiş için dikkat edilecek noktaları anlatıyoruz; e-posta, SSL ve veri yedeğini kaybetmeden, ziyaretçi kaybı yaşamadan taşımayı gerçek deneyimlerimizle adım adım paylaşıyoruz.",
   excerptEn:
     "We walk through the steps for changing domain or hosting providers, updating DNS and ensuring a smooth migration with minimal downtime, showing how to move without losing email, SSL, data backups or visitors, based on our real experience.",
+  excerptShortTr:
+    "Domain veya hosting sağlayıcısını kesintisiz, veri kaybı yaşamadan taşımanın adımlarını anlatıyoruz.",
+  excerptShortEn:
+    "The steps to move your domain or hosting provider smoothly, without downtime or data loss.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/domain-hosting-tasima.png",
   readingTime: 10,
   publishedAt: "2026-06-25",
-  featured: true,
   content: {
     tr: `
 <p>Mevcut sağlayıcınızdan memnun değilseniz, daha hızlı bir altyapıya geçmek istiyorsanız veya Vercel gibi modern bir platforma taşınıyorsanız <strong>domain ve hosting taşıma</strong> sürecini doğru planlamak kritiktir. Yanlış adımlar site kesintisine, e-posta kaybına ve SEO düşüşüne yol açabilir. Bu rehberde taşıma türlerini, hazırlık listesini ve adım adım süreci paylaşıyoruz.</p>

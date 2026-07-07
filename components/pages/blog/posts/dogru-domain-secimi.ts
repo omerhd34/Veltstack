@@ -9,12 +9,15 @@ export const blogPostEntry: BlogPostEntry = {
     "Markanıza uygun domain adını nasıl belirleyeceğinizi, doğru uzantıyı seçmenin inceliklerini ve sık yapılan hataları pratik bir rehberle paylaşıyoruz; ismin SEO üzerindeki etkisini, akılda kalıcılığı ve marka güvenini artıran ipuçlarını da adım adım örneklerle ele alıyoruz.",
   excerptEn:
     "A practical guide to picking a domain name that fits your brand, choosing the right extension and avoiding common mistakes, while understanding how your domain affects SEO, memorability and customer trust, with clear step-by-step examples you can apply right away.",
+  excerptShortTr:
+    "Markanıza uygun domain adını ve doğru uzantıyı seçmenin inceliklerini pratik bir rehberle paylaşıyoruz.",
+  excerptShortEn:
+    "A practical guide to picking the right domain name and extension for your brand.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/dogru-domain-secimi.png",
   readingTime: 8,
   publishedAt: "2026-06-24",
-  featured: true,
   content: {
     tr: `
 <p>Domain adınız, markanızın dijital vitrinidir. İlk izlenim, arama sonuçlarındaki tıklama oranı ve müşteri güveni büyük ölçüde bu adrese bağlıdır. Doğru domain seçimi; kısa, akılda kalıcı ve hedef kitlenize uygun bir isimle başlar. Bu rehberde isimlendirme kurallarını, uzantı tercihlerini ve kaçınılması gereken hataları ele alıyoruz.</p>

@@ -15,6 +15,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Domain ve hosting kavramlarını sade bir dille açıklıyoruz; ikisinin farkını, birlikte nasıl çalıştıklarını, DNS'in rolünü ve domain satın alma sürecini adım adım ele alıyor, ilk web sitenizi yayına almadan önce bilmeniz gereken her şeyi anlatıyoruz.",
   excerptEn:
     "We explain domain and hosting concepts in plain language, covering how they differ and work together, the role of DNS, and the domain purchase process step by step, so you know everything needed before launching your first website.",
+  excerptShortTr:
+    "Domain ve hosting nedir, nasıl birlikte çalışır ve DNS'in rolü nedir, sade bir dille anlatıyoruz.",
+  excerptShortEn:
+    "What domain and hosting are, how they work together and the role of DNS, in plain language.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/domain-hosting.png",

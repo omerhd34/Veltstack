@@ -13,6 +13,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Domain, DNS, SSL ve hosting yönetiminde neden ixirhost altyapısını tercih ettiğimizi; hız, güvenlik, destek kalitesi ve fiyat açısından alternatif sağlayıcılarla karşılaştırarak; gerçek proje deneyimlerimizden yola çıkarak avantajları ve dikkat edilmesi gereken noktaları adım adım anlatıyoruz.",
   excerptEn:
     "Why we choose the ixirhost infrastructure for domain, DNS, SSL and hosting management; we compare it with alternative providers in terms of speed, security, support quality and pricing, sharing the advantages and caveats drawn from our real project experience.",
+  excerptShortTr:
+    "Domain, DNS, SSL ve hosting yönetiminde neden ixirhost'u tercih ettiğimizi; hız, güvenlik ve fiyat açısından anlatıyoruz.",
+  excerptShortEn:
+    "Why we choose ixirhost for domain, DNS, SSL and hosting, compared by speed, security and pricing.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/neden-ixirhost.png",

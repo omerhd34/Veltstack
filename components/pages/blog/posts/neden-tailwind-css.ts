@@ -13,12 +13,15 @@ export const blogPostEntry: BlogPostEntry = {
     "Bootstrap, Tailwind CSS ve benzeri CSS framework'lerini karşılaştırıyoruz; modern web projelerinde neden utility-first yaklaşımı tercih ettiğimizi, geliştirme hızını, bakım kolaylığını ve tasarım tutarlılığını nasıl artırdığını gerçek örneklerle birlikte adım adım anlatıyoruz.",
   excerptEn:
     "We compare Bootstrap, Tailwind CSS and similar CSS frameworks, and explain why the utility-first approach is our choice for modern web projects, showing how it boosts development speed, maintainability and design consistency with practical, real-world examples.",
+  excerptShortTr:
+    "Bootstrap ile Tailwind CSS'i karşılaştırıp modern projelerde neden utility-first yaklaşımı tercih ettiğimizi anlatıyoruz.",
+  excerptShortEn:
+    "We compare Bootstrap and Tailwind CSS and explain why utility-first is our choice for modern projects.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/blog/neden-tailwind-css.png",
   readingTime: 9,
   publishedAt: "2026-07-07",
-  featured: true,
   content: {
     tr: `
 <p>Web projesine başlarken sık sorulan sorulardan biri şudur: arayüzü hangi <strong>CSS framework'ü</strong> ile inşa edeceğiz? Yıllarca <strong>Bootstrap</strong> bu alanda standarttı; bugün ise <strong>Tailwind CSS</strong> ve benzeri utility-first çözümler modern stack'lerin vazgeçilmezi haline geldi. Bu yazıda Bootstrap, Tailwind ve alternatifleri karşılaştırıyor; Veltstack olarak neden Tailwind'i tercih ettiğimizi açıklıyoruz.</p>

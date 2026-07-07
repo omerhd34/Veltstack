@@ -8,12 +8,15 @@ export const blogPostEntry: BlogPostEntry = {
     "Next.js projelerini Vercel'e nasıl deploy edeceğinizi adım adım anlatıyoruz; ortam değişkenleri, özel domain bağlama, preview ortamları, otomatik dağıtım ve sık karşılaşılan hataları kapsıyor, sorunsuz bir yayın süreci için pratik ipuçlarını da paylaşıyoruz.",
   excerptEn:
     "A step-by-step guide to deploying Next.js projects on Vercel, covering environment variables, custom domain setup, preview environments, automatic deployments and common pitfalls, along with practical tips to help you ship a smooth, production-ready release with confidence.",
+  excerptShortTr:
+    "Next.js projelerini Vercel'e deploy etmeyi; ortam değişkenleri, domain ve sık hatalarla birlikte adım adım anlatıyoruz.",
+  excerptShortEn:
+    "A step-by-step guide to deploying Next.js projects on Vercel, covering env variables, domains and common pitfalls.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/blog/vercel-de-yayin.png",
   readingTime: 9,
   publishedAt: "2026-06-22",
-  featured: true,
   content: {
     tr: `
 <p>Next.js projesini canlıya almak için en pratik yollardan biri <strong>Vercel</strong>. Git push ile otomatik deploy, global CDN ve preview ortamları sayesinde hem geliştirme hem production sürecini hızlandırır. Bu rehberde Vercel'de yayın sürecini sıfırdan adım adım ele alıyoruz.</p>

@@ -8,6 +8,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Arama motoru optimizasyonunun temellerini, türlerini ve uygulanabilir adımlarını kapsamlı bir rehberle paylaşıyoruz; teknik altyapı, içerik stratejisi, anahtar kelime araştırması ve bağlantı çalışmalarını birlikte ele alıyor, sıralamanızı gerçekten yükseltecek pratik yöntemleri anlatıyoruz.",
   excerptEn:
     "A comprehensive guide to SEO basics, types and actionable steps, covering technical foundations, content strategy, keyword research and link building in one place, with practical methods that genuinely help you climb the search rankings over time.",
+  excerptShortTr:
+    "SEO'nun temellerini, türlerini ve sıralamanızı yükseltecek uygulanabilir adımları kapsamlı bir rehberde topluyoruz.",
+  excerptShortEn:
+    "A comprehensive guide to SEO basics, types and actionable steps to climb the search rankings.",
   category: "SEO",
   categoryEn: "SEO",
   imageUrl: "/images/blog/seo.png",

@@ -13,12 +13,15 @@ export const blogPostEntry: BlogPostEntry = {
     "Başarılı bir web projesini mobil uygulamaya taşımanın işletmelere sağladığı avantajları; React Native ve Expo ile modern geçiş sürecini, kod paylaşımını, mağaza yayın adımlarını ve dikkat edilmesi gereken noktaları gerçek deneyimlerimizden örneklerle birlikte anlatıyoruz.",
   excerptEn:
     "We explain the business advantages of turning a successful web project into a mobile app, and the modern transition process with React Native and Expo, covering code sharing, store publishing steps and key pitfalls, illustrated with real examples.",
+  excerptShortTr:
+    "Web projesini React Native ve Expo ile mobil uygulamaya taşımanın avantajlarını ve sürecini anlatıyoruz.",
+  excerptShortEn:
+    "The advantages and process of turning a web project into a mobile app with React Native and Expo.",
   category: "Mobil Uygulama",
   categoryEn: "Mobile Apps",
   imageUrl: "/images/blog/webden-mobile-gecis.png",
   readingTime: 10,
   publishedAt: "2026-07-07",
-  featured: true,
   content: {
     tr: `
 <p>Web siteniz trafik alıyor, dönüşüm sağlıyor ve markanızı güçlü temsil ediyorsa bir sonraki mantıklı adım <strong>mobil uygulama</strong> olabilir. Responsive tasarım telefonda çalışan bir site sunar; ancak native uygulama push bildirimi, çevrimdışı erişim ve ana ekran varlığı gibi ek avantajlar getirir. Bu yazıda başarılı bir web projesini mobil uygulamaya taşımanın işletmelere sağladığı faydaları ve <strong>React Native</strong> ile <strong>Expo</strong> kullanarak nasıl geçiş yapılabileceğini anlatıyoruz.</p>

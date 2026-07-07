@@ -8,12 +8,15 @@ export const blogPostEntry: BlogPostEntry = {
     "Türkiye'de e-ticaret ve online ödeme için PayTR, iyzico, Param, Paynet, Shopier ve iPara sanal POS sağlayıcılarını komisyon, entegrasyon kolaylığı ve destek açısından karşılaştırıyoruz; projenize en uygun ödeme altyapısını seçmenize adım adım yardımcı oluyoruz.",
   excerptEn:
     "We compare PayTR, iyzico, Param, Paynet, Shopier and iPara, Turkey's leading virtual POS providers, in terms of commission rates, integration ease and support quality, helping you choose the payment infrastructure that best fits your e-commerce project step by step.",
+  excerptShortTr:
+    "PayTR, iyzico, Param, Shopier ve daha fazlasını komisyon, entegrasyon ve destek açısından karşılaştırıyoruz.",
+  excerptShortEn:
+    "We compare PayTR, iyzico, Param, Shopier and more by commission, integration and support.",
   category: "Araçlar & İpuçları",
   categoryEn: "Tools & Tips",
   imageUrl: "/images/blog/en-iyi-sanal-pos-firmalari.png",
   readingTime: 8,
   publishedAt: "2026-06-24",
-  featured: true,
   content: {
     tr: `
 <p>E-ticaret sitesi veya online hizmet sunuyorsanız <strong>sanal POS</strong> seçimi, dönüşüm oranından müşteri güvenine kadar her şeyi etkiler. Türkiye'de onlarca ödeme kuruluşu var; bu yazıda en çok tercih edilen <strong>7 sanal POS firmasını</strong> karşılaştırıyor, hangi senaryoda hangisinin mantıklı olduğunu anlatıyoruz.</p>

@@ -13,6 +13,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Kaliteli yazılımda insan geliştiricinin kod yazmasının neden şart olduğunu; yapay zekânın yalnızca yardımcı bir araç olarak sınırlarını, risklerini ve doğru kullanım yaklaşımını detaylı biçimde anlatıyor, üretkenliği artırırken kaliteyi nasıl koruyacağınızı gerçek örneklerle ele alıyoruz.",
   excerptEn:
     "Why a human developer writing code is essential for quality software, where AI helps only as a supporting tool, and what limits and risks to keep in mind; we show how to boost productivity while protecting quality with real examples.",
+  excerptShortTr:
+    "Kaliteli yazılımda insan geliştiricinin kod yazması neden şart; yapay zekâyı yardımcı araç olarak doğru kullanmanın yolunu gerçek örneklerle anlatıyoruz.",
+  excerptShortEn:
+    "Why a human developer must write the code for quality software, and how to use AI as a helper tool the right way, with real examples.",
   category: "Yapay Zeka",
   categoryEn: "Artificial Intelligence",
   imageUrl: "/images/blog/geleneksel-yazilim-yapay-zeka.png",

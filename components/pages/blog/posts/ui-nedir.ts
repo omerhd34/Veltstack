@@ -13,6 +13,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Kullanıcı arayüzü (UI) kavramını, UX'ten farkını, modern bileşen kütüphanelerini ve Veltstack'in shadcn/ui ile Lightswind tercihini anlatıyoruz; iyi bir arayüzün kullanıcı deneyimini, dönüşümü ve marka algısını nasıl etkilediğini gerçek örneklerle birlikte ele alıyoruz.",
   excerptEn:
     "We explain user interface (UI), how it differs from UX, modern component libraries, and why Veltstack chooses shadcn/ui with Lightswind, showing how a good interface shapes user experience, conversion and brand perception through clear, real-world examples.",
+  excerptShortTr:
+    "UI nedir, UX'ten farkı nedir ve Veltstack neden shadcn/ui ile Lightswind tercih ediyor, örneklerle anlatıyoruz.",
+  excerptShortEn:
+    "What UI is, how it differs from UX, and why Veltstack chooses shadcn/ui with Lightswind, with examples.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/blog/ui-nedir.png",

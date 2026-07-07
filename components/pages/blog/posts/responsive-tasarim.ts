@@ -8,6 +8,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Mobil uyumluluk ile responsive tasarım arasındaki farkı, mobile-first yaklaşımı ve gerçekten her ekranda kusursuz çalışan bir arayüz için pratik kuralları paylaşıyoruz; breakpoint yönetimi, esnek grid ve görsel optimizasyonunu gerçek örneklerle birlikte adım adım anlatıyoruz.",
   excerptEn:
     "We explain the difference between mobile-friendly and responsive design, the mobile-first approach and practical rules for interfaces that truly work on every screen, covering breakpoint management, flexible grids and image optimization with clear, real-world examples step by step.",
+  excerptShortTr:
+    "Mobil uyumluluk ile responsive tasarımın farkını ve her ekranda kusursuz çalışan arayüzün pratik kurallarını paylaşıyoruz.",
+  excerptShortEn:
+    "The difference between mobile-friendly and responsive design, plus practical rules for interfaces that work on every screen.",
   category: "Responsive",
   categoryEn: "Responsive",
   imageUrl: "/images/blog/responsive-tasarim.png",

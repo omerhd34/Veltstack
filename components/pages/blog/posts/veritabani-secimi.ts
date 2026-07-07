@@ -8,12 +8,15 @@ export const blogPostEntry: BlogPostEntry = {
     "SQL ve NoSQL arasındaki farkı, MySQL, PostgreSQL ve MongoDB karşılaştırmasını ve projenize uygun veritabanını seçerken dikkat edilecek kriterleri ele alıyoruz; ölçeklenebilirlik, performans, veri modeli ve maliyet açısından doğru kararı vermenize gerçek örneklerle yardımcı oluyoruz.",
   excerptEn:
     "We compare SQL and NoSQL, MySQL, PostgreSQL and MongoDB, and the criteria for picking the right database for your project, helping you make the right decision in terms of scalability, performance, data model and cost with real examples.",
+  excerptShortTr:
+    "SQL ve NoSQL farkını, MySQL, PostgreSQL ve MongoDB karşılaştırmasını ve doğru veritabanı seçimini ele alıyoruz.",
+  excerptShortEn:
+    "SQL vs NoSQL, a comparison of MySQL, PostgreSQL and MongoDB, and how to pick the right database.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/blog/veritabani-secimi.png",
   readingTime: 10,
   publishedAt: "2026-06-23",
-  featured: true,
   content: {
     tr: `
 <p>Yeni bir web veya mobil projeye başlarken alınan en kritik teknik kararlardan biri <strong>veritabanı seçimi</strong>dir. Yanlış tercih; performans sorunları, maliyet artışı ve ileride zor migration süreçlerine yol açabilir. Bu yazıda SQL ve NoSQL modellerini, popüler veritabanlarını ve proje ihtiyacına göre nasıl karar vereceğinizi anlatıyoruz.</p>

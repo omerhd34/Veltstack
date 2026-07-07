@@ -13,6 +13,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Özel yazılımın hazır CMS çözümlerine göre neden şart olduğunu; kaliteli, ölçeklenebilir ve güvenli bir projede insan geliştiricinin kod yazmasının neden vazgeçilmez olduğunu; performans, bakım ve özelleştirme avantajlarını gerçek örneklerle birlikte adım adım anlatıyoruz.",
   excerptEn:
     "Why custom software beats ready-made CMS solutions for quality projects, and why a human developer writing real code stays non-negotiable when you need scalability, security and performance; we walk through the maintenance and customization advantages with practical examples.",
+  excerptShortTr:
+    "Özel yazılımın hazır CMS çözümlerine göre neden şart olduğunu; performans, güvenlik ve bakım avantajlarıyla anlatıyoruz.",
+  excerptShortEn:
+    "Why custom software beats ready-made CMS for quality projects, with performance, security and maintenance advantages.",
   category: "Özel Yazılım",
   categoryEn: "Custom Software",
   imageUrl: "/images/blog/ozel-yazilim-cms.png",

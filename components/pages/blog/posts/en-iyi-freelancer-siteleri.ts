@@ -10,6 +10,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Global ve Türkiye'deki en popüler freelance platformlarını komisyon oranları, iş hacmi, güvenlik ve ödeme koşulları açısından karşılaştırıyoruz; hem işveren hem de freelancer olarak size en uygun platformu seçmenize adım adım yardımcı oluyoruz.",
   excerptEn:
     "We compare the most popular freelance platforms globally and in Turkey in terms of commission rates, job volume, security and payment terms, helping you choose the right one step by step whether you hire talent or work as a freelancer.",
+  excerptShortTr:
+    "Global ve Türkiye'deki popüler freelance platformlarını komisyon, iş hacmi ve güvenlik açısından karşılaştırıyoruz.",
+  excerptShortEn:
+    "We compare popular freelance platforms globally and in Turkey by commission, job volume and security.",
   category: "Araçlar & İpuçları",
   categoryEn: "Tools & Tips",
   imageUrl: "/images/blog/en-iyi-freelancer-siteleri.png",
