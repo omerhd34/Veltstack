@@ -14,7 +14,7 @@ export async function HeroSection({ className }: HeroSectionProps) {
 
   return (
     <section
-      className={`relative flex min-h-[calc(100dvh-4rem)] items-center overflow-hidden bg-[#0A0A0F] text-white ${className ?? ""}`}
+      className={`relative flex min-h-dvh items-center overflow-hidden bg-[#0A0A0F] pt-18 text-white ${className ?? ""}`}
     >
       <HeroImage alt={t("heroImageAlt")} />
       <SiteContainer className="relative z-10 w-full py-10 lg:py-16">

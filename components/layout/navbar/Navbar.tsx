@@ -1,62 +1,73 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { LuMenu } from "react-icons/lu"
-import { Link } from "@/i18n/navigation"
-import { useUiStore } from "@/store/uiSlice"
-import { Button } from "@/components/ui/shadcn"
-import { SiteContainer } from "@/components/layout/SiteContainer"
-import { cn } from "@/lib/utils"
-import { NavbarLogo } from "./NavbarLogo"
-import { NavbarDesktopLinks } from "./NavbarDesktopLinks"
-import { NavbarMobileMenu } from "./NavbarMobileMenu"
-import { NavbarLangSwitcher } from "./NavbarLangSwitcher"
-import { NavbarCta } from "./NavbarCta"
-import { NavbarServicesMegaMenuPanel } from "./NavbarServicesMegaMenuPanel"
-import { NavbarProjectsMegaMenuPanel } from "./NavbarProjectsMegaMenuPanel"
-import { NavbarBlogMegaMenuPanel } from "./NavbarBlogMegaMenuPanel"
+import { useEffect, useState } from "react";
+import { LuMenu } from "react-icons/lu";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useUiStore } from "@/store/uiSlice";
+import { Button } from "@/components/ui/shadcn";
+import { SiteContainer } from "@/components/layout/SiteContainer";
+import { cn } from "@/lib/utils";
+import { NavbarLogo } from "./NavbarLogo";
+import { NavbarDesktopLinks } from "./NavbarDesktopLinks";
+import { NavbarMobileMenu } from "./NavbarMobileMenu";
+import { NavbarLangSwitcher } from "./NavbarLangSwitcher";
+import { NavbarCta } from "./NavbarCta";
+import { NavbarServicesMegaMenuPanel } from "./NavbarServicesMegaMenuPanel";
+import { NavbarProjectsMegaMenuPanel } from "./NavbarProjectsMegaMenuPanel";
+import { NavbarBlogMegaMenuPanel } from "./NavbarBlogMegaMenuPanel";
 
 interface NavbarProps {
-  className?: string
+  className?: string;
 }
 
 export function Navbar({ className }: NavbarProps) {
-  const [scrolled, setScrolled] = useState(false)
-  const mobileMenuOpen = useUiStore((state) => state.mobileMenuOpen)
-  const setMobileMenuOpen = useUiStore((state) => state.setMobileMenuOpen)
-  const servicesMenuOpen = useUiStore((state) => state.servicesMenuOpen)
-  const projectsMenuOpen = useUiStore((state) => state.projectsMenuOpen)
-  const blogMenuOpen = useUiStore((state) => state.blogMenuOpen)
-  const openServicesMenu = useUiStore((state) => state.openServicesMenu)
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [scrolled, setScrolled] = useState(false);
+  const mobileMenuOpen = useUiStore((state) => state.mobileMenuOpen);
+  const setMobileMenuOpen = useUiStore((state) => state.setMobileMenuOpen);
+  const servicesMenuOpen = useUiStore((state) => state.servicesMenuOpen);
+  const projectsMenuOpen = useUiStore((state) => state.projectsMenuOpen);
+  const blogMenuOpen = useUiStore((state) => state.blogMenuOpen);
+  const openServicesMenu = useUiStore((state) => state.openServicesMenu);
   const scheduleCloseServicesMenu = useUiStore(
-    (state) => state.scheduleCloseServicesMenu
-  )
-  const openProjectsMenu = useUiStore((state) => state.openProjectsMenu)
+    (state) => state.scheduleCloseServicesMenu,
+  );
+  const openProjectsMenu = useUiStore((state) => state.openProjectsMenu);
   const scheduleCloseProjectsMenu = useUiStore(
-    (state) => state.scheduleCloseProjectsMenu
-  )
-  const openBlogMenu = useUiStore((state) => state.openBlogMenu)
+    (state) => state.scheduleCloseProjectsMenu,
+  );
+  const openBlogMenu = useUiStore((state) => state.openBlogMenu);
   const scheduleCloseBlogMenu = useUiStore(
-    (state) => state.scheduleCloseBlogMenu
-  )
+    (state) => state.scheduleCloseBlogMenu,
+  );
 
-  const megaMenuOpen = servicesMenuOpen || projectsMenuOpen || blogMenuOpen
+  const megaMenuOpen = servicesMenuOpen || projectsMenuOpen || blogMenuOpen;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 0.75)
-    onScroll()
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 48);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const overlay = isHome && !scrolled && !megaMenuOpen;
 
   return (
     <header
+      data-overlay={overlay ? "true" : undefined}
       className={cn(
-        "sticky top-0 z-50 w-full border-b bg-background transition-[box-shadow,border-color] duration-300",
-        scrolled || megaMenuOpen
-          ? "border-border shadow-md"
-          : "border-border/40 shadow-none",
-        className
+        "group/header top-0 z-50 w-full transition-[background-color,box-shadow,border-color] duration-300",
+        isHome ? "fixed" : "sticky border-b",
+        overlay
+          ? "border-b-0 bg-transparent shadow-none"
+          : cn(
+              "border-b bg-background",
+              scrolled || megaMenuOpen
+                ? "border-border shadow-md"
+                : "border-border/40 shadow-none",
+            ),
+        className,
       )}
     >
       <SiteContainer className="relative flex min-h-18 items-center justify-between gap-4">
@@ -73,7 +84,11 @@ export function Navbar({ className }: NavbarProps) {
             variant="outline"
             size="icon-sm"
             type="button"
-            className="rounded-full lg:hidden"
+            className={cn(
+              "rounded-full lg:hidden",
+              overlay &&
+                "border-white/40 bg-white/10 text-white hover:bg-white/15 hover:text-white",
+            )}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
             aria-expanded={mobileMenuOpen}
@@ -115,5 +130,5 @@ export function Navbar({ className }: NavbarProps) {
 
       <NavbarMobileMenu />
     </header>
-  )
+  );
 }

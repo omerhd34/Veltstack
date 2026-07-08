@@ -2,8 +2,8 @@
 
 import { LuMessageCircle } from "react-icons/lu";
 import { useTranslations } from "next-intl";
-import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { cn } from "@/lib/utils";
+import { NavbarActionLink } from "./NavbarActionLink";
 
 interface NavbarCtaProps {
   className?: string;
@@ -14,15 +14,14 @@ export function NavbarCta({ className, onNavigate }: NavbarCtaProps) {
   const tNav = useTranslations("nav");
 
   return (
-    <PrimaryCtaLink
+    <NavbarActionLink
       href="/iletisim"
-      size="md"
-      showArrow={false}
-      trailingIcon={<LuMessageCircle className="size-4.5" aria-hidden />}
-      onNavigate={onNavigate}
-      className={cn(className)}
+      onClick={onNavigate}
+      className={cn("h-11", className)}
+      innerClassName="gap-2 px-4 text-xs font-semibold tracking-wide"
     >
+      <LuMessageCircle className="size-4 shrink-0" aria-hidden />
       {tNav("cta")}
-    </PrimaryCtaLink>
+    </NavbarActionLink>
   );
 }

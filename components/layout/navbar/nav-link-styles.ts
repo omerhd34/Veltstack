@@ -7,7 +7,9 @@ export function navItemClass(
   if (variant === "desktop") {
     return cn(
       "group relative inline-flex h-12 items-center gap-1 px-4 text-base font-semibold tracking-[-0.01em] transition-colors duration-200",
-      active ? "text-foreground" : "text-foreground/70 hover:text-foreground",
+      active
+        ? "text-foreground group-data-[overlay=true]/header:text-white"
+        : "text-foreground/70 hover:text-foreground group-data-[overlay=true]/header:text-white/75 group-data-[overlay=true]/header:hover:text-white",
     );
   }
 

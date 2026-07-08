@@ -61,7 +61,7 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-[linear-gradient(to_bottom,rgb(10_10_15/0.55)_0%,transparent_14%,transparent_86%,rgb(10_10_15/0.55)_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(to_bottom,rgb(10_10_15/0.18)_0%,transparent_12%,transparent_86%,rgb(10_10_15/0.55)_100%)]"
         aria-hidden
       />
       <div

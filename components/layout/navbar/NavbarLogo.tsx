@@ -21,7 +21,7 @@ export function NavbarLogo({ className }: NavbarLogoProps) {
         className="h-8 w-8 shrink-0 sm:h-9 sm:w-9"
         aria-hidden
       />
-      <span className="font-(family-name:--font-heading) text-[1.6875rem] font-extrabold tracking-[-0.04em] sm:text-[2.25rem]">
+      <span className="font-(family-name:--font-heading) text-[1.6875rem] font-extrabold tracking-[-0.04em] group-data-[overlay=true]/header:text-white sm:text-[2.25rem]">
         Velt
         <span className="text-brand-accent">Stack</span>
       </span>
