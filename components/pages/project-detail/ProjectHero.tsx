@@ -4,6 +4,10 @@ import Image from "next/image";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HeroStatsCards } from "@/components/ui/HeroStatsCards";
+import {
+  PAGE_HERO_IMAGE_FRAME_CLASS,
+  PAGE_HERO_IMAGE_WRAPPER_CLASS,
+} from "@/components/pages/services/ServicesPageHeroImage";
 import { cn } from "@/lib/utils";
 
 interface ProjectHeroProps {
@@ -56,7 +60,7 @@ export function ProjectHero({
       />
 
       <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10 md:py-12">
-        <div className="grid min-h-0 flex-1 items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0">
             <SectionBadge>{badge}</SectionBadge>
 
@@ -77,7 +81,7 @@ export function ProjectHero({
             </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end">
+          <div className={PAGE_HERO_IMAGE_WRAPPER_CLASS}>
             <div
               aria-hidden
               className="absolute -inset-3 rounded-[2rem] bg-linear-to-br from-brand-accent/20 via-transparent to-emerald-600/10 blur-2xl"
@@ -146,7 +150,8 @@ function PreviewFrame({
   return (
     <div
       className={cn(
-        "relative h-[min(32vh,280px)] w-full overflow-hidden rounded-3xl border border-emerald-700/30 shadow-[0_24px_80px_rgb(0_0_0/0.45)] transition-transform duration-500 group-hover/preview:scale-[1.01] sm:h-[min(36vh,320px)] lg:h-[min(42vh,380px)]",
+        PAGE_HERO_IMAGE_FRAME_CLASS,
+        "transition-transform duration-500 group-hover/preview:scale-[1.01]",
         !imageUrl && cn("bg-linear-to-br", coverGradient),
       )}
     >
@@ -157,7 +162,7 @@ function PreviewFrame({
             alt={title}
             fill
             priority
-            sizes="(min-width: 1024px) 42vw, 90vw"
+            sizes="(min-width: 1024px) 50vw, 90vw"
             className="object-cover transition-transform duration-700 group-hover/preview:scale-105"
           />
           <div

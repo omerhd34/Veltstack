@@ -19,7 +19,7 @@ export const blogPostEntry: BlogPostEntry = {
     "What UI is, how it differs from UX, and why Veltstack chooses shadcn/ui with Lightswind, with examples.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
-  imageUrl: "/images/blog/ui-nedir.png",
+  imageUrl: "/images/pages/blog/ui-nedir.png",
   readingTime: 9,
   publishedAt: "2026-07-07",
   featured: true,

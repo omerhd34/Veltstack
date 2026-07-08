@@ -1,6 +1,6 @@
 export const contactTr = {
-  formBadge: "Mesaj Gönderin",
-  formTitle: "Projenizi anlatın",
+  formBadge: "Teklif Talebi",
+  formTitle: "Net ihtiyaç, net yol haritası",
   formDescription:
     "Hedefinizi, zaman planınızı ve varsa mevcut altyapınızı kısaca yazın. Size en uygun çözümü ve net bir yol haritasını paylaşalım.",
 
@@ -115,7 +115,7 @@ export const contactTr = {
     {
       label: "LinkedIn",
       value: "omerhd1",
-      href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
+      href: "https://www.linkedin.com/in/omerhd1/",
     },
     {
       label: "GitHub",

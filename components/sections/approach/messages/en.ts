@@ -21,13 +21,13 @@ export const approachEn = {
       step: "3",
       title: "Discovery & Strategy",
       desc: "We align on business goals, user needs, and technical constraints. Together we define the strategic framework that shapes the entire project.",
-      timing: "Within 1–2 days",
+      timing: "Within 48 hours",
     },
     {
       step: "4",
       title: "We Prepare Your Proposal",
       desc: "We prepare and send a detailed proposal covering scope, cost, and delivery timeline. Every line item is clear, so there are no surprise costs down the road.",
-      timing: "Within 1–2 days",
+      timing: "Within 48 hours",
     },
     {
       step: "5",

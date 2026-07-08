@@ -1,5 +1,9 @@
 export { ServicesPageHero } from "./ServicesPageHero"
-export { ServicesPageHeroImage } from "./ServicesPageHeroImage"
+export {
+  ServicesPageHeroImage,
+  PAGE_HERO_IMAGE_FRAME_CLASS,
+  PAGE_HERO_IMAGE_WRAPPER_CLASS,
+} from "./ServicesPageHeroImage";
 export { ServicesPackagesSection } from "./ServicesPackagesSection"
 export { ServicesPackagesPanel } from "./ServicesPackagesPanel"
 export { ServicesPackagesIntro } from "./ServicesPackagesIntro"

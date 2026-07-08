@@ -1,8 +1,8 @@
 export const contactEn = {
-  formBadge: "Send a Message",
-  formTitle: "Tell us about your project",
+  formBadge: "Get a Quote",
+  formTitle: "Clear needs, clear roadmap",
   formDescription:
-    "Share your goal, timeline, and any existing setup in a few lines. We’ll respond with the best approach and a clear roadmap.",
+    "Share your goal, timeline, and any existing setup in a few lines. We'll respond with the best approach and a clear roadmap.",
 
   fieldName: "Full Name",
   fieldNamePlaceholder: "Your first and last name",

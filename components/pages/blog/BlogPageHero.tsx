@@ -47,7 +47,7 @@ export async function BlogPageHero({
       />
 
       <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10">
-        <div className="grid min-h-0 flex-1 items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0 max-w-2xl">
             <SectionBadge variant="emerald-muted">
               {toLatinUppercase(badge, locale)}
@@ -71,8 +71,8 @@ export async function BlogPageHero({
           </div>
 
           <ServicesPageHeroImage
+            src="/images/pages/blog/hero.png"
             alt={imageAlt}
-            className="mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end"
           />
         </div>
 

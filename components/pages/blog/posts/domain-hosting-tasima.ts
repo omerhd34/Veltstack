@@ -14,7 +14,7 @@ export const blogPostEntry: BlogPostEntry = {
     "The steps to move your domain or hosting provider smoothly, without downtime or data loss.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
-  imageUrl: "/images/blog/domain-hosting-tasima.png",
+  imageUrl: "/images/pages/blog/domain-hosting-tasima.png",
   readingTime: 10,
   publishedAt: "2026-06-25",
   content: {

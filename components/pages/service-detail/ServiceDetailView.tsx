@@ -7,6 +7,7 @@ import {
   servicePackageCategories,
   serviceTechStacks,
 } from "./service-detail-config";
+import { serviceHeroImages } from "./service-hero-images";
 import { ServiceHero } from "./ServiceHero";
 import { ServiceFeatures } from "./ServiceFeatures";
 import { ServiceProcess } from "./ServiceProcess";
@@ -77,7 +78,8 @@ export async function ServiceDetailView({
         title={t(`${slug}.heroTitle`)}
         subtitle={t(`${slug}.heroSubtitle`)}
         subtitleSecondary={t(`${slug}.heroSubtitleSecondary`)}
-        imageAlt={t("heroImageAlt")}
+        imageAlt={t(`${slug}.heroImageAlt`)}
+        imageSrc={serviceHeroImages[slug]}
         scrollLabel={t("featuresTitle")}
         stats={stats}
       />

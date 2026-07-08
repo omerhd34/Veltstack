@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 interface ClientLogoProps {
   name: string
   logoUrl?: string

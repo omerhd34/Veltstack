@@ -2,8 +2,8 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import {
-  blogPosts,
   getBlogListImageUrl,
+  getHomepageBlogPosts,
 } from "@/components/pages/blog/blog-data";
 import { toLatinUppercase } from "@/lib/utils";
 import { BlogPreviewMoreButton } from "./BlogPreviewMoreButton";
@@ -19,13 +19,7 @@ export async function BlogPreviewSection({
   const t = await getTranslations("home");
   const locale = (await getLocale()) as "tr" | "en";
 
-  const posts = [...blogPosts]
-    .sort(
-      (a, b) =>
-        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-    )
-    .slice(0, 6)
-    .map((post) => ({
+  const posts = getHomepageBlogPosts().map((post) => ({
       slug: post.slug,
       title: locale === "tr" ? post.titleTr : post.titleEn,
       excerpt: locale === "tr" ? post.excerptTr : post.excerptEn,

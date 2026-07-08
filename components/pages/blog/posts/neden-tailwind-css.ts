@@ -19,7 +19,7 @@ export const blogPostEntry: BlogPostEntry = {
     "We compare Bootstrap and Tailwind CSS and explain why utility-first is our choice for modern projects.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
-  imageUrl: "/images/blog/neden-tailwind-css.png",
+  imageUrl: "/images/pages/blog/neden-tailwind-css.png",
   readingTime: 9,
   publishedAt: "2026-07-07",
   content: {

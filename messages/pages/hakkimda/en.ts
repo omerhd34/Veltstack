@@ -6,7 +6,7 @@ export const aboutEn = {
     "Veltstack is a development brand that delivers websites, mobile apps and SEO-focused digital products, from idea to launch with a clear process and measurable outcomes.",
   heroSubtitleSecondary:
     "From corporate web and e-commerce to performance-driven infrastructure, we unite design, software and growth goals in a single delivery line.",
-  heroImageAlt: "Veltstack digital development workspace",
+  heroImageAlt: "Abstract digital structure illustration symbolizing vision and growth",
   scrollLabel: "Read more",
   stats: [
     {

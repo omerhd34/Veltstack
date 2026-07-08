@@ -53,9 +53,9 @@ export function WhyMeScrollTimeline({
       dateFormat="badge"
       progressIndicator
       parallaxIntensity={0}
-      lineColor="bg-brand-accent/20"
+      lineColor="bg-brand-accent/45"
       connectorStyle="line"
-      progressLineWidth={2}
+      progressLineWidth={3}
     />
   );
 }

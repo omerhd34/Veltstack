@@ -1,14 +1,10 @@
 import { cn } from "@/lib/utils";
 
 const HERO_SOURCES = {
-  ultrawide: "/images/hero/ultrawide.png",
-  wide: "/images/hero/wide.png",
-  desktop: "/images/hero/desktop.png",
-  laptop: "/images/hero/laptop.png",
-  tabletLandscape: "/images/hero/tablet-landscape.png",
-  tabletPortrait: "/images/hero/tablet-portrait.png",
-  mobileMd: "/images/hero/mobile-md.png",
-  mobileSm: "/images/hero/mobile-sm.png",
+  xl: "/hero/veltstack_xl.png",
+  lg: "/hero/veltstack_lg.png",
+  md: "/hero/veltstack_md.png",
+  sm: "/hero/veltstack_sm.png",
 } as const;
 
 interface HeroImageProps {
@@ -25,40 +21,51 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
       )}
       aria-hidden={alt === ""}
     >
-      <picture className="absolute inset-0 block h-full w-full">
+      <picture className="absolute inset-y-0 right-0 block h-full w-full md:left-[36%] md:w-auto lg:left-[34%] xl:left-[32%]">
         <source
-          media="(min-width: 2560px) and (min-aspect-ratio: 21/9)"
-          srcSet={HERO_SOURCES.wide}
-        />
-        <source media="(min-width: 1536px)" srcSet={HERO_SOURCES.desktop} />
-        <source media="(min-width: 1280px)" srcSet={HERO_SOURCES.laptop} />
-        <source
-          media="(min-width: 768px)"
-          srcSet={HERO_SOURCES.tabletLandscape}
+          media="(min-width: 1536px) and (min-height: 700px)"
+          srcSet={HERO_SOURCES.xl}
         />
         <source
-          media="(min-width: 640px)"
-          srcSet={HERO_SOURCES.tabletPortrait}
+          media="(min-width: 1280px) and (min-height: 600px)"
+          srcSet={HERO_SOURCES.lg}
         />
-        <source media="(min-width: 480px)" srcSet={HERO_SOURCES.mobileMd} />
+        <source
+          media="(min-width: 1024px) and (max-height: 599px)"
+          srcSet={HERO_SOURCES.md}
+        />
+        <source media="(min-width: 1024px)" srcSet={HERO_SOURCES.lg} />
+        <source
+          media="(min-width: 768px) and (min-height: 500px)"
+          srcSet={HERO_SOURCES.md}
+        />
+        <source
+          media="(min-width: 768px) and (max-height: 499px)"
+          srcSet={HERO_SOURCES.sm}
+        />
+        <source media="(min-width: 480px)" srcSet={HERO_SOURCES.sm} />
         <img
-          src={HERO_SOURCES.mobileSm}
+          src={HERO_SOURCES.sm}
           alt={alt}
           fetchPriority="high"
           decoding="async"
-          className="h-full w-full object-cover object-center max-sm:object-[center_38%] md:object-[62%_32%]"
+          className="h-full w-full object-cover object-[62%_50%] max-sm:object-[58%_48%] md:object-[64%_50%] lg:object-[66%_50%] xl:object-[68%_50%]"
         />
       </picture>
       <div
-        className="absolute inset-0 bg-[#0A0A0F]/30 max-sm:bg-[#0A0A0F]/40 md:max-lg:bg-[#0A0A0F]/35"
+        className="absolute inset-0 bg-[#0A0A0F]/35 max-sm:bg-[#0A0A0F]/45 md:max-lg:bg-[#0A0A0F]/38"
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-[linear-gradient(to_right,rgb(10_10_15/0.82)_0%,rgb(10_10_15/0.45)_42%,transparent_68%)]"
+        className="absolute inset-0 bg-[linear-gradient(to_right,rgb(10_10_15/0.95)_0%,rgb(10_10_15/0.72)_30%,rgb(10_10_15/0.28)_52%,transparent_68%)]"
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_55%_50%_at_28%_42%,rgb(10_10_15/0.55),transparent_72%)] max-md:bg-[radial-gradient(ellipse_85%_58%_at_22%_40%,rgb(10_10_15/0.65),transparent_78%)]"
+        className="absolute inset-0 bg-[linear-gradient(to_bottom,rgb(10_10_15/0.55)_0%,transparent_14%,transparent_86%,rgb(10_10_15/0.55)_100%)]"
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_50%_55%_at_24%_42%,rgb(10_10_15/0.7),transparent_70%)] max-md:bg-[radial-gradient(ellipse_90%_60%_at_20%_38%,rgb(10_10_15/0.75),transparent_80%)]"
         aria-hidden
       />
     </div>

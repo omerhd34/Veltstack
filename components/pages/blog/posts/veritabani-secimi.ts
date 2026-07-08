@@ -14,7 +14,7 @@ export const blogPostEntry: BlogPostEntry = {
     "SQL vs NoSQL, a comparison of MySQL, PostgreSQL and MongoDB, and how to pick the right database.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
-  imageUrl: "/images/blog/veritabani-secimi.png",
+  imageUrl: "/images/pages/blog/veritabani-secimi.png",
   readingTime: 10,
   publishedAt: "2026-06-23",
   content: {

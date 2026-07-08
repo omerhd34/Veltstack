@@ -12,10 +12,10 @@
   html {
     @apply scroll-smooth font-sans;
     scrollbar-color: var(--brand-accent) rgb(var(--brand-accent-rgb) / 0.1);
-    scrollbar-width: thin;
+    scrollbar-width: auto;
   }
   html::-webkit-scrollbar {
-    width: 10px;
+    width: 14px;
   }
   html::-webkit-scrollbar-track {
     background: rgb(var(--brand-accent-rgb) / 0.1);

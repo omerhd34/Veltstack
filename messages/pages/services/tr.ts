@@ -7,10 +7,9 @@ export const servicesPageTr = {
     "Her proje tipi üç kademede sunulur: Girişim, Profesyonel ve Premium. Kapsam, teslim süresi ve revizyon sayısı baştan netleştirilir, büyük projeler sınırsız ölçeklenebilir.",
   heroSubtitleSecondary:
     "Paketleri inceleyin; web sitesi, uygulama, yenileme, SEO, teknik denetim ve bakım sekmeleri arasında geçiş yaparak size en uygun kapsamı belirleyin.",
-  heroImageAlt: "Dijital geliştirme çalışma ortamı",
+  heroImageAlt: "Dijital hizmetleri temsil eden bağlantılı modüler arayüz illüstrasyonu",
   scrollLabel: "Paketleri incele",
   ctaBadge: "Ücretsiz Görüşme",
-  ctaTagline: "Doğru paketi birlikte seçelim",
   ctaTitle: "Paket seçiminde yardım mı lazım?",
   ctaTitleLead: "Paket seçiminde",
   ctaTitleAccent: "yardım mı lazım?",

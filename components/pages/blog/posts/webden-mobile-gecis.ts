@@ -19,7 +19,7 @@ export const blogPostEntry: BlogPostEntry = {
     "The advantages and process of turning a web project into a mobile app with React Native and Expo.",
   category: "Mobil Uygulama",
   categoryEn: "Mobile Apps",
-  imageUrl: "/images/blog/webden-mobile-gecis.png",
+  imageUrl: "/images/pages/blog/webden-mobile-gecis.png",
   readingTime: 10,
   publishedAt: "2026-07-07",
   content: {

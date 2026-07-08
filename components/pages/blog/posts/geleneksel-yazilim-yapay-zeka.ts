@@ -19,7 +19,7 @@ export const blogPostEntry: BlogPostEntry = {
     "Why a human developer must write the code for quality software, and how to use AI as a helper tool the right way, with real examples.",
   category: "Yapay Zeka",
   categoryEn: "Artificial Intelligence",
-  imageUrl: "/images/blog/geleneksel-yazilim-yapay-zeka.png",
+  imageUrl: "/images/pages/blog/geleneksel-yazilim-yapay-zeka.png",
   readingTime: 10,
   publishedAt: "2026-06-28",
   featured: true,

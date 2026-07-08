@@ -14,7 +14,7 @@ export const blogPostEntry: BlogPostEntry = {
     "A step-by-step guide to deploying Next.js projects on Vercel, covering env variables, domains and common pitfalls.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
-  imageUrl: "/images/blog/vercel-de-yayin.png",
+  imageUrl: "/images/pages/blog/vercel-de-yayin.png",
   readingTime: 9,
   publishedAt: "2026-06-22",
   content: {

@@ -21,13 +21,13 @@ export const approachTr = {
       step: "3",
       title: "Keşif & Strateji",
       desc: "İş hedeflerinizi, kullanıcı ihtiyaçlarını ve teknik kısıtları masaya yatırırız. Projenin temelini oluşturacak stratejik çerçeveyi birlikte belirleriz.",
-      timing: "1–2 gün içinde",
+      timing: "En geç 48 saat",
     },
     {
       step: "4",
       title: "Teklifi Oluşturalım",
       desc: "Kapsam, maliyet ve teslim planını içeren detaylı teklifi hazırlayıp size sunarız. Her kalemi anlaşılır biçimde paylaşır; sürpriz maliyet olmadan ilerlersiniz.",
-      timing: "1–2 gün içinde",
+      timing: "En geç 48 saat",
     },
     {
       step: "5",

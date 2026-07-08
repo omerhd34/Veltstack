@@ -51,6 +51,8 @@ export const serviceDetailsEn = {
       "End-to-end web development for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
     heroBadge: "Web Development",
     heroTitle: "Website Development",
+    heroImageAlt:
+      "Abstract browser and layout illustration symbolizing modern website development",
     heroSubtitle:
       "I build every kind of web project end to end, from corporate sites and e-commerce to portfolios and promotional pages.",
     heroSubtitleSecondary:
@@ -115,6 +117,8 @@ export const serviceDetailsEn = {
       "Refresh your outdated or slow website and mobile app with modern design, fast infrastructure and SEO improvements. Secure migration while preserving your content.",
     heroBadge: "Web & App Redesign",
     heroTitle: "Web & App Redesign",
+    heroImageAlt:
+      "Transforming interface panels illustration symbolizing website redesign",
     heroSubtitle:
       "We transform outdated, slow or mobile-unfriendly websites and apps into modern, fast and conversion-focused experiences.",
     heroSubtitleSecondary:
@@ -164,6 +168,8 @@ export const serviceDetailsEn = {
       "High-performance mobile apps for iOS and Android with React Native and Expo.",
     heroBadge: "App Development",
     heroTitle: "Mobile App Development",
+    heroImageAlt:
+      "Floating phone and interface illustration symbolizing mobile app development",
     heroSubtitle:
       "User-friendly, scalable mobile apps that run on iOS and Android from a single codebase.",
     heroSubtitleSecondary:
@@ -213,6 +219,8 @@ export const serviceDetailsEn = {
       "Sustainable organic growth through technical SEO, content strategy and performance optimization.",
     heroBadge: "SEO",
     heroTitle: "SEO Services",
+    heroImageAlt:
+      "Ascending ranking graph illustration symbolizing SEO and search visibility",
     heroSubtitle:
       "I improve your search visibility from technical infrastructure to content strategy.",
     heroSubtitleSecondary:
@@ -262,6 +270,8 @@ export const serviceDetailsEn = {
       "Technical audit for your website, mobile app and digital infrastructure focused on performance, security, SEO and code quality.",
     heroBadge: "Technical Audit",
     heroTitle: "Technical Audit",
+    heroImageAlt:
+      "Scan and security check illustration symbolizing technical audit",
     heroSubtitle:
       "We analyze your existing digital assets for performance, security, SEO and code quality, then deliver a prioritized action plan.",
     heroSubtitleSecondary:
@@ -311,6 +321,8 @@ export const serviceDetailsEn = {
       "Regular maintenance, updates and technical support for your website, mobile app and backend infrastructure.",
     heroBadge: "Maintenance & Support",
     heroTitle: "Maintenance & Support",
+    heroImageAlt:
+      "Protective shield and system monitoring illustration symbolizing maintenance and support",
     heroSubtitle:
       "I stay by your side after launch. Updates, backups, security and technical support all under one roof.",
     heroSubtitleSecondary:

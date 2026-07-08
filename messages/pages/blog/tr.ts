@@ -5,7 +5,7 @@ export const blogPageTr = {
     "Web geliştirme, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler üretiyoruz. Gerçek projelerden öğrendiklerimizi ve sahada denenmiş yöntemleri sade bir dille paylaşıyoruz.",
   heroSubtitleSecondary:
     "Kategoriye göre filtreleyip arama yaparak aradığınız içeriğe hızlıca ulaşın.",
-  heroImageAlt: "Veltstack blog: geliştirici çalışma alanı",
+  heroImageAlt: "Bilgi akışını ve dijital içgörüleri simgeleyen soyut ağ illüstrasyonu",
   heroStats: {
     posts: {
       label: "Yayınlanan Yazı",

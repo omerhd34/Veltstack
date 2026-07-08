@@ -4,7 +4,7 @@ interface IxirhostIconProps {
   className?: string;
 }
 
-const IXIRHOST_ICON_SRC = "/images/ixirhost.png";
+const IXIRHOST_ICON_SRC = "/images/pages/clients/ixirhost.png";
 
 export function IxirhostIcon({ className }: IxirhostIconProps) {
   return (

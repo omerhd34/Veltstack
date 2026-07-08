@@ -51,6 +51,8 @@ export const serviceDetailsTr = {
       "Kurumsal web sitesi, e-ticaret ve portfolyo projelerinde uçtan uca web geliştirme. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
     heroBadge: "Web Geliştirme",
     heroTitle: "Web Sitesi Geliştirme",
+    heroImageAlt:
+      "Modern web sitesi geliştirmeyi simgeleyen soyut tarayıcı ve layout illüstrasyonu",
     heroSubtitle:
       "Kurumsal siteden e-ticarete, portfolyodan tanıtım sayfasına kadar her web projesini uçtan uca geliştiriyorum.",
     heroSubtitleSecondary:
@@ -115,6 +117,8 @@ export const serviceDetailsTr = {
       "Eski veya yavaş web sitenizi ve mobil uygulamanızı modern tasarım, hızlı altyapı ve SEO iyileştirmeleriyle yenileyin. İçeriklerinizi koruyarak güvenli geçiş.",
     heroBadge: "Web & Uygulama Yenileme",
     heroTitle: "Web & Uygulama Yenileme",
+    heroImageAlt:
+      "Web sitesi yenilemeyi simgeleyen dönüşen arayüz panelleri illüstrasyonu",
     heroSubtitle:
       "Güncelliğini yitirmiş, yavaş veya mobil uyumsuz web ve uygulama deneyimlerinizi modern, hızlı ve dönüşüm odaklı bir yapıya taşıyoruz.",
     heroSubtitleSecondary:
@@ -164,6 +168,8 @@ export const serviceDetailsTr = {
       "iOS ve Android için React Native ve Expo ile performanslı mobil uygulama geliştirme hizmeti.",
     heroBadge: "Uygulama Geliştirme",
     heroTitle: "Mobil Uygulama Geliştirme",
+    heroImageAlt:
+      "Mobil uygulama geliştirmeyi simgeleyen yüzen telefon ve arayüz illüstrasyonu",
     heroSubtitle:
       "Tek kod tabanıyla iOS ve Android'de çalışan, kullanıcı dostu ve ölçeklenebilir mobil uygulamalar geliştiriyorum.",
     heroSubtitleSecondary:
@@ -213,6 +219,8 @@ export const serviceDetailsTr = {
       "Teknik SEO, içerik stratejisi ve performans optimizasyonu ile sürdürülebilir organik büyüme.",
     heroBadge: "SEO",
     heroTitle: "SEO Hizmetleri",
+    heroImageAlt:
+      "SEO ve arama görünürlüğünü simgeleyen yükselen sıralama grafiği illüstrasyonu",
     heroSubtitle:
       "Teknik altyapıdan içerik stratejisine kadar arama motorlarında görünürlüğünüzü artırıyorum.",
     heroSubtitleSecondary:
@@ -262,6 +270,8 @@ export const serviceDetailsTr = {
       "Web sitesi, mobil uygulama ve dijital altyapınız için performans, güvenlik, SEO ve kod kalitesi odaklı teknik denetim hizmeti.",
     heroBadge: "Teknik Denetim",
     heroTitle: "Teknik Denetim",
+    heroImageAlt:
+      "Teknik denetimi simgeleyen tarama ve güvenlik kontrol illüstrasyonu",
     heroSubtitle:
       "Mevcut dijital varlıklarınızı performans, güvenlik, SEO ve kod kalitesi açısından analiz ediyoruz; önceliklendirilmiş aksiyon planı sunuyoruz.",
     heroSubtitleSecondary:
@@ -311,6 +321,8 @@ export const serviceDetailsTr = {
       "Web sitesi, mobil uygulama ve backend altyapınız için düzenli bakım, güncelleme ve teknik destek hizmeti.",
     heroBadge: "Bakım & Destek",
     heroTitle: "Bakım & Destek",
+    heroImageAlt:
+      "Bakım ve desteği simgeleyen koruyucu kalkan ve sistem izleme illüstrasyonu",
     heroSubtitle:
       "Yayına aldıktan sonra da yanınızdayım. Güncelleme, yedekleme, güvenlik ve teknik destek tek çatı altında.",
     heroSubtitleSecondary:

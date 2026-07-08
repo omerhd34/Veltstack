@@ -1,12 +1,12 @@
 export const projectsPageTr = {
   heroBadge: "Portföy",
-  heroTitle: "Gerçek iş hedeflerine hizmet eden projeler",
+  heroTitle: "Hedef odaklı projeler",
   heroSubtitle:
     "Finansal teknolojiden e-ticarete, kurumsal katalogdan sağlık platformlarına; her proje ölçülebilir sonuçlar ve kullanıcı deneyimi odaklı geliştirildi.",
   heroSubtitleSecondary:
     "Detaylı proje incelemeleriyle her projenin kapsamını, teknoloji yığınını ve teslim metriklerini inceleyebilirsiniz.",
   heroImageAlt:
-    "HDMI kablo ile monitöre bağlı laptop ve ekranlarda kod yazan geliştirici çalışma alanı",
+    "Tamamlanan dijital projeleri simgeleyen fütüristik portföy galerisi illüstrasyonu",
   scrollLabel: "Projeleri incele",
   stats: [
     {

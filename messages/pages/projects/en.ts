@@ -6,7 +6,7 @@ export const projectsPageEn = {
   heroSubtitleSecondary:
     "Explore detailed case studies covering scope, tech stack, and delivery metrics for each project.",
   heroImageAlt:
-    "Developer workspace with a laptop connected to an external monitor via HDMI cable, both screens showing code",
+    "Futuristic portfolio gallery illustration symbolizing completed digital projects",
   scrollLabel: "Browse projects",
   stats: [
     {

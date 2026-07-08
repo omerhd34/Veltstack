@@ -89,7 +89,7 @@ export function ContactSectionDescription({
   description,
 }: ContactSectionDescriptionProps) {
   return (
-    <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
+    <p className="mt-3 max-w-4xl text-sm leading-relaxed text-muted-foreground md:text-base">
       {description}
     </p>
   );

@@ -80,7 +80,7 @@ export async function BlogDetailHero({
           Blog
         </Link>
 
-        <div className="mt-8 grid min-h-0 flex-1 items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-16">
+        <div className="mt-8 grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-emerald-300/60">
               <span className="inline-flex items-center rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold text-emerald-300">
@@ -142,11 +142,7 @@ export async function BlogDetailHero({
             </div>
           </div>
 
-          <ServicesPageHeroImage
-            src={imageUrl}
-            alt={imageAlt}
-            className="mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end"
-          />
+          <ServicesPageHeroImage src={imageUrl} alt={imageAlt} />
         </div>
 
         <div className="mt-auto shrink-0 pt-6 sm:pt-8">

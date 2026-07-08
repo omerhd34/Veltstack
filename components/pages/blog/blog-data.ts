@@ -7,7 +7,26 @@ import { blogPosts } from "./posts";
 const NAV_BLOG_COUNT = 6;
 const FOOTER_BLOG_COUNT = 6;
 
-const BLOG_IMAGE_BASE = "/images/blog/";
+/** Anasayfa blog önizlemesinde önce gösterilecek yazılar (sıra korunur). */
+const HOME_BLOG_FEATURED_SLUGS = [
+  "geleneksel-yazilim-yapay-zeka",
+  "ozel-yazilim-cms",
+  "domain-hosting",
+  "seo",
+  "vercel-de-yayin",
+  "neden-ixirhost",
+] as const;
+
+export function getHomepageBlogPosts(): BlogPost[] {
+  const featuredSet = new Set<string>(HOME_BLOG_FEATURED_SLUGS);
+  const featured = HOME_BLOG_FEATURED_SLUGS.map((slug) =>
+    blogPosts.find((post) => post.slug === slug),
+  ).filter((post): post is BlogPost => post !== undefined);
+  const rest = blogPosts.filter((post) => !featuredSet.has(post.slug));
+  return [...featured, ...rest];
+}
+
+const BLOG_IMAGE_BASE = "/images/pages/blog/";
 
 export function getBlogListImageUrl(imageUrl: string): string {
   return imageUrl.replace(BLOG_IMAGE_BASE, `${BLOG_IMAGE_BASE}version1/`);

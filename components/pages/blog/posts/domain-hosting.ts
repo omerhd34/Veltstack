@@ -21,7 +21,7 @@ export const blogPostEntry: BlogPostEntry = {
     "What domain and hosting are, how they work together and the role of DNS, in plain language.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
-  imageUrl: "/images/blog/domain-hosting.png",
+  imageUrl: "/images/pages/blog/domain-hosting.png",
   readingTime: 9,
   publishedAt: "2026-06-15",
   featured: true,

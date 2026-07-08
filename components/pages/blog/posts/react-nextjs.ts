@@ -14,7 +14,7 @@ export const blogPostEntry: BlogPostEntry = {
     "The fundamentals of React and Next.js and the advantages of using them together, in plain language.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
-  imageUrl: "/images/blog/react-nextjs.png",
+  imageUrl: "/images/pages/blog/react-nextjs.png",
   readingTime: 10,
   publishedAt: "2026-06-21",
   content: {

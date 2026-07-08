@@ -15,7 +15,7 @@ export const blogPostEntry: BlogPostEntry = {
     "A practical guide to picking the right domain name and extension for your brand.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
-  imageUrl: "/images/blog/dogru-domain-secimi.png",
+  imageUrl: "/images/pages/blog/dogru-domain-secimi.png",
   readingTime: 8,
   publishedAt: "2026-06-24",
   content: {

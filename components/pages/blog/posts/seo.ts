@@ -14,7 +14,7 @@ export const blogPostEntry: BlogPostEntry = {
     "A comprehensive guide to SEO basics, types and actionable steps to climb the search rankings.",
   category: "SEO",
   categoryEn: "SEO",
-  imageUrl: "/images/blog/seo.png",
+  imageUrl: "/images/pages/blog/seo.png",
   readingTime: 8,
   publishedAt: "2026-06-05",
   featured: true,

@@ -16,7 +16,7 @@ export const blogPostEntry: BlogPostEntry = {
     "We compare popular freelance platforms globally and in Turkey by commission, job volume and security.",
   category: "Araçlar & İpuçları",
   categoryEn: "Tools & Tips",
-  imageUrl: "/images/blog/en-iyi-freelancer-siteleri.png",
+  imageUrl: "/images/pages/blog/en-iyi-freelancer-siteleri.png",
   readingTime: 6,
   publishedAt: "2026-05-20",
   content: {

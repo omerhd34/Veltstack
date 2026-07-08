@@ -19,7 +19,7 @@ export const blogPostEntry: BlogPostEntry = {
     "Why we choose ixirhost for domain, DNS, SSL and hosting, compared by speed, security and pricing.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
-  imageUrl: "/images/blog/neden-ixirhost.png",
+  imageUrl: "/images/pages/blog/neden-ixirhost.png",
   readingTime: 8,
   publishedAt: "2026-07-07",
   featured: true,

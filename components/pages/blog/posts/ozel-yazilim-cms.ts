@@ -19,7 +19,7 @@ export const blogPostEntry: BlogPostEntry = {
     "Why custom software beats ready-made CMS for quality projects, with performance, security and maintenance advantages.",
   category: "Özel Yazılım",
   categoryEn: "Custom Software",
-  imageUrl: "/images/blog/ozel-yazilim-cms.png",
+  imageUrl: "/images/pages/blog/ozel-yazilim-cms.png",
   readingTime: 10,
   publishedAt: "2026-06-27",
   featured: true,

@@ -19,7 +19,7 @@ export const blogPostEntry: BlogPostEntry = {
     "The fundamentals of modern backend and API architecture with Node.js and Prisma, explained with real examples.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
-  imageUrl: "/images/blog/node-js-ve-prisma-ile-backend.png",
+  imageUrl: "/images/pages/blog/node-js-ve-prisma-ile-backend.png",
   readingTime: 10,
   publishedAt: "2026-07-07",
   content: {

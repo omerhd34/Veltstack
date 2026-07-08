@@ -5,7 +5,7 @@ export const blogPageEn = {
     "We publish practical content on web development, mobile apps, SEO and digital transformation. We share lessons from real projects and field-tested methods in plain language.",
   heroSubtitleSecondary:
     "Filter by category or search to quickly find what you need.",
-  heroImageAlt: "Veltstack blog: developer workspace",
+  heroImageAlt: "Abstract network illustration symbolizing knowledge flow and digital insights",
   heroStats: {
     posts: {
       label: "Published Posts",

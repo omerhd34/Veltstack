@@ -479,6 +479,27 @@ export const ScrollTimeline = ({
             }
           />
 
+          {connectorStyle !== "dots" ? (
+            <>
+              <div
+                aria-hidden
+                className={cn(
+                  "pointer-events-none absolute top-0 left-1/2 z-10 -translate-x-1/2",
+                  lineColor,
+                )}
+                style={{ width: 40, height: progressLineWidth }}
+              />
+              <div
+                aria-hidden
+                className={cn(
+                  "pointer-events-none absolute bottom-0 left-1/2 z-10 -translate-x-1/2",
+                  lineColor,
+                )}
+                style={{ width: 40, height: progressLineWidth }}
+              />
+            </>
+          ) : null}
+
           {progressIndicator && (
             <>
               <motion.div

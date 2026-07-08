@@ -43,7 +43,7 @@ export function ProjectsPageHero({
       />
 
       <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10">
-        <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+        <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0 max-w-2xl lg:max-w-none">
             <SectionBadge>{badge}</SectionBadge>
 
@@ -66,7 +66,7 @@ export function ProjectsPageHero({
 
           <ServicesPageHeroImage
             alt={imageAlt}
-            className="mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end"
+            src="/images/pages/projects/hero.png"
           />
         </div>
 

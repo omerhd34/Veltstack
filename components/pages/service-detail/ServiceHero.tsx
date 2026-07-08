@@ -10,6 +10,7 @@ interface ServiceHeroProps {
   subtitle: string;
   subtitleSecondary: string;
   imageAlt: string;
+  imageSrc: string;
   scrollLabel: string;
   stats: HeroStat[];
   className?: string;
@@ -21,6 +22,7 @@ export function ServiceHero({
   subtitle,
   subtitleSecondary,
   imageAlt,
+  imageSrc,
   scrollLabel,
   stats,
   className,
@@ -43,7 +45,7 @@ export function ServiceHero({
       />
 
       <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10">
-        <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+        <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0">
             <SectionBadge>{badge}</SectionBadge>
 
@@ -64,10 +66,7 @@ export function ServiceHero({
             </p>
           </div>
 
-          <ServicesPageHeroImage
-            alt={imageAlt}
-            className="mx-auto w-full max-w-sm lg:max-w-none lg:justify-self-end"
-          />
+          <ServicesPageHeroImage alt={imageAlt} src={imageSrc} />
         </div>
 
         <div className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8">

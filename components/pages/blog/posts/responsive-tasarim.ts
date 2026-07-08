@@ -14,7 +14,7 @@ export const blogPostEntry: BlogPostEntry = {
     "The difference between mobile-friendly and responsive design, plus practical rules for interfaces that work on every screen.",
   category: "Responsive",
   categoryEn: "Responsive",
-  imageUrl: "/images/blog/responsive-tasarim.png",
+  imageUrl: "/images/pages/blog/responsive-tasarim.png",
   readingTime: 9,
   publishedAt: "2026-06-26",
   featured: true,

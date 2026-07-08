@@ -10,7 +10,7 @@ export const workflowTr = {
       step: "1",
       title: "Formu Gönderin",
       desc: "Projeniz hakkında birkaç temel bilgi paylaşmanız yeterli; birkaç dakikada biter.",
-      timing: "1 dakika",
+      timing: "~2 dakika",
     },
     {
       step: "2",

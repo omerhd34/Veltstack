@@ -14,7 +14,7 @@ export const blogPostEntry: BlogPostEntry = {
     "We compare PayTR, iyzico, Param, Shopier and more by commission, integration and support.",
   category: "Araçlar & İpuçları",
   categoryEn: "Tools & Tips",
-  imageUrl: "/images/blog/en-iyi-sanal-pos-firmalari.png",
+  imageUrl: "/images/pages/blog/en-iyi-sanal-pos-firmalari.png",
   readingTime: 8,
   publishedAt: "2026-06-24",
   content: {
