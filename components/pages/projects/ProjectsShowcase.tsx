@@ -39,7 +39,7 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
       />
 
       <SiteContainer className="relative">
-        <header className="max-w-2xl">
+        <header className="max-w-3xl">
           <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
             {tPage("showcaseBadge")}
           </span>

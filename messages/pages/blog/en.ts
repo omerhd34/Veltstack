@@ -16,9 +16,8 @@ export const blogPageEn = {
       hint: "We group articles under topics like web development, mobile, SEO, e-commerce and tools.",
     },
     reading: {
-      label: "Total Reading",
+      label: "Total Reading (minutes)",
       hint: "Estimated total reading time across all articles. You can also see each article's reading time at the top.",
-      unit: "min",
     },
     featured: {
       label: "Featured Posts",

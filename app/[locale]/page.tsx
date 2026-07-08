@@ -7,8 +7,8 @@ import { WhyMeSection } from "@/components/sections/why-me";
 import { ProjectsSection } from "@/components/sections/projects";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { BlogPreviewSection } from "@/components/sections/blog-preview";
-import { CTASection } from "@/components/sections/cta";
 import { ApproachSection } from "@/components/sections/approach";
+import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -31,7 +31,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <ProjectsSection />
       <TestimonialsSection />
       <BlogPreviewSection />
-      <CTASection />
+      <ServicesConsultationCTA />
     </>
   );
 }

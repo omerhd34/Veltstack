@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { techItemCount } from "@/components/sections/tech-marquee/tech-items";
-import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
+import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { ProjectsPageHero } from "./ProjectsPageHero";
 import { ProjectsShowcase } from "./ProjectsShowcase";
 
@@ -30,11 +30,7 @@ export async function ProjectsPageView({ className }: ProjectsPageViewProps) {
         stats={stats}
       />
       <ProjectsShowcase />
-      <ServicesPageCTA
-        title={t("ctaTitle")}
-        subtitle={t("ctaSubtitle")}
-        buttonLabel={t("ctaButton")}
-      />
+      <ServicesConsultationCTA />
     </div>
   );
 }

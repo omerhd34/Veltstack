@@ -21,8 +21,8 @@ export const projectsPageEn = {
     },
     {
       value: "100%",
-      label: "Design + Code",
-      hint: "We combine UI design and development in one team and one process for every project.",
+      label: "Custom Code",
+      hint: "Every project uses bespoke, scalable and maintainable code instead of templates or off-the-shelf shortcuts.",
     },
     {
       value: "3-120",
@@ -33,7 +33,7 @@ export const projectsPageEn = {
   showcaseBadge: "Case Studies",
   showcaseTitle: "Every project tells a business story",
   showcaseSubtitle:
-    "Design and development in one line, balanced with performance and measurable results.",
+    "Development projects focused on business goals, balanced with performance and measurable results.",
   viewLabel: "View details",
   featuredLabel: "Featured",
   ctaTitle: "Is your project next?",

@@ -10,7 +10,7 @@ export const aboutTr = {
   scrollLabel: "Devamını oku",
   stats: [
     {
-      value: "40+",
+      value: "90+",
       label: "Tamamlanan Proje",
       hint: "Farklı sektörlerde teslim ettiğimiz proje sayısı. Kurumsal web, e-ticaret ve mobil uygulama ağırlıklı portföy.",
     },
@@ -36,33 +36,5 @@ export const aboutTr = {
     "Geleneksel yazılım geliştirme; sağlam mimari, test edilmiş kod ve öngörülebilir süreçler üzerine kuruludur. Yapay zeka üretkenliği artırabilir; ancak iş hedeflerini anlamak, doğru ürün kararlarını vermek ve kullanıcı deneyimini şekillendirmek insan zekasının alanıdır.",
     "Veltstack olarak tasarım, mimari, kod ve teslim sürecinin büyük bölümünü insan emeği ve mühendislik disipliniyle yürütüyoruz. Yapay zeka yalnızca metinlerdeki yazım hatalarını gözden geçirmek gibi ikincil işlerde, bir projenin en fazla %5'inde devreye girer. İnsan büyüktür; ürün kararlarında ve kalitede son söz her zaman insanındır.",
     "Yapay zeka destekli hız yerine geleneksel mühendislik disiplinini ve ölçülebilir iş sonuçlarını ön planda tutuyoruz. Performans, erişilebilirlik, bakım kolaylığı ve dönüşüm odaklılık teslim ettiğimiz her projenin temel ölçütleridir.",
-  ],
-  contactBadge: "İletişim",
-  contactTitle: "Bizimle iletişime geçin",
-  contactSubtitle:
-    "Yeni bir proje, iş birliği veya danışmanlık için formu doldurabilir ya da doğrudan yazabilirsiniz.",
-  contactItems: [
-    { label: "Telefon", value: "+90 507 849 29 03", href: "tel:+905078492903" },
-    {
-      label: "WhatsApp",
-      value: "+90 507 849 29 03",
-      href: "https://wa.me/905078492903",
-    },
-    {
-      label: "E-posta",
-      value: "demirome123@gmail.com",
-      href: "mailto:demirome123@gmail.com",
-    },
-    {
-      label: "LinkedIn",
-      value: "omerhd1",
-      href: "https://www.linkedin.com/in/omerhd1/",
-    },
-    {
-      label: "İletişim Formu",
-      value: "veltstack.com/iletisim",
-      href: "/iletisim",
-    },
-    { label: "GitHub", value: "omerhd34", href: "https://github.com/omerhd34" },
   ],
 } as const;

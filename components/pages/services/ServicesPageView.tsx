@@ -2,8 +2,8 @@ import { getTranslations } from "next-intl/server";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { ServicesPageHero } from "./ServicesPageHero";
 import { ServicesPackagesSection } from "./ServicesPackagesSection";
-import { ServicesPageCTA } from "./ServicesPageCTA";
 import { ApproachSection } from "@/components/sections/approach";
+import { ServicesConsultationCTA } from "./ServicesConsultationCTA";
 
 interface ServicesPageViewProps {
   className?: string;
@@ -26,16 +26,7 @@ export async function ServicesPageView({ className }: ServicesPageViewProps) {
       />
       <ServicesPackagesSection />
       <ApproachSection />
-      <ServicesPageCTA
-        badge={t("ctaBadge")}
-        tagline={t("ctaTagline")}
-        title={t("ctaTitle")}
-        titleLead={t("ctaTitleLead")}
-        titleAccent={t("ctaTitleAccent")}
-        subtitle={t("ctaSubtitle")}
-        highlights={[t("ctaPoint1"), t("ctaPoint2"), t("ctaPoint3")]}
-        buttonLabel={t("ctaButton")}
-      />
+      <ServicesConsultationCTA />
     </div>
   );
 }

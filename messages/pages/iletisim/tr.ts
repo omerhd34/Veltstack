@@ -1,6 +1,8 @@
 export const contactTr = {
   formBadge: "Mesaj Gönderin",
   formTitle: "Projenizi anlatın",
+  formDescription:
+    "Hedefinizi, zaman planınızı ve varsa mevcut altyapınızı kısaca yazın. Size en uygun çözümü ve net bir yol haritasını paylaşalım.",
 
   fieldName: "Ad Soyad",
   fieldNamePlaceholder: "Adınız ve soyadınız",
@@ -9,7 +11,6 @@ export const contactTr = {
   fieldPhone: "Telefon",
   fieldPhonePlaceholder: "5XX XXX XX XX",
   fieldPhoneCountryLabel: "Ülke kodu",
-  fieldPhoneOptional: "opsiyonel",
   fieldService: "Hizmet Türü",
   fieldServicePlaceholder: "Hizmet seçin.",
   fieldPackage: "Paket Seçimi",
@@ -19,7 +20,6 @@ export const contactTr = {
   fieldBudget: "Bütçe Aralığı",
   fieldBudgetPlaceholder: "Bütçe seçin.",
   fieldMessage: "Mesajınız",
-  fieldMessageOptional: "opsiyonel",
   fieldMessagePlaceholder:
     "Projenizi, beklentilerinizi ve varsa teknik gereksinimlerinizi anlatın…",
 
@@ -70,12 +70,14 @@ export const contactTr = {
   },
 
   budgetOptions: [
-    { value: "0k-15k", label: "0 - 15.000 ₺" },
-    { value: "15k-25k", label: "15.000 - 25.000 ₺" },
+    { value: "0k-25k", label: "0 - 25.000 ₺" },
     { value: "25k-50k", label: "25.000 - 50.000 ₺" },
     { value: "50k-75k", label: "50.000 - 75.000 ₺" },
     { value: "75k-100k", label: "75.000 - 100.000 ₺" },
-    { value: "100k+", label: "100.000 ₺ ve üzeri" },
+    { value: "100k-150k", label: "100.000 - 150.000 ₺" },
+    { value: "150k-200k", label: "150.000 - 200.000 ₺" },
+    { value: "200k-250k", label: "200.000 - 250.000 ₺" },
+    { value: "250k+", label: "250.000 ₺ ve üzeri" },
     { value: "belirsiz", label: "Henüz bilmiyorum" },
   ],
 

@@ -10,7 +10,6 @@ export const servicesPageEn = {
   heroImageAlt: "Digital development workspace",
   scrollLabel: "View packages",
   ctaBadge: "Free Consultation",
-  ctaTagline: "Let's find the right package together",
   ctaTitle: "Need help choosing a package?",
   ctaTitleLead: "Need help",
   ctaTitleAccent: "choosing a package?",

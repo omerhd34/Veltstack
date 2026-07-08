@@ -10,7 +10,7 @@ export const aboutEn = {
   scrollLabel: "Read more",
   stats: [
     {
-      value: "40+",
+      value: "90+",
       label: "Completed Projects",
       hint: "Projects delivered across industries, with a portfolio focused on corporate web, e-commerce and mobile apps.",
     },
@@ -37,24 +37,6 @@ export const aboutEn = {
     "In a landscape where technology and user habits change fast, being online alone is not enough. At Veltstack we evaluate user experience, maintainable code and measurable business outcomes together on every project.",
     "Instead of fragmented handoffs common in classic agency models, we own the full journey: from discovery and scope definition through interface design, API architecture, production launch and SEO infrastructure, all under one discipline.",
     "Rather than chasing trends or delivering visuals alone, we aim for lasting solutions to real business problems. Performance, accessibility, maintainability and conversion focus are baseline criteria on every engagement.",
-  ],
-  contactBadge: "Contact",
-  contactTitle: "Get in touch",
-  contactSubtitle:
-    "For a new project, partnership or consulting, use the form or reach out directly.",
-  contactItems: [
-    { label: "Phone", value: "+90 507 849 29 03", href: "tel:+905078492903" },
-    {
-      label: "Email",
-      value: "demirome123@gmail.com",
-      href: "mailto:demirome123@gmail.com",
-    },
-    { label: "Location", value: "Istanbul / Turkey" },
-    {
-      label: "Contact Form",
-      value: "veltstack.com/contact",
-      href: "/iletisim",
-    },
   ],
   ctaTitle: "Let's talk about your project",
   ctaSubtitle:

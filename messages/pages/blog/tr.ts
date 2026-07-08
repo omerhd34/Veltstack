@@ -20,9 +20,8 @@ export const blogPageTr = {
       hint: "Yazıları web geliştirme, mobil, SEO, e-ticaret ve araçlar gibi konu başlıklarında topluyoruz.",
     },
     reading: {
-      label: "Toplam Okuma",
+      label: "Toplam Okuma(dakika)",
       hint: "Tüm yazıların tahmini toplam okuma süresi. Her yazının başında ayrı okuma süresini de görebilirsiniz.",
-      unit: "dk",
     },
   },
   scrollLabel: "Yazıları incele",
@@ -47,8 +46,4 @@ export const blogPageTr = {
     "E-Ticaret",
     "Araçlar & İpuçları",
   ],
-  ctaTitle: "Projenizi birlikte hayata geçirelim",
-  ctaSubtitle:
-    "Ücretsiz ön görüşmede ihtiyaçlarınızı dinleyip kapsam, süre ve teknoloji yığınını birlikte belirleyelim ve 24 saat içinde size dönüş yaparız.",
-  ctaButton: "İletişime Geç",
 } as const;

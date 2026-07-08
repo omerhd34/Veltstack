@@ -9,7 +9,7 @@ import {
   projectDemoUrls,
   projectImageUrls,
 } from "@/components/sections/projects/project-detail-config";
-import { ServiceCTA } from "@/components/pages/service-detail/ServiceCTA";
+import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { projectRelatedServices } from "./project-detail-config";
 import { ProjectContent } from "./ProjectContent";
 import { ProjectFeatures } from "./ProjectFeatures";
@@ -101,11 +101,7 @@ export async function ProjectDetailView({
         subtitle={t("relatedServicesSubtitle")}
         serviceSlugs={projectRelatedServices[slug]}
       />
-      <ServiceCTA
-        title={t("ctaTitle")}
-        subtitle={t("ctaSubtitle")}
-        buttonLabel={t("ctaButton")}
-      />
+      <ServicesConsultationCTA />
     </div>
   );
 }

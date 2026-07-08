@@ -43,7 +43,7 @@ export const servicesHomeEn = {
   servicesMaintenanceTag: "Updates - Backup - Support",
   servicesStats: [
     { num: "6", label: "Service Categories" },
-    { num: "40+", label: "Completed Projects" },
+    { num: "90+", label: "Completed Projects" },
     { num: "6+", label: "Years of Experience" },
     { num: "100%", label: "Client Satisfaction" },
   ],

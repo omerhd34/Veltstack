@@ -4,6 +4,7 @@ import { ContactFormFields } from "./ContactFormFields";
 import {
   ContactInfo,
   ContactSectionBadge,
+  ContactSectionDescription,
   ContactSectionHeader,
   ContactSectionTitle,
 } from "./ContactInfo";
@@ -22,6 +23,7 @@ interface ContactItem {
 interface ContactFormProps {
   formBadge: string;
   formTitle: string;
+  formDescription: string;
 
   fieldName: string;
   fieldNamePlaceholder: string;
@@ -30,7 +32,6 @@ interface ContactFormProps {
   fieldPhone: string;
   fieldPhonePlaceholder: string;
   fieldPhoneCountryLabel: string;
-  fieldPhoneOptional: string;
   fieldService: string;
   fieldServicePlaceholder: string;
   fieldPackage: string;
@@ -40,7 +41,6 @@ interface ContactFormProps {
   fieldBudget: string;
   fieldBudgetPlaceholder: string;
   fieldMessage: string;
-  fieldMessageOptional: string;
   fieldMessagePlaceholder: string;
   submitButton: string;
   submitting: string;
@@ -63,6 +63,7 @@ interface ContactFormProps {
 export function ContactForm({
   formBadge,
   formTitle,
+  formDescription,
   infoBadge,
   infoTitle,
   contactItems,
@@ -95,6 +96,7 @@ export function ContactForm({
             <ContactSectionHeader
               badge={formBadge}
               title={formTitle}
+              description={formDescription}
               titleAs="h1"
               titleId="contact-form-title"
             />
@@ -118,6 +120,7 @@ export function ContactForm({
                 titleAs="h1"
                 titleId="contact-form-title"
               />
+              <ContactSectionDescription description={formDescription} />
             </div>
           </div>
           <div aria-hidden />

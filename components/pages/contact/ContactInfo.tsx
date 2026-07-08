@@ -32,9 +32,14 @@ interface ContactSectionTitleProps {
   titleId?: string;
 }
 
+interface ContactSectionDescriptionProps {
+  description: string;
+}
+
 interface ContactSectionHeaderProps {
   badge: string;
   title: string;
+  description?: string;
   titleAs?: "h1" | "h2";
   titleId?: string;
 }
@@ -80,9 +85,20 @@ export function ContactSectionTitle({
   );
 }
 
+export function ContactSectionDescription({
+  description,
+}: ContactSectionDescriptionProps) {
+  return (
+    <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground md:text-base">
+      {description}
+    </p>
+  );
+}
+
 export function ContactSectionHeader({
   badge,
   title,
+  description,
   titleAs = "h2",
   titleId,
 }: ContactSectionHeaderProps) {
@@ -95,6 +111,9 @@ export function ContactSectionHeader({
           titleAs={titleAs}
           titleId={titleId}
         />
+        {description ? (
+          <ContactSectionDescription description={description} />
+        ) : null}
       </div>
     </header>
   );

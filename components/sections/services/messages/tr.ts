@@ -43,7 +43,7 @@ export const servicesHomeTr = {
   servicesMaintenanceTag: "Güncelleme - Yedekleme - Destek",
   servicesStats: [
     { num: "6", label: "Hizmet Kategorisi" },
-    { num: "40+", label: "Tamamlanan Proje" },
+    { num: "90+", label: "Tamamlanan Proje" },
     { num: "6+", label: "Yıl Deneyim" },
     { num: "100%", label: "Müşteri Memnuniyeti" },
   ],

@@ -10,7 +10,7 @@ import {
 import { ServiceHero } from "./ServiceHero";
 import { ServiceFeatures } from "./ServiceFeatures";
 import { ServiceProcess } from "./ServiceProcess";
-import { CTASection } from "@/components/sections/cta";
+import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { ServiceTech } from "./ServiceTech";
 import { getServiceTechDescriptions } from "./service-tech-descriptions";
 import { servicePrimaryTechStacks } from "./service-tech-primary";
@@ -109,7 +109,7 @@ export async function ServiceDetailView({
         primaryTech={servicePrimaryTechStacks[slug]}
         categories={techCategories}
       />
-      <CTASection />
+      <ServicesConsultationCTA />
     </div>
   );
 }

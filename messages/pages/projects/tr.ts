@@ -10,7 +10,7 @@ export const projectsPageTr = {
   scrollLabel: "Projeleri incele",
   stats: [
     {
-      value: "4",
+      value: "6",
       label: "Seçilmiş Proje",
       hint: "Portföyümüzde detaylı inceleme sunulan seçilmiş proje sayısı. Her biri gerçek iş hedeflerine yönelik teslim edilmiştir.",
     },
@@ -21,8 +21,8 @@ export const projectsPageTr = {
     },
     {
       value: "100%",
-      label: "Tasarım + Kod",
-      hint: "Her projede arayüz tasarımı ve geliştirmeyi tek ekip ve tek süreçte birleştiriyoruz.",
+      label: "Özel Kod",
+      hint: "Her projede hazır şablon yerine ihtiyaca özel, ölçeklenebilir ve sürdürülebilir kod tabanıyla geliştiriyoruz.",
     },
     {
       value: "3-120",
@@ -33,11 +33,7 @@ export const projectsPageTr = {
   showcaseBadge: "Proje İncelemeleri",
   showcaseTitle: "Her proje, bir iş hikayesi",
   showcaseSubtitle:
-    "Tasarım ve geliştirmeyi tek çizgide birleştiren, performans ve ölçülebilir sonuçlarla dengelenmiş projeler.",
+    "İş hedeflerine odaklı, performans ve ölçülebilir sonuçlarla dengelenmiş geliştirme projeleri.",
   viewLabel: "Detayları incele",
   featuredLabel: "Öne Çıkan",
-  ctaTitle: "Sizin projeniz sırada mı?",
-  ctaSubtitle:
-    "Ücretsiz görüşmede projenizi dinleyip kapsam, süre ve teknoloji yığınını birlikte belirleyelim ve 24 saat içinde size dönüş yaparız.",
-  ctaButton: "Görüşme Planla",
 } as const;

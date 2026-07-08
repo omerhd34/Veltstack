@@ -25,7 +25,6 @@ interface ContactFormFieldsProps {
     fieldPhone: string;
     fieldPhonePlaceholder: string;
     fieldPhoneCountryLabel: string;
-    fieldPhoneOptional: string;
     fieldService: string;
     fieldServicePlaceholder: string;
     fieldPackage: string;
@@ -35,7 +34,6 @@ interface ContactFormFieldsProps {
     fieldBudget: string;
     fieldBudgetPlaceholder: string;
     fieldMessage: string;
-    fieldMessageOptional: string;
     fieldMessagePlaceholder: string;
     submitButton: string;
     submitting: string;
@@ -221,9 +219,6 @@ export function ContactFormFields({
       <div>
         <label htmlFor="cf-phone" className={labelBase}>
           <span className={labelText}>{labels.fieldPhone}</span>
-          <span className="ml-1.5 text-[0.75rem] font-normal text-muted-foreground">
-            ({labels.fieldPhoneOptional})
-          </span>
         </label>
         <ContactPhoneField
           id="cf-phone"
@@ -321,9 +316,6 @@ export function ContactFormFields({
       <div>
         <label htmlFor="cf-content" className={labelBase}>
           <span className={labelText}>{labels.fieldMessage}</span>
-          <span className="ml-1.5 text-[0.75rem] font-normal text-muted-foreground">
-            ({labels.fieldMessageOptional})
-          </span>
         </label>
         <ContactFormFieldShell>
           <textarea

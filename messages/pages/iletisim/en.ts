@@ -1,6 +1,8 @@
 export const contactEn = {
   formBadge: "Send a Message",
   formTitle: "Tell us about your project",
+  formDescription:
+    "Share your goal, timeline, and any existing setup in a few lines. We’ll respond with the best approach and a clear roadmap.",
 
   fieldName: "Full Name",
   fieldNamePlaceholder: "Your first and last name",
@@ -9,7 +11,6 @@ export const contactEn = {
   fieldPhone: "Phone",
   fieldPhonePlaceholder: "5XX XXX XX XX",
   fieldPhoneCountryLabel: "Country code",
-  fieldPhoneOptional: "optional",
   fieldService: "Service Type",
   fieldServicePlaceholder: "Select a service.",
   fieldPackage: "Package Selection",
@@ -19,7 +20,6 @@ export const contactEn = {
   fieldBudget: "Budget Range",
   fieldBudgetPlaceholder: "Select a budget.",
   fieldMessage: "Your Message",
-  fieldMessageOptional: "optional",
   fieldMessagePlaceholder:
     "Describe your project, expectations, and any technical requirements…",
 
@@ -73,12 +73,14 @@ export const contactEn = {
   },
 
   budgetOptions: [
-    { value: "0k-15k", label: "$0 - $500" },
-    { value: "15k-25k", label: "$500 - $750" },
+    { value: "0k-25k", label: "$0 - $750" },
     { value: "25k-50k", label: "$750 - $1,500" },
     { value: "50k-75k", label: "$1,500 - $2,200" },
     { value: "75k-100k", label: "$2,200 - $3,000" },
-    { value: "100k+", label: "$3,000+" },
+    { value: "100k-150k", label: "$3,000 - $4,500" },
+    { value: "150k-200k", label: "$4,500 - $6,000" },
+    { value: "200k-250k", label: "$6,000 - $7,500" },
+    { value: "250k+", label: "$7,500+" },
     { value: "belirsiz", label: "Not sure yet" },
   ],
 

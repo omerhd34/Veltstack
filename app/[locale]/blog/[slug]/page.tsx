@@ -3,7 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { BreadcrumbSchema } from "@/components/seo";
-import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
+import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { BlogCard } from "@/components/pages/blog/BlogCard";
 import { BlogArticleBody } from "@/components/pages/blog-detail/BlogArticleBody";
 import { BlogDetailHero } from "@/components/pages/blog-detail/BlogDetailHero";
@@ -192,12 +192,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           </SiteContainer>
         </section>
       )}
-
-      <ServicesPageCTA
-        title={t("ctaTitle")}
-        subtitle={t("ctaSubtitle")}
-        buttonLabel={t("ctaButton")}
-      />
+      <ServicesConsultationCTA />
     </>
   );
 }

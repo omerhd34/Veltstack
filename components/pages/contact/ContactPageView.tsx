@@ -39,6 +39,7 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
       <ContactForm
         formBadge={t("formBadge")}
         formTitle={t("formTitle")}
+        formDescription={t("formDescription")}
         fieldName={t("fieldName")}
         fieldNamePlaceholder={t("fieldNamePlaceholder")}
         fieldEmail={t("fieldEmail")}
@@ -46,7 +47,6 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
         fieldPhone={t("fieldPhone")}
         fieldPhonePlaceholder={t("fieldPhonePlaceholder")}
         fieldPhoneCountryLabel={t("fieldPhoneCountryLabel")}
-        fieldPhoneOptional={t("fieldPhoneOptional")}
         fieldService={t("fieldService")}
         fieldServicePlaceholder={t("fieldServicePlaceholder")}
         fieldPackage={t("fieldPackage")}
@@ -56,7 +56,6 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
         fieldBudget={t("fieldBudget")}
         fieldBudgetPlaceholder={t("fieldBudgetPlaceholder")}
         fieldMessage={t("fieldMessage")}
-        fieldMessageOptional={t("fieldMessageOptional")}
         fieldMessagePlaceholder={t("fieldMessagePlaceholder")}
         submitButton={t("submitButton")}
         submitting={t("submitting")}

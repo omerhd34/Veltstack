@@ -11,7 +11,6 @@ interface ServicesPageCTAProps {
   subtitle: string;
   buttonLabel: string;
   badge?: string;
-  tagline?: string;
   titleLead?: string;
   titleAccent?: string;
   highlights?: [string, string, string];
@@ -23,7 +22,6 @@ export async function ServicesPageCTA({
   subtitle,
   buttonLabel,
   badge,
-  tagline,
   titleLead,
   titleAccent,
   highlights,
@@ -80,17 +78,9 @@ export async function ServicesPageCTA({
               <SectionBadge>{toLatinUppercase(badge, locale)}</SectionBadge>
             ) : null}
 
-            {tagline ? (
-              <p className="mt-6 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300/55">
-                <span aria-hidden className="h-px w-8 bg-emerald-500/25" />
-                {tagline}
-                <span aria-hidden className="h-px w-8 bg-emerald-500/25" />
-              </p>
-            ) : null}
-
             <h2
               id="page-cta-title"
-              className={`font-(family-name:--font-heading) text-3xl font-bold leading-[1.08] tracking-tight text-white md:text-4xl lg:text-5xl ${badge || tagline ? "mt-5" : ""}`}
+              className={`font-(family-name:--font-heading) text-3xl font-bold leading-[1.08] tracking-tight text-white md:text-4xl lg:text-5xl ${badge ? "mt-5" : ""}`}
             >
               {hasSplitTitle ? (
                 <>
@@ -110,7 +100,9 @@ export async function ServicesPageCTA({
 
             {highlights ? <CTAHighlights points={highlights} /> : null}
 
-            <div className={`flex flex-col items-center ${highlights ? "mt-10" : "mt-8"}`}>
+            <div
+              className={`flex flex-col items-center ${highlights ? "mt-10" : "mt-8"}`}
+            >
               <PrimaryCtaLink
                 href="/iletisim"
                 variant="accent"

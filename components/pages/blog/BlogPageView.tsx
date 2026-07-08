@@ -1,6 +1,6 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
-import { ServicesPageCTA } from "@/components/pages/services/ServicesPageCTA";
+import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { blogPosts, getAllCategories, getFeaturedPosts } from "./blog-data";
 import { BlogPageHero } from "./BlogPageHero";
 import { BlogGrid } from "./BlogGrid";
@@ -8,7 +8,6 @@ import { BlogGrid } from "./BlogGrid";
 interface BlogHeroStatCopy {
   label: string;
   hint: string;
-  unit?: string;
 }
 
 interface BlogPageViewProps {
@@ -48,7 +47,7 @@ export async function BlogPageView({ className }: BlogPageViewProps) {
       hint: statsCopy.categories.hint,
     },
     {
-      value: `${totalReadingTime} ${statsCopy.reading.unit ?? ""}`.trim(),
+      value: String(totalReadingTime),
       label: statsCopy.reading.label,
       hint: statsCopy.reading.hint,
     },
@@ -82,12 +81,7 @@ export async function BlogPageView({ className }: BlogPageViewProps) {
       />
 
       <BlogGrid posts={posts} locale={locale} labels={labels} />
-
-      <ServicesPageCTA
-        title={t("ctaTitle")}
-        subtitle={t("ctaSubtitle")}
-        buttonLabel={t("ctaButton")}
-      />
+      <ServicesConsultationCTA />
     </div>
   );
 }
