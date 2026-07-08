@@ -1,5 +1,4 @@
 export { Navbar } from "./Navbar"
-export { NavbarLogo } from "./NavbarLogo"
 export { NavbarLinks } from "./NavbarLinks"
 export { NavbarDesktopLinks } from "./NavbarDesktopLinks"
 export { NavbarMobileMenu } from "./NavbarMobileMenu"

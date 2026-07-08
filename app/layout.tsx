@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
+import { Black_Ops_One, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-heading",
+const blackOpsOne = Black_Ops_One({
+  variable: "--font-logo",
   subsets: ["latin"],
+  weight: "400",
 });
 
 const inter = Inter({
@@ -35,7 +36,7 @@ export default function RootLayout({
   return (
     <html className="h-full">
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} min-h-full flex flex-col antialiased`}
+        className={`${blackOpsOne.variable} ${inter.variable} ${jetbrainsMono.variable} min-h-full flex flex-col antialiased`}
       >
         {children}
       </body>

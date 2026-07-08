@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { LuMenu } from "react-icons/lu";
-import { Link, usePathname } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { useUiStore } from "@/store/uiSlice";
 import { Button } from "@/components/ui/shadcn";
+import { Logo } from "@/components/layout/Logo";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { cn } from "@/lib/utils";
-import { NavbarLogo } from "./NavbarLogo";
 import { NavbarDesktopLinks } from "./NavbarDesktopLinks";
 import { NavbarMobileMenu } from "./NavbarMobileMenu";
 import { NavbarLangSwitcher } from "./NavbarLangSwitcher";
@@ -71,9 +71,7 @@ export function Navbar({ className }: NavbarProps) {
       )}
     >
       <SiteContainer className="relative flex min-h-18 items-center justify-between gap-4">
-        <Link href="/" className="shrink-0 select-none">
-          <NavbarLogo />
-        </Link>
+        <Logo variant="navbar" className="shrink-0" />
 
         <NavbarDesktopLinks className="absolute left-1/2 hidden -translate-x-1/2 lg:flex" />
 

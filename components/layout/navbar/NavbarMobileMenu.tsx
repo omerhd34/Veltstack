@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/shadcn";
 import { cn } from "@/lib/utils";
 import { NavbarLinks } from "./NavbarLinks";
 import { NavbarCta } from "./NavbarCta";
-import { NavbarLogo } from "./NavbarLogo";
+import { Logo } from "@/components/layout/Logo";
 
 interface NavbarMobileMenuProps {
   className?: string;
@@ -52,7 +52,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
         aria-label="Mobil menü"
       >
         <div className="flex h-18 shrink-0 items-center justify-between border-b border-border px-4 sm:px-5">
-          <NavbarLogo />
+          <Logo variant="navbar" />
           <Button
             variant="ghost"
             size="icon-sm"

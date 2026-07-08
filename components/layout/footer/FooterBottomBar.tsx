@@ -1,6 +1,6 @@
 "use client";
 
-import { FooterLogo } from "./FooterLogo";
+import { Logo } from "@/components/layout/Logo";
 import { FooterCopyright } from "./FooterCopyright";
 
 interface FooterBottomBarProps {
@@ -12,7 +12,7 @@ export function FooterBottomBar({ className }: FooterBottomBarProps) {
     <div
       className={`flex items-center justify-between gap-4 py-8 ${className ?? ""}`}
     >
-      <FooterLogo />
+      <Logo variant="footer" />
       <FooterCopyright className="text-right" />
     </div>
   );
