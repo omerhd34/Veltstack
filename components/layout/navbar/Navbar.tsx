@@ -45,11 +45,28 @@ export function Navbar({ className }: NavbarProps) {
   const megaMenuOpen = servicesMenuOpen || projectsMenuOpen || blogMenuOpen;
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 48);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    const updateScrolled = () => {
+      if (isHome) {
+        const marquee = document.querySelector<HTMLElement>(
+          "[data-services-marquee]",
+        );
+        if (marquee) {
+          setScrolled(marquee.getBoundingClientRect().top <= 0);
+          return;
+        }
+      }
+
+      setScrolled(window.scrollY > 48);
+    };
+
+    updateScrolled();
+    window.addEventListener("scroll", updateScrolled, { passive: true });
+    window.addEventListener("resize", updateScrolled, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", updateScrolled);
+      window.removeEventListener("resize", updateScrolled);
+    };
+  }, [isHome]);
 
   const overlay = isHome && !scrolled && !megaMenuOpen;
 

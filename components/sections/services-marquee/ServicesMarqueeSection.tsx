@@ -11,6 +11,7 @@ export async function ServicesMarqueeSection({ className }: ServicesMarqueeSecti
 
   return (
     <section
+      data-services-marquee
       className={`overflow-hidden bg-brand-accent text-brand-accent-foreground ${className ?? ""}`}
       aria-label={t("servicesTitle")}
     >
