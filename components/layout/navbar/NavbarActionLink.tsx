@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 interface NavbarActionLinkProps {
   href: ComponentProps<typeof Link>["href"];
   locale?: ComponentProps<typeof Link>["locale"];
+  scroll?: ComponentProps<typeof Link>["scroll"];
   onClick?: () => void;
   className?: string;
   innerClassName?: string;
@@ -25,6 +26,7 @@ interface NavbarActionLinkProps {
 export function NavbarActionLink({
   href,
   locale,
+  scroll,
   onClick,
   className,
   innerClassName,
@@ -43,6 +45,7 @@ export function NavbarActionLink({
       <Link
         href={href}
         locale={locale}
+        scroll={scroll}
         onClick={onClick}
         aria-label={ariaLabel}
         className={cn(

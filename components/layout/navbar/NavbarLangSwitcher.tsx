@@ -2,6 +2,7 @@
 
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/navigation";
+import { saveLocaleSwitchScroll } from "@/lib/locale-scroll";
 import { cn } from "@/lib/utils";
 import { NavbarActionLink } from "./NavbarActionLink";
 
@@ -20,6 +21,8 @@ export function NavbarLangSwitcher({ className }: NavbarLangSwitcherProps) {
     <NavbarActionLink
       href={pathname}
       locale={nextLocale}
+      scroll={false}
+      onClick={saveLocaleSwitchScroll}
       className={cn("size-11", className)}
       innerClassName="text-base font-semibold uppercase tracking-[-0.01em]"
       ariaLabel={nextLocale === "en" ? tNav("switchToEn") : tNav("switchToTr")}

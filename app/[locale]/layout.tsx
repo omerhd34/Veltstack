@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { LocaleHtmlLang } from "@/components/layout/LocaleHtmlLang";
+import { LocaleScrollRestoration } from "@/components/layout/LocaleScrollRestoration";
 import { LocalBusinessSchema } from "@/components/seo";
 
 interface LocaleLayoutProps {
@@ -32,6 +33,7 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider key={locale} locale={locale} messages={messages}>
       <LocaleHtmlLang />
+      <LocaleScrollRestoration />
       <LocalBusinessSchema />
       <Navbar />
       <main className="flex-1">{children}</main>
