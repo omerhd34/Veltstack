@@ -15,6 +15,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { useDragScroll } from "@/components/hooks/use-drag-scroll";
+import { StardustIconButton } from "@/components/ui/StardustIconButton";
 import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -385,8 +386,8 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
 
     const navOutside = navPlacement === "outside";
 
-    const navButtonClass =
-      "hidden size-10 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 text-white shadow-lg backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20 disabled:pointer-events-none disabled:opacity-35 md:flex";
+    const navButtonShellClass = "hidden shrink-0 md:inline-flex";
+    const navButtonClass = "shadow-lg";
 
     const renderFeatureCards = (
       featureSet: FeatureItem[],
@@ -484,14 +485,16 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                 )}
               >
                 {navOutside ? (
-                  <button
+                  <StardustIconButton
                     type="button"
+                    tone="glass"
                     onClick={() => scrollByCard(-1)}
                     aria-label={navLabels.prev}
                     className={navButtonClass}
+                    shellClassName={navButtonShellClass}
                   >
                     <LuChevronLeft className="size-5" aria-hidden />
-                  </button>
+                  </StardustIconButton>
                 ) : null}
 
                 <div
@@ -507,14 +510,16 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                     )}
                   >
                     {!navOutside ? (
-                      <button
+                      <StardustIconButton
                         type="button"
+                        tone="glass"
                         onClick={() => scrollByCard(-1)}
                         aria-label={navLabels.prev}
                         className={navButtonClass}
+                        shellClassName={navButtonShellClass}
                       >
                         <LuChevronLeft className="size-5" aria-hidden />
-                      </button>
+                      </StardustIconButton>
                     ) : null}
 
                     <div
@@ -544,27 +549,31 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                     </div>
 
                     {!navOutside ? (
-                      <button
+                      <StardustIconButton
                         type="button"
+                        tone="glass"
                         onClick={() => scrollByCard(1)}
                         aria-label={navLabels.next}
                         className={navButtonClass}
+                        shellClassName={navButtonShellClass}
                       >
                         <LuChevronRight className="size-5" aria-hidden />
-                      </button>
+                      </StardustIconButton>
                     ) : null}
                   </div>
                 </div>
 
                 {navOutside ? (
-                  <button
+                  <StardustIconButton
                     type="button"
+                    tone="glass"
                     onClick={() => scrollByCard(1)}
                     aria-label={navLabels.next}
                     className={navButtonClass}
+                    shellClassName={navButtonShellClass}
                   >
                     <LuChevronRight className="size-5" aria-hidden />
-                  </button>
+                  </StardustIconButton>
                 ) : null}
               </div>
 

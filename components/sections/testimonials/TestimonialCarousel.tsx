@@ -2,19 +2,13 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
-import { BorderTrace } from "@/components/ui/BorderTrace";
+import { StardustIconButton } from "@/components/ui/StardustIconButton";
 import { cn } from "@/lib/utils";
 import { TestimonialCard } from "./TestimonialCard";
 
-const slowTransition =
-  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
-
 const navButtonClassName = cn(
-  "group relative flex size-11 items-center justify-center rounded-full bg-white/95 backdrop-blur-sm",
-  "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
-  "text-foreground/70 shadow-[0_4px_16px_rgb(0,0,0,0.06)]",
-  "hover:bg-white hover:text-brand-accent hover:shadow-[0_8px_24px_rgb(58,107,82,0.12)]",
-  slowTransition,
+  "shadow-[0_4px_16px_rgb(0,0,0,0.06)]",
+  "hover:shadow-[0_8px_24px_rgb(58,107,82,0.12)]",
 );
 
 export interface TestimonialItem {
@@ -103,30 +97,26 @@ export function TestimonialCarousel({
 
       {count > 1 && (
         <>
-          <button
+          <StardustIconButton
             type="button"
+            tone="light"
             onClick={goPrev}
             aria-label={labels.prev}
-            className={cn(
-              navButtonClassName,
-              "absolute top-1/2 left-0 z-10 -translate-y-1/2 md:-left-6",
-            )}
+            shellClassName="absolute top-1/2 left-0 z-10 size-11 -translate-y-1/2 md:-left-6"
+            className={navButtonClassName}
           >
-            <BorderTrace durationSec={2.5} />
-            <LuChevronLeft className="relative z-1 size-5" />
-          </button>
-          <button
+            <LuChevronLeft className="size-5" aria-hidden />
+          </StardustIconButton>
+          <StardustIconButton
             type="button"
+            tone="light"
             onClick={goNext}
             aria-label={labels.next}
-            className={cn(
-              navButtonClassName,
-              "absolute top-1/2 right-0 z-10 -translate-y-1/2 md:-right-6",
-            )}
+            shellClassName="absolute top-1/2 right-0 z-10 size-11 -translate-y-1/2 md:-right-6"
+            className={navButtonClassName}
           >
-            <BorderTrace durationSec={2.5} />
-            <LuChevronRight className="relative z-1 size-5" />
-          </button>
+            <LuChevronRight className="size-5" aria-hidden />
+          </StardustIconButton>
 
           <div className="mt-10 flex flex-col items-center gap-4">
             <div className="flex items-center gap-2">

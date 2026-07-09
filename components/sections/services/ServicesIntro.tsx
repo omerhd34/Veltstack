@@ -19,15 +19,14 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
         href="/iletisim"
         variant="accent"
         showArrow={false}
-        trailingIcon={<LuMessageCircle className="size-5" aria-hidden />}
+        leadingIcon={<LuMessageCircle className="size-5" aria-hidden />}
       >
         {t("servicesCta")}
       </PrimaryCtaLink>
       <PrimaryCtaLink
         href="/hizmetler"
-        variant="outline"
+        variant="glass"
         showArrow={false}
-        className="border-white/20 bg-white/10 hover:border-white/30 hover:bg-white/18"
         leadingIcon={<LuCompass className="size-5" aria-hidden />}
       >
         {t("servicesAllCta")}

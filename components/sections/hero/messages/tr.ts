@@ -6,5 +6,5 @@ export const heroHomeTr = {
   heroImageAlt:
     "Web geliştirme, mobil uygulama, SEO ve sürekli bakım hizmetlerini simgeleyen dijital arayüz illüstrasyonu",
   ctaPrimary: "Projeni Başlat",
-  ctaSecondary: "Hizmetleri Keşfet",
+  ctaSecondary: "Projeleri İncele",
 } as const;

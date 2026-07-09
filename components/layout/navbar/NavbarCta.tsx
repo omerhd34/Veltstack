@@ -3,6 +3,7 @@
 import { LuMessageCircle } from "react-icons/lu";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
+import { stardustIcon } from "@/components/ui/interactive-hover";
 import { NavbarActionLink } from "./NavbarActionLink";
 
 interface NavbarCtaProps {
@@ -18,9 +19,12 @@ export function NavbarCta({ className, onNavigate }: NavbarCtaProps) {
       href="/iletisim"
       onClick={onNavigate}
       className={cn("h-11", className)}
-      innerClassName="gap-2 px-4 text-xs font-semibold tracking-wide"
+      innerClassName="px-4 text-base font-semibold tracking-[-0.01em]"
+      contentClassName="gap-2.5"
     >
-      <LuMessageCircle className="size-4 shrink-0" aria-hidden />
+      <span className={stardustIcon}>
+        <LuMessageCircle className="size-4 shrink-0" aria-hidden />
+      </span>
       {tNav("cta")}
     </NavbarActionLink>
   );

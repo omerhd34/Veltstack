@@ -77,19 +77,7 @@ export function TestimonialCard({
       </div>
 
       <blockquote className="relative flex-1 text-lg leading-[1.9] text-foreground/78 md:text-xl md:leading-[1.95]">
-        <span
-          aria-hidden
-          className="mr-1 font-(family-name:--font-heading) text-3xl leading-none text-brand-accent/35 md:text-4xl"
-        >
-          &ldquo;
-        </span>
         {feedback}
-        <span
-          aria-hidden
-          className="ml-0.5 font-(family-name:--font-heading) text-3xl leading-none text-brand-accent/35 md:text-4xl"
-        >
-          &rdquo;
-        </span>
       </blockquote>
 
       <footer className="relative mt-8 flex shrink-0 items-center gap-4 border-t border-border/40 pt-7">

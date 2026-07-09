@@ -6,5 +6,5 @@ export const heroHomeEn = {
   heroImageAlt:
     "Digital interface illustration representing web development, mobile apps, SEO and ongoing maintenance",
   ctaPrimary: "Start Your Project",
-  ctaSecondary: "Explore Services",
+  ctaSecondary: "Explore Projects",
 } as const;

@@ -1,11 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import type { IconType } from "react-icons";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 import { WhyMeCard } from "./WhyMeCard";
-import { whyMeItems } from "./why-me-items";
+import { whyMeIconByTitleKey } from "./why-me-icons";
 
 export interface WhyMeSlideItem {
   id: string;
@@ -57,9 +56,7 @@ export function WhyMeCarousel({
   const slideStep = cardWidth + gap;
   const dotCount = maxIndex + 1;
 
-  const iconMap = Object.fromEntries(
-    whyMeItems.map((item) => [item.titleKey, item.icon]),
-  ) as Record<string, IconType>;
+  const iconMap = whyMeIconByTitleKey;
 
   const measure = useCallback(() => {
     const viewport = viewportRef.current;

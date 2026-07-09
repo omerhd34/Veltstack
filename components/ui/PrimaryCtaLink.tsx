@@ -3,17 +3,18 @@
 import { type ReactNode } from "react";
 import { LuArrowUpRight } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
-import { BorderTrace } from "@/components/ui/BorderTrace";
+import { StardustShell } from "@/components/lightswind/stardust-button";
+import {
+  stardustContent,
+  stardustFace,
+  stardustFocus,
+  stardustGlassFace,
+  stardustIcon,
+} from "@/components/ui/interactive-hover";
 import { cn } from "@/lib/utils";
 
-const slowTransition =
-  "transition-[transform,background-color,box-shadow] duration-1000 ease-in-out motion-reduce:transition-none";
-
-const contentScaleTransition =
-  "transition-transform duration-1000 ease-in-out motion-reduce:transition-none group-hover:scale-[1.02] active:scale-[0.98] motion-reduce:group-hover:scale-100";
-
 type PrimaryCtaLinkSize = "sm" | "md" | "lg";
-type PrimaryCtaLinkVariant = "default" | "accent" | "outline";
+type PrimaryCtaLinkVariant = "default" | "accent" | "outline" | "glass";
 
 interface PrimaryCtaLinkProps {
   href: string;
@@ -46,31 +47,11 @@ const arrowSizeClasses: Record<PrimaryCtaLinkSize, string> = {
   lg: "size-4",
 };
 
-const iconTransition =
-  "transition-colors duration-1000 ease-in-out motion-reduce:transition-none";
-
-const iconHoverClasses = cn(
-  "text-white stroke-[2.25]",
-  iconTransition,
-  "group-hover:text-(--border-trace-stroke)",
-  "motion-reduce:group-hover:text-white",
-);
-
-const iconSlotClasses = cn(
-  "inline-flex shrink-0",
-  "[&_svg]:text-white [&_svg]:stroke-[2.25]",
-  "[&_svg]:transition-colors [&_svg]:duration-1000 [&_svg]:ease-in-out",
-  "group-hover:[&_svg]:text-(--border-trace-stroke)",
-  "motion-reduce:[&_svg]:transition-none motion-reduce:group-hover:[&_svg]:text-white",
-);
-
-const variantClasses: Record<PrimaryCtaLinkVariant, string> = {
-  default:
-    "bg-[#0A0A0F] font-medium text-white shadow-sm hover:bg-[#0A0A0F]/90 hover:shadow-md",
-  accent:
-    "bg-brand-accent font-semibold text-white shadow-sm hover:bg-brand-accent/85 hover:shadow-md",
-  outline:
-    "border-[#0A0A0F] bg-[#0A0A0F] font-medium text-white hover:bg-[#0A0A0F]/90",
+const variantFaceClasses: Record<PrimaryCtaLinkVariant, string> = {
+  default: "bg-[#0A0A0F]/92",
+  accent: "bg-brand-accent/88",
+  outline: "bg-[#0A0A0F]/92",
+  glass: stardustGlassFace,
 };
 
 export function PrimaryCtaLink({
@@ -86,48 +67,38 @@ export function PrimaryCtaLink({
   onNavigate,
 }: PrimaryCtaLinkProps) {
   return (
-    <span
-      className={cn(
-        "group relative inline-flex overflow-visible",
-        wrapperClassName,
-      )}
+    <StardustShell
+      className={wrapperClassName}
+      faceClassName={variantFaceClasses[variant]}
     >
       <Link
         href={href}
         onClick={onNavigate}
         className={cn(
-          "relative z-1 inline-flex items-center justify-center rounded-full",
-          "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
-          "whitespace-nowrap",
-          slowTransition,
-          variantClasses[variant],
+          stardustFace,
+          stardustFocus,
+          "bg-transparent whitespace-nowrap font-medium text-white",
+          variant === "accent" && "font-semibold",
           linkSizeClasses[size],
           className,
         )}
       >
-        <BorderTrace durationSec={2.5} />
-        <span
-          className={cn(
-            "inline-flex items-center justify-center",
-            contentGapClasses[size],
-            contentScaleTransition,
-          )}
-        >
+        <span className={cn(stardustContent, contentGapClasses[size])}>
           {leadingIcon ? (
-            <span className={iconSlotClasses}>{leadingIcon}</span>
+            <span className={stardustIcon}>{leadingIcon}</span>
           ) : null}
           {children}
           {trailingIcon ? (
-            <span className={iconSlotClasses}>{trailingIcon}</span>
+            <span className={stardustIcon}>{trailingIcon}</span>
           ) : null}
           {showArrow ? (
             <LuArrowUpRight
-              className={cn(arrowSizeClasses[size], iconHoverClasses)}
+              className={cn(arrowSizeClasses[size], stardustIcon, "text-white")}
               aria-hidden
             />
           ) : null}
         </span>
       </Link>
-    </span>
+    </StardustShell>
   );
 }

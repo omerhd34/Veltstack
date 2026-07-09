@@ -48,7 +48,7 @@ export function NavbarLinks({
   };
 
   const links = [
-    { href: "/hakkimda", label: tNav("about") },
+    { href: "/hakkimizda", label: tNav("about") },
     { href: "/iletisim", label: tNav("contact") },
   ];
 

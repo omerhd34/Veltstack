@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import type { IconType } from "react-icons";
 import { LuArrowDown, LuArrowLeft, LuArrowRight } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 import { WhyMeCard } from "./WhyMeCard";
-import { whyMeItems } from "./why-me-items";
+import { whyMeIconByTitleKey } from "./why-me-icons";
 
 export interface WhyMeFlowItem {
   titleKey: string;
@@ -21,9 +20,7 @@ interface WhyMeFlowGridProps {
 
 type FlowArrowDirection = "right" | "down" | "left";
 
-const iconByTitleKey = Object.fromEntries(
-  whyMeItems.map((item) => [item.titleKey, item.icon]),
-) as Record<string, IconType>;
+const iconByTitleKey = whyMeIconByTitleKey;
 
 const flowArrows: {
   id: number;

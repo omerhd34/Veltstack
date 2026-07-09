@@ -1,48 +1,49 @@
-import type { IconType } from "react-icons";
-import {
-  LuChartLine,
-  LuContact,
-  LuHeadset,
-  LuLayoutTemplate,
-  LuListChecks,
-  LuRocket,
-} from "react-icons/lu";
+export const whyMeIconKeys = [
+  "contact",
+  "rocket",
+  "headset",
+  "layout",
+  "chart",
+  "checklist",
+] as const;
+
+export type WhyMeIconKey = (typeof whyMeIconKeys)[number];
 
 export interface WhyMeItemConfig {
   titleKey: string;
   descKey: string;
-  icon: IconType;
+  iconKey: WhyMeIconKey;
 }
 
 export const whyMeItems: WhyMeItemConfig[] = [
   {
     titleKey: "whyMeSingleTitle",
     descKey: "whyMeSingleDesc",
-    icon: LuContact,
+    iconKey: "contact",
   },
   {
     titleKey: "whyMeFastTitle",
     descKey: "whyMeFastDesc",
-    icon: LuRocket,
+    iconKey: "rocket",
   },
   {
     titleKey: "whyMeSupportTitle",
     descKey: "whyMeSupportDesc",
-    icon: LuHeadset,
+    iconKey: "headset",
   },
   {
     titleKey: "whyMeUxTitle",
     descKey: "whyMeUxDesc",
-    icon: LuLayoutTemplate,
+    iconKey: "layout",
   },
   {
     titleKey: "whyMeMeasurableTitle",
     descKey: "whyMeMeasurableDesc",
-    icon: LuChartLine,
+    iconKey: "chart",
   },
   {
     titleKey: "whyMeTransparentTitle",
     descKey: "whyMeTransparentDesc",
-    icon: LuListChecks,
+    iconKey: "checklist",
   },
 ];

@@ -1,6 +1,6 @@
 "use client";
 
-import { LuCompass, LuRocket } from "react-icons/lu";
+import { LuEye, LuRocket } from "react-icons/lu";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 
 interface HeroCTAProps {
@@ -22,12 +22,11 @@ export function HeroCTA({ primary, secondary, className }: HeroCTAProps) {
         {primary}
       </PrimaryCtaLink>
       <PrimaryCtaLink
-        href="/hizmetler"
-        variant="outline"
+        href="/projeler"
+        variant="glass"
         size="md"
         showArrow={false}
-        className="border-white/20 bg-white/10 hover:border-white/30 hover:bg-white/18"
-        leadingIcon={<LuCompass className="size-5" aria-hidden />}
+        leadingIcon={<LuEye className="size-5" aria-hidden />}
       >
         {secondary}
       </PrimaryCtaLink>

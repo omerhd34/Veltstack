@@ -86,7 +86,7 @@ export async function CTASection({ className }: CTASectionProps) {
               </PrimaryCtaLink>
               <PrimaryCtaLink
                 href="/projeler"
-                className="ring-1 ring-white/20"
+                variant="glass"
                 showArrow={false}
                 leadingIcon={<LuEye className="size-5" aria-hidden />}
               >

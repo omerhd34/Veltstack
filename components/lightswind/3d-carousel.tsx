@@ -9,6 +9,7 @@ import {
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+import { StardustIconButton } from "@/components/ui/StardustIconButton";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/components/hooks/use-mobile";
 
@@ -235,9 +236,7 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
   if (items.length === 0) return null;
 
   const isLight = theme === "light";
-  const navButtonClass = isLight
-    ? "border border-border bg-card text-foreground shadow-sm hover:border-brand-accent/50 hover:bg-card"
-    : "border border-white/15 bg-white/10 text-white shadow-lg backdrop-blur-sm hover:bg-white/20";
+  const navButtonClass = isLight ? "shadow-sm" : "shadow-lg";
   const pageNumberInactiveClass = isLight
     ? "text-muted-foreground/55 hover:text-brand-accent/80"
     : "text-white/35 hover:text-white/70";
@@ -272,18 +271,16 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
         )}
       >
         {!isMobile && items.length > 1 ? (
-          <button
+          <StardustIconButton
             type="button"
             data-carousel-control
-            className={cn(
-              "flex size-10 shrink-0 items-center justify-center rounded-full transition-all hover:scale-110",
-              navButtonClass,
-            )}
+            tone={isLight ? "light" : "glass"}
+            className={navButtonClass}
             onClick={goPrev}
             aria-label={labels.prev}
           >
-            <LuChevronLeft className="size-5" />
-          </button>
+            <LuChevronLeft className="size-5" aria-hidden />
+          </StardustIconButton>
         ) : null}
 
         <div
@@ -354,18 +351,16 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
         </div>
 
         {!isMobile && items.length > 1 ? (
-          <button
+          <StardustIconButton
             type="button"
             data-carousel-control
-            className={cn(
-              "flex size-10 shrink-0 items-center justify-center rounded-full transition-all hover:scale-110",
-              navButtonClass,
-            )}
+            tone={isLight ? "light" : "glass"}
+            className={navButtonClass}
             onClick={goNext}
             aria-label={labels.next}
           >
-            <LuChevronRight className="size-5" />
-          </button>
+            <LuChevronRight className="size-5" aria-hidden />
+          </StardustIconButton>
         ) : null}
       </div>
     </section>

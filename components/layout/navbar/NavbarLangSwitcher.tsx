@@ -21,10 +21,8 @@ export function NavbarLangSwitcher({ className }: NavbarLangSwitcherProps) {
       href={pathname}
       locale={nextLocale}
       className={cn("size-11", className)}
-      innerClassName="text-xs font-semibold uppercase tracking-wide"
-      ariaLabel={
-        nextLocale === "en" ? tNav("switchToEn") : tNav("switchToTr")
-      }
+      innerClassName="text-base font-semibold uppercase tracking-[-0.01em]"
+      ariaLabel={nextLocale === "en" ? tNav("switchToEn") : tNav("switchToTr")}
     >
       {locale.toUpperCase()}
     </NavbarActionLink>

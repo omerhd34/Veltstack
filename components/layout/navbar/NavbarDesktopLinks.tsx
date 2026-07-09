@@ -34,7 +34,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
   );
 
   const trailingLinks = [
-    { href: "/hakkimda", label: tNav("about") },
+    { href: "/hakkimizda", label: tNav("about") },
     { href: "/iletisim", label: tNav("contact") },
   ];
 
@@ -52,9 +52,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
     pathname.startsWith("/projeler/");
 
   const blogActive =
-    blogMenuOpen ||
-    pathname === "/blog" ||
-    pathname.startsWith("/blog/");
+    blogMenuOpen || pathname === "/blog" || pathname.startsWith("/blog/");
 
   useEffect(() => {
     setServicesMenuOpen(false);
@@ -115,9 +113,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
           aria-haspopup="true"
           className={navItemClass(blogActive)}
         >
-          <span className={navItemLabelClass(blogActive)}>
-            {tNav("blog")}
-          </span>
+          <span className={navItemLabelClass(blogActive)}>{tNav("blog")}</span>
         </Link>
       </div>
 

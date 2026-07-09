@@ -2,7 +2,7 @@
 
 import { ScrollTimeline } from "@/components/lightswind/scroll-timeline";
 import type { TimelineEvent } from "@/components/lightswind/scroll-timeline";
-import { whyMeItems } from "./why-me-items";
+import { whyMeIconByTitleKey } from "./why-me-icons";
 
 export interface WhyMeTimelineItem {
   id: string;
@@ -17,9 +17,7 @@ interface WhyMeScrollTimelineProps {
   className?: string;
 }
 
-const iconByTitleKey = Object.fromEntries(
-  whyMeItems.map((item) => [item.titleKey, item.icon]),
-);
+const iconByTitleKey = whyMeIconByTitleKey;
 
 export function WhyMeScrollTimeline({
   items,
