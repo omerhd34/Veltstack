@@ -6,6 +6,8 @@ import { Link } from "@/i18n/navigation";
 import { Badge } from "@/components/ui/shadcn";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { CardIndexNumber } from "@/components/ui/CardIndexNumber";
+import { StardustShell } from "@/components/lightswind/stardust-button";
+import { stardustCardFace } from "@/components/ui/interactive-hover";
 import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
 import { cn, isExternalHref } from "@/lib/utils";
 import {
@@ -33,6 +35,7 @@ interface ServiceCardProps {
   onActivate?: () => void;
   activateLabel?: string;
   onNavigate?: () => void;
+  stardust?: boolean;
 }
 
 export function ServiceCard({
@@ -49,6 +52,7 @@ export function ServiceCard({
   variant = "default",
   isActive = true,
   onNavigate,
+  stardust = false,
 }: ServiceCardProps) {
   const Icon = icon ?? (slug ? serviceIconBySlug[slug] : LuArrowUpRight);
   const isSlide = variant === "slide";
@@ -58,32 +62,41 @@ export function ServiceCard({
   const cardClassName = cn(
     "group relative flex h-full flex-col rounded-2xl bg-card",
     slowTransition,
-    isSlide
+    stardust
+      ? cn("bg-transparent p-4", stardustCardFace)
+      : isSlide
       ? cn(
           "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
           isActive && "cursor-pointer",
           !isActive &&
             "border-[#9db8a8] bg-[#f8faf9] shadow-[0_2px_6px_rgb(0,0,0,0.03),0_8px_20px_rgb(58,107,82,0.05)] hover:border-[#8aab99] hover:bg-white hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
         )
-      : cn(
+        : cn(
           "border-trace-hover-fallback box-border border-[3px] border-solid border-border hover:shadow-lg",
           compact ? "p-4" : "p-6",
         ),
   );
 
+  const shellClassName = cn(
+    "h-full w-full rounded-2xl",
+    stardust && !isSlide && compact && "block",
+  );
+
   const content = (
     <>
-      <BorderTrace
-        durationSec={2.5}
-        {...(isSlide
-          ? {
-              radius: 16,
-              loop: true,
-              trigger: "hover" as const,
-              stroke: "var(--brand-accent)",
-            }
-          : {})}
-      />
+      {!stardust ? (
+        <BorderTrace
+          durationSec={2.5}
+          {...(isSlide
+            ? {
+                radius: 16,
+                loop: true,
+                trigger: "hover" as const,
+                stroke: "var(--brand-accent)",
+              }
+            : {})}
+        />
+      ) : null}
       {numbered && index != null ? (
         <CardIndexNumber
           index={index}
@@ -219,21 +232,17 @@ export function ServiceCard({
     );
   }
 
-  if (isExternalHref(href)) {
-    return (
-      <a
-        href={href}
-        onClick={onNavigate}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={cardClassName}
-      >
-        {content}
-      </a>
-    );
-  }
-
-  return (
+  const linkBody = isExternalHref(href) ? (
+    <a
+      href={href}
+      onClick={onNavigate}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={cardClassName}
+    >
+      {content}
+    </a>
+  ) : (
     <Link
       href={href}
       onClick={onNavigate}
@@ -242,4 +251,19 @@ export function ServiceCard({
       {content}
     </Link>
   );
+
+  if (stardust && compact && !isSlide) {
+    return (
+      <StardustShell
+        className={shellClassName}
+        faceClassName="bg-card"
+        beamBorderRadius={16}
+        beamSize={56}
+      >
+        {linkBody}
+      </StardustShell>
+    );
+  }
+
+  return linkBody;
 }

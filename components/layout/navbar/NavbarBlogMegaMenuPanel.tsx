@@ -47,6 +47,7 @@ export function NavbarBlogMegaMenuPanel() {
             <div key={post.slug} className="mega-menu-card">
               <ServiceCard
                 compact
+                stardust
                 href={`/blog/${post.slug}`}
                 title={post.title}
                 icon={getFooterBlogCategoryIcon(post.category)}

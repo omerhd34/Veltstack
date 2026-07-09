@@ -1,6 +1,5 @@
 import { getTranslations } from "next-intl/server";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
-import { WorkflowSection } from "@/components/sections/workflow";
 import { AboutHero } from "./AboutHero";
 import { AboutStory } from "./AboutStory";
 import { TechMarqueeSection } from "@/components/sections/tech-marquee";
@@ -31,7 +30,6 @@ export async function AboutPageView({ className }: AboutPageViewProps) {
         profileTitle={t("profileTitle")}
         paragraphs={t.raw("profileParagraphs") as string[]}
       />
-      <WorkflowSection />
       <TechMarqueeSection />
       <ServicesConsultationCTA />
     </div>

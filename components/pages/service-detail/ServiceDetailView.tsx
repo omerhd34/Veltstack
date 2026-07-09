@@ -88,6 +88,10 @@ export async function ServiceDetailView({
         title={t("featuresTitle")}
         subtitle={t("featuresSubtitle")}
         detailLabel={t("featureDetailLabel")}
+        carouselLabels={{
+          prev: t("featuresCarouselPrev"),
+          next: t("featuresCarouselNext"),
+        }}
         features={features}
       />
       <ServicesPackagesSection

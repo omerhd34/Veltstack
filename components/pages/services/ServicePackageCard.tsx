@@ -8,6 +8,13 @@ import {
   LuMessageCircle,
 } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
+import { StardustShell } from "@/components/lightswind/stardust-button";
+import {
+  stardustContent,
+  stardustFace,
+  stardustFocus,
+  stardustIcon,
+} from "@/components/ui/interactive-hover";
 import {
   buildFeatureGroupComparison,
   sortFeatureGroupsForDisplay,
@@ -312,13 +319,23 @@ export function ServicePackageCard({
       </div>
 
       <div className={cn("p-5 pt-0", !isTierColumn && "mt-auto")}>
-        <Link
-          href="/iletisim"
-          className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-brand-accent to-emerald-500 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110 hover:shadow-[0_4px_24px_rgb(58_107_82/0.4)]"
-        >
-          <LuMessageCircle className="size-4" aria-hidden />
-          {labels.getQuote}
-        </Link>
+        <StardustShell className="w-full" faceClassName="bg-brand-accent/88">
+          <Link
+            href="/iletisim"
+            className={cn(
+              stardustFace,
+              stardustFocus,
+              "h-12 w-full bg-transparent text-sm font-semibold text-white",
+            )}
+          >
+            <span className={cn(stardustContent, "gap-2")}>
+              <span className={stardustIcon}>
+                <LuMessageCircle className="size-4" aria-hidden />
+              </span>
+              {labels.getQuote}
+            </span>
+          </Link>
+        </StardustShell>
       </div>
     </article>
   );

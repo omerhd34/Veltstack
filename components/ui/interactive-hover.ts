@@ -20,6 +20,11 @@ export const stardustGlassFace = cn(
   "group-hover/stardust:bg-white/16 group-focus-within/stardust:bg-white/16",
 );
 
+export const stardustCardFace = cn(
+  "relative z-1 flex h-full w-full rounded-2xl bg-transparent",
+  stardustFocus,
+);
+
 export const stardustFaceOverlay = cn(
   "group-data-[overlay=true]/header:bg-white/10 group-data-[overlay=true]/header:backdrop-blur-sm",
   "group-data-[overlay=true]/header:group-hover/stardust:bg-white/16",

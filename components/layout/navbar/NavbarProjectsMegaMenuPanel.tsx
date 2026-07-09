@@ -50,6 +50,7 @@ export function NavbarProjectsMegaMenuPanel() {
             <div key={project.href} className="mega-menu-card">
               <ServiceCard
                 compact
+                stardust
                 onNavigate={() => setProjectsMenuOpen(false)}
                 {...project}
               />

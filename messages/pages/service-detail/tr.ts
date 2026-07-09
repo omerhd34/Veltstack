@@ -43,6 +43,8 @@ export const serviceDetailsTr = {
   statRevisionsHint:
     "Seçtiğiniz pakette tanımlı tasarım ve içerik revizyonu sayısı. Geri bildirimlerinizi liste halinde iletmeniz yeterli; her revizyonda bu maddeler uygulanır.",
   featureDetailLabel: "Özellik detayı",
+  featuresCarouselPrev: "Önceki özellik",
+  featuresCarouselNext: "Sonraki özellik",
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
   "web-sitesi-gelistirme": {
@@ -65,49 +67,49 @@ export const serviceDetailsTr = {
     processItems: webSitesiGelistirmeProcessTr,
     features: [
       {
-        title: "SEO Altyapısı",
+        title: "SEO",
         description:
-          "SSR, meta etiketleri, sitemap ve yapılandırılmış veri ile siteniz arama motorlarına hazır teslim edilir. Open Graph, canonical URL ve robots yapılandırması sayesinde indeksleme sorunları en baştan önlenir. Blog, hizmet ve ürün sayfaları için ayrı meta şablonları hazırlanır. Google Search Console entegrasyonu ile tarama durumu yayın öncesinden takip edilir. Arama sonuçlarında daha çekici görünmeniz için başlık ve açıklama metinleri optimize edilir.",
+          "SSR, meta etiketleri, sitemap ve yapılandırılmış veri ile siteniz arama motorlarına hazır teslim edilir. Open Graph, canonical URL ve robots yapılandırması sayesinde indeksleme sorunları en baştan önlenir. Blog, hizmet ve ürün sayfaları için ayrı meta şablonları hazırlanır. Google Search Console entegrasyonu ile tarama durumu yayın öncesinden takip edilir. Arama sonuçlarında daha çekici görünmeniz için başlık ve açıklama metinleri optimize edilir. Yerel ve uluslararası arama hedeflerinize göre dil, bölge ve hreflang ayarları proje başında planlanır.",
       },
       {
-        title: "E-Ticaret ve Ödeme",
+        title: "E-Ticaret",
         description:
-          "Ürün kataloğu, sepet, sipariş yönetimi ve güvenli ödeme akışları uçtan uca kurulur. PayTR, İyzico ve Stripe gibi altyapılarla mobil uyumlu, dönüşüm odaklı bir satış deneyimi sunulur. Stok, kargo ve sipariş durumu tek panelden takip edilebilir. Ödeme sayfası SSL ve 3D Secure ile korunur; PCI uyumlu altyapılar tercih edilir. Sipariş onay e-postaları ve basit raporlama ekranları günlük operasyonları kolaylaştırır.",
+          "Ürün kataloğu, sepet, sipariş yönetimi ve güvenli ödeme akışları uçtan uca kurulur. PayTR, İyzico ve Stripe gibi altyapılarla mobil uyumlu, dönüşüm odaklı bir satış deneyimi sunulur. Stok, kargo ve sipariş durumu tek panelden takip edilebilir. Ödeme sayfası SSL ve 3D Secure ile korunur; PCI uyumlu altyapılar tercih edilir. Sipariş onay e-postaları ve basit raporlama ekranları günlük operasyonları kolaylaştırır. Kupon, kampanya ve varyant yönetimi gibi satış senaryoları kapsama göre yapılandırılır.",
       },
       {
-        title: "Hızlı Performans",
+        title: "Performans",
         description:
-          "Next.js, görsel optimizasyonu ve CDN ile yüksek Lighthouse skorları ve düşük yükleme süreleri hedeflenir. Core Web Vitals proje başında belirlenir; performans süreç boyunca izlenir. Lazy loading, font optimizasyonu ve gereksiz script temizliği ile sayfa hızı korunur. Kritik CSS ve kaynak önceliklendirme doğru sırayla yüklenir. Yayın öncesi son performans turu tamamlanarak canlı ortamda da hız garanti altına alınır.",
+          "Next.js, görsel optimizasyonu ve CDN ile yüksek Lighthouse skorları ve düşük yükleme süreleri hedeflenir. Core Web Vitals proje başında belirlenir; performans süreç boyunca izlenir. Lazy loading, font optimizasyonu ve gereksiz script temizliği ile sayfa hızı korunur. Kritik CSS ve kaynak önceliklendirme doğru sırayla yüklenir. Yayın öncesi son performans turu tamamlanarak canlı ortamda da hız garanti altına alınır. Yavaş bağlantılarda bile akıcı deneyim için önbellekleme ve sunucu tarafı render stratejileri birlikte uygulanır.",
       },
       {
-        title: "Responsive Tasarım",
+        title: "Responsive",
         description:
-          "Mobil, tablet ve masaüstünde tutarlı, dokunmatik uyumlu bir deneyim tasarlanır. Tipografi, boşluklar ve etkileşimler her ekran boyutu için ayrı optimize edilir. Navigasyon, formlar ve CTA butonları küçük ekranlarda rahat kullanılabilir. Hamburger menü ve dokunmatik hedef boyutları mobil standartlara uygun tutulur. Farklı cihaz ve tarayıcılarda gerçek testler yapılarak uyumluluk yayın öncesi doğrulanır.",
+          "Mobil, tablet ve masaüstünde tutarlı, dokunmatik uyumlu bir deneyim tasarlanır. Tipografi, boşluklar ve etkileşimler her ekran boyutu için ayrı optimize edilir. Navigasyon, formlar ve CTA butonları küçük ekranlarda rahat kullanılabilir. Hamburger menü ve dokunmatik hedef boyutları mobil standartlara uygun tutulur. Farklı cihaz ve tarayıcılarda gerçek testler yapılarak uyumluluk yayın öncesi doğrulanır. Esnek grid ve breakpoint yapısı sayesinde yeni cihaz boyutlarına uyum kolayca sağlanır.",
       },
       {
-        title: "Çok Dilli Destek",
+        title: "Çok Dil",
         description:
-          "Türkçe, İngilizce ve ihtiyacınıza göre ek diller için altyapı kurulur. URL yapısı, meta etiketleri ve hreflang etiketleri her dilde SEO dostu kalacak şekilde yapılandırılır. Dil bazlı sitemap ve içerik yönetimi uluslararası erişimi destekler. Varsayılan dil ve alternatif yönlendirmeler net tanımlanır. Yeni dil eklemek istediğinizde mevcut yapı bozulmadan genişletilebilir bir mimari tercih edilir.",
+          "Türkçe, İngilizce ve ihtiyacınıza göre ek diller için altyapı kurulur. URL yapısı, meta etiketleri ve hreflang etiketleri her dilde SEO dostu kalacak şekilde yapılandırılır. Dil bazlı sitemap ve içerik yönetimi uluslararası erişimi destekler. Varsayılan dil ve alternatif yönlendirmeler net tanımlanır. Yeni dil eklemek istediğinizde mevcut yapı bozulmadan genişletilebilir bir mimari tercih edilir. Ziyaretçi dil tercihi tarayıcıda hatırlanır; dil değiştirici her sayfada erişilebilir konumda sunulur. Admin panelinden dil bazlı içerik girişi yapılabilir; çeviri eksikleri yayın öncesi kolayca tespit edilir.",
       },
       {
-        title: "Dark & Light Modu",
+        title: "Tema",
         description:
-          "Ziyaretçiler karanlık veya aydınlık temayı seçebilir; sistem tercihini otomatik takip etmek de mümkündür. Her iki modda kontrast ve marka tutarlılığı korunur, seçim tarayıcıda hatırlanır. Renk token'ları her tema için ayrı optimize edilir. Tema geçişleri yumuşak animasyonlarla sunulur. WCAG kontrast standartları her iki modda da gözetilerek erişilebilir bir deneyim sağlanır.",
+          "Ziyaretçiler karanlık veya aydınlık temayı seçebilir; sistem tercihini otomatik takip etmek de mümkündür. Her iki modda kontrast ve marka tutarlılığı korunur, seçim tarayıcıda hatırlanır. Renk token'ları her tema için ayrı optimize edilir. Tema geçişleri yumuşak animasyonlarla sunulur. WCAG kontrast standartları her iki modda da gözetilerek erişilebilir bir deneyim sağlanır. Görseller, ikonlar ve vurgu renkleri her iki temada da okunabilirlik kaybı olmadan ayarlanır. Header, footer ve tüm bileşenler her iki temada ayrı test edilir; sayfa yenilendiğinde tema sıçraması yaşanmaz.",
       },
       {
-        title: "Admin Panel & CMS",
+        title: "Admin",
         description:
-          "Blog, hizmet ve sayfa içeriklerinizi kod bilmeden yönetebileceğiniz bir admin panel kurulur. Panel arayüzü müşterinin istediği dilde hazırlanır; WYSIWYG editör, görsel yükleme ve taslak-yayın akışı standarttır. Rol bazlı erişim ile ekip üyelerine farklı yetkiler tanımlanabilir. İçerik değişiklikleri anında veya planlı yayınlanabilir. Panel mobil uyumlu olduğu için hareket halindeyken de güncelleme yapabilirsiniz.",
+          "Blog, hizmet ve sayfa içeriklerinizi kod bilmeden yönetebileceğiniz bir admin panel kurulur. Panel arayüzü müşterinin istediği dilde hazırlanır; WYSIWYG editör, görsel yükleme ve taslak-yayın akışı standarttır. Rol bazlı erişim ile ekip üyelerine farklı yetkiler tanımlanabilir. İçerik değişiklikleri anında veya planlı yayınlanabilir. Panel mobil uyumlu olduğu için hareket halindeyken de güncelleme yapabilirsiniz. Medya kütüphanesi, SEO alanları ve önizleme ekranı içerik yönetimini hızlandırır. Sayfa, blog ve hizmet kayıtları tek panelden aranır, filtrelenir ve toplu düzenlenebilir.",
       },
       {
-        title: "Güvenlik ve SSL",
+        title: "Güvenlik",
         description:
-          "HTTPS, güvenli header yapılandırması ve modern kimlik doğrulama standartları projeye en baştan entegre edilir. Form gönderimlerinde rate limiting ve temel bot koruması uygulanır. Bağımlılık güvenlik taramaları geliştirme sürecinde düzenli yapılır. Admin ve API endpoint'leri yetkilendirme katmanı ile korunur. Yayın öncesi güvenlik kontrol listesi tamamlanarak canlı ortama güvenli geçiş sağlanır.",
+          "HTTPS, güvenli header yapılandırması ve modern kimlik doğrulama standartları projeye en baştan entegre edilir. Form gönderimlerinde rate limiting ve temel bot koruması uygulanır. Bağımlılık güvenlik taramaları geliştirme sürecinde düzenli yapılır. Admin ve API endpoint'leri yetkilendirme katmanı ile korunur. Yayın öncesi güvenlik kontrol listesi tamamlanarak canlı ortama güvenli geçiş sağlanır. CSRF, XSS ve injection risklerine karşı giriş doğrulama ve çıktı filtreleme katmanları standart olarak uygulanır.",
       },
       {
-        title: "Analitik ve Form Takibi",
+        title: "Analitik",
         description:
-          "Google Analytics, Search Console ve dönüşüm olayları projeye entegre edilir. İletişim formları spam koruması ve anlık e-posta bildirimleri ile birlikte devreye alınır. Hangi sayfaların trafik aldığını ve form gönderimlerini takip edebilirsiniz. GTM veya doğrudan entegrasyon ihtiyacınıza göre planlanır. İlk ay sonunda temel performans raporu ile veri toplama doğrulanır.",
+          "Google Analytics, Search Console ve dönüşüm olayları projeye entegre edilir. İletişim formları spam koruması ve anlık e-posta bildirimleri ile birlikte devreye alınır. Hangi sayfaların trafik aldığını ve form gönderimlerini takip edebilirsiniz. GTM veya doğrudan entegrasyon ihtiyacınıza göre planlanır. İlk ay sonunda temel performans raporu ile veri toplama doğrulanır. Buton tıklamaları, form gönderimleri ve önemli sayfa görüntülemeleri dönüşüm hunisini ölçmek için etiketlenir. Ziyaretçi kaynakları, cihaz dağılımı ve en çok görüntülenen sayfalar dashboard üzerinden tek bakışta izlenebilir.",
       },
     ],
   },
@@ -133,32 +135,32 @@ export const serviceDetailsTr = {
       {
         title: "Mevcut Site Analizi",
         description:
-          "Teknik altyapı, performans, SEO ve kullanıcı deneyimi açısından mevcut sitenizi kapsamlı şekilde denetliyoruz. Tespit edilen sorunları etki ve aciliyet bazında sıralayıp önceliklendirilmiş bir aksiyon planı çıkarıyoruz. Yenileme kapsamı bu analiz sonucunda netleştirilir; gereksiz iş yükü en baştan elenir.",
+          "Teknik altyapı, performans, SEO ve kullanıcı deneyimi açısından mevcut sitenizi kapsamlı şekilde denetliyoruz. Tespit edilen sorunları etki ve aciliyet bazında sıralayıp önceliklendirilmiş bir aksiyon planı çıkarıyoruz. Yenileme kapsamı bu analiz sonucunda netleştirilir; gereksiz iş yükü en baştan elenir. Eski teknoloji, güvenlik açıkları ve mobil uyumsuzluklar ayrı kategorilerde raporlanır. Rakip sitelerle kıyaslama yapılarak eksik kalan alanlar belirlenir. Analiz raporu, yenileme sürecinin tüm adımları için referans doküman olarak kullanılır.",
       },
       {
         title: "Modern Tasarım ve UX",
         description:
-          "Markanıza uygun güncel arayüz, net bilgi mimarisi ve dönüşüm odaklı sayfa akışları tasarlıyoruz. Mobil ve masaüstünde tutarlı bir deneyim hedeflenir; tipografi ve bileşen dili projenizin kimliğiyle uyumlu kalır. Onayınız alınmadan geliştirme aşamasına geçilmez.",
+          "Markanıza uygun güncel arayüz, net bilgi mimarisi ve dönüşüm odaklı sayfa akışları tasarlıyoruz. Mobil ve masaüstünde tutarlı bir deneyim hedeflenir; tipografi ve bileşen dili projenizin kimliğiyle uyumlu kalır. Onayınız alınmadan geliştirme aşamasına geçilmez. Wireframe ve prototip aşamalarında geri bildirim alınarak tasarım iteratif ilerler. Erişilebilirlik ve okunabilirlik her ekran boyutunda öncelikli tutulur. CTA yerleşimleri, form akışları ve içerik hiyerarşisi dönüşüm hedeflerinize göre optimize edilir.",
       },
       {
         title: "Performans İyileştirmesi",
         description:
-          "Hızlı yükleme, optimize görseller ve yüksek Lighthouse skorları hedefleyen altyapı güncellemesi yapıyoruz. Core Web Vitals proje boyunca izlenir; gereksiz script ve ağır kaynaklar temizlenir. Canlıya almadan önce son performans turu tamamlanır.",
+          "Hızlı yükleme, optimize görseller ve yüksek Lighthouse skorları hedefleyen altyapı güncellemesi yapıyoruz. Core Web Vitals proje boyunca izlenir; gereksiz script ve ağır kaynaklar temizlenir. Canlıya almadan önce son performans turu tamamlanır. Eski hosting veya CDN yapılandırması modern altyapıya taşınır. Görsel boyutları, font yüklemeleri ve üçüncü taraf scriptler yeniden değerlendirilir. Yenileme öncesi ve sonrası skorlar karşılaştırılarak somut iyileşme raporlanır.",
       },
       {
         title: "SEO Koruma ve Güçlendirme",
         description:
-          "URL yapısı, 301 yönlendirmeler ve meta verilerle mevcut sıralamanızı koruyarak görünürlüğü artırıyoruz. Sitemap, robots ve yapılandırılmış veri yayın öncesi doğrulanır. Geçiş sürecinde indeksleme Search Console üzerinden takip edilir.",
+          "URL yapısı, 301 yönlendirmeler ve meta verilerle mevcut sıralamanızı koruyarak görünürlüğü artırıyoruz. Sitemap, robots ve yapılandırılmış veri yayın öncesi doğrulanır. Geçiş sürecinde indeksleme Search Console üzerinden takip edilir. Eski URL'lerin yeni karşılıkları eşleştirilerek 404 ve sıralama kaybı riski minimize edilir. Başlık, açıklama ve iç bağlantı yapısı yenileme fırsatı olarak gözden geçirilir. Geçiş sonrası ilk hafta tarama hataları ve indeksleme değişiklikleri yakından izlenir.",
       },
       {
         title: "İçerik Migrasyonu",
         description:
-          "Mevcut metin, görsel ve sayfa içeriklerini yeni yapıya güvenli ve düzenli şekilde aktarıyoruz. Eksik, bozuk veya yanlış eşleşen içerikler tespit edilip düzeltilir. Migrasyon sonrası sayfa bazında kontrol listesi ile doğrulama yapılır.",
+          "Mevcut metin, görsel ve sayfa içeriklerini yeni yapıya güvenli ve düzenli şekilde aktarıyoruz. Eksik, bozuk veya yanlış eşleşen içerikler tespit edilip düzeltilir. Migrasyon sonrası sayfa bazında kontrol listesi ile doğrulama yapılır. Görseller yeni formata optimize edilerek aktarılır; bozuk bağlantılar temizlenir. Blog yazıları, hizmet sayfaları ve dinamik içerikler yeni veritabanı yapısına uygun eşleştirilir. Migrasyon öncesi yedek alınır; sorun çıkması halinde geri dönüş mümkün olur.",
       },
       {
         title: "Yayın Sonrası Destek",
         description:
-          "Canlıya alım sonrası teknik destek, küçük düzeltmeler ve geçiş sürecinde izleme sağlıyoruz. İlk hafta olası sorunlara hızlı müdahale edilir; yönlendirme ve form akışları yakından takip edilir. Destek süresi boyunca sitenizin sorunsuz çalışması hedeflenir.",
+          "Canlıya alım sonrası teknik destek, küçük düzeltmeler ve geçiş sürecinde izleme sağlıyoruz. İlk hafta olası sorunlara hızlı müdahale edilir; yönlendirme ve form akışları yakından takip edilir. Destek süresi boyunca sitenizin sorunsuz çalışması hedeflenir. Performans, uptime ve hata logları düzenli kontrol edilir. Kullanıcı geri bildirimlerine göre küçük UX düzeltmeleri hızlıca uygulanır. Destek süresi sonunda el değiştirme dokümantasyonu ve bakım önerileri paylaşılır.",
       },
     ],
   },
@@ -184,32 +186,32 @@ export const serviceDetailsTr = {
       {
         title: "Çapraz Platform",
         description:
-          "React Native ve Expo ile hem iOS hem Android için tek kod tabanından verimli geliştirme yapıyoruz. Platforma özgü davranışlar native modüllerle desteklenir; ekran boyutları ve etkileşimler her cihaz için optimize edilir. Böylece iki ayrı ekip ve bütçe yerine tek çizgide hızlı iterasyon mümkün olur.",
+          "React Native ve Expo ile hem iOS hem Android için tek kod tabanından verimli geliştirme yapıyoruz. Platforma özgü davranışlar native modüllerle desteklenir; ekran boyutları ve etkileşimler her cihaz için optimize edilir. Böylece iki ayrı ekip ve bütçe yerine tek çizgide hızlı iterasyon mümkün olur. Tablet ve farklı ekran yoğunlukları için responsive layout stratejisi proje başında belirlenir. Platform guideline'larına uyum hem App Store hem Google Play onay sürecini kolaylaştırır. Kod paylaşım oranı yüksek tutularak bakım maliyeti uzun vadede düşük kalır.",
       },
       {
         title: "API Entegrasyonu",
         description:
-          "Güvenli backend bağlantıları, kimlik doğrulama ve gerçek zamanlı veri akışını uçtan uca kuruyoruz. REST API, token yönetimi ve üçüncü taraf servis entegrasyonları proje mimarisine uygun şekilde yapılandırılır. Offline senaryolar ve hata yönetimi de kullanıcı deneyimini bozmayacak şekilde ele alınır.",
+          "Güvenli backend bağlantıları, kimlik doğrulama ve gerçek zamanlı veri akışını uçtan uca kuruyoruz. REST API, token yönetimi ve üçüncü taraf servis entegrasyonları proje mimarisine uygun şekilde yapılandırılır. Offline senaryolar ve hata yönetimi de kullanıcı deneyimini bozmayacak şekilde ele alınır. API yanıt süreleri ve timeout stratejileri mobil bağlantı koşullarına göre optimize edilir. Ödeme, bildirim ve harita gibi harici servisler güvenli bağlantı katmanı üzerinden entegre edilir. Entegrasyon testleri gerçek cihazlarda doğrulanarak canlıya alınır.",
       },
       {
         title: "Kullanıcı Deneyimi",
         description:
-          "Sezgisel navigasyon, erişilebilirlik ve iOS ile Android platform standartlarına uygun arayüz tasarlıyoruz. Tipografi, boşluklar ve etkileşimler markanızla tutarlı kalır. Form akışları, geri bildirimler ve onboarding adımları gerçek kullanıcı senaryolarına göre test edilir.",
+          "Sezgisel navigasyon, erişilebilirlik ve iOS ile Android platform standartlarına uygun arayüz tasarlıyoruz. Tipografi, boşluklar ve etkileşimler markanızla tutarlı kalır. Form akışları, geri bildirimler ve onboarding adımları gerçek kullanıcı senaryolarına göre test edilir. Boş durum, yükleme ve hata ekranları kullanıcıyı yönlendirecek şekilde tasarlanır. Dokunmatik hedef boyutları ve gesture etkileşimleri her iki platformda da rahat kullanım sağlar. Kullanılabilirlik testleri tasarım aşamasında iteratif olarak uygulanır.",
       },
       {
         title: "Performans Optimizasyonu",
         description:
-          "Cold start süreleri, akıcı animasyonlar ve düşük bellek kullanımı hedeflenir. Görsel önbellekleme, listeleme performansı ve gereksiz re-render'lar proje boyunca izlenir. Gerçek cihazlarda yapılan testlerle mağaza onayı öncesinde performans doğrulanır.",
+          "Cold start süreleri, akıcı animasyonlar ve düşük bellek kullanımı hedeflenir. Görsel önbellekleme, listeleme performansı ve gereksiz re-render'lar proje boyunca izlenir. Gerçek cihazlarda yapılan testlerle mağaza onayı öncesinde performans doğrulanır. Bundle boyutu ve lazy loading stratejileri uygulama açılış hızını korur. Ağır animasyonlar ve büyük asset'ler optimize edilerek düşük donanımlı cihazlarda da akıcılık sağlanır. Performans metrikleri geliştirme sürecinde düzenli ölçülür ve raporlanır.",
       },
       {
         title: "Store Yayını",
         description:
-          "App Store ve Google Play yayın süreçlerinde teknik hazırlık, build alma ve mağaza metadata desteği sağlıyoruz. İkon, ekran görüntüsü boyutları ve sürüm notları platform kurallarına uygun hazırlanır. Reddedilme riskini azaltmak için guideline kontrol listesi yayın öncesi tamamlanır.",
+          "App Store ve Google Play yayın süreçlerinde teknik hazırlık, build alma ve mağaza metadata desteği sağlıyoruz. İkon, ekran görüntüsü boyutları ve sürüm notları platform kurallarına uygun hazırlanır. Reddedilme riskini azaltmak için guideline kontrol listesi yayın öncesi tamamlanır. TestFlight ve internal testing kanallarıyla beta süreci yönetilir. Gizlilik politikası, uygulama açıklaması ve kategori seçimi mağaza görünürlüğünü artıracak şekilde hazırlanır. İlk yayın sonrası mağaza yorumları ve crash raporları yakından takip edilir.",
       },
       {
         title: "Bakım ve Güncelleme",
         description:
-          "OS güncellemelerine uyum, hata düzeltmeleri ve yeni özellik iterasyonları düzenli plan dahilinde yürütülür. Crash raporları izlenir; kritik sorunlara öncelikli müdahale edilir. Uygulamanız canlıya alındıktan sonra da sürdürülebilir şekilde gelişmeye devam eder.",
+          "OS güncellemelerine uyum, hata düzeltmeleri ve yeni özellik iterasyonları düzenli plan dahilinde yürütülür. Crash raporları izlenir; kritik sorunlara öncelikli müdahale edilir. Uygulamanız canlıya alındıktan sonra da sürdürülebilir şekilde gelişmeye devam eder. Yeni iOS ve Android sürümleri çıktığında uyumluluk testleri yapılır. Kullanıcı geri bildirimleri ve mağaza yorumları önceliklendirme için değerlendirilir. Sürüm geçmişi ve değişiklik notları düzenli tutularak şeffaf bir geliştirme süreci sağlanır.",
       },
     ],
   },
@@ -235,32 +237,32 @@ export const serviceDetailsTr = {
       {
         title: "Teknik SEO Denetimi",
         description:
-          "Site hızı, tarama hataları, indeksleme ve yapılandırılmış veri analizi.",
+          "Site hızı, tarama hataları, indeksleme durumu ve yapılandırılmış veri uygulamasını kapsayan kapsamlı bir teknik denetim yapıyoruz. Core Web Vitals, sitemap sağlığı ve robots.txt yapılandırması güncel en iyi uygulamalara göre incelenir. Kritik sorunlar etki düzeyine göre sıralanır; önce neyi düzeltmeniz gerektiği netleşir. Bulgular uygulanabilir adımlarla birlikte anlaşılır bir raporda dokümante edilir. İyileştirmelerin zaman içinde ölçülebilmesi için bir başlangıç çizgisi belirlenir. Mobil öncelikli indeksleme ve sayfa deneyimi sinyalleri ayrıca değerlendirilir.",
       },
       {
         title: "Anahtar Kelime Stratejisi",
         description:
-          "Hedef kitlenize uygun, dönüşüm potansiyeli yüksek anahtar kelime haritası.",
+          "Hedef kitlenize, arama niyetine ve dönüşüm potansiyeline uygun bir anahtar kelime haritası oluşturuyoruz. Yüksek fırsatlı terimler, alan adı otoritenize göre gerçekçi sıralama zorluğuyla dengelenir. Ticari, bilgilendirici ve yönlendirici sorgular sayfa bazında kümeler halinde gruplanır. Mevsimsel trendler ile yerel ve global arama davranışları plana dahil edilir. Sonuç, anahtar kelimeleri doğrudan landing page'lere ve içerik önceliklerine bağlayan odaklı bir yol haritasıdır. Uzun kuyruk fırsatları ve soru bazlı aramalar da stratejiye entegre edilir.",
       },
       {
         title: "On-Page Optimizasyon",
         description:
-          "Başlık yapısı, meta etiketler, iç bağlantılar ve içerik düzeni iyileştirmeleri.",
+          "Öncelikli sayfalarda başlık hiyerarşisi, meta başlık ve açıklamalar, iç bağlantılar ve içerik düzeni iyileştirilir. Her sayfa, anahtar kelime doldurma veya zayıf içerik riski olmadan birincil anahtar kelime kümesine göre optimize edilir. Görsel alt metinleri, URL yapısı ve canonical etiketler sayfa sayfa doğrulanır. Zengin arama sonuçlarını desteklediği yerlerde schema işaretlemesi eklenir veya düzeltilir. Değişiklikler öncesi ve sonrası doğrulanarak ölçülebilir on-page kazanımlar takip edilir. İçerik uzunluğu, okunabilirlik ve kullanıcı niyeti uyumu da gözden geçirilir.",
       },
       {
         title: "İçerik Planlaması",
         description:
-          "Blog ve landing page içerikleri için SEO uyumlu editoryal takvim.",
+          "Blog yazıları, landing page'ler ve hizmet içerikleri için SEO uyumlu bir editoryal takvim hazırlıyoruz. Konular anahtar kelime boşlukları, hedef kitlenin soruları ve rakip kapsamına göre seçilir. Her içerik net bir yapı izler: niyet eşleşmesi, başlık taslağı ve iç bağlantı hedefleri. Yayın sıklığı, konu otoritesini düzensiz ataklar yerine istikrarlı biçimde inşa edecek şekilde planlanır. Taslaklar marka sesinize uygun kalırken arama görünürlüğü için optimize edilir. Mevcut içeriklerin güncellenmesi ve yeniden optimize edilmesi de plana dahil edilir.",
       },
       {
         title: "Performans İzleme",
         description:
-          "Search Console ve Analytics ile sıralama, trafik ve dönüşüm takibi.",
+          "Sıralama, organik trafik ve dönüşümler Search Console ve Analytics üzerinden düzenli olarak takip edilir. Trafik düşüşleri, tarama hataları ve indeksleme değişiklikleri geliri etkilemeden önce erken incelemeyi tetikler. Aylık özetler, denetim aşamasında belirlenen başlangıç çizgisine göre ilerlemeyi karşılaştırır. Dönüşüm olayları ve kritik landing page'ler saf sıralama metriklerinin yanında izlenir. Ne değişti, neden ve sonraki adımda ne önerdiğimizi açıklayan net raporlar alırsınız. Algoritma güncellemeleri ve sektörel trendler raporlara yansıtılarak yorumlanır.",
       },
       {
         title: "Rakip Analizi",
         description:
-          "Sektörünüzdeki rakiplerin görünürlüğünü analiz ederek fırsat alanları belirleme.",
+          "Sektörünüzdeki rakiplerin nasıl sıralandığını, hangi anahtar kelimelere sahip olduklarını ve markanız için hangi boşlukların bulunduğunu analiz ediyoruz. Backlink profilleri, içerik derinliği ve teknik altyapı üst düzeyde karşılaştırılarak fırsat alanları belirlenir. Sürekli sizi geçen sayfalar yapı, niyet kapsamı ve kullanıcı deneyimi açısından incelenir. Bulgular soyut araştırmada kalmaz; doğrudan anahtar kelime ve içerik stratejinize aktarılır. Amaç kopyalamak değil; sitenizin kazanabileceği açıları pratik biçimde belirlemektir. Rakip içerik takvimi ve yeni sayfa lansmanları düzenli olarak izlenir.",
       },
     ],
   },
@@ -286,32 +288,32 @@ export const serviceDetailsTr = {
       {
         title: "Performans Analizi",
         description:
-          "Lighthouse, Core Web Vitals ve yükleme süreleri üzerinden hız ve kullanıcı deneyimi değerlendirmesi.",
+          "Hız ve kullanıcı deneyimi Lighthouse, Core Web Vitals ve gerçek dünya yükleme süreleri üzerinden değerlendirilir. Largest Contentful Paint, Cumulative Layout Shift ve etkileşim gecikmeleri kritik sayfalarda ölçülür. Ağır görseller, render'ı bloke eden scriptler ve yavaş sunucu yanıtları gibi darboğazlar etki skorlarıyla tespit edilir. Mobil ve masaüstü performansı ayrı test edilir; kullanıcı davranışı cihaza göre farklılaşır. Sonuçlar, çaba ve beklenen kazanıma göre sıralanmış somut düzeltmelerle özetlenir. Üçüncü taraf scriptler ve font yüklemeleri performans etkisi açısından ayrıca raporlanır.",
       },
       {
         title: "Güvenlik İncelemesi",
         description:
-          "Bağımlılık açıkları, HTTPS yapılandırması, erişim kontrolleri ve temel güvenlik riskleri.",
+          "Bağımlılık açıkları, HTTPS yapılandırması, erişim kontrolleri ve temel güvenlik riskleri altyapınız genelinde incelenir. Güncel olmayan paketler, açık endpoint'ler ve zayıf kimlik doğrulama kalıpları önem derecesine göre işaretlenir. Header'lar, CORS ayarları ve form koruması yaygın saldırı vektörlerine karşı kontrol edilir. Admin panelleri ve API route'ları yetkilendirme boşlukları için özel olarak gözden geçirilir. Bir sonraki sürüm veya kamuya açılış öncesinde düzeltilmesi gerekenler güvenlik kontrol listesinde vurgulanır. Veri saklama, şifreleme ve oturum yönetimi pratikleri de değerlendirilir.",
       },
       {
         title: "SEO Teknik Denetimi",
         description:
-          "Tarama hataları, meta yapısı, indeksleme durumu ve yapılandırılmış veri kontrolü.",
+          "Tarama hataları, meta yapısı, indeksleme durumu ve yapılandırılmış veri arama motoru yönergelerine göre doğrulanır. Kırık bağlantılar, yinelenen başlıklar, eksik açıklamalar ve yetim sayfalar sayfa sayfa listelenir. Sitemap kapsamı, robots kuralları ve canonical uygulaması çakışmalar için incelenir. Önemli sayfaları gizleyebilecek indeksleme engelleri ve noindex yanlış kullanımları açıkça belirtilir. Denetim, teknik SEO sorunlarını sıralama ve trafik riskiyle ilişkilendirerek düzeltmelerin mantıklı önceliklenmesini sağlar. Mobil uyumluluk ve Core Web Vitals'ın SEO etkisi de rapora dahil edilir.",
       },
       {
         title: "Kod ve Mimari İncelemesi",
         description:
-          "Kod kalitesi, bakım kolaylığı, teknik borç ve ölçeklenebilirlik değerlendirmesi.",
+          "Kod kalitesi, bakım kolaylığı, teknik borç ve ölçeklenebilirlik kıdemli mühendislik perspektifinden değerlendirilir. Klasör yapısı, sorumluluk ayrımı ve yeniden kullanım kalıpları uzun vadeli sürdürülebilirlik için incelenir. Gelecekteki geliştirmeyi yavaşlatan anti-pattern'ler, ölü kod ve aşırı bağlı modüller dokümante edilir. Veritabanı sorguları, önbellekleme stratejisi ve API tasarımı performans veya güvenilirliği etkilediğinde değerlendirilir. Öneriler teorik mükemmellik yerine uygulanabilir refaktörlere odaklanır. Test kapsamı, CI/CD yapısı ve deployment süreçleri de mimari değerlendirmenin parçasıdır.",
       },
       {
         title: "Erişilebilirlik Kontrolü",
         description:
-          "WCAG uyumluluk, kontrast, klavye erişimi ve temel UX sorunlarının tespiti.",
+          "WCAG uyumluluğu, renk kontrastı, klavye navigasyonu ve ekran okuyucu uyumluluğu kritik kullanıcı akışlarında test edilir. Formlar, modallar, odak durumları ve etkileşimli öğeler kullanıcıları dışlayan engeller için kontrol edilir. Eksik alt metinler, etiketsiz input'lar ve yetersiz kontrast oranları sayfa referanslarıyla listelenir. Belirsiz hata mesajları, küçük dokunma hedefleri ve kafa karıştırıcı navigasyon gibi temel UX sorunları resmi erişilebilirlik bulgularının yanında not edilir. Düzeltmeler önem derecesine göre gruplanır; yasal ve kullanılabilirlik standartlarına kademeli uyum sağlanır. Otomatik tarama araçları ve manuel testler birlikte kullanılarak kapsamlı bir değerlendirme yapılır.",
       },
       {
         title: "Aksiyon Planı",
         description:
-          "Önceliklendirilmiş bulgular, etki analizi ve uygulanabilir iyileştirme önerileri.",
+          "Tüm bulgular etki analizi ve uygulanabilir iyileştirme adımlarıyla önceliklendirilmiş bir aksiyon planında birleştirilir. Hızlı kazanımlar, orta çabalı düzeltmeler ve stratejik girişimler ayrılır; kaynak planlaması gerçekçi yapılabilir. Her madde uygun olduğunda bağlam, önerilen yaklaşım ve beklenen sonucu içerir. Güvenlik, SEO veya geliri etkileyen kritik engeller en üstte vurgulanır. Plan, ekibinizin tüm denetimi yeniden okumadan uygulayabileceği ortak bir yol haritası haline gelir. Tahmini çaba, maliyet etkisi ve uygulama sırası her madde için netleştirilir.",
       },
     ],
   },
@@ -337,32 +339,32 @@ export const serviceDetailsTr = {
       {
         title: "Güncellemeler ve Yamalar",
         description:
-          "Bağımlılık, framework ve güvenlik yamalarının düzenli olarak uygulanması.",
+          "Bağımlılık, framework ve güvenlik güncellemeleri altyapınızı güncel ve korumalı tutmak için düzenli takvimle uygulanır. Kırıcı değişiklikler canlı ortama geçmeden önce staging ortamında test edilir. Yama notları ve sürüm geçmişi takip edilir; sorun çıkarsa geri alma mümkün olur. Kritik güvenlik yayınları gerektiğinde normal döngünün dışında öncelikli ele alınır. Changelog'ları kendiniz takip etmeden neyin, neden güncellendiği hakkında bilgilendirilirsiniz. Major sürüm geçişleri önceden planlanır ve uyumluluk testleri tamamlanır.",
       },
       {
         title: "Yedekleme ve Güvenlik",
         description:
-          "Düzenli veri yedeklemeleri, güvenlik taramaları ve erişim denetimi.",
+          "Planlı veri yedeklemeleri, güvenlik taramaları ve erişim denetimi sitenizi ve kullanıcı verilerinizi sürekli korur. Yedek bütünlüğü periyodik doğrulanır; geri yükleme ihtiyacı doğduğunda süreç başarısız olmaz. SSL sertifikaları, firewall kuralları ve giriş güvenliği süre dolması veya yanlış yapılandırma için izlenir. Şüpheli aktivite, başarısız giriş artışları ve dosya değişiklikleri büyümeden önce incelenir. Kurtarma prosedürleri dokümante edilir; bir sorun çıktığında kesinti süresi minimumda tutulur. Yedekleme sıklığı ve saklama süresi ihtiyacınıza göre yapılandırılır.",
       },
       {
         title: "Performans İzleme",
         description:
-          "Uptime takibi, sayfa hızı izleme ve yavaşlama anında müdahale.",
+          "Uptime takibi, sayfa hızı izleme ve yavaşlama anında müdahale dijital varlığınızı ziyaretçiler için güvenilir tutar. Yanıt süreleri belirlenen eşikleri aştığında veya site erişilemez hale geldiğinde uyarılar devreye girer. Güncellemeler sonrası performans gerilemeleri öncesi-sonrası kontrollerle erken yakalanır. Hosting kaynak kullanımı ve hata oranları ön yüz metriklerinin yanında izlenir. Sorun çıktığında teşhis ve ilk müdahale hızla başlar — çoğu zaman kullanıcılar bildirmeden önce. Aylık performans özeti ile trendler ve olası riskler raporlanır.",
       },
       {
         title: "Teknik Destek",
         description:
-          "Sorun bildirme, hata giderme ve küçük geliştirmeler için öncelikli destek.",
+          "Sorun bildirme, hata giderme ve küçük geliştirmeler net bir iletişim kanalı üzerinden öncelikli destek alır. Hatalar yeniden üretilir, önem ve kullanıcı etkisine göre önceliklendirilir ve düzeltilir. Küçük özellik ayarları, yapılandırma değişiklikleri ve entegrasyon düzenlemeleri bakım kapsamına girer. Yanıt süreleri planınıza göre hizalanır; kritik kesintiler anında ele alınır. Proje mimarinizi zaten bilen tek bir iletişim noktanız olur. Destek talepleri takip edilir; çözüm süresi ve durum güncellemeleri şeffaf paylaşılır.",
       },
       {
         title: "İçerik Güncellemeleri",
         description:
-          "Metin, görsel ve sayfa güncellemelerini hızlıca uygulamak için hazır kapasite.",
+          "Metin, görsel ve sayfa içerik değişiklikleri kod veya CMS'e dokunmanız gerekmeden hızlıca uygulanır. Yeni blog yazıları, hizmet açıklamaları, ekip fotoğrafları ve fiyat güncellemeleri kısa bir inceleme sonrası yayına alınır. Görsel optimizasyonu ve responsive biçimlendirme her güncellemenin parçası olarak yapılır. Kampanya zamanlaması önemliyse planlı yayın ve taslak önizleme desteklenir. Rutin içerik işleri sizin üzerinizden alınır; işinizi yönetmeye odaklanırsınız. Toplu güncellemeler ve acil düzeltmeler için esnek kapasite ayrılır.",
       },
       {
         title: "Raporlama",
         description:
-          "Yapılan işler, sistem durumu ve öneriler için aylık durum raporu.",
+          "Aylık durum raporu tamamlanan işleri, sistem sağlığını ve önümüzdeki dönem önerilerini kapsar. Uygulanan güncellemeler, çözülen olaylar ve performans trendleri sade bir dille özetlenir. Süresi dolan sertifikalar, bekleyen güncellemeler ve büyüyen teknik borç gibi açık riskler proaktif olarak işaretlenir. Bütçe veya öncelik planlamanıza yardımcı olduğunda gelecek ay önerileri de eklenir. Rapor, günlük kontrol veya teknik bilgi gerektirmeden görünürlük sağlar. İsteğe bağlı çeyreklik özetlerle uzun vadeli trendler de takip edilebilir.",
       },
     ],
   },

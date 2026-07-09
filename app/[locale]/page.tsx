@@ -26,8 +26,8 @@ export default async function HomePage({ params }: HomePageProps) {
       <ServicesMarqueeSection />
       <WhoWeAreSection />
       <ServicesSection />
-      <ApproachSection />
       <WhyMeSection />
+      <ApproachSection />
       <ProjectsSection />
       <TestimonialsSection />
       <BlogPreviewSection />

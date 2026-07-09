@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import {
@@ -20,7 +21,9 @@ interface StardustShellProps {
   beamColorTo?: string;
   active?: boolean;
   interactive?: boolean;
+  hoverResetToken?: unknown;
   beamSize?: number;
+  beamBorderRadius?: number;
 }
 
 type Particle = {
@@ -43,7 +46,9 @@ export function StardustShell({
   beamColorTo = "#6ee7b7",
   active,
   interactive = true,
+  hoverResetToken,
   beamSize = 48,
+  beamBorderRadius = 9999,
 }: StardustShellProps) {
   const rootRef = useRef<HTMLSpanElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -67,12 +72,18 @@ export function StardustShell({
   useEffect(() => {
     if (!isControlled) return;
     hoveringRef.current = isEffectActive;
+    setHovered(false);
     if (!isEffectActive) {
       particlesRef.current = particlesRef.current.filter(
         (particle) => particle.idle,
       );
     }
   }, [isControlled, isEffectActive]);
+
+  useEffect(() => {
+    if (isControlled || hoverResetToken === undefined) return;
+    setHoveredState(false);
+  }, [hoverResetToken, isControlled, setHoveredState]);
 
   const spawnParticle = useCallback(
     (width: number, height: number, idle = false): Particle => {
@@ -228,6 +239,9 @@ export function StardustShell({
       onMouseLeave={
         interactive && !isControlled ? () => setHoveredState(false) : undefined
       }
+      onPointerLeave={
+        interactive && !isControlled ? () => setHoveredState(false) : undefined
+      }
       onFocusCapture={
         interactive && !isControlled ? () => setHoveredState(true) : undefined
       }
@@ -270,7 +284,7 @@ export function StardustShell({
         borderThickness={2}
         opacity={isEffectActive ? 1 : 0}
         glowIntensity={isEffectActive ? 1.6 : 0}
-        beamBorderRadius={9999}
+        beamBorderRadius={beamBorderRadius}
         className={cn(
           "z-3 rounded-[inherit] motion-reduce:hidden transition-opacity duration-300",
           isEffectActive ? "opacity-100" : "opacity-0",
