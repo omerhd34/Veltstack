@@ -82,8 +82,7 @@ export async function ServicesPackagesSection({
 
   return (
     <section
-      id="services-packages"
-      className={`relative scroll-mt-20 overflow-hidden bg-background py-20 md:py-28 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-background py-20 md:py-28 ${className ?? ""}`}
     >
       <div
         aria-hidden

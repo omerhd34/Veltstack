@@ -10,6 +10,7 @@ import {
 import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
+import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
 import { cn, toLatinUppercase } from "@/lib/utils";
 
 const AUTHOR = {
@@ -50,7 +51,7 @@ export async function BlogDetailHero({
   return (
     <section
       className={cn(
-        "relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-[#050f0c] text-white",
+        "relative flex min-h-[calc(100svh-4.5rem)] flex-col overflow-hidden bg-[#050f0c] text-white",
         className,
       )}
     >
@@ -71,7 +72,7 @@ export async function BlogDetailHero({
         className="pointer-events-none absolute -left-24 bottom-16 size-[360px] rounded-full bg-emerald-800/6 blur-[100px]"
       />
 
-      <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10">
+      <SiteContainer className="relative flex min-h-[calc(100svh-4.5rem)] flex-col py-8 sm:py-10">
         <Link
           href="/blog"
           className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-800/50 bg-emerald-950/40 px-4 py-2 text-sm text-emerald-300/80 transition-colors hover:border-emerald-700/60 hover:bg-emerald-900/50 hover:text-emerald-200"
@@ -157,6 +158,7 @@ export async function BlogDetailHero({
           </a>
         </div>
       </SiteContainer>
+      <PageScrollAnchor id="blog-article" />
 
       <div
         aria-hidden

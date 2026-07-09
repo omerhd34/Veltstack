@@ -33,11 +33,7 @@ export function ServiceFeatures({
 }: ServiceFeaturesProps) {
   return (
     <section
-      id="service-features"
-      className={cn(
-        "relative scroll-mt-20 bg-[#FAFBFA] py-24 md:py-32",
-        className,
-      )}
+      className={cn("relative bg-[#FAFBFA] py-24 md:py-32", className)}
     >
       <div
         aria-hidden

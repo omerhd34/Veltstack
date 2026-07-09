@@ -1,23 +1,51 @@
 "use client";
 
 import { useLayoutEffect } from "react";
-import { consumeLocaleSwitchScroll } from "@/lib/locale-scroll";
+import { usePathname } from "@/i18n/navigation";
+import {
+  clearLocaleSwitchScroll,
+  resolveLocaleSwitchScroll,
+} from "@/lib/locale-scroll";
 
 export function LocaleScrollRestoration() {
-  useLayoutEffect(() => {
-    const y = consumeLocaleSwitchScroll();
-    if (y === null) return;
+  const pathname = usePathname();
 
-    const restore = () => {
-      window.scrollTo({ top: y, left: 0, behavior: "auto" });
+  useLayoutEffect(() => {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  }, []);
+
+  useLayoutEffect(() => {
+    const savedY = resolveLocaleSwitchScroll();
+    const isLocaleSwitch = savedY !== null;
+
+    const applyScroll = () => {
+      if (isLocaleSwitch) {
+        window.scrollTo({ top: savedY, left: 0, behavior: "auto" });
+        return;
+      }
+
+      if (!window.location.hash) {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      }
     };
 
-    restore();
-    requestAnimationFrame(restore);
+    applyScroll();
 
-    const timeoutId = window.setTimeout(restore, 0);
-    return () => window.clearTimeout(timeoutId);
-  }, []);
+    const rafId = requestAnimationFrame(applyScroll);
+    const timeoutId = window.setTimeout(() => {
+      applyScroll();
+      if (isLocaleSwitch) {
+        clearLocaleSwitchScroll();
+      }
+    }, 0);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.clearTimeout(timeoutId);
+    };
+  }, [pathname]);
 
   return null;
 }

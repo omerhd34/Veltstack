@@ -15,8 +15,7 @@ export function AboutStory({
 }: AboutStoryProps) {
   return (
     <section
-      id="about-story"
-      className={`scroll-mt-20 bg-background py-20 md:py-28 ${className ?? ""}`}
+      className={`bg-background py-20 md:py-28 ${className ?? ""}`}
       aria-labelledby="about-story-title"
     >
       <SiteContainer>

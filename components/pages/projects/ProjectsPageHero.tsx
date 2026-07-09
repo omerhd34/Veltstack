@@ -2,6 +2,7 @@ import { LuChevronDown } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
+import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
 
 interface ProjectsPageHeroProps {
@@ -27,7 +28,7 @@ export function ProjectsPageHero({
 }: ProjectsPageHeroProps) {
   return (
     <section
-      className={`relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-[#050f0c] text-white ${className ?? ""}`}
+      className={`relative flex min-h-[calc(100svh-4.5rem)] flex-col overflow-hidden bg-[#050f0c] text-white ${className ?? ""}`}
     >
       <div
         aria-hidden
@@ -42,7 +43,7 @@ export function ProjectsPageHero({
         className="pointer-events-none absolute -left-20 bottom-20 size-[360px] rounded-full bg-emerald-800/5 blur-[100px]"
       />
 
-      <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10">
+      <SiteContainer className="relative flex min-h-[calc(100svh-4.5rem)] flex-col py-8 sm:py-10">
         <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0 max-w-2xl lg:max-w-none">
             <SectionBadge>{badge}</SectionBadge>
@@ -84,6 +85,7 @@ export function ProjectsPageHero({
           </a>
         </div>
       </SiteContainer>
+      <PageScrollAnchor id="projects-showcase" />
     </section>
   );
 }

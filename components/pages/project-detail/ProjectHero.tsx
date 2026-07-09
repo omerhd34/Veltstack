@@ -1,6 +1,7 @@
 import type { IconType } from "react-icons";
 import { LuChevronDown, LuExternalLink } from "react-icons/lu";
 import Image from "next/image";
+import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HeroStatsCards } from "@/components/ui/HeroStatsCards";
@@ -42,7 +43,7 @@ export function ProjectHero({
   return (
     <section
       className={cn(
-        "relative flex min-h-[calc(100svh-4rem)] flex-col overflow-hidden bg-[#050f0c] text-white",
+        "relative flex min-h-[calc(100svh-4.5rem)] flex-col overflow-hidden bg-[#050f0c] text-white",
         className,
       )}
     >
@@ -59,7 +60,7 @@ export function ProjectHero({
         className="pointer-events-none absolute -left-24 bottom-0 size-[360px] rounded-full bg-emerald-800/6 blur-[100px]"
       />
 
-      <SiteContainer className="relative flex min-h-[calc(100svh-4rem)] flex-col py-8 sm:py-10 md:py-12">
+      <SiteContainer className="relative flex min-h-[calc(100svh-4.5rem)] flex-col py-8 sm:py-10 md:py-12">
         <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0">
             <SectionBadge>{badge}</SectionBadge>
@@ -130,6 +131,7 @@ export function ProjectHero({
           </a>
         </div>
       </SiteContainer>
+      <PageScrollAnchor id="project-overview" />
     </section>
   );
 }

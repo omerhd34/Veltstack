@@ -149,7 +149,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         scrollLabel={t("articleScrollLabel")}
       />
 
-      <SiteContainer id="blog-article" className="scroll-mt-16 py-16 md:py-20">
+      <SiteContainer className="py-16 md:py-20">
         <div className="mx-auto max-w-7xl">
           <BlogArticleBody html={articleContent} locale={loc} />
 

@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import { SiteContainer } from "@/components/layout/SiteContainer";
 import {
   projectCoverGradients,
   projectImageUrls,
@@ -8,6 +7,7 @@ import {
   projectItems,
   type ProjectSlug,
 } from "@/components/sections/projects/project-items";
+import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ProjectShowcaseCard } from "./ProjectShowcaseCard";
 
 const featuredProjectSlugs = new Set<ProjectSlug>([
@@ -26,7 +26,6 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
 
   return (
     <section
-      id="projects-showcase"
       className={`relative overflow-hidden bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}
     >
       <div
