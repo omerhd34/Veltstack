@@ -18,7 +18,7 @@ export async function HeroSection({ className }: HeroSectionProps) {
     >
       <HeroImage alt={t("heroImageAlt")} />
       <SiteContainer className="relative z-10 w-full py-10 lg:py-16">
-        <div className="flex max-w-xl flex-col items-start gap-6 text-left sm:max-w-2xl lg:max-w-2xl lg:gap-8">
+        <div className="flex max-w-xl flex-col items-start gap-6 text-left sm:max-w-2xl lg:gap-8">
           <SectionBadge>{t("heroBadge")}</SectionBadge>
           <HeroContent title={t("heroTitle")} subtitle={t("heroSubtitle")} />
           <HeroCTA primary={t("ctaPrimary")} secondary={t("ctaSecondary")} />
