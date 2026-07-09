@@ -4,7 +4,7 @@
 
 Veltstack; kurumsal web siteleri, mobil uygulamalar, SEO çalışmaları ile bakım ve destek hizmetlerini tek çatı altında sunan solo bir geliştirici markasıdır. Dışarıdan ajans disiplini ve premium bir sunum dili taşır; ancak arkasında çok kişilik bir ekip değil, doğrudan geliştiriciyle çalışmayı hedefleyen net ve şeffaf bir yapı vardır.
 
-Public tarafta ziyaretçiler hizmetleri inceleyebilir, tamamlanan projeleri keşfedebilir, blog içeriklerine ulaşabilir, hakkımda sayfasından markanın hikâyesini okuyabilir ve iletişim formu üzerinden proje talebi iletebilir. Tüm bu sayfalar Türkçe ve İngilizce olarak sunulur; varsayılan dil Türkçe'dir.
+Public tarafta ziyaretçiler hizmetleri inceleyebilir, tamamlanan projeleri keşfedebilir, blog içeriklerine ulaşabilir, hakkımızda sayfasından markanın hikâyesini okuyabilir ve iletişim formu üzerinden proje talebi iletebilir. Tüm bu sayfalar Türkçe ve İngilizce olarak sunulur; varsayılan dil Türkçe'dir.
 
 Admin paneli ise site içeriğinin, projelerin, blog yazılarının ve gelen mesajların merkezi olarak yönetilmesini sağlar. Böylece Veltstack hem müşteriye dönük vitrin hem de günlük operasyonlar için tek bir dijital merkez işlevi görür.
 
@@ -36,7 +36,7 @@ Admin paneli ise site içeriğinin, projelerin, blog yazılarının ve gelen mes
 
 ```
 app/
-├── [locale]/          # Public sayfalar (hizmetler, projeler, blog, hakkımda, iletişim)
+├── [locale]/          # Public sayfalar (hizmetler, projeler, blog, hakkımızda, iletişim)
 ├── admin/             # Admin panel
 └── api/               # Route handlers
 
@@ -66,7 +66,7 @@ lib/                   # Yardımcı modüller (prisma, utils, axios)
 | `/projeler/[slug]` | Proje detayı |
 | `/blog` | Blog listesi |
 | `/blog/[slug]` | Blog yazısı |
-| `/hakkimda` | Hakkımda |
+| `/hakkimizda` | Hakkımızda |
 | `/iletisim` | İletişim |
 
 Varsayılan dil `tr` olduğundan Türkçe rotalar prefix'siz çalışır (`localePrefix: "as-needed"`). İngilizce için `/en/...` kullanılır.

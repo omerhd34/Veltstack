@@ -8,7 +8,7 @@ const staticPages = [
   "/hizmetler",
   "/projeler",
   "/blog",
-  "/hakkimda",
+  "/hakkimizda",
   "/iletisim",
 ] as const;
 

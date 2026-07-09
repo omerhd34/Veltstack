@@ -18,7 +18,7 @@ import { servicesPageTr } from "@/messages/pages/services/tr";
 import { projectsPageTr } from "@/messages/pages/projects/tr";
 import { pagesTr } from "@/messages/pages/meta/tr";
 import { contactTr } from "@/messages/pages/iletisim/tr";
-import { aboutTr } from "@/messages/pages/hakkimda/tr";
+import { aboutTr } from "@/messages/pages/hakkimizda/tr";
 import { blogPageTr } from "@/messages/pages/blog/tr";
 import { workflowTr } from "@/components/sections/workflow/messages/tr";
 import { approachTr } from "@/components/sections/approach/messages/tr";
