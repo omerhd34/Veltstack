@@ -145,22 +145,22 @@ export const serviceDetailsTr = {
       {
         title: "Performans İyileştirmesi",
         description:
-          "Hızlı yükleme, optimize görseller ve yüksek Lighthouse skorları hedefleyen altyapı güncellemesi yapıyoruz. Core Web Vitals proje boyunca izlenir; gereksiz script ve ağır kaynaklar temizlenir. Canlıya almadan önce son performans turu tamamlanır. Eski hosting veya CDN yapılandırması modern altyapıya taşınır. Görsel boyutları, font yüklemeleri ve üçüncü taraf scriptler yeniden değerlendirilir. Yenileme öncesi ve sonrası skorlar karşılaştırılarak somut iyileşme raporlanır.",
+          "Hızlı yükleme, optimize görseller ve yüksek Lighthouse skorları hedefleyen altyapı güncellemesi yapıyoruz. Core Web Vitals proje boyunca izlenir; gereksiz script ve ağır kaynaklar sistematik olarak temizlenir. Canlıya almadan önce son performans turu tamamlanarak tüm sayfalar doğrulanır. Eski hosting veya CDN yapılandırması modern, yüksek erişilebilirlikli altyapıya taşınır. Görsel boyutları, font yüklemeleri ve üçüncü taraf scriptler performans etkisine göre yeniden değerlendirilir. Yenileme öncesi ve sonrası skorlar karşılaştırılarak somut iyileşme oranları raporlanır.",
       },
       {
         title: "SEO Koruma ve Güçlendirme",
         description:
-          "URL yapısı, 301 yönlendirmeler ve meta verilerle mevcut sıralamanızı koruyarak görünürlüğü artırıyoruz. Sitemap, robots ve yapılandırılmış veri yayın öncesi doğrulanır. Geçiş sürecinde indeksleme Search Console üzerinden takip edilir. Eski URL'lerin yeni karşılıkları eşleştirilerek 404 ve sıralama kaybı riski minimize edilir. Başlık, açıklama ve iç bağlantı yapısı yenileme fırsatı olarak gözden geçirilir. Geçiş sonrası ilk hafta tarama hataları ve indeksleme değişiklikleri yakından izlenir.",
+          "URL yapısı, 301 yönlendirmeler ve meta verilerle mevcut sıralamanızı koruyarak görünürlüğü artırıyoruz. Sitemap, robots ve yapılandırılmış veri yayın öncesi eksiksiz doğrulanır. Geçiş sürecinde indeksleme Search Console üzerinden günlük olarak takip edilir. Eski URL'lerin yeni karşılıkları birebir eşleştirilerek 404 ve sıralama kaybı riski minimize edilir. Başlık, açıklama ve iç bağlantı yapısı yenileme fırsatı olarak gözden geçirilip güçlendirilir. Geçiş sonrası ilk hafta tarama hataları, indeksleme değişiklikleri ve sıralama dalgalanmaları yakından izlenir.",
       },
       {
         title: "İçerik Migrasyonu",
         description:
-          "Mevcut metin, görsel ve sayfa içeriklerini yeni yapıya güvenli ve düzenli şekilde aktarıyoruz. Eksik, bozuk veya yanlış eşleşen içerikler tespit edilip düzeltilir. Migrasyon sonrası sayfa bazında kontrol listesi ile doğrulama yapılır. Görseller yeni formata optimize edilerek aktarılır; bozuk bağlantılar temizlenir. Blog yazıları, hizmet sayfaları ve dinamik içerikler yeni veritabanı yapısına uygun eşleştirilir. Migrasyon öncesi yedek alınır; sorun çıkması halinde geri dönüş mümkün olur.",
+          "Mevcut metin, görsel ve sayfa içeriklerini yeni yapıya güvenli ve düzenli şekilde aktarıyoruz. Eksik, bozuk veya yanlış eşleşen içerikler tespit edilip düzeltilmeden doğrulama aşamasına geçilmez. Migrasyon sonrası sayfa bazında kontrol listesi ile her URL ayrı ayrı doğrulanır. Görseller yeni formata optimize edilerek aktarılır; bozuk iç ve dış bağlantılar temizlenir. Blog yazıları, hizmet sayfaları ve dinamik içerikler yeni veritabanı yapısına uygun şekilde eşleştirilir. Migrasyon öncesi tam yedek alınır; sorun çıkması halinde hızlı geri dönüş mümkün olur.",
       },
       {
         title: "Yayın Sonrası Destek",
         description:
-          "Canlıya alım sonrası teknik destek, küçük düzeltmeler ve geçiş sürecinde izleme sağlıyoruz. İlk hafta olası sorunlara hızlı müdahale edilir; yönlendirme ve form akışları yakından takip edilir. Destek süresi boyunca sitenizin sorunsuz çalışması hedeflenir. Performans, uptime ve hata logları düzenli kontrol edilir. Kullanıcı geri bildirimlerine göre küçük UX düzeltmeleri hızlıca uygulanır. Destek süresi sonunda el değiştirme dokümantasyonu ve bakım önerileri paylaşılır.",
+          "Canlıya alım sonrası teknik destek, küçük düzeltmeler ve geçiş sürecinde sürekli izleme sağlıyoruz. İlk hafta olası sorunlara hızlı müdahale edilir; yönlendirme ve form akışları günlük olarak takip edilir. Destek süresi boyunca sitenizin kesintisiz ve sorunsuz çalışması hedeflenir. Performans, uptime ve hata logları düzenli aralıklarla kontrol edilerek erken uyarı sağlanır. Kullanıcı geri bildirimlerine göre küçük UX düzeltmeleri önceliklendirilerek hızlıca uygulanır. Destek süresi sonunda el değiştirme dokümantasyonu ve bakım önerileri detaylı şekilde paylaşılır.",
       },
     ],
   },
@@ -308,7 +308,7 @@ export const serviceDetailsTr = {
       {
         title: "Erişilebilirlik Kontrolü",
         description:
-          "WCAG uyumluluğu, renk kontrastı, klavye navigasyonu ve ekran okuyucu uyumluluğu kritik kullanıcı akışlarında test edilir. Formlar, modallar, odak durumları ve etkileşimli öğeler kullanıcıları dışlayan engeller için kontrol edilir. Eksik alt metinler, etiketsiz input'lar ve yetersiz kontrast oranları sayfa referanslarıyla listelenir. Belirsiz hata mesajları, küçük dokunma hedefleri ve kafa karıştırıcı navigasyon gibi temel UX sorunları resmi erişilebilirlik bulgularının yanında not edilir. Düzeltmeler önem derecesine göre gruplanır; yasal ve kullanılabilirlik standartlarına kademeli uyum sağlanır. Otomatik tarama araçları ve manuel testler birlikte kullanılarak kapsamlı bir değerlendirme yapılır.",
+          "WCAG uyumluluğu, renk kontrastı, klavye navigasyonu ve ekran okuyucu uyumluluğu kritik akışlarda test edilir. Formlar, modallar, odak durumları ve etkileşimli öğeler dışlayıcı engeller için kontrol edilir. Eksik alt metinler, etiketsiz input'lar ve yetersiz kontrast oranları sayfa referanslarıyla listelenir. Belirsiz hata mesajları, küçük dokunma hedefleri ve kafa karıştırıcı navigasyon gibi UX sorunları da not edilir. Düzeltmeler önem derecesine göre gruplanır; yasal ve kullanılabilirlik standartlarına kademeli uyum sağlanır.",
       },
       {
         title: "Aksiyon Planı",

@@ -155,7 +155,7 @@ export const serviceDetailsEn = {
       {
         title: "Content Migration",
         description:
-          "We safely and systematically transfer existing text, images and page content into the new structure. Missing, broken or mismatched content is identified and corrected. Page-by-page checklist validation runs after migration. Images are optimized and transferred in the new format; broken links are cleaned up. Blog posts, service pages and dynamic content are mapped to the new database structure. A backup is taken before migration so rollback remains possible if needed.",
+          "We safely and systematically transfer existing text, images and page content into the new structure. Missing, broken or mismatched content is identified and corrected before validation begins. Page-by-page checklist validation runs after migration to confirm accuracy on every URL. Images are optimized and transferred in the new format; broken links are cleaned up proactively. Blog posts, service pages and dynamic content are mapped to the new database structure. A full backup is taken before migration so rollback remains possible if needed.",
       },
       {
         title: "Post-Launch Support",
@@ -196,22 +196,22 @@ export const serviceDetailsEn = {
       {
         title: "User Experience",
         description:
-          "We design intuitive navigation, accessibility and interfaces aligned with iOS and Android platform standards. Typography, spacing and interactions stay consistent with your brand. Form flows, feedback and onboarding steps are tested against real user scenarios. Empty, loading and error states are designed to guide users clearly. Touch target sizes and gesture interactions ensure comfortable use on both platforms. Usability testing is applied iteratively during the design phase.",
+          "We design intuitive navigation, accessibility and interfaces aligned with iOS and Android platform standards. Typography, spacing and interactions stay consistent with your brand identity across every screen. Form flows, feedback and onboarding steps are tested against real user scenarios before development begins. Empty, loading and error states are designed to guide users clearly without confusion. Touch target sizes and gesture interactions ensure comfortable use on both platforms. Usability testing is applied iteratively during the design phase so friction points are caught early.",
       },
       {
         title: "Performance Optimization",
         description:
-          "We target fast cold starts, smooth animations and low memory usage. Image caching, list performance and unnecessary re-renders are monitored throughout the project. Real-device testing verifies performance before store approval. Bundle size and lazy loading strategies keep app launch speed high. Heavy animations and large assets are optimized for smooth performance on lower-end devices too. Performance metrics are measured and reported regularly during development.",
+          "We target fast cold starts, smooth animations and low memory usage across all supported devices. Image caching, list performance and unnecessary re-renders are monitored throughout the project lifecycle. Real-device testing verifies performance on both high-end and entry-level hardware before store approval. Bundle size and lazy loading strategies keep app launch speed consistently high. Heavy animations and large assets are optimized for smooth performance on lower-end devices too. Performance metrics are measured, benchmarked and reported regularly throughout development.",
       },
       {
         title: "Store Publishing",
         description:
-          "We provide technical preparation, builds and store metadata support for App Store and Google Play publishing. Icons, screenshot sizes and release notes are prepared to platform guidelines. A pre-launch checklist reduces rejection risk. Beta process is managed through TestFlight and internal testing channels. Privacy policy, app description and category selection are prepared to improve store visibility. Store reviews and crash reports are monitored closely after the first release.",
+          "We provide technical preparation, production builds and store metadata support for App Store and Google Play publishing. Icons, screenshot sizes and release notes are prepared strictly to platform guidelines and review standards. A comprehensive pre-launch checklist reduces rejection risk and accelerates approval timelines. Beta distribution is managed through TestFlight and Google Play internal testing channels. Privacy policy, app description and category selection are prepared to maximize store visibility and discoverability. Store reviews and crash reports are monitored closely after the first release for rapid follow-up.",
       },
       {
         title: "Maintenance & Updates",
         description:
-          "OS compatibility, bug fixes and new feature iterations run on a regular plan. Crash reports are monitored and critical issues get priority response. Your app keeps evolving sustainably after go-live. Compatibility tests run when new iOS and Android versions are released. User feedback and store reviews are evaluated for prioritization. Version history and release notes are kept up to date for a transparent development process.",
+          "OS compatibility, bug fixes and new feature iterations run on a regular plan aligned with your product roadmap. Crash reports are monitored continuously and critical issues receive priority response within agreed SLA windows. Your app keeps evolving sustainably after go-live with predictable release cycles. Compatibility tests run when new iOS and Android versions are released to prevent disruption. User feedback and store reviews are evaluated systematically for feature prioritization. Version history and release notes are kept up to date for a transparent and traceable development process.",
       },
     ],
   },
