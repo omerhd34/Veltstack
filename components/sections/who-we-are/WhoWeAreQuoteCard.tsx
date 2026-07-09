@@ -70,7 +70,7 @@ export function WhoWeAreQuoteCard({
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <WhoWeAreSignature name={name} role={role} />
 
-          <PrimaryCtaLink href="/hakkimda" size="md" className="shrink-0">
+          <PrimaryCtaLink href="/hakkimizda" size="md" className="shrink-0">
             {cta}
           </PrimaryCtaLink>
         </div>
