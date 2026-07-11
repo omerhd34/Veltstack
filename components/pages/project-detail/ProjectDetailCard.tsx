@@ -9,6 +9,7 @@ import {
   LuEye,
   LuRocket,
 } from "react-icons/lu";
+import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
 import { cn } from "@/lib/utils";
 
 export interface ProjectDetailCardProps {
@@ -16,7 +17,7 @@ export interface ProjectDetailCardProps {
   summary: string;
   details: string;
   features: string[];
-  metrics: { value: string; label: string }[];
+  metrics: HeroStat[];
   demoUrl?: string;
   labels: {
     demo: string;
@@ -133,20 +134,8 @@ export function ProjectDetailCard({
               <LuChartBar className="size-4 text-emerald-400" aria-hidden />
               {labels.metricsTitle}
             </h3>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {metrics.map((metric) => (
-                <div
-                  key={`${metric.label}-${metric.value}`}
-                  className="rounded-xl bg-emerald-950/70 px-4 py-5 ring-1 ring-emerald-800/50"
-                >
-                  <p className="font-(family-name:--font-heading) text-xl font-bold text-emerald-400 md:text-2xl">
-                    {metric.value}
-                  </p>
-                  <p className="mt-1 text-xs text-emerald-50/70">
-                    {metric.label}
-                  </p>
-                </div>
-              ))}
+            <div className="mt-4">
+              <HeroStatsCards stats={metrics} />
             </div>
           </section>
         </div>

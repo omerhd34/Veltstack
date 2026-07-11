@@ -8,8 +8,7 @@ import { BorderTrace } from "@/components/ui/BorderTrace";
 import { CardIndexNumber } from "@/components/ui/CardIndexNumber";
 import { StardustShell } from "@/components/lightswind/stardust-button";
 import { stardustCardFace } from "@/components/ui/interactive-hover";
-import { TechStackIcons } from "@/components/sections/projects/TechStackIcons";
-import { cn, isExternalHref } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import {
   serviceItems,
   type ServiceSlug,
@@ -23,7 +22,6 @@ interface ServiceCardProps {
   title: string;
   description?: string;
   tag?: string;
-  techStack?: string[];
   href: string;
   slug?: ServiceSlug;
   icon?: IconType;
@@ -32,8 +30,6 @@ interface ServiceCardProps {
   index?: number;
   variant?: "default" | "slide";
   isActive?: boolean;
-  onActivate?: () => void;
-  activateLabel?: string;
   onNavigate?: () => void;
   stardust?: boolean;
 }
@@ -42,7 +38,6 @@ export function ServiceCard({
   title,
   description,
   tag,
-  techStack,
   href,
   slug,
   icon,
@@ -65,16 +60,16 @@ export function ServiceCard({
     stardust
       ? cn("bg-transparent p-4", stardustCardFace)
       : isSlide
-      ? cn(
-          "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
-          isActive && "cursor-pointer",
-          !isActive &&
-            "border-[#9db8a8] bg-[#f8faf9] shadow-[0_2px_6px_rgb(0,0,0,0.03),0_8px_20px_rgb(58,107,82,0.05)] hover:border-[#8aab99] hover:bg-white hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
-        )
+        ? cn(
+            "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+            isActive && "cursor-pointer",
+            !isActive &&
+              "border-[#9db8a8] bg-[#f8faf9] shadow-[0_2px_6px_rgb(0,0,0,0.03),0_8px_20px_rgb(58,107,82,0.05)] hover:border-[#8aab99] hover:bg-white hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+          )
         : cn(
-          "border-trace-hover-fallback box-border border-[3px] border-solid border-border hover:shadow-lg",
-          compact ? "p-4" : "p-6",
-        ),
+            "border-trace-hover-fallback box-border border-[3px] border-solid border-border hover:shadow-lg",
+            compact ? "p-4" : "p-6",
+          ),
   );
 
   const shellClassName = cn(
@@ -173,13 +168,7 @@ export function ServiceCard({
           ) : null}
         </div>
       </div>
-      {techStack?.length ? (
-        <TechStackIcons
-          names={techStack}
-          size={compact ? "sm" : "md"}
-          className={compact ? "mt-3" : "mt-5"}
-        />
-      ) : tag ? (
+      {tag ? (
         <div
           className={cn(
             "flex items-center justify-between gap-3 border-t-2 border-solid border-t-[#8aab99] group-hover:border-brand-accent",
@@ -232,17 +221,7 @@ export function ServiceCard({
     );
   }
 
-  const linkBody = isExternalHref(href) ? (
-    <a
-      href={href}
-      onClick={onNavigate}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cardClassName}
-    >
-      {content}
-    </a>
-  ) : (
+  const linkBody = (
     <Link
       href={href}
       onClick={onNavigate}

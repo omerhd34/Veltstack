@@ -23,12 +23,22 @@ export const projectDetailsTr = {
   ctaButton: "Teklif Al",
   breadcrumbHome: "Ana Sayfa",
   breadcrumbProjects: "Projeler",
+  metricHints: {
+    developmentTime:
+      "Keşiften canlıya alıma kadar geçen toplam geliştirme süresi. Kapsam, entegrasyon ve onay döngülerine göre değişebilir.",
+    siteType:
+      "Projenin mimari yapısı ve iş modeli. SaaS, e-ticaret, kurumsal site veya portfolyo gibi kategorilerde sınıflandırılır.",
+    sector:
+      "Projenin hizmet verdiği sektör ve hedef kullanıcı kitlesi.",
+    languageSupport:
+      "Platformda sunulan arayüz dilleri. Çok dilli yapıda locale bazlı içerik ve yönlendirme desteklenir.",
+  },
   iqfinansai: {
     metaTitle: "IQfinansAI | AI Finans Platformu",
     metaDesc:
       "Gelir-gider, bütçe, borç-alacak ve AI analiz raporu sunan kişisel finans platformu. 16.000+ kullanıcı, Shopier abonelik altyapısı.",
     heroBadge: "Finansal Teknoloji / AI",
-    heroTitle: "IQfinansAI | AI Finans Platformu",
+    heroTitle: "IQfinansAI | Kişisel Finans",
     heroSubtitle:
       "Kişisel finans asistanı: gelir-gider, bütçe, borç-alacak ve yatırım portföyünü tek panelde yönetin. Yapay zekâ destekli analizlerle harcamalarınızı netleştirin.",
     summary:
@@ -97,10 +107,10 @@ export const projectDetailsTr = {
       },
     ],
     metrics: [
-      { value: "16.255", label: "Kayıtlı Kullanıcı" },
-      { value: "9", label: "Modül" },
       { value: "12 hafta", label: "Geliştirme Süresi" },
-      { value: "Shopier", label: "Ödeme Altyapısı" },
+      { value: "SaaS", label: "Site Türü" },
+      { value: "Finans", label: "Sektör" },
+      { value: "TR/EN", label: "Dil Desteği" },
     ],
   },
   "yazici-ticaret": {
@@ -153,9 +163,9 @@ export const projectDetailsTr = {
     ],
     metrics: [
       { value: "11 hafta", label: "Geliştirme Süresi" },
-      { value: "iyzico", label: "Ödeme Altyapısı" },
-      { value: "Profilo ve LG", label: "Marka" },
-      { value: "B2C", label: "Model" },
+      { value: "E-Ticaret", label: "Site Türü" },
+      { value: "Perakende", label: "Sektör" },
+      { value: "TR", label: "Dil Desteği" },
     ],
   },
   "uzman-klinik-psikolog": {
@@ -165,12 +175,12 @@ export const projectDetailsTr = {
     heroBadge: "Sağlık / Kurumsal",
     heroTitle: "Uzman Klinik Psikolog",
     heroSubtitle:
-      "Uzman Klinik Psikolog Nisa Demir için güven odaklı kurumsal site. Yüz yüze ve online terapi, randevu talebi, blog ve SEO altyapısı.",
+      "Uzman Klinik Psikolog için güven odaklı kurumsal site. Yüz yüze ve online terapi, randevu talebi, blog ve SEO altyapısı.",
     summary: "Randevu talebi, blog ve SEO odaklı klinik psikolog web sitesi.",
     challengeText:
       "Danışanlar güvenilir bir dijital vitrin, kolay randevu süreci ve mesleki içerikler arıyordu; mevcut yapı bu beklentileri karşılamakta yetersiz kalıyordu. SEO performansı düşük, mobil deneyim tutarsız ve erişilebilirlik standartlarına uyum sınırlıydı. Sağlık alanında güven en kritik faktör olduğundan; profesyonel görünüm, net hizmet anlatımı ve sorunsuz iletişim kanalları doğrudan randevu dönüşümünü etkiliyordu.",
     solutionText:
-      "Uzman Klinik Psikolog Nisa Demir için SSR tabanlı, erişilebilir ve güven odaklı bir kurumsal site tasarladık. Randevu talep formu yüz yüze ve online terapi seçeneklerini net biçimde yönlendirirken; dinamik blog modülü psikoloji, psikanaliz ve ruh sağlığına dair mesleki içeriklerin düzenli paylaşımına olanak tanıyor. Yapılandırılmış SEO, sitemap ve meta altyapısı arama görünürlüğünü güçlendiriyor; sakin tipografi ve profesyonel görsel dil danışan güvenini destekliyor.",
+      "Uzman Klinik Psikolog için SSR tabanlı, erişilebilir ve güven odaklı bir kurumsal site tasarladık. Randevu talep formu yüz yüze ve online terapi seçeneklerini net biçimde yönlendirirken; dinamik blog modülü psikoloji, psikanaliz ve ruh sağlığına dair mesleki içeriklerin düzenli paylaşımına olanak tanıyor. Yapılandırılmış SEO, sitemap ve meta altyapısı arama görünürlüğünü güçlendiriyor; sakin tipografi ve profesyonel görsel dil danışan güvenini destekliyor.",
     details:
       "Next.js ve React ile SSR destekli frontend; RESTful API katmanında Prisma ORM ve MySQL kullanıldı. Karanlık ve aydınlık mod desteği, Kadıköy ofis ve online terapi bilgileri, dinamik blog yönetimi, iletişim formu ve responsive Tailwind CSS tasarımı tek mimaride birleştirildi. WCAG odaklı kontrast, klavye navigasyonu ve semantik HTML ile erişilebilirlik önceliklendirildi. Mobil-first yaklaşım tüm cihazlarda tutarlı deneyim sunuyor; yapılandırılmış veri ve meta etiketleri organik trafik hedeflerini destekliyor.",
     features: [
@@ -210,9 +220,9 @@ export const projectDetailsTr = {
     ],
     metrics: [
       { value: "4 hafta", label: "Geliştirme Süresi" },
-      { value: "Randevu", label: "Ana Modül" },
-      { value: "SSR", label: "Render" },
-      { value: "Kadıköy", label: "Lokasyon" },
+      { value: "Kurumsal", label: "Site Türü" },
+      { value: "Sağlık", label: "Sektör" },
+      { value: "TR", label: "Dil Desteği" },
     ],
   },
   fablessi: {
@@ -266,9 +276,9 @@ export const projectDetailsTr = {
     ],
     metrics: [
       { value: "4 hafta", label: "Geliştirme Süresi" },
-      { value: "6", label: "Kategori" },
+      { value: "Kurumsal Katalog", label: "Site Türü" },
+      { value: "Mobilya", label: "Sektör" },
       { value: "TR/EN", label: "Dil Desteği" },
-      { value: "Outdoor", label: "Sektör" },
     ],
   },
   portfolio: {
@@ -318,9 +328,9 @@ export const projectDetailsTr = {
     ],
     metrics: [
       { value: "3 hafta", label: "Geliştirme Süresi" },
-      { value: "TR/EN", label: "Dil Desteği" },
       { value: "Portfolyo", label: "Site Türü" },
-      { value: "Full Stack", label: "Kapsam" },
+      { value: "Teknoloji", label: "Sektör" },
+      { value: "TR/EN", label: "Dil Desteği" },
     ],
   },
   onlinemuhasebe: {
@@ -375,9 +385,9 @@ export const projectDetailsTr = {
     ],
     metrics: [
       { value: "4 hafta", label: "Geliştirme Süresi" },
-      { value: "6+", label: "Hizmet Alanı" },
-      { value: "Kurumsal", label: "Site Türü" },
+      { value: "Kurumsal Katalog", label: "Site Türü" },
       { value: "Mali Müşavirlik", label: "Sektör" },
+      { value: "TR", label: "Dil Desteği" },
     ],
   },
 } as const;

@@ -19,26 +19,26 @@ export const projectsHomeEn = {
   projectsSliderActivate: "Show {title} project",
   projectIqfinansTitle: "IQfinansAI | SaaS Platform",
   projectIqfinansDesc:
-    "AI-powered financial analysis platform. Dark-light mode, Turkish-English support and reporting that turns complex data into clear dashboards.",
+    "AI-powered personal finance platform. Unifies income, expenses, budgets and debt tracking in one dashboard with spending insights for clearer financial decisions.",
   projectIqfinansTag: "FinTech - AI",
-  projectYaziciTitle: "Yazıcı Ticaret | E-Commerce",
+  projectYaziciTitle: "Yazıcı Ticaret | E-Commerce Website",
   projectYaziciDesc:
     "An end-to-end e-commerce experience for white goods and electronics. We built a conversion-focused sales infrastructure from product discovery through payment and order tracking.",
   projectYaziciTag: "E-Commerce - B2C",
-  projectFablessiTitle: "Fablessi | Corporate Catalog",
+  projectFablessiTitle: "Fablessi | Corporate Website",
   projectFablessiDesc:
-    "Premium corporate catalog for garden and balcony furniture. Turkish-English support, rich visuals and a clear category structure that strengthens brand perception.",
+    "Premium corporate catalog for garden and balcony furniture. Product showcase across six categories with rich visuals; WhatsApp routing enables fast quotes and direct customer contact.",
   projectFablessiTag: "Corporate - Catalog",
   projectUzmanPsikologTitle: "Clinical Psychologist | Corporate Website",
   projectUzmanPsikologDesc:
-    "Professional web platform for Clinical Psychologist Nisa Demir. Dark-light mode, appointment requests, blog and SEO-focused corporate experience.",
+    "Trust-focused corporate website for a clinical psychologist. In-person and online therapy services with appointment requests, psychology articles and a clear professional service showcase.",
   projectUzmanPsikologTag: "Healthcare - Corporate",
-  projectPortfolioTitle: "Ömer Halis Demir | Portfolio",
+  projectPortfolioTitle: "Ömer Halis Demir | Portfolio Website",
   projectPortfolioDesc:
-    "Full stack developer portfolio site. Turkish-English support with projects, experience and services in a modern, SEO-ready interface.",
+    "Full stack developer portfolio site. Projects, experience and service packages in one professional showcase that highlights skills and completed work.",
   projectPortfolioTag: "Portfolio - Personal",
-  projectOnlinemuhasebeTitle: "Online Accounting | Corporate Website",
+  projectOnlinemuhasebeTitle: "Online Muhasebe | Corporate Website",
   projectOnlinemuhasebeDesc:
-    "Corporate portfolio for accounting and financial consultancy. Dark-light mode, practical resources, government platform shortcuts and a contact form.",
+    "Corporate website for accounting and financial consultancy. Services, regulatory resources, platform shortcuts and consultation requests.",
   projectOnlinemuhasebeTag: "Accounting - Corporate",
 } as const;

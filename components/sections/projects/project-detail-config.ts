@@ -81,6 +81,10 @@ export const projectDemoUrls: Record<ProjectSlug, string> = {
 export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {
   iqfinansai: "/images/pages/projects/iqfinansai.png",
   "yazici-ticaret": "/images/pages/projects/yazici-ticaret.png",
+  fablessi: "/images/pages/projects/fablessi.png",
+  "uzman-klinik-psikolog": "/images/pages/projects/uzman-klinik-psikolog.png",
+  portfolio: "/images/pages/projects/portfolio.png",
+  onlinemuhasebe: "/images/pages/projects/onlinemuhasebe.png",
 };
 
 export const projectCoverGradients: Record<ProjectSlug, string> = {

@@ -15,7 +15,25 @@ import { ProjectContent } from "./ProjectContent";
 import { ProjectFeatures } from "./ProjectFeatures";
 import { ProjectHero } from "./ProjectHero";
 import { ProjectRelated } from "./ProjectRelated";
+import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { ProjectDetailCard } from "./ProjectDetailCard";
+
+const METRIC_HINT_KEYS = [
+  "metricHints.developmentTime",
+  "metricHints.siteType",
+  "metricHints.sector",
+  "metricHints.languageSupport",
+] as const;
+
+function withMetricHints(
+  metrics: { value: string; label: string }[],
+  t: (key: (typeof METRIC_HINT_KEYS)[number]) => string,
+): HeroStat[] {
+  return metrics.map((metric, index) => ({
+    ...metric,
+    hint: t(METRIC_HINT_KEYS[index]),
+  }));
+}
 
 interface ProjectDetailViewProps {
   slug: ProjectSlug;
@@ -39,10 +57,10 @@ export async function ProjectDetailView({
     title: string;
     description: string;
   }[];
-  const metrics = t.raw(`${slug}.metrics`) as {
-    value: string;
-    label: string;
-  }[];
+  const metrics = withMetricHints(
+    t.raw(`${slug}.metrics`) as { value: string; label: string }[],
+    t,
+  );
   if (variant === "card") {
     return (
       <ProjectDetailCard
@@ -118,21 +136,19 @@ export async function ProjectsDetailList({
       {projectItems
         .filter((project) => !project.external)
         .map((project) => (
-        <ProjectDetailView
-          key={project.slug}
-          slug={project.slug}
-          defaultExpanded={false}
-          variant="card"
-        />
-      ))}
+          <ProjectDetailView
+            key={project.slug}
+            slug={project.slug}
+            defaultExpanded={false}
+            variant="card"
+          />
+        ))}
     </div>
   );
 }
 
 export function getProjectStaticSlugs(): ProjectSlug[] {
-  return projectItems
-    .filter((item) => !item.external)
-    .map((item) => item.slug);
+  return projectItems.filter((item) => !item.external).map((item) => item.slug);
 }
 
 export function validateProjectSlug(slug: string): slug is ProjectSlug {

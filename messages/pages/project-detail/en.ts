@@ -23,12 +23,22 @@ export const projectDetailsEn = {
   ctaButton: "Get a Quote",
   breadcrumbHome: "Home",
   breadcrumbProjects: "Projects",
+  metricHints: {
+    developmentTime:
+      "Total development time from discovery to launch. May vary based on scope, integrations and approval cycles.",
+    siteType:
+      "The project's architecture and business model — classified as SaaS, e-commerce, corporate site, portfolio and similar.",
+    sector:
+      "The industry the project serves and its target user base.",
+    languageSupport:
+      "Interface languages offered on the platform. Multilingual setups support locale-based content and routing.",
+  },
   iqfinansai: {
     metaTitle: "IQfinansAI | AI Finance Analytics Platform",
     metaDesc:
       "Personal finance platform for income-expense, budgets, debt tracking and AI analysis reports. 16,000+ users, Shopier subscription stack.",
     heroBadge: "FinTech / AI",
-    heroTitle: "IQfinansAI | AI Finance Analytics Platform",
+    heroTitle: "IQfinansAI | Personal Finance",
     heroSubtitle:
       "Your personal finance assistant: manage income, expenses, budgets, debt and investment portfolio in one panel. Clarify spending with AI-powered insights.",
     summary:
@@ -97,10 +107,10 @@ export const projectDetailsEn = {
       },
     ],
     metrics: [
-      { value: "16,255", label: "Registered Users" },
-      { value: "9", label: "Modules" },
       { value: "12 weeks", label: "Development Time" },
-      { value: "Shopier", label: "Payment Stack" },
+      { value: "SaaS", label: "Site Type" },
+      { value: "Finance", label: "Industry" },
+      { value: "TR/EN", label: "Language Support" },
     ],
   },
   "yazici-ticaret": {
@@ -153,9 +163,9 @@ export const projectDetailsEn = {
     ],
     metrics: [
       { value: "11 weeks", label: "Development Time" },
-      { value: "iyzico", label: "Payment Stack" },
-      { value: "Profilo & LG", label: "Brand" },
-      { value: "B2C", label: "Model" },
+      { value: "E-Commerce", label: "Site Type" },
+      { value: "Retail", label: "Industry" },
+      { value: "TR", label: "Language Support" },
     ],
   },
   "uzman-klinik-psikolog": {
@@ -165,12 +175,12 @@ export const projectDetailsEn = {
     heroBadge: "Healthcare / Corporate",
     heroTitle: "Clinical Psychologist",
     heroSubtitle:
-      "Trust-focused corporate site for Clinical Psychologist Nisa Demir. In-person and online therapy, appointment requests, blog and SEO infrastructure.",
+      "Trust-focused corporate site for Clinical Psychologist. In-person and online therapy, appointment requests, blog and SEO infrastructure.",
     summary: "Appointment, blog and SEO-focused clinical psychologist website.",
     challengeText:
       "Clients needed a trustworthy digital presence, an easy appointment process and professional content; the existing setup couldn't meet these expectations. SEO performance was weak, the mobile experience was inconsistent and accessibility standards were only partially met. In healthcare, trust is the most critical factor, professional appearance, clear service narrative and seamless contact channels directly affect appointment conversion.",
     solutionText:
-      "We designed an SSR-based, accessible and trust-focused corporate site for Clinical Psychologist Nisa Demir. The appointment request form clearly routes in-person and online therapy options, while a dynamic blog module enables regular publishing on psychology, psychoanalysis and mental health. Structured SEO, sitemap and meta infrastructure strengthen search visibility; calm typography and a professional visual language support client confidence.",
+      "We designed an SSR-based, accessible and trust-focused corporate site for Clinical Psychologist. The appointment request form clearly routes in-person and online therapy options, while a dynamic blog module enables regular publishing on psychology, psychoanalysis and mental health. Structured SEO, sitemap and meta infrastructure strengthen search visibility; calm typography and a professional visual language support client confidence.",
     details:
       "SSR-capable frontend with Next.js and React; RESTful API layer with Prisma ORM and MySQL. Dark and light mode support, Kadıköy office and online therapy information, dynamic blog management, contact form and responsive Tailwind CSS design were unified in a single architecture. WCAG-focused contrast, keyboard navigation and semantic HTML prioritized accessibility. A mobile-first approach delivers a consistent experience across devices; structured data and meta tags support organic traffic goals.",
     features: [
@@ -210,9 +220,9 @@ export const projectDetailsEn = {
     ],
     metrics: [
       { value: "4 weeks", label: "Development Time" },
-      { value: "Appointment", label: "Core Module" },
-      { value: "SSR", label: "Rendering" },
-      { value: "Kadıköy", label: "Location" },
+      { value: "Corporate", label: "Site Type" },
+      { value: "Healthcare", label: "Industry" },
+      { value: "TR", label: "Language Support" },
     ],
   },
   fablessi: {
@@ -265,9 +275,9 @@ export const projectDetailsEn = {
     ],
     metrics: [
       { value: "4 weeks", label: "Development Time" },
-      { value: "6", label: "Categories" },
-      { value: "TR/EN", label: "Languages" },
-      { value: "Outdoor", label: "Industry" },
+      { value: "Corporate Catalog", label: "Site Type" },
+      { value: "Furniture", label: "Industry" },
+      { value: "TR/EN", label: "Language Support" },
     ],
   },
   portfolio: {
@@ -317,9 +327,9 @@ export const projectDetailsEn = {
     ],
     metrics: [
       { value: "3 weeks", label: "Development Time" },
-      { value: "TR/EN", label: "Languages" },
       { value: "Portfolio", label: "Site Type" },
-      { value: "Full Stack", label: "Scope" },
+      { value: "Technology", label: "Industry" },
+      { value: "TR/EN", label: "Language Support" },
     ],
   },
   onlinemuhasebe: {
@@ -373,9 +383,9 @@ export const projectDetailsEn = {
     ],
     metrics: [
       { value: "4 weeks", label: "Development Time" },
-      { value: "6+", label: "Service Areas" },
-      { value: "Corporate", label: "Site Type" },
+      { value: "Corporate Catalog", label: "Site Type" },
       { value: "Accounting", label: "Industry" },
+      { value: "TR", label: "Language Support" },
     ],
   },
 } as const;

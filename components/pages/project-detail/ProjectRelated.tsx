@@ -3,7 +3,6 @@ import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ServiceCard } from "@/components/sections/services/ServiceCard";
 import { serviceItems } from "@/components/sections/services/service-items";
 import type { ServiceSlug } from "@/components/sections/services/service-items";
-import { serviceTechStacks } from "@/components/pages/service-detail/service-detail-config";
 import { cn } from "@/lib/utils";
 
 interface ProjectRelatedProps {
@@ -45,9 +44,7 @@ export async function ProjectRelated({
               href={service.href}
               title={tHome(service.titleKey)}
               description={tHome(service.descKey)}
-              tag={tHome(service.tagKey)}
               slug={service.slug}
-              techStack={serviceTechStacks[service.slug]}
               numbered
               index={index + 1}
             />

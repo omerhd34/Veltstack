@@ -37,13 +37,11 @@ export function ServicesThreeDCarousel({
         dot: t("servicesSliderDot"),
         region: t("servicesSliderRegion"),
       }}
-      renderItem={(service, _index, { isActive, onActivate, activateLabel }) => (
+      renderItem={(service, _index, { isActive }) => (
         <ServiceCard
           variant="slide"
           numbered
           isActive={isActive}
-          onActivate={onActivate}
-          activateLabel={activateLabel}
           index={service.index}
           slug={service.slug}
           href={service.href}
