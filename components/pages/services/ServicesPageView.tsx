@@ -2,7 +2,6 @@ import { getTranslations } from "next-intl/server";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { ServicesPageHero } from "./ServicesPageHero";
 import { ServicesPackagesSection } from "./ServicesPackagesSection";
-import { ApproachSection } from "@/components/sections/approach";
 import { ServicesConsultationCTA } from "./ServicesConsultationCTA";
 
 interface ServicesPageViewProps {
@@ -25,7 +24,6 @@ export async function ServicesPageView({ className }: ServicesPageViewProps) {
         stats={stats}
       />
       <ServicesPackagesSection />
-      <ApproachSection />
       <ServicesConsultationCTA />
     </div>
   );
