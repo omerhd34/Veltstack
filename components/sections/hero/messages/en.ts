@@ -1,8 +1,8 @@
 export const heroHomeEn = {
   heroBadge: "End-to-End Digital Solutions",
-  heroTitle: "Digital Solutions That Make a Difference",
+  heroTitle: "From Idea to Launch, Digital Products with a Clear Process",
   heroSubtitle:
-    "We develop websites, mobile apps and SEO-focused digital products — from development to launch with transparent communication and measurable results.",
+    "We develop websites, mobile apps and SEO-focused products. From development to launch we work with transparent communication and focus on measurable results.",
   heroImageAlt:
     "Digital interface illustration representing web development, mobile apps, SEO and ongoing maintenance",
   ctaPrimary: "Start Your Project",
