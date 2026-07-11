@@ -1,22 +1,7 @@
 export const projectsHomeTr = {
-  projectsTitle: "Öne Çıkan Projeler",
-  projectsBadge: "Projeler",
-  projectsTitleLead: "Gerçek iş hedeflerine",
-  projectsTitleAccent: "hizmet eden projeler",
   projectsHeadline: "İş hedeflerine",
   projectsHeadlineAccent: "hizmet eden projeler",
-  projectsSubtitle:
-    "Finansal Teknoloji'den e-ticarete, her projede ölçülebilir iş sonuçlarına odaklanıyoruz.",
-  projectsIntro:
-    "Finansal Teknoloji'den e-ticarete, her projede iş hedeflerini merkeze alıyor; tasarım ve geliştirmeyi tek disiplinde birleştiriyoruz. Farklı sektörlerdeki deneyimimizi ölçülebilir sonuçlara dönüştürüyoruz.",
   projectsCta: "Tüm projeleri incele",
-  projectsViewLabel: "İncele",
-  projectsSliderPrev: "Önceki proje",
-  projectsSliderNext: "Sonraki proje",
-  projectsSliderDot: "Proje",
-  projectsSliderRegion: "Projeler karuseli",
-  projectsSliderStatus: "{label}, {current} / {total}",
-  projectsSliderActivate: "{title} projesini göster",
   projectIqfinansTitle: "IQfinansAI | AI Finans Platformu",
   projectIqfinansDesc:
     "Yapay zekâ destekli kişisel finans platformu. Gelir, gider, bütçe ve borç-alacak yönetimini tek panelde sunuyor; harcama analizleri finansal kararları netleştiriyor.",

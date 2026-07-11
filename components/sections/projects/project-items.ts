@@ -17,8 +17,6 @@ export const projectSlugs = [
   "onlinemuhasebe",
 ] as const;
 
-export const homepageProjectSlugs = projectSlugs;
-
 export type ProjectSlug = (typeof projectSlugs)[number];
 
 export interface ProjectItemConfig {
@@ -88,10 +86,6 @@ export const projectItems: ProjectItemConfig[] = [
     icon: LuCalculator,
   },
 ];
-
-export const homepageProjectItems = projectItems.filter((item) =>
-  (homepageProjectSlugs as readonly string[]).includes(item.slug),
-);
 
 export function isProjectSlug(slug: string): slug is ProjectSlug {
   return projectSlugs.includes(slug as ProjectSlug);
