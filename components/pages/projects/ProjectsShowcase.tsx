@@ -25,19 +25,8 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
   const tHome = await getTranslations("home");
 
   return (
-    <section
-      className={`relative overflow-hidden bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}
-    >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-0 top-0 h-1/2 w-1/3 rounded-bl-[100px] bg-brand-accent/4"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-24 bottom-0 size-80 rounded-full bg-brand-accent/3 blur-3xl"
-      />
-
-      <SiteContainer className="relative">
+    <section className={`bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}>
+      <SiteContainer>
         <header className="max-w-3xl">
           <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
             {tPage("showcaseBadge")}
