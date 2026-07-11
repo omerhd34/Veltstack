@@ -3,7 +3,7 @@ import {
   LuChartLine,
   LuContact,
   LuHeadset,
-  LuLayoutTemplate,
+  LuLayers,
   LuListChecks,
   LuRocket,
 } from "react-icons/lu";
@@ -13,7 +13,7 @@ export const whyMeIcons: Record<WhyMeIconKey, IconType> = {
   contact: LuContact,
   rocket: LuRocket,
   headset: LuHeadset,
-  layout: LuLayoutTemplate,
+  layers: LuLayers,
   chart: LuChartLine,
   checklist: LuListChecks,
 };

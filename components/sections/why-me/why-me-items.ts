@@ -2,7 +2,7 @@ export const whyMeIconKeys = [
   "contact",
   "rocket",
   "headset",
-  "layout",
+  "layers",
   "chart",
   "checklist",
 ] as const;
@@ -34,7 +34,7 @@ export const whyMeItems: WhyMeItemConfig[] = [
   {
     titleKey: "whyMeUxTitle",
     descKey: "whyMeUxDesc",
-    iconKey: "layout",
+    iconKey: "layers",
   },
   {
     titleKey: "whyMeMeasurableTitle",

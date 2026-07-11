@@ -3,13 +3,13 @@ export const whyMeHomeTr = {
   whyMeTitleLead: "Neden",
   whyMeTitleAccent: "Veltstack?",
   whyMeSubtitle:
-    "Her projede net iletişim, hızlı teslimat ve sürdürülebilir iş sonuçları için uçtan uca çalışıyoruz. Web sitesinden mobil uygulamaya, e-ticaretten SEO'ya tüm dijital süreci tek muhatapla yönetiyoruz; kapsamı baştan netleştirir, şeffaf ilerler ve yayın sonrası destek sunarız.",
+    "Her projede net iletişim, düzenli teslimat ve sürdürülebilir iş sonuçları için uçtan uca çalışıyoruz. Web sitesinden mobil uygulamaya, e-ticaretten SEO'ya tüm dijital süreci tek muhatapla yönetiyoruz; kapsamı baştan netleştirir, şeffaf ilerler ve yayın sonrası destek sunarız.",
   whyMeSingleTitle: "Tek Muhatap",
   whyMeSingleDesc:
     "Keşiften yayına kadar aynı muhatapla ilerlersiniz; proje bağlamı kaybolmaz, kararlar hızlı alınır ve süreç boyunca net iletişim korunur.",
-  whyMeFastTitle: "Hızlı Teslimat",
+  whyMeFastTitle: "Düzenli Teslimat",
   whyMeFastDesc:
-    "Sıkı terminlere uygun odaklı geliştirme yürütürüz; canlıya alımı planlanan takvime sadık tamamlar, gereksiz adımları eleyerek hızlı ilerleriz.",
+    "Planlı ve odaklı geliştirme yürütürüz; belirlenen takvime sadık kalarak düzenli ilerler, her aşamayı netleştirir ve teslimi söz verilen zamanda güvenle tamamlarız.",
   whyMeSupportTitle: "Teknik Destek",
   whyMeSupportDesc:
     "Yayın sonrası bakım, performans iyileştirmesi ve teknik destek sunarız; acil sorunlarda hızlı müdahale eder, sisteminizin güvenle çalışmasını sağlarız.",
@@ -19,9 +19,9 @@ export const whyMeHomeTr = {
   whyMeMeasurableTitle: "Ölçülebilir Sonuç",
   whyMeMeasurableDesc:
     "Teslimle işi bitirmeyiz; dönüşüm, trafik ve performans metriklerini düzenli takip eder, ölçülebilir hedefler koyar ve veriye dayalı iyileştirmelerle iş sonuçlarınızı güçlendiririz.",
-  whyMeUxTitle: "UX Odaklı Tasarım",
+  whyMeUxTitle: "Ölçeklenebilir Mimari",
   whyMeUxDesc:
-    "Gerçek kullanıcı ihtiyaçlarına odaklı arayüzler tasarlarız; erişilebilirlik, hız ve sezgisel akışı birlikte ele alır, mobil ve masaüstünde tutarlı deneyim sunarız.",
+    "Bugünün ihtiyacına göre kurulan ama yarının büyümesine hazır altyapılar geliştiririz; modüler kod yapısı, temiz API tasarımı ve sürdürülebilir mimariyle projeniz büyüdükçe güvenle genişlersiniz.",
   whyMeSliderPrev: "Önceki avantaj",
   whyMeSliderNext: "Sonraki avantaj",
   whyMeSliderDot: "Avantaj",
