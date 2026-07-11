@@ -5,6 +5,27 @@ import {
 } from "./blog-analogy-icons";
 import type { BlogPostEntry } from "./types";
 
+const IXIRHOST_LINK =
+  '<a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a>';
+const IXIRHOST_COMPANY_LINK =
+  '<a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">İksir İnternet Hizmetleri A.Ş.</a>';
+const IXIRHOST_DOMAIN_SEARCH_LINK =
+  '<a href="https://www.ixirhost.com/domain-sorgulama" target="_blank" rel="noopener noreferrer">Domain Sorgulama</a>';
+const IXIRHOST_DOMAIN_SEARCH_LINK_EN =
+  '<a href="https://www.ixirhost.com/domain-sorgulama" target="_blank" rel="noopener noreferrer">Domain Search</a>';
+const IXIRHOST_DOMAIN_TRANSFER_LINK =
+  '<a href="https://www.ixirhost.com/cart.php?a=add&domain=transfer" target="_blank" rel="noopener noreferrer">Domain Transferi</a>';
+const IXIRHOST_DOMAIN_TRANSFER_LINK_EN =
+  '<a href="https://www.ixirhost.com/cart.php?a=add&domain=transfer" target="_blank" rel="noopener noreferrer">Domain Transfer</a>';
+const IXIRHOST_WHOIS_LINK =
+  '<a href="https://www.ixirhost.com/index.php?m=whois" target="_blank" rel="noopener noreferrer">Whois Domain Sorgulama</a>';
+const IXIRHOST_WHOIS_LINK_EN =
+  '<a href="https://www.ixirhost.com/index.php?m=whois" target="_blank" rel="noopener noreferrer">Whois Domain Search</a>';
+const CPANEL_LINK =
+  '<a href="https://www.cpanel.net/" target="_blank" rel="noopener noreferrer">cPanel</a>';
+const VERCEL_LINK =
+  '<a href="https://vercel.com/" target="_blank" rel="noopener noreferrer">Vercel</a>';
+
 export const blogPostEntry: BlogPostEntry = {
   slug: "neden-ixirhost",
   titleTr: "Neden ixirhost?",
@@ -14,48 +35,53 @@ export const blogPostEntry: BlogPostEntry = {
   excerptEn:
     "Why we choose the ixirhost infrastructure for domain, DNS, SSL and hosting management; we compare it with alternative providers in terms of speed, security, support quality and pricing, sharing the advantages and caveats drawn from our real project experience.",
   excerptShortTr:
-    "Domain, DNS, SSL ve hosting yönetiminde neden ixirhost'u tercih ettiğimizi; hız, güvenlik ve fiyat açısından anlatıyoruz.",
+    "Domain, DNS, SSL ve hosting'i tek panelde toplayan ixirhost altyapısını; hız, güvenlik, Türkçe destek ve fiyat açısından alternatiflerle karşılaştırıyor, gerçek müşteri projelerinden süzülen pratik ipuçlarını paylaşıyoruz.",
   excerptShortEn:
-    "Why we choose ixirhost for domain, DNS, SSL and hosting, compared by speed, security and pricing.",
+    "Why we rely on ixirhost to manage domain, DNS, SSL and hosting in one panel; we compare speed, security, Turkish support and pricing against alternatives, with practical tips from real client projects.",
   category: "Hosting & Domain",
   categoryEn: "Hosting & Domain",
   imageUrl: "/images/pages/blog/neden-ixirhost.png",
-  readingTime: 8,
-  publishedAt: "2026-07-07",
+  readingTime: 9,
+  publishedAt: "2026-11-07",
   featured: true,
   content: {
     tr: `
-<p>Web projesini canlıya alırken domain ve hosting sağlayıcısı seçimi; yönetim kolaylığı, güvenilirlik ve uzun vadeli maliyeti doğrudan etkiler. Veltstack olarak domain tescili, DNS, SSL ve klasik hosting ihtiyaçlarında <strong><a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a></strong> altyapısını kullanıyoruz. Bu yazıda ixirhost'un ne sunduğunu, alternatiflerle farkını ve neden bu tercihi yaptığımızı anlatıyoruz.</p>
+<p>Web projesini canlıya alırken domain ve hosting sağlayıcısı seçimi; yönetim kolaylığı, güvenilirlik ve uzun vadeli maliyeti doğrudan etkiler. Veltstack olarak domain tescili, DNS, SSL ve klasik hosting ihtiyaçlarında <strong>${IXIRHOST_LINK}</strong> altyapısını kullanıyoruz. Bu yazıda ${IXIRHOST_LINK}'un ne sunduğunu, alternatiflerle farkını ve neden bu tercihi yaptığımızı anlatıyoruz.</p>
 
 <div class="blog-stats">
   <div class="blog-stat"><span class="blog-stat-value">Tek panel</span><span class="blog-stat-label">Domain + DNS + SSL + hosting</span></div>
-  <div class="blog-stat"><span class="blog-stat-value">%99.9</span><span class="blog-stat-label">Hedef uptime</span></div>
-  <div class="blog-stat"><span class="blog-stat-value">HTTPS</span><span class="blog-stat-label">Ücretsiz SSL desteği</span></div>
+  <div class="blog-stat"><span class="blog-stat-value">TR Destek</span><span class="blog-stat-label">Türkçe teknik destek</span></div>
+  <div class="blog-stat"><span class="blog-stat-value">NVMe</span><span class="blog-stat-label">LiteSpeed hosting altyapısı</span></div>
 </div>
 
 <h2>ixirhost Nedir?</h2>
-<p><a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a>, ticari unvanıyla <strong>İksir İnternet Hizmetleri A.Ş.</strong>, Türkiye merkezli bir <strong>domain ve hosting sağlayıcısıdır</strong>. Alan adı tescili, DNS yönetimi, SSL sertifikası ve paylaşımlı hosting / VPS hizmetlerini tek müşteri panelinden sunar. cPanel tabanlı hosting paketleri; WordPress, kurumsal site ve klasik PHP projeleri için yaygın kullanılır.</p>
-<p>Detaylı kavram açıklaması için <a href="/blog/domain-hosting">Domain & Hosting</a> rehberimize bakabilirsiniz.</p>
+<p>${IXIRHOST_LINK}, ticari unvanıyla <strong>${IXIRHOST_COMPANY_LINK}</strong>, alan adından web hosting'e ve kurumsal e-postaya kadar dijital altyapı hizmetlerini <strong>tek müşteri panelinde</strong> toplayan Türkiye merkezli bir sağlayıcıdır. Registrar ile hosting'in aynı çatı altında olması, yerel destek ve TL faturalandırma sayesinde KOBİ ve ajans projelerinde sık tercih edilen bir seçenektir.</p>
 
 <h2>ixirhost'un Sunduğu Hizmetler</h2>
+<p>${IXIRHOST_LINK} geniş bir ekosistem sunar; müşteri projelerinde biz özellikle şu çekirdek hizmetleri kullanıyoruz:</p>
 <div class="blog-type-grid">
   <div class="blog-type-card">
     <h4>Domain Tescili</h4>
-    <p><code>.com</code>, <code>.com.tr</code>, <code>.net</code> ve onlarca uzantıda alan adı kaydı. Yenileme hatırlatmaları ve tek panelden yönetim.</p>
+    <p><code>.com</code>, <code>.com.tr</code>, <code>.net</code> ve onlarca uzantıda kayıt; ${IXIRHOST_DOMAIN_SEARCH_LINK}, ${IXIRHOST_DOMAIN_TRANSFER_LINK} ve ${IXIRHOST_WHOIS_LINK} tek panelde.</p>
   </div>
   <div class="blog-type-card">
     <h4>DNS Yönetimi</h4>
-    <p>A, CNAME, MX ve NS kayıtlarını panel üzerinden güncelleme. E-posta, subdomain ve harici servis yönlendirmeleri için esnek yapılandırma.</p>
+    <p>A, CNAME, MX ve NS kayıtlarını panelden güncelleme; e-posta, subdomain ve harici servis yönlendirmeleri.</p>
   </div>
   <div class="blog-type-card">
     <h4>SSL Sertifikası</h4>
-    <p>Let's Encrypt veya ücretli SSL seçenekleriyle HTTPS zorunluluğunu karşılama. Güvenli ödeme ve SEO için temel gereksinim.</p>
+    <p>Let's Encrypt veya ücretli seçeneklerle HTTPS; standart, Wildcard ve kurumsal sertifika.</p>
   </div>
   <div class="blog-type-card">
-    <h4>Hosting & cPanel</h4>
-    <p>Paylaşımlı hosting, WordPress paketleri ve VPS seçenekleri. Dosya yönetimi, veritabanı, e-posta ve yedekleme cPanel üzerinden.</p>
+    <h4>Web Hosting</h4>
+    <p>NVMe disk, LiteSpeed, ücretsiz SSL ve ${CPANEL_LINK} ile Linux ve WordPress hosting; klasik PHP ve kurumsal site projeleri için.</p>
+  </div>
+  <div class="blog-type-card">
+    <h4>Kurumsal E-posta</h4>
+    <p>İşletme maili, takvim ve cihazlar arası senkron; domain ile aynı panelden yönetim.</p>
   </div>
 </div>
+<p>Bulut sunucu, dedicated, bayi hosting ve gelişmiş mail güvenliği gibi kurumsal hizmetler de mevcuttur; tam liste için ${IXIRHOST_LINK} sitesine bakabilirsiniz.</p>
 
 <div class="blog-analogy">
   <div class="blog-analogy-header">
@@ -88,107 +114,89 @@ export const blogPostEntry: BlogPostEntry = {
   </div>
 </div>
 
-<h2>Alternatif Sağlayıcılar</h2>
-<p>Hosting ve domain pazarında onlarca seçenek vardır. İşte sık karşılaştırılan alternatifler:</p>
-<ul>
-<li><strong>Turhost, Natro, Hosting.com.tr:</strong> Türkiye'deki yerel hosting firmaları; benzer paylaşımlı hosting ve domain hizmetleri sunar.</li>
-<li><strong>GoDaddy, Namecheap:</strong> Uluslararası registrar'lar; geniş uzantı seçeneği, farklı fiyatlandırma ve İngilizce panel.</li>
-<li><strong>Vercel, Netlify:</strong> Next.js ve statik siteler için platform hosting; Git tabanlı deploy, CDN ve otomatik ölçekleme. Detay: <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a>.</li>
-<li><strong>Cloudflare Registrar:</strong> Maliyet odaklı domain kaydı; hosting ayrı çözülür.</li>
-</ul>
-
-<h2>Karşılaştırma: ixirhost vs Alternatifler</h2>
-<div class="blog-table-wrap blog-table-compare">
-<table>
-<colgroup>
-  <col class="blog-table-compare-col-feature" />
-  <col class="blog-table-compare-col-domain" />
-  <col class="blog-table-compare-col-hosting" />
-</colgroup>
-<thead><tr><th>Özellik</th><th>ixirhost</th><th>Uluslararası registrar</th><th>Vercel (platform)</th></tr></thead>
-<tbody>
-<tr><td>Domain + hosting birlikte</td><td>Tek panel</td><td>Genelde ayrı satın alınır</td><td>Domain harici; deploy odaklı</td></tr>
-<tr><td>Türkçe destek</td><td>Yerel destek hattı</td><td>Çoğunlukla İngilizce</td><td>İngilizce dokümantasyon</td></tr>
-<tr><td>cPanel / klasik hosting</td><td>Var</td><td>Var (sağlayıcıya göre)</td><td>Yok; serverless model</td></tr>
-<tr><td>WordPress / PHP</td><td>Uygun</td><td>Uygun</td><td>Sınırlı; farklı mimari</td></tr>
-<tr><td>Next.js / modern stack</td><td>VPS veya harici deploy</td><td>Hosting türüne bağlı</td><td>Doğal uyum</td></tr>
-<tr><td>DNS yönetimi</td><td>Dahili panel</td><td>Dahili veya harici</td><td>Cloudflare vb. ile</td></tr>
-<tr><td>SSL</td><td>Panelden kurulum</td><td>Genelde dahil</td><td>Otomatik HTTPS</td></tr>
-<tr><td>Fatura / yerel ödeme</td><td>TL, yerel ödeme yöntemleri</td><td>Döviz, kart</td><td>Döviz, kart</td></tr>
-</tbody>
-</table>
-</div>
-
 <h2>Neden ixirhost Tercih Ediyoruz?</h2>
 <ul class="blog-checklist">
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Tek panel yönetimi:</strong> Domain tescili, DNS, SSL ve hosting aynı yerde; müşteri projelerinde kurulum ve teslim süresi kısalır.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Türkçe teknik destek:</strong> DNS kaydı, nameserver değişimi ve SSL kurulumunda yerel destek hattı pratik çözüm sunar.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Yerel ödeme ve fatura:</strong> TL bazlı faturalandırma ve yerel ödeme yöntemleri KOBİ müşterileri için kolaylık sağlar.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Yerel ödeme ve fatura:</strong> Ağırlıklı TL faturalandırma; Visa/Mastercard dahil kredi kartı ve yerel ödeme seçenekleri KOBİ müşterileri için kolaylık sağlar.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>cPanel altyapısı:</strong> WordPress, kurumsal site ve klasik hosting ihtiyaçlarında tanıdık panel; e-posta ve veritabanı yönetimi dahil.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Güvenilir uptime:</strong> Kurumsal siteler için hedeflenen yüksek erişilebilirlik; düzenli yedekleme seçenekleri.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Proje süreciyle uyum:</strong> Domain seçiminden canlıya almaya kadar tüm adımları biz yönetiyoruz; müşteri tek noktadan destek alır.</span></div></li>
 </ul>
 
-<h2>ixirhost mu, Vercel mi?</h2>
-<p>Her proje aynı altyapıyı gerektirmez. Genel kural:</p>
-<ul>
-<li><strong>ixirhost:</strong> WordPress, PHP, klasik kurumsal site, e-posta hosting'i ve cPanel gerektiren projeler. Domain + hosting birlikte yönetilecekse ideal.</li>
-<li><strong>Vercel:</strong> Next.js, React ve statik siteler; Git push ile deploy, global CDN ve otomatik ölçekleme isteyen modern web projeleri.</li>
-</ul>
-<p>Birçok projede domain ixirhost'ta kayıtlı kalırken uygulama Vercel'de barındırılır; DNS kayıtları bu hibrit yapıyı bağlar. <a href="/blog/domain-hosting-tasima">Domain & hosting taşıma</a> rehberimiz DNS güncellemelerinde yol gösterir.</p>
+<h2>ixirhost, cPanel ve Vercel</h2>
+<p>Bu üç araç rakip değil; her biri farklı bir katmanda devreye girer. <strong>${IXIRHOST_LINK}</strong> domain kaydı, DNS, SSL ve kurumsal e-posta gibi altyapıyı yönetir. <strong>${CPANEL_LINK}</strong>, ${IXIRHOST_LINK} hosting paketlerinde WordPress, PHP ve Node.js projelerini sunucuda çalıştırmak için kullandığımız yönetim panelidir. <strong>${VERCEL_LINK}</strong> ise Next.js, React ve statik projelerin kodunu canlıya aldığımız deploy platformudur.</p>
 
-<div class="blog-callout">
-  <p class="blog-callout-title">Pratik ipucu</p>
-  <p>Domain'i doğru seçmek hosting kadar önemlidir. Kısa, akılda kalıcı ve markanıza uygun alan adı için <a href="/blog/dogru-domain-secimi">Doğru Domain Seçimi</a> rehberimize göz atın; müsaitlik kontrolünü ixirhost panelinden yapabilirsiniz.</p>
-</div>
+<h3>cPanel ile yayın</h3>
+<p>WordPress, PHP veya sunucuda kalması gereken Node.js projelerinde hosting'i ${IXIRHOST_LINK}'tan alıyoruz. WordPress ve PHP için dosya yöneticisi, veritabanı ve e-posta araçları yeterlidir. Node.js projelerinde <strong>Software → Setup Node.js App</strong> bölümünden <strong>Create Application</strong> ile yeni uygulama oluşturulur; ardından şu ayarlar yapılır:</p>
+<ul>
+<li><strong>Node.js version:</strong> Projenin desteklediği sürüm seçilir (ör. 18.x).</li>
+<li><strong>Application mode:</strong> <code>Production</code> — <code>NODE_ENV</code> değişkenini otomatik ayarlar.</li>
+<li><strong>Application root:</strong> Dosyaların yüklendiği klasör.</li>
+<li><strong>Application URL:</strong> Bağlanacak domain veya alt yol.</li>
+<li><strong>Application startup file:</strong> Giriş dosyası (ör. <code>server.js</code>).</li>
+<li><strong>Run NPM Install:</strong> <code>package.json</code> algılandıktan sonra bağımlılıklar kurulur.</li>
+<li><strong>Environment variables:</strong> Veritabanı bağlantısı ve API anahtarları gibi gizli değerler eklenir.</li>
+</ul>
+<p>Kurulum tamamlandığında uygulama <strong>started</strong> durumunda görünür; kod güncellemelerinden sonra <strong>Restart</strong> ile yeniden başlatılır.</p>
+
+<h3>Vercel ile yayın</h3>
+<p>Next.js projelerinde deploy'u ${VERCEL_LINK}'e bırakıyoruz: <code>git push</code> ile tek adımda yayın, otomatik HTTPS, preview branch'leri ve global CDN. Domain ${IXIRHOST_LINK}'ta kayıtlı kalır; ${VERCEL_LINK}'e bağlamak için panelde <strong>Alan Adlarım → İsim Sunucuları</strong> bölümünden varsayılan nameserver'ları kaldırıp <code>ns1.vercel-dns.com</code> ve <code>ns2.vercel-dns.com</code> adreslerini ekliyoruz. DNS yönetimi ${VERCEL_LINK}'e devredilir; değişiklik 24 saate kadar sürebilir. Başka firmadaki alan adını ${IXIRHOST_DOMAIN_TRANSFER_LINK} ile taşımak da mümkün. Ayrıntılar için <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a> rehberimize bakabilirsiniz.</p>
 
 <h2>Sık Yapılan Hatalar</h2>
 <ul>
-<li>Domain'i ucuz registrar'dan, hosting'i başka firmadan alıp DNS karmaşası yaşamak</li>
+<li>Domain'i bir firmadan, DNS ve hosting'i başka firmalardan alıp yönetim karmaşası yaşamak</li>
 <li>SSL kurulumunu ertelemek; tarayıcı "güvenli değil" uyarısı güveni düşürür</li>
 <li>Domain yenileme tarihini takip etmemek; süresi dolan domain başkasına düşebilir</li>
 <li>Nameserver değişikliğinden sonra DNS yayılımını (propagation) beklemeden panik yapmak</li>
-<li>WordPress sitesini Vercel'e, Next.js projesini paylaşımlı hosting'e zorla sığdırmak</li>
+<li>Nameserver'ları ${VERCEL_LINK}'e taşıdıktan sonra DNS kayıtlarını hâlâ ${IXIRHOST_LINK} panelinden düzenlemeye çalışmak</li>
+<li>${VERCEL_LINK}'e geçerken MX kayıtlarını kontrol etmemek; kurumsal e-posta kesilebilir</li>
+<li>WordPress sitesini ${VERCEL_LINK}'e, Next.js projesini ise ${VERCEL_LINK} yerine ${CPANEL_LINK}'e zorla sığdırmak</li>
 </ul>
 
 <h2>Profesyonel Domain & Hosting Desteği</h2>
-<p>Doğru altyapı seçimi projenizin güvenli ve kesintisiz çalışmasının temelidir. Veltstack olarak domain tescili, DNS yapılandırması, SSL kurulumu ve hosting yönetimini ixirhost altyapısıyla gerçekleştiriyor; Next.js projelerinde ise Vercel ile modern deploy süreçlerini bir arada sunuyoruz.</p>
+<p>Doğru altyapı seçimi projenizin güvenli ve kesintisiz çalışmasının temelidir. Veltstack olarak domain tescili, DNS yapılandırması, SSL kurulumu ve hosting yönetimini ${IXIRHOST_LINK} altyapısıyla gerçekleştiriyor; Next.js projelerinde ise ${VERCEL_LINK} ile modern deploy süreçlerini bir arada sunuyoruz.</p>
 
 <h2>Sonuç</h2>
-<p>ixirhost; domain, DNS, SSL ve klasik hosting ihtiyaçlarını tek panelde toplayan, Türkiye odaklı ve yönetilebilir bir çözümdür. Uluslararası registrar'lar veya platform hosting'ler belirli senaryolarda avantajlı olsa da, kurumsal site ve WordPress projelerinde ixirhost bizim için en dengeli tercihtir. Yeni bir web projesi planlıyorsanız domain ve hosting stratejinizi birlikte belirleyebiliriz.</p>
+<p>${IXIRHOST_LINK}; domain, DNS, SSL ve klasik hosting ihtiyaçlarını tek panelde toplayan, Türkiye odaklı ve yönetilebilir bir çözümdür. Uluslararası registrar'lar veya platform hosting'ler belirli senaryolarda avantajlı olsa da, kurumsal site ve WordPress projelerinde ${IXIRHOST_LINK} bizim için en dengeli tercihtir. Yeni bir web projesi planlıyorsanız domain ve hosting stratejinizi birlikte belirleyebiliriz.</p>
 `,
     en: `
-<p>Choosing a domain and hosting provider affects management ease, reliability and long-term cost when you launch a web project. At Veltstack we use <strong><a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a></strong> for domain registration, DNS, SSL and classic hosting needs. This article covers what ixirhost offers, how it compares to alternatives and why we choose it.</p>
+<p>Choosing a domain and hosting provider affects management ease, reliability and long-term cost when you launch a web project. At Veltstack we use <strong>${IXIRHOST_LINK}</strong> for domain registration, DNS, SSL and classic hosting needs. This article covers what ${IXIRHOST_LINK} offers, how it compares to alternatives and why we choose it.</p>
 
 <div class="blog-stats">
   <div class="blog-stat"><span class="blog-stat-value">One panel</span><span class="blog-stat-label">Domain + DNS + SSL + hosting</span></div>
-  <div class="blog-stat"><span class="blog-stat-value">99.9%</span><span class="blog-stat-label">Target uptime</span></div>
-  <div class="blog-stat"><span class="blog-stat-value">HTTPS</span><span class="blog-stat-label">Free SSL support</span></div>
+  <div class="blog-stat"><span class="blog-stat-value">TR Support</span><span class="blog-stat-label">Turkish technical support</span></div>
+  <div class="blog-stat"><span class="blog-stat-value">NVMe</span><span class="blog-stat-label">LiteSpeed hosting stack</span></div>
 </div>
 
 <h2>What Is ixirhost?</h2>
-<p><a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a>, officially registered as <strong>İksir İnternet Hizmetleri A.Ş.</strong>, is a <strong>Turkey-based domain and hosting provider</strong>. It offers domain registration, DNS management, SSL certificates and shared hosting / VPS from a single customer panel. cPanel-based hosting packages are widely used for WordPress, corporate sites and classic PHP projects.</p>
-<p>For detailed concepts see our <a href="/blog/domain-hosting">Domain & Hosting</a> guide.</p>
+<p>${IXIRHOST_LINK}, officially registered as <strong>${IXIRHOST_COMPANY_LINK}</strong>, is a <strong>Turkey-based provider</strong> that brings digital infrastructure — from domains through web hosting to corporate email — into a <strong>single customer panel</strong>. Having registrar and hosting under one roof, plus local support and TRY billing, makes it a common choice for SMB and agency projects.</p>
 
 <h2>Services ixirhost Provides</h2>
+<p>${IXIRHOST_LINK} offers a broad ecosystem; in client projects we mainly rely on these core services:</p>
 <div class="blog-type-grid">
   <div class="blog-type-card">
     <h4>Domain Registration</h4>
-    <p>Register names under <code>.com</code>, <code>.com.tr</code>, <code>.net</code> and many more TLDs. Renewal reminders and single-panel management.</p>
+    <p>Register under <code>.com</code>, <code>.com.tr</code>, <code>.net</code> and many TLDs; ${IXIRHOST_DOMAIN_SEARCH_LINK_EN}, ${IXIRHOST_DOMAIN_TRANSFER_LINK_EN} and ${IXIRHOST_WHOIS_LINK_EN} in one panel.</p>
   </div>
   <div class="blog-type-card">
     <h4>DNS Management</h4>
-    <p>Update A, CNAME, MX and NS records from the panel. Flexible setup for email, subdomains and external service routing.</p>
+    <p>Update A, CNAME, MX and NS records from the panel; email, subdomains and external service routing.</p>
   </div>
   <div class="blog-type-card">
     <h4>SSL Certificate</h4>
-    <p>Meet HTTPS requirements with Let's Encrypt or paid SSL options. A baseline for secure payments and SEO.</p>
+    <p>HTTPS via Let's Encrypt or paid options; standard, Wildcard and corporate certificates.</p>
   </div>
   <div class="blog-type-card">
-    <h4>Hosting & cPanel</h4>
-    <p>Shared hosting, WordPress packages and VPS options. File management, databases, email and backups through cPanel.</p>
+    <h4>Web Hosting</h4>
+    <p>Linux and WordPress hosting with NVMe storage, LiteSpeed, free SSL and ${CPANEL_LINK}; for classic PHP and corporate site projects.</p>
+  </div>
+  <div class="blog-type-card">
+    <h4>Corporate Email</h4>
+    <p>Business mail, calendar and cross-device sync; managed alongside the domain in the same panel.</p>
   </div>
 </div>
+<p>Cloud servers, dedicated hosting, reseller plans and advanced mail security are also available; see the ${IXIRHOST_LINK} website for the full list.</p>
 
 <div class="blog-analogy">
   <div class="blog-analogy-header">
@@ -221,74 +229,51 @@ export const blogPostEntry: BlogPostEntry = {
   </div>
 </div>
 
-<h2>Alternative Providers</h2>
-<p>The hosting and domain market has many options. Commonly compared alternatives include:</p>
-<ul>
-<li><strong>Turhost, Natro, Hosting.com.tr:</strong> Local Turkish hosting companies with similar shared hosting and domain services.</li>
-<li><strong>GoDaddy, Namecheap:</strong> International registrars with broad TLD choice, different pricing and English panels.</li>
-<li><strong>Vercel, Netlify:</strong> Platform hosting for Next.js and static sites; Git-based deploy, CDN and auto-scaling. See <a href="/blog/vercel-de-yayin">Publishing on Vercel</a>.</li>
-<li><strong>Cloudflare Registrar:</strong> Cost-focused domain registration; hosting handled separately.</li>
-</ul>
-
-<h2>Comparison: ixirhost vs Alternatives</h2>
-<div class="blog-table-wrap blog-table-compare">
-<table>
-<colgroup>
-  <col class="blog-table-compare-col-feature" />
-  <col class="blog-table-compare-col-domain" />
-  <col class="blog-table-compare-col-hosting" />
-</colgroup>
-<thead><tr><th>Feature</th><th>ixirhost</th><th>International registrar</th><th>Vercel (platform)</th></tr></thead>
-<tbody>
-<tr><td>Domain + hosting together</td><td>Single panel</td><td>Often bought separately</td><td>Domain external; deploy-focused</td></tr>
-<tr><td>Turkish support</td><td>Local support line</td><td>Mostly English</td><td>English documentation</td></tr>
-<tr><td>cPanel / classic hosting</td><td>Yes</td><td>Yes (provider-dependent)</td><td>No; serverless model</td></tr>
-<tr><td>WordPress / PHP</td><td>Suitable</td><td>Suitable</td><td>Limited; different architecture</td></tr>
-<tr><td>Next.js / modern stack</td><td>VPS or external deploy</td><td>Depends on hosting type</td><td>Natural fit</td></tr>
-<tr><td>DNS management</td><td>Built-in panel</td><td>Built-in or external</td><td>Via Cloudflare etc.</td></tr>
-<tr><td>SSL</td><td>Panel setup</td><td>Usually included</td><td>Automatic HTTPS</td></tr>
-<tr><td>Billing / local payment</td><td>TRY, local methods</td><td>Foreign currency, card</td><td>Foreign currency, card</td></tr>
-</tbody>
-</table>
-</div>
-
 <h2>Why We Choose ixirhost</h2>
 <ul class="blog-checklist">
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Single-panel management:</strong> Domain registration, DNS, SSL and hosting in one place; faster setup and handoff on client projects.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Turkish technical support:</strong> Local support for DNS records, nameserver changes and SSL setup.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Local billing and payment:</strong> TRY invoicing and local payment methods simplify things for SMB clients.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>cPanel infrastructure:</strong> Familiar panel for WordPress, corporate sites and classic hosting; includes email and database management.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Local billing and payment:</strong> Primarily TRY invoicing; credit cards including Visa/Mastercard and local payment options simplify things for SMB clients.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>${CPANEL_LINK} infrastructure:</strong> Familiar panel for WordPress, corporate sites and classic hosting; includes email and database management.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Reliable uptime:</strong> High availability targets for corporate sites; regular backup options.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Aligned with our workflow:</strong> We manage every step from domain choice to go-live; clients get support from a single point.</span></div></li>
 </ul>
 
-<h2>ixirhost or Vercel?</h2>
-<p>Not every project needs the same infrastructure. A simple rule:</p>
-<ul>
-<li><strong>ixirhost:</strong> WordPress, PHP, classic corporate sites, email hosting and projects that need cPanel. Ideal when domain and hosting are managed together.</li>
-<li><strong>Vercel:</strong> Next.js, React and static sites; Git push deploy, global CDN and auto-scaling for modern web projects.</li>
-</ul>
-<p>In many projects the domain stays registered at ixirhost while the app runs on Vercel; DNS records connect this hybrid setup. Our <a href="/blog/domain-hosting-tasima">domain & hosting migration</a> guide helps with DNS updates.</p>
+<h2>ixirhost, cPanel and Vercel</h2>
+<p>These three tools are not competitors; each operates at a different layer. <strong>${IXIRHOST_LINK}</strong> manages infrastructure — domain registration, DNS, SSL and corporate email. <strong>${CPANEL_LINK}</strong> is the management panel we use on ${IXIRHOST_LINK} hosting packages to run WordPress, PHP and Node.js projects on the server. <strong>${VERCEL_LINK}</strong> is the deploy platform where we ship Next.js, React and static project code.</p>
 
-<div class="blog-callout">
-  <p class="blog-callout-title">Practical tip</p>
-  <p>Choosing the right domain matters as much as hosting. See our <a href="/blog/dogru-domain-secimi">Choosing the Right Domain</a> guide for a short, memorable, brand-fit name; you can check availability from the ixirhost panel.</p>
-</div>
+<h3>Publishing with cPanel</h3>
+<p>For WordPress, PHP or Node.js projects that stay on the server we get hosting from ${IXIRHOST_LINK}. WordPress and PHP rely on the file manager, database and email tools. For Node.js we go to <strong>Software → Setup Node.js App</strong>, create a new application with <strong>Create Application</strong>, then configure:</p>
+<ul>
+<li><strong>Node.js version:</strong> Match the project requirement (e.g. 18.x).</li>
+<li><strong>Application mode:</strong> <code>Production</code> — sets the <code>NODE_ENV</code> variable automatically.</li>
+<li><strong>Application root:</strong> The folder where files are uploaded.</li>
+<li><strong>Application URL:</strong> The domain or subpath to serve.</li>
+<li><strong>Application startup file:</strong> Entry file (e.g. <code>server.js</code>).</li>
+<li><strong>Run NPM Install:</strong> Install dependencies once <code>package.json</code> is detected.</li>
+<li><strong>Environment variables:</strong> Add secrets such as database URLs and API keys.</li>
+</ul>
+<p>When setup is complete the app shows as <strong>started</strong>; use <strong>Restart</strong> after code updates.</p>
+
+<h3>Publishing with Vercel</h3>
+<p>For Next.js projects we leave deployment to ${VERCEL_LINK}: <code>git push</code> to go live, automatic HTTPS, preview branches and a global CDN. The domain stays registered at ${IXIRHOST_LINK}; to connect to ${VERCEL_LINK} we go to <strong>My Domains → Nameservers</strong>, remove the defaults and add <code>ns1.vercel-dns.com</code> and <code>ns2.vercel-dns.com</code>. DNS management moves to ${VERCEL_LINK}; changes can take up to 24 hours. You can also move a name from another registrar via ${IXIRHOST_DOMAIN_TRANSFER_LINK_EN}. See our <a href="/en/blog/vercel-de-yayin">Publishing on Vercel</a> guide for details.</p>
 
 <h2>Common Mistakes</h2>
 <ul>
-<li>Buying a cheap domain from one registrar and hosting elsewhere, then struggling with DNS</li>
+<li>Buying a domain from one provider and DNS or hosting from others, then struggling with management</li>
 <li>Delaying SSL setup; browser "not secure" warnings hurt trust</li>
 <li>Not tracking domain renewal; expired domains can be taken by others</li>
 <li>Panicking before DNS propagation completes after a nameserver change</li>
-<li>Forcing WordPress onto Vercel or Next.js onto shared hosting</li>
+<li>Trying to edit DNS records in the ${IXIRHOST_LINK} panel after moving nameservers to ${VERCEL_LINK}</li>
+<li>Not checking MX records when switching to ${VERCEL_LINK}; corporate email can stop working</li>
+<li>Forcing WordPress onto ${VERCEL_LINK} or Next.js onto ${CPANEL_LINK} instead of ${VERCEL_LINK}</li>
 </ul>
 
 <h2>Professional Domain & Hosting Support</h2>
-<p>The right infrastructure keeps your project secure and online. At Veltstack we handle domain registration, DNS configuration, SSL setup and hosting management through ixirhost, and modern deploy workflows on Vercel for Next.js projects.</p>
+<p>The right infrastructure keeps your project secure and online. At Veltstack we handle domain registration, DNS configuration, SSL setup and hosting management through ${IXIRHOST_LINK}, and modern deploy workflows on ${VERCEL_LINK} for Next.js projects.</p>
 
 <h2>Conclusion</h2>
-<p>ixirhost is a Turkey-focused solution that brings domain, DNS, SSL and classic hosting into one manageable panel. International registrars or platform hosting can win in specific scenarios, but for corporate sites and WordPress projects ixirhost is our most balanced choice. If you are planning a new web project, we can define your domain and hosting strategy together.</p>
+<p>${IXIRHOST_LINK} is a Turkey-focused solution that brings domain, DNS, SSL and classic hosting into one manageable panel. International registrars or platform hosting can win in specific scenarios, but for corporate sites and WordPress projects ${IXIRHOST_LINK} is our most balanced choice. If you are planning a new web project, we can define your domain and hosting strategy together.</p>
 `,
   },
 };
