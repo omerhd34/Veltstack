@@ -1,4 +1,4 @@
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { LuArrowRight } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { BorderTrace } from "@/components/ui/BorderTrace";
@@ -24,6 +24,7 @@ export function BlogPreviewCard({
   readingTimeLabel,
 }: BlogPreviewCardProps) {
   const locale = useLocale() as "tr" | "en";
+  const t = useTranslations("home");
 
   return (
     <Link
@@ -41,7 +42,9 @@ export function BlogPreviewCard({
       </div>
       <div className="flex min-h-0 flex-1 flex-col p-6">
         <span className="mb-3 block h-4 shrink-0 text-xs font-semibold leading-4 tracking-[0.15em] text-brand-accent">
-          {readingTimeLabel ? toLatinUppercase(readingTimeLabel, locale) : "\u00A0"}
+          {readingTimeLabel
+            ? toLatinUppercase(readingTimeLabel, locale)
+            : "\u00A0"}
         </span>
         <h3 className="line-clamp-2 shrink-0 font-(family-name:--font-heading) text-lg font-bold leading-snug text-[#0A0A0F] transition-colors group-hover:text-brand-accent">
           {title}
@@ -54,11 +57,11 @@ export function BlogPreviewCard({
             className={cn(
               "inline-flex w-fit items-center gap-1.5 text-xs font-semibold text-brand-accent",
               "origin-left transition-[color,transform] duration-700 ease-in-out",
-              "hover:scale-105 hover:text-[#a8dfc4]",
-              "motion-reduce:hover:scale-100",
+              "group-hover:scale-105 group-hover:text-[#a8dfc4]",
+              "motion-reduce:group-hover:scale-100",
             )}
           >
-            <span>Devamını oku</span>
+            <span>{t("readMore")}</span>
             <LuArrowRight className="size-3 shrink-0" aria-hidden />
           </span>
         </div>

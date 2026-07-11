@@ -11,4 +11,5 @@ export const blogPreviewHomeTr = {
   blogSliderPrev: "Önceki yazı",
   blogSliderNext: "Sonraki yazı",
   readingTime: "{minutes} dk okuma",
+  readMore: "Devamını oku",
 } as const;

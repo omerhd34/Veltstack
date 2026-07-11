@@ -11,4 +11,5 @@ export const blogPreviewHomeEn = {
   blogSliderPrev: "Previous article",
   blogSliderNext: "Next article",
   readingTime: "{minutes} min read",
+  readMore: "Read more",
 } as const;
