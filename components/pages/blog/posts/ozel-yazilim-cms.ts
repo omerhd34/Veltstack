@@ -17,6 +17,10 @@ export const blogPostEntry: BlogPostEntry = {
     "Özel yazılımın hazır CMS çözümlerine göre neden şart olduğunu; performans, güvenlik ve bakım avantajlarıyla anlatıyoruz.",
   excerptShortEn:
     "Why custom software beats ready-made CMS for quality projects, with performance, security and maintenance advantages.",
+  excerptSecondaryTr:
+    "Aşağıda hazır CMS ile özel yazılım arasındaki farkı, bakım maliyetini ve müşteri projelerinden örnekleri karşılaştırıyoruz.",
+  excerptSecondaryEn:
+    "Below we compare off-the-shelf CMS vs custom software, maintenance cost and examples from client projects.",
   category: "Özel Yazılım",
   categoryEn: "Custom Software",
   imageUrl: "/images/pages/blog/ozel-yazilim-cms.png",

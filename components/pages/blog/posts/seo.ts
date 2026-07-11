@@ -12,6 +12,10 @@ export const blogPostEntry: BlogPostEntry = {
     "SEO'nun temellerini, türlerini ve sıralamanızı yükseltecek uygulanabilir adımları kapsamlı bir rehberde topluyoruz.",
   excerptShortEn:
     "A comprehensive guide to SEO basics, types and actionable steps to climb the search rankings.",
+  excerptSecondaryTr:
+    "Aşağıda teknik SEO, içerik optimizasyonu ve Core Web Vitals için uygulayabileceğiniz kontrol listesini paylaşıyoruz.",
+  excerptSecondaryEn:
+    "Below we share a checklist for technical SEO, content optimization and Core Web Vitals.",
   category: "SEO",
   categoryEn: "SEO",
   imageUrl: "/images/pages/blog/seo.png",

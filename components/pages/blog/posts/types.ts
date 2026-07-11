@@ -6,6 +6,8 @@ export interface BlogPost {
   excerptEn: string;
   excerptShortTr: string;
   excerptShortEn: string;
+  excerptSecondaryTr: string;
+  excerptSecondaryEn: string;
   category: string;
   categoryEn: string;
   imageUrl: string;
