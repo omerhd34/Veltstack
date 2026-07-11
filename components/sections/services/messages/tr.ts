@@ -23,7 +23,7 @@ export const servicesHomeTr = {
   servicesWebTag: "Web - Geliştirme",
   servicesRefreshTitle: "Web & Uygulama Yenileme",
   servicesRefreshDesc:
-    "Eski veya yavaş web ve mobil uygulamalarınızı modern, hızlı ve dönüşüm odaklı bir deneyime taşıyoruz; altyapı, arayüz ve içerik katmanlarını birlikte yeniliyor, mevcut iş akışlarınızı koruyarak kesintisiz ve ölçülebilir bir geçiş süreci yönetiyoruz.",
+    "Eski veya yavaş web ve mobil uygulamalarınızı modern, hızlı ve dönüşüm odaklı bir deneyime taşıyoruz; altyapı, arayüz ve içeriği birlikte yenileyip iş akışlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
   servicesRefreshTag: "Yenileme - Modernizasyon",
   servicesAppTitle: "Uygulama Geliştirme",
   servicesAppDesc:

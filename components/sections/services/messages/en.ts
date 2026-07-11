@@ -19,11 +19,11 @@ export const servicesHomeEn = {
   servicesSliderActivate: "Show {title} service",
   servicesWebTitle: "Website Development",
   servicesWebDesc:
-    "We deliver fast, SEO-ready web development for corporate, e-commerce and portfolio projects from design through launch; we prioritize performance, accessibility and conversion, then ship on a solid mobile-friendly foundation.",
+    "We deliver fast, SEO-ready web development for corporate, e-commerce and portfolio projects from design to launch, prioritizing performance, accessibility and conversion on a mobile-friendly foundation.",
   servicesWebTag: "Corporate - E-commerce - Portfolio",
   servicesRefreshTitle: "Web & App Redesign",
   servicesRefreshDesc:
-    "We modernize outdated or slow websites and mobile apps into fast, conversion-focused experiences; we refresh infrastructure, interface and content together while keeping your workflows intact through a smooth transition.",
+    "We modernize outdated or slow web and mobile apps into fast, conversion-focused experiences; we refresh infrastructure, interface and content together while preserving your workflows for a smooth transition.",
   servicesRefreshTag: "Web - Mobile - Infrastructure",
   servicesAppTitle: "App Development",
   servicesAppDesc:

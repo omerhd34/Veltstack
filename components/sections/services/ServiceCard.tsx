@@ -101,7 +101,8 @@ export function ServiceCard({
       ) : null}
       <div
         className={cn(
-          "flex flex-1",
+          "flex",
+          !isSlide && "flex-1",
           compact ? "gap-3" : "gap-4",
           compact && !description && "items-center",
         )}
@@ -155,7 +156,7 @@ export function ServiceCard({
                   ? "mt-1.5 line-clamp-3 h-[calc(0.75rem*1.625*3)] text-xs leading-relaxed text-muted-foreground"
                   : isSlide
                     ? cn(
-                        "mt-2 mb-3 line-clamp-4 h-[calc(0.9375rem*1.7*4)] text-[0.9375rem] leading-[1.7]",
+                        "mt-2 mb-0 line-clamp-4 h-[calc(0.9375rem*1.7*4)] text-[0.9375rem] leading-[1.7]",
                         isActive
                           ? "text-foreground/60"
                           : "text-foreground/45 group-hover:text-foreground/58",
@@ -174,7 +175,7 @@ export function ServiceCard({
             "flex items-center justify-between gap-3 border-t-2 border-solid border-t-[#8aab99] group-hover:border-brand-accent",
             isSlide && !isActive && "border-t-[#9db8a8]/80",
             slowTransition,
-            compact ? "mt-3 pt-3" : isSlide ? "mt-auto pt-4" : "mt-5 pt-0",
+            compact ? "mt-3 pt-3" : isSlide ? "mt-auto pt-2" : "mt-5 pt-0",
           )}
         >
           <Badge
