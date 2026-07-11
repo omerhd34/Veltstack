@@ -43,27 +43,27 @@ export const approachTr = {
     },
     {
       step: "7",
-      title: "UI/UX Tasarım",
-      desc: "Arayüzleri iş hedeflerinize, erişilebilirlik standartlarına ve marka kimliğinize uygun şekilde tasarlarız. Onayınıza sunmadan kodlamaya geçmeyiz.",
-      timing: "Tasarım süreci",
-    },
-    {
-      step: "8",
       title: "Geliştirme & Entegrasyon",
       desc: "Kodlama, API mimarisi ve üçüncü taraf entegrasyonlarını performans odaklı ilerletiriz. Temiz, ölçeklenebilir ve sürdürülebilir bir altyapı kurarız.",
       timing: "Geliştirme süreci",
     },
     {
-      step: "9",
+      step: "8",
       title: "Test & Kalite Kontrolü",
       desc: "Fonksiyonel testler, cihaz uyumluluğu ve performans kontrolleriyle kaliteyi güvence altına alırız. Canlıya almadan önce her detayı birlikte gözden geçiririz.",
       timing: "Kalite güvence süreci",
     },
     {
-      step: "10",
-      title: "Canlıya Alım & SEO",
-      desc: "Sorunsuz deploy, SEO altyapısı ve yapılandırılmış veri ile projenizi yayına alırız. Lansman günü teknik taraf bizde; siz işinize odaklanırsınız.",
+      step: "9",
+      title: "Canlıya Alım",
+      desc: "Sorunsuz deploy ile projenizi yayına alırız. Lansman günü teknik taraf bizde; siz işinize odaklanırsınız.",
       timing: "Yayına alma günü",
+    },
+    {
+      step: "10",
+      title: "SEO Optimizasyonu",
+      desc: "SEO altyapısı ve yapılandırılmış veri ile sitenizin arama motorlarında doğru temelde görünmesini sağlarız.",
+      timing: "Yayın sonrası",
     },
     {
       step: "11",

@@ -43,27 +43,27 @@ export const approachEn = {
     },
     {
       step: "7",
-      title: "UI/UX Design",
-      desc: "We design interfaces aligned with your business goals, accessibility standards, and brand identity. Nothing moves to code until you have approved the design.",
-      timing: "Design phase",
-    },
-    {
-      step: "8",
       title: "Development & Integration",
       desc: "We build code, API architecture, and third-party integrations with performance in mind. The result is a clean, scalable, and maintainable foundation.",
       timing: "Build phase",
     },
     {
-      step: "9",
+      step: "8",
       title: "Testing & Quality Assurance",
       desc: "Functional testing, device compatibility, and performance checks ensure quality before launch. We review every detail together before going live.",
       timing: "Test & QA phase",
     },
     {
-      step: "10",
-      title: "Launch & SEO",
-      desc: "We go live with smooth deployment, SEO foundations, and structured data. On launch day, the technical side is on us — you focus on your business.",
+      step: "9",
+      title: "Launch",
+      desc: "We go live with a smooth deployment. On launch day, the technical side is on us — you focus on your business.",
       timing: "Go-live day",
+    },
+    {
+      step: "10",
+      title: "SEO Optimization",
+      desc: "We set up SEO foundations and structured data so your site is built on the right footing for search engines.",
+      timing: "Post-launch",
     },
     {
       step: "11",
