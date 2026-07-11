@@ -26,8 +26,6 @@ export const blogPageTr = {
   },
   scrollLabel: "Yazıları incele",
   articleScrollLabel: "Yazıyı oku",
-  articleSubtitleSecondary:
-    "Aşağıda yazının tamamını; pratik örnekler, gerçek proje deneyimleri ve uygulanabilir önerilerle birlikte okuyabilirsiniz.",
   searchPlaceholder: "Yazı ara...",
   clearSearch: "Aramayı temizle",
   allCategories: "Tümü",

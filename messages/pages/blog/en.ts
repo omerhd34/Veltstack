@@ -26,8 +26,6 @@ export const blogPageEn = {
   },
   scrollLabel: "Browse posts",
   articleScrollLabel: "Read article",
-  articleSubtitleSecondary:
-    "Below you can read the full article with practical examples, real project experience and actionable recommendations.",
   searchPlaceholder: "Search posts...",
   clearSearch: "Clear search",
   allCategories: "All",

@@ -25,7 +25,6 @@ interface BlogDetailHeroProps {
   readingTime: string;
   title: string;
   excerpt: string;
-  excerptSecondary: string;
   imageUrl: string;
   imageAlt: string;
   writtenByLabel: string;
@@ -39,7 +38,6 @@ export async function BlogDetailHero({
   readingTime,
   title,
   excerpt,
-  excerptSecondary,
   imageUrl,
   imageAlt,
   writtenByLabel,
@@ -83,7 +81,7 @@ export async function BlogDetailHero({
 
         <div className="mt-8 grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-emerald-300/60">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-emerald-300/60 sm:gap-x-8">
               <span className="inline-flex items-center rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold text-emerald-300">
                 {category}
               </span>
@@ -94,10 +92,6 @@ export async function BlogDetailHero({
                 />
                 {date}
               </span>
-              <span
-                aria-hidden
-                className="hidden size-1 rounded-full bg-emerald-700/50 sm:block"
-              />
               <span className="flex items-center gap-1.5">
                 <LuClock className="size-3.5 text-emerald-400/70" aria-hidden />
                 {readingTime}
@@ -115,9 +109,6 @@ export async function BlogDetailHero({
 
             <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/72 sm:text-base lg:text-lg">
               {excerpt}
-            </p>
-            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
-              {excerptSecondary}
             </p>
 
             <div className="mt-10 inline-flex min-w-70 max-w-md items-center gap-4 rounded-2xl border border-emerald-900/45 bg-[#0a1612]/75 px-5 py-4 sm:min-w-[20rem] sm:max-w-lg sm:px-6 shadow-[0_12px_40px_rgb(0_0_0/0.25)] backdrop-blur-sm">

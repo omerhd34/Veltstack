@@ -142,7 +142,6 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         readingTime={readingTime}
         title={title}
         excerpt={excerpt}
-        excerptSecondary={t("articleSubtitleSecondary")}
         imageUrl={getBlogDetailImageUrl(post.imageUrl)}
         imageAlt={title}
         writtenByLabel={t("writtenByLabel")}
