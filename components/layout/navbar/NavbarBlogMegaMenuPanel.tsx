@@ -30,7 +30,7 @@ export function NavbarBlogMegaMenuPanel() {
             </>
           }
           intro={tNav("blogMegaMenuIntro")}
-          introLines={5}
+          introLines={7}
         >
           <PrimaryCtaLink
             href="/blog"

@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { LuEye } from "react-icons/lu"
-import { useTranslations } from "next-intl"
-import { SiteContainer } from "@/components/layout/SiteContainer"
-import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink"
-import { ServiceCard } from "@/components/sections/services/ServiceCard"
-import { projectItems } from "@/components/sections/projects/project-items"
-import { useUiStore } from "@/store/uiSlice"
-import { NavbarMegaMenuIntroColumn } from "./NavbarMegaMenuIntroColumn"
+import { LuEye } from "react-icons/lu";
+import { useTranslations } from "next-intl";
+import { SiteContainer } from "@/components/layout/SiteContainer";
+import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
+import { ServiceCard } from "@/components/sections/services/ServiceCard";
+import { projectItems } from "@/components/sections/projects/project-items";
+import { useUiStore } from "@/store/uiSlice";
+import { NavbarMegaMenuIntroColumn } from "./NavbarMegaMenuIntroColumn";
 
 export function NavbarProjectsMegaMenuPanel() {
-  const tHome = useTranslations("home")
-  const tNav = useTranslations("nav")
-  const setProjectsMenuOpen = useUiStore((state) => state.setProjectsMenuOpen)
+  const tHome = useTranslations("home");
+  const tNav = useTranslations("nav");
+  const setProjectsMenuOpen = useUiStore((state) => state.setProjectsMenuOpen);
 
   const cards = projectItems.map((project) => ({
     href: project.href,
     title: tHome(project.titleKey),
     icon: project.icon,
-  }))
+  }));
 
   return (
     <SiteContainer className="py-10">
@@ -27,13 +27,14 @@ export function NavbarProjectsMegaMenuPanel() {
           headline={
             <>
               {tHome("projectsHeadline")}
-              <span className="text-brand-accent">{" "}
+              <span className="text-brand-accent">
+                {" "}
                 {tHome("projectsHeadlineAccent")}
               </span>
             </>
           }
           intro={tNav("projectsMegaMenuIntro")}
-          introLines={5}
+          introLines={7}
         >
           <PrimaryCtaLink
             href="/projeler"
@@ -59,5 +60,5 @@ export function NavbarProjectsMegaMenuPanel() {
         </div>
       </div>
     </SiteContainer>
-  )
+  );
 }

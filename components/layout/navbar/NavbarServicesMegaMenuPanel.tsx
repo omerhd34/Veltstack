@@ -33,7 +33,7 @@ export function NavbarServicesMegaMenuPanel() {
             </>
           }
           intro={tNav("servicesMegaMenuIntro")}
-          introLines={5}
+          introLines={7}
         >
           <PrimaryCtaLink
             href="/iletisim"
