@@ -16,7 +16,7 @@ import { blogPostEntry as nedenTailwindCss } from "./neden-tailwind-css";
 import { blogPostEntry as nedenIxirhost } from "./neden-ixirhost";
 import { blogPostEntry as nodeJsVePrismaIleBackend } from "./node-js-ve-prisma-ile-backend";
 import { blogPostEntry as webdenMobileGecis } from "./webden-mobile-gecis";
-import { blogPostEntry as uiNedir } from "./ui-nedir";
+import { blogPostEntry as uiVeUxNedir } from "./ui-ve-ux-nedir";
 
 export const blogPostEntries: BlogPostEntry[] = [
   gelenekselYazilimYapayZeka,
@@ -26,7 +26,7 @@ export const blogPostEntries: BlogPostEntry[] = [
   vercelDeYayin,
   nedenIxirhost,
   dogruDomainSecimi,
-  uiNedir,
+  uiVeUxNedir,
   webdenMobileGecis,
   nodeJsVePrismaIleBackend,
   nedenTailwindCss,
