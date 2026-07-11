@@ -27,9 +27,7 @@ export function BlogPreviewScrollCarousel({
 }: BlogPreviewScrollCarouselProps) {
   const t = useTranslations("home");
 
-  const postBySlug = Object.fromEntries(
-    posts.map((post) => [post.slug, post]),
-  );
+  const postBySlug = Object.fromEntries(posts.map((post) => [post.slug, post]));
 
   const features: FeatureItem[] = posts.map((post) => ({
     id: post.slug,
@@ -54,7 +52,7 @@ export function BlogPreviewScrollCarousel({
       }}
       containerClassName="pt-0 pb-4 md:pb-6"
       navPlacement="outside"
-      progressStyle="pages"
+      progressStyle="none"
       renderFeature={(feature) => {
         const post = postBySlug[feature.id as string];
         if (!post) return null;
