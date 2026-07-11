@@ -87,10 +87,7 @@ export function TestimonialCarousel({
             )}
             aria-hidden={slideIndex !== index}
           >
-            <TestimonialCard
-              {...testimonial}
-              active={slideIndex === index}
-            />
+            <TestimonialCard {...testimonial} active={slideIndex === index} />
           </div>
         ))}
       </div>
@@ -118,32 +115,25 @@ export function TestimonialCarousel({
             <LuChevronRight className="size-5" aria-hidden />
           </StardustIconButton>
 
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <div className="flex items-center gap-2">
-              {testimonials.map((testimonial, dotIndex) => (
-                <button
-                  key={`dot-${testimonial.clientName}-${dotIndex}`}
-                  type="button"
-                  onClick={() => goTo(dotIndex)}
-                  aria-label={labels.slide.replace(
-                    "{index}",
-                    String(dotIndex + 1),
-                  )}
-                  aria-current={dotIndex === index ? "true" : undefined}
-                  className={cn(
-                    "h-2 rounded-full transition-all duration-500",
-                    dotIndex === index
-                      ? "w-8 bg-brand-accent shadow-[0_0_12px_rgb(58,107,82,0.35)]"
-                      : "w-2 bg-border hover:w-4 hover:bg-brand-accent/45",
-                  )}
-                />
-              ))}
-            </div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground/80">
-              {formatSlideNumber(index + 1)}{" "}
-              <span className="text-brand-accent/50">/</span>{" "}
-              {formatSlideNumber(count)}
-            </p>
+          <div className="mt-10 flex items-center justify-center gap-2">
+            {testimonials.map((testimonial, dotIndex) => (
+              <button
+                key={`dot-${testimonial.clientName}-${dotIndex}`}
+                type="button"
+                onClick={() => goTo(dotIndex)}
+                aria-label={labels.slide.replace(
+                  "{index}",
+                  String(dotIndex + 1),
+                )}
+                aria-current={dotIndex === index ? "true" : undefined}
+                className={cn(
+                  "h-2 rounded-full transition-all duration-500",
+                  dotIndex === index
+                    ? "w-8 bg-brand-accent shadow-[0_0_12px_rgb(58,107,82,0.35)]"
+                    : "w-2 bg-border hover:w-4 hover:bg-brand-accent/45",
+                )}
+              />
+            ))}
           </div>
         </>
       )}
