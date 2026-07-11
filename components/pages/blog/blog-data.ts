@@ -4,16 +4,14 @@ export { blogPosts } from "./posts";
 import type { BlogPost } from "./posts/types";
 import { blogPosts } from "./posts";
 
-const NAV_BLOG_COUNT = 6;
 const FOOTER_BLOG_COUNT = 6;
 
-/** Anasayfa blog önizlemesinde önce gösterilecek yazılar (sıra korunur). */
 const HOME_BLOG_FEATURED_SLUGS = [
   "geleneksel-yazilim-yapay-zeka",
   "ozel-yazilim-cms",
   "domain-hosting",
   "seo",
-  "vercel-de-yayin",
+  "responsive-tasarim",
   "neden-ixirhost",
 ] as const;
 
@@ -78,8 +76,7 @@ export function getFooterBlogPosts(locale: "tr" | "en") {
 }
 
 export function getNavBlogPosts(locale: "tr" | "en") {
-  const slugs = blogPosts.slice(0, NAV_BLOG_COUNT).map((post) => post.slug);
-  return getBlogPostsBySlugs(slugs, locale);
+  return getBlogPostsBySlugs(HOME_BLOG_FEATURED_SLUGS, locale);
 }
 
 export function formatDate(dateString: string, locale: "tr" | "en"): string {
