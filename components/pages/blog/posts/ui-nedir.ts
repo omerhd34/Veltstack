@@ -17,10 +17,6 @@ export const blogPostEntry: BlogPostEntry = {
     "UI nedir, UX'ten farkı nedir ve Veltstack neden shadcn/ui ile Lightswind tercih ediyor, örneklerle anlatıyoruz.",
   excerptShortEn:
     "What UI is, how it differs from UX, and why Veltstack chooses shadcn/ui with Lightswind, with examples.",
-  excerptSecondaryTr:
-    "Aşağıda UI/UX ayrımını, bileşen kütüphanesi seçimini ve Veltstack'teki tasarım yaklaşımını örneklerle gösteriyoruz.",
-  excerptSecondaryEn:
-    "Below we show the UI/UX split, component library choice and our design approach at Veltstack with examples.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/pages/blog/ui-nedir.png",

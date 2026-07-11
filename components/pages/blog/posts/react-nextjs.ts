@@ -12,10 +12,6 @@ export const blogPostEntry: BlogPostEntry = {
     "React ve Next.js'in temellerini ve ikisinin birlikte sunduğu avantajları sade bir dille anlatıyoruz.",
   excerptShortEn:
     "The fundamentals of React and Next.js and the advantages of using them together, in plain language.",
-  excerptSecondaryTr:
-    "Aşağıda React bileşen mantığı, Next.js App Router yapısı ve ikisinin birlikte neden tercih edildiğini sade örneklerle anlatıyoruz.",
-  excerptSecondaryEn:
-    "Below we explain React component logic, Next.js App Router and why we use both together with simple examples.",
   category: "Web Geliştirme",
   categoryEn: "Web Development",
   imageUrl: "/images/pages/blog/react-nextjs.png",
