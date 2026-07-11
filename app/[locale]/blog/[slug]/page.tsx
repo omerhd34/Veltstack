@@ -149,16 +149,14 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       />
 
       <SiteContainer className="py-16 md:py-20">
-        <div className="mx-auto max-w-7xl">
-          <BlogArticleBody html={articleContent} locale={loc} />
+        <BlogArticleBody html={articleContent} locale={loc} />
 
-          <div className="mt-14 border-t border-border pt-8">
-            <p className="text-sm text-muted-foreground">
-              {loc === "tr"
-                ? "Bu içeriği faydalı buldunuz mu? Çevrenizle paylaşın."
-                : "Did you find this useful? Share it with your network."}
-            </p>
-          </div>
+        <div className="mt-14 border-t border-border pt-8">
+          <p className="text-sm text-muted-foreground">
+            {loc === "tr"
+              ? "Bu içeriği faydalı buldunuz mu? Çevrenizle paylaşın."
+              : "Did you find this useful? Share it with your network."}
+          </p>
         </div>
       </SiteContainer>
 
