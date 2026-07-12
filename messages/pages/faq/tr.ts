@@ -3,6 +3,8 @@ export const faqTr = {
   title: "Sıkça Sorulan Sorular",
   subtitle:
     "Veltstack hizmetleri, süreçler ve iş birliği modeli hakkında en çok merak edilen soruların yanıtlarını burada bulabilirsiniz.",
+  imageAlt:
+    "Sıkça sorulan soruları simgeleyen soyut dijital yapı illüstrasyonu",
   contactHint: "Aradığınız yanıtı bulamadınız mı?",
   contactLink: "İletişim sayfamızdan bize yazın",
   categories: [
