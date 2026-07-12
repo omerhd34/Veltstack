@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/sections/hero";
 import { ServicesSection } from "@/components/sections/services";
 import { ServicesMarqueeSection } from "@/components/sections/services-marquee";
 import { WhoWeAreSection } from "@/components/sections/who-we-are";
-import { WhyMeSection } from "@/components/sections/why-me";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { BlogPreviewSection } from "@/components/sections/blog-preview";
 import { ApproachSection } from "@/components/sections/approach";
@@ -25,7 +24,6 @@ export default async function HomePage({ params }: HomePageProps) {
       <ServicesMarqueeSection />
       <WhoWeAreSection />
       <ServicesSection />
-      <WhyMeSection />
       <ApproachSection />
       <TestimonialsSection />
       <BlogPreviewSection />
