@@ -1,4 +1,5 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { TestimonialSlider } from "./TestimonialSlider";
 import { TestimonialsIntro } from "./TestimonialsIntro";
 
@@ -36,8 +37,12 @@ export async function TestimonialsSection({
       />
 
       <SiteContainer className="relative">
-        <TestimonialsIntro />
-        <TestimonialSlider className="mx-auto mt-14 max-w-4xl px-10 md:mt-16 md:px-14" />
+        <SectionScrollReveal direction="left">
+          <TestimonialsIntro />
+        </SectionScrollReveal>
+        <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
+          <TestimonialSlider className="mx-auto mt-14 max-w-4xl px-10 md:mt-16 md:px-14" />
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );

@@ -1,4 +1,5 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { ServicesSlider } from "./ServicesSlider";
 import { ServicesIntro } from "./ServicesIntro";
 
@@ -32,7 +33,9 @@ export function ServicesSection({ className }: ServicesSectionProps) {
         <ServicesIntro />
       </SiteContainer>
       <div className="mx-auto -mt-2 w-full max-w-350 px-4 md:-mt-6">
-        <ServicesSlider />
+        <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
+          <ServicesSlider />
+        </SectionScrollReveal>
       </div>
       <div
         aria-hidden

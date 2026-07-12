@@ -2,6 +2,7 @@ import { LuCircleCheck, LuCompass, LuMessageCircle } from "react-icons/lu";
 import { getLocale, getTranslations } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 
 interface ServicesIntroProps {
   className?: string;
@@ -39,7 +40,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
       <SectionBadge variant="emerald-soft">{t("servicesTitle")}</SectionBadge>
 
       <div className="relative mt-8 grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-16">
-        <div className="flex flex-col">
+        <SectionScrollReveal direction="left" className="flex flex-col">
           <h2
             id="services-section-title"
             className="font-(family-name:--font-heading) text-4xl font-bold leading-[1.04] tracking-tight text-white md:text-5xl lg:text-[3.25rem]"
@@ -52,9 +53,9 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
           </h2>
 
           <div className="relative z-10 mt-8 hidden lg:block">{cta}</div>
-        </div>
+        </SectionScrollReveal>
 
-        <div className="flex flex-col gap-6">
+        <SectionScrollReveal direction="right" delay={0.14} className="flex flex-col gap-6">
           <p className="text-[0.9375rem] leading-[1.9] text-white/55">
             {t("servicesIntro")}
           </p>
@@ -76,7 +77,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
           </ul>
 
           <div className="relative z-10 mt-2 lg:hidden">{cta}</div>
-        </div>
+        </SectionScrollReveal>
       </div>
     </div>
   );

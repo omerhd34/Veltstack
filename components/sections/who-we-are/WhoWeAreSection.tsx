@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { WhoWeAreAuroraLayer } from "./WhoWeAreAuroraLayer";
 import { WhoWeAreLeftColumn } from "./WhoWeAreLeftColumn";
 import { WhoWeAreQuoteCard } from "./WhoWeAreQuoteCard";
@@ -33,21 +34,27 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
       />
       <SiteContainer className="relative z-10 w-full">
         <div className="grid items-stretch gap-16 lg:grid-cols-2 lg:gap-20">
-          <WhoWeAreLeftColumn
-            badge={t("whoWeAreTitle")}
-            headline={t("whoWeAreHeadline")}
-            headlineAccent={t("whoWeAreHeadlineAccent")}
-            stats={stats}
-          />
+          <SectionScrollReveal direction="left">
+            <WhoWeAreLeftColumn
+              badge={t("whoWeAreTitle")}
+              headline={t("whoWeAreHeadline")}
+              headlineAccent={t("whoWeAreHeadlineAccent")}
+              stats={stats}
+            />
+          </SectionScrollReveal>
 
-          <div className="flex h-full min-w-0 self-stretch">
+          <SectionScrollReveal
+            direction="right"
+            delay={0.14}
+            className="flex h-full min-w-0 self-stretch"
+          >
             <WhoWeAreQuoteCard
               description={t("whoWeAreDescription")}
               name={t("whoWeAreSignatureName")}
               role={t("whoWeAreSignatureRole")}
               cta={t("whoWeAreCta")}
             />
-          </div>
+          </SectionScrollReveal>
         </div>
       </SiteContainer>
     </section>
