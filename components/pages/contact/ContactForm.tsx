@@ -1,4 +1,5 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { WorkflowSection } from "@/components/sections/workflow";
 import { ContactFormFields } from "./ContactFormFields";
 import {
@@ -93,51 +94,70 @@ export function ContactForm({
       <SiteContainer>
         <div className="flex flex-col gap-12 lg:hidden">
           <section>
-            <ContactSectionHeader
-              badge={formBadge}
-              title={formTitle}
-              description={formDescription}
-              titleAs="h1"
-              titleId="contact-form-title"
-            />
-            <div className="mt-10">{formCard}</div>
-          </section>
-
-          <ContactInfo
-            badge={infoBadge}
-            title={infoTitle}
-            items={contactItems}
-            showHeader={false}
-          />
-        </div>
-
-        <div className="hidden lg:grid lg:grid-cols-[1fr_380px] lg:grid-rows-[auto_1fr] lg:items-stretch lg:gap-x-16 lg:gap-y-10 xl:gap-x-20">
-          <div>
-            <ContactSectionBadge badge={formBadge} />
-            <div className="mt-5">
-              <ContactSectionTitle
+            <SectionScrollReveal direction="up">
+              <ContactSectionHeader
+                badge={formBadge}
                 title={formTitle}
+                description={formDescription}
                 titleAs="h1"
                 titleId="contact-form-title"
               />
-              <ContactSectionDescription description={formDescription} />
-            </div>
-          </div>
-          <div aria-hidden />
-          <div className="h-full">{formCard}</div>
-          <ContactInfo
-            badge={infoBadge}
-            title={infoTitle}
-            items={contactItems}
-            showHeader={false}
-            stretchItems
-            className="h-full"
-          />
+            </SectionScrollReveal>
+            <SectionScrollReveal direction="left" delay={0.14} trigger="entry">
+              <div className="mt-10">{formCard}</div>
+            </SectionScrollReveal>
+          </section>
+
+          <SectionScrollReveal direction="right" trigger="entry">
+            <ContactInfo
+              badge={infoBadge}
+              title={infoTitle}
+              items={contactItems}
+              showHeader={false}
+            />
+          </SectionScrollReveal>
         </div>
 
-        <div className="mt-16 rounded-3xl border border-border/60 bg-card p-8 shadow-[0_2px_16px_rgb(0_0_0/0.04)] md:mt-20 md:p-12">
-          <WorkflowSection contentOnly />
+        <div className="hidden lg:grid lg:grid-cols-[1fr_380px] lg:grid-rows-[auto_1fr] lg:items-stretch lg:gap-x-16 lg:gap-y-10 xl:gap-x-20">
+          <SectionScrollReveal direction="left">
+            <div>
+              <ContactSectionBadge badge={formBadge} />
+              <div className="mt-5">
+                <ContactSectionTitle
+                  title={formTitle}
+                  titleAs="h1"
+                  titleId="contact-form-title"
+                />
+                <ContactSectionDescription description={formDescription} />
+              </div>
+            </div>
+          </SectionScrollReveal>
+          <div aria-hidden />
+          <SectionScrollReveal direction="left" delay={0.14} className="h-full">
+            <div className="h-full">{formCard}</div>
+          </SectionScrollReveal>
+          <SectionScrollReveal
+            direction="right"
+            delay={0.14}
+            trigger="entry"
+            className="h-full"
+          >
+            <ContactInfo
+              badge={infoBadge}
+              title={infoTitle}
+              items={contactItems}
+              showHeader={false}
+              stretchItems
+              className="h-full"
+            />
+          </SectionScrollReveal>
         </div>
+
+        <SectionScrollReveal direction="up" trigger="entry">
+          <div className="mt-16 rounded-3xl border border-border/60 bg-card p-8 shadow-[0_2px_16px_rgb(0_0_0/0.04)] md:mt-20 md:p-12">
+            <WorkflowSection contentOnly />
+          </div>
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );
