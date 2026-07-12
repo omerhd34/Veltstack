@@ -64,8 +64,8 @@ lib/                   # Yardımcı modüller (prisma, utils, axios)
 | `/hizmetlerimiz/[slug]` | Hizmet detayı |
 | `/projelerimiz` | Proje listesi |
 | `/projelerimiz/[slug]` | Proje detayı |
-| `/blog` | Blog listesi |
-| `/blog/[slug]` | Blog yazısı |
+| `/makaleler` | Makaleler listesi |
+| `/makaleler/[slug]` | Blog yazısı |
 | `/hakkimizda` | Hakkımızda |
 | `/iletisim` | İletişim |
 
@@ -78,7 +78,7 @@ Varsayılan dil `tr` olduğundan Türkçe rotalar prefix'siz çalışır (`local
 | `/admin/login` | Giriş |
 | `/admin` | Dashboard |
 | `/admin/projelerimiz` | Proje yönetimi |
-| `/admin/blog` | Blog yönetimi |
+| `/admin/makaleler` | Makale yönetimi |
 | `/admin/mesajlar` | Gelen mesajlar |
 | `/admin/ayarlar` | Site ayarları |
 

@@ -7,7 +7,7 @@ const staticPages = [
   "/",
   "/hizmetlerimiz",
   "/projelerimiz",
-  "/blog",
+  "/makaleler",
   "/hakkimizda",
   "/iletisim",
   "/sss",
@@ -62,7 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const postEntries = posts.flatMap(
       (post: { slug: string; updatedAt: Date }) =>
         routing.locales.map((locale) => ({
-          url: localizedUrl(locale, `/blog/${post.slug}`),
+          url: localizedUrl(locale, `/makaleler/${post.slug}`),
           lastModified: post.updatedAt,
           changeFrequency: "weekly" as const,
           priority: 0.8,
