@@ -15,7 +15,7 @@ export const footerTr = {
     about: "Hakkımızda",
     projects: "Projelerimiz",
     faq: "Sıkça Sorulan Sorular",
-    blog: "Blog Yazılarımız",
+    blog: "Makaleler",
     contact: "İletişim",
   },
   legalLabels: {
