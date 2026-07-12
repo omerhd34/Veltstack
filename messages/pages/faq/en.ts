@@ -3,6 +3,8 @@ export const faqEn = {
   title: "Frequently Asked Questions",
   subtitle:
     "Find answers to the most common questions about Veltstack services, our process and how we work together.",
+  imageAlt:
+    "Abstract digital structure illustration representing frequently asked questions",
   contactHint: "Can't find what you're looking for?",
   contactLink: "Contact us",
   categories: [
