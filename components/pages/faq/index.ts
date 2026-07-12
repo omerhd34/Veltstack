@@ -1,0 +1,1 @@
+export { FaqPageView } from "./FaqPageView";

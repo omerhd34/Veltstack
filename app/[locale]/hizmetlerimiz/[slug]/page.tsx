@@ -2,34 +2,35 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import {
-  ProjectDetailView,
-  getProjectStaticSlugs,
-  validateProjectSlug,
-} from "@/components/pages/project-detail/ProjectDetailView";
-import { BreadcrumbSchema } from "@/components/seo";
+  ServiceDetailView,
+  getServiceStaticSlugs,
+  isServiceSlug,
+} from "@/components/pages/service-detail";
+import { BreadcrumbSchema, ServiceSchema } from "@/components/seo";
 import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
-interface ProjectDetailPageProps {
+
+interface ServiceDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
 export const revalidate = 86400;
 
 export function generateStaticParams() {
-  return getProjectStaticSlugs().map((slug) => ({ slug }));
+  return getServiceStaticSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
-}: ProjectDetailPageProps): Promise<Metadata> {
+}: ServiceDetailPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
 
-  if (!validateProjectSlug(slug)) return {};
+  if (!isServiceSlug(slug)) return {};
 
-  const t = await getTranslations({ locale, namespace: "projectDetails" });
+  const t = await getTranslations({ locale, namespace: "serviceDetails" });
   const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: `/projeler/${slug}`,
+    href: `/hizmetlerimiz/${slug}`,
   })}`;
 
   return {
@@ -45,22 +46,22 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProjectDetailPage({
+export default async function ServiceDetailPage({
   params,
-}: ProjectDetailPageProps) {
+}: ServiceDetailPageProps) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
-  if (!validateProjectSlug(slug)) notFound();
+  if (!isServiceSlug(slug)) notFound();
 
-  const t = await getTranslations("projectDetails");
-  const projectUrl = `https://www.veltstack.com${getPathname({
+  const t = await getTranslations("serviceDetails");
+  const serviceUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: `/projeler/${slug}`,
+    href: `/hizmetlerimiz/${slug}`,
   })}`;
-  const projectsUrl = `https://www.veltstack.com${getPathname({
+  const servicesUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: "/projeler",
+    href: "/hizmetlerimiz",
   })}`;
 
   return (
@@ -68,11 +69,16 @@ export default async function ProjectDetailPage({
       <BreadcrumbSchema
         items={[
           { name: t("breadcrumbHome"), url: "https://www.veltstack.com" },
-          { name: t("breadcrumbProjects"), url: projectsUrl },
-          { name: t(`${slug}.heroTitle`), url: projectUrl },
+          { name: t("breadcrumbServices"), url: servicesUrl },
+          { name: t(`${slug}.heroTitle`), url: serviceUrl },
         ]}
       />
-      <ProjectDetailView slug={slug} />
+      <ServiceSchema
+        name={t(`${slug}.heroTitle`)}
+        description={t(`${slug}.heroSubtitle`)}
+        url={serviceUrl}
+      />
+      <ServiceDetailView slug={slug} />
     </>
   );
 }
