@@ -85,7 +85,7 @@ export async function CTASection({ className }: CTASectionProps) {
                 {t("ctaButton")}
               </PrimaryCtaLink>
               <PrimaryCtaLink
-                href="/projeler"
+                href="/projelerimiz"
                 variant="glass"
                 showArrow={false}
                 leadingIcon={<LuEye className="size-5" aria-hidden />}

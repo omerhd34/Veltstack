@@ -33,7 +33,7 @@ export interface ProjectItemConfig {
 export const projectItems: ProjectItemConfig[] = [
   {
     slug: "iqfinansai",
-    href: "/projeler/iqfinansai",
+    href: "/projelerimiz/iqfinansai",
     titleKey: "projectIqfinansTitle",
     descKey: "projectIqfinansDesc",
     navDescKey: "projectIqfinansDesc",
@@ -42,7 +42,7 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "yazici-ticaret",
-    href: "/projeler/yazici-ticaret",
+    href: "/projelerimiz/yazici-ticaret",
     titleKey: "projectYaziciTitle",
     descKey: "projectYaziciDesc",
     navDescKey: "projectYaziciDesc",
@@ -51,7 +51,7 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "fablessi",
-    href: "/projeler/fablessi",
+    href: "/projelerimiz/fablessi",
     titleKey: "projectFablessiTitle",
     descKey: "projectFablessiDesc",
     navDescKey: "projectFablessiDesc",
@@ -60,7 +60,7 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "uzman-klinik-psikolog",
-    href: "/projeler/uzman-klinik-psikolog",
+    href: "/projelerimiz/uzman-klinik-psikolog",
     titleKey: "projectUzmanPsikologTitle",
     descKey: "projectUzmanPsikologDesc",
     navDescKey: "projectUzmanPsikologDesc",
@@ -69,7 +69,7 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "portfolio",
-    href: "/projeler/portfolio",
+    href: "/projelerimiz/portfolio",
     titleKey: "projectPortfolioTitle",
     descKey: "projectPortfolioDesc",
     navDescKey: "projectPortfolioDesc",
@@ -78,7 +78,7 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "onlinemuhasebe",
-    href: "/projeler/onlinemuhasebe",
+    href: "/projelerimiz/onlinemuhasebe",
     titleKey: "projectOnlinemuhasebeTitle",
     descKey: "projectOnlinemuhasebeDesc",
     navDescKey: "projectOnlinemuhasebeDesc",

@@ -24,7 +24,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
         {t("servicesCta")}
       </PrimaryCtaLink>
       <PrimaryCtaLink
-        href="/hizmetler"
+        href="/hizmetlerimiz"
         variant="glass"
         showArrow={false}
         leadingIcon={<LuCompass className="size-5" aria-hidden />}
