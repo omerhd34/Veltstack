@@ -2,6 +2,7 @@ import { LuMessageCircle } from "react-icons/lu";
 import { getLocale } from "next-intl/server";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { CTAHighlights } from "@/components/sections/cta/CTAHighlights";
 import { toLatinUppercase } from "@/lib/utils";
@@ -57,7 +58,8 @@ export async function ServicesPageCTA({
       />
 
       <SiteContainer className="relative">
-        <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-[#0A0A0F] px-6 py-14 shadow-[0_24px_80px_rgb(58_107_82/0.12)] md:px-14 md:py-20">
+        <SectionScrollReveal direction="left">
+          <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-[#0A0A0F] px-6 py-14 shadow-[0_24px_80px_rgb(58_107_82/0.12)] md:px-14 md:py-20">
           <div
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 size-[480px] -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
@@ -113,8 +115,9 @@ export async function ServicesPageCTA({
                 {buttonLabel}
               </PrimaryCtaLink>
             </div>
+            </div>
           </div>
-        </div>
+        </SectionScrollReveal>
       </SiteContainer>
 
       <div
