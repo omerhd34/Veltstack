@@ -1,41 +1,42 @@
 export const blogPageEn = {
-  heroBadge: "Blog",
+  heroBadge: "Articles",
   heroTitle: "Insights from the digital world",
   heroSubtitle:
     "We publish practical content on web development, mobile apps, SEO and digital transformation. We share lessons from real projects and field-tested methods in plain language.",
   heroSubtitleSecondary:
     "Filter by category or search to quickly find what you need.",
-  heroImageAlt: "Abstract network illustration symbolizing knowledge flow and digital insights",
+  heroImageAlt:
+    "Abstract network illustration symbolizing knowledge flow and digital insights",
   heroStats: {
     posts: {
-      label: "Published Posts",
-      hint: "Total number of articles on the blog. We regularly add new content on web, mobile, SEO and digital transformation.",
+      label: "Published Articles",
+      hint: "Total articles in this section. We regularly add new content on web, mobile, SEO and digital transformation.",
+    },
+    featured: {
+      label: "Featured Articles",
+      hint: "Editor-selected featured content we believe provides the most value.",
     },
     categories: {
-      label: "Content Categories",
+      label: "Content Category",
       hint: "We group articles under topics like web development, mobile, SEO, e-commerce and tools.",
     },
     reading: {
       label: "Total Reading (minutes)",
       hint: "Estimated total reading time across all articles. You can also see each article's reading time at the top.",
     },
-    featured: {
-      label: "Featured Posts",
-      hint: "Hand-picked, high-value articles we consider worth highlighting.",
-    },
   },
-  scrollLabel: "Browse posts",
+  scrollLabel: "Browse articles",
   articleScrollLabel: "Read article",
-  searchPlaceholder: "Search posts...",
+  searchPlaceholder: "Search articles...",
   clearSearch: "Clear search",
   allCategories: "All",
   readMore: "Read more",
   readingTime: "{minutes} min read",
   writtenByLabel: "Written by",
-  noResults: "No posts found matching your search.",
+  noResults: "No articles found matching your search criteria.",
   noResultsSub: "Try a different keyword or category.",
   featuredBadge: "Featured",
-  latestBadge: "Latest Posts",
+  latestBadge: "Latest Articles",
   categories: [
     "All",
     "Web Development",
@@ -44,8 +45,4 @@ export const blogPageEn = {
     "E-Commerce",
     "Tools & Tips",
   ],
-  ctaTitle: "Let's bring your project to life together",
-  ctaSubtitle:
-    "In a free consultation we'll discuss your needs and define scope, timeline and tech stack together, and get back to you within 24 hours.",
-  ctaButton: "Get in Touch",
 } as const;
