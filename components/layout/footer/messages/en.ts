@@ -15,7 +15,7 @@ export const footerEn = {
     about: "About Us",
     projects: "Our Projects",
     faq: "Frequently Asked Questions",
-    blog: "Blog Articles",
+    blog: "Articles",
     contact: "Contact",
   },
   legalLabels: {
