@@ -60,10 +60,10 @@ lib/                   # Yardımcı modüller (prisma, utils, axios)
 | Rota | Sayfa |
 |------|-------|
 | `/` | Ana sayfa |
-| `/hizmetler` | Hizmet listesi |
-| `/hizmetler/[slug]` | Hizmet detayı |
-| `/projeler` | Proje listesi |
-| `/projeler/[slug]` | Proje detayı |
+| `/hizmetlerimiz` | Hizmet listesi |
+| `/hizmetlerimiz/[slug]` | Hizmet detayı |
+| `/projelerimiz` | Proje listesi |
+| `/projelerimiz/[slug]` | Proje detayı |
 | `/blog` | Blog listesi |
 | `/blog/[slug]` | Blog yazısı |
 | `/hakkimizda` | Hakkımızda |
@@ -77,7 +77,7 @@ Varsayılan dil `tr` olduğundan Türkçe rotalar prefix'siz çalışır (`local
 |------|-------|
 | `/admin/login` | Giriş |
 | `/admin` | Dashboard |
-| `/admin/projeler` | Proje yönetimi |
+| `/admin/projelerimiz` | Proje yönetimi |
 | `/admin/blog` | Blog yönetimi |
 | `/admin/mesajlar` | Gelen mesajlar |
 | `/admin/ayarlar` | Site ayarları |

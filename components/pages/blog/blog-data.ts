@@ -4,8 +4,6 @@ export { blogPosts } from "./posts";
 import type { BlogPost } from "./posts/types";
 import { blogPosts } from "./posts";
 
-const FOOTER_BLOG_COUNT = 6;
-
 const HOME_BLOG_FEATURED_SLUGS = [
   "geleneksel-yazilim-yapay-zeka",
   "ozel-yazilim-cms",
@@ -65,8 +63,7 @@ function getBlogPostsBySlugs(slugs: readonly string[], locale: "tr" | "en") {
 }
 
 export function getFooterBlogPosts(locale: "tr" | "en") {
-  const slugs = blogPosts.slice(0, FOOTER_BLOG_COUNT).map((post) => post.slug);
-  return getBlogPostsBySlugs(slugs, locale).map(
+  return getBlogPostsBySlugs(HOME_BLOG_FEATURED_SLUGS, locale).map(
     ({ slug, title, category }) => ({
       slug,
       title,
