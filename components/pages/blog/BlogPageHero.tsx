@@ -4,6 +4,7 @@ import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
 import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
 import { toLatinUppercase } from "@/lib/utils";
 
@@ -49,35 +50,53 @@ export async function BlogPageHero({
 
       <SiteContainer className="relative flex min-h-[calc(100svh-4.5rem)] flex-col py-8 sm:py-10">
         <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
-          <div className="min-w-0 max-w-2xl">
-            <SectionBadge variant="emerald-muted">
-              {toLatinUppercase(badge, locale)}
-            </SectionBadge>
+          <SectionScrollReveal
+            direction="left"
+            when="mount"
+            className="min-w-0 max-w-2xl"
+          >
+            <div className="min-w-0 max-w-2xl">
+              <SectionBadge variant="emerald-muted">
+                {toLatinUppercase(badge, locale)}
+              </SectionBadge>
 
-            <div
-              aria-hidden
-              className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
+              <div
+                aria-hidden
+                className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
+              />
+
+              <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
+                {title}
+              </h1>
+
+              <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/70 sm:text-base lg:text-lg">
+                {subtitle}
+              </p>
+              <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
+                {subtitleSecondary}
+              </p>
+            </div>
+          </SectionScrollReveal>
+
+          <SectionScrollReveal
+            direction="right"
+            when="mount"
+            delay={0.14}
+            className="min-w-0"
+          >
+            <ServicesPageHeroImage
+              src="/images/pages/blog/hero.png"
+              alt={imageAlt}
             />
-
-            <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
-              {title}
-            </h1>
-
-            <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/70 sm:text-base lg:text-lg">
-              {subtitle}
-            </p>
-            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
-              {subtitleSecondary}
-            </p>
-          </div>
-
-          <ServicesPageHeroImage
-            src="/images/pages/blog/hero.png"
-            alt={imageAlt}
-          />
+          </SectionScrollReveal>
         </div>
 
-        <div className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8">
+        <SectionScrollReveal
+          direction="up"
+          when="mount"
+          delay={0.28}
+          className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8"
+        >
           <HeroStatsCards stats={stats} />
 
           <a
@@ -89,7 +108,7 @@ export async function BlogPageHero({
             </span>
             <LuChevronDown className="size-4 animate-bounce" aria-hidden />
           </a>
-        </div>
+        </SectionScrollReveal>
       </SiteContainer>
       <PageScrollAnchor id="blog-grid" />
 

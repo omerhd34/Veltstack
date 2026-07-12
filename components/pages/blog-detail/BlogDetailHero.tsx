@@ -1,4 +1,4 @@
-import { getLocale } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import {
   LuArrowLeft,
@@ -11,6 +11,7 @@ import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
 import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { cn, toLatinUppercase } from "@/lib/utils";
 
 const AUTHOR = {
@@ -45,6 +46,7 @@ export async function BlogDetailHero({
   className,
 }: BlogDetailHeroProps) {
   const locale = (await getLocale()) as "tr" | "en";
+  const t = await getTranslations("nav");
 
   return (
     <section
@@ -76,65 +78,72 @@ export async function BlogDetailHero({
           className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-800/50 bg-emerald-950/40 px-4 py-2 text-sm text-emerald-300/80 transition-colors hover:border-emerald-700/60 hover:bg-emerald-900/50 hover:text-emerald-200"
         >
           <LuArrowLeft className="size-4" aria-hidden />
-          Blog
+          {t("blog")}
         </Link>
 
         <div className="mt-8 grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-emerald-300/60 sm:gap-x-8">
-              <span className="inline-flex items-center rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold text-emerald-300">
-                {category}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <LuCalendar
-                  className="size-3.5 text-emerald-400/70"
-                  aria-hidden
-                />
-                {date}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <LuClock className="size-3.5 text-emerald-400/70" aria-hidden />
-                {readingTime}
-              </span>
-            </div>
-
-            <div
-              aria-hidden
-              className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
-            />
-
-            <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
-              {title}
-            </h1>
-
-            <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/72 sm:text-base lg:text-lg">
-              {excerpt}
-            </p>
-
-            <div className="mt-10 inline-flex min-w-70 max-w-md items-center gap-4 rounded-2xl border border-emerald-900/45 bg-[#0a1612]/75 px-5 py-4 sm:min-w-[20rem] sm:max-w-lg sm:px-6 shadow-[0_12px_40px_rgb(0_0_0/0.25)] backdrop-blur-sm">
-              <div className="relative size-12 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-accent/35 ring-offset-2 ring-offset-[#0a1612]">
-                <Image
-                  src={AUTHOR.avatar}
-                  alt={AUTHOR.name}
-                  fill
-                  sizes="48px"
-                  className="object-cover"
-                />
+          <SectionScrollReveal direction="left" className="min-w-0">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-emerald-300/60 sm:gap-x-8">
+                <span className="inline-flex items-center rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold text-emerald-300">
+                  {category}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <LuCalendar
+                    className="size-3.5 text-emerald-400/70"
+                    aria-hidden
+                  />
+                  {date}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <LuClock
+                    className="size-3.5 text-emerald-400/70"
+                    aria-hidden
+                  />
+                  {readingTime}
+                </span>
               </div>
-              <div className="min-w-0">
-                <p className="flex items-center gap-1.5 text-[0.625rem] font-semibold tracking-[0.14em] text-emerald-400/55">
-                  <LuPenLine className="size-3" aria-hidden />
-                  {toLatinUppercase(writtenByLabel, locale)}
-                </p>
-                <p className="mt-0.5 text-base font-semibold text-white">
-                  {AUTHOR.name}
-                </p>
-                <p className="text-sm text-emerald-400/65">{AUTHOR.role}</p>
+
+              <div
+                aria-hidden
+                className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
+              />
+
+              <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
+                {title}
+              </h1>
+
+              <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/72 sm:text-base lg:text-lg">
+                {excerpt}
+              </p>
+
+              <div className="mt-10 inline-flex min-w-70 max-w-md items-center gap-4 rounded-2xl border border-emerald-900/45 bg-[#0a1612]/75 px-5 py-4 sm:min-w-[20rem] sm:max-w-lg sm:px-6 shadow-[0_12px_40px_rgb(0_0_0/0.25)] backdrop-blur-sm">
+                <div className="relative size-12 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-accent/35 ring-offset-2 ring-offset-[#0a1612]">
+                  <Image
+                    src={AUTHOR.avatar}
+                    alt={AUTHOR.name}
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="flex items-center gap-1.5 text-[0.625rem] font-semibold tracking-[0.14em] text-emerald-400/55">
+                    <LuPenLine className="size-3" aria-hidden />
+                    {toLatinUppercase(writtenByLabel, locale)}
+                  </p>
+                  <p className="mt-0.5 text-base font-semibold text-white">
+                    {AUTHOR.name}
+                  </p>
+                  <p className="text-sm text-emerald-400/65">{AUTHOR.role}</p>
+                </div>
               </div>
             </div>
-          </div>
+          </SectionScrollReveal>
 
-          <ServicesPageHeroImage src={imageUrl} alt={imageAlt} />
+          <SectionScrollReveal direction="right" delay={0.14} className="min-w-0">
+            <ServicesPageHeroImage src={imageUrl} alt={imageAlt} />
+          </SectionScrollReveal>
         </div>
 
         <div className="mt-auto shrink-0 pt-6 sm:pt-8">
