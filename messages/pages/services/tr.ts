@@ -1,7 +1,7 @@
 import { servicesPackagesTr } from "./packages-tr";
 
 export const servicesPageTr = {
-  heroBadge: "Dijital Hizmetler",
+  heroBadge: "Dijital Hizmetlerimiz",
   heroTitle: "Net paketler, net kapsam",
   heroSubtitle:
     "Her proje tipi üç kademede sunulur: Girişim, Profesyonel ve Premium. Kapsam, teslim süresi ve revizyon sayısı baştan netleştirilir, büyük projeler sınırsız ölçeklenebilir.",

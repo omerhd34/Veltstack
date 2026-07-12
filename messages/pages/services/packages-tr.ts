@@ -7,8 +7,8 @@ import { webPackagesTr } from "./packages/tr/web";
 
 export const servicesPackagesTr = {
   packagesBadge: "Paketler",
-  packagesTitle: "Hizmetler & Paketler",
-  packagesTitleLead: "Hizmetler &",
+  packagesTitle: "Hizmetlerimiz & Paketler",
+  packagesTitleLead: "Hizmetlerimiz &",
   packagesTitleAccent: "Paketler",
   packagesTitleSuffix: "Paketleri",
   packagesSubtitle:
