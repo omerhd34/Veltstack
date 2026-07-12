@@ -22,6 +22,8 @@ import { aboutTr } from "@/messages/pages/hakkimizda/tr";
 import { blogPageTr } from "@/messages/pages/blog/tr";
 import { workflowTr } from "@/components/sections/workflow/messages/tr";
 import { approachTr } from "@/components/sections/approach/messages/tr";
+import { legalTr } from "@/messages/pages/legal/tr";
+import { faqTr } from "@/messages/pages/faq/tr";
 
 const messages = {
   nav: navTr,
@@ -52,6 +54,8 @@ const messages = {
   blogPage: blogPageTr,
   workflow: workflowTr,
   approach: approachTr,
+  legal: legalTr,
+  faqPage: faqTr,
 } as const;
 
 export default messages;
