@@ -14,7 +14,7 @@ export const projectDetailsTr = {
   challengeTitle: "İş Problemi",
   solutionTitle: "Çözüm",
   metricsTitle: "Proje Metrikleri",
-  relatedServicesTitle: "İlgili Hizmetler",
+  relatedServicesTitle: "İlgili Hizmetlerimiz",
   relatedServicesSubtitle:
     "Bu projede kullandığım ve benzer ihtiyaçlara yönelik hizmet alanları.",
   ctaTitle: "Benzer bir proje mi planlıyorsunuz?",
@@ -22,14 +22,13 @@ export const projectDetailsTr = {
     "Finans, e-ticaret veya kurumsal platform ihtiyaçlarınızı ücretsiz ön görüşmede birlikte değerlendirelim ve 24 saat içinde size dönüş yapalım.",
   ctaButton: "Teklif Al",
   breadcrumbHome: "Ana Sayfa",
-  breadcrumbProjects: "Projeler",
+  breadcrumbProjects: "Projelerimiz",
   metricHints: {
     developmentTime:
       "Keşiften canlıya alıma kadar geçen toplam geliştirme süresi. Kapsam, entegrasyon ve onay döngülerine göre değişebilir.",
     siteType:
       "Projenin mimari yapısı ve iş modeli. SaaS, e-ticaret, kurumsal site veya portfolyo gibi kategorilerde sınıflandırılır.",
-    sector:
-      "Projenin hizmet verdiği sektör ve hedef kullanıcı kitlesi.",
+    sector: "Projenin hizmet verdiği sektör ve hedef kullanıcı kitlesi.",
     languageSupport:
       "Platformda sunulan arayüz dilleri. Çok dilli yapıda locale bazlı içerik ve yönlendirme desteklenir.",
   },

@@ -1,7 +1,7 @@
 export const pagesTr = {
-  servicesTitle: "Hizmetler",
+  servicesTitle: "Hizmetlerimiz",
   servicesSubtitle: "Web, mobil ve SEO'da uçtan uca dijital çözümler.",
-  projectsTitle: "Projeler",
+  projectsTitle: "Projelerimiz",
   projectsSubtitle: "Dört seçilmiş proje ve detaylı proje incelemeleri.",
   blogTitle: "Blog",
   blogSubtitle: "Blog yazıları yakında burada listelenecek.",
