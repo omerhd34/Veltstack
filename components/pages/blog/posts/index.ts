@@ -3,6 +3,7 @@ import type { BlogPost, BlogPostEntry } from "./types";
 import { blogPostEntry as gelenekselYazilimYapayZeka } from "./geleneksel-yazilim-yapay-zeka";
 import { blogPostEntry as ozelYazilimCms } from "./ozel-yazilim-cms";
 import { blogPostEntry as domainHosting } from "./domain-hosting";
+import { blogPostEntry as geo } from "./geo";
 import { blogPostEntry as seo } from "./seo";
 import { blogPostEntry as vercelDeYayin } from "./vercel-de-yayin";
 import { blogPostEntry as dogruDomainSecimi } from "./dogru-domain-secimi";
@@ -19,6 +20,7 @@ import { blogPostEntry as webdenMobileGecis } from "./webden-mobile-gecis";
 import { blogPostEntry as uiVeUxNedir } from "./ui-ve-ux-nedir";
 
 export const blogPostEntries: BlogPostEntry[] = [
+  geo,
   gelenekselYazilimYapayZeka,
   ozelYazilimCms,
   domainHosting,
