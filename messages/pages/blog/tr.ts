@@ -1,15 +1,16 @@
 export const blogPageTr = {
-  heroBadge: "Blog",
+  heroBadge: "Makaleler",
   heroTitle: "Dijital dünyadan içgörüler",
   heroSubtitle:
     "Web geliştirme, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler üretiyoruz. Gerçek projelerden öğrendiklerimizi ve sahada denenmiş yöntemleri sade bir dille paylaşıyoruz.",
   heroSubtitleSecondary:
     "Kategoriye göre filtreleyip arama yaparak aradığınız içeriğe hızlıca ulaşın.",
-  heroImageAlt: "Bilgi akışını ve dijital içgörüleri simgeleyen soyut ağ illüstrasyonu",
+  heroImageAlt:
+    "Bilgi akışını ve dijital içgörüleri simgeleyen soyut ağ illüstrasyonu",
   heroStats: {
     posts: {
       label: "Yayınlanan Yazı",
-      hint: "Blogda yer alan toplam içerik sayısı. Web, mobil, SEO ve dijital dönüşüm üzerine düzenli olarak yeni yazılar ekliyoruz.",
+      hint: "Makaleler bölümünde yer alan toplam içerik sayısı. Web, mobil, SEO ve dijital dönüşüm üzerine düzenli olarak yeni makaleler ekliyoruz.",
     },
     featured: {
       label: "Öne Çıkan Yazı",
