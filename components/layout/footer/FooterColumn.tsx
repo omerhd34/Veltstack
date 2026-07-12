@@ -10,10 +10,12 @@ interface FooterColumnProps {
 export function FooterColumn({ title, className, children }: FooterColumnProps) {
   return (
     <div className={cn("min-w-0", className)}>
-      <h3 className="mb-5 text-sm font-semibold tracking-wide text-background">
-        {title}
-      </h3>
-      {children}
+      <div className="mx-auto w-fit text-left">
+        <h3 className="mb-5 text-base font-semibold tracking-wide text-background sm:text-lg">
+          {title}
+        </h3>
+        {children}
+      </div>
     </div>
   );
 }

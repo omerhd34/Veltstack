@@ -37,7 +37,7 @@ export function NavbarProjectsMegaMenuPanel() {
           introLines={7}
         >
           <PrimaryCtaLink
-            href="/projeler"
+            href="/projelerimiz"
             wrapperClassName="origin-left"
             showArrow={false}
             leadingIcon={<LuEye className="size-5" aria-hidden />}

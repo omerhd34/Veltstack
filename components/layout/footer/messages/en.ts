@@ -1,9 +1,8 @@
 export const footerEn = {
   copyright: "© {year} Veltstack. All rights reserved.",
   servicesTitle: "Services",
-  projectsTitle: "Projects",
-  blogTitle: "Blog",
-  contactTitle: "Contact",
+  corporateTitle: "Company",
+  legalTitle: "Legal",
   serviceLabels: {
     serviceWeb: "Website Development",
     serviceRefresh: "Web & App Redesign",
@@ -12,28 +11,17 @@ export const footerEn = {
     serviceAudit: "Technical Audit",
     serviceMaintenance: "Maintenance & Support",
   },
-  projectLabels: {
-    projectIqfinans: "IQfinansAI | SaaS Platform",
-    projectYazici: "Yazıcı Ticaret | E-Commerce",
-    projectFablessi: "Fablessi | Corporate Catalog",
-    projectUzmanPsikolog: "Clinical Psychologist | Corporate Website",
-    projectPortfolio: "Ömer Halis Demir | Portfolio",
-    projectOnlinemuhasebe: "Online Accounting | Corporate Website",
+  corporateLabels: {
+    about: "About Us",
+    projects: "Our Projects",
+    faq: "Frequently Asked Questions",
+    blog: "Blog Articles",
+    contact: "Contact",
   },
-  contactPhone: "+90 507 849 29 03",
-  contactPhoneHref: "tel:+905078492903",
-  contactEmail: "demirome123@gmail.com",
-  contactEmailHref: "mailto:demirome123@gmail.com",
-  contactExtraLinks: [
-    { label: "WhatsApp", href: "https://wa.me/905078492903" },
-    {
-      label: "Ömer Halis Demir | Portfolio",
-      href: "https://www.omerhalisdemir.com.tr/",
-    },
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
-    },
-    { label: "GitHub", href: "https://github.com/omerhd34" },
-  ],
+  legalLabels: {
+    privacy: "Privacy Policy",
+    terms: "Terms of Use",
+    cookies: "Cookie Policy",
+    kvkk: "GDPR Disclosure",
+  },
 } as const;

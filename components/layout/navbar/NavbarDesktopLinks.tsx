@@ -43,13 +43,13 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
 
   const servicesActive =
     servicesMenuOpen ||
-    pathname === "/hizmetler" ||
-    pathname.startsWith("/hizmetler/");
+    pathname === "/hizmetlerimiz" ||
+    pathname.startsWith("/hizmetlerimiz/");
 
   const projectsActive =
     projectsMenuOpen ||
-    pathname === "/projeler" ||
-    pathname.startsWith("/projeler/");
+    pathname === "/projelerimiz" ||
+    pathname.startsWith("/projelerimiz/");
 
   const blogActive =
     blogMenuOpen || pathname === "/blog" || pathname.startsWith("/blog/");
@@ -72,7 +72,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
         onFocusCapture={openServicesMenu}
       >
         <Link
-          href="/hizmetler"
+          href="/hizmetlerimiz"
           aria-expanded={servicesMenuOpen}
           aria-haspopup="true"
           className={navItemClass(servicesActive)}
@@ -90,7 +90,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
         onFocusCapture={openProjectsMenu}
       >
         <Link
-          href="/projeler"
+          href="/projelerimiz"
           aria-expanded={projectsMenuOpen}
           aria-haspopup="true"
           className={navItemClass(projectsActive)}
@@ -116,6 +116,12 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
           <span className={navItemLabelClass(blogActive)}>{tNav("blog")}</span>
         </Link>
       </div>
+
+      <Link href="/sss" className={navItemClass(isActive("/sss"))}>
+        <span className={navItemLabelClass(isActive("/sss"))}>
+          {tNav("faq")}
+        </span>
+      </Link>
 
       {trailingLinks.map((link) => (
         <Link

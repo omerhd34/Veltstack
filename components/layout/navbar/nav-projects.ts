@@ -1,16 +1,21 @@
-export const navProjectItems = [
-  { href: "/projeler/iqfinansai", navKey: "projectIqfinans" },
-  { href: "/projeler/yazici-ticaret", navKey: "projectYazici" },
-  { href: "/projeler/fablessi", navKey: "projectFablessi" },
-  { href: "/projeler/uzman-klinik-psikolog", navKey: "projectUzmanPsikolog" },
-  {
-    href: "/projeler/portfolio",
-    navKey: "projectPortfolio",
-  },
-  {
-    href: "/projeler/onlinemuhasebe",
-    navKey: "projectOnlinemuhasebe",
-  },
-] as const;
+import { projectItems } from "@/components/sections/projects/project-items";
 
-export type NavProjectKey = (typeof navProjectItems)[number]["navKey"];
+export type NavProjectKey =
+  | "projectIqfinans"
+  | "projectYazici"
+  | "projectFablessi"
+  | "projectUzmanPsikolog"
+  | "projectPortfolio"
+  | "projectOnlinemuhasebe";
+
+export type NavProjectItem = {
+  href: string;
+  navKey: NavProjectKey;
+};
+
+export const navProjectItems: NavProjectItem[] = projectItems.map(
+  (project) => ({
+    href: project.href,
+    navKey: project.navDescKey.replace(/Desc$/, "") as NavProjectKey,
+  }),
+);

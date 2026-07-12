@@ -17,6 +17,7 @@ export function Footer({ className }: FooterProps) {
         <div className="border-t border-background/10">
           <FooterBottomBar />
         </div>
+
       </SiteContainer>
     </footer>
   );

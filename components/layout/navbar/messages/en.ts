@@ -19,6 +19,7 @@ export const navEn = {
   projectsMegaMenuIntro:
     "We build digital products for FinTech, e-commerce and corporate sectors, keeping business goals at the center. Design and development move as one process, with performance and user experience as priorities. We turn cross-sector experience into measurable outcomes.",
   projects: "Projects",
+  faq: "FAQ",
   blog: "Blog",
   blogAll: "All Articles",
   blogMegaMenuIntro:
