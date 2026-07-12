@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { BreadcrumbSchema } from "@/components/seo";
 import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { BlogCard } from "@/components/pages/blog/BlogCard";
@@ -36,7 +37,7 @@ export async function generateMetadata({
   const desc = locale === "tr" ? post.excerptShortTr : post.excerptShortEn;
   const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: `/blog/${slug}`,
+    href: `/makaleler/${slug}`,
   })}`;
 
   return {
@@ -75,8 +76,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const date = formatDate(post.publishedAt, loc);
   const readingTime = t("readingTime", { minutes: post.readingTime });
 
-  const blogUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: "/blog" })}`;
-  const postUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: `/blog/${slug}` })}`;
+  const blogUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: "/makaleler" })}`;
+  const postUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: `/makaleler/${slug}` })}`;
 
   const relatedPosts = blogPosts
     .filter(
@@ -131,7 +132,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
             name: loc === "tr" ? "Ana Sayfa" : "Home",
             url: "https://www.veltstack.com",
           },
-          { name: "Blog", url: blogUrl },
+          { name: t("heroBadge"), url: blogUrl },
           { name: title, url: postUrl },
         ]}
       />
@@ -149,41 +150,51 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
       />
 
       <SiteContainer className="py-16 md:py-20">
-        <BlogArticleBody html={articleContent} locale={loc} />
+        <SectionScrollReveal direction="up" trigger="entry">
+          <BlogArticleBody html={articleContent} locale={loc} />
 
-        <div className="mt-14 border-t border-border pt-8">
-          <p className="text-sm text-muted-foreground">
-            {loc === "tr"
-              ? "Bu içeriği faydalı buldunuz mu? Çevrenizle paylaşın."
-              : "Did you find this useful? Share it with your network."}
-          </p>
-        </div>
+          <div className="mt-14 border-t border-border pt-8">
+            <p className="text-sm text-muted-foreground">
+              {loc === "tr"
+                ? "Bu içeriği faydalı buldunuz mu? Çevrenizle paylaşın."
+                : "Did you find this useful? Share it with your network."}
+            </p>
+          </div>
+        </SectionScrollReveal>
       </SiteContainer>
 
       {relatedPosts.length > 0 && (
         <section className="bg-[#F8F9FA] py-16 md:py-20">
           <SiteContainer>
-            <div className="flex items-center gap-4">
-              <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-brand-accent">
-                {toLatinUppercase(
-                  loc === "tr" ? "İlgili Yazılar" : "Related Posts",
-                  loc,
-                )}
-              </span>
-              <div className="h-px flex-1 bg-border/60" />
-            </div>
+            <SectionScrollReveal direction="left">
+              <div className="flex items-center gap-4">
+                <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-brand-accent">
+                  {toLatinUppercase(
+                    loc === "tr" ? "İlgili Yazılar" : "Related Posts",
+                    loc,
+                  )}
+                </span>
+                <div className="h-px flex-1 bg-border/60" />
+              </div>
+            </SectionScrollReveal>
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {relatedPosts.map((related) => (
-                <BlogCard
+              {relatedPosts.map((related, index) => (
+                <SectionScrollReveal
                   key={related.slug}
-                  post={related}
-                  locale={loc}
-                  layout="vertical"
-                  readMoreLabel={t("readMore")}
-                  readingTimeLabel={t("readingTime", {
-                    minutes: related.readingTime,
-                  })}
-                />
+                  direction="right"
+                  delay={0.14 + index * 0.12}
+                  trigger="entry"
+                >
+                  <BlogCard
+                    post={related}
+                    locale={loc}
+                    layout="vertical"
+                    readMoreLabel={t("readMore")}
+                    readingTimeLabel={t("readingTime", {
+                      minutes: related.readingTime,
+                    })}
+                  />
+                </SectionScrollReveal>
               ))}
             </div>
           </SiteContainer>
