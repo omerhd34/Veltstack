@@ -24,7 +24,8 @@ export function NavbarBlogMegaMenuPanel() {
           headline={
             <>
               {tHome("blogHeadline")}
-              <span className="text-brand-accent">{" "}
+              <span className="text-brand-accent">
+                {" "}
                 {tHome("blogHeadlineAccent")}
               </span>
             </>
@@ -33,7 +34,7 @@ export function NavbarBlogMegaMenuPanel() {
           introLines={7}
         >
           <PrimaryCtaLink
-            href="/blog"
+            href="/makaleler"
             wrapperClassName="origin-left"
             showArrow={false}
             leadingIcon={<LuEye className="size-5" aria-hidden />}
@@ -48,7 +49,7 @@ export function NavbarBlogMegaMenuPanel() {
               <ServiceCard
                 compact
                 stardust
-                href={`/blog/${post.slug}`}
+                href={`/makaleler/${post.slug}`}
                 title={post.title}
                 icon={getFooterBlogCategoryIcon(post.category)}
                 onNavigate={() => setBlogMenuOpen(false)}

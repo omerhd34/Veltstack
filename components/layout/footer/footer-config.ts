@@ -54,7 +54,7 @@ export const footerCorporateItems = [
   { href: "/hakkimizda", labelKey: "about", icon: LuUsers },
   { href: "/projelerimiz", labelKey: "projects", icon: LuFolderKanban },
   { href: "/sss", labelKey: "faq", icon: LuCircleHelp },
-  { href: "/blog", labelKey: "blog", icon: LuNewspaper },
+  { href: "/makaleler", labelKey: "blog", icon: LuNewspaper },
   { href: "/iletisim", labelKey: "contact", icon: LuMail },
 ] as const;
 

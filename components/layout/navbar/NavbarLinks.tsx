@@ -62,7 +62,8 @@ export function NavbarLinks({
   const projectsActive =
     pathname === "/projelerimiz" || pathname.startsWith("/projelerimiz/");
   const faqActive = pathname === "/sss" || pathname.startsWith("/sss/");
-  const blogActive = pathname === "/blog" || pathname.startsWith("/blog/");
+  const blogActive =
+    pathname === "/makaleler" || pathname.startsWith("/makaleler/");
 
   if (!isVertical) {
     return null;
@@ -208,7 +209,7 @@ export function NavbarLinks({
         <li>
           <div className="flex items-center gap-1">
             <Link
-              href="/blog"
+              href="/makaleler"
               onClick={onNavigate}
               className={cn(navItemClass(blogActive, "mobile"), "flex-1")}
             >
@@ -233,9 +234,12 @@ export function NavbarLinks({
             <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
               <li>
                 <Link
-                  href="/blog"
+                  href="/makaleler"
                   onClick={onNavigate}
-                  className={navItemClass(isActive("/blog"), "mobile-nested")}
+                  className={navItemClass(
+                    isActive("/makaleler"),
+                    "mobile-nested",
+                  )}
                 >
                   {tNav("blogAll")}
                 </Link>
@@ -243,10 +247,10 @@ export function NavbarLinks({
               {navBlogPosts.map((post) => (
                 <li key={post.slug}>
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={`/makaleler/${post.slug}`}
                     onClick={onNavigate}
                     className={navItemClass(
-                      isActive(`/blog/${post.slug}`),
+                      isActive(`/makaleler/${post.slug}`),
                       "mobile-nested",
                     )}
                   >

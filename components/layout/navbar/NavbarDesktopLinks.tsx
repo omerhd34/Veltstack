@@ -52,7 +52,9 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
     pathname.startsWith("/projelerimiz/");
 
   const blogActive =
-    blogMenuOpen || pathname === "/blog" || pathname.startsWith("/blog/");
+    blogMenuOpen ||
+    pathname === "/makaleler" ||
+    pathname.startsWith("/makaleler/");
 
   useEffect(() => {
     setServicesMenuOpen(false);
@@ -108,7 +110,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
         onFocusCapture={openBlogMenu}
       >
         <Link
-          href="/blog"
+          href="/makaleler"
           aria-expanded={blogMenuOpen}
           aria-haspopup="true"
           className={navItemClass(blogActive)}
