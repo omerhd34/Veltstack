@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { ServiceCard } from "@/components/sections/services/ServiceCard";
 import { serviceItems } from "@/components/sections/services/service-items";
 import type { ServiceSlug } from "@/components/sections/services/service-items";
@@ -28,28 +29,30 @@ export async function ProjectRelated({
   return (
     <section className={cn("bg-background py-24 md:py-32", className)}>
       <SiteContainer>
-        <div className="max-w-2xl">
-          <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
-            {title}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            {subtitle}
-          </p>
-        </div>
+        <SectionScrollReveal direction="left" trigger="entry">
+          <div className="max-w-2xl">
+            <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
+              {title}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              {subtitle}
+            </p>
+          </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={service.slug}
-              href={service.href}
-              title={tHome(service.titleKey)}
-              description={tHome(service.descKey)}
-              slug={service.slug}
-              numbered
-              index={index + 1}
-            />
-          ))}
-        </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <ServiceCard
+                key={service.slug}
+                href={service.href}
+                title={tHome(service.titleKey)}
+                description={tHome(service.descKey)}
+                slug={service.slug}
+                numbered
+                index={index + 1}
+              />
+            ))}
+          </div>
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );

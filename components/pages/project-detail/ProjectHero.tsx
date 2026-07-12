@@ -4,6 +4,7 @@ import Image from "next/image";
 import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { HeroStatsCards } from "@/components/ui/HeroStatsCards";
 import {
   PAGE_HERO_IMAGE_FRAME_CLASS,
@@ -62,62 +63,80 @@ export function ProjectHero({
 
       <SiteContainer className="relative flex min-h-[calc(100svh-4.5rem)] flex-col py-8 sm:py-10 md:py-12">
         <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
-          <div className="min-w-0">
-            <SectionBadge>{badge}</SectionBadge>
+          <SectionScrollReveal
+            direction="left"
+            when="mount"
+            className="min-w-0"
+          >
+            <div className="min-w-0">
+              <SectionBadge>{badge}</SectionBadge>
 
-            <div
-              aria-hidden
-              className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
-            />
+              <div
+                aria-hidden
+                className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
+              />
 
-            <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
-              {title}
-            </h1>
+              <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
+                {title}
+              </h1>
 
-            <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/75 sm:text-base lg:text-lg">
-              {subtitle}
-            </p>
-            <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
-              {subtitleSecondary}
-            </p>
-          </div>
+              <p className="mt-5 max-w-xl text-sm leading-[1.85] text-emerald-50/75 sm:text-base lg:text-lg">
+                {subtitle}
+              </p>
+              <p className="mt-3 max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:text-[0.9375rem]">
+                {subtitleSecondary}
+              </p>
+            </div>
+          </SectionScrollReveal>
 
-          <div className={PAGE_HERO_IMAGE_WRAPPER_CLASS}>
-            <div
-              aria-hidden
-              className="absolute -inset-3 rounded-[2rem] bg-linear-to-br from-brand-accent/20 via-transparent to-emerald-600/10 blur-2xl"
-            />
-            {demoUrl ? (
-              <a
-                href={demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group/preview relative block"
-                aria-label={`${demoLabel}: ${title}`}
-              >
+          <SectionScrollReveal
+            direction="right"
+            when="mount"
+            delay={0.14}
+            className="min-w-0"
+          >
+            <div className={PAGE_HERO_IMAGE_WRAPPER_CLASS}>
+              <div
+                aria-hidden
+                className="absolute -inset-3 rounded-[2rem] bg-linear-to-br from-brand-accent/20 via-transparent to-emerald-600/10 blur-2xl"
+              />
+              {demoUrl ? (
+                <a
+                  href={demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group/preview relative block"
+                  aria-label={`${demoLabel}: ${title}`}
+                >
+                  <PreviewFrame
+                    imageUrl={imageUrl}
+                    title={title}
+                    coverGradient={coverGradient}
+                    icon={Icon}
+                  />
+                  <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-black/50 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm transition-colors group-hover/preview:bg-emerald-600/80">
+                    <LuExternalLink className="size-3.5" aria-hidden />
+                    {demoLabel}
+                  </span>
+                </a>
+              ) : (
                 <PreviewFrame
                   imageUrl={imageUrl}
                   title={title}
                   coverGradient={coverGradient}
                   icon={Icon}
                 />
-                <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-black/50 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur-sm transition-colors group-hover/preview:bg-emerald-600/80">
-                  <LuExternalLink className="size-3.5" aria-hidden />
-                  {demoLabel}
-                </span>
-              </a>
-            ) : (
-              <PreviewFrame
-                imageUrl={imageUrl}
-                title={title}
-                coverGradient={coverGradient}
-                icon={Icon}
-              />
-            )}
-          </div>
+              )}
+            </div>
+          </SectionScrollReveal>
         </div>
 
-        <div className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8">
+        <SectionScrollReveal
+          direction="up"
+          when="mount"
+          delay={0.28}
+          className="mt-auto shrink-0 border-t border-emerald-900/35 pt-6 sm:pt-8"
+        >
           <HeroStatsCards stats={metrics} />
 
           <a
@@ -129,7 +148,7 @@ export function ProjectHero({
             </span>
             <LuChevronDown className="size-4 animate-bounce" aria-hidden />
           </a>
-        </div>
+        </SectionScrollReveal>
       </SiteContainer>
       <PageScrollAnchor id="project-overview" />
     </section>

@@ -13,6 +13,7 @@ import {
 } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { cn } from "@/lib/utils";
 
 const featureIcons = [
@@ -99,32 +100,34 @@ export function ProjectFeatures({
       />
 
       <SiteContainer className="relative">
-        <div className="mx-auto max-w-2xl text-center">
-          <SectionBadge variant="accent-glass">
-            <LuCircleCheck className="size-3.5" aria-hidden />
-            {badge}
-          </SectionBadge>
+        <SectionScrollReveal direction="right" trigger="entry">
+          <div className="mx-auto max-w-2xl text-center">
+            <SectionBadge variant="accent-glass">
+              <LuCircleCheck className="size-3.5" aria-hidden />
+              {badge}
+            </SectionBadge>
 
-          <h2 className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
-            {title}
-          </h2>
+            <h2 className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
+              {title}
+            </h2>
 
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            {subtitle}
-          </p>
-        </div>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              {subtitle}
+            </p>
+          </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => (
-            <ProjectFeatureItem
-              key={feature.title}
-              title={feature.title}
-              description={feature.description}
-              index={index}
-              icon={featureIcons[index % featureIcons.length]}
-            />
-          ))}
-        </div>
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {features.map((feature, index) => (
+              <ProjectFeatureItem
+                key={feature.title}
+                title={feature.title}
+                description={feature.description}
+                index={index}
+                icon={featureIcons[index % featureIcons.length]}
+              />
+            ))}
+          </div>
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );
