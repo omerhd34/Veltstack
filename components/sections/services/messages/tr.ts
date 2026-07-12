@@ -1,5 +1,5 @@
 export const servicesHomeTr = {
-  servicesTitle: "Hizmetler",
+  servicesTitle: "Hizmetlerimiz",
   servicesHeadline: "Hedefleriniz için",
   servicesHeadlineAccent: "ölçülebilir hizmetler",
   servicesIntro:
@@ -10,11 +10,11 @@ export const servicesHomeTr = {
     "Yayın sonrası teknik destek dahil",
   ],
   servicesCta: "Birlikte planlayalım",
-  servicesAllCta: "Tüm hizmetler",
+  servicesAllCta: "Tüm hizmetlerimiz",
   servicesSliderPrev: "Önceki hizmet",
   servicesSliderNext: "Sonraki hizmet",
   servicesSliderDot: "Hizmet",
-  servicesSliderRegion: "Hizmetler karuseli",
+  servicesSliderRegion: "Hizmetlerimiz karuseli",
   servicesSliderStatus: "{label}, {current} / {total}",
   servicesSliderActivate: "{title} hizmetini göster",
   servicesWebTitle: "Web Sitesi Geliştirme",
