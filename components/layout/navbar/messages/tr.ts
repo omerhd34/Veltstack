@@ -1,6 +1,6 @@
 export const navTr = {
-  services: "Hizmetler",
-  servicesAll: "Tüm Hizmetler",
+  services: "Hizmetlerimiz",
+  servicesAll: "Tüm Hizmetlerimiz",
   servicesMegaMenuIntro:
     "Markanızın web, uygulama, SEO ve bakım ihtiyaçlarını tek çatı altında yönetiyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
   serviceWeb: "Web Sitesi",
@@ -18,7 +18,8 @@ export const navTr = {
   projectOnlinemuhasebe: "Online Muhasebe | Kurumsal Web Sitesi",
   projectsMegaMenuIntro:
     "FinTech, e-ticaret ve kurumsal sektörlerde iş hedeflerini merkeze alan dijital ürünler geliştiriyoruz. Tasarım ve geliştirmeyi tek süreçte birleştirir, performans ve kullanıcı deneyimini önceliklendiririz. Farklı sektörlerdeki deneyimimizi ölçülebilir iş sonuçlarına dönüştürüyoruz.",
-  projects: "Projeler",
+  projects: "Projelerimiz",
+  faq: "S.S.S",
   blog: "Blog",
   blogAll: "Tüm Yazılar",
   blogMegaMenuIntro:
