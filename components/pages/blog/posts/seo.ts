@@ -79,7 +79,7 @@ export const blogPostEntry: BlogPostEntry = {
 </tbody>
 </table>
 </div>
-<p>Teknik altyapı için <a href="/blog/domain-hosting">Domain & Hosting</a> ve <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a> rehberlerimizde HTTPS, hız ve deploy konularını detaylandırdık.</p>
+<p>Teknik altyapı için <a href="/makaleler/domain-hosting">Domain & Hosting</a> ve <a href="/makaleler/vercel-de-yayin">Vercel'de Yayın</a> rehberlerimizde HTTPS, hız ve deploy konularını detaylandırdık.</p>
 
 <h2>On-Page SEO: Sayfa Bazında Optimizasyon</h2>
 <ol class="blog-steps">
@@ -122,7 +122,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li><strong>Otomatik sitemap:</strong> <code>app/sitemap.ts</code> ile tüm sayfalar otomatik listelenir.</li>
 <li><strong>Performans:</strong> Image optimization, code splitting ve edge caching Core Web Vitals'ı iyileştirir.</li>
 </ul>
-<p>Stack seçimi hakkında <a href="/blog/react-nextjs">React & Next.js</a> ve <a href="/blog/ozel-yazilim-cms">Özel Yazılım</a> yazılarımıza bakabilirsiniz.</p>
+<p>Stack seçimi hakkında <a href="/makaleler/react-nextjs">React & Next.js</a> ve <a href="/makaleler/ozel-yazilim-cms">Özel Yazılım</a> yazılarımıza bakabilirsiniz.</p>
 
 <h2>SEO Araçları</h2>
 <div class="blog-table-wrap">
@@ -143,7 +143,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Aynı içeriği birden fazla URL'de yayınlamak (duplicate content)</li>
 <li>Title ve meta description'ı her sayfada aynı bırakmak</li>
 <li>Görsellere alt metin eklememek</li>
-<li>Mobil uyumluluğu ihmal etmek; <a href="/blog/responsive-tasarim">responsive tasarım</a> şart</li>
+<li>Mobil uyumluluğu ihmal etmek; <a href="/makaleler/responsive-tasarim">responsive tasarım</a> şart</li>
 <li>İçerik üretmeden yalnızca teknik SEO'ya güvenmek</li>
 <li>Backlink satın almak veya spam dizinlere kayıt olmak</li>
 <li>Search Console ve Analytics kurmadan ilerlemek; ölçemediğiniz şeyi iyileştiremezsiniz</li>
@@ -215,7 +215,7 @@ export const blogPostEntry: BlogPostEntry = {
 </tbody>
 </table>
 </div>
-<p>See our <a href="/blog/domain-hosting">Domain & Hosting</a> and <a href="/blog/vercel-de-yayin">Deploying on Vercel</a> guides for HTTPS, speed and deploy topics.</p>
+<p>See our <a href="/makaleler/domain-hosting">Domain & Hosting</a> and <a href="/makaleler/vercel-de-yayin">Deploying on Vercel</a> guides for HTTPS, speed and deploy topics.</p>
 
 <h2>On-Page SEO: Page-Level Optimization</h2>
 <ol class="blog-steps">
@@ -258,7 +258,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li><strong>Automatic sitemap:</strong> All pages listed automatically via <code>app/sitemap.ts</code>.</li>
 <li><strong>Performance:</strong> Image optimization, code splitting and edge caching improve Core Web Vitals.</li>
 </ul>
-<p>See our <a href="/blog/react-nextjs">React & Next.js</a> and <a href="/blog/ozel-yazilim-cms">Custom Software</a> articles for stack choices.</p>
+<p>See our <a href="/makaleler/react-nextjs">React & Next.js</a> and <a href="/makaleler/ozel-yazilim-cms">Custom Software</a> articles for stack choices.</p>
 
 <h2>SEO Tools</h2>
 <div class="blog-table-wrap">
@@ -279,7 +279,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Publishing the same content on multiple URLs (duplicate content)</li>
 <li>Leaving the same title and meta description on every page</li>
 <li>Skipping alt text on images</li>
-<li>Ignoring mobile compatibility; <a href="/blog/responsive-tasarim">responsive design</a> is essential</li>
+<li>Ignoring mobile compatibility; <a href="/makaleler/responsive-tasarim">responsive design</a> is essential</li>
 <li>Relying on technical SEO alone without content production</li>
 <li>Buying backlinks or registering on spam directories</li>
 <li>Proceeding without Search Console and Analytics; you cannot improve what you do not measure</li>

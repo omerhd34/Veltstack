@@ -96,11 +96,11 @@ export const blogPostEntry: BlogPostEntry = {
   </div>
   <div class="blog-type-card">
     <h4>Platform (${VERCEL_LINK})</h4>
-    <p>Next.js ve statik siteler için optimize. <code>git push</code> ile deploy, otomatik HTTPS ve global CDN. Detay: <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a>.</p>
+    <p>Next.js ve statik siteler için optimize. <code>git push</code> ile deploy, otomatik HTTPS ve global CDN. Detay: <a href="/makaleler/vercel-de-yayin">Vercel'de Yayın</a>.</p>
   </div>
   <div class="blog-type-card">
     <h4>Tek panel (${IXIRHOST_LINK})</h4>
-    <p>Domain tescili, DNS, SSL ve hosting aynı sağlayıcıda; yönetim ve destek süreci sadeleşir. Ayrıntı: <a href="/blog/neden-ixirhost">Neden ixirhost?</a></p>
+    <p>Domain tescili, DNS, SSL ve hosting aynı sağlayıcıda; yönetim ve destek süreci sadeleşir. Ayrıntı: <a href="/makaleler/neden-ixirhost">Neden ixirhost?</a></p>
   </div>
 </div>
 
@@ -138,11 +138,11 @@ export const blogPostEntry: BlogPostEntry = {
 <h2>Domain Nasıl Alınır?</h2>
 <p>Domain satın alma süreci oldukça basittir:</p>
 <ul class="blog-steps">
-<li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Domain adını belirleyin</strong>Kısa, telaffuzu kolay ve markanızla uyumlu bir isim seçin. <a href="/blog/dogru-domain-secimi">Doğru Domain Seçimi</a> rehberimize bakabilirsiniz.</div></div></li>
+<li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Domain adını belirleyin</strong>Kısa, telaffuzu kolay ve markanızla uyumlu bir isim seçin. <a href="/makaleler/dogru-domain-secimi">Doğru Domain Seçimi</a> rehberimize bakabilirsiniz.</div></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Müsaitliği kontrol edin</strong>${IXIRHOST_DOMAIN_SEARCH_LINK} ile seçtiğiniz ismin .com, .com.tr veya .net gibi uzantılarda boş olup olmadığına bakın.</div></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Kayıt firmasını seçin</strong>Güvenilir, destek sunan ve şeffaf fiyatlandırmaya sahip bir registrar tercih edin. Projelerimizde ${IXIRHOST_LINK} kullanıyoruz.</div></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Satın alın ve yenilemeyi planlayın</strong>Hesap oluşturup ödemeyi tamamlayın. Otomatik yenilemeyi aktif edin.</div></div></li>
-<li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>DNS ayarlarını yapın</strong>Domain'i hosting sağlayıcınıza yönlendirin. <a href="/blog/domain-hosting-tasima">Taşıma rehberimiz</a> DNS güncellemesinde yardımcı olur.</div></div></li>
+<li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>DNS ayarlarını yapın</strong>Domain'i hosting sağlayıcınıza yönlendirin. <a href="/makaleler/domain-hosting-tasima">Taşıma rehberimiz</a> DNS güncellemesinde yardımcı olur.</div></div></li>
 </ul>
 
 <h2>Popüler Domain Uzantıları</h2>
@@ -211,11 +211,11 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
   </div>
   <div class="blog-type-card">
     <h4>Platform (${VERCEL_LINK})</h4>
-    <p>Optimized for Next.js and static sites. Deploy via <code>git push</code>, automatic HTTPS and a global CDN. See <a href="/en/blog/vercel-de-yayin">Publishing on Vercel</a>.</p>
+    <p>Optimized for Next.js and static sites. Deploy via <code>git push</code>, automatic HTTPS and a global CDN. See <a href="/en/makaleler/vercel-de-yayin">Publishing on Vercel</a>.</p>
   </div>
   <div class="blog-type-card">
     <h4>Single panel (${IXIRHOST_LINK})</h4>
-    <p>Domain registration, DNS, SSL and hosting from one provider; simpler management and support. Details: <a href="/en/blog/neden-ixirhost">Why ixirhost?</a></p>
+    <p>Domain registration, DNS, SSL and hosting from one provider; simpler management and support. Details: <a href="/en/makaleler/neden-ixirhost">Why ixirhost?</a></p>
   </div>
 </div>
 
@@ -253,11 +253,11 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 <h2>How to Buy a Domain</h2>
 <p>The domain purchase process is straightforward:</p>
 <ul class="blog-steps">
-<li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Choose a domain name</strong>Pick something short, easy to say and aligned with your brand. See our <a href="/en/blog/dogru-domain-secimi">Choosing the Right Domain</a> guide.</div></div></li>
+<li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Choose a domain name</strong>Pick something short, easy to say and aligned with your brand. See our <a href="/en/makaleler/dogru-domain-secimi">Choosing the Right Domain</a> guide.</div></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Check availability</strong>Use ${IXIRHOST_DOMAIN_SEARCH_LINK_EN} to see whether your name is free under extensions like .com, .com.tr or .net.</div></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Pick a registrar</strong>Choose a reliable provider with fair pricing and support. We use ${IXIRHOST_LINK} in our projects.</div></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Complete purchase and plan renewal</strong>Create an account and pay. Enable auto-renewal.</div></div></li>
-<li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Configure DNS</strong>Point the domain to your hosting provider. Our <a href="/en/blog/domain-hosting-tasima">migration guide</a> helps with DNS updates.</div></div></li>
+<li><div class="blog-step-inner"><span class="blog-step-badge"></span><div class="blog-step-body"><strong>Configure DNS</strong>Point the domain to your hosting provider. Our <a href="/en/makaleler/domain-hosting-tasima">migration guide</a> helps with DNS updates.</div></div></li>
 </ul>
 
 <h2>Popular Domain Extensions</h2>

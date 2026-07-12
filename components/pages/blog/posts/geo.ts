@@ -50,7 +50,7 @@ export const blogPostEntry: BlogPostEntry = {
 </tbody>
 </table>
 </div>
-<p>GEO, SEO'nun yerini almaz; onu tamamlar. Güçlü teknik SEO ve kaliteli içerik GEO için de temel oluşturur. <a href="/blog/seo">SEO rehberimizde</a> klasik optimizasyon adımlarını detaylandırdık.</p>
+<p>GEO, SEO'nun yerini almaz; onu tamamlar. Güçlü teknik SEO ve kaliteli içerik GEO için de temel oluşturur. <a href="/makaleler/seo">SEO rehberimizde</a> klasik optimizasyon adımlarını detaylandırdık.</p>
 
 <h2>GEO Neden Önemli?</h2>
 <ul class="blog-checklist">
@@ -104,7 +104,7 @@ export const blogPostEntry: BlogPostEntry = {
 </tbody>
 </table>
 </div>
-<p>Modern stack seçimi için <a href="/blog/react-nextjs">React & Next.js</a> ve <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a> rehberlerimizde SSR, metadata ve performans konularını ele aldık.</p>
+<p>Modern stack seçimi için <a href="/makaleler/react-nextjs">React & Next.js</a> ve <a href="/makaleler/vercel-de-yayin">Vercel'de Yayın</a> rehberlerimizde SSR, metadata ve performans konularını ele aldık.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">llms.txt nedir?</p>
@@ -122,7 +122,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>Bu yazının kendisi GEO prensiplerine uygun yapılandırılmış bir örnektir: net tanım, karşılaştırma tablosu, adım adım strateji ve kaynak linkleri.</p>
 
 <h2>GEO ve Yapay Zeka Araçları</h2>
-<p>GEO stratejisi oluştururken AI araçlarını nasıl konumlandırdığımız önemlidir. <a href="/blog/geleneksel-yazilim-yapay-zeka">Geleneksel Yazılım | Yapay Zeka</a> yazımızda vurguladığımız gibi: AI üretken içerik ve araştırma için güçlü bir yardımcıdır; ancak strateji, doğruluk kontrolü ve marka sesi insan uzmanlığı gerektirir. GEO içeriklerini de insan editörden geçirmeden yayınlamayız.</p>
+<p>GEO stratejisi oluştururken AI araçlarını nasıl konumlandırdığımız önemlidir. <a href="/makaleler/geleneksel-yazilim-yapay-zeka">Geleneksel Yazılım | Yapay Zeka</a> yazımızda vurguladığımız gibi: AI üretken içerik ve araştırma için güçlü bir yardımcıdır; ancak strateji, doğruluk kontrolü ve marka sesi insan uzmanlığı gerektirir. GEO içeriklerini de insan editörden geçirmeden yayınlamayız.</p>
 
 <h2>GEO Ölçümü ve İzleme</h2>
 <p>GEO henüz SEO kadar ölçülebilir değil; ancak takip edilebilecek sinyaller vardır:</p>
@@ -180,7 +180,7 @@ export const blogPostEntry: BlogPostEntry = {
 </tbody>
 </table>
 </div>
-<p>GEO does not replace SEO; it complements it. Strong technical SEO and quality content form the foundation for GEO as well. See our <a href="/blog/seo">SEO guide</a> for classic optimization steps.</p>
+<p>GEO does not replace SEO; it complements it. Strong technical SEO and quality content form the foundation for GEO as well. See our <a href="/makaleler/seo">SEO guide</a> for classic optimization steps.</p>
 
 <h2>Why Does GEO Matter?</h2>
 <ul class="blog-checklist">
@@ -234,7 +234,7 @@ export const blogPostEntry: BlogPostEntry = {
 </tbody>
 </table>
 </div>
-<p>See our <a href="/blog/react-nextjs">React & Next.js</a> and <a href="/blog/vercel-de-yayin">Deploying on Vercel</a> guides for SSR, metadata and performance.</p>
+<p>See our <a href="/makaleler/react-nextjs">React & Next.js</a> and <a href="/makaleler/vercel-de-yayin">Deploying on Vercel</a> guides for SSR, metadata and performance.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">What is llms.txt?</p>
@@ -252,7 +252,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>This post itself is structured as a GEO example: clear definition, comparison table, step-by-step strategy and source links.</p>
 
 <h2>GEO and AI Tools</h2>
-<p>How we position AI tools when building a GEO strategy matters. As we stress in <a href="/blog/geleneksel-yazilim-yapay-zeka">Traditional Software | AI</a>: AI is a powerful assistant for content and research, but strategy, fact-checking and brand voice require human expertise. We do not publish GEO content without human editorial review.</p>
+<p>How we position AI tools when building a GEO strategy matters. As we stress in <a href="/makaleler/geleneksel-yazilim-yapay-zeka">Traditional Software | AI</a>: AI is a powerful assistant for content and research, but strategy, fact-checking and brand voice require human expertise. We do not publish GEO content without human editorial review.</p>
 
 <h2>GEO Measurement and Monitoring</h2>
 <p>GEO is not yet as measurable as SEO, but trackable signals exist:</p>

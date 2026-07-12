@@ -88,7 +88,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Özel Yazılım Projelerinde Entegrasyon</h2>
-<p>Standart e-ticaret paketleri dışında <a href="/blog/ozel-yazilim-cms">özel yazılım</a> ile geliştirilen sitelerde sanal POS entegrasyonu backend tarafında güvenli şekilde yapılmalıdır. API anahtarları sunucu ortamında tutulur; ödeme callback'leri doğrulanır ve sipariş durumu veritabanında güncellenir. Bu süreçte <a href="/blog/geleneksel-yazilim-yapay-zeka">insan geliştirici</a> deneyimi, güvenlik açısından vazgeçilmezdir.</p>
+<p>Standart e-ticaret paketleri dışında <a href="/makaleler/ozel-yazilim-cms">özel yazılım</a> ile geliştirilen sitelerde sanal POS entegrasyonu backend tarafında güvenli şekilde yapılmalıdır. API anahtarları sunucu ortamında tutulur; ödeme callback'leri doğrulanır ve sipariş durumu veritabanında güncellenir. Bu süreçte <a href="/makaleler/geleneksel-yazilim-yapay-zeka">insan geliştirici</a> deneyimi, güvenlik açısından vazgeçilmezdir.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Pratik ipucu</p>
@@ -180,7 +180,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Integration in Custom Software Projects</h2>
-<p>Beyond off-the-shelf e-commerce packages, virtual POS integration on <a href="/blog/ozel-yazilim-cms">custom software</a> sites must be handled securely on the backend. API keys stay in server environment; payment callbacks are verified and order status updates in the database. <a href="/blog/geleneksel-yazilim-yapay-zeka">Human developer</a> expertise is non-negotiable for security here.</p>
+<p>Beyond off-the-shelf e-commerce packages, virtual POS integration on <a href="/makaleler/ozel-yazilim-cms">custom software</a> sites must be handled securely on the backend. API keys stay in server environment; payment callbacks are verified and order status updates in the database. <a href="/makaleler/geleneksel-yazilim-yapay-zeka">Human developer</a> expertise is non-negotiable for security here.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Practical tip</p>

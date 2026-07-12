@@ -141,7 +141,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>Kurulum tamamlandığında uygulama <strong>started</strong> durumunda görünür; kod güncellemelerinden sonra <strong>Restart</strong> ile yeniden başlatılır.</p>
 
 <h3>Vercel ile yayın</h3>
-<p>Next.js projelerinde deploy'u ${VERCEL_LINK}'e bırakıyoruz: <code>git push</code> ile tek adımda yayın, otomatik HTTPS, preview branch'leri ve global CDN. Domain ${IXIRHOST_LINK}'ta kayıtlı kalır; ${VERCEL_LINK}'e bağlamak için panelde <strong>Alan Adlarım → İsim Sunucuları</strong> bölümünden varsayılan nameserver'ları kaldırıp <code>ns1.vercel-dns.com</code> ve <code>ns2.vercel-dns.com</code> adreslerini ekliyoruz. DNS yönetimi ${VERCEL_LINK}'e devredilir; değişiklik 24 saate kadar sürebilir. Başka firmadaki alan adını ${IXIRHOST_DOMAIN_TRANSFER_LINK} ile taşımak da mümkün. Ayrıntılar için <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a> rehberimize bakabilirsiniz.</p>
+<p>Next.js projelerinde deploy'u ${VERCEL_LINK}'e bırakıyoruz: <code>git push</code> ile tek adımda yayın, otomatik HTTPS, preview branch'leri ve global CDN. Domain ${IXIRHOST_LINK}'ta kayıtlı kalır; ${VERCEL_LINK}'e bağlamak için panelde <strong>Alan Adlarım → İsim Sunucuları</strong> bölümünden varsayılan nameserver'ları kaldırıp <code>ns1.vercel-dns.com</code> ve <code>ns2.vercel-dns.com</code> adreslerini ekliyoruz. DNS yönetimi ${VERCEL_LINK}'e devredilir; değişiklik 24 saate kadar sürebilir. Başka firmadaki alan adını ${IXIRHOST_DOMAIN_TRANSFER_LINK} ile taşımak da mümkün. Ayrıntılar için <a href="/makaleler/vercel-de-yayin">Vercel'de Yayın</a> rehberimize bakabilirsiniz.</p>
 
 <h2>Sık Yapılan Hatalar</h2>
 <ul>
@@ -256,7 +256,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>When setup is complete the app shows as <strong>started</strong>; use <strong>Restart</strong> after code updates.</p>
 
 <h3>Publishing with Vercel</h3>
-<p>For Next.js projects we leave deployment to ${VERCEL_LINK}: <code>git push</code> to go live, automatic HTTPS, preview branches and a global CDN. The domain stays registered at ${IXIRHOST_LINK}; to connect to ${VERCEL_LINK} we go to <strong>My Domains → Nameservers</strong>, remove the defaults and add <code>ns1.vercel-dns.com</code> and <code>ns2.vercel-dns.com</code>. DNS management moves to ${VERCEL_LINK}; changes can take up to 24 hours. You can also move a name from another registrar via ${IXIRHOST_DOMAIN_TRANSFER_LINK_EN}. See our <a href="/en/blog/vercel-de-yayin">Publishing on Vercel</a> guide for details.</p>
+<p>For Next.js projects we leave deployment to ${VERCEL_LINK}: <code>git push</code> to go live, automatic HTTPS, preview branches and a global CDN. The domain stays registered at ${IXIRHOST_LINK}; to connect to ${VERCEL_LINK} we go to <strong>My Domains → Nameservers</strong>, remove the defaults and add <code>ns1.vercel-dns.com</code> and <code>ns2.vercel-dns.com</code>. DNS management moves to ${VERCEL_LINK}; changes can take up to 24 hours. You can also move a name from another registrar via ${IXIRHOST_DOMAIN_TRANSFER_LINK_EN}. See our <a href="/en/makaleler/vercel-de-yayin">Publishing on Vercel</a> guide for details.</p>
 
 <h2>Common Mistakes</h2>
 <ul>

@@ -90,10 +90,10 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>Domain Transfer (Registrar Değişikliği)</h2>
 <p>Domain'i başka bir registrar'a taşımak farklı bir süreçtir. Mevcut firmadan <strong>EPP / auth code</strong> alınır, domain kilidi kaldırılır ve yeni firmada transfer başlatılır. Transfer sırasında nameserver'lar genelde değişmez; site çalışmaya devam eder. Ancak transfer süresi (5-7 gün) boyunca WHOIS bilgilerinde değişiklik yapılamayabilir.</p>
-<p>Domain seçimi ve uzantı kararı için <a href="/blog/dogru-domain-secimi">Doğru Domain Seçimi</a> yazımıza bakabilirsiniz.</p>
+<p>Domain seçimi ve uzantı kararı için <a href="/makaleler/dogru-domain-secimi">Doğru Domain Seçimi</a> yazımıza bakabilirsiniz.</p>
 
 <h2>Vercel veya Bulut Platforma Taşıma</h2>
-<p>Next.js projelerini Vercel'e taşırken hosting dosya transferi yerine Git tabanlı deploy kullanılır. Domain panelinden A veya CNAME kaydı Vercel'in verdiği değerlere güncellenir. Ortam değişkenleri, veritabanı bağlantısı ve harici servis anahtarları yeni panelde tanımlanmalıdır. Detaylı adımlar için <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a> rehberimize göz atın.</p>
+<p>Next.js projelerini Vercel'e taşırken hosting dosya transferi yerine Git tabanlı deploy kullanılır. Domain panelinden A veya CNAME kaydı Vercel'in verdiği değerlere güncellenir. Ortam değişkenleri, veritabanı bağlantısı ve harici servis anahtarları yeni panelde tanımlanmalıdır. Detaylı adımlar için <a href="/makaleler/vercel-de-yayin">Vercel'de Yayın</a> rehberimize göz atın.</p>
 
 <div class="blog-type-grid">
   <div class="blog-type-card">
@@ -146,7 +146,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>Domain ve hosting taşıma teknik bilgi ve dikkat gerektirir. Veltstack olarak site migration, Vercel deploy, DNS yapılandırması ve SSL kurulumu konularında proje kapsamında destek sunuyoruz. Mevcut sitenizi modern altyapıya taşımak istiyorsanız bizimle iletişime geçin.</p>
 
 <h2>Sonuç</h2>
-<p>Domain ve hosting taşıma; yedek, test, DNS güncelleme ve doğrulama adımlarıyla güvenle yapılabilir. Taşıma türünüze göre (sadece hosting, domain transfer veya platform değişikliği) süreci planlayın, düşük trafik saatinde uygulayın ve eski ortamı bir süre daha aktif tutun. Temel kavramlar için <a href="/blog/domain-hosting">Domain & Hosting</a> yazımız da yardımcı olacaktır.</p>
+<p>Domain ve hosting taşıma; yedek, test, DNS güncelleme ve doğrulama adımlarıyla güvenle yapılabilir. Taşıma türünüze göre (sadece hosting, domain transfer veya platform değişikliği) süreci planlayın, düşük trafik saatinde uygulayın ve eski ortamı bir süre daha aktif tutun. Temel kavramlar için <a href="/makaleler/domain-hosting">Domain & Hosting</a> yazımız da yardımcı olacaktır.</p>
 `,
     en: `
 <p>If you are unhappy with your current provider, need faster infrastructure or are moving to a modern platform like Vercel, planning <strong>domain and hosting migration</strong> correctly is critical. Wrong steps cause downtime, email loss and SEO drops. This guide covers migration types, preparation and step-by-step process.</p>
@@ -220,10 +220,10 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>Domain Transfer (Registrar Change)</h2>
 <p>Moving a domain to another registrar is a separate process. Get an <strong>EPP / auth code</strong> from the current provider, unlock the domain and start transfer at the new registrar. Nameservers usually stay the same during transfer; the site keeps running. WHOIS changes may be locked for 5-7 days while transfer completes.</p>
-<p>See our <a href="/blog/dogru-domain-secimi">Choosing the Right Domain</a> article for naming and extension decisions.</p>
+<p>See our <a href="/makaleler/dogru-domain-secimi">Choosing the Right Domain</a> article for naming and extension decisions.</p>
 
 <h2>Moving to Vercel or Cloud Platforms</h2>
-<p>When migrating Next.js to Vercel, you use Git-based deploy instead of file transfer. Update A or CNAME in the domain panel to Vercel's values. Define environment variables, database connections and API keys in the new dashboard. See our <a href="/blog/vercel-de-yayin">Deploying on Vercel</a> guide for details.</p>
+<p>When migrating Next.js to Vercel, you use Git-based deploy instead of file transfer. Update A or CNAME in the domain panel to Vercel's values. Define environment variables, database connections and API keys in the new dashboard. See our <a href="/makaleler/vercel-de-yayin">Deploying on Vercel</a> guide for details.</p>
 
 <div class="blog-type-grid">
   <div class="blog-type-card">
@@ -276,7 +276,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>Domain and hosting migration requires technical care. At Veltstack we support site migration, Vercel deploy, DNS configuration and SSL setup within project scope. Contact us if you want to move your site to modern infrastructure.</p>
 
 <h2>Conclusion</h2>
-<p>Domain and hosting migration is safe with backup, testing, DNS update and verification. Plan by migration type (hosting only, domain transfer or platform change), run during low traffic and keep the old environment active for a while. Our <a href="/blog/domain-hosting">Domain & Hosting</a> article covers the basics.</p>
+<p>Domain and hosting migration is safe with backup, testing, DNS update and verification. Plan by migration type (hosting only, domain transfer or platform change), run during low traffic and keep the old environment active for a while. Our <a href="/makaleler/domain-hosting">Domain & Hosting</a> article covers the basics.</p>
 `,
   },
 };

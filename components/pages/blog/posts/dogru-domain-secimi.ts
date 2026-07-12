@@ -99,7 +99,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 </ul>
 
 <h2>Domain Seçtikten Sonra</h2>
-<p>Domain hazır olduğunda bir sonraki adım hosting veya Vercel gibi bir platforma yönlendirmedir. DNS, SSL ve yayın süreci için <a href="/blog/domain-hosting">Domain & Hosting</a> yazımıza göz atabilirsiniz. Veltstack projelerinde domain tescil ve DNS yapılandırması konusunda yönlendirme desteği sunuyoruz.</p>
+<p>Domain hazır olduğunda bir sonraki adım hosting veya Vercel gibi bir platforma yönlendirmedir. DNS, SSL ve yayın süreci için <a href="/makaleler/domain-hosting">Domain & Hosting</a> yazımıza göz atabilirsiniz. Veltstack projelerinde domain tescil ve DNS yapılandırması konusunda yönlendirme desteği sunuyoruz.</p>
 
 <h2>Sonuç</h2>
 <p>Doğru domain; kısa, telaffuzu kolay, markanızla uyumlu ve hedef kitlenize hitap eden bir adrestir. Uzantı seçiminde global mi yerel mi olduğunuzu netleştirin, müsaitliği kontrol edin ve marka korumasını erken planlayın. Domain seçiminde veya kurulumda destek isterseniz bizimle iletişime geçin.</p>
@@ -184,7 +184,7 @@ ${BLOG_DOMAIN_EXTENSIONS_PLACEHOLDER}
 </ul>
 
 <h2>After You Choose a Domain</h2>
-<p>Once your domain is ready, the next step is pointing it to hosting or a platform like Vercel. See our <a href="/blog/domain-hosting">Domain & Hosting</a> article for DNS, SSL and launch steps. Veltstack projects include guidance on domain registration and DNS configuration.</p>
+<p>Once your domain is ready, the next step is pointing it to hosting or a platform like Vercel. See our <a href="/makaleler/domain-hosting">Domain & Hosting</a> article for DNS, SSL and launch steps. Veltstack projects include guidance on domain registration and DNS configuration.</p>
 
 <h2>Conclusion</h2>
 <p>The right domain is short, easy to say, aligned with your brand and suited to your audience. Clarify whether you are global or local, check availability early and plan brand protection. Contact us if you need help choosing or setting up your domain.</p>

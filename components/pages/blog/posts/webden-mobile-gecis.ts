@@ -33,7 +33,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>Responsive Web Yeterli Değil mi?</h2>
-<p><a href="/blog/responsive-tasarim">Responsive tasarım</a> mobil tarayıcıda iyi bir deneyim sunar ve çoğu kurumsal site için başlangıçta yeterlidir. Ancak işletme büyüdükçe kullanıcı beklentileri değişir:</p>
+<p><a href="/makaleler/responsive-tasarim">Responsive tasarım</a> mobil tarayıcıda iyi bir deneyim sunar ve çoğu kurumsal site için başlangıçta yeterlidir. Ancak işletme büyüdükçe kullanıcı beklentileri değişir:</p>
 <div class="blog-table-wrap blog-table-compare">
 <table>
 <colgroup>
@@ -92,11 +92,11 @@ export const blogPostEntry: BlogPostEntry = {
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Marka prestiji:</strong> App Store ve Google Play'de yer almak kurumsal güven algısını güçlendirir.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Veri ve analitik:</strong> Uygulama içi davranış, oturum süresi ve funnel analizi web analytics'ten daha zengin veri sunar.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Rekabet avantajı:</strong> Rakipler yalnızca web sitesiyle yetinirken uygulama farklılaştırıcı olur.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Backend paylaşımı:</strong> Mevcut <a href="/blog/node-js-ve-prisma-ile-backend">Node.js ve Prisma</a> API'niz hem web hem mobil istemciye hizmet eder; veri katmanı tekrar yazılmaz.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Backend paylaşımı:</strong> Mevcut <a href="/makaleler/node-js-ve-prisma-ile-backend">Node.js ve Prisma</a> API'niz hem web hem mobil istemciye hizmet eder; veri katmanı tekrar yazılmaz.</span></div></li>
 </ul>
 
 <h2>React Native ve Expo Nedir?</h2>
-<p><strong>React Native</strong>, Meta tarafından geliştirilen cross-platform mobil framework'üdür. <a href="/blog/react-nextjs">React</a> bilgisi olan ekipler aynı component mantığıyla iOS ve Android uygulaması geliştirir; iki ayrı native ekip ve bütçe gerekmez.</p>
+<p><strong>React Native</strong>, Meta tarafından geliştirilen cross-platform mobil framework'üdür. <a href="/makaleler/react-nextjs">React</a> bilgisi olan ekipler aynı component mantığıyla iOS ve Android uygulaması geliştirir; iki ayrı native ekip ve bütçe gerekmez.</p>
 <p><strong>Expo</strong>, React Native üzerine kurulu bir geliştirme platformudur. Build, mağaza yayını, push bildirimi, kamera ve konum gibi native özellikleri kolaylaştırır; OTA (over-the-air) güncelleme ile küçük düzeltmeleri mağaza onayı beklemeden dağıtabilirsiniz.</p>
 
 <h2>Neden React Native + Expo?</h2>
@@ -132,7 +132,7 @@ export const blogPostEntry: BlogPostEntry = {
 <ol class="blog-steps">
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Mevcut web analizi</strong> En çok kullanılan sayfalar, dönüşüm noktaları ve mobil trafik oranı belirlenir.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>MVP kapsamı</strong> Tüm siteyi kopyalamak yerine kritik akışlar seçilir: giriş, katalog, sepet, profil gibi.</span></div></li>
-<li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>API katmanı</strong> Mevcut REST API genişletilir veya <a href="/blog/node-js-ve-prisma-ile-backend">Node.js + Prisma</a> backend mobil endpoint'leri eklenir.</span></div></li>
+<li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>API katmanı</strong> Mevcut REST API genişletilir veya <a href="/makaleler/node-js-ve-prisma-ile-backend">Node.js + Prisma</a> backend mobil endpoint'leri eklenir.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>React Native geliştirme</strong> Expo ile iOS ve Android arayüzü; auth, push ve ödeme entegrasyonları.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Test ve mağaza yayını</strong> Gerçek cihaz testleri, App Store / Google Play inceleme süreci ve soft launch.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Web ile birlikte yaşam</strong> Uygulama web'in yerini almaz; ikisi birlikte farklı kullanım senaryolarına hizmet eder.</span></div></li>
@@ -176,7 +176,7 @@ export const blogPostEntry: BlogPostEntry = {
 </div>
 
 <h2>Isn't Responsive Web Enough?</h2>
-<p><a href="/blog/responsive-tasarim">Responsive design</a> delivers a good experience in mobile browsers and is enough for most corporate sites at the start. As the business grows, user expectations change:</p>
+<p><a href="/makaleler/responsive-tasarim">Responsive design</a> delivers a good experience in mobile browsers and is enough for most corporate sites at the start. As the business grows, user expectations change:</p>
 <div class="blog-table-wrap blog-table-compare">
 <table>
 <colgroup>
@@ -235,11 +235,11 @@ export const blogPostEntry: BlogPostEntry = {
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Brand prestige:</strong> Presence on the App Store and Google Play strengthens corporate trust.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Data and analytics:</strong> In-app behavior, session length and funnel analysis offer richer data than web analytics alone.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Competitive edge:</strong> An app differentiates you when competitors rely on web only.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Shared backend:</strong> Your existing <a href="/blog/node-js-ve-prisma-ile-backend">Node.js and Prisma</a> API serves both web and mobile clients; the data layer is not rewritten.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Shared backend:</strong> Your existing <a href="/makaleler/node-js-ve-prisma-ile-backend">Node.js and Prisma</a> API serves both web and mobile clients; the data layer is not rewritten.</span></div></li>
 </ul>
 
 <h2>What Are React Native and Expo?</h2>
-<p><strong>React Native</strong> is Meta's cross-platform mobile framework. Teams with <a href="/blog/react-nextjs">React</a> experience build iOS and Android apps with the same component model; no separate native teams and budgets.</p>
+<p><strong>React Native</strong> is Meta's cross-platform mobile framework. Teams with <a href="/makaleler/react-nextjs">React</a> experience build iOS and Android apps with the same component model; no separate native teams and budgets.</p>
 <p><strong>Expo</strong> is a development platform built on React Native. It simplifies builds, store publishing, push notifications, camera and location; OTA (over-the-air) updates let you ship small fixes without waiting for store approval.</p>
 
 <h2>Why React Native + Expo?</h2>
@@ -275,7 +275,7 @@ export const blogPostEntry: BlogPostEntry = {
 <ol class="blog-steps">
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Analyze current web</strong> Identify top pages, conversion points and mobile traffic share.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Define MVP scope</strong> Pick critical flows instead of copying the whole site: login, catalog, cart, profile.</span></div></li>
-<li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>API layer</strong> Extend the existing REST API or add mobile endpoints to your <a href="/blog/node-js-ve-prisma-ile-backend">Node.js + Prisma</a> backend.</span></div></li>
+<li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>API layer</strong> Extend the existing REST API or add mobile endpoints to your <a href="/makaleler/node-js-ve-prisma-ile-backend">Node.js + Prisma</a> backend.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>React Native development</strong> iOS and Android UI with Expo; auth, push and payment integrations.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Test and store launch</strong> Real device testing, App Store / Google Play review and soft launch.</span></div></li>
 <li><div class="blog-step-inner"><span class="blog-step-badge" aria-hidden="true"></span><span class="blog-step-body"><strong>Coexist with web</strong> The app does not replace web; both serve different usage scenarios.</span></div></li>
