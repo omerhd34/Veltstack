@@ -1,4 +1,5 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { ProcessTimeline } from "@/components/sections/process/ProcessTimeline";
 
 interface ProcessStep {
@@ -29,20 +30,22 @@ export function ServiceProcess({
       />
 
       <SiteContainer className="relative">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight md:text-4xl">
-            {title}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-emerald-50/65">
-            {subtitle}
-          </p>
-        </div>
+        <SectionScrollReveal direction="left" trigger="entry">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight md:text-4xl">
+              {title}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-emerald-50/65">
+              {subtitle}
+            </p>
+          </div>
 
-        <ProcessTimeline
-          className="mt-14 md:mt-16"
-          variant="dark"
-          steps={steps}
-        />
+          <ProcessTimeline
+            className="mt-14 md:mt-16"
+            variant="dark"
+            steps={steps}
+          />
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );

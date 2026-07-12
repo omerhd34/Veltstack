@@ -1,4 +1,5 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import {
   ServiceTechHoverStack,
   type ServiceTechCategoryGroup,
@@ -26,21 +27,23 @@ export function ServiceTech({
   return (
     <section className={`bg-background py-24 md:py-32 ${className ?? ""}`}>
       <SiteContainer>
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
-            {title}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            {subtitle}
-          </p>
-        </div>
+        <SectionScrollReveal direction="right" trigger="wide">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
+              {title}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              {subtitle}
+            </p>
+          </div>
 
-        <ServiceTechHoverStack
-          names={techStack}
-          descriptions={techDescriptions}
-          primaryTech={primaryTech}
-          categories={categories}
-        />
+          <ServiceTechHoverStack
+            names={techStack}
+            descriptions={techDescriptions}
+            primaryTech={primaryTech}
+            categories={categories}
+          />
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );

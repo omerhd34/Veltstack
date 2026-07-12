@@ -3,6 +3,7 @@
 import { LuCircleCheck } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { cn, truncateToSentences } from "@/lib/utils";
 import { ServiceFeatureCard } from "./ServiceFeatureCard";
 import { ServiceFeaturesCarousel } from "./ServiceFeaturesCarousel";
@@ -50,38 +51,40 @@ export function ServiceFeatures({
       />
 
       <SiteContainer className="relative px-4 sm:px-6">
-        <header>
-          <SectionBadge variant="accent-card">
-            <LuCircleCheck className="size-3.5" aria-hidden />
-            {badge}
-          </SectionBadge>
+        <SectionScrollReveal direction="right">
+          <header>
+            <SectionBadge variant="accent-card">
+              <LuCircleCheck className="size-3.5" aria-hidden />
+              {badge}
+            </SectionBadge>
 
-          <h2 className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl lg:text-[2.625rem] lg:leading-[1.12]">
-            {title}
-          </h2>
-          <p className="mt-5 max-w-7xl text-base leading-[1.85] text-muted-foreground">
-            {subtitle}
-          </p>
-        </header>
+            <h2 className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl lg:text-[2.625rem] lg:leading-[1.12]">
+              {title}
+            </h2>
+            <p className="mt-5 max-w-7xl text-base leading-[1.85] text-muted-foreground">
+              {subtitle}
+            </p>
+          </header>
 
-        <ServiceFeaturesCarousel
-          className="mt-10 hidden lg:block"
-          features={features}
-          detailLabel={detailLabel}
-          labels={carouselLabels}
-        />
+          <ServiceFeaturesCarousel
+            className="mt-10 hidden lg:block"
+            features={features}
+            detailLabel={detailLabel}
+            labels={carouselLabels}
+          />
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:hidden">
-          {features.map((feature, index) => (
-            <ServiceFeatureCard
-              key={feature.title}
-              title={feature.title}
-              description={truncateToSentences(feature.description, 2)}
-              index={index}
-              detailLabel={detailLabel}
-            />
-          ))}
-        </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:hidden">
+            {features.map((feature, index) => (
+              <ServiceFeatureCard
+                key={feature.title}
+                title={feature.title}
+                description={truncateToSentences(feature.description, 2)}
+                index={index}
+                detailLabel={detailLabel}
+              />
+            ))}
+          </div>
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );
