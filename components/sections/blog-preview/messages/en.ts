@@ -1,5 +1,5 @@
 export const blogPreviewHomeEn = {
-  blogTitle: "Blog",
+  blogTitle: "Articles",
   blogHeadline: "Insights from the",
   blogHeadlineAccent: "digital world",
   blogIntro:
