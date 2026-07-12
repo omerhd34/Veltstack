@@ -8,6 +8,7 @@ import {
   type ProjectSlug,
 } from "@/components/sections/projects/project-items";
 import { SiteContainer } from "@/components/layout/SiteContainer";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { ProjectShowcaseCard } from "./ProjectShowcaseCard";
 
 const featuredProjectSlugs = new Set<ProjectSlug>([
@@ -27,34 +28,36 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
   return (
     <section className={`bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}>
       <SiteContainer>
-        <header className="max-w-3xl">
-          <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
-            {tPage("showcaseBadge")}
-          </span>
-          <h2 className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl lg:text-[2.625rem]">
-            {tPage("showcaseTitle")}
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-foreground/62 md:text-lg">
-            {tPage("showcaseSubtitle")}
-          </p>
-        </header>
+        <SectionScrollReveal direction="right" trigger="entry">
+          <header className="max-w-3xl">
+            <span className="inline-block rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent">
+              {tPage("showcaseBadge")}
+            </span>
+            <h2 className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl lg:text-[2.625rem]">
+              {tPage("showcaseTitle")}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-foreground/62 md:text-lg">
+              {tPage("showcaseSubtitle")}
+            </p>
+          </header>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projectItems.map((project, i) => (
-            <ProjectShowcaseCard
-              key={project.slug}
-              index={i + 1}
-              href={project.href}
-              title={tHome(project.titleKey)}
-              description={tHome(project.descKey)}
-              icon={project.icon}
-              imageUrl={projectImageUrls[project.slug]}
-              coverGradient={projectCoverGradients[project.slug]}
-              featuredLabel={tPage("featuredLabel")}
-              showFeaturedBadge={featuredProjectSlugs.has(project.slug)}
-            />
-          ))}
-        </div>
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {projectItems.map((project, i) => (
+              <ProjectShowcaseCard
+                key={project.slug}
+                index={i + 1}
+                href={project.href}
+                title={tHome(project.titleKey)}
+                description={tHome(project.descKey)}
+                icon={project.icon}
+                imageUrl={projectImageUrls[project.slug]}
+                coverGradient={projectCoverGradients[project.slug]}
+                featuredLabel={tPage("featuredLabel")}
+                showFeaturedBadge={featuredProjectSlugs.has(project.slug)}
+              />
+            ))}
+          </div>
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );
