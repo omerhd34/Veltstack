@@ -15,6 +15,7 @@ export async function HeroSection({ className }: HeroSectionProps) {
 
   return (
     <section
+      data-page-hero
       className={`relative flex min-h-dvh items-center overflow-hidden bg-[#0A0A0F] pt-18 text-white ${className ?? ""}`}
     >
       <HeroImage alt={t("heroImageAlt")} />

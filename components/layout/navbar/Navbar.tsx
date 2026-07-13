@@ -16,6 +16,7 @@ import { NavbarServicesMegaMenuPanel } from "./NavbarServicesMegaMenuPanel";
 import { NavbarProjectsMegaMenuPanel } from "./NavbarProjectsMegaMenuPanel";
 import { NavbarBlogMegaMenuPanel } from "./NavbarBlogMegaMenuPanel";
 import { NavbarFaqMegaMenuPanel } from "./NavbarFaqMegaMenuPanel";
+import { isHeroOverlayPath } from "./navbar-overlay";
 
 interface NavbarProps {
   className?: string;
@@ -23,7 +24,7 @@ interface NavbarProps {
 
 export function Navbar({ className }: NavbarProps) {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const heroOverlayPage = isHeroOverlayPath(pathname);
   const headerRef = useRef<HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const mobileMenuOpen = useUiStore((state) => state.mobileMenuOpen);
@@ -54,14 +55,12 @@ export function Navbar({ className }: NavbarProps) {
 
   useEffect(() => {
     const updateScrolled = () => {
-      if (isHome) {
-        const marquee = document.querySelector<HTMLElement>(
-          "[data-services-marquee]",
-        );
-        if (marquee) {
+      if (heroOverlayPage) {
+        const hero = document.querySelector<HTMLElement>("[data-page-hero]");
+        if (hero) {
           const headerHeight =
             headerRef.current?.getBoundingClientRect().height ?? 72;
-          setScrolled(marquee.getBoundingClientRect().top <= headerHeight);
+          setScrolled(hero.getBoundingClientRect().bottom <= headerHeight);
           return;
         }
       }
@@ -76,9 +75,9 @@ export function Navbar({ className }: NavbarProps) {
       window.removeEventListener("scroll", updateScrolled);
       window.removeEventListener("resize", updateScrolled);
     };
-  }, [isHome]);
+  }, [heroOverlayPage]);
 
-  const overlay = isHome && !scrolled;
+  const overlay = heroOverlayPage && !scrolled;
 
   const megaMenuPanelClass = cn(
     "navbar-mega-menu-panel absolute left-1/2 top-full z-50 isolate mt-2 w-[min(calc(100%-1.5rem),50rem)] -translate-x-1/2 overflow-hidden rounded-2xl backdrop-blur-xl data-[state=open]:overflow-visible",
@@ -91,7 +90,7 @@ export function Navbar({ className }: NavbarProps) {
       data-overlay={overlay ? "true" : undefined}
       className={cn(
         "group/header top-0 z-50 w-full transition-[background-color,box-shadow,border-color] duration-300",
-        isHome ? "fixed" : "sticky border-b",
+        heroOverlayPage ? "fixed" : "sticky border-b",
         overlay
           ? "border-b-0 bg-transparent shadow-none"
           : cn(
