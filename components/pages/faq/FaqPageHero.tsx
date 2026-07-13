@@ -30,7 +30,10 @@ export async function FaqPageHero({
   const locale = (await getLocale()) as "tr" | "en";
 
   return (
-    <section className="relative flex min-h-[calc(100svh-4.5rem)] flex-col overflow-hidden bg-[#050f0c] text-white">
+    <section
+      data-page-hero
+      className="relative flex min-h-dvh flex-col overflow-hidden bg-[#050f0c] pt-18 text-white"
+    >
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgb(58_107_82/0.18),transparent)]"
@@ -48,7 +51,7 @@ export async function FaqPageHero({
         className="pointer-events-none absolute -left-20 bottom-20 size-[360px] rounded-full bg-emerald-800/5 blur-[100px]"
       />
 
-      <SiteContainer className="relative flex min-h-[calc(100svh-4.5rem)] flex-col py-8 sm:py-10">
+      <SiteContainer className="relative flex min-h-[calc(100dvh-4.5rem)] flex-col py-8 sm:py-10">
         <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <SectionScrollReveal
             direction="left"
