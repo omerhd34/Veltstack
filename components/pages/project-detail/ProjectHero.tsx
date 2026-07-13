@@ -42,6 +42,7 @@ export function ProjectHero({
   className,
 }: ProjectHeroProps) {
   return (
+    <>
     <section
       data-page-hero
       className={cn(
@@ -151,8 +152,9 @@ export function ProjectHero({
           </a>
         </SectionScrollReveal>
       </SiteContainer>
-      <PageScrollAnchor id="project-overview" />
     </section>
+    <PageScrollAnchor id="project-overview" />
+    </>
   );
 }
 

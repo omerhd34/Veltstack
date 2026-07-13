@@ -30,6 +30,7 @@ export async function BlogPageHero({
   const locale = (await getLocale()) as "tr" | "en";
 
   return (
+    <>
     <section
       data-page-hero
       className="relative flex min-h-dvh flex-col overflow-hidden bg-[#050f0c] pt-18 text-white"
@@ -113,12 +114,13 @@ export async function BlogPageHero({
           </a>
         </SectionScrollReveal>
       </SiteContainer>
-      <PageScrollAnchor id="blog-grid" />
 
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-500/20 to-transparent"
       />
     </section>
+    <PageScrollAnchor id="blog-grid" />
+    </>
   );
 }

@@ -30,6 +30,7 @@ export function ServiceHero({
   className,
 }: ServiceHeroProps) {
   return (
+    <>
     <section
       data-page-hero
       className={`relative flex min-h-dvh flex-col overflow-hidden bg-[#050f0c] pt-18 text-white ${className ?? ""}`}
@@ -104,7 +105,8 @@ export function ServiceHero({
           </a>
         </SectionScrollReveal>
       </SiteContainer>
-      <PageScrollAnchor id="service-features" />
     </section>
+    <PageScrollAnchor id="service-features" />
+    </>
   );
 }

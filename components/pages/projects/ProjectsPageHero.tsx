@@ -28,6 +28,7 @@ export function ProjectsPageHero({
   className,
 }: ProjectsPageHeroProps) {
   return (
+    <>
     <section
       data-page-hero
       className={`relative flex min-h-dvh flex-col overflow-hidden bg-[#050f0c] pt-18 text-white ${className ?? ""}`}
@@ -105,7 +106,8 @@ export function ProjectsPageHero({
           </a>
         </SectionScrollReveal>
       </SiteContainer>
-      <PageScrollAnchor id="projects-showcase" />
     </section>
+    <PageScrollAnchor id="projects-showcase" />
+    </>
   );
 }

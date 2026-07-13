@@ -49,6 +49,7 @@ export async function BlogDetailHero({
   const t = await getTranslations("nav");
 
   return (
+    <>
     <section
       data-page-hero
       className={cn(
@@ -161,12 +162,13 @@ export async function BlogDetailHero({
           </a>
         </div>
       </SiteContainer>
-      <PageScrollAnchor id="blog-article" />
 
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-500/25 to-transparent"
       />
     </section>
+    <PageScrollAnchor id="blog-article" />
+    </>
   );
 }
