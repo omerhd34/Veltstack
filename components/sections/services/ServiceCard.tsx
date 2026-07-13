@@ -61,7 +61,7 @@ export function ServiceCard({
       ? cn("bg-transparent p-4", stardustCardFace)
       : isSlide
         ? cn(
-            "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+            "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-4 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)] sm:p-5 md:p-6",
             isActive && "cursor-pointer",
             !isActive &&
               "border-[#9db8a8] bg-[#f8faf9] shadow-[0_2px_6px_rgb(0,0,0,0.03),0_8px_20px_rgb(58,107,82,0.05)] hover:border-[#8aab99] hover:bg-white hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
@@ -114,7 +114,7 @@ export function ServiceCard({
               ? "size-9 rounded-xl bg-brand-accent text-brand-accent-foreground"
               : isSlide
                 ? cn(
-                    "size-12 rounded-2xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 group-hover:scale-110 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50",
+                    "size-10 rounded-xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 group-hover:scale-110 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50 sm:size-11 sm:rounded-2xl md:size-12",
                     !isActive && "opacity-80 group-hover:opacity-100",
                     slowTransition,
                   )
@@ -126,7 +126,11 @@ export function ServiceCard({
         >
           <Icon
             className={cn(
-              compact ? "size-4" : isSlide ? "size-6" : "size-5",
+              compact
+                ? "size-4"
+                : isSlide
+                  ? "size-5 md:size-6"
+                  : "size-5",
               !compact && slowTransition,
             )}
             strokeWidth={1.75}
@@ -140,7 +144,7 @@ export function ServiceCard({
                 ? "text-base"
                 : isSlide
                   ? cn(
-                      "pr-10 text-xl text-[#0A0A0F]",
+                      "pr-8 text-lg text-[#0A0A0F] sm:pr-10 sm:text-lg md:text-xl",
                       !isActive && "group-hover:text-[#050508]",
                     )
                   : "text-lg",
@@ -156,7 +160,7 @@ export function ServiceCard({
                   ? "mt-1.5 line-clamp-3 h-[calc(0.75rem*1.625*3)] text-xs leading-relaxed text-muted-foreground"
                   : isSlide
                     ? cn(
-                        "mt-2 mb-0 line-clamp-4 h-[calc(0.9375rem*1.7*4)] text-[0.9375rem] leading-[1.7]",
+                        "mt-2 mb-0 line-clamp-3 h-[calc(0.875rem*1.7*3)] text-sm leading-[1.7] sm:h-[calc(0.9375rem*1.7*3)] sm:text-[0.9375rem] md:text-[0.9375rem]",
                         isActive
                           ? "text-foreground/60"
                           : "text-foreground/45 group-hover:text-foreground/58",
@@ -172,16 +176,16 @@ export function ServiceCard({
       {tag ? (
         <div
           className={cn(
-            "flex items-center justify-between gap-3 border-t-2 border-solid border-t-[#8aab99] group-hover:border-brand-accent",
+            "flex min-w-0 items-center justify-between gap-2 border-t-2 border-solid border-t-[#8aab99] group-hover:border-brand-accent sm:gap-3",
             isSlide && !isActive && "border-t-[#9db8a8]/80",
             slowTransition,
-            compact ? "mt-3 pt-3" : isSlide ? "mt-auto pt-2" : "mt-5 pt-0",
+            compact ? "mt-3 pt-3" : isSlide ? "mt-4 pt-4" : "mt-5 pt-0",
           )}
         >
           <Badge
             variant="secondary"
             className={cn(
-              "rounded-full border-0 px-3 py-1 text-xs font-medium",
+              "min-w-0 max-w-full truncate rounded-full border-0 px-2.5 py-1 text-[0.6875rem] font-medium sm:px-3 sm:text-xs",
               isSlide
                 ? cn(
                     "bg-brand-accent/10 text-brand-accent",

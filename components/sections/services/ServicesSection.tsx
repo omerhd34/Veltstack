@@ -32,7 +32,7 @@ export function ServicesSection({ className }: ServicesSectionProps) {
       <SiteContainer className="relative z-10">
         <ServicesIntro />
       </SiteContainer>
-      <div className="mx-auto -mt-2 w-full max-w-350 px-4 md:-mt-6">
+      <div className="mx-auto mt-8 w-full max-w-350 px-4 sm:mt-10 sm:px-6 md:mt-6 md:px-8 lg:-mt-2 lg:px-10 xl:px-12 2xl:px-0">
         <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
           <ServicesSlider />
         </SectionScrollReveal>

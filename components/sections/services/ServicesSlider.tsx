@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ServicesThreeDCarousel } from "./ServicesThreeDCarousel";
+import { ServicesResponsiveSlider } from "./ServicesResponsiveSlider";
 import { serviceItems } from "./service-items";
 
 interface ServicesSliderProps {
@@ -18,5 +18,7 @@ export async function ServicesSlider({ className }: ServicesSliderProps) {
     index: index + 1,
   }));
 
-  return <ServicesThreeDCarousel className={className} services={services} />;
+  return (
+    <ServicesResponsiveSlider className={className} services={services} />
+  );
 }

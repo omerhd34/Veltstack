@@ -15,11 +15,13 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
   const bullets = t.raw("servicesBullets") as string[];
 
   const cta = (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex w-full flex-col gap-3 min-[480px]:w-auto min-[480px]:flex-row min-[480px]:flex-wrap min-[480px]:gap-4">
       <PrimaryCtaLink
         href="/iletisim"
         variant="accent"
         showArrow={false}
+        wrapperClassName="w-full min-[480px]:w-auto"
+        className="w-full justify-center min-[480px]:w-auto"
         leadingIcon={<LuMessageCircle className="size-5" aria-hidden />}
       >
         {t("servicesCta")}
@@ -28,6 +30,8 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
         href="/hizmetler"
         variant="glass"
         showArrow={false}
+        wrapperClassName="w-full min-[480px]:w-auto"
+        className="w-full justify-center min-[480px]:w-auto"
         leadingIcon={<LuCompass className="size-5" aria-hidden />}
       >
         {t("servicesAllCta")}
@@ -43,7 +47,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
         <SectionScrollReveal direction="left" className="flex flex-col">
           <h2
             id="services-section-title"
-            className="font-(family-name:--font-heading) text-4xl font-bold leading-[1.04] tracking-tight text-white md:text-5xl lg:text-[3.25rem]"
+            className="font-(family-name:--font-heading) text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-4xl md:text-[2.5rem] lg:text-5xl xl:text-[3rem] 2xl:text-[3.25rem] 2xl:leading-[1.04]"
           >
             {t("servicesHeadline")}
             {locale === "tr" ? <br /> : " "}
@@ -80,7 +84,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
             ))}
           </ul>
 
-          <div className="relative z-10 mt-2 lg:hidden">{cta}</div>
+          <div className="relative z-10 mt-4 lg:hidden">{cta}</div>
         </SectionScrollReveal>
       </div>
     </div>
