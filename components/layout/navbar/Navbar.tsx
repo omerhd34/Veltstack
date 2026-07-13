@@ -60,7 +60,7 @@ export function Navbar({ className }: NavbarProps) {
         if (hero) {
           const headerHeight =
             headerRef.current?.getBoundingClientRect().height ?? 72;
-          setScrolled(hero.getBoundingClientRect().bottom <= headerHeight);
+          setScrolled(hero.getBoundingClientRect().bottom <= headerHeight + 1);
           return;
         }
       }
