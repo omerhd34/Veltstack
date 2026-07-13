@@ -3,9 +3,9 @@ export const pagesTr = {
   servicesSubtitle: "Web, mobil ve SEO'da uçtan uca dijital çözümler.",
   projectsTitle: "Projeler",
   projectsSubtitle: "Dört seçilmiş proje ve detaylı proje incelemeleri.",
-  blogTitle: "Makaleler",
-  blogSubtitle: "Makaleler yakında burada listelenecek.",
+  blogTitle: "Blog",
+  blogSubtitle: "Blog yazıları yakında burada listelenecek.",
   serviceDetailSuffix: "Hizmet detay sayfası | Veltstack",
   projectDetailSuffix: "Proje detay sayfası | Veltstack",
-  blogDetailSuffix: "Makale | Veltstack",
+  blogDetailSuffix: "Blog Yazısı | Veltstack",
 } as const;
