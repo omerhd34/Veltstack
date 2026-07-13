@@ -5,7 +5,7 @@ import {
   LuChartLine,
   LuGlobe,
   LuShoppingCart,
-  LuTreePine,
+  LuArmchair,
 } from "react-icons/lu";
 
 export const projectSlugs = [
@@ -33,7 +33,7 @@ export interface ProjectItemConfig {
 export const projectItems: ProjectItemConfig[] = [
   {
     slug: "iqfinansai",
-    href: "/projelerimiz/iqfinansai",
+    href: "/projeler/iqfinansai",
     titleKey: "projectIqfinansTitle",
     descKey: "projectIqfinansDesc",
     navDescKey: "projectIqfinansDesc",
@@ -42,7 +42,7 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "yazici-ticaret",
-    href: "/projelerimiz/yazici-ticaret",
+    href: "/projeler/yazici-ticaret",
     titleKey: "projectYaziciTitle",
     descKey: "projectYaziciDesc",
     navDescKey: "projectYaziciDesc",
@@ -51,16 +51,16 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "fablessi",
-    href: "/projelerimiz/fablessi",
+    href: "/projeler/fablessi",
     titleKey: "projectFablessiTitle",
     descKey: "projectFablessiDesc",
     navDescKey: "projectFablessiDesc",
     tagKey: "projectFablessiTag",
-    icon: LuTreePine,
+    icon: LuArmchair,
   },
   {
     slug: "uzman-klinik-psikolog",
-    href: "/projelerimiz/uzman-klinik-psikolog",
+    href: "/projeler/uzman-klinik-psikolog",
     titleKey: "projectUzmanPsikologTitle",
     descKey: "projectUzmanPsikologDesc",
     navDescKey: "projectUzmanPsikologDesc",
@@ -69,7 +69,7 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "portfolio",
-    href: "/projelerimiz/portfolio",
+    href: "/projeler/portfolio",
     titleKey: "projectPortfolioTitle",
     descKey: "projectPortfolioDesc",
     navDescKey: "projectPortfolioDesc",
@@ -78,7 +78,7 @@ export const projectItems: ProjectItemConfig[] = [
   },
   {
     slug: "onlinemuhasebe",
-    href: "/projelerimiz/onlinemuhasebe",
+    href: "/projeler/onlinemuhasebe",
     titleKey: "projectOnlinemuhasebeTitle",
     descKey: "projectOnlinemuhasebeDesc",
     navDescKey: "projectOnlinemuhasebeDesc",
