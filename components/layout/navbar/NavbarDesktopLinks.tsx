@@ -129,7 +129,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
         onFocusCapture={openBlogMenu}
       >
         <Link
-          href="/makaleler"
+          href="/blog"
           aria-expanded={blogMenuOpen}
           aria-haspopup="true"
           className={navItemClass(blogActive)}
