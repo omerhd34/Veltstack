@@ -1,7 +1,7 @@
 export const servicesHomeTr = {
-  servicesTitle: "Hizmetlerimiz",
+  servicesTitle: "Hizmetler",
   servicesHeadline: "Hedefleriniz için",
-  servicesHeadlineAccent: "ölçülebilir hizmetlerimiz",
+  servicesHeadlineAccent: "ölçülebilir hizmetler",
   servicesIntro:
     "Markanızın dijital ihtiyaçlarını web, uygulama, SEO ve bakım gibi alanlarda tek çatı altında ele alıyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar her aşamada performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
   servicesBullets: [
@@ -10,11 +10,11 @@ export const servicesHomeTr = {
     "Yayın sonrası teknik destek dahil",
   ],
   servicesCta: "Birlikte planlayalım",
-  servicesAllCta: "Tüm hizmetlerimiz",
+  servicesAllCta: "Tüm hizmetler",
   servicesSliderPrev: "Önceki hizmet",
   servicesSliderNext: "Sonraki hizmet",
   servicesSliderDot: "Hizmet",
-  servicesSliderRegion: "Hizmetlerimiz karuseli",
+  servicesSliderRegion: "Hizmetler karuseli",
   servicesSliderStatus: "{label}, {current} / {total}",
   servicesSliderActivate: "{title} hizmetini göster",
   servicesWebTitle: "Web Sitesi Geliştirme",

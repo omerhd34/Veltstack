@@ -25,7 +25,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
         {t("servicesCta")}
       </PrimaryCtaLink>
       <PrimaryCtaLink
-        href="/hizmetlerimiz"
+        href="/hizmetler"
         variant="glass"
         showArrow={false}
         leadingIcon={<LuCompass className="size-5" aria-hidden />}
@@ -55,7 +55,11 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
           <div className="relative z-10 mt-8 hidden lg:block">{cta}</div>
         </SectionScrollReveal>
 
-        <SectionScrollReveal direction="right" delay={0.14} className="flex flex-col gap-6">
+        <SectionScrollReveal
+          direction="right"
+          delay={0.14}
+          className="flex flex-col gap-6"
+        >
           <p className="text-[0.9375rem] leading-[1.9] text-white/55">
             {t("servicesIntro")}
           </p>
