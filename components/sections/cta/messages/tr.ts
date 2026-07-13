@@ -7,5 +7,5 @@ export const ctaHomeTr = {
   ctaPoint1: "Ücretsiz keşif görüşmesi",
   ctaPoint2: "24 saat içinde geri dönüş",
   ctaButton: "İletişime Geç",
-  ctaSecondary: "Projelerimizi İncele",
+  ctaSecondary: "Projeleri İncele",
 } as const;
