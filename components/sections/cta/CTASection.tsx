@@ -41,7 +41,7 @@ export async function CTASection({ className }: CTASectionProps) {
       />
 
       <SiteContainer className="relative">
-        <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-[#0A0A0F] px-6 py-14 shadow-[0_24px_80px_rgb(58_107_82/0.12)] md:px-14 md:py-20">
+        <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-[#0A0A0F] px-5 py-12 shadow-[0_24px_80px_rgb(58_107_82/0.12)] sm:rounded-3xl sm:px-8 sm:py-14 md:px-14 md:py-20">
           <div
             aria-hidden
             className="pointer-events-none absolute left-1/2 top-0 size-[480px] -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
@@ -62,7 +62,7 @@ export async function CTASection({ className }: CTASectionProps) {
 
             <h2
               id="home-cta-title"
-              className="mt-7 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-[3.25rem]"
+              className="mt-6 font-(family-name:--font-heading) text-3xl font-bold leading-[1.1] tracking-tight text-white sm:mt-7 sm:text-4xl md:text-[2.5rem] lg:text-5xl xl:text-[3rem] 2xl:text-[3.25rem] 2xl:leading-[1.08]"
             >
               {t("ctaTitleLead")}{" "}
               <span className="bg-linear-to-r from-emerald-200 via-emerald-300 to-brand-accent bg-clip-text text-transparent">
@@ -76,11 +76,12 @@ export async function CTASection({ className }: CTASectionProps) {
 
             <CTAHighlights points={[t("ctaPoint1"), t("ctaPoint2")]} />
 
-            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <div className="mt-8 flex w-full flex-col items-stretch gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:items-center sm:justify-center sm:gap-4">
               <PrimaryCtaLink
                 href="/iletisim"
                 variant="accent"
-                className="h-13 px-10"
+                wrapperClassName="w-full sm:w-auto"
+                className="h-12 w-full justify-center px-8 sm:h-13 sm:w-auto sm:px-10"
                 showArrow={false}
                 leadingIcon={<LuMessageCircle className="size-5" aria-hidden />}
               >
@@ -89,6 +90,8 @@ export async function CTASection({ className }: CTASectionProps) {
               <PrimaryCtaLink
                 href="/projeler#projects-showcase"
                 variant="glass"
+                wrapperClassName="w-full sm:w-auto"
+                className="w-full justify-center sm:w-auto"
                 showArrow={false}
                 leadingIcon={<LuEye className="size-5" aria-hidden />}
               >
