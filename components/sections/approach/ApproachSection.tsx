@@ -18,7 +18,7 @@ export async function ApproachSection({ className }: ApproachSectionProps) {
     <section
       id="approach"
       className={cn(
-        "relative scroll-mt-16 overflow-hidden bg-[#E4F0EA] py-24 md:py-32",
+        "relative scroll-mt-16 overflow-hidden bg-[#E4F0EA] py-16 sm:py-24 md:py-32",
         className,
       )}
       aria-labelledby="approach-section-title"
@@ -49,16 +49,16 @@ export async function ApproachSection({ className }: ApproachSectionProps) {
 
           <h2
             id="approach-section-title"
-            className="mt-6 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl lg:text-5xl"
+            className="mt-5 font-(family-name:--font-heading) text-[1.75rem] font-bold leading-[1.15] tracking-tight text-[#0A0A0F] sm:mt-6 sm:text-3xl md:text-4xl lg:text-5xl"
           >
             {t("titleLead")}
             <br />
-            <span className="font-serif font-normal italic text-brand-accent">
+            <span className="font-serif text-[0.92em] font-normal italic text-brand-accent sm:text-[0.95em]">
               {t("titleAccent")}
             </span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-foreground/62 md:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-[0.9375rem] leading-relaxed text-foreground/65 sm:mt-5 sm:text-base md:text-lg md:text-foreground/62">
             {t("subtitle")}
           </p>
         </div>
