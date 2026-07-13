@@ -406,7 +406,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
               ? null
               : isDragMode
                 ? cn(
-                    "w-[min(88vw,480px)]",
+                    "w-[min(92vw,480px)] sm:w-[min(88vw,480px)]",
                     alignStart ? "snap-start" : "snap-center",
                   )
                 : "w-full md:w-[min(72vw,480px)]",
