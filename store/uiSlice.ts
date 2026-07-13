@@ -16,11 +16,16 @@ interface UiState {
   setBlogMenuOpen: (open: boolean) => void
   openBlogMenu: () => void
   scheduleCloseBlogMenu: () => void
+  faqMenuOpen: boolean
+  setFaqMenuOpen: (open: boolean) => void
+  openFaqMenu: () => void
+  scheduleCloseFaqMenu: () => void
 }
 
 let servicesMenuCloseTimer: ReturnType<typeof setTimeout> | undefined
 let projectsMenuCloseTimer: ReturnType<typeof setTimeout> | undefined
 let blogMenuCloseTimer: ReturnType<typeof setTimeout> | undefined
+let faqMenuCloseTimer: ReturnType<typeof setTimeout> | undefined
 
 function clearMegaMenuTimers() {
   if (servicesMenuCloseTimer) {
@@ -35,6 +40,21 @@ function clearMegaMenuTimers() {
     clearTimeout(blogMenuCloseTimer)
     blogMenuCloseTimer = undefined
   }
+  if (faqMenuCloseTimer) {
+    clearTimeout(faqMenuCloseTimer)
+    faqMenuCloseTimer = undefined
+  }
+}
+
+function closeOtherMegaMenus(
+  current: "services" | "projects" | "blog" | "faq",
+) {
+  return {
+    servicesMenuOpen: current === "services",
+    projectsMenuOpen: current === "projects",
+    blogMenuOpen: current === "blog",
+    faqMenuOpen: current === "faq",
+  }
 }
 
 export const useUiStore = create<UiState>((set) => ({
@@ -48,10 +68,11 @@ export const useUiStore = create<UiState>((set) => ({
       servicesMenuOpen: open,
       projectsMenuOpen: open ? false : state.projectsMenuOpen,
       blogMenuOpen: open ? false : state.blogMenuOpen,
+      faqMenuOpen: open ? false : state.faqMenuOpen,
     })),
   openServicesMenu: () => {
     clearMegaMenuTimers()
-    set({ servicesMenuOpen: true, projectsMenuOpen: false, blogMenuOpen: false })
+    set(closeOtherMegaMenus("services"))
   },
   scheduleCloseServicesMenu: () => {
     if (servicesMenuCloseTimer) clearTimeout(servicesMenuCloseTimer)
@@ -66,10 +87,11 @@ export const useUiStore = create<UiState>((set) => ({
       projectsMenuOpen: open,
       servicesMenuOpen: open ? false : state.servicesMenuOpen,
       blogMenuOpen: open ? false : state.blogMenuOpen,
+      faqMenuOpen: open ? false : state.faqMenuOpen,
     })),
   openProjectsMenu: () => {
     clearMegaMenuTimers()
-    set({ projectsMenuOpen: true, servicesMenuOpen: false, blogMenuOpen: false })
+    set(closeOtherMegaMenus("projects"))
   },
   scheduleCloseProjectsMenu: () => {
     if (projectsMenuCloseTimer) clearTimeout(projectsMenuCloseTimer)
@@ -84,16 +106,36 @@ export const useUiStore = create<UiState>((set) => ({
       blogMenuOpen: open,
       servicesMenuOpen: open ? false : state.servicesMenuOpen,
       projectsMenuOpen: open ? false : state.projectsMenuOpen,
+      faqMenuOpen: open ? false : state.faqMenuOpen,
     })),
   openBlogMenu: () => {
     clearMegaMenuTimers()
-    set({ blogMenuOpen: true, servicesMenuOpen: false, projectsMenuOpen: false })
+    set(closeOtherMegaMenus("blog"))
   },
   scheduleCloseBlogMenu: () => {
     if (blogMenuCloseTimer) clearTimeout(blogMenuCloseTimer)
     blogMenuCloseTimer = setTimeout(() => {
       set({ blogMenuOpen: false })
       blogMenuCloseTimer = undefined
+    }, 250)
+  },
+  faqMenuOpen: false,
+  setFaqMenuOpen: (open) =>
+    set((state) => ({
+      faqMenuOpen: open,
+      servicesMenuOpen: open ? false : state.servicesMenuOpen,
+      projectsMenuOpen: open ? false : state.projectsMenuOpen,
+      blogMenuOpen: open ? false : state.blogMenuOpen,
+    })),
+  openFaqMenu: () => {
+    clearMegaMenuTimers()
+    set(closeOtherMegaMenus("faq"))
+  },
+  scheduleCloseFaqMenu: () => {
+    if (faqMenuCloseTimer) clearTimeout(faqMenuCloseTimer)
+    faqMenuCloseTimer = setTimeout(() => {
+      set({ faqMenuOpen: false })
+      faqMenuCloseTimer = undefined
     }, 250)
   },
 }))
