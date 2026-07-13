@@ -33,7 +33,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/20 to-transparent"
       />
       <SiteContainer className="relative z-10 w-full">
-        <div className="grid items-stretch gap-16 lg:grid-cols-2 lg:gap-20">
+        <div className="grid items-stretch gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16 xl:gap-20">
           <SectionScrollReveal direction="left">
             <WhoWeAreLeftColumn
               badge={t("whoWeAreTitle")}

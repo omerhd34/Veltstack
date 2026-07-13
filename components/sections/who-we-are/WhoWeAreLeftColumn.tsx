@@ -23,7 +23,7 @@ export function WhoWeAreLeftColumn({
 
       <h2
         id="who-we-are-title"
-        className="mt-8 w-full font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-[#0A0A0F] md:text-5xl lg:text-[3.25rem]"
+        className="mt-6 w-full font-(family-name:--font-heading) text-3xl font-bold leading-[1.1] tracking-tight text-[#0A0A0F] sm:mt-8 sm:text-4xl md:text-[2.5rem] lg:text-5xl xl:text-[3rem] 2xl:text-[3.25rem] 2xl:leading-[1.08]"
       >
         {headline}
         <br />

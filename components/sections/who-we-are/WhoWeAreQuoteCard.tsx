@@ -53,16 +53,8 @@ export function WhoWeAreQuoteCard({
       />
 
       <blockquote className="relative px-5 md:px-6">
-        <p className="text-lg leading-[1.9] text-foreground/80 md:text-xl md:leading-[1.88]">
-          <span
-            aria-hidden
-            className="mr-1 font-(family-name:--font-heading) text-3xl leading-none text-brand-accent/35 md:text-4xl"
-          ></span>
+        <p className="text-base leading-[1.75] text-foreground/80 sm:text-lg sm:leading-[1.9] md:text-xl md:leading-[1.88]">
           {description}
-          <span
-            aria-hidden
-            className="ml-0.5 font-(family-name:--font-heading) text-3xl leading-none text-brand-accent/35 md:text-4xl"
-          ></span>
         </p>
       </blockquote>
 
