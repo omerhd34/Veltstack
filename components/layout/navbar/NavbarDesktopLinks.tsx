@@ -50,13 +50,13 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
 
   const servicesActive =
     servicesMenuOpen ||
-    pathname === "/hizmetlerimiz" ||
-    pathname.startsWith("/hizmetlerimiz/");
+    pathname === "/hizmetler" ||
+    pathname.startsWith("/hizmetler/");
 
   const projectsActive =
     projectsMenuOpen ||
-    pathname === "/projelerimiz" ||
-    pathname.startsWith("/projelerimiz/");
+    pathname === "/projeler" ||
+    pathname.startsWith("/projeler/");
 
   const blogActive =
     blogMenuOpen ||
@@ -91,7 +91,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
         onFocusCapture={openServicesMenu}
       >
         <Link
-          href="/hizmetlerimiz"
+          href="/hizmetler"
           aria-expanded={servicesMenuOpen}
           aria-haspopup="true"
           className={navItemClass(servicesActive)}
@@ -110,7 +110,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
         onFocusCapture={openProjectsMenu}
       >
         <Link
-          href="/projelerimiz"
+          href="/projeler"
           aria-expanded={projectsMenuOpen}
           aria-haspopup="true"
           className={navItemClass(projectsActive)}

@@ -58,9 +58,9 @@ export function NavbarLinks({
     pathname === href || pathname.startsWith(`${href}/`);
 
   const servicesActive =
-    pathname === "/hizmetlerimiz" || pathname.startsWith("/hizmetlerimiz/");
+    pathname === "/hizmetler" || pathname.startsWith("/hizmetler/");
   const projectsActive =
-    pathname === "/projelerimiz" || pathname.startsWith("/projelerimiz/");
+    pathname === "/projeler" || pathname.startsWith("/projeler/");
   const faqActive = pathname === "/sss" || pathname.startsWith("/sss/");
   const blogActive =
     pathname === "/makaleler" || pathname.startsWith("/makaleler/");
@@ -75,7 +75,7 @@ export function NavbarLinks({
         <li>
           <div className="flex items-center gap-1">
             <Link
-              href="/hizmetlerimiz"
+              href="/hizmetler"
               onClick={onNavigate}
               className={cn(navItemClass(servicesActive, "mobile"), "flex-1")}
             >
@@ -95,10 +95,10 @@ export function NavbarLinks({
             <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
               <li>
                 <Link
-                  href="/hizmetlerimiz"
+                  href="/hizmetler"
                   onClick={onNavigate}
                   className={navItemClass(
-                    isActive("/hizmetlerimiz"),
+                    isActive("/hizmetler"),
                     "mobile-nested",
                   )}
                 >
@@ -126,7 +126,7 @@ export function NavbarLinks({
         <li>
           <div className="flex items-center gap-1">
             <Link
-              href="/projelerimiz"
+              href="/projeler"
               onClick={onNavigate}
               className={cn(navItemClass(projectsActive, "mobile"), "flex-1")}
             >
@@ -146,10 +146,10 @@ export function NavbarLinks({
             <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
               <li>
                 <Link
-                  href="/projelerimiz"
+                  href="/projeler"
                   onClick={onNavigate}
                   className={navItemClass(
-                    isActive("/projelerimiz"),
+                    isActive("/projeler"),
                     "mobile-nested",
                   )}
                 >
