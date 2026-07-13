@@ -56,7 +56,9 @@ export async function CTASection({ className }: CTASectionProps) {
           />
 
           <div className="relative mx-auto max-w-3xl text-center">
-            <SectionBadge>{toLatinUppercase(t("ctaBadge"), locale)}</SectionBadge>
+            <SectionBadge>
+              {toLatinUppercase(t("ctaBadge"), locale)}
+            </SectionBadge>
 
             <h2
               id="home-cta-title"
@@ -85,7 +87,7 @@ export async function CTASection({ className }: CTASectionProps) {
                 {t("ctaButton")}
               </PrimaryCtaLink>
               <PrimaryCtaLink
-                href="/projeler"
+                href="/projeler#projects-showcase"
                 variant="glass"
                 showArrow={false}
                 leadingIcon={<LuEye className="size-5" aria-hidden />}
