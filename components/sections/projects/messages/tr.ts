@@ -1,7 +1,7 @@
 export const projectsHomeTr = {
   projectsHeadline: "İş hedeflerine",
-  projectsHeadlineAccent: "hizmet eden projelerimiz",
-  projectsCta: "Tüm projelerimizi incele",
+  projectsHeadlineAccent: "hizmet eden projeler",
+  projectsCta: "Tüm projeleri incele",
   projectIqfinansTitle: "IQfinansAI | AI Finans Platformu",
   projectIqfinansDesc:
     "Yapay zekâ destekli kişisel finans platformu. Gelir, gider, bütçe ve borç-alacak yönetimini tek panelde sunuyor; harcama analizleri finansal kararları netleştiriyor.",
