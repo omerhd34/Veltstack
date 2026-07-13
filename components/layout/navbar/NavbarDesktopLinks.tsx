@@ -60,8 +60,8 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
 
   const blogActive =
     blogMenuOpen ||
-    pathname === "/makaleler" ||
-    pathname.startsWith("/makaleler/");
+    pathname === "/blog" ||
+    pathname.startsWith("/blog/");
 
   const faqActive =
     faqMenuOpen || pathname === "/sss" || pathname.startsWith("/sss/");

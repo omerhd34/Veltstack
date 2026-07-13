@@ -17,14 +17,14 @@ export function NavbarBlogMegaMenuPanel() {
 
   return (
     <NavbarMegaMenuShell
-      allHref="/makaleler"
+      allHref="/blog"
       allLabel={tNav("blogAll")}
       onNavigate={closeMenu}
     >
       {posts.map((post) => (
         <NavbarMegaMenuItem
           key={post.slug}
-          href={`/makaleler/${post.slug}`}
+          href={`/blog/${post.slug}`}
           title={post.title}
           icon={getFooterBlogCategoryIcon(post.category)}
           onNavigate={closeMenu}
