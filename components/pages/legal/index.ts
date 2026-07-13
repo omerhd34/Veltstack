@@ -1,2 +1,3 @@
 export { LegalPageView } from "./LegalPageView";
-export type { LegalPageKey } from "./types";
+export { LegalRichText } from "./LegalRichText";
+export type { LegalPageKey, LegalSection } from "./types";
