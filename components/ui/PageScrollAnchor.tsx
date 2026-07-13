@@ -7,6 +7,6 @@ interface PageScrollAnchorProps {
 
 export function PageScrollAnchor({ id, className }: PageScrollAnchorProps) {
   return (
-    <div id={id} aria-hidden className={cn("h-0 scroll-mt-18", className)} />
+    <div id={id} aria-hidden className={cn("h-0 scroll-mt-10", className)} />
   );
 }
