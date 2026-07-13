@@ -12,16 +12,19 @@ export const faqTr = {
       title: "Genel",
       items: [
         {
+          slug: "velstack-nedir",
           question: "Veltstack nedir?",
           answer:
             "Veltstack, Ömer Halis Demir tarafından yönetilen bir full stack geliştirici markasıdır. Web sitesi, mobil uygulama, SEO, teknik denetim ve bakım hizmetlerini tek çatı altında sunar; ajans tarzı profesyonel sunumla solo geliştirici esnekliğini birleştirir.",
         },
         {
+          slug: "projelerde-kim-calisyor",
           question: "Projelerde kim çalışıyor?",
           answer:
             "Tüm projelerde doğrudan Ömer Halis Demir ile çalışırsınız. Tasarım, geliştirme, yayın ve bakım süreçlerinde tek muhatap olursunuz; gerektiğinde güvenilir uzmanlarla sınırlı ve şeffaf iş birliği yapılır.",
         },
         {
+          slug: "hangi-sektorler",
           question: "Hangi sektörlere hizmet veriyorsunuz?",
           answer:
             "FinTech, e-ticaret, kurumsal tanıtım, SaaS, sağlık ve hizmet sektörleri başta olmak üzere farklı alanlarda proje deneyimimiz var. Sektörünüze özel ihtiyaçları keşif görüşmesinde birlikte netleştiriyoruz.",
@@ -32,21 +35,25 @@ export const faqTr = {
       title: "Hizmetler ve Süreç",
       items: [
         {
+          slug: "hangi-hizmetler",
           question: "Hangi hizmetleri sunuyorsunuz?",
           answer:
             "Web sitesi geliştirme, web ve uygulama yenileme, mobil uygulama geliştirme, SEO hizmetleri, teknik denetim ile bakım ve destek paketleri sunuyoruz. Her hizmetin kapsamı ve paket detayları ilgili hizmet sayfalarında yer alır.",
         },
         {
+          slug: "proje-sureci",
           question: "Proje süreci nasıl işliyor?",
           answer:
             "İlk adımda ihtiyaç analizi ve keşif görüşmesi yapılır. Ardından kapsam, takvim ve teklif paylaşılır. Onay sonrası tasarım ve geliştirme aşamalarına geçilir; düzenli demo ve geri bildirim döngüleriyle ilerlenir. Yayın sonrası bakım ve destek seçenekleri sunulur.",
         },
         {
+          slug: "teslim-suresi",
           question: "Ne kadar sürede teslim edilir?",
           answer:
             "Süre proje kapsamına bağlıdır. Tanıtım web sitesi genellikle 2–6 hafta, kurumsal veya e-ticaret projeleri 6–12 hafta, mobil uygulamalar ise kapsama göre daha uzun sürebilir. Keşif sonrası net bir takvim paylaşılır.",
         },
         {
+          slug: "teknolojiler",
           question: "Hangi teknolojileri kullanıyorsunuz?",
           answer:
             "Web tarafında Next.js, React ve TypeScript; mobilde React Native veya platforma uygun native çözümler; backend'de Node.js ve Prisma; barındırmada Vercel ve güvenilir altyapı sağlayıcıları tercih edilir. Proje ihtiyacına göre stack özelleştirilir.",
@@ -57,16 +64,19 @@ export const faqTr = {
       title: "Fiyatlandırma ve Sözleşme",
       items: [
         {
+          slug: "fiyatlar-sabit-mi",
           question: "Fiyatlar sabit mi?",
           answer:
             "Hizmet sayfalarındaki paketler referans fiyat aralıkları sunar. Kesin teklif, proje kapsamı, entegrasyonlar ve teslim süresine göre özelleştirilir. İletişim formu veya doğrudan e-posta ile ücretsiz ön değerlendirme alabilirsiniz.",
         },
         {
+          slug: "odeme-nasil-yapilir",
           question: "Ödeme nasıl yapılır?",
           answer:
             "Genellikle proje başlangıcında avans, ara kilometre taşlarında kısmi ödemeler ve teslimde kalan bakiye şeklinde ilerlenir. Büyük projelerde taksitlendirme mümkündür; detaylar yazılı teklif ve sözleşmede belirtilir.",
         },
         {
+          slug: "sozlesme-imzalaniyor-mu",
           question: "Sözleşme imzalanıyor mu?",
           answer:
             "Evet. Kapsam, teslimat, revizyon hakları, fikri mülkiyet ve gizlilik maddelerini içeren yazılı sözleşme veya hizmet sözleşmesi imzalanır. Bu sayede her iki tarafın hakları korunur.",
@@ -77,16 +87,19 @@ export const faqTr = {
       title: "Yayın Sonrası ve Destek",
       items: [
         {
+          slug: "yayin-sonrasi-destek",
           question: "Yayın sonrası destek veriyor musunuz?",
           answer:
             "Evet. Bakım ve destek paketleriyle güvenlik güncellemeleri, küçük içerik değişiklikleri, performans izleme ve teknik destek sunuyoruz. Paket kapsamı ihtiyacınıza göre aylık veya yıllık olarak planlanabilir.",
         },
         {
+          slug: "kaynak-kod-ve-erisimler",
           question: "Kaynak kod ve erişimler bana devrediliyor mu?",
           answer:
             "Proje sözleşmesinde belirtildiği şekilde kaynak kod, domain, hosting ve üçüncü taraf hesap erişimleri size devredilir. Veltstack, müşterinin tüm dijital varlıklarına tam sahiplik sağlamayı hedefler.",
         },
         {
+          slug: "mevcut-site-yenileme",
           question: "Mevcut sitemi yenileyebilir misiniz?",
           answer:
             "Evet. Web ve uygulama yenileme hizmetimiz kapsamında mevcut sitenizin teknik denetimini yapar, performans ve SEO açıklarını raporlar ve modern stack ile yeniden yapılandırma önerisi sunarız.",
