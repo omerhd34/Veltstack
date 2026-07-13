@@ -24,7 +24,7 @@ export async function BlogPreviewSection({
     slug: post.slug,
     title: locale === "tr" ? post.titleTr : post.titleEn,
     excerpt: locale === "tr" ? post.excerptTr : post.excerptEn,
-    href: `/makaleler/${post.slug}`,
+    href: `/blog/${post.slug}`,
     image: getBlogListImageUrl(post.imageUrl),
     readingTimeLabel: t("readingTime", { minutes: post.readingTime }),
   }));

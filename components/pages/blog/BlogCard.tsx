@@ -146,7 +146,7 @@ export function BlogCard({
 
   return (
     <Link
-      href={`/makaleler/${post.slug}`}
+      href={`/blog/${post.slug}`}
       className={cn(
         "group relative flex rounded-3xl bg-white",
         "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
