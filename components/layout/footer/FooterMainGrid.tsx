@@ -19,18 +19,20 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
   const corporateLabels = t.raw("corporateLabels") as Record<string, string>;
   const legalLabels = t.raw("legalLabels") as Record<string, string>;
 
-  const footerLinkClassName =
-    "inline-flex items-center gap-2.5 text-sm text-background/60 transition-colors hover:text-background";
+  const footerLinkClassName = "inline-flex items-center gap-2.5 text-sm text-background/60 transition-colors hover:text-background";
 
-  const footerColumnClassName = "w-full min-w-[220px] sm:w-auto";
+  const footerColumnClassName = "w-full sm:w-fit";
 
   const footerListClassName = "space-y-3";
 
   return (
     <div
-      className={`flex flex-wrap justify-center gap-x-16 gap-y-10 lg:gap-x-32 ${className ?? ""}`}
+      className={`grid grid-cols-1 gap-y-10 sm:grid-cols-3 sm:gap-x-16 lg:gap-x-24 ${className ?? ""}`}
     >
-      <FooterColumn title={t("servicesTitle")} className={footerColumnClassName}>
+      <FooterColumn
+        title={t("servicesTitle")}
+        className={`${footerColumnClassName} sm:justify-self-start`}
+      >
         <ul className={footerListClassName}>
           {footerServiceItems.map((item) => {
             const Icon = item.icon;
@@ -49,7 +51,10 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
         </ul>
       </FooterColumn>
 
-      <FooterColumn title={t("corporateTitle")} className={footerColumnClassName}>
+      <FooterColumn
+        title={t("corporateTitle")}
+        className={`${footerColumnClassName} sm:justify-self-center`}
+      >
         <ul className={footerListClassName}>
           {footerCorporateItems.map((item) => {
             const Icon = item.icon;
@@ -68,7 +73,10 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
         </ul>
       </FooterColumn>
 
-      <FooterColumn title={t("legalTitle")} className={footerColumnClassName}>
+      <FooterColumn
+        title={t("legalTitle")}
+        className={`${footerColumnClassName} sm:justify-self-end`}
+      >
         <ul className={footerListClassName}>
           {footerLegalItems.map((item) => {
             const Icon = item.icon;
