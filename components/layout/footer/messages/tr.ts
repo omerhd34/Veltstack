@@ -14,7 +14,7 @@ export const footerTr = {
   corporateLabels: {
     about: "Hakkımızda",
     projects: "Projeler",
-    faq: "Sıkça Sorulan Sorular",
+    faq: "Sık Sorulan Sorular",
     blog: "Makaleler",
     contact: "İletişim",
   },
