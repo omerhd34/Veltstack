@@ -34,7 +34,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>Backend Nedir?</h2>
 <p>Backend (sunucu tarafı), kullanıcının göremediği katmandır. Form gönderimi, admin paneli işlemleri, sipariş kaydı, e-posta tetikleme ve üçüncü parti API çağrıları burada gerçekleşir. İyi tasarlanmış bir backend; güvenlik, veri bütünlüğü ve ölçeklenebilirliğin temelidir.</p>
-<p>Frontend tarafı için <a href="/makaleler/react-nextjs">React & Next.js</a> rehberimize bakabilirsiniz; bu yazı sunucu katmanına odaklanır.</p>
+<p>Frontend tarafı için <a href="/blog/react-nextjs">React & Next.js</a> rehberimize bakabilirsiniz; bu yazı sunucu katmanına odaklanır.</p>
 
 <h2>Node.js Nedir?</h2>
 <p><strong>Node.js</strong>, JavaScript'i tarayıcı dışında sunucuda çalıştıran açık kaynaklı bir <strong>runtime</strong> ortamıdır. Tek dil (TypeScript/JavaScript) ile hem frontend hem backend geliştirmeyi mümkün kılar; ekip verimliliğini artırır.</p>
@@ -51,7 +51,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li><strong>schema.prisma:</strong> Modeller, ilişkiler ve enum'lar tek dosyada tanımlanır.</li>
 <li><strong>Prisma Client:</strong> Otomatik üretilen, tam tipli veritabanı istemcisi; IntelliSense desteği sunar.</li>
 <li><strong>Migration:</strong> Şema değişiklikleri versiyonlanır; ekip içi ve production deploy'da tutarlılık sağlar.</li>
-<li><strong>Çoklu veritabanı:</strong> MySQL, PostgreSQL, MongoDB ve SQLite desteklenir. Veritabanı seçimi için <a href="/makaleler/veritabani-secimi">Veritabanı Seçimi</a> rehberimize bakın.</li>
+<li><strong>Çoklu veritabanı:</strong> MySQL, PostgreSQL, MongoDB ve SQLite desteklenir. Veritabanı seçimi için <a href="/blog/veritabani-secimi">Veritabanı Seçimi</a> rehberimize bakın.</li>
 </ul>
 <p>Veltstack projelerinde Prisma'yı MySQL ile kullanıyoruz; çok dilli alanlar <code>_tr</code> / <code>_en</code> suffix yapısıyla modellenir.</p>
 
@@ -149,7 +149,7 @@ export const blogPostEntry: BlogPostEntry = {
 <h2>Node.js + Prisma Ne Zaman Tercih Edilmeli?</h2>
 <ul>
 <li><strong>Full-stack Next.js projeleri:</strong> Tek repo, tek dil, Route Handlers + Prisma.</li>
-<li><strong>Admin paneli ve CMS:</strong> CRUD yoğun <a href="/makaleler/ozel-yazilim-cms">özel yazılım</a> projelerinde type-safe veri erişimi.</li>
+<li><strong>Admin paneli ve CMS:</strong> CRUD yoğun <a href="/blog/ozel-yazilim-cms">özel yazılım</a> projelerinde type-safe veri erişimi.</li>
 <li><strong>E-ticaret ve ödeme:</strong> Sipariş, stok ve kullanıcı verisi ilişkisel yapıda; Prisma transaction desteği kritik.</li>
 <li><strong>Çok dilli içerik:</strong> <code>title_tr</code>, <code>title_en</code> gibi alanlar şemada net modellenir.</li>
 <li><strong>API + mobil uygulama:</strong> Express veya Route Handlers ile REST API; React Native istemciye servis edilir.</li>
@@ -157,7 +157,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <div class="blog-callout">
   <p class="blog-callout-title">Pratik ipucu</p>
-  <p>Vercel gibi serverless ortamda Prisma kullanırken connection pool limitlerine dikkat edin. Neon, PlanetScale veya Prisma Accelerate gibi çözümler bağlantı yönetimini kolaylaştırır. Detay: <a href="/makaleler/vercel-de-yayin">Vercel'de Yayın</a>.</p>
+  <p>Vercel gibi serverless ortamda Prisma kullanırken connection pool limitlerine dikkat edin. Neon, PlanetScale veya Prisma Accelerate gibi çözümler bağlantı yönetimini kolaylaştırır. Detay: <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a>.</p>
 </div>
 
 <h2>Sık Yapılan Hatalar</h2>
@@ -187,7 +187,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>What Is the Backend?</h2>
 <p>The backend (server side) is the layer users do not see. Form submissions, admin panel actions, order records, email triggers and third-party API calls happen here. A well-designed backend is the foundation of security, data integrity and scalability.</p>
-<p>For the frontend side see our <a href="/makaleler/react-nextjs">React & Next.js</a> guide; this article focuses on the server layer.</p>
+<p>For the frontend side see our <a href="/blog/react-nextjs">React & Next.js</a> guide; this article focuses on the server layer.</p>
 
 <h2>What Is Node.js?</h2>
 <p><strong>Node.js</strong> is an open-source <strong>runtime</strong> that runs JavaScript on the server outside the browser. It enables frontend and backend development in one language (TypeScript/JavaScript), improving team productivity.</p>
@@ -204,7 +204,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li><strong>schema.prisma:</strong> Models, relations and enums defined in one file.</li>
 <li><strong>Prisma Client:</strong> Auto-generated, fully typed database client with IntelliSense support.</li>
 <li><strong>Migrations:</strong> Schema changes are versioned for consistency across teams and production deploys.</li>
-<li><strong>Multiple databases:</strong> Supports MySQL, PostgreSQL, MongoDB and SQLite. See our <a href="/makaleler/veritabani-secimi">Choosing a Database</a> guide.</li>
+<li><strong>Multiple databases:</strong> Supports MySQL, PostgreSQL, MongoDB and SQLite. See our <a href="/blog/veritabani-secimi">Choosing a Database</a> guide.</li>
 </ul>
 <p>At Veltstack we use Prisma with MySQL; multilingual fields are modeled with <code>_tr</code> / <code>_en</code> suffixes.</p>
 
@@ -302,7 +302,7 @@ export const blogPostEntry: BlogPostEntry = {
 <h2>When to Choose Node.js + Prisma</h2>
 <ul>
 <li><strong>Full-stack Next.js projects:</strong> Single repo, single language, Route Handlers + Prisma.</li>
-<li><strong>Admin panel and CMS:</strong> Type-safe data access for CRUD-heavy <a href="/makaleler/ozel-yazilim-cms">custom software</a> projects.</li>
+<li><strong>Admin panel and CMS:</strong> Type-safe data access for CRUD-heavy <a href="/blog/ozel-yazilim-cms">custom software</a> projects.</li>
 <li><strong>E-commerce and payments:</strong> Order, inventory and user data in a relational structure; Prisma transaction support is critical.</li>
 <li><strong>Multilingual content:</strong> Fields like <code>title_tr</code> and <code>title_en</code> are modeled clearly in the schema.</li>
 <li><strong>API + mobile app:</strong> REST API via Express or Route Handlers; served to React Native clients.</li>
@@ -310,7 +310,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <div class="blog-callout">
   <p class="blog-callout-title">Practical tip</p>
-  <p>When using Prisma on serverless platforms like Vercel, watch connection pool limits. Solutions like Neon, PlanetScale or Prisma Accelerate simplify connection management. See <a href="/makaleler/vercel-de-yayin">Publishing on Vercel</a>.</p>
+  <p>When using Prisma on serverless platforms like Vercel, watch connection pool limits. Solutions like Neon, PlanetScale or Prisma Accelerate simplify connection management. See <a href="/blog/vercel-de-yayin">Publishing on Vercel</a>.</p>
 </div>
 
 <h2>Common Mistakes</h2>

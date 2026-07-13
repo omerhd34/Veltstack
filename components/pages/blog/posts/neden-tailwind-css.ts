@@ -24,7 +24,7 @@ export const blogPostEntry: BlogPostEntry = {
   publishedAt: "2026-07-07",
   content: {
     tr: `
-<p>Web projesine başlarken sık sorulan sorulardan biri şudur: arayüzü hangi <strong>CSS framework'ü</strong> ile inşa edeceğiz? Yıllarca <strong>Bootstrap</strong> bu alanda standarttı; bugün ise <strong>Tailwind CSS</strong> ve benzeri utility-first çözümler modern stack'lerin vazgeçilmezi haline geldi. Bu yazıda Bootstrap, Tailwind ve alternatifleri karşılaştırıyor; Veltstack olarak neden Tailwind'i tercih ettiğimizi açıklıyoruz.</p>
+<p>Web projesine başlarken sıkça sorulan sorulardan biri şudur: arayüzü hangi <strong>CSS framework'ü</strong> ile inşa edeceğiz? Yıllarca <strong>Bootstrap</strong> bu alanda standarttı; bugün ise <strong>Tailwind CSS</strong> ve benzeri utility-first çözümler modern stack'lerin vazgeçilmezi haline geldi. Bu yazıda Bootstrap, Tailwind ve alternatifleri karşılaştırıyor; Veltstack olarak neden Tailwind'i tercih ettiğimizi açıklıyoruz.</p>
 
 <div class="blog-stats">
   <div class="blog-stat"><span class="blog-stat-value">Bootstrap</span><span class="blog-stat-label">Hazır bileşen kütüphanesi</span></div>

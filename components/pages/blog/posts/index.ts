@@ -53,5 +53,5 @@ export function getBlogArticleContent(
 
   const content = locale === "tr" ? entry.content.tr : entry.content.en;
   const prefix = locale === "tr" ? "" : "/en";
-  return content.replace(/href="\/makaleler\//g, `href="${prefix}/makaleler/`);
+  return content.replace(/href="\/blog\//g, `href="${prefix}/blog/`);
 }

@@ -37,7 +37,7 @@ export const blogPostEntry: BlogPostEntry = {
 ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 
 <h2>Freelancer mı, Ajans mı?</h2>
-<p>Freelancer platformları hızlı ve ekonomik çözümler sunar; ancak her proje için yeterli olmayabilir. Web + mobil + <a href="/makaleler/seo">SEO</a> + bakım gibi çok disiplinli projelerde tek freelancer yerine entegre hizmet veren bir ekip daha verimli olabilir.</p>
+<p>Freelancer platformları hızlı ve ekonomik çözümler sunar; ancak her proje için yeterli olmayabilir. Web + mobil + <a href="/blog/seo">SEO</a> + bakım gibi çok disiplinli projelerde tek freelancer yerine entegre hizmet veren bir ekip daha verimli olabilir.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Veltstack perspektifi</p>
@@ -53,7 +53,7 @@ ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 </ul>
 
 <h2>Özel Yazılım Projelerinde</h2>
-<p>Kurumsal web sitesi veya <a href="/makaleler/ozel-yazilim-cms">özel yazılım</a> projelerinde freelancer platformları genellikle kısa vadeli görevler için uygundur. Mimari karar, güvenlik ve uzun vadeli bakım için <a href="/makaleler/geleneksel-yazilim-yapay-zeka">insan geliştirici odaklı</a> bir ekip tercih etmek daha doğrudur.</p>
+<p>Kurumsal web sitesi veya <a href="/blog/ozel-yazilim-cms">özel yazılım</a> projelerinde freelancer platformları genellikle kısa vadeli görevler için uygundur. Mimari karar, güvenlik ve uzun vadeli bakım için <a href="/blog/geleneksel-yazilim-yapay-zeka">insan geliştirici odaklı</a> bir ekip tercih etmek daha doğrudur.</p>
 
 <h2>Sonuç</h2>
 <p>En iyi freelancer sitesi ihtiyacınıza ve bütçenize göre değişir. Küçük tek seferlik işler için Fiverr veya Bionluk; büyük ve sürekli projeler için doğrudan ajans iş birliği daha uygun olabilir. Profesyonel destek arıyorsanız bizimle iletişime geçin.</p>
@@ -75,7 +75,7 @@ ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 
 <h2>Freelancer or Agency?</h2>
-<p>Freelance platforms offer fast, affordable options, but they are not enough for every project. Multi-discipline work (web + mobile + <a href="/makaleler/seo">SEO</a> + maintenance) often runs better with an integrated team than a single freelancer.</p>
+<p>Freelance platforms offer fast, affordable options, but they are not enough for every project. Multi-discipline work (web + mobile + <a href="/blog/seo">SEO</a> + maintenance) often runs better with an integrated team than a single freelancer.</p>
 
 <div class="blog-callout">
   <p class="blog-callout-title">Veltstack perspective</p>
@@ -91,7 +91,7 @@ ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 </ul>
 
 <h2>For Custom Software Projects</h2>
-<p>For corporate websites or <a href="/makaleler/ozel-yazilim-cms">custom software</a>, freelancer platforms usually suit short-term tasks. Architecture, security and long-term maintenance are better served by a <a href="/makaleler/geleneksel-yazilim-yapay-zeka">human-developer-focused</a> team.</p>
+<p>For corporate websites or <a href="/blog/ozel-yazilim-cms">custom software</a>, freelancer platforms usually suit short-term tasks. Architecture, security and long-term maintenance are better served by a <a href="/blog/geleneksel-yazilim-yapay-zeka">human-developer-focused</a> team.</p>
 
 <h2>Conclusion</h2>
 <p>The best freelancer site depends on your needs and budget. Fiverr or Bionluk for small one-off jobs; direct agency partnership for larger ongoing projects. Contact us if you need professional project support.</p>

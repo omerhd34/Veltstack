@@ -88,7 +88,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>Performans ve SEO</h2>
 <p>Google mobil-first indexing kullanır; yani sıralama öncelikle mobil sürüme göre yapılır. Yavaş mobil site hem kullanıcı kaybına hem SEO düşüşüne yol açar. Core Web Vitals (LCP, INP, CLS) mobilde de hedeflenmelidir. Gereksiz JavaScript, büyük hero görselleri ve render-blocking kaynaklar mobil skorları düşürür.</p>
-<p>SEO rehberimizde teknik optimizasyon adımlarını <a href="/makaleler/seo">SEO</a> yazımızda detaylandırdık.</p>
+<p>SEO rehberimizde teknik optimizasyon adımlarını <a href="/blog/seo">SEO</a> yazımızda detaylandırdık.</p>
 
 <h2>Test Checklist</h2>
 <ul>

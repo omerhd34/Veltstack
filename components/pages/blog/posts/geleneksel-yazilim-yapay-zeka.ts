@@ -7,7 +7,7 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "geleneksel-yazilim-yapay-zeka",
-  titleTr: "Geleneksel Yazılım | Yapay Zeka (AI)",
+  titleTr: "Geleneksel Yazılım | Yapay Zeka",
   titleEn: "Traditional Software | AI",
   excerptTr:
     "Kaliteli yazılımda insan geliştiricinin kod yazmasının neden şart olduğunu; yapay zekânın yalnızca yardımcı bir araç olarak sınırlarını, risklerini ve doğru kullanım yaklaşımını detaylı biçimde anlatıyor, üretkenliği artırırken kaliteyi nasıl koruyacağınızı gerçek örneklerle ele alıyoruz.",
@@ -129,7 +129,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Özel Yazılım ve Stack ile Bağlantı</h2>
-<p>İnsan geliştiricinin yazdığı kod; <a href="/makaleler/ozel-yazilim-cms">özel yazılım</a> mimarisinde anlam kazanır. Next.js, TypeScript ve Prisma ile kurulan projelerde AI yalnızca geliştiricinin kontrolündeki bir araçtır. Modern stack hakkında <a href="/makaleler/react-nextjs">React & Next.js</a> rehberimize bakabilirsiniz.</p> 
+<p>İnsan geliştiricinin yazdığı kod; <a href="/blog/ozel-yazilim-cms">özel yazılım</a> mimarisinde anlam kazanır. Next.js, TypeScript ve Prisma ile kurulan projelerde AI yalnızca geliştiricinin kontrolündeki bir araçtır. Modern stack hakkında <a href="/blog/react-nextjs">React & Next.js</a> rehberimize bakabilirsiniz.</p> 
 
 <h2>Veltstack'te Yaklaşımımız</h2>
 <p>Veltstack olarak tüm projelerde <strong>kodu kendimiz yazıyoruz</strong>. AI'ı araştırma, taslak ve tekrarlayan işlerde kullanıyoruz; ancak mimari kararlar, güvenlik, performans ve nihai kod kalitesi tamamen insan geliştirici sorumluluğundadır. Her commit review edilir; her canlıya alma bilinçli bir onayla yapılır.</p>
@@ -242,7 +242,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Connection to Custom Software and Stack</h2>
-<p>Code written by humans makes sense inside a <a href="/makaleler/ozel-yazilim-cms">custom software</a> architecture. On projects built with Next.js, TypeScript and Prisma, AI is only a tool under developer control. See our <a href="/makaleler/react-nextjs">React & Next.js</a> guide for the modern stack.</p>
+<p>Code written by humans makes sense inside a <a href="/blog/ozel-yazilim-cms">custom software</a> architecture. On projects built with Next.js, TypeScript and Prisma, AI is only a tool under developer control. See our <a href="/blog/react-nextjs">React & Next.js</a> guide for the modern stack.</p>
 
 <h2>Our Approach at Veltstack</h2>
 <p>At Veltstack we <strong>write the code ourselves</strong> on every project. We use AI for research, drafts and repetitive tasks; architecture, security, performance and final code quality remain fully human responsibilities. Every commit is reviewed; every production release is a deliberate sign-off.</p>
