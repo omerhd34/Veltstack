@@ -3,10 +3,32 @@ export const faqTr = {
   title: "Sıkça Sorulan Sorular",
   subtitle:
     "Veltstack hizmetleri, süreçler ve iş birliği modeli hakkında en çok merak edilen soruların yanıtlarını burada bulabilirsiniz.",
+  subtitleSecondary:
+    "Konu başlıklarına göre düzenlenmiş yanıtları inceleyerek aradığınız bilgiye hızlıca ulaşın.",
+  heroStats: {
+    questions: {
+      label: "Toplam Soru",
+      hint: "SSS sayfasında yer alan tüm soru ve yanıt sayısı. Hizmetler, süreç, fiyatlandırma ve destek konularını kapsar.",
+    },
+    categories: {
+      label: "Konu Başlığı",
+      hint: "Soruları genel bilgi, hizmetler ve süreç, fiyatlandırma ile yayın sonrası destek başlıklarında grupluyoruz.",
+    },
+    services: {
+      label: "Hizmet ve Süreç",
+      hint: "Hangi hizmetleri sunduğumuz, proje akışı, teslim süresi ve kullandığımız teknolojiler hakkındaki sorular.",
+    },
+    support: {
+      label: "Yayın Sonrası Destek",
+      hint: "Bakım paketleri, kaynak kod devri ve mevcut site yenileme gibi yayın sonrası süreçlere dair sorular.",
+    },
+  },
+  scrollLabel: "Soruları incele",
   imageAlt:
     "Sıkça sorulan soruları simgeleyen soyut dijital yapı illüstrasyonu",
   contactHint: "Aradığınız yanıtı bulamadınız mı?",
-  contactLink: "İletişim sayfamızdan bize yazın",
+  contactLink: "Bize yazın",
+  questionCount: "{count} soru",
   categories: [
     {
       title: "Genel",
@@ -28,6 +50,12 @@ export const faqTr = {
           question: "Hangi sektörlere hizmet veriyorsunuz?",
           answer:
             "FinTech, e-ticaret, kurumsal tanıtım, SaaS, sağlık ve hizmet sektörleri başta olmak üzere farklı alanlarda proje deneyimimiz var. Sektörünüze özel ihtiyaçları keşif görüşmesinde birlikte netleştiriyoruz.",
+        },
+        {
+          slug: "uzaktan-calisma",
+          question: "Farklı şehir veya yurt dışından çalışabiliyor musunuz?",
+          answer:
+            "Evet. Türkiye'nin her yerinden ve yurt dışından uzaktan çalışıyoruz. Keşif, demo ve geri bildirim görüşmeleri video konferans ile yürütülür; proje takibi için paylaşılan panolar ve düzenli yazılı güncellemeler kullanılır. Saat dilimi farkı olan iş birliklerinde ortak çalışma saatlerini baştan netleştiririz.",
         },
       ],
     },
@@ -58,6 +86,12 @@ export const faqTr = {
           answer:
             "Web tarafında Next.js, React ve TypeScript; mobilde React Native veya platforma uygun native çözümler; backend'de Node.js ve Prisma; barındırmada Vercel ve güvenilir altyapı sağlayıcıları tercih edilir. Proje ihtiyacına göre stack özelleştirilir.",
         },
+        {
+          slug: "teklif-nasil-alinir",
+          question: "Teklif almak için ne yapmalıyım?",
+          answer:
+            "İletişim formunu doldurmanız veya doğrudan e-posta ile bize ulaşmanız yeterlidir. Projenizin kısa bir özetini, hedeflerinizi ve varsa referans linklerinizi paylaşın; ardından ücretsiz keşif görüşmesi planlarız. Görüşme sonrası kapsam, takvim ve fiyatı içeren yazılı teklif sunulur.",
+        },
       ],
     },
     {
@@ -81,6 +115,12 @@ export const faqTr = {
           answer:
             "Evet. Kapsam, teslimat, revizyon hakları, fikri mülkiyet ve gizlilik maddelerini içeren yazılı sözleşme veya hizmet sözleşmesi imzalanır. Bu sayede her iki tarafın hakları korunur.",
         },
+        {
+          slug: "proje-fiyatlari-nasil-belirleniyor",
+          question: "Proje fiyatları nasıl belirleniyor?",
+          answer:
+            "Fiyat; proje kapsamı, sayfa veya özellik sayısı, tasarım karmaşıklığı, üçüncü taraf entegrasyonlar, içerik hazırlığı ve teslim süresine göre belirlenir. Hizmet sayfalarındaki paketler referans aralık sunar; kesin teklif keşif görüşmesi sonrası yazılı olarak paylaşılır. Beklenmedik kapsam değişiklikleri önceden onayınıza sunulur.",
+        },
       ],
     },
     {
@@ -103,6 +143,12 @@ export const faqTr = {
           question: "Mevcut sitemi yenileyebilir misiniz?",
           answer:
             "Evet. Web ve uygulama yenileme hizmetimiz kapsamında mevcut sitenizin teknik denetimini yapar, performans ve SEO açıklarını raporlar ve modern stack ile yeniden yapılandırma önerisi sunarız.",
+        },
+        {
+          slug: "veri-guvenligi-yedekleme",
+          question: "Verilerim güvende mi? Yedekleme yapıyor musunuz?",
+          answer:
+            "Evet. Projelerde HTTPS, güvenli kimlik doğrulama ve erişim kontrolü gibi temel güvenlik uygulamalarını standart olarak ele alıyoruz. Barındırma ve veritabanı tarafında sağlayıcıların otomatik yedekleme seçeneklerini yapılandırıyor; kritik projelerde ek yedekleme ve geri yükleme prosedürlerini devreye alıyoruz. Bakım paketlerinde düzenli yedekleme kontrolü ve güvenlik güncellemeleri yer alır.",
         },
       ],
     },
