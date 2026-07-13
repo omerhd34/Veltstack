@@ -1,7 +1,7 @@
 const HERO_OVERLAY_PATHS = [
   /^\/hizmetler(?:\/|$)/,
   /^\/projeler(?:\/|$)/,
-  /^\/makaleler(?:\/|$)/,
+  /^\/blog(?:\/|$)/,
   /^\/sss$/,
   /^\/hakkimizda$/,
   /^\/gizlilik-politikasi$/,
