@@ -12,7 +12,7 @@ export const faqTr = {
     },
     categories: {
       label: "Konu Başlığı",
-      hint: "Soruları genel bilgi, hizmetler ve süreç, fiyatlandırma ile yayın sonrası destek başlıklarında grupluyoruz.",
+      hint: "Soruları genel bilgi, hizmetler, fiyatlandırma, destek, tasarım ve içerik ile SEO başlıklarında grupluyoruz.",
     },
     services: {
       label: "Hizmet ve Süreç",
@@ -57,6 +57,12 @@ export const faqTr = {
           answer:
             "Evet. Türkiye'nin her yerinden ve yurt dışından uzaktan çalışıyoruz. Keşif, demo ve geri bildirim görüşmeleri video konferans ile yürütülür; proje takibi için paylaşılan panolar ve düzenli yazılı güncellemeler kullanılır. Saat dilimi farkı olan iş birliklerinde ortak çalışma saatlerini baştan netleştiririz.",
         },
+        {
+          slug: "cok-dilli-site",
+          question: "Çok dilli site yapabiliyor musunuz?",
+          answer:
+            "Evet. Türkçe ve İngilizce başta olmak üzere birden fazla dilde içerik sunan siteler geliştiriyoruz. Dil yönlendirmesi, çeviri altyapısı ve SEO uyumlu URL yapısı proje kapsamında planlanır; mevcut çevirileriniz varsa bunları sisteme entegre ederiz.",
+        },
       ],
     },
     {
@@ -91,6 +97,12 @@ export const faqTr = {
           question: "Teklif almak için ne yapmalıyım?",
           answer:
             "İletişim formunu doldurmanız veya doğrudan e-posta ile bize ulaşmanız yeterlidir. Projenizin kısa bir özetini, hedeflerinizi ve varsa referans linklerinizi paylaşın; ardından ücretsiz keşif görüşmesi planlarız. Görüşme sonrası kapsam, takvim ve fiyatı içeren yazılı teklif sunulur.",
+        },
+        {
+          slug: "proje-iletisimi",
+          question: "Proje sürecinde iletişim nasıl ilerliyor?",
+          answer:
+            "Keşif sonrası paylaşılan bir proje planı ve kilometre taşları üzerinden ilerleriz. Düzenli demo oturumları, e-posta veya mesajlaşma kanalı üzerinden yazılı güncellemeler ve geri bildirim toplama döngüleri kullanırız. Kritik kararlar yazılı olarak onaylanır; böylece süreç şeffaf ve izlenebilir kalır.",
         },
       ],
     },
@@ -149,6 +161,75 @@ export const faqTr = {
           question: "Verilerim güvende mi? Yedekleme yapıyor musunuz?",
           answer:
             "Evet. Projelerde HTTPS, güvenli kimlik doğrulama ve erişim kontrolü gibi temel güvenlik uygulamalarını standart olarak ele alıyoruz. Barındırma ve veritabanı tarafında sağlayıcıların otomatik yedekleme seçeneklerini yapılandırıyor; kritik projelerde ek yedekleme ve geri yükleme prosedürlerini devreye alıyoruz. Bakım paketlerinde düzenli yedekleme kontrolü ve güvenlik güncellemeleri yer alır.",
+        },
+      ],
+    },
+    {
+      title: "Tasarım ve İçerik",
+      items: [
+        {
+          slug: "icerik-kim-saglar",
+          question: "Metin ve görselleri kim sağlıyor?",
+          answer:
+            "Hazır metin, fotoğraf veya logo varsa bunları proje kapsamına dahil ederiz. İçerik üretimi gerekiyorsa keşif aşamasında netleştirir; metin yazımı veya stok görsel temini gibi ihtiyaçları ayrı kalem olarak teklife yansıtırız. Tasarım sürecinde yer tutucu içeriklerle ilerleyip son aşamada gerçek içerikleri yerleştirebiliriz.",
+        },
+        {
+          slug: "revizyon-hakki",
+          question: "Kaç revizyon hakkı var?",
+          answer:
+            "Her tasarım ve geliştirme aşaması için sözleşmede belirlenen revizyon turu sayısı yer alır. Küçük düzeltmeler bu turlar içinde değerlendirilir; kapsamı genişleten yeni özellik veya sayfa talepleri ayrı değerlendirilir. Revizyon hakları teklif ve sözleşmede açıkça yazılır.",
+        },
+        {
+          slug: "marka-kimligi-yok",
+          question: "Marka kimliğim yoksa ne yapıyorsunuz?",
+          answer:
+            "Logo, renk paleti ve tipografi henüz yoksa keşif görüşmesinde hedef kitlenizi ve sektörünüzü analiz ederek temel bir görsel dil öneririz. Tam marka kimliği hizmeti kapsam dışıysa, proje için tutarlı bir UI tasarım sistemi oluşturur ve ileride marka çalışmasına uyum sağlayacak şekilde yapılandırırız.",
+        },
+      ],
+    },
+    {
+      title: "SEO ve Performans",
+      items: [
+        {
+          slug: "seo-dahil-mi",
+          question: "SEO projede dahil mi?",
+          answer:
+            "Tüm web projelerinde temel SEO altyapısını standart olarak kurarız: anlamlı URL yapısı, meta etiketler, site haritası, robots.txt ve mobil uyumluluk. Kapsamlı anahtar kelime araştırması, içerik optimizasyonu ve sürekli SEO takibi için ayrı SEO hizmet paketlerimiz mevcuttur.",
+        },
+        {
+          slug: "performans-optimizasyonu",
+          question: "Site hızı ve performansa önem veriyor musunuz?",
+          answer:
+            "Evet. Görsel optimizasyonu, kod bölme, önbellekleme stratejileri ve modern barındırma altyapısı ile Core Web Vitals metriklerini hedefleriz. Yayın öncesi performans testleri yapılır; bakım paketlerinde düzenli izleme ve iyileştirme önerileri sunulur.",
+        },
+        {
+          slug: "analitik-kurulumu",
+          question: "Google Analytics ve Search Console kurulumu yapılıyor mu?",
+          answer:
+            "Evet. Yayın aşamasında Google Analytics 4, Google Search Console ve gerektiğinde Meta Pixel gibi izleme araçlarının kurulumunu yaparız. Temel dönüşüm olayları ve arama performansı panolarının okunması konusunda kısa bir devreye alma desteği sağlarız.",
+        },
+      ],
+    },
+    {
+      title: "Teknik ve Entegrasyon",
+      items: [
+        {
+          slug: "hosting-domain",
+          question: "Hosting ve domain kurulumunu siz mi yapıyorsunuz?",
+          answer:
+            "Evet. Domain bağlama, SSL sertifikası, barındırma ortamı kurulumu ve yayın geçişini biz yönetiriz. Mevcut domain veya hosting hesabınız varsa bunlara entegre oluruz; tüm erişimler proje sonunda size devredilir.",
+        },
+        {
+          slug: "admin-panel",
+          question: "İçerik yönetim paneli sunuyor musunuz?",
+          answer:
+            "İhtiyaca göre özel admin paneli veya headless CMS entegrasyonu sunuyoruz. Blog yazıları, hizmet sayfaları, proje galerisi ve iletişim formları gibi içerikleri kod bilgisi gerektirmeden güncelleyebileceğiniz bir yapı kurarız. Panel kapsamı proje teklifinde ayrıca belirtilir.",
+        },
+        {
+          slug: "ucuncu-taraf-entegrasyon",
+          question: "Ödeme, CRM veya e-posta entegrasyonları yapılabiliyor mu?",
+          answer:
+            "Evet. Stripe, iyzico, PayTR gibi ödeme altyapıları; HubSpot, Mailchimp veya Resend gibi pazarlama araçları; ve çeşitli CRM veya ERP API entegrasyonları proje kapsamına göre planlanır. Entegrasyon karmaşıklığı keşif görüşmesinde değerlendirilir ve teklife yansıtılır.",
         },
       ],
     },

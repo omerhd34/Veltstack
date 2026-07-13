@@ -12,7 +12,7 @@ export const faqEn = {
     },
     categories: {
       label: "Topic Sections",
-      hint: "Questions are grouped under general information, services and process, pricing and post-launch support.",
+      hint: "Questions are grouped under general info, services, pricing, support, design and content, and SEO.",
     },
     services: {
       label: "Services & Process",
@@ -57,6 +57,12 @@ export const faqEn = {
           answer:
             "Yes. We work remotely with clients across Turkey and internationally. Discovery, demo and feedback sessions run over video calls; we use shared boards and regular written updates for project tracking. For collaborations across time zones, we agree on overlapping working hours upfront.",
         },
+        {
+          slug: "cok-dilli-site",
+          question: "Can you build multilingual websites?",
+          answer:
+            "Yes. We build sites that serve content in multiple languages, with Turkish and English being the most common pair. Language routing, translation infrastructure and SEO-friendly URL structures are planned as part of the project; if you already have translations, we integrate them into the system.",
+        },
       ],
     },
     {
@@ -91,6 +97,12 @@ export const faqEn = {
           question: "What do I need to do to get a quote?",
           answer:
             "Fill in the contact form or reach us by email. Share a short summary of your project, your goals and any reference links; we then schedule a free discovery call. After the call you receive a written quote covering scope, timeline and pricing.",
+        },
+        {
+          slug: "proje-iletisimi",
+          question: "How does communication work during a project?",
+          answer:
+            "After discovery we work from a shared project plan and milestones. We run regular demo sessions, written updates via email or messaging, and structured feedback cycles. Critical decisions are confirmed in writing so the process stays transparent and traceable.",
         },
       ],
     },
@@ -149,6 +161,75 @@ export const faqEn = {
           question: "Is my data safe? Do you handle backups?",
           answer:
             "Yes. We treat core security practices as standard: HTTPS, secure authentication and access control. We configure automatic backups on hosting and database providers; for critical projects we add extra backup and restore procedures. Maintenance packages include regular backup checks and security updates.",
+        },
+      ],
+    },
+    {
+      title: "Design & Content",
+      items: [
+        {
+          slug: "icerik-kim-saglar",
+          question: "Who provides copy and visuals?",
+          answer:
+            "If you already have text, photos or a logo, we include them in the project scope. When content creation is needed, we clarify this during discovery and reflect items such as copywriting or stock imagery as separate line items in the quote. We can also progress with placeholder content during design and swap in final assets at the end.",
+        },
+        {
+          slug: "revizyon-hakki",
+          question: "How many revisions are included?",
+          answer:
+            "Each design and development phase includes a defined number of revision rounds set out in the contract. Minor adjustments fall within those rounds; requests that expand scope—new features or pages—are evaluated separately. Revision allowances are stated clearly in the quote and agreement.",
+        },
+        {
+          slug: "marka-kimligi-yok",
+          question: "What if I don't have a brand identity yet?",
+          answer:
+            "If you don't yet have a logo, colour palette or typography, we analyse your audience and sector during discovery and propose a foundational visual language. If full brand identity work is out of scope, we build a consistent UI design system for the project and structure it so it can adapt when brand work is added later.",
+        },
+      ],
+    },
+    {
+      title: "SEO & Performance",
+      items: [
+        {
+          slug: "seo-dahil-mi",
+          question: "Is SEO included in the project?",
+          answer:
+            "We set up essential SEO infrastructure on every web project: meaningful URLs, meta tags, sitemap, robots.txt and mobile responsiveness. For in-depth keyword research, content optimisation and ongoing SEO tracking, we offer dedicated SEO service packages.",
+        },
+        {
+          slug: "performans-optimizasyonu",
+          question: "Do you prioritise site speed and performance?",
+          answer:
+            "Yes. We target Core Web Vitals through image optimisation, code splitting, caching strategies and modern hosting. Performance tests run before launch; maintenance packages include ongoing monitoring and improvement recommendations.",
+        },
+        {
+          slug: "analitik-kurulumu",
+          question: "Do you set up Google Analytics and Search Console?",
+          answer:
+            "Yes. At launch we configure Google Analytics 4, Google Search Console and, when needed, tools such as Meta Pixel. We also provide brief onboarding support for reading basic conversion events and search performance dashboards.",
+        },
+      ],
+    },
+    {
+      title: "Technical & Integration",
+      items: [
+        {
+          slug: "hosting-domain",
+          question: "Do you handle hosting and domain setup?",
+          answer:
+            "Yes. We manage domain connection, SSL certificates, hosting environment setup and go-live. If you already have a domain or hosting account, we integrate with those; all access is transferred to you when the project completes.",
+        },
+        {
+          slug: "admin-panel",
+          question: "Do you provide a content management panel?",
+          answer:
+            "Depending on needs, we offer a custom admin panel or headless CMS integration. We set up a structure where you can update blog posts, service pages, project galleries and contact forms without writing code. Panel scope is specified separately in the project quote.",
+        },
+        {
+          slug: "ucuncu-taraf-entegrasyon",
+          question: "Can you integrate payments, CRM or email tools?",
+          answer:
+            "Yes. Payment gateways such as Stripe, iyzico and PayTR; marketing tools like HubSpot, Mailchimp or Resend; and various CRM or ERP API integrations are planned based on project scope. Integration complexity is assessed during discovery and reflected in the quote.",
         },
       ],
     },
