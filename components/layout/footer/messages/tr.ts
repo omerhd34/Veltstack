@@ -1,5 +1,6 @@
 export const footerTr = {
   copyright: "© {year} Veltstack. Tüm hakları saklıdır.",
+  backToTop: "Sayfanın en üstüne çık",
   servicesTitle: "Hizmetler",
   corporateTitle: "Kurumsal",
   legalTitle: "Yasal",

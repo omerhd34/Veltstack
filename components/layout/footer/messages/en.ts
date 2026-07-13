@@ -1,5 +1,6 @@
 export const footerEn = {
   copyright: "© {year} Veltstack. All rights reserved.",
+  backToTop: "Back to top",
   servicesTitle: "Services",
   corporateTitle: "Company",
   legalTitle: "Legal",
