@@ -9,7 +9,7 @@ interface FooterProps {
 export function Footer({ className }: FooterProps) {
   return (
     <footer className={`bg-foreground text-background ${className ?? ""}`}>
-      <SiteContainer className="px-4 sm:px-6">
+      <SiteContainer>
         <div className="mx-auto w-full max-w-5xl">
           <div className="py-14 lg:py-16">
             <FooterMainGrid />
