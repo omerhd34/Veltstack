@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { HeroImage } from "./HeroImage";
 import { HeroContent } from "./HeroContent";
 import { HeroCTA } from "./HeroCTA";
@@ -18,11 +19,15 @@ export async function HeroSection({ className }: HeroSectionProps) {
     >
       <HeroImage alt={t("heroImageAlt")} />
       <SiteContainer className="relative z-10 w-full py-10 lg:py-16">
-        <div className="flex max-w-xl flex-col items-start gap-6 text-left sm:max-w-2xl lg:gap-8">
+        <SectionScrollReveal
+          direction="left"
+          when="mount"
+          className="flex max-w-xl flex-col items-start gap-6 text-left sm:max-w-2xl lg:gap-8"
+        >
           <SectionBadge>{t("heroBadge")}</SectionBadge>
           <HeroContent title={t("heroTitle")} subtitle={t("heroSubtitle")} />
           <HeroCTA primary={t("ctaPrimary")} secondary={t("ctaSecondary")} />
-        </div>
+        </SectionScrollReveal>
       </SiteContainer>
     </section>
   );
