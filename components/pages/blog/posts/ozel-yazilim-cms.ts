@@ -132,7 +132,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Domain & Hosting ile Bağlantı</h2>
-<p>Özel yazılım kararı, altyapı hazır olduktan sonra devreye girer. Domain, DNS, SSL ve Vercel/hosting yapılandırması tamamlanmadan kaliteli bir yayın süreci yürütülemez. Temel kavramlar için <a href="/makaleler/domain-hosting">Domain & Hosting</a> yazımıza, insan geliştirici ve AI dengesi için <a href="/makaleler/geleneksel-yazilim-yapay-zeka">Geleneksel Yazılım | Yapay Zeka (AI)</a> rehberimize, modern stack için <a href="/makaleler/react-nextjs">React & Next.js</a> yazımıza göz atabilirsiniz.</p>
+<p>Özel yazılım kararı, altyapı hazır olduktan sonra devreye girer. Domain, DNS, SSL ve Vercel/hosting yapılandırması tamamlanmadan kaliteli bir yayın süreci yürütülemez. Temel kavramlar için <a href="/makaleler/domain-hosting">Domain & Hosting</a> yazımıza, insan geliştirici ve AI dengesi için <a href="/makaleler/geleneksel-yazilim-yapay-zeka">Geleneksel Yazılım | Yapay Zeka</a> rehberimize, modern stack için <a href="/makaleler/react-nextjs">React & Next.js</a> yazımıza göz atabilirsiniz.</p>
 
 <h2>Veltstack'te Yaklaşımımız</h2>
 <p>Veltstack olarak tüm ciddi projelerde <strong>kodu biz yazıyoruz</strong>. TypeScript, Next.js, Tailwind CSS, Prisma ve Vercel ile markanıza özel, hızlı, güvenli ve SEO uyumlu çözümler sunuyoruz. İçerik yönetimi gerektiğinde bunu özel yazılımın içine gömülü admin paneli olarak tasarlıyoruz, hazır CMS'e bağımlı kalmıyoruz. Mimari, güvenlik, review ve teslim kalitesi tamamen insan geliştiricide. IQfinansAI, Yazıcı Ticaret ve Fablessi projelerimizde farkı yaratan şey deneyimli geliştirici emeğidir.</p>
