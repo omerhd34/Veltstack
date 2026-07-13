@@ -17,6 +17,11 @@ interface BackToTopProps {
   className?: string;
 }
 
+function parseAlpha(raw: string | undefined) {
+  if (raw === undefined) return 1;
+  return raw.endsWith("%") ? Number(raw.slice(0, -1)) / 100 : Number(raw);
+}
+
 function parseCssRgb(
   color: string,
 ): { r: number; g: number; b: number; a: number } | null {
@@ -37,19 +42,11 @@ function parseCssRgb(
   );
   if (!space) return null;
 
-  const alphaRaw = space[4];
-  const a =
-    alphaRaw === undefined
-      ? 1
-      : alphaRaw.endsWith("%")
-        ? Number(alphaRaw.slice(0, -1)) / 100
-        : Number(alphaRaw);
-
   return {
     r: Number(space[1]),
     g: Number(space[2]),
     b: Number(space[3]),
-    a,
+    a: parseAlpha(space[4]),
   };
 }
 
@@ -62,23 +59,57 @@ function relativeLuminance(r: number, g: number, b: number) {
   return 0.2126 * toLinear(r) + 0.7152 * toLinear(g) + 0.0722 * toLinear(b);
 }
 
+function resolveColorLuminance(color: string): { l: number; a: number } | null {
+  const rgb = parseCssRgb(color);
+  if (rgb) {
+    return { l: relativeLuminance(rgb.r, rgb.g, rgb.b), a: rgb.a };
+  }
+
+  const oklabLike = color.match(
+    /okl(?:ch|ab)\(\s*([\d.]+%?)(?:[^/)]*)(?:\/\s*([\d.]+%?))?\s*\)/i,
+  );
+  if (oklabLike) {
+    const lightnessRaw = oklabLike[1];
+    const l = lightnessRaw.endsWith("%")
+      ? Number(lightnessRaw.slice(0, -1)) / 100
+      : Number(lightnessRaw);
+    return { l, a: parseAlpha(oklabLike[2]) };
+  }
+
+  const lab = color.match(
+    /lab\(\s*([\d.]+%?)(?:[^/)]*)(?:\/\s*([\d.]+%?))?\s*\)/i,
+  );
+  if (lab) {
+    const lightnessRaw = lab[1];
+    const l = lightnessRaw.endsWith("%")
+      ? Number(lightnessRaw.slice(0, -1)) / 100
+      : Number(lightnessRaw) / 100;
+    return { l, a: parseAlpha(lab[2]) };
+  }
+
+  return null;
+}
+
 function resolveBackgroundLuminance(target: Element | null) {
   let current: Element | null = target;
 
   while (current && current !== document.documentElement) {
-    const bg = getComputedStyle(current).backgroundColor;
-    const parsed = parseCssRgb(bg);
+    const parsed = resolveColorLuminance(
+      getComputedStyle(current).backgroundColor,
+    );
 
     if (parsed && parsed.a >= 0.5) {
-      return relativeLuminance(parsed.r, parsed.g, parsed.b);
+      return parsed.l;
     }
 
     current = current.parentElement;
   }
 
-  const bodyBg = parseCssRgb(getComputedStyle(document.body).backgroundColor);
+  const bodyBg = resolveColorLuminance(
+    getComputedStyle(document.body).backgroundColor,
+  );
   if (!bodyBg) return 1;
-  return relativeLuminance(bodyBg.r, bodyBg.g, bodyBg.b);
+  return bodyBg.l;
 }
 
 export function BackToTop({ className }: BackToTopProps) {
@@ -114,8 +145,8 @@ export function BackToTop({ className }: BackToTopProps) {
       const root = rootRef.current;
       if (!root) return;
 
-      const { left, top, width, height } = root.getBoundingClientRect();
-      const x = left + width / 2;
+      const { left, top, height } = root.getBoundingClientRect();
+      const x = Math.max(0, left - 8);
       const y = top + height / 2;
 
       const prevVisibility = root.style.visibility;
@@ -170,7 +201,14 @@ export function BackToTop({ className }: BackToTopProps) {
       <StardustShell
         active
         beamBorderRadius={0}
-        className="size-11 shrink-0 overflow-visible rounded-none"
+        particleColor={onDark ? "#a8dfc4" : "#111111"}
+        beamColorFrom={onDark ? "#3A6B52" : "#111111"}
+        beamColorTo={onDark ? "#6ee7b7" : "#3f3f3f"}
+        className={cn(
+          "size-11 shrink-0 overflow-visible rounded-none",
+          !onDark &&
+            "shadow-[0_0_18px_rgb(0_0_0/0.14)] [&_.stardust-shell__border]:border-foreground/55 [&_.stardust-shell__border]:shadow-none",
+        )}
         faceClassName={cn(
           stardustGlassFace,
           "rounded-none transition-[background-color] duration-300",
@@ -190,8 +228,8 @@ export function BackToTop({ className }: BackToTopProps) {
             "focus-visible:outline-none",
             "disabled:pointer-events-none disabled:opacity-35",
             onDark
-              ? "text-background/80 hover:text-background"
-              : "text-foreground/75 hover:text-foreground",
+              ? "text-background hover:text-background"
+              : "text-foreground hover:text-foreground",
           )}
         >
           <span className={stardustContent}>
