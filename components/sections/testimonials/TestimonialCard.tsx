@@ -7,7 +7,7 @@ const slowTransition =
 
 interface TestimonialCardProps {
   clientName: string;
-  companyName: string;
+  companyName?: string;
   feedback: string;
   rating: number;
   active?: boolean;
@@ -20,6 +20,40 @@ function getInitials(name: string) {
     .join("")
     .slice(0, 2)
     .toLocaleUpperCase("tr-TR");
+}
+
+function RatingStars({ rating }: { rating: number }) {
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating % 1 >= 0.5;
+
+  return (
+    <>
+      {Array.from({ length: fullStars }).map((_, starIndex) => (
+        <LuStar
+          key={`full-${starIndex}`}
+          aria-hidden
+          className="size-3.5 fill-brand-accent text-brand-accent md:size-4"
+          strokeWidth={0}
+        />
+      ))}
+      {hasHalf ? (
+        <span className="relative inline-block size-3.5 md:size-4">
+          <LuStar
+            aria-hidden
+            className="absolute inset-0 size-full text-brand-accent/25"
+            strokeWidth={1.5}
+          />
+          <span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>
+            <LuStar
+              aria-hidden
+              className="size-3.5 fill-brand-accent text-brand-accent md:size-4"
+              strokeWidth={0}
+            />
+          </span>
+        </span>
+      ) : null}
+    </>
+  );
 }
 
 export function TestimonialCard({
@@ -62,14 +96,7 @@ export function TestimonialCard({
 
       <div className="relative mb-7 flex items-center gap-3">
         <div className="flex items-center gap-0.5 rounded-full border border-brand-accent/15 bg-brand-accent/6 px-3 py-1.5">
-          {Array.from({ length: rating }).map((_, starIndex) => (
-            <LuStar
-              key={starIndex}
-              aria-hidden
-              className="size-3.5 fill-brand-accent text-brand-accent md:size-4"
-              strokeWidth={0}
-            />
-          ))}
+          <RatingStars rating={rating} />
         </div>
         <span className="text-xs font-medium uppercase tracking-[0.14em] text-brand-accent/70">
           {rating}/5
@@ -94,9 +121,11 @@ export function TestimonialCard({
           <p className="truncate font-(family-name:--font-heading) text-base font-bold text-[#0A0A0F]">
             {clientName}
           </p>
-          <p className="mt-0.5 inline-flex max-w-full items-center rounded-md bg-muted/80 px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
-            {companyName}
-          </p>
+          {companyName ? (
+            <p className="mt-0.5 inline-flex max-w-full items-center rounded-md bg-muted/80 px-2.5 py-0.5 text-xs font-medium text-muted-foreground">
+              {companyName}
+            </p>
+          ) : null}
         </div>
       </footer>
     </article>
