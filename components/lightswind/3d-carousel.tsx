@@ -11,7 +11,6 @@ import {
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { StardustIconButton } from "@/components/ui/StardustIconButton";
 import { cn } from "@/lib/utils";
-import { useIsMobile } from "@/components/hooks/use-mobile";
 
 export interface ThreeDCarouselItem {
   id: number | string;
@@ -52,6 +51,19 @@ interface ThreeDCarouselProps<T extends ThreeDCarouselItem> {
   labels?: ThreeDCarouselLabels;
 }
 
+function formatSlideNumber(value: number) {
+  return String(value).padStart(2, "0");
+}
+
+function getPagerWindow(active: number, total: number, size = 5) {
+  const half = Math.floor(size / 2);
+  return Array.from({ length: Math.min(size, total) }, (_, offset) => {
+    if (total <= size) return { slideIndex: offset, offset };
+    const slideIndex = (active - half + offset + total) % total;
+    return { slideIndex, offset };
+  });
+}
+
 function ThreeDCarousel<T extends ThreeDCarouselItem>({
   items,
   renderItem,
@@ -75,12 +87,12 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
   const [isInView, setIsInView] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
-  const isMobile = useIsMobile();
   const minSwipeDistance = 50;
   const dragStartX = useRef<number | null>(null);
   const dragEndX = useRef<number | null>(null);
   const dragIntentRef = useRef(false);
   const suppressClickRef = useRef(false);
+  const pagerWindow = getPagerWindow(active, items.length);
 
   const selectSlide = useCallback((index: number) => {
     setActive(index);
@@ -216,16 +228,22 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
 
   const getCardAnimationClass = (index: number) => {
     const base =
-      "absolute top-1/2 w-1/2 -translate-y-1/2 transition-all duration-500 ease-out";
+      "absolute top-1/2 w-[min(88%,20.5rem)] -translate-y-1/2 transition-all duration-500 ease-out sm:w-[min(70%,24rem)] md:w-1/2";
 
     if (index === active) {
       return cn(base, "left-1/2 z-20 -translate-x-1/2 scale-100 opacity-100");
     }
     if (index === (active + 1) % items.length) {
-      return cn(base, "right-0 z-10 origin-right scale-[0.94] opacity-100");
+      return cn(
+        base,
+        "right-0 z-10 origin-right translate-x-[18%] scale-[0.9] opacity-45 sm:translate-x-0 sm:scale-[0.94] sm:opacity-100",
+      );
     }
     if (index === (active - 1 + items.length) % items.length) {
-      return cn(base, "left-0 z-10 origin-left scale-[0.94] opacity-100");
+      return cn(
+        base,
+        "left-0 z-10 origin-left -translate-x-[18%] scale-[0.9] opacity-45 sm:translate-x-0 sm:scale-[0.94] sm:opacity-100",
+      );
     }
     return cn(
       base,
@@ -237,14 +255,12 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
 
   const isLight = theme === "light";
   const navButtonClass = isLight ? "shadow-sm" : "shadow-lg";
-  const pageNumberInactiveClass = isLight
-    ? "text-muted-foreground/55 hover:text-brand-accent/80"
-    : "text-white/35 hover:text-white/70";
-  const pageNumberActiveClass = isLight
-    ? "text-brand-accent"
-    : "text-brand-accent";
-  const pageNumberClass =
-    "font-mono text-sm font-semibold tabular-nums transition-colors duration-300";
+  const pagerShellClass = isLight
+    ? "border-border/60 bg-white/70 shadow-[0_4px_20px_rgb(0,0,0,0.04)]"
+    : "border-white/15 bg-white/10 shadow-[0_4px_20px_rgb(0,0,0,0.12)]";
+  const pagerDotClass = isLight ? "bg-brand-accent/20 hover:bg-brand-accent/40" : "bg-white/25 hover:bg-white/45";
+  const pagerDividerClass = isLight ? "bg-border/80" : "bg-white/25";
+  const pagerTotalClass = isLight ? "text-muted-foreground" : "text-white/55";
 
   const activeItem = items[active];
   const slideLabel = getSlideLabel?.(activeItem) ?? String(active + 1);
@@ -265,17 +281,18 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
       <div
         className={cn(
           "grid items-center",
-          !isMobile && items.length > 1
-            ? "grid-cols-[auto_minmax(0,1fr)_auto] gap-3 sm:gap-4 md:gap-5"
+          items.length > 1
+            ? "grid-cols-1 gap-3 sm:grid-cols-[auto_minmax(0,1fr)_auto] sm:gap-4 md:gap-5"
             : "grid-cols-1",
         )}
       >
-        {!isMobile && items.length > 1 ? (
+        {items.length > 1 ? (
           <StardustIconButton
             type="button"
             data-carousel-control
             tone={isLight ? "light" : "glass"}
             className={navButtonClass}
+            shellClassName="mx-auto hidden size-11 sm:inline-flex"
             onClick={goPrev}
             aria-label={labels.prev}
           >
@@ -285,7 +302,7 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
 
         <div
           className={cn(
-            "relative h-[min(400px,62vh)] min-h-[340px] min-w-0 overflow-hidden sm:h-[440px]",
+            "relative h-[min(380px,58vh)] min-h-[300px] min-w-0 overflow-hidden sm:h-[420px] md:h-[440px] md:min-h-[340px]",
             viewportClassName,
           )}
           onMouseEnter={() => setIsHovering(true)}
@@ -334,28 +351,72 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
 
           {items.length > 1 ? (
             <div className="absolute inset-x-0 bottom-2 z-30 flex items-center justify-center sm:bottom-4">
-              <p
-                className={pageNumberClass}
-                aria-label={`${labels.dot} ${active + 1} / ${items.length}`}
+              <div
+                className={cn(
+                  "inline-flex items-center gap-1 rounded-full border px-2 py-1.5 backdrop-blur-md",
+                  pagerShellClass,
+                )}
               >
-                <span className={pageNumberActiveClass}>
-                  {String(active + 1).padStart(2, "0")}
+                {pagerWindow.map(({ slideIndex, offset }) => {
+                  const isActive = slideIndex === active;
+                  const distance = Math.abs(
+                    offset - Math.floor(pagerWindow.length / 2),
+                  );
+
+                  return (
+                    <button
+                      key={`pager-${offset}-${slideIndex}`}
+                      type="button"
+                      data-carousel-control
+                      onClick={() => selectSlide(slideIndex)}
+                      aria-label={`${labels.dot} ${slideIndex + 1}`}
+                      aria-current={isActive ? "true" : undefined}
+                      className={cn(
+                        "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-500 ease-out motion-reduce:transition-none",
+                        isActive
+                          ? "h-8 min-w-10 bg-brand-accent px-2.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)]"
+                          : cn(
+                              "size-2",
+                              pagerDotClass,
+                              distance === 1 && "size-2.5",
+                              distance === 2 && "size-1.5 opacity-70",
+                            ),
+                      )}
+                    >
+                      {isActive ? (
+                        formatSlideNumber(slideIndex + 1)
+                      ) : (
+                        <span className="sr-only">
+                          {formatSlideNumber(slideIndex + 1)}
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+                <span
+                  aria-hidden
+                  className={cn("mx-1 h-3 w-px", pagerDividerClass)}
+                />
+                <span
+                  className={cn(
+                    "pr-1.5 font-(family-name:--font-heading) text-[11px] tracking-[0.14em]",
+                    pagerTotalClass,
+                  )}
+                >
+                  {formatSlideNumber(items.length)}
                 </span>
-                <span className={pageNumberInactiveClass}>
-                  {" / "}
-                  {String(items.length).padStart(2, "0")}
-                </span>
-              </p>
+              </div>
             </div>
           ) : null}
         </div>
 
-        {!isMobile && items.length > 1 ? (
+        {items.length > 1 ? (
           <StardustIconButton
             type="button"
             data-carousel-control
             tone={isLight ? "light" : "glass"}
             className={navButtonClass}
+            shellClassName="mx-auto hidden size-11 sm:inline-flex"
             onClick={goNext}
             aria-label={labels.next}
           >
