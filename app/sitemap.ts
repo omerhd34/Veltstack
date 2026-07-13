@@ -5,8 +5,8 @@ import { routing } from "@/i18n/routing";
 
 const staticPages = [
   "/",
-  "/hizmetlerimiz",
-  "/projelerimiz",
+  "/hizmetler",
+  "/projeler",
   "/makaleler",
   "/hakkimizda",
   "/iletisim",
@@ -42,7 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const serviceEntries = services.flatMap((service: { slug: string }) =>
       routing.locales.map((locale) => ({
-        url: localizedUrl(locale, `/hizmetlerimiz/${service.slug}`),
+        url: localizedUrl(locale, `/hizmetler/${service.slug}`),
         lastModified: new Date(),
         changeFrequency: "monthly" as const,
         priority: 0.9,
@@ -52,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const projectEntries = projects.flatMap(
       (project: { slug: string; createdAt: Date }) =>
         routing.locales.map((locale) => ({
-          url: localizedUrl(locale, `/projelerimiz/${project.slug}`),
+          url: localizedUrl(locale, `/projeler/${project.slug}`),
           lastModified: project.createdAt,
           changeFrequency: "yearly" as const,
           priority: 0.7,
