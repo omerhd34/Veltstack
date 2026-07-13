@@ -9,6 +9,8 @@ import { NavbarActionLink } from "./NavbarActionLink";
 
 interface NavbarLangSwitcherProps {
   className?: string;
+  solid?: boolean;
+  labelStyle?: "code" | "full";
 }
 
 function LocaleFlag({ locale }: { locale: "tr" | "en" }) {
@@ -26,12 +28,22 @@ function LocaleFlag({ locale }: { locale: "tr" | "en" }) {
   );
 }
 
-export function NavbarLangSwitcher({ className }: NavbarLangSwitcherProps) {
+export function NavbarLangSwitcher({
+  className,
+  solid = false,
+  labelStyle = "code",
+}: NavbarLangSwitcherProps) {
   const locale = useLocale() as "tr" | "en";
   const pathname = usePathname();
   const tNav = useTranslations("nav");
 
   const nextLocale = locale === "tr" ? "en" : "tr";
+  const label =
+    labelStyle === "full"
+      ? locale === "tr"
+        ? tNav("localeTr")
+        : tNav("localeEn")
+      : locale.toUpperCase();
 
   return (
     <NavbarActionLink
@@ -39,13 +51,17 @@ export function NavbarLangSwitcher({ className }: NavbarLangSwitcherProps) {
       locale={nextLocale}
       scroll={false}
       onClick={saveLocaleSwitchScroll}
-      className={cn("h-11 w-auto min-w-11 px-4.5", className)}
-      innerClassName="text-base font-semibold uppercase tracking-[-0.01em]"
-      contentClassName="gap-2.5"
+      solid={solid}
+      className={cn("h-11 w-auto min-w-11", className)}
+      innerClassName={cn(
+        "px-4 text-base font-semibold tracking-[-0.01em]",
+        labelStyle === "code" && "uppercase",
+      )}
+      contentClassName="gap-2.5 justify-center"
       ariaLabel={nextLocale === "en" ? tNav("switchToEn") : tNav("switchToTr")}
     >
       <LocaleFlag locale={locale} />
-      {locale.toUpperCase()}
+      {label}
     </NavbarActionLink>
   );
 }

@@ -20,6 +20,7 @@ interface NavbarActionLinkProps {
   innerClassName?: string;
   contentClassName?: string;
   ariaLabel?: string;
+  solid?: boolean;
   children: ReactNode;
 }
 
@@ -32,15 +33,13 @@ export function NavbarActionLink({
   innerClassName,
   contentClassName,
   ariaLabel,
+  solid = false,
   children,
 }: NavbarActionLinkProps) {
   return (
     <StardustShell
       className={className}
-      faceClassName={cn(
-        "bg-foreground/92",
-        stardustFaceOverlay,
-      )}
+      faceClassName={cn("bg-foreground/92", !solid && stardustFaceOverlay)}
     >
       <Link
         href={href}
@@ -51,11 +50,14 @@ export function NavbarActionLink({
         className={cn(
           stardustFace,
           stardustFocus,
-          "bg-transparent text-background group-data-[overlay=true]/header:text-white",
+          "bg-transparent text-background",
+          !solid && "group-data-[overlay=true]/header:text-white",
           innerClassName,
         )}
       >
-        <span className={cn(stardustContent, contentClassName)}>{children}</span>
+        <span className={cn(stardustContent, contentClassName)}>
+          {children}
+        </span>
       </Link>
     </StardustShell>
   );

@@ -28,6 +28,8 @@ export const navTr = {
   about: "Hakkımızda",
   contact: "İletişim",
   cta: "Görüşme Planla",
+  localeTr: "Türkçe",
+  localeEn: "İngilizce",
   switchToEn: "İngilizce'ye geç",
   switchToTr: "Türkçe'ye geç",
 } as const;

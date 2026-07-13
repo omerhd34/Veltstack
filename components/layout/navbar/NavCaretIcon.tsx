@@ -5,17 +5,22 @@ import { navItemCaretClass } from "./nav-link-styles";
 interface NavCaretIconProps {
   open: boolean;
   active?: boolean;
+  variant?: "desktop" | "mobile";
   className?: string;
 }
 
 export function NavCaretIcon({
   open,
   active = false,
+  variant = "desktop",
   className,
 }: NavCaretIconProps) {
   const Icon = open ? FaCaretUp : FaCaretDown;
 
   return (
-    <Icon className={cn(navItemCaretClass(active), className)} aria-hidden />
+    <Icon
+      className={cn(navItemCaretClass(active, variant), className)}
+      aria-hidden
+    />
   );
 }

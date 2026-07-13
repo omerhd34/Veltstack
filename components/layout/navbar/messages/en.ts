@@ -28,6 +28,8 @@ export const navEn = {
   about: "About Us",
   contact: "Contact",
   cta: "Schedule a Call",
+  localeTr: "Turkish",
+  localeEn: "English",
   switchToEn: "Switch to English",
   switchToTr: "Switch to Turkish",
 } as const;

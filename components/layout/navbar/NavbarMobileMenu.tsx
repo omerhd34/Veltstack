@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/shadcn";
 import { cn } from "@/lib/utils";
 import { NavbarLinks } from "./NavbarLinks";
 import { NavbarCta } from "./NavbarCta";
+import { NavbarLangSwitcher } from "./NavbarLangSwitcher";
 import { Logo } from "@/components/layout/Logo";
 
 interface NavbarMobileMenuProps {
@@ -29,7 +30,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-100 overflow-hidden lg:hidden",
+        "fixed inset-0 z-100 overflow-hidden xl:hidden",
         mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none",
         className,
       )}
@@ -44,20 +45,20 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
       />
       <div
         className={cn(
-          "absolute inset-y-0 right-0 flex w-full max-w-[min(100%,24rem)] flex-col bg-background shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+          "absolute inset-y-0 right-0 flex w-full max-w-[min(100%,24rem)] flex-col bg-[#EDF6F1] shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
           mobileMenuOpen ? "translate-x-0" : "translate-x-full",
         )}
         role="dialog"
         aria-modal="true"
         aria-label="Mobil menü"
       >
-        <div className="flex h-18 shrink-0 items-center justify-between border-b border-border px-4 sm:px-5">
-          <Logo variant="navbar" />
+        <div className="flex h-18 shrink-0 items-center justify-between border-b border-brand-accent/15 px-4 sm:px-5">
+          <Logo variant="navbar" ignoreOverlay />
           <Button
             variant="ghost"
             size="icon-sm"
             type="button"
-            className="size-9 rounded-full"
+            className="size-11 rounded-full [&_svg:not([class*='size-'])]:size-5"
             onClick={closeMenu}
             aria-label="Menüyü kapat"
           >
@@ -67,11 +68,9 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
         <div className="flex-1 overflow-y-auto px-3 py-5 sm:px-4">
           <NavbarLinks orientation="vertical" onNavigate={closeMenu} />
         </div>
-        <div className="shrink-0 border-t border-border p-4">
-          <NavbarCta
-            className="h-12 w-full justify-center"
-            onNavigate={closeMenu}
-          />
+        <div className="flex shrink-0 flex-col gap-3 border-t border-brand-accent/15 p-4">
+          <NavbarLangSwitcher solid labelStyle="full" className="h-12 w-full" />
+          <NavbarCta solid className="h-12 w-full" onNavigate={closeMenu} />
         </div>
       </div>
     </div>

@@ -38,7 +38,19 @@ export function navItemLabelClass(active: boolean) {
   );
 }
 
-export function navItemCaretClass(active: boolean) {
+export function navItemCaretClass(
+  active: boolean,
+  variant: "desktop" | "mobile" = "desktop",
+) {
+  if (variant === "mobile") {
+    return cn(
+      "size-3.5 shrink-0 transition-opacity duration-200",
+      active
+        ? "text-foreground/80 opacity-100"
+        : "text-foreground/55 opacity-100",
+    );
+  }
+
   return cn(
     "size-3.5 shrink-0 transition-opacity duration-200",
     active

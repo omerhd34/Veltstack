@@ -102,20 +102,20 @@ export function Navbar({ className }: NavbarProps) {
         className,
       )}
     >
-      <SiteContainer className="relative flex min-h-18 items-center justify-between gap-4">
+      <SiteContainer className="relative flex min-h-18 items-center justify-between gap-3 sm:gap-4">
         <Logo variant="navbar" className="shrink-0" />
 
-        <NavbarDesktopLinks className="absolute left-1/2 hidden -translate-x-1/2 lg:flex" />
+        <NavbarDesktopLinks className="absolute left-1/2 hidden -translate-x-1/2 xl:flex" />
 
-        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3">
-          <NavbarLangSwitcher />
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2 md:gap-3">
+          <NavbarLangSwitcher className="hidden xl:inline-flex" />
           <NavbarCta className="hidden md:inline-flex" />
           <Button
             variant="outline"
-            size="icon-sm"
+            size="icon"
             type="button"
             className={cn(
-              "rounded-full lg:hidden",
+              "size-11 rounded-full xl:hidden [&_svg:not([class*='size-'])]:size-5",
               overlay &&
                 "border-white/40 bg-white/10 text-white hover:bg-white/15 hover:text-white",
             )}
