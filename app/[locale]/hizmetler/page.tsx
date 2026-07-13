@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: ServicesPageProps) {
     namespace: "pages",
     titleKey: "servicesTitle",
     descriptionKey: "servicesSubtitle",
-    href: "/hizmetlerimiz",
+    href: "/hizmetler",
   });
 }
 

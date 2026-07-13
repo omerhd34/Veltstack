@@ -30,7 +30,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "serviceDetails" });
   const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: `/hizmetlerimiz/${slug}`,
+    href: `/hizmetler/${slug}`,
   })}`;
 
   return {
@@ -57,11 +57,11 @@ export default async function ServiceDetailPage({
   const t = await getTranslations("serviceDetails");
   const serviceUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: `/hizmetlerimiz/${slug}`,
+    href: `/hizmetler/${slug}`,
   })}`;
   const servicesUrl = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: "/hizmetlerimiz",
+    href: "/hizmetler",
   })}`;
 
   return (
