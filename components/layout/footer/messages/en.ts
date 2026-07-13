@@ -14,8 +14,8 @@ export const footerEn = {
   corporateLabels: {
     about: "About Us",
     projects: "Our Projects",
-    faq: "Frequently Asked Questions",
     blog: "Articles",
+    faq: "Frequently Asked Questions",
     contact: "Contact",
   },
   legalLabels: {
