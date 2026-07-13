@@ -1,6 +1,6 @@
 export const faqTr = {
   badge: "SSS",
-  title: "Sıkça Sorulan Sorular",
+  title: "Sık Sorulan Sorular",
   subtitle:
     "Veltstack hizmetleri, süreçler ve iş birliği modeli hakkında en çok merak edilen soruların yanıtlarını burada bulabilirsiniz.",
   subtitleSecondary:
@@ -24,8 +24,7 @@ export const faqTr = {
     },
   },
   scrollLabel: "Soruları incele",
-  imageAlt:
-    "Sıkça sorulan soruları simgeleyen soyut dijital yapı illüstrasyonu",
+  imageAlt: "Sık sorulan soruları simgeleyen soyut dijital yapı illüstrasyonu",
   contactHint: "Aradığınız yanıtı bulamadınız mı?",
   contactLink: "Bize yazın",
   questionCount: "{count} soru",
