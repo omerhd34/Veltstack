@@ -189,7 +189,7 @@ export const projectDetailsTr = {
           "RESTful API destekli form; yüz yüze ve online terapi yönlendirmesi.",
       },
       {
-        title: "Blog & Makaleler",
+        title: "Blog",
         description:
           "Psikoloji, psikanaliz ve ruh sağlığına dair dinamik içerik yönetimi.",
       },
