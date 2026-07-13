@@ -15,7 +15,7 @@ export function NavbarServicesMegaMenuPanel() {
 
   return (
     <NavbarMegaMenuShell
-      allHref="/hizmetlerimiz"
+      allHref="/hizmetler"
       allLabel={tNav("servicesAll")}
       onNavigate={closeMenu}
     >
