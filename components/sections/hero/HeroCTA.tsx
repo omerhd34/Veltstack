@@ -22,7 +22,7 @@ export function HeroCTA({ primary, secondary, className }: HeroCTAProps) {
         {primary}
       </PrimaryCtaLink>
       <PrimaryCtaLink
-        href="/projelerimiz"
+        href="/projeler"
         variant="glass"
         size="md"
         showArrow={false}
