@@ -14,7 +14,7 @@ export const projectDetailsTr = {
   challengeTitle: "İş Problemi",
   solutionTitle: "Çözüm",
   metricsTitle: "Proje Metrikleri",
-  relatedServicesTitle: "İlgili Hizmetlerimiz",
+  relatedServicesTitle: "İlgili Hizmetler",
   relatedServicesSubtitle:
     "Bu projede kullandığım ve benzer ihtiyaçlara yönelik hizmet alanları.",
   ctaTitle: "Benzer bir proje mi planlıyorsunuz?",
@@ -22,7 +22,7 @@ export const projectDetailsTr = {
     "Finans, e-ticaret veya kurumsal platform ihtiyaçlarınızı ücretsiz ön görüşmede birlikte değerlendirelim ve 24 saat içinde size dönüş yapalım.",
   ctaButton: "Teklif Al",
   breadcrumbHome: "Ana Sayfa",
-  breadcrumbProjects: "Projelerimiz",
+  breadcrumbProjects: "Projeler",
   metricHints: {
     developmentTime:
       "Keşiften canlıya alıma kadar geçen toplam geliştirme süresi. Kapsam, entegrasyon ve onay döngülerine göre değişebilir.",
