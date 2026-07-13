@@ -4,6 +4,10 @@ const HERO_OVERLAY_PATHS = [
   /^\/makaleler(?:\/|$)/,
   /^\/sss$/,
   /^\/hakkimizda$/,
+  /^\/gizlilik-politikasi$/,
+  /^\/kullanim-sartlari$/,
+  /^\/cerez-politikasi$/,
+  /^\/kvkk-aydinlatma-metni$/,
 ] as const;
 
 export function isHeroOverlayPath(pathname: string): boolean {
