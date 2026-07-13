@@ -1,6 +1,6 @@
 export const navTr = {
   services: "Hizmetlerimiz",
-  servicesAll: "Tüm Hizmetlerimiz",
+  servicesAll: "Paketleri İncele",
   servicesMegaMenuIntro:
     "Markanızın web, uygulama, SEO ve bakım ihtiyaçlarını tek çatı altında yönetiyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
   serviceWeb: "Web Sitesi",
@@ -9,7 +9,7 @@ export const navTr = {
   serviceSeo: "SEO Hizmetleri",
   serviceAudit: "Teknik Denetim",
   serviceMaintenance: "Bakım & Destek",
-  projectsAll: "Tüm Projeler",
+  projectsAll: "Projeleri İncele",
   projectIqfinans: "IQfinansAI | SaaS Platformu",
   projectYazici: "Yazıcı Ticaret | E-Ticaret",
   projectFablessi: "Fablessi | Kurumsal Katalog",
@@ -19,9 +19,10 @@ export const navTr = {
   projectsMegaMenuIntro:
     "FinTech, e-ticaret ve kurumsal sektörlerde iş hedeflerini merkeze alan dijital ürünler geliştiriyoruz. Tasarım ve geliştirmeyi tek süreçte birleştirir, performans ve kullanıcı deneyimini önceliklendiririz. Farklı sektörlerdeki deneyimimizi ölçülebilir iş sonuçlarına dönüştürüyoruz.",
   projects: "Projelerimiz",
-  faq: "S.S.S",
+  faq: "SSS",
+  faqAll: "Sık Sorulan Soruları İncele",
   blog: "Makaleler",
-  blogAll: "Tüm Makaleler",
+  blogAll: "Makaleleri İncele",
   blogMegaMenuIntro:
     "Web geliştirme, mobil uygulama, SEO, hosting ve dijital dönüşüm üzerine pratik içerikler hazırlıyoruz. Gerçek projelerden öğrendiklerimizi sade bir dille paylaşıyoruz. Teknik konuları anlaşılır biçimde sunuyoruz. Yazılım ve altyapı sorularına net yanıtlar veriyoruz.",
   about: "Hakkımızda",
