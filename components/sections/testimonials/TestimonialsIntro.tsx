@@ -15,13 +15,13 @@ export async function TestimonialsIntro({ className }: TestimonialsIntroProps) {
 
       <h2
         id="testimonials-section-title"
-        className="mt-7 font-(family-name:--font-heading) text-4xl font-bold leading-[1.08] tracking-tight text-[#0A0A0F] md:text-5xl"
+        className="mt-5 font-(family-name:--font-heading) text-[1.75rem] font-bold leading-[1.12] tracking-tight text-[#0A0A0F] sm:mt-7 sm:text-3xl md:text-4xl lg:text-5xl"
       >
         {t("testimonialsTitleLead")}{" "}
         <span className="text-brand-accent">{t("testimonialsTitleAccent")}</span>
       </h2>
 
-      <p className="mt-5 text-lg leading-[1.85] text-foreground/62">
+      <p className="mt-4 text-[0.9375rem] leading-[1.75] text-foreground/65 sm:mt-5 sm:text-base sm:leading-[1.85] md:text-lg md:text-foreground/62">
         {t("testimonialsSubtitle")}
       </p>
     </div>

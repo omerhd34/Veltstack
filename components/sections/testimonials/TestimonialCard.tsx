@@ -66,7 +66,7 @@ export function TestimonialCard({
   return (
     <article
       className={cn(
-        "group relative mx-auto flex h-full w-full max-w-3xl flex-col overflow-hidden rounded-3xl bg-white p-8 md:p-12",
+        "group relative mx-auto flex h-full w-full max-w-3xl flex-col overflow-hidden rounded-2xl bg-white p-5 sm:rounded-3xl sm:p-8 md:p-12",
         "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
         "shadow-[0_4px_24px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_56px_rgb(58,107,82,0.12)]",
         slowTransition,
@@ -86,39 +86,39 @@ export function TestimonialCard({
 
       <div
         aria-hidden
-        className="absolute left-0 top-8 h-16 w-1 rounded-r-full bg-linear-to-b from-brand-accent/60 to-brand-accent/15 md:top-10 md:h-20"
+        className="absolute left-0 top-6 h-14 w-1 rounded-r-full bg-linear-to-b from-brand-accent/60 to-brand-accent/15 sm:top-8 sm:h-16 md:top-10 md:h-20"
       />
 
       <LuQuote
         aria-hidden
-        className="absolute right-6 top-6 size-16 text-brand-accent/10 md:right-8 md:top-8 md:size-24"
+        className="absolute right-4 top-4 size-12 text-brand-accent/10 sm:right-6 sm:top-6 sm:size-16 md:right-8 md:top-8 md:size-24"
       />
 
-      <div className="relative mb-7 flex items-center gap-3">
-        <div className="flex items-center gap-0.5 rounded-full border border-brand-accent/15 bg-brand-accent/6 px-3 py-1.5">
+      <div className="relative mb-5 flex items-center gap-2.5 sm:mb-7 sm:gap-3">
+        <div className="flex items-center gap-0.5 rounded-full border border-brand-accent/15 bg-brand-accent/6 px-2.5 py-1 sm:px-3 sm:py-1.5">
           <RatingStars rating={rating} />
         </div>
-        <span className="text-xs font-medium uppercase tracking-[0.14em] text-brand-accent/70">
+        <span className="text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-brand-accent/70 sm:text-xs">
           {rating}/5
         </span>
       </div>
 
-      <blockquote className="relative flex-1 text-lg leading-[1.9] text-foreground/78 md:text-xl md:leading-[1.95]">
+      <blockquote className="relative flex-1 text-[0.9375rem] leading-[1.75] text-foreground/78 sm:text-lg sm:leading-[1.9] md:text-xl md:leading-[1.95]">
         {feedback}
       </blockquote>
 
-      <footer className="relative mt-8 flex shrink-0 items-center gap-4 border-t border-border/40 pt-7">
+      <footer className="relative mt-6 flex shrink-0 items-center gap-3 border-t border-border/40 pt-5 sm:mt-8 sm:gap-4 sm:pt-7">
         <div className="relative shrink-0">
           <div
             aria-hidden
             className="absolute -inset-0.5 rounded-full bg-linear-to-br from-brand-accent/40 to-brand-accent/10"
           />
-          <div className="relative flex size-12 items-center justify-center rounded-full bg-white text-sm font-bold text-brand-accent ring-2 ring-white">
+          <div className="relative flex size-10 items-center justify-center rounded-full bg-white text-sm font-bold text-brand-accent ring-2 ring-white sm:size-12">
             {getInitials(clientName)}
           </div>
         </div>
         <div className="min-w-0 flex-1">
-          <p className="truncate font-(family-name:--font-heading) text-base font-bold text-[#0A0A0F]">
+          <p className="truncate font-(family-name:--font-heading) text-sm font-bold text-[#0A0A0F] sm:text-base">
             {clientName}
           </p>
           {companyName ? (

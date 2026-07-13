@@ -41,7 +41,7 @@ export async function TestimonialsSection({
           <TestimonialsIntro />
         </SectionScrollReveal>
         <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
-          <TestimonialSlider className="mx-auto mt-14 max-w-4xl px-10 md:mt-16 md:px-14" />
+          <TestimonialSlider className="mx-auto mt-10 max-w-4xl sm:mt-14 md:mt-16" />
         </SectionScrollReveal>
       </SiteContainer>
     </section>

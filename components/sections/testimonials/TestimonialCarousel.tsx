@@ -1,6 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+} from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { StardustIconButton } from "@/components/ui/StardustIconButton";
 import { cn } from "@/lib/utils";
@@ -10,6 +16,8 @@ const navButtonClassName = cn(
   "shadow-[0_4px_16px_rgb(0,0,0,0.06)]",
   "hover:shadow-[0_8px_24px_rgb(58,107,82,0.12)]",
 );
+
+const SWIPE_THRESHOLD = 48;
 
 export interface TestimonialItem {
   clientName: string;
@@ -49,8 +57,12 @@ export function TestimonialCarousel({
 }: TestimonialCarouselProps) {
   const [index, setIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   const count = testimonials.length;
   const pagerWindow = getPagerWindow(index, count);
+  const dragStartX = useRef<number | null>(null);
+  const dragDelta = useRef(0);
+  const dragIntent = useRef(false);
 
   const goTo = useCallback(
     (nextIndex: number) => {
@@ -75,6 +87,51 @@ export function TestimonialCarousel({
     return () => clearInterval(timer);
   }, [count]);
 
+  const resetDrag = useCallback(() => {
+    dragStartX.current = null;
+    dragDelta.current = 0;
+    dragIntent.current = false;
+    setIsDragging(false);
+  }, []);
+
+  const onPointerDown = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (count <= 1 || e.button !== 0) return;
+    dragStartX.current = e.clientX;
+    dragDelta.current = 0;
+    dragIntent.current = false;
+  };
+
+  const onPointerMove = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (dragStartX.current == null) return;
+    dragDelta.current = e.clientX - dragStartX.current;
+    if (!dragIntent.current && Math.abs(dragDelta.current) > 10) {
+      dragIntent.current = true;
+      setIsDragging(true);
+      e.currentTarget.setPointerCapture(e.pointerId);
+    }
+  };
+
+  const onPointerUp = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (dragStartX.current == null) return;
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+    const delta = dragDelta.current;
+    const swiped = dragIntent.current && Math.abs(delta) >= SWIPE_THRESHOLD;
+    resetDrag();
+    if (!swiped) return;
+    if (delta < 0) goNext();
+    else goPrev();
+  };
+
+  const onPointerCancel = (e: ReactPointerEvent<HTMLDivElement>) => {
+    if (dragStartX.current == null) return;
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    }
+    resetDrag();
+  };
+
   return (
     <div className={cn("relative", className)}>
       <div
@@ -84,7 +141,16 @@ export function TestimonialCarousel({
         {formatSlideNumber(index + 1)}
       </div>
 
-      <div className="relative min-h-[320px] md:min-h-[340px]">
+      <div
+        className={cn(
+          "relative min-h-[320px] touch-pan-y select-none md:min-h-[340px]",
+          count > 1 && (isDragging ? "cursor-grabbing" : "cursor-grab"),
+        )}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerCancel}
+      >
         {testimonials.map((testimonial, slideIndex) => (
           <div
             key={`${testimonial.clientName}-${slideIndex}`}
@@ -102,72 +168,71 @@ export function TestimonialCarousel({
       </div>
 
       {count > 1 && (
-        <>
+        <div className="mt-8 flex items-center justify-center gap-3 sm:mt-10">
           <StardustIconButton
             type="button"
             tone="light"
             onClick={goPrev}
             aria-label={labels.prev}
-            shellClassName="absolute top-1/2 left-0 z-10 size-11 -translate-y-1/2 md:-left-6"
+            shellClassName="hidden size-11 sm:inline-flex"
             className={navButtonClassName}
           >
             <LuChevronLeft className="size-5" aria-hidden />
           </StardustIconButton>
+
+          <div className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-white/70 px-2 py-1.5 shadow-[0_4px_20px_rgb(0,0,0,0.04)] backdrop-blur-md">
+            {pagerWindow.map(({ slideIndex, offset }) => {
+              const isActive = slideIndex === index;
+              const distance = Math.abs(offset - 2);
+
+              return (
+                <button
+                  key={`pager-${offset}-${slideIndex}`}
+                  type="button"
+                  onClick={() => goTo(slideIndex)}
+                  aria-label={labels.slide.replace(
+                    "{index}",
+                    String(slideIndex + 1),
+                  )}
+                  aria-current={isActive ? "true" : undefined}
+                  className={cn(
+                    "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-500 ease-out motion-reduce:transition-none",
+                    isActive
+                      ? "h-8 min-w-10 bg-brand-accent px-2.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)]"
+                      : cn(
+                          "size-2 bg-brand-accent/20 hover:bg-brand-accent/40",
+                          distance === 1 && "size-2.5",
+                          distance === 2 && "size-1.5 opacity-70",
+                        ),
+                  )}
+                >
+                  {isActive ? (
+                    formatSlideNumber(slideIndex + 1)
+                  ) : (
+                    <span className="sr-only">
+                      {formatSlideNumber(slideIndex + 1)}
+                    </span>
+                  )}
+                </button>
+              );
+            })}
+            <span aria-hidden className="mx-1 h-3 w-px bg-border/80" />
+            <span className="pr-1.5 font-(family-name:--font-heading) text-[11px] tracking-[0.14em] text-muted-foreground">
+              {formatSlideNumber(count)}
+            </span>
+          </div>
+
           <StardustIconButton
             type="button"
             tone="light"
             onClick={goNext}
             aria-label={labels.next}
-            shellClassName="absolute top-1/2 right-0 z-10 size-11 -translate-y-1/2 md:-right-6"
+            shellClassName="hidden size-11 sm:inline-flex"
             className={navButtonClassName}
           >
             <LuChevronRight className="size-5" aria-hidden />
           </StardustIconButton>
-
-          <div className="mt-10 flex items-center justify-center">
-            <div className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-white/70 px-2 py-1.5 shadow-[0_4px_20px_rgb(0,0,0,0.04)] backdrop-blur-md">
-              {pagerWindow.map(({ slideIndex, offset }) => {
-                const isActive = slideIndex === index;
-                const distance = Math.abs(offset - 2);
-
-                return (
-                  <button
-                    key={`pager-${offset}-${slideIndex}`}
-                    type="button"
-                    onClick={() => goTo(slideIndex)}
-                    aria-label={labels.slide.replace(
-                      "{index}",
-                      String(slideIndex + 1),
-                    )}
-                    aria-current={isActive ? "true" : undefined}
-                    className={cn(
-                      "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-500 ease-out motion-reduce:transition-none",
-                      isActive
-                        ? "h-8 min-w-10 bg-brand-accent px-2.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)]"
-                        : cn(
-                            "size-2 bg-brand-accent/20 hover:bg-brand-accent/40",
-                            distance === 1 && "size-2.5",
-                            distance === 2 && "size-1.5 opacity-70",
-                          ),
-                    )}
-                  >
-                    {isActive ? (
-                      formatSlideNumber(slideIndex + 1)
-                    ) : (
-                      <span className="sr-only">
-                        {formatSlideNumber(slideIndex + 1)}
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-              <span aria-hidden className="mx-1 h-3 w-px bg-border/80" />
-              <span className="pr-1.5 font-(family-name:--font-heading) text-[11px] tracking-[0.14em] text-muted-foreground">
-                {formatSlideNumber(count)}
-              </span>
-            </div>
-          </div>
-        </>
+        </div>
       )}
     </div>
   );
