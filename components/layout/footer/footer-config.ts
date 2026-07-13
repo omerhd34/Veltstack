@@ -52,7 +52,7 @@ export function getFooterBlogCategoryIcon(category: string): IconType {
 
 export const footerCorporateItems = [
   { href: "/hakkimizda", labelKey: "about", icon: LuUsers },
-  { href: "/projelerimiz", labelKey: "projects", icon: LuFolderKanban },
+  { href: "/projeler", labelKey: "projects", icon: LuFolderKanban },
   { href: "/sss", labelKey: "faq", icon: LuCircleHelp },
   { href: "/makaleler", labelKey: "blog", icon: LuNewspaper },
   { href: "/iletisim", labelKey: "contact", icon: LuMail },

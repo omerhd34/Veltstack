@@ -1,6 +1,6 @@
 export const footerTr = {
   copyright: "© {year} Veltstack. Tüm hakları saklıdır.",
-  servicesTitle: "Hizmetlerimiz",
+  servicesTitle: "Hizmetler",
   corporateTitle: "Kurumsal",
   legalTitle: "Yasal",
   serviceLabels: {
@@ -13,7 +13,7 @@ export const footerTr = {
   },
   corporateLabels: {
     about: "Hakkımızda",
-    projects: "Projelerimiz",
+    projects: "Projeler",
     faq: "Sıkça Sorulan Sorular",
     blog: "Makaleler",
     contact: "İletişim",
