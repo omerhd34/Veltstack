@@ -174,7 +174,7 @@ function TimelineEventRow({
         onClick={() => onMarkerClick(index)}
         aria-label={event.title}
         className={cn(
-          "absolute top-1/2 left-1/2 z-40 flex size-10 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent",
+          "absolute top-1/2 left-1/2 z-10 flex size-10 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent lg:z-30",
         )}
       >
         <motion.span
@@ -205,7 +205,7 @@ function TimelineEventRow({
 
       <motion.div
         className={cn(
-          "relative z-30 mt-12 w-full lg:mt-0",
+          "relative z-20 mt-12 w-full lg:z-10 lg:mt-0",
           columnClass,
           perspectiveClass,
         )}
@@ -220,7 +220,7 @@ function TimelineEventRow({
           onClick={() => onMarkerClick(index)}
           aria-label={event.title}
           className={cn(
-            "group relative flex w-full flex-col overflow-hidden rounded-2xl bg-white p-6 text-left",
+            "group relative z-20 flex w-full flex-col overflow-hidden rounded-2xl bg-white p-4 text-left sm:p-5 md:p-6",
             "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99]",
             "shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)]",
             "cursor-pointer transition-all duration-500 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
@@ -234,33 +234,33 @@ function TimelineEventRow({
           {dateFormat === "badge" ? (
             <span
               className={cn(
-                "absolute right-5 top-5 font-mono text-3xl font-bold leading-none tracking-tight text-brand-accent/20 transition-colors duration-500 group-hover:text-brand-accent/35",
+                "absolute right-4 top-4 font-mono text-2xl font-bold leading-none tracking-tight text-brand-accent/20 transition-colors duration-500 group-hover:text-brand-accent/35 sm:right-5 sm:top-5 sm:text-3xl",
                 event.yearClassName,
               )}
             >
               {event.year}
             </span>
           ) : (
-            <p className="absolute right-5 top-5 font-mono text-3xl font-bold leading-none text-brand-accent/20">
+            <p className="absolute right-4 top-4 font-mono text-2xl font-bold leading-none text-brand-accent/20 sm:right-5 sm:top-5 sm:text-3xl">
               {event.year}
             </p>
           )}
 
-          <div className="flex items-center gap-3 pr-14">
+          <div className="flex items-center gap-2.5 pr-12 sm:gap-3 sm:pr-14">
             {event.icon || (
               <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 transition-all duration-500 group-hover:scale-105 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50">
                 <Calendar className="size-4" aria-hidden />
               </span>
             )}
-            <h3 className="font-(family-name:--font-heading) text-xl font-bold leading-snug tracking-tight text-[#0A0A0F]">
+            <h3 className="font-(family-name:--font-heading) text-lg font-bold leading-snug tracking-tight text-[#0A0A0F] sm:text-xl">
               {event.title}
             </h3>
           </div>
-          <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.75] text-foreground/60">
+          <p className="mt-2.5 flex-1 text-[0.9375rem] leading-[1.7] text-foreground/65 sm:mt-3 sm:leading-[1.75] sm:text-foreground/60 md:text-base">
             {event.description}
           </p>
           {event.subtitle && (
-            <span className="mt-4 inline-flex self-end rounded-full border border-brand-accent/15 bg-brand-accent/6 px-3 py-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-brand-accent/80">
+            <span className="mt-3.5 inline-flex self-end rounded-full border border-brand-accent/15 bg-brand-accent/6 px-2.5 py-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-brand-accent/80 sm:mt-4 sm:px-3">
               {event.subtitle}
             </span>
           )}
@@ -519,7 +519,7 @@ export const ScrollTimeline = ({
                 }}
               />
               <motion.div
-                className="absolute z-20"
+                className="absolute z-0"
                 style={{
                   top: progressHeightPx,
                   left: "50%",
@@ -551,7 +551,7 @@ export const ScrollTimeline = ({
             </>
           )}
 
-          <div className="relative z-20">
+          <div className="relative z-20 bg-transparent">
             {events.map((event, index) => (
               <TimelineEventRow
                 key={event.id || index}
