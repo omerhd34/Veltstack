@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { BackToTop } from "@/components/layout/BackToTop";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { LocaleHtmlLang } from "@/components/layout/LocaleHtmlLang";
@@ -38,6 +39,7 @@ export default async function LocaleLayout({
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
+      <BackToTop />
     </NextIntlClientProvider>
   );
 }
