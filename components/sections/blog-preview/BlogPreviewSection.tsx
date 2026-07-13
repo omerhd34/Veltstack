@@ -55,14 +55,14 @@ export async function BlogPreviewSection({
               </SectionBadge>
               <h2
                 id="blog-preview-section-title"
-                className="mt-6 font-(family-name:--font-heading) text-4xl font-bold tracking-tight text-white md:text-5xl"
+                className="mt-5 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-white sm:mt-6 sm:text-4xl md:text-[2.5rem] lg:text-5xl"
               >
                 {t("blogHeadline")}{" "}
                 <span className="text-brand-accent">
                   {t("blogHeadlineAccent")}
                 </span>
               </h2>
-              <p className="mt-4 text-lg text-white/55">{t("blogSubtitle")}</p>
+              <p className="mt-3 text-base text-white/55 sm:mt-4 sm:text-lg">{t("blogSubtitle")}</p>
             </div>
             <div className="hidden md:block">
               <BlogPreviewMoreButton label={t("blogMoreButton")} />
@@ -76,7 +76,7 @@ export async function BlogPreviewSection({
       </SectionScrollReveal>
 
       <SiteContainer className="relative">
-        <div className="mt-8 flex justify-center md:hidden">
+        <div className="mt-4 flex justify-center sm:mt-5 md:hidden">
           <BlogPreviewMoreButton label={t("blogMoreButton")} />
         </div>
       </SiteContainer>

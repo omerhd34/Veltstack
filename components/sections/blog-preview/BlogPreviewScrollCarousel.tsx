@@ -50,7 +50,7 @@ export function BlogPreviewScrollCarousel({
         prev: t("blogSliderPrev"),
         next: t("blogSliderNext"),
       }}
-      containerClassName="pt-0 pb-4 md:pb-6"
+      containerClassName="pt-0 pb-0 md:pb-6"
       navPlacement="outside"
       progressStyle="none"
       renderFeature={(feature) => {

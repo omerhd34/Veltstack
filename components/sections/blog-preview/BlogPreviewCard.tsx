@@ -40,22 +40,22 @@ export function BlogPreviewCard({
       <div className="aspect-3/2 shrink-0 overflow-hidden rounded-t-[calc(1rem-3px)]">
         <BlogPreviewImage src={image} alt={title} />
       </div>
-      <div className="flex min-h-0 flex-1 flex-col p-6">
-        <span className="mb-3 block h-4 shrink-0 text-xs font-semibold leading-4 tracking-[0.15em] text-brand-accent">
+      <div className="flex min-h-0 flex-1 flex-col p-4 sm:p-5 md:p-6">
+        <span className="mb-2 block h-4 shrink-0 text-[0.6875rem] font-semibold leading-4 tracking-[0.15em] text-brand-accent sm:mb-3 sm:text-xs">
           {readingTimeLabel
             ? toLatinUppercase(readingTimeLabel, locale)
             : "\u00A0"}
         </span>
-        <h3 className="line-clamp-2 shrink-0 font-(family-name:--font-heading) text-lg font-bold leading-snug text-[#0A0A0F] transition-colors group-hover:text-brand-accent">
+        <h3 className="line-clamp-2 shrink-0 font-(family-name:--font-heading) text-base font-bold leading-snug text-[#0A0A0F] transition-colors group-hover:text-brand-accent sm:text-lg">
           {title}
         </h3>
-        <p className="mt-1 line-clamp-2 min-h-[calc(0.875rem*1.625*2)] shrink-0 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-1.5 line-clamp-2 min-h-[calc(0.8125rem*1.625*2)] shrink-0 text-[0.8125rem] leading-relaxed text-muted-foreground sm:mt-1 sm:min-h-[calc(0.875rem*1.625*2)] sm:text-sm">
           {excerpt}
         </p>
-        <div className="mt-auto shrink-0 pt-5">
+        <div className="mt-auto shrink-0 pt-4 sm:pt-5">
           <span
             className={cn(
-              "inline-flex w-fit items-center gap-1.5 text-xs font-semibold text-brand-accent",
+              "inline-flex w-fit items-center gap-1.5 text-[0.6875rem] font-semibold text-brand-accent sm:text-xs",
               "origin-left transition-[color,transform] duration-700 ease-in-out",
               "group-hover:scale-105 group-hover:text-[#a8dfc4]",
               "motion-reduce:group-hover:scale-100",
