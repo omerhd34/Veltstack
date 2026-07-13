@@ -24,7 +24,8 @@ export const faqTr = {
     },
   },
   scrollLabel: "Soruları incele",
-  imageAlt: "Sık sorulan soruları simgeleyen soyut dijital yapı illüstrasyonu",
+  imageAlt:
+    "Sıkça Sorulan Soruları simgeleyen soyut dijital yapı illüstrasyonu",
   contactHint: "Aradığınız yanıtı bulamadınız mı?",
   contactLink: "Bize yazın",
   questionCount: "{count} soru",
