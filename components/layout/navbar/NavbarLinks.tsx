@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { LuChevronDown } from "react-icons/lu";
+import { NavCaretIcon } from "./NavCaretIcon";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn, isExternalHref } from "@/lib/utils";
@@ -88,12 +88,7 @@ export function NavbarLinks({
               aria-expanded={servicesOpen}
               aria-label={tNav("services")}
             >
-              <LuChevronDown
-                className={cn(
-                  "size-4 transition-transform duration-200",
-                  servicesOpen && "rotate-180",
-                )}
-              />
+              <NavCaretIcon open={servicesOpen} className="size-4 opacity-70" />
             </button>
           </div>
           {servicesOpen && (
@@ -144,12 +139,7 @@ export function NavbarLinks({
               aria-expanded={projectsOpen}
               aria-label={tNav("projects")}
             >
-              <LuChevronDown
-                className={cn(
-                  "size-4 transition-transform duration-200",
-                  projectsOpen && "rotate-180",
-                )}
-              />
+              <NavCaretIcon open={projectsOpen} className="size-4 opacity-70" />
             </button>
           </div>
           {projectsOpen && (
@@ -222,12 +212,7 @@ export function NavbarLinks({
               aria-expanded={blogOpen}
               aria-label={tNav("blog")}
             >
-              <LuChevronDown
-                className={cn(
-                  "size-4 transition-transform duration-200",
-                  blogOpen && "rotate-180",
-                )}
-              />
+              <NavCaretIcon open={blogOpen} className="size-4 opacity-70" />
             </button>
           </div>
           {blogOpen && (

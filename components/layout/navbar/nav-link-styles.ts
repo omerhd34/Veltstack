@@ -37,3 +37,12 @@ export function navItemLabelClass(active: boolean) {
       : "after:opacity-0 group-hover:after:opacity-100",
   );
 }
+
+export function navItemCaretClass(active: boolean) {
+  return cn(
+    "size-3.5 shrink-0 transition-opacity duration-200",
+    active
+      ? "opacity-80 text-foreground group-data-[overlay=true]/header:text-white"
+      : "opacity-50 text-foreground/70 group-hover:opacity-80 group-data-[overlay=true]/header:text-white/60 group-data-[overlay=true]/header:group-hover:text-white/90",
+  );
+}

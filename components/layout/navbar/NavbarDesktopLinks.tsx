@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { useUiStore } from "@/store/uiSlice";
+import { NavCaretIcon } from "./NavCaretIcon";
 import { navItemClass, navItemLabelClass } from "./nav-link-styles";
 
 interface NavbarDesktopLinksProps {
@@ -17,9 +18,11 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
   const servicesMenuOpen = useUiStore((state) => state.servicesMenuOpen);
   const projectsMenuOpen = useUiStore((state) => state.projectsMenuOpen);
   const blogMenuOpen = useUiStore((state) => state.blogMenuOpen);
+  const faqMenuOpen = useUiStore((state) => state.faqMenuOpen);
   const setServicesMenuOpen = useUiStore((state) => state.setServicesMenuOpen);
   const setProjectsMenuOpen = useUiStore((state) => state.setProjectsMenuOpen);
   const setBlogMenuOpen = useUiStore((state) => state.setBlogMenuOpen);
+  const setFaqMenuOpen = useUiStore((state) => state.setFaqMenuOpen);
   const openServicesMenu = useUiStore((state) => state.openServicesMenu);
   const scheduleCloseServicesMenu = useUiStore(
     (state) => state.scheduleCloseServicesMenu,
@@ -31,6 +34,10 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
   const openBlogMenu = useUiStore((state) => state.openBlogMenu);
   const scheduleCloseBlogMenu = useUiStore(
     (state) => state.scheduleCloseBlogMenu,
+  );
+  const openFaqMenu = useUiStore((state) => state.openFaqMenu);
+  const scheduleCloseFaqMenu = useUiStore(
+    (state) => state.scheduleCloseFaqMenu,
   );
 
   const trailingLinks = [
@@ -56,11 +63,21 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
     pathname === "/makaleler" ||
     pathname.startsWith("/makaleler/");
 
+  const faqActive =
+    faqMenuOpen || pathname === "/sss" || pathname.startsWith("/sss/");
+
   useEffect(() => {
     setServicesMenuOpen(false);
     setProjectsMenuOpen(false);
     setBlogMenuOpen(false);
-  }, [pathname, setServicesMenuOpen, setProjectsMenuOpen, setBlogMenuOpen]);
+    setFaqMenuOpen(false);
+  }, [
+    pathname,
+    setServicesMenuOpen,
+    setProjectsMenuOpen,
+    setBlogMenuOpen,
+    setFaqMenuOpen,
+  ]);
 
   return (
     <nav
@@ -82,6 +99,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
           <span className={navItemLabelClass(servicesActive)}>
             {tNav("services")}
           </span>
+          <NavCaretIcon open={servicesMenuOpen} active={servicesActive} />
         </Link>
       </div>
 
@@ -100,6 +118,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
           <span className={navItemLabelClass(projectsActive)}>
             {tNav("projects")}
           </span>
+          <NavCaretIcon open={projectsMenuOpen} active={projectsActive} />
         </Link>
       </div>
 
@@ -116,14 +135,26 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
           className={navItemClass(blogActive)}
         >
           <span className={navItemLabelClass(blogActive)}>{tNav("blog")}</span>
+          <NavCaretIcon open={blogMenuOpen} active={blogActive} />
         </Link>
       </div>
 
-      <Link href="/sss" className={navItemClass(isActive("/sss"))}>
-        <span className={navItemLabelClass(isActive("/sss"))}>
-          {tNav("faq")}
-        </span>
-      </Link>
+      <div
+        className="relative h-full"
+        onMouseEnter={openFaqMenu}
+        onMouseLeave={scheduleCloseFaqMenu}
+        onFocusCapture={openFaqMenu}
+      >
+        <Link
+          href="/sss"
+          aria-expanded={faqMenuOpen}
+          aria-haspopup="true"
+          className={navItemClass(faqActive)}
+        >
+          <span className={navItemLabelClass(faqActive)}>{tNav("faq")}</span>
+          <NavCaretIcon open={faqMenuOpen} active={faqActive} />
+        </Link>
+      </div>
 
       {trailingLinks.map((link) => (
         <Link
