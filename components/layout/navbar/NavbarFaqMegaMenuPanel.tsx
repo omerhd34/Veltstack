@@ -17,7 +17,7 @@ export function NavbarFaqMegaMenuPanel() {
 
   return (
     <NavbarMegaMenuShell
-      allHref="/sss"
+      allHref="/sss#faq-content"
       allLabel={tNav("faqAll")}
       onNavigate={closeMenu}
     >

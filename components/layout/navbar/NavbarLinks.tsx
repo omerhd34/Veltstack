@@ -95,7 +95,7 @@ export function NavbarLinks({
             <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
               <li>
                 <Link
-                  href="/hizmetler"
+                  href="/hizmetler#services-packages"
                   onClick={onNavigate}
                   className={navItemClass(
                     isActive("/hizmetler"),
@@ -146,7 +146,7 @@ export function NavbarLinks({
             <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
               <li>
                 <Link
-                  href="/projeler"
+                  href="/projeler#projects-showcase"
                   onClick={onNavigate}
                   className={navItemClass(
                     isActive("/projeler"),
@@ -219,7 +219,7 @@ export function NavbarLinks({
             <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
               <li>
                 <Link
-                  href="/blog"
+                  href="/blog#blog-grid"
                   onClick={onNavigate}
                   className={navItemClass(
                     isActive("/blog"),
