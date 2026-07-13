@@ -50,8 +50,9 @@ export async function BlogDetailHero({
 
   return (
     <section
+      data-page-hero
       className={cn(
-        "relative flex min-h-[calc(100svh-4.5rem)] flex-col overflow-hidden bg-[#050f0c] text-white",
+        "relative flex min-h-dvh flex-col overflow-hidden bg-[#050f0c] pt-18 text-white",
         className,
       )}
     >
@@ -71,20 +72,18 @@ export async function BlogDetailHero({
         aria-hidden
         className="pointer-events-none absolute -left-24 bottom-16 size-[360px] rounded-full bg-emerald-800/6 blur-[100px]"
       />
-
-      <SiteContainer className="relative flex min-h-[calc(100svh-4.5rem)] flex-col py-8 sm:py-10">
-        <Link
-          href="/blog"
-          className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-800/50 bg-emerald-950/40 px-4 py-2 text-sm text-emerald-300/80 transition-colors hover:border-emerald-700/60 hover:bg-emerald-900/50 hover:text-emerald-200"
-        >
-          <LuArrowLeft className="size-4" aria-hidden />
-          {t("blog")}
-        </Link>
-
-        <div className="mt-8 grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
+      <SiteContainer className="relative flex min-h-[calc(100dvh-4.5rem)] flex-col py-8 sm:py-10">
+        <div className="grid min-h-0 flex-1 items-center gap-8 lg:grid-cols-[1fr_1fr] lg:gap-12">
           <SectionScrollReveal direction="left" className="min-w-0">
             <div className="min-w-0">
               <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-emerald-300/60 sm:gap-x-8">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-200"
+                >
+                  <LuArrowLeft className="size-3.5" aria-hidden />
+                  {t("blog")}
+                </Link>
                 <span className="inline-flex items-center rounded-full border border-emerald-500/25 bg-emerald-500/10 px-4 py-1.5 text-[0.6875rem] font-semibold text-emerald-300">
                   {category}
                 </span>
@@ -141,7 +140,11 @@ export async function BlogDetailHero({
             </div>
           </SectionScrollReveal>
 
-          <SectionScrollReveal direction="right" delay={0.14} className="min-w-0">
+          <SectionScrollReveal
+            direction="right"
+            delay={0.14}
+            className="min-w-0"
+          >
             <ServicesPageHeroImage src={imageUrl} alt={imageAlt} />
           </SectionScrollReveal>
         </div>
