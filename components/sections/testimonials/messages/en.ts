@@ -7,14 +7,14 @@ export const testimonialsHomeEn = {
     "Feedback from partners across industries: a snapshot of how we work together, from design quality through to delivery.",
   testimonialItems: [
     {
-      clientName: "Halil İbrahim Yazıcı",
+      clientName: "Halil İbrahim Y.",
       companyName: "Yazıcı Ticaret",
       feedback:
         "We thank the Veltstack team. Communication and collaboration were excellent at every stage. From design through to delivery, everything met our expectations. The project was delivered on time and in full, and we completed the process smoothly.",
       rating: 5,
     },
     {
-      clientName: "Berat Özkan",
+      clientName: "Berat Ö.",
       companyName: "Fablessi",
       feedback:
         "We needed a corporate website that works smoothly and feels unique. Veltstack met all our requests on that front. Their attention and care throughout the process were excellent; we thank them and would happily recommend them.",
