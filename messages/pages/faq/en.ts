@@ -3,10 +3,32 @@ export const faqEn = {
   title: "Frequently Asked Questions",
   subtitle:
     "Find answers to the most common questions about Veltstack services, our process and how we work together.",
+  subtitleSecondary:
+    "Browse answers organized by topic to quickly find what you need.",
+  heroStats: {
+    questions: {
+      label: "Total Questions",
+      hint: "The full count of questions and answers on this FAQ page, covering services, process, pricing and support.",
+    },
+    categories: {
+      label: "Topic Sections",
+      hint: "Questions are grouped under general information, services and process, pricing and post-launch support.",
+    },
+    services: {
+      label: "Services & Process",
+      hint: "Questions about what we offer, how projects run, delivery timelines and the technologies we use.",
+    },
+    support: {
+      label: "Post-Launch Support",
+      hint: "Questions about maintenance packages, source code handover and refreshing your existing site.",
+    },
+  },
+  scrollLabel: "Browse questions",
   imageAlt:
     "Abstract digital structure illustration representing frequently asked questions",
   contactHint: "Can't find what you're looking for?",
   contactLink: "Contact us",
+  questionCount: "{count} questions",
   categories: [
     {
       title: "General",
@@ -28,6 +50,12 @@ export const faqEn = {
           question: "Which industries do you serve?",
           answer:
             "We have experience across FinTech, e-commerce, corporate sites, SaaS, healthcare and professional services. We clarify sector-specific needs together during the discovery call.",
+        },
+        {
+          slug: "uzaktan-calisma",
+          question: "Can you work with clients in other cities or abroad?",
+          answer:
+            "Yes. We work remotely with clients across Turkey and internationally. Discovery, demo and feedback sessions run over video calls; we use shared boards and regular written updates for project tracking. For collaborations across time zones, we agree on overlapping working hours upfront.",
         },
       ],
     },
@@ -58,6 +86,12 @@ export const faqEn = {
           answer:
             "On the web: Next.js, React and TypeScript; on mobile: React Native or platform-appropriate native solutions; on the backend: Node.js and Prisma; hosting: Vercel and reliable infrastructure providers. The stack is tailored to each project.",
         },
+        {
+          slug: "teklif-nasil-alinir",
+          question: "What do I need to do to get a quote?",
+          answer:
+            "Fill in the contact form or reach us by email. Share a short summary of your project, your goals and any reference links; we then schedule a free discovery call. After the call you receive a written quote covering scope, timeline and pricing.",
+        },
       ],
     },
     {
@@ -81,6 +115,12 @@ export const faqEn = {
           answer:
             "Yes. A written agreement covering scope, delivery, revision rights, intellectual property and confidentiality is signed so both parties' rights are protected.",
         },
+        {
+          slug: "proje-fiyatlari-nasil-belirleniyor",
+          question: "How are project prices determined?",
+          answer:
+            "Pricing depends on project scope, page or feature count, design complexity, third-party integrations, content preparation and delivery timeline. Service pages show reference ranges; the final quote is shared in writing after the discovery call. Unexpected scope changes are presented for your approval before proceeding.",
+        },
       ],
     },
     {
@@ -103,6 +143,12 @@ export const faqEn = {
           question: "Can you refresh my existing site?",
           answer:
             "Yes. Through our web and app refresh service we audit your current site, report performance and SEO gaps, and propose restructuring with a modern stack.",
+        },
+        {
+          slug: "veri-guvenligi-yedekleme",
+          question: "Is my data safe? Do you handle backups?",
+          answer:
+            "Yes. We treat core security practices as standard: HTTPS, secure authentication and access control. We configure automatic backups on hosting and database providers; for critical projects we add extra backup and restore procedures. Maintenance packages include regular backup checks and security updates.",
         },
       ],
     },
