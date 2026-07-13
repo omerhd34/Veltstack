@@ -15,7 +15,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "blogPage" });
   const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: "/makaleler",
+    href: "/blog",
   })}`;
 
   return {

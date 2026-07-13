@@ -37,7 +37,7 @@ export async function generateMetadata({
   const desc = locale === "tr" ? post.excerptShortTr : post.excerptShortEn;
   const canonical = `https://www.veltstack.com${getPathname({
     locale: locale as Locale,
-    href: `/makaleler/${slug}`,
+    href: `/blog/${slug}`,
   })}`;
 
   return {
@@ -76,8 +76,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const date = formatDate(post.publishedAt, loc);
   const readingTime = t("readingTime", { minutes: post.readingTime });
 
-  const blogUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: "/makaleler" })}`;
-  const postUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: `/makaleler/${slug}` })}`;
+  const blogUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: "/blog" })}`;
+  const postUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: `/blog/${slug}` })}`;
 
   const relatedPosts = blogPosts
     .filter(
