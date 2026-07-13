@@ -12,7 +12,8 @@ interface LogoProps {
 const textVariants: Record<LogoVariant, string> = {
   navbar:
     "font-(family-name:--font-logo) text-[2.125rem] leading-none tracking-[0.02em] text-foreground group-data-[overlay=true]/header:text-white sm:text-[2.75rem]",
-  footer: "font-(family-name:--font-logo) text-lg tracking-[0.02em] sm:text-xl",
+  footer:
+    "font-(family-name:--font-logo) text-xl tracking-[0.02em] sm:text-2xl",
 };
 
 export function Logo({ className, variant = "navbar", href = "/" }: LogoProps) {
