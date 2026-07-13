@@ -145,8 +145,8 @@ export function BackToTop({ className }: BackToTopProps) {
       const root = rootRef.current;
       if (!root) return;
 
-      const { left, top, height } = root.getBoundingClientRect();
-      const x = Math.max(0, left - 8);
+      const { left, top, width, height } = root.getBoundingClientRect();
+      const x = Math.min(window.innerWidth - 1, left + width + 8);
       const y = top + height / 2;
 
       const prevVisibility = root.style.visibility;
@@ -191,7 +191,7 @@ export function BackToTop({ className }: BackToTopProps) {
     <div
       ref={rootRef}
       className={cn(
-        "fixed top-1/2 right-3 z-50 -translate-y-1/2 transition-[opacity,visibility] duration-300",
+        "fixed left-3 bottom-3 z-50 transition-[opacity,visibility] duration-300 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2",
         visible
           ? "visible opacity-100"
           : "invisible pointer-events-none opacity-0",
