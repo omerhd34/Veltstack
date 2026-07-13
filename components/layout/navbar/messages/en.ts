@@ -1,6 +1,6 @@
 export const navEn = {
   services: "Services",
-  servicesAll: "All Services",
+  servicesAll: "View Packages",
   servicesMegaMenuIntro:
     "We handle your web, app, SEO and maintenance needs under one roof. We define scope upfront, manage delivery transparently and focus on measurable outcomes. From design through launch we prioritize performance, accessibility and SEO.",
   serviceWeb: "Website",
@@ -9,7 +9,7 @@ export const navEn = {
   serviceSeo: "SEO Services",
   serviceAudit: "Technical Audit",
   serviceMaintenance: "Maintenance & Support",
-  projectsAll: "All Projects",
+  projectsAll: "View Projects",
   projectIqfinans: "IQfinansAI | SaaS Platform",
   projectYazici: "Yazıcı Ticaret | E-Commerce",
   projectFablessi: "Fablessi | Corporate Catalog",
@@ -20,8 +20,9 @@ export const navEn = {
     "We build digital products for FinTech, e-commerce and corporate sectors, keeping business goals at the center. Design and development move as one process, with performance and user experience as priorities. We turn cross-sector experience into measurable outcomes.",
   projects: "Projects",
   faq: "FAQ",
+  faqAll: "All FAQ",
   blog: "Articles",
-  blogAll: "All Articles",
+  blogAll: "View Articles",
   blogMegaMenuIntro:
     "Practical content on web development, mobile apps, SEO, hosting and digital transformation. We share lessons from real projects in plain language. Technical topics are presented in an accessible way. We answer common software and infrastructure questions clearly.",
   about: "About Us",
