@@ -32,7 +32,7 @@ export interface ServiceItemConfig {
 export const serviceItems: ServiceItemConfig[] = [
   {
     slug: "web-sitesi-gelistirme",
-    href: "/hizmetlerimiz/web-sitesi-gelistirme",
+    href: "/hizmetler/web-sitesi-gelistirme",
     titleKey: "servicesWebTitle",
     descKey: "servicesWebDesc",
     navDescKey: "serviceWebDesc",
@@ -41,7 +41,7 @@ export const serviceItems: ServiceItemConfig[] = [
   },
   {
     slug: "web-sitesi-yenileme",
-    href: "/hizmetlerimiz/web-sitesi-yenileme",
+    href: "/hizmetler/web-sitesi-yenileme",
     titleKey: "servicesRefreshTitle",
     descKey: "servicesRefreshDesc",
     navDescKey: "serviceRefreshDesc",
@@ -50,7 +50,7 @@ export const serviceItems: ServiceItemConfig[] = [
   },
   {
     slug: "uygulama-gelistirme",
-    href: "/hizmetlerimiz/uygulama-gelistirme",
+    href: "/hizmetler/uygulama-gelistirme",
     titleKey: "servicesAppTitle",
     descKey: "servicesAppDesc",
     navDescKey: "serviceAppDesc",
@@ -59,7 +59,7 @@ export const serviceItems: ServiceItemConfig[] = [
   },
   {
     slug: "teknik-denetim",
-    href: "/hizmetlerimiz/teknik-denetim",
+    href: "/hizmetler/teknik-denetim",
     titleKey: "servicesAuditTitle",
     descKey: "servicesAuditDesc",
     navDescKey: "serviceAuditDesc",
@@ -68,7 +68,7 @@ export const serviceItems: ServiceItemConfig[] = [
   },
   {
     slug: "seo-hizmetleri",
-    href: "/hizmetlerimiz/seo-hizmetleri",
+    href: "/hizmetler/seo-hizmetleri",
     titleKey: "servicesSeoTitle",
     descKey: "servicesSeoDesc",
     navDescKey: "serviceSeoDesc",
@@ -77,7 +77,7 @@ export const serviceItems: ServiceItemConfig[] = [
   },
   {
     slug: "bakim-ve-destek",
-    href: "/hizmetlerimiz/bakim-ve-destek",
+    href: "/hizmetler/bakim-ve-destek",
     titleKey: "servicesMaintenanceTitle",
     descKey: "servicesMaintenanceDesc",
     navDescKey: "serviceMaintenanceDesc",
