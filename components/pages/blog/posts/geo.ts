@@ -2,8 +2,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "geo",
-  titleTr: "GEO (Üretken Motor Optimizasyonu) Nedir?",
-  titleEn: "What Is GEO (Generative Engine Optimization)?",
+  titleTr: "GEO Nedir?",
+  titleEn: "What Is GEO?",
   excerptTr:
     "Üretken motor optimizasyonunun ne olduğunu, klasik SEO'dan farkını ve ChatGPT, Perplexity ile Google AI Overviews gibi yapay zeka arama motorlarında markanızın görünürlüğünü artıracak içerik, teknik ve otorite stratejilerini kapsamlı bir rehberle paylaşıyoruz.",
   excerptEn:

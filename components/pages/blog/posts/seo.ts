@@ -2,8 +2,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "seo",
-  titleTr: "SEO (Arama Motoru Optimizasyonu) Nedir?",
-  titleEn: "What Is SEO (Search Engine Optimization)?",
+  titleTr: "SEO Nedir?",
+  titleEn: "What Is SEO?",
   excerptTr:
     "Arama motoru optimizasyonunun temellerini, türlerini ve uygulanabilir adımlarını kapsamlı bir rehberle paylaşıyoruz; teknik altyapı, içerik stratejisi, anahtar kelime araştırması ve bağlantı çalışmalarını birlikte ele alıyor, sıralamanızı gerçekten yükseltecek pratik yöntemleri anlatıyoruz.",
   excerptEn:
