@@ -33,7 +33,7 @@ export const blogPageTr = {
   readMore: "Devamını oku",
   readingTime: "{minutes} dk okuma",
   writtenByLabel: "Yazan",
-  noResults: "Arama kriterlerinize uygun makale bulunamadı.",
+  noResults: "Arama kriterlerinize uygun blog yazısı bulunamadı.",
   noResultsSub: "Farklı bir anahtar kelime veya kategori deneyin.",
   featuredBadge: "Öne Çıkan",
   latestBadge: "Son Blog Yazıları",

@@ -185,7 +185,7 @@ export const blogPostEntry: BlogPostEntry = {
 
 <h2>Performance and SEO</h2>
 <p>Google uses mobile-first indexing; rankings prioritize the mobile version. A slow mobile site loses users and SEO ground. Target Core Web Vitals (LCP, INP, CLS) on mobile too. Excess JavaScript, large hero images and render-blocking resources hurt mobile scores.</p>
-<p>See our <a href="/makaleler/seo">SEO</a> article for technical optimization steps.</p>
+<p>See our <a href="/blog/seo">SEO</a> article for technical optimization steps.</p>
 
 <h2>Test Checklist</h2>
 <ul>
