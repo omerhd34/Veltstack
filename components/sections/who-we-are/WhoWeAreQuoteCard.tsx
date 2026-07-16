@@ -25,7 +25,7 @@ export function WhoWeAreQuoteCard({
   return (
     <article
       className={cn(
-        "group relative flex h-full w-full flex-col overflow-hidden rounded-3xl bg-white p-8 md:p-10",
+        "group relative flex h-full w-full flex-col overflow-hidden rounded-3xl bg-white px-4 py-8 sm:px-8 md:p-10",
         "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
         "shadow-[0_4px_24px_rgb(58_107_82/0.08)] hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
         slowTransition,
