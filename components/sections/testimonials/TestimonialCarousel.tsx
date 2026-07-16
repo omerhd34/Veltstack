@@ -58,8 +58,10 @@ export function TestimonialCarousel({
   const [index, setIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   const count = testimonials.length;
   const pagerWindow = getPagerWindow(index, count);
+  const carouselRef = useRef<HTMLDivElement>(null);
   const dragStartX = useRef<number | null>(null);
   const dragDelta = useRef(0);
   const dragIntent = useRef(false);
@@ -78,14 +80,27 @@ export function TestimonialCarousel({
   const goPrev = useCallback(() => goTo(index - 1), [goTo, index]);
 
   useEffect(() => {
-    if (count <= 1) return;
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { threshold: 0.2 },
+    );
+
+    observer.observe(carousel);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (count <= 1 || !isInView) return;
     const timer = setInterval(() => {
       setIsAnimating(true);
       setIndex((current) => (current + 1) % count);
       window.setTimeout(() => setIsAnimating(false), 600);
     }, 15000);
     return () => clearInterval(timer);
-  }, [count]);
+  }, [count, isInView]);
 
   const resetDrag = useCallback(() => {
     dragStartX.current = null;
@@ -133,7 +148,7 @@ export function TestimonialCarousel({
   };
 
   return (
-    <div className={cn("relative", className)}>
+    <div ref={carouselRef} className={cn("relative", className)}>
       <div
         aria-hidden
         className="pointer-events-none absolute -right-2 -top-6 select-none font-(family-name:--font-heading) text-7xl font-bold leading-none text-brand-accent/6 md:-right-4 md:-top-8 md:text-8xl"
