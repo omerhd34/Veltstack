@@ -58,6 +58,8 @@ export function ContactPhoneField({
   const [query, setQuery] = useState(countryCode);
   const containerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const blurCommitVersionRef = useRef(0);
+  const selectingCodeRef = useRef(false);
 
   const filteredCodes = useMemo(
     () => filterCountryCodes(query, countryCode),
@@ -113,10 +115,14 @@ export function ContactPhoneField({
   }
 
   function selectCode(value: string) {
+    blurCommitVersionRef.current += 1;
+    selectingCodeRef.current = true;
+
     onCountryCodeChange(value);
     setQuery(value);
     setOpen(false);
     inputRef.current?.blur();
+    selectingCodeRef.current = false;
   }
 
   return (
@@ -145,7 +151,12 @@ export function ContactPhoneField({
               setOpen(true);
             }}
             onBlur={() => {
+              if (selectingCodeRef.current) return;
+
+              const version = ++blurCommitVersionRef.current;
               window.setTimeout(() => {
+                if (version !== blurCommitVersionRef.current) return;
+
                 commitQuery();
                 setOpen(false);
               }, 120);
@@ -156,7 +167,7 @@ export function ContactPhoneField({
                 selectCode(filteredCodes[0].value);
               }
             }}
-            className="w-19 min-w-19 border-0 bg-transparent py-3 pl-3 pr-1 text-sm font-medium text-foreground outline-none focus:ring-0"
+            className="w-14 min-w-14 border-0 bg-transparent py-3 pl-3 pr-1 text-sm font-medium text-foreground outline-none focus:ring-0 sm:w-19 sm:min-w-19"
           />
 
           <button
