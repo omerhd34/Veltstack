@@ -97,12 +97,12 @@ export function ServiceCard({
           index={index}
           theme="light"
           reveal={isSlide ? "always" : "hover"}
+          className={isSlide ? "right-3 top-3 sm:right-4 sm:top-4 md:right-5 md:top-5" : undefined}
         />
       ) : null}
       <div
         className={cn(
-          "flex",
-          !isSlide && "flex-1",
+          "flex flex-1",
           compact ? "gap-3" : "gap-4",
           compact && !description && "items-center",
         )}
@@ -126,11 +126,7 @@ export function ServiceCard({
         >
           <Icon
             className={cn(
-              compact
-                ? "size-4"
-                : isSlide
-                  ? "size-5 md:size-6"
-                  : "size-5",
+              compact ? "size-4" : isSlide ? "size-5 md:size-6" : "size-5",
               !compact && slowTransition,
             )}
             strokeWidth={1.75}
@@ -230,7 +226,7 @@ export function ServiceCard({
     <Link
       href={href}
       onClick={onNavigate}
-      className={cn(cardClassName, isSlide && "block w-full")}
+      className={cn(cardClassName, isSlide && "w-full")}
     >
       {content}
     </Link>
