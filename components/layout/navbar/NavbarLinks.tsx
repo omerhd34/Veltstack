@@ -260,7 +260,7 @@ export function NavbarLinks({
             onClick={onNavigate}
             className={navItemClass(faqActive, "mobile")}
           >
-            {tNav("faq")}
+            {tNav("faqMobile")}
           </Link>
         </li>
 

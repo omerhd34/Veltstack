@@ -20,6 +20,7 @@ export const navTr = {
     "FinTech, e-ticaret ve kurumsal sektörlerde iş hedeflerini merkeze alan dijital ürünler geliştiriyoruz. Tasarım ve geliştirmeyi tek süreçte birleştirir, performans ve kullanıcı deneyimini önceliklendiririz. Farklı sektörlerdeki deneyimimizi ölçülebilir iş sonuçlarına dönüştürüyoruz.",
   projects: "Projeler",
   faq: "SSS",
+  faqMobile: "Sıkça Sorulan Sorular",
   faqAll: "Sıkça Sorulan Soruları İncele",
   blog: "Blog",
   blogAll: "Blog Yazılarını İncele",
