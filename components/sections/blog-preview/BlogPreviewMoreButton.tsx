@@ -15,6 +15,7 @@ export function BlogPreviewMoreButton({
     <PrimaryCtaLink
       href="/blog"
       className={cn(className)}
+      variant="glass"
       showArrow={false}
       leadingIcon={<LuEye className="size-5" aria-hidden />}
     >
