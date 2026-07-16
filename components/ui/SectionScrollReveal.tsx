@@ -16,9 +16,10 @@ interface SectionScrollRevealProps {
   when?: "inView" | "mount";
 }
 
-const OFFSET_X = 52;
-const OFFSET_Y = 22;
-const OFFSET_UP = 56;
+const OFFSET_X = "var(--reveal-offset-x)";
+const OFFSET_X_NEGATIVE = "calc(var(--reveal-offset-x) * -1)";
+const OFFSET_Y = "var(--reveal-offset-y)";
+const OFFSET_UP = "var(--reveal-offset-up)";
 
 const VIEWPORT: Record<
   SectionScrollRevealTrigger,
@@ -55,10 +56,10 @@ export function SectionScrollReveal({
       ? { opacity: 0, y: OFFSET_UP }
       : {
           opacity: 0,
-          x: direction === "left" ? -OFFSET_X : OFFSET_X,
+          x: direction === "left" ? OFFSET_X_NEGATIVE : OFFSET_X,
           y: OFFSET_Y,
         };
-  const visible = { opacity: 1, x: 0, y: 0 };
+  const visible = { opacity: 1, x: "0px", y: "0px" };
   const transition = {
     duration: 0.95,
     delay,
@@ -72,7 +73,10 @@ export function SectionScrollReveal({
   if (when === "mount") {
     return (
       <motion.div
-        className={cn(className)}
+        className={cn(
+          "[--reveal-offset-up:24px] [--reveal-offset-x:20px] [--reveal-offset-y:10px] md:[--reveal-offset-up:56px] md:[--reveal-offset-x:52px] md:[--reveal-offset-y:22px]",
+          className,
+        )}
         initial={initial}
         animate={visible}
         transition={transition}
@@ -84,7 +88,10 @@ export function SectionScrollReveal({
 
   return (
     <motion.div
-      className={cn(className)}
+      className={cn(
+        "[--reveal-offset-up:24px] [--reveal-offset-x:20px] [--reveal-offset-y:10px] md:[--reveal-offset-up:56px] md:[--reveal-offset-x:52px] md:[--reveal-offset-y:22px]",
+        className,
+      )}
       initial={initial}
       whileInView={visible}
       viewport={VIEWPORT[trigger]}
