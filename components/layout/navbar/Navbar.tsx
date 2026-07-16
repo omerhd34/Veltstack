@@ -115,9 +115,9 @@ export function Navbar({ className }: NavbarProps) {
             size="icon"
             type="button"
             className={cn(
-              "size-11 rounded-full xl:hidden [&_svg:not([class*='size-'])]:size-5",
+              "size-11 rounded-full border-0 xl:hidden [&_svg:not([class*='size-'])]:size-5",
               overlay &&
-                "border-white/40 bg-white/10 text-white hover:bg-white/15 hover:text-white",
+                "bg-white/10 text-white hover:bg-white/15 hover:text-white",
             )}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
