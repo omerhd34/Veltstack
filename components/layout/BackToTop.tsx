@@ -191,7 +191,7 @@ export function BackToTop({ className }: BackToTopProps) {
     <div
       ref={rootRef}
       className={cn(
-        "fixed left-3 bottom-3 z-50 transition-[opacity,visibility] duration-300 sm:top-1/2 sm:bottom-auto sm:-translate-y-1/2",
+        "fixed left-3 bottom-3 z-50 transition-[opacity,visibility] duration-300",
         visible
           ? "visible opacity-100"
           : "invisible pointer-events-none opacity-0",
