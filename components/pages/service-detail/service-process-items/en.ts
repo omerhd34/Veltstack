@@ -45,7 +45,7 @@ export const webSitesiYenilemeProcessEn = [
   {
     title: "Current Site Audit",
     description:
-      "We comprehensively analyze technical infrastructure, performance, SEO, accessibility and content inventory. Findings are reported by priority and the renewal scope is clarified.",
+      "We comprehensively analyze technical infrastructure, performance, SEO, accessibility and content inventory. Findings are reported by priority and the refresh scope is clarified.",
   },
   {
     title: "Migration Plan and SEO Strategy",
@@ -58,7 +58,7 @@ export const webSitesiYenilemeProcessEn = [
       "We prepare an up-to-date interface and information architecture aligned with your brand. Development proceeds after approval via interactive prototype.",
   },
   {
-    title: "Infrastructure Renewal",
+    title: "Infrastructure Refresh",
     description:
       "We rebuild with modern frameworks, performance optimization and security standards. When possible, we plan a phased transition to minimize downtime.",
   },

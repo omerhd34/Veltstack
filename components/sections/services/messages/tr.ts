@@ -21,7 +21,7 @@ export const servicesHomeTr = {
   servicesWebDesc:
     "Kurumsal, e-ticaret ve portfolyo projelerinde tasarımdan yayına kadar hızlı ve SEO uyumlu web geliştirme sunuyoruz; performans, erişilebilirliği ve dönüşümü önceliklendirip mobil uyumlu bir altyapıyla yayına alıyoruz.",
   servicesWebTag: "Web - Geliştirme",
-  servicesRefreshTitle: "Web & Uygulama Yenileme",
+  servicesRefreshTitle: "Dijital Yenileme",
   servicesRefreshDesc:
     "Eski veya yavaş web ve mobil uygulamalarınızı modern, hızlı ve dönüşüm odaklı bir deneyime taşıyoruz; altyapı, arayüz ve içeriği birlikte yenileyip iş akışlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
   servicesRefreshTag: "Yenileme - Modernizasyon",

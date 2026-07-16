@@ -25,7 +25,7 @@ export const contactEn = {
 
   serviceOptions: [
     { value: "web-sitesi-gelistirme", label: "Web Site Development" },
-    { value: "web-sitesi-yenileme", label: "Web & App Redesign" },
+    { value: "web-sitesi-yenileme", label: "Digital Refresh" },
     { value: "uygulama-gelistirme", label: "App Development" },
     { value: "teknik-denetim", label: "Technical Audit" },
     { value: "seo-hizmetleri", label: "SEO Services" },

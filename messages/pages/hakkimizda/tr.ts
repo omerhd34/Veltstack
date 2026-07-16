@@ -28,7 +28,7 @@ export const aboutTr = {
     {
       value: "6",
       label: "Hizmet Alanı",
-      hint: "Web, mobil, SEO, yenileme, denetim ve bakım hizmetlerinde uçtan uca destek sunuyoruz.",
+      hint: "Web, mobil, SEO, dijital yenileme, denetim ve bakım hizmetlerinde uçtan uca destek sunuyoruz.",
     },
   ],
   profileBadge: "Temel İlkemiz",

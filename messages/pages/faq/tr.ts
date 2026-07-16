@@ -72,7 +72,7 @@ export const faqTr = {
           slug: "hangi-hizmetler",
           question: "Hangi hizmetleri sunuyorsunuz?",
           answer:
-            "Web sitesi geliştirme, web ve uygulama yenileme, mobil uygulama geliştirme, SEO hizmetleri, teknik denetim ile bakım ve destek paketleri sunuyoruz. Her hizmetin kapsamı ve paket detayları ilgili hizmet sayfalarında yer alır.",
+            "Web sitesi geliştirme, dijital yenileme, mobil uygulama geliştirme, SEO hizmetleri, teknik denetim ile bakım ve destek paketleri sunuyoruz. Her hizmetin kapsamı ve paket detayları ilgili hizmet sayfalarında yer alır.",
         },
         {
           slug: "proje-sureci",
@@ -154,7 +154,7 @@ export const faqTr = {
           slug: "mevcut-site-yenileme",
           question: "Mevcut sitemi yenileyebilir misiniz?",
           answer:
-            "Evet. Web ve uygulama yenileme hizmetimiz kapsamında mevcut sitenizin teknik denetimini yapar, performans ve SEO açıklarını raporlar ve modern stack ile yeniden yapılandırma önerisi sunarız.",
+            "Evet. dijital yenileme hizmetimiz kapsamında mevcut sitenizin teknik denetimini yapar, performans ve SEO açıklarını raporlar ve modern stack ile yeniden yapılandırma önerisi sunarız.",
         },
         {
           slug: "veri-guvenligi-yedekleme",

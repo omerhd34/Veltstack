@@ -6,7 +6,7 @@ export const servicesPageEn = {
   heroSubtitle:
     "Every project type comes in three tiers: Startup, Professional and Premium. Scope, delivery and revisions are defined upfront, large projects scale without limits.",
   heroSubtitleSecondary:
-    "Browse the packages below and switch between website, app, redesign, SEO, technical audit and maintenance tabs to find the scope that fits your project.",
+    "Browse the packages below and switch between website, app, digital refresh, SEO, technical audit and maintenance tabs to find the scope that fits your project.",
   heroImageAlt: "Modular interface illustration representing interconnected digital services",
   scrollLabel: "View packages",
   ctaBadge: "Free Consultation",
@@ -33,7 +33,7 @@ export const servicesPageEn = {
     {
       value: "6",
       label: "Service Types",
-      hint: "Six service categories including website, app, redesign, SEO, technical audit and maintenance.",
+      hint: "Six service categories including website, app, digital refresh, SEO, technical audit and maintenance.",
     },
     {
       value: "14",

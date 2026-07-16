@@ -72,7 +72,7 @@ export const faqEn = {
           slug: "hangi-hizmetler",
           question: "What services do you offer?",
           answer:
-            "We offer website development, web and app refresh, mobile app development, SEO services, technical audits and maintenance and support packages. Scope and package details are listed on each service page.",
+            "We offer website development, digital refresh, mobile app development, SEO services, technical audits and maintenance and support packages. Scope and package details are listed on each service page.",
         },
         {
           slug: "proje-sureci",
@@ -154,7 +154,7 @@ export const faqEn = {
           slug: "mevcut-site-yenileme",
           question: "Can you refresh my existing site?",
           answer:
-            "Yes. Through our web and app refresh service we audit your current site, report performance and SEO gaps, and propose restructuring with a modern stack.",
+            "Yes. Through our digital refresh service we audit your current site, report performance and SEO gaps, and propose restructuring with a modern stack.",
         },
         {
           slug: "veri-guvenligi-yedekleme",

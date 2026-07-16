@@ -12,9 +12,9 @@ export const servicesPackagesEn = {
   packagesTitleAccent: "Packages",
   packagesTitleSuffix: "Packages",
   packagesSubtitle:
-    "Explore our service packages across website development, mobile apps, redesign, SEO, technical audit and maintenance. Switch between tabs to compare Startup, Professional and Premium tiers side by side — delivery time, scope and included features — and find the level that fits your project.",
+    "Explore our service packages across website development, mobile apps, digital refresh, SEO, technical audit and maintenance. Switch between tabs to compare Startup, Professional and Premium tiers side by side — delivery time, scope and included features — and find the level that fits your project.",
   tabWeb: "Website",
-  tabRefresh: "Web & App Redesign",
+  tabRefresh: "Digital Refresh",
   tabApp: "Application",
   tabSeo: "SEO Services",
   tabAudit: "Technical Audit",
@@ -45,7 +45,7 @@ export const servicesPackagesEn = {
   refreshIntroP1:
     "We transform outdated or slow web and mobile apps into modern, fast experiences. We renew infrastructure, interface and content layers together, preserving your existing data for a seamless transition.",
   refreshIntroP2:
-    "Portfolio, corporate and ecommerce redesign packages come in Startup, Professional and Premium tiers. We plan a performance and conversion-focused migration while protecting your SEO rankings.",
+    "Digital refresh packages for portfolio, corporate and ecommerce sites come in Startup, Professional and Premium tiers. We plan a performance and conversion-focused migration while protecting your SEO rankings.",
   appIntroTitle: "End-to-end mobile development",
   appIntroP1:
     "iOS and Android apps with React Native and Flutter. Node.js APIs, authentication and push notification infrastructure built into the same project.",

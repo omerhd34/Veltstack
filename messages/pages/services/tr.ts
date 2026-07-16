@@ -6,7 +6,7 @@ export const servicesPageTr = {
   heroSubtitle:
     "Her proje tipi üç kademede sunulur: Girişim, Profesyonel ve Premium. Kapsam, teslim süresi ve revizyon sayısı baştan netleştirilir, büyük projeler sınırsız ölçeklenebilir.",
   heroSubtitleSecondary:
-    "Paketleri inceleyin; web sitesi, uygulama, yenileme, SEO, teknik denetim ve bakım sekmeleri arasında geçiş yaparak size en uygun kapsamı belirleyin.",
+    "Paketleri inceleyin; web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım sekmeleri arasında geçiş yaparak size en uygun kapsamı belirleyin.",
   heroImageAlt:
     "Dijital hizmetleri temsil eden bağlantılı modüler arayüz illüstrasyonu",
   scrollLabel: "Paketleri incele",
@@ -34,7 +34,7 @@ export const servicesPageTr = {
     {
       value: "6",
       label: "Hizmet Alanı",
-      hint: "Web sitesi, uygulama, yenileme, SEO, teknik denetim ve bakım dahil altı farklı hizmet kategorisi.",
+      hint: "Web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım dahil altı farklı hizmet kategorisi.",
     },
     {
       value: "14",

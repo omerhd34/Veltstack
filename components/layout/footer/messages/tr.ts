@@ -6,7 +6,7 @@ export const footerTr = {
   legalTitle: "Yasal",
   serviceLabels: {
     serviceWeb: "Web Sitesi Geliştirme",
-    serviceRefresh: "Web & Uygulama Yenileme",
+    serviceRefresh: "Dijital Yenileme",
     serviceApp: "Uygulama Geliştirme",
     serviceSeo: "SEO Hizmetleri",
     serviceAudit: "Teknik Denetim",

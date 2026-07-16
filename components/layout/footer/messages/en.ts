@@ -6,7 +6,7 @@ export const footerEn = {
   legalTitle: "Legal",
   serviceLabels: {
     serviceWeb: "Website Development",
-    serviceRefresh: "Web & App Redesign",
+    serviceRefresh: "Digital Refresh",
     serviceApp: "App Development",
     serviceSeo: "SEO Services",
     serviceAudit: "Technical Audit",

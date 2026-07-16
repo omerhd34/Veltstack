@@ -114,11 +114,11 @@ export const serviceDetailsTr = {
     ],
   },
   "web-sitesi-yenileme": {
-    metaTitle: "Web & Uygulama Yenileme",
+    metaTitle: "Dijital Yenileme",
     metaDesc:
       "Eski veya yavaş web sitenizi ve mobil uygulamanızı modern tasarım, hızlı altyapı ve SEO iyileştirmeleriyle yenileyin. İçeriklerinizi koruyarak güvenli geçiş.",
     heroBadge: "Web & Uygulama Yenileme",
-    heroTitle: "Web & Uygulama Yenileme",
+    heroTitle: "Dijital Yenileme",
     heroImageAlt:
       "Web sitesi yenilemeyi simgeleyen dönüşen arayüz panelleri illüstrasyonu",
     heroSubtitle:

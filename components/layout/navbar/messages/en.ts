@@ -4,7 +4,7 @@ export const navEn = {
   servicesMegaMenuIntro:
     "We handle your web, app, SEO and maintenance needs under one roof. We define scope upfront, manage delivery transparently and focus on measurable outcomes. From design through launch we prioritize performance, accessibility and SEO.",
   serviceWeb: "Website",
-  serviceRefresh: "Web & App Redesign",
+  serviceRefresh: "Digital Refresh",
   serviceApp: "App",
   serviceSeo: "SEO Services",
   serviceAudit: "Technical Audit",

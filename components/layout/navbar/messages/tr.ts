@@ -4,7 +4,7 @@ export const navTr = {
   servicesMegaMenuIntro:
     "Markanızın web, uygulama, SEO ve bakım ihtiyaçlarını tek çatı altında yönetiyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
   serviceWeb: "Web Sitesi",
-  serviceRefresh: "Web & Uygulama Yenileme",
+  serviceRefresh: "Dijital Yenileme",
   serviceApp: "Uygulama",
   serviceSeo: "SEO Hizmetleri",
   serviceAudit: "Teknik Denetim",

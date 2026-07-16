@@ -28,7 +28,7 @@ export const aboutEn = {
     {
       value: "6",
       label: "Service Areas",
-      hint: "End-to-end support across web, mobile, SEO, redesign, audit and maintenance services.",
+      hint: "End-to-end support across web, mobile, SEO, digital refresh, audit and maintenance services.",
     },
   ],
   profileBadge: "Veltstack DNA",

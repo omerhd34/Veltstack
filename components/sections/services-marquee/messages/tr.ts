@@ -1,13 +1,13 @@
 export const servicesMarqueeHomeTr = {
-  "servicesMarqueeItems": [
+  servicesMarqueeItems: [
     "Web Geliştirme",
-    "Web & Uygulama Yenileme",
+    "Dijital Yenileme",
     "Mobil Uygulama Geliştirme",
     "Kurumsal Web Sitesi",
     "E-Ticaret",
     "SEO Hizmetleri",
     "Teknik Denetim",
     "Portfolyo Sitesi",
-    "Bakım ve Destek"
-  ]
-} as const
+    "Bakım ve Destek",
+  ],
+} as const;

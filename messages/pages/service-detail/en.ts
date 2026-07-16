@@ -114,11 +114,11 @@ export const serviceDetailsEn = {
     ],
   },
   "web-sitesi-yenileme": {
-    metaTitle: "Web & App Redesign",
+    metaTitle: "Digital Refresh",
     metaDesc:
       "Refresh your outdated or slow website and mobile app with modern design, fast infrastructure and SEO improvements. Secure migration while preserving your content.",
-    heroBadge: "Web & App Redesign",
-    heroTitle: "Web & App Redesign",
+    heroBadge: "Web & App Refresh",
+    heroTitle: "Digital Refresh",
     heroImageAlt:
       "Transforming interface panels illustration symbolizing website redesign",
     heroSubtitle:
@@ -135,7 +135,7 @@ export const serviceDetailsEn = {
       {
         title: "Current Site Audit",
         description:
-          "We comprehensively audit your existing site across technical infrastructure, performance, SEO and user experience. Issues are ranked by impact and urgency into a prioritized action plan. Renewal scope is clarified from this analysis so unnecessary work is ruled out early. Outdated technology, security gaps and mobile incompatibility are reported in separate categories. Competitor sites are benchmarked to identify areas where you fall behind. The audit report serves as a reference document for every step of the renewal process.",
+          "We comprehensively audit your existing site across technical infrastructure, performance, SEO and user experience. Issues are ranked by impact and urgency into a prioritized action plan. Refresh scope is clarified from this analysis so unnecessary work is ruled out early. Outdated technology, security gaps and mobile incompatibility are reported in separate categories. Competitor sites are benchmarked to identify areas where you fall behind. The audit report serves as a reference document for every step of the refresh process.",
       },
       {
         title: "Modern Design & UX",
@@ -150,7 +150,7 @@ export const serviceDetailsEn = {
       {
         title: "SEO Protection & Growth",
         description:
-          "We preserve your existing rankings while improving visibility through URL structure, 301 redirects and meta data. Sitemap, robots and structured data are verified before launch. Indexing is tracked via Search Console throughout the transition. Old URLs are mapped to new equivalents to minimize 404 and ranking loss risk. Title, description and internal link structure are reviewed as a renewal opportunity. Crawl errors and indexing changes in the first week after launch are watched closely.",
+          "We preserve your existing rankings while improving visibility through URL structure, 301 redirects and meta data. Sitemap, robots and structured data are verified before launch. Indexing is tracked via Search Console throughout the transition. Old URLs are mapped to new equivalents to minimize 404 and ranking loss risk. Title, description and internal link structure are reviewed as a refresh opportunity. Crawl errors and indexing changes in the first week after launch are watched closely.",
       },
       {
         title: "Content Migration",

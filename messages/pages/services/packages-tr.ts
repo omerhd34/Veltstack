@@ -12,9 +12,9 @@ export const servicesPackagesTr = {
   packagesTitleAccent: "Paketler",
   packagesTitleSuffix: "Paketleri",
   packagesSubtitle:
-    "Web sitesi, mobil uygulama, yenileme, SEO, teknik denetim ve bakım alanlarında sunduğumuz hizmet paketlerini inceleyin. Sekmeler arasında geçerek Girişim, Profesyonel ve Premium seviyelerini karşılaştırın; teslim süresi, kapsam ve dahil özellikleri yan yana görüp projenize en uygun seviyeyi kolayca belirleyin.",
+    "Web sitesi, mobil uygulama, dijital yenileme, SEO, teknik denetim ve bakım alanlarında sunduğumuz hizmet paketlerini inceleyin. Sekmeler arasında geçerek Girişim, Profesyonel ve Premium seviyelerini karşılaştırın; teslim süresi, kapsam ve dahil özellikleri yan yana görüp projenize en uygun seviyeyi kolayca belirleyin.",
   tabWeb: "Web Sitesi Geliştirme",
-  tabRefresh: "Web & Uygulama Yenileme",
+  tabRefresh: "Dijital Yenileme",
   tabApp: "Uygulama Geliştirme",
   tabSeo: "SEO Hizmetleri",
   tabAudit: "Teknik Denetim",
@@ -45,7 +45,7 @@ export const servicesPackagesTr = {
   refreshIntroP1:
     "Eski veya yavaş web ve mobil uygulamalarını modern, hızlı deneyimlere dönüştürüyoruz. Altyapı, arayüz ve içerik katmanlarını birlikte yenileyerek mevcut verilerinizi koruyarak kesintisiz geçiş sağlıyoruz.",
   refreshIntroP2:
-    "Portföy, kurumsal ve e-ticaret yenileme paketleri Girişim, Profesyonel ve Premium seviyelerinde sunulur. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
+    "Portföy, kurumsal ve e-ticaret sitelerine yönelik dijital yenileme paketleri Girişim, Profesyonel ve Premium seviyelerinde sunulur. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
   appIntroTitle: "Vizyonunuza uygun mobil uygulama",
   appIntroP1:
     "Tanıtım uygulamasından kurumsal çözüme, sipariş ve rezervasyon sistemlerinden karmaşık iş süreçlerine, istediğiniz deneyimi tasarlayıp geliştiriyorum. iOS ve Android için tek bir projede ilerliyoruz.",

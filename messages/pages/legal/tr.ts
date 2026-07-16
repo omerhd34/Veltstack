@@ -145,7 +145,7 @@ export const legalTr = {
         id: "hizmet-tanimi",
         title: "3. Ne Sunuyoruz?",
         paragraphs: [
-          "Veltstack; web sitesi geliştirme, web ve uygulama yenileme, mobil uygulama geliştirme, SEO, teknik denetim ile bakım ve destek hizmetleri sunar.",
+          "Veltstack; web sitesi geliştirme, dijital yenileme, mobil uygulama geliştirme, SEO, teknik denetim ile bakım ve destek hizmetleri sunar.",
           "Sitede yer alan bilgiler tanıtım amaçlıdır; bağlayıcı teklif veya taahhüt niteliği taşımaz. Kesin kapsam, süre ve ücret her proje için ayrı yazılı sözleşme veya teklifle belirlenir.",
         ],
       },

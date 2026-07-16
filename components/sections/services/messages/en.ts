@@ -21,7 +21,7 @@ export const servicesHomeEn = {
   servicesWebDesc:
     "We deliver fast, SEO-ready web development for corporate, e-commerce and portfolio projects from design to launch, prioritizing performance, accessibility and conversion on a mobile-friendly foundation.",
   servicesWebTag: "Corporate - E-commerce - Portfolio",
-  servicesRefreshTitle: "Web & App Redesign",
+  servicesRefreshTitle: "Digital Refresh",
   servicesRefreshDesc:
     "We modernize outdated or slow web and mobile apps into fast, conversion-focused experiences; we refresh infrastructure, interface and content together while preserving your workflows for a smooth transition.",
   servicesRefreshTag: "Web - Mobile - Infrastructure",

@@ -25,7 +25,7 @@ export const contactTr = {
 
   serviceOptions: [
     { value: "web-sitesi-gelistirme", label: "Web Sitesi Geliştirme" },
-    { value: "web-sitesi-yenileme", label: "Web & Uygulama Yenileme" },
+    { value: "web-sitesi-yenileme", label: "Dijital Yenileme" },
     { value: "uygulama-gelistirme", label: "Uygulama Geliştirme" },
     { value: "teknik-denetim", label: "Teknik Denetim" },
     { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
