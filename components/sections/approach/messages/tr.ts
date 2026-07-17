@@ -37,15 +37,15 @@ export const approachTr = {
     },
     {
       step: "6",
-      title: "Geliştirmeye Başlayalım",
+      title: "Yapıma Başlayalım",
       desc: "Onayınızın ardından projeyi resmen başlatır, düzenli güncellemelerle süreci sizinle paylaşırız. Her aşamada aynı muhatapla iletişimde kalırsınız.",
       timing: "Resmi başlangıç",
     },
     {
       step: "7",
-      title: "Geliştirme & Entegrasyon",
+      title: "Yapım & Entegrasyon",
       desc: "Kodlama, API mimarisi ve üçüncü taraf entegrasyonlarını performans odaklı ilerletiriz. Temiz, ölçeklenebilir ve sürdürülebilir bir altyapı kurarız.",
-      timing: "Geliştirme süreci",
+      timing: "Yapım süreci",
     },
     {
       step: "8",

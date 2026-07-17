@@ -5,7 +5,7 @@ export const processHomeEn = {
   processSubtitle:
     "We bring your projects to life through a step-by-step, transparent and measurable process.",
   processIntro:
-    "From discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect at each stage. We manage design, development, testing and go-live through a predictable plan and keep you informed throughout.",
+    "From discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect at each stage. We manage design, building, testing and go-live through a predictable plan and keep you informed throughout.",
   processSliderPrev: "Previous step",
   processSliderNext: "Next step",
   processSliderDot: "Step",
@@ -28,10 +28,10 @@ export const processHomeEn = {
     {
       title: "Prototype and Approval",
       description:
-        "We visualize your project with interactive prototypes and submit them for approval. Clickable screens let us test flows together before development begins. Once approved, we move to coding with fewer surprise revisions.",
+        "We visualize your project with interactive prototypes and submit them for approval. Clickable screens let us test flows together before building begins. Once approved, we move to coding with fewer surprise revisions.",
     },
     {
-      title: "Frontend Development",
+      title: "Frontend Building",
       description:
         "We build fast, accessible and responsive interfaces with modern technologies. Using Next.js, React and Tailwind, we create performance-focused, SEO-friendly pages. Every screen is tested to work smoothly across devices and browsers.",
     },

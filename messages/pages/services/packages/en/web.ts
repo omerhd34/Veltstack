@@ -63,7 +63,7 @@ export const webPackagesEn = {
         scope: "1-5",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [...commonDesignItems],
           },
           {
@@ -86,7 +86,7 @@ export const webPackagesEn = {
         scope: "1-10",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               ...commonDesignItems,
               "Dark / Light mode support",
@@ -122,7 +122,7 @@ export const webPackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               ...commonDesignItems,
               "Dark / Light mode support",
@@ -171,7 +171,7 @@ export const webPackagesEn = {
         scope: "1-10",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [...commonDesignItems],
           },
           {
@@ -194,7 +194,7 @@ export const webPackagesEn = {
         scope: "1-25",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               ...commonDesignItems,
               "Dark / Light mode support",
@@ -233,7 +233,7 @@ export const webPackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               ...commonDesignItems,
               "Dark / Light mode support",
@@ -285,7 +285,7 @@ export const webPackagesEn = {
         scope: "1-15",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               ...commonDesignItems,
               "SSL certificate and payment security infrastructure",
@@ -322,7 +322,7 @@ export const webPackagesEn = {
         scope: "1-35",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               ...commonDesignItems,
               "Dark / Light mode support",
@@ -373,7 +373,7 @@ export const webPackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               ...commonDesignItems,
               "Dark / Light mode support",

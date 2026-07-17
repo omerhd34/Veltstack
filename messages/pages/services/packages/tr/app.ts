@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 
 const commonDesignTemelItems = [
-  "iOS ve Android Uyumlu Geliştirme",
+  "iOS ve Android Uyumlu Yapım",
   "Temel UI/UX ve Marka Renklerine Uyarlama",
   "Splash Screen ve Uygulama İkonu Tasarımı",
   "Temel Sayfa Geçişleri ve Navigasyon",
@@ -162,7 +162,7 @@ export const appPackagesTr = {
         scope: "1-5",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [...commonDesignTemelItems],
           },
           {
@@ -185,7 +185,7 @@ export const appPackagesTr = {
         scope: "1-10",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               ...commonDesignTemelItems,
               "Premium UI Bileşenleri ve Modern Arayüz",
@@ -213,7 +213,7 @@ export const appPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               "Ölçeklenebilir Yüksek Hızlı Özel Altyapı",
               "Figma'dan Piksel Uyumlu Arayüz Kodlama",
@@ -254,7 +254,7 @@ export const appPackagesTr = {
         scope: "1-8",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               "Kurumsal Kimliğe Uygun iOS / Android Arayüz",
               "Temel UI/UX ve Marka Renklerine Uyarlama",
@@ -286,7 +286,7 @@ export const appPackagesTr = {
         scope: "1-15",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               "Kurumsal Özel iOS / Android Arayüz Tasarımı",
               "Premium Bileşenler ve Modern Arayüz",
@@ -322,7 +322,7 @@ export const appPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               "Yüksek Hızlı Kurumsal Özel Altyapı",
               "Figma'dan Piksel Uyumlu Kurumsal Arayüz",
@@ -367,7 +367,7 @@ export const appPackagesTr = {
         scope: "1-12",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               "E-Ticaret Odaklı iOS / Android Arayüzü",
               "Temel UI/UX ve Marka Renklerine Uyarlama",
@@ -404,7 +404,7 @@ export const appPackagesTr = {
         scope: "1-20",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               "Premium E-Ticaret iOS / Android Arayüzü",
               "Gelişmiş Filtreleme ve Kaydırma (Infinite Scroll)",
@@ -436,7 +436,7 @@ export const appPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               "Native Hisli Yüksek Hızlı Özel Altyapı",
               "Figma'dan Piksel Uyumlu E-Ticaret Arayüzü",

@@ -27,7 +27,7 @@ export const workflowEn = {
     {
       step: "4",
       title: "We Start the Project",
-      desc: "After approval, we start development and keep you updated throughout.",
+      desc: "After approval, we start building and keep you updated throughout.",
       timing: "Immediately",
     },
   ],

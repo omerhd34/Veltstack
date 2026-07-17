@@ -1,14 +1,14 @@
 export const servicesMarqueeHomeEn = {
   "servicesMarqueeItems": [
-    "Web Development",
+    "Web Building",
     "Digital Refresh",
-    "Mobile App Development",
+    "Mobile App Building",
     "Corporate Website",
     "E-Commerce",
     "SEO Services",
     "Technical Audit",
     "Portfolio Website",
-    "API Development",
+    "API Building",
     "Maintenance and Support"
   ]
 } as const

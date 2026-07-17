@@ -17,8 +17,8 @@ export const blogPostEntry: BlogPostEntry = {
     "Bootstrap ile Tailwind CSS'i karşılaştırıp modern projelerde neden utility-first yaklaşımı tercih ettiğimizi anlatıyoruz.",
   excerptShortEn:
     "We compare Bootstrap and Tailwind CSS and explain why utility-first is our choice for modern projects.",
-  category: "Web Geliştirme",
-  categoryEn: "Web Development",
+  category: "Web Yapımı",
+  categoryEn: "Web Building",
   imageUrl: "/images/pages/blog/neden-tailwind-css.png",
   readingTime: 9,
   publishedAt: "2026-07-07",
@@ -155,7 +155,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Bootstrap'ten Tailwind'e geçerken sınıf isimlerini birebir eşlemeye çalışmak; utility mantığına göre yeniden düşünmek gerekir.</li>
 </ul>
 
-<h2>Profesyonel Web Geliştirme Desteği</h2>
+<h2>Profesyonel Web Yapımı Desteği</h2>
 <p>Doğru CSS yaklaşımı; hız, bakım maliyeti ve marka algısını doğrudan etkiler. Veltstack olarak kurumsal siteler, e-ticaret ve özel yazılım projelerinde Next.js, TypeScript, Tailwind CSS 4 ve shadcn/ui ile tutarlı, performanslı arayüzler geliştiriyoruz.</p>
 
 <h2>Sonuç</h2>
@@ -293,7 +293,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Trying to map Bootstrap class names one-to-one when migrating to Tailwind; rethink in utility terms instead.</li>
 </ul>
 
-<h2>Professional Web Development</h2>
+<h2>Professional Web Building</h2>
 <p>The right CSS approach directly affects speed, maintenance cost and brand perception. At Veltstack we build consistent, performant interfaces for corporate sites, e-commerce and custom software with Next.js, TypeScript, Tailwind CSS 4 and shadcn/ui.</p>
 
 <h2>Conclusion</h2>

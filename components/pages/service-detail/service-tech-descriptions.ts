@@ -3,7 +3,7 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
     "App Router ile hızlı, SEO uyumlu ve ölçeklenebilir web uygulamaları geliştirir.",
   React: "Bileşen tabanlı arayüzler ve etkileşimli kullanıcı deneyimleri için.",
   TypeScript: "Tip güvenliği ve bakımı kolay kod tabanı sağlar.",
-  "Tailwind CSS": "Hızlı, tutarlı ve responsive arayüz geliştirme.",
+  "Tailwind CSS": "Hızlı, tutarlı ve responsive arayüz yapımı.",
   Shadcn: "Erişilebilir, özelleştirilebilir UI bileşen kütüphanesi.",
   "Lightswind UI":
     "Tailwind tabanlı animasyonlu bileşen kütüphanesi alternatifi.",
@@ -16,11 +16,11 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
   NextUI: "React ve Tailwind tabanlı modern UI kiti alternatifi.",
   Zustand: "Hafif ve performanslı istemci tarafı durum yönetimi.",
   Zod: "Form ve API katmanında tip güvenli veri doğrulama.",
-  "Express.js": "Hafif ve esnek Node.js tabanlı REST API geliştirme.",
+  "Express.js": "Hafif ve esnek Node.js tabanlı REST API yapımı.",
   Prisma: "Veritabanı şeması, sorgular ve migrasyon yönetimi.",
   MySQL: "İlişkisel veritabanı; içerik, kullanıcı ve sipariş verileri için.",
   Vercel: "Hızlı deploy, CDN ve otomatik ölçeklendirme altyapısı.",
-  "React Native": "iOS ve Android için tek kod tabanıyla mobil geliştirme.",
+  "React Native": "iOS ve Android için tek kod tabanıyla mobil yapım.",
   Expo: "Hızlı build, mağaza yayını ve native modül desteği.",
   "Node.js": "Backend API, sunucu tarafı iş mantığı ve entegrasyonlar.",
   "REST API": "Güvenli veri alışverişi ve üçüncü parti servis bağlantıları.",
@@ -42,7 +42,7 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
   Bootstrap: "Hızlı prototipleme ve grid tabanlı responsive düzenler için.",
   Angular:
     "Kurumsal ölçekte component tabanlı frontend projeleri için alternatif.",
-  Vue: "Vue.js tabanlı arayüz geliştirme; müşteri tercihine göre kullanılabilir.",
+  Vue: "Vue.js tabanlı arayüz yapımı; müşteri tercihine göre kullanılabilir.",
   "Framer Motion": "Akıcı sayfa geçişleri ve mikro animasyonlar için.",
   "Chakra UI": "Erişilebilir React bileşen kütüphanesi alternatifi.",
   "Ant Design": "Kurumsal paneller ve yoğun veri arayüzleri için UI seti.",
@@ -57,7 +57,7 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
   Postman: "API test, dokümantasyon ve entegrasyon doğrulama aracı.",
   "Sass & SCSS":
     "Değişken, mixin ve modüler stil yapısı için CSS ön işlemcisi.",
-  UI: "Shadcn, Material UI ve benzeri bileşen kütüphaneleriyle arayüz geliştirme.",
+  UI: "Shadcn, Material UI ve benzeri bileşen kütüphaneleriyle arayüz yapımı.",
   Git: "Versiyon kontrolü, branch yönetimi ve ekip içi kod iş birliği.",
   "PageSpeed Insights":
     "Sayfa hızı, Core Web Vitals ve mobil performans analizi.",
@@ -67,17 +67,17 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
     "Türkiye'de yaygın sanal POS; e-ticaret ödeme entegrasyonu alternatifi.",
   iyzico: "Marketplace ve gelişmiş API destekli ödeme altyapısı alternatifi.",
   Stripe: "Uluslararası kart ödemeleri ve abonelik yönetimi için alternatif.",
-  Tools: "Geliştirme, test ve bakım süreçlerinde kullanılan yardımcı araçlar.",
+  Tools: "Yapım, test ve bakım süreçlerinde kullanılan yardımcı araçlar.",
   Flutter:
-    "Google'ın cross-platform mobil framework'ü; alternatif mobil geliştirme seçeneği.",
+    "Google'ın cross-platform mobil framework'ü; alternatif mobil yapım seçeneği.",
   "Android Studio":
-    "Android build, emülatör ve native modül geliştirme ortamı.",
+    "Android build, emülatör ve native modül yapım ortamı.",
   Figma: "UI/UX tasarım, prototipleme ve tasarım-dev handoff aracı.",
   Railway: "PostgreSQL, MySQL ve Redis dahil yönetilen veritabanı barındırma altyapısı.",
   Render: "Web servisleri ve API hosting için alternatif bulut platformu.",
   Redis:
     "Önbellekleme, oturum yönetimi ve hızlı veri erişimi için bellek içi veritabanı.",
-  Docker: "Konteyner tabanlı deploy ve tutarlı geliştirme ortamları.",
+  Docker: "Konteyner tabanlı deploy ve tutarlı yapım ortamları.",
   Upstash: "Serverless Redis ve rate limiting altyapısı.",
   Semrush: "Anahtar kelime, rakip analizi ve SEO araştırma aracı.",
   "Google Tag Manager":
@@ -86,8 +86,8 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
   "App Store": "iOS uygulama yayınlama ve dağıtım platformu.",
   "Google Play": "Android uygulama yayınlama ve dağıtım platformu.",
   "Swagger / OpenAPI": "API dokümantasyonu, şema tanımı ve entegrasyon testi.",
-  Kotlin: "Android native geliştirme için alternatif platform dili.",
-  Swift: "iOS native geliştirme için alternatif platform dili.",
+  Kotlin: "Android native yapım için alternatif platform dili.",
+  Swift: "iOS native yapım için alternatif platform dili.",
   Firebase: "Kimlik doğrulama, push bildirim ve gerçek zamanlı veri altyapısı.",
   Supabase: "PostgreSQL tabanlı backend-as-a-service alternatifi.",
   Sentry: "Hata izleme, crash raporlama ve performans takibi.",

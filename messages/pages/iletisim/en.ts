@@ -24,9 +24,9 @@ export const contactEn = {
     "Describe your project, expectations, and any technical requirements…",
 
   serviceOptions: [
-    { value: "web-sitesi-gelistirme", label: "Web Site Development" },
+    { value: "web-sitesi-gelistirme", label: "Website Building" },
     { value: "web-sitesi-yenileme", label: "Digital Refresh" },
-    { value: "uygulama-gelistirme", label: "App Development" },
+    { value: "uygulama-gelistirme", label: "App Building" },
     { value: "teknik-denetim", label: "Technical Audit" },
     { value: "seo-hizmetleri", label: "SEO Services" },
     { value: "bakim-ve-destek", label: "Maintenance & Support" },

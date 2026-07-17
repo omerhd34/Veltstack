@@ -1,4 +1,4 @@
-﻿// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
 // Ortak (paylaşılan) özellik grupları
 // ---------------------------------------------------------------------------
 
@@ -70,7 +70,7 @@ export const webPackagesTr = {
         scope: "1-5",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [...commonDesignItems],
           },
           {
@@ -93,7 +93,7 @@ export const webPackagesTr = {
         scope: "1-10",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
               "Dark / Light Mod Desteği",
@@ -129,7 +129,7 @@ export const webPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
               "Dark / Light Mod Desteği",
@@ -182,7 +182,7 @@ export const webPackagesTr = {
         scope: "1-10",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [...commonDesignItems],
           },
           {
@@ -205,7 +205,7 @@ export const webPackagesTr = {
         scope: "1-25",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
               "Dark / Light Mod Desteği",
@@ -244,7 +244,7 @@ export const webPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
               "Dark / Light Mod Desteği",
@@ -300,7 +300,7 @@ export const webPackagesTr = {
         scope: "1-15",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [...commonDesignItems],
           },
           {
@@ -334,7 +334,7 @@ export const webPackagesTr = {
         scope: "1-35",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
               "Dark / Light Mod Desteği",
@@ -385,7 +385,7 @@ export const webPackagesTr = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Tasarım & Geliştirme",
+            label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
               "Dark / Light Mod Desteği",

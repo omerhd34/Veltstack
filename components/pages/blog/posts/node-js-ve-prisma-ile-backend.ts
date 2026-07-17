@@ -17,8 +17,8 @@ export const blogPostEntry: BlogPostEntry = {
     "Node.js ve Prisma ile modern backend ve API mimarisinin temellerini gerçek örneklerle anlatıyoruz.",
   excerptShortEn:
     "The fundamentals of modern backend and API architecture with Node.js and Prisma, explained with real examples.",
-  category: "Web Geliştirme",
-  categoryEn: "Web Development",
+  category: "Web Yapımı",
+  categoryEn: "Web Building",
   imageUrl: "/images/pages/blog/node-js-ve-prisma-ile-backend.png",
   readingTime: 10,
   publishedAt: "2026-07-07",
@@ -285,7 +285,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Type-safe queries:</strong> <code>prisma.post.findMany()</code> return types are known at compile time; fewer runtime surprises.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Relation management:</strong> Foreign keys and cascade rules are defined in the schema with <code>@relation</code>.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Migration history:</strong> <code>prisma migrate</code> tracks schema changes and supports rollback.</span></div></li>
-<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Prisma Studio:</strong> Visual database browser; handy for data checks during development.</span></div></li>
+<li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Prisma Studio:</strong> Visual database browser; handy for data checks during building.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Seed script:</strong> <code>prisma/seed.ts</code> loads initial data automatically; speeds up test and demo environments.</span></div></li>
 <li><div class="blog-checklist-inner"><span class="blog-checklist-icon" aria-hidden="true"></span><span class="blog-checklist-body"><strong>Provider independence:</strong> Schema and client largely survive a move from MySQL to PostgreSQL.</span></div></li>
 </ul>

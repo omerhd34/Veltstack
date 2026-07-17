@@ -13,11 +13,11 @@ export const servicesPackagesTr = {
   packagesTitleSuffix: "Paketleri",
   packagesSubtitle:
     "Web sitesi, mobil uygulama, dijital yenileme, SEO, teknik denetim ve bakım alanlarında sunduğumuz hizmet paketlerini inceleyin. Sekmeler arasında geçerek Girişim, Profesyonel ve Premium seviyelerini karşılaştırın; teslim süresi, kapsam ve dahil özellikleri yan yana görüp projenize en uygun seviyeyi kolayca belirleyin.",
-  tabWeb: "Web Sitesi Geliştirme",
-  tabRefresh: "Dijital Yenileme",
-  tabApp: "Uygulama Geliştirme",
-  tabSeo: "SEO Hizmetleri",
-  tabAudit: "Teknik Denetim",
+  tabWeb: "Web Sitesi",
+  tabRefresh: "Yenileme",
+  tabApp: "Uygulama",
+  tabSeo: "SEO",
+  tabAudit: "Denetim",
   tabMaintenance: "Bakım & Destek",
   tierTemel: "Girişim",
   tierStandart: "Profesyonel",
@@ -36,7 +36,7 @@ export const servicesPackagesTr = {
   scopeUnlimited: "∞",
   getQuote: "Teklif Al",
   deliveryGroupLabel: "Teslim & Destek",
-  webIntroTitle: "İhtiyacınıza göre web geliştirme",
+  webIntroTitle: "İhtiyacınıza göre web yapımı",
   webIntroP1:
     "Tanıtım sitesinden kurumsal portala, e-ticaret mağazasından özel iş akışlarına, ne hedefliyorsanız ona uygun web çözümünü birlikte şekillendiriyoruz. Tasarımdan yayına almaya kadar tüm süreci tek elden yönetiyorum.",
   webIntroP2:

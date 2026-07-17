@@ -17,10 +17,10 @@ export const webSitesiGelistirmeProcessEn = [
   {
     title: "Prototype and Approval",
     description:
-      "We visualize your project with interactive prototypes and submit them for approval. Clickable screens let us test flows together before development begins. Once approved, we move to coding with fewer surprise revisions.",
+      "We visualize your project with interactive prototypes and submit them for approval. Clickable screens let us test flows together before building begins. Once approved, we move to coding with fewer surprise revisions.",
   },
   {
-    title: "Frontend Development",
+    title: "Frontend Building",
     description:
       "We build fast, accessible and responsive interfaces with modern technologies. Using Next.js, React and Tailwind, we create performance-focused, SEO-friendly pages. Every screen is tested to work smoothly across devices and browsers.",
   },
@@ -55,7 +55,7 @@ export const webSitesiYenilemeProcessEn = [
   {
     title: "Design Refresh and Approval",
     description:
-      "We prepare an up-to-date interface and information architecture aligned with your brand. Development proceeds after approval via interactive prototype.",
+      "We prepare an up-to-date interface and information architecture aligned with your brand. Building proceeds after approval via interactive prototype.",
   },
   {
     title: "Infrastructure Refresh",
@@ -103,10 +103,10 @@ export const uygulamaGelistirmeProcessEn = [
   {
     title: "Prototype and Approval",
     description:
-      "We test flows together with clickable prototypes. Development begins after approval.",
+      "We test flows together with clickable prototypes. Building begins after approval.",
   },
   {
-    title: "Mobile Development",
+    title: "Mobile Building",
     description:
       "We build for iOS and Android from a single codebase with React Native and Expo. Native performance and smooth animations are targeted.",
   },

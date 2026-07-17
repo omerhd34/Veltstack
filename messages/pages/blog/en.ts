@@ -2,7 +2,7 @@ export const blogPageEn = {
   heroBadge: "Articles",
   heroTitle: "Insights from the digital world",
   heroSubtitle:
-    "We publish practical content on web development, mobile apps, SEO and digital transformation. We share lessons from real projects and field-tested methods in plain language.",
+    "We publish practical content on web building, mobile apps, SEO and digital transformation. We share lessons from real projects and field-tested methods in plain language.",
   heroSubtitleSecondary:
     "Filter by category or search to quickly find what you need.",
   heroImageAlt:
@@ -18,7 +18,7 @@ export const blogPageEn = {
     },
     categories: {
       label: "Content Category",
-      hint: "We group articles under topics like web development, mobile, SEO, e-commerce and tools.",
+      hint: "We group articles under topics like web building, mobile, SEO, e-commerce and tools.",
     },
     reading: {
       label: "Total Reading (minutes)",
@@ -39,7 +39,7 @@ export const blogPageEn = {
   latestBadge: "Latest Articles",
   categories: [
     "All",
-    "Web Development",
+    "Web Building",
     "Mobile",
     "SEO",
     "E-Commerce",

@@ -12,8 +12,8 @@ export const blogPostEntry: BlogPostEntry = {
     "SQL ve NoSQL farkını, MySQL, PostgreSQL ve MongoDB karşılaştırmasını ve doğru veritabanı seçimini ele alıyoruz.",
   excerptShortEn:
     "SQL vs NoSQL, a comparison of MySQL, PostgreSQL and MongoDB, and how to pick the right database.",
-  category: "Web Geliştirme",
-  categoryEn: "Web Development",
+  category: "Web Yapımı",
+  categoryEn: "Web Building",
   imageUrl: "/images/pages/blog/veritabani-secimi.png",
   readingTime: 10,
   publishedAt: "2026-06-23",

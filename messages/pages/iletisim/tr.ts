@@ -24,9 +24,9 @@ export const contactTr = {
     "Projenizi, beklentilerinizi ve varsa teknik gereksinimlerinizi anlatın…",
 
   serviceOptions: [
-    { value: "web-sitesi-gelistirme", label: "Web Sitesi Geliştirme" },
+    { value: "web-sitesi-gelistirme", label: "Web Sitesi Yapımı" },
     { value: "web-sitesi-yenileme", label: "Dijital Yenileme" },
-    { value: "uygulama-gelistirme", label: "Uygulama Geliştirme" },
+    { value: "uygulama-gelistirme", label: "Uygulama Yapımı" },
     { value: "teknik-denetim", label: "Teknik Denetim" },
     { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
     { value: "bakim-ve-destek", label: "Bakım & Destek" },

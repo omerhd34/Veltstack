@@ -12,10 +12,10 @@ export const servicesPackagesEn = {
   packagesTitleAccent: "Packages",
   packagesTitleSuffix: "Packages",
   packagesSubtitle:
-    "Explore our service packages across website development, mobile apps, digital refresh, SEO, technical audit and maintenance. Switch between tabs to compare Startup, Professional and Premium tiers side by side — delivery time, scope and included features — and find the level that fits your project.",
-  tabWeb: "Website",
+    "Explore our service packages across website building, mobile apps, digital refresh, SEO, technical audit and maintenance. Switch between tabs to compare Startup, Professional and Premium tiers side by side — delivery time, scope and included features — and find the level that fits your project.",
+  tabWeb: "Website Building",
   tabRefresh: "Digital Refresh",
-  tabApp: "Application",
+  tabApp: "App Building",
   tabSeo: "SEO Services",
   tabAudit: "Technical Audit",
   tabMaintenance: "Maintenance & Support",
@@ -36,7 +36,7 @@ export const servicesPackagesEn = {
   scopeUnlimited: "∞",
   getQuote: "Get a Quote",
   deliveryGroupLabel: "Delivery & Support",
-  webIntroTitle: "End-to-end web development",
+  webIntroTitle: "End-to-end web building",
   webIntroP1:
     "From design to deploy, UI to API, I handle the full web stack in one place. Fast, SEO-ready and scalable projects built on a modern React and Next.js foundation.",
   webIntroP2:
@@ -46,7 +46,7 @@ export const servicesPackagesEn = {
     "We transform outdated or slow web and mobile apps into modern, fast experiences. We renew infrastructure, interface and content layers together, preserving your existing data for a seamless transition.",
   refreshIntroP2:
     "Digital refresh packages for portfolio, corporate and ecommerce sites come in Startup, Professional and Premium tiers. We plan a performance and conversion-focused migration while protecting your SEO rankings.",
-  appIntroTitle: "End-to-end mobile development",
+  appIntroTitle: "End-to-end mobile building",
   appIntroP1:
     "iOS and Android apps with React Native and Flutter. Node.js APIs, authentication and push notification infrastructure built into the same project.",
   appIntroP2:

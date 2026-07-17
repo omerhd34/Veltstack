@@ -1,9 +1,9 @@
 export const aboutTr = {
   heroBadge: "Hakkımızda",
-  heroTagline: "Dijital Ürün Geliştirme",
+  heroTagline: "Dijital Ürün Yapımı",
   heroTitle: "Hedef odaklı çözümler",
   heroSubtitle:
-    "Veltstack; web sitesi, mobil uygulama ve SEO odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eden bir geliştirme markasıdır.",
+    "Veltstack; web sitesi, mobil uygulama ve SEO odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eden bir yapım markasıdır.",
   heroSubtitleSecondary:
     "Kurumsal web ve e-ticaretten performans odaklı altyapılara kadar tasarım, yazılım ve büyüme hedeflerini tek bir teslim çizgisinde birleştiriyoruz.",
   heroImageAlt:
@@ -18,7 +18,7 @@ export const aboutTr = {
     {
       value: "6+",
       label: "Yıllık sektör deneyimi",
-      hint: "Web ve mobil geliştirmede birikmiş uzmanlık. Güncel teknolojiler ve üretim standartlarıyla çalışıyoruz.",
+      hint: "Web ve mobil yapımda birikmiş uzmanlık. Güncel teknolojiler ve üretim standartlarıyla çalışıyoruz.",
     },
     {
       value: "100%",
@@ -34,7 +34,7 @@ export const aboutTr = {
   profileBadge: "Temel İlkemiz",
   profileTitle: "Karar ve kalitede son söz her zaman insanındır.",
   profileParagraphs: [
-    "Geleneksel yazılım geliştirme; sağlam mimari, test edilmiş kod ve öngörülebilir süreçler üzerine kuruludur. Yapay zeka üretkenliği artırabilir; ancak iş hedeflerini anlamak, doğru ürün kararlarını vermek ve kullanıcı deneyimini şekillendirmek insan zekasının alanıdır.",
+    "Geleneksel yazılım yapımı; sağlam mimari, test edilmiş kod ve öngörülebilir süreçler üzerine kuruludur. Yapay zeka üretkenliği artırabilir; ancak iş hedeflerini anlamak, doğru ürün kararlarını vermek ve kullanıcı deneyimini şekillendirmek insan zekasının alanıdır.",
     "Veltstack olarak tasarım, mimari, kod ve teslim sürecinin büyük bölümünü insan emeği ve mühendislik disipliniyle yürütüyoruz. Yapay zeka yalnızca metinlerdeki yazım hatalarını gözden geçirmek gibi ikincil işlerde, bir projenin en fazla %5'inde devreye girer. İnsan büyüktür; ürün kararlarında ve kalitede son söz her zaman insanındır.",
     "Yapay zeka destekli hız yerine geleneksel mühendislik disiplinini ve ölçülebilir iş sonuçlarını ön planda tutuyoruz. Performans, erişilebilirlik, bakım kolaylığı ve dönüşüm odaklılık teslim ettiğimiz her projenin temel ölçütleridir.",
   ],

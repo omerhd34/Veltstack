@@ -13,13 +13,16 @@ export const serviceDetailsEn = {
   featuresSubtitle:
     "I define scope upfront and manage delivery through measurable milestones. You always know what will be delivered and when, with transparent communication throughout.",
   processTitle: "How We Work",
+  processSliderPrev: "Previous process step",
+  processSliderNext: "Next process step",
+  processSliderStep: "Process step",
   processSubtitle:
-    "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, development, testing and go-live follow a predictable plan, with regular updates throughout the project.",
+    "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, building, testing and go-live follow a predictable plan, with regular updates throughout the project.",
   techTitle: "Technologies We Use",
   techSubtitle:
     "Modern, scalable tools selected for your project needs. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
   techCategoryFrontend: "Frontend",
-  techCategoryMobile: "Mobile Development",
+  techCategoryMobile: "Mobile Building",
   techCategoryUi: "UI Libraries",
   techCategoryBackend: "Backend",
   techCategoryDatabase: "Database",
@@ -29,11 +32,11 @@ export const serviceDetailsEn = {
   techCategoryStore: "Store & Publishing",
   techCategoryTools: "Tools & Integrations",
   deliveryLabel: "Delivery Time",
-  heroImageAlt: "Digital development workspace",
-  statDelivery: "Delivery Time (Days)",
-  statSupport: "Support Period (Days)",
-  statTiers: "Package Tiers",
-  statRevisions: "Revision Count",
+  heroImageAlt: "Digital building workspace",
+  statDelivery: "Delivery (Days)",
+  statSupport: "Support (Days)",
+  statTiers: "Package",
+  statRevisions: "Revision",
   statDeliveryHint:
     "Estimated delivery range based on project scope. A clear timeline is shared after the discovery call.",
   statSupportHint:
@@ -48,20 +51,20 @@ export const serviceDetailsEn = {
   breadcrumbHome: "Home",
   breadcrumbServices: "Services",
   "web-sitesi-gelistirme": {
-    metaTitle: "Website Development",
+    metaTitle: "Website Building",
     metaDesc:
-      "End-to-end web development for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
-    heroBadge: "Web Development",
-    heroTitle: "Website Development",
+      "End-to-end web building for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
+    heroBadge: "Web Building",
+    heroTitle: "Website Building",
     heroImageAlt:
-      "Abstract browser and layout illustration symbolizing modern website development",
+      "Abstract browser and layout illustration symbolizing modern website building",
     heroSubtitle:
       "I build every kind of web project end to end, from corporate sites and e-commerce to portfolios and promotional pages.",
     heroSubtitleSecondary:
       "With a modern stack tailored to your project, SEO-ready architecture and mobile-first design, I deliver fast, scalable solutions that represent your brand with confidence online.",
     deliveryTime: "14-84 days",
     processSubtitle:
-      "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, development, testing and go-live follow a predictable plan, with regular updates throughout the project.",
+      "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, building, testing and go-live follow a predictable plan, with regular updates throughout the project.",
     techSubtitle:
       "Modern, scalable tools selected for your project needs. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
     processItems: webSitesiGelistirmeProcessEn,
@@ -104,7 +107,7 @@ export const serviceDetailsEn = {
       {
         title: "Security",
         description:
-          "HTTPS, secure header configuration and modern authentication standards built in from day one. Rate limiting and basic bot protection on form submissions. Dependency security scans run regularly during development. Admin and API endpoints are protected with an authorization layer. A pre-launch security checklist is completed before going live. CSRF, XSS and injection risks are addressed with input validation and output filtering layers as standard. Session handling and access patterns are reviewed so unusual activity can be spotted early.",
+          "HTTPS, secure header configuration and modern authentication standards built in from day one. Rate limiting and basic bot protection on form submissions. Dependency security scans run regularly during building. Admin and API endpoints are protected with an authorization layer. A pre-launch security checklist is completed before going live. CSRF, XSS and injection risks are addressed with input validation and output filtering layers as standard. Session handling and access patterns are reviewed so unusual activity can be spotted early.",
       },
       {
         title: "Analytics",
@@ -140,7 +143,7 @@ export const serviceDetailsEn = {
       {
         title: "Modern Design & UX",
         description:
-          "We design an up-to-date interface, clear information architecture and conversion-focused page flows aligned with your brand. A consistent experience is targeted on mobile and desktop; typography and component language stay in line with your identity. Development does not begin until you approve the design direction. Wireframe and prototype stages gather feedback so design iterates before build. Accessibility and readability are prioritized on every screen size. CTA placement, form flows and content hierarchy are optimized for your conversion goals.",
+          "We design an up-to-date interface, clear information architecture and conversion-focused page flows aligned with your brand. A consistent experience is targeted on mobile and desktop; typography and component language stay in line with your identity. Building does not begin until you approve the design direction. Wireframe and prototype stages gather feedback so design iterates before build. Accessibility and readability are prioritized on every screen size. CTA placement, form flows and content hierarchy are optimized for your conversion goals.",
       },
       {
         title: "Performance Improvements",
@@ -165,20 +168,20 @@ export const serviceDetailsEn = {
     ],
   },
   "uygulama-gelistirme": {
-    metaTitle: "Mobile App Development",
+    metaTitle: "Mobile App Building",
     metaDesc:
       "High-performance mobile apps for iOS and Android with React Native and Expo.",
-    heroBadge: "App Development",
-    heroTitle: "Mobile App Development",
+    heroBadge: "App Building",
+    heroTitle: "Mobile App Building",
     heroImageAlt:
-      "Floating phone and interface illustration symbolizing mobile app development",
+      "Floating phone and interface illustration symbolizing mobile app building",
     heroSubtitle:
       "User-friendly, scalable mobile apps that run on iOS and Android from a single codebase.",
     heroSubtitleSecondary:
       "With React Native and Expo, I manage fast delivery, smooth store publishing and backend integrations under one roof.",
     deliveryTime: "21-120 days",
     processSubtitle:
-      "From app concept to store launch, we clarify what will be done and what deliverable you can expect at each stage. Design, development, testing and publishing follow a predictable plan.",
+      "From app concept to store launch, we clarify what will be done and what deliverable you can expect at each stage. Design, building, testing and publishing follow a predictable plan.",
     techSubtitle:
       "Modern, scalable tools we use in mobile app projects. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
     processItems: uygulamaGelistirmeProcessEn,
@@ -196,12 +199,12 @@ export const serviceDetailsEn = {
       {
         title: "User Experience",
         description:
-          "We design intuitive navigation, accessibility and interfaces aligned with iOS and Android platform standards. Typography, spacing and interactions stay consistent with your brand identity across every screen. Form flows, feedback and onboarding steps are tested against real user scenarios before development begins. Empty, loading and error states are designed to guide users clearly without confusion. Touch target sizes and gesture interactions ensure comfortable use on both platforms. Usability testing is applied iteratively during the design phase so friction points are caught early.",
+          "We design intuitive navigation, accessibility and interfaces aligned with iOS and Android platform standards. Typography, spacing and interactions stay consistent with your brand identity across every screen. Form flows, feedback and onboarding steps are tested against real user scenarios before building begins. Empty, loading and error states are designed to guide users clearly without confusion. Touch target sizes and gesture interactions ensure comfortable use on both platforms. Usability testing is applied iteratively during the design phase so friction points are caught early.",
       },
       {
         title: "Performance Optimization",
         description:
-          "We target fast cold starts, smooth animations and low memory usage across all supported devices. Image caching, list performance and unnecessary re-renders are monitored throughout the project lifecycle. Real-device testing verifies performance on both high-end and entry-level hardware before store approval. Bundle size and lazy loading strategies keep app launch speed consistently high. Heavy animations and large assets are optimized for smooth performance on lower-end devices too. Performance metrics are measured, benchmarked and reported regularly throughout development.",
+          "We target fast cold starts, smooth animations and low memory usage across all supported devices. Image caching, list performance and unnecessary re-renders are monitored throughout the project lifecycle. Real-device testing verifies performance on both high-end and entry-level hardware before store approval. Bundle size and lazy loading strategies keep app launch speed consistently high. Heavy animations and large assets are optimized for smooth performance on lower-end devices too. Performance metrics are measured, benchmarked and reported regularly throughout building.",
       },
       {
         title: "Store Publishing",
@@ -211,7 +214,7 @@ export const serviceDetailsEn = {
       {
         title: "Maintenance & Updates",
         description:
-          "OS compatibility, bug fixes and new feature iterations run on a regular plan aligned with your product roadmap. Crash reports are monitored continuously and critical issues receive priority response within agreed SLA windows. Your app keeps evolving sustainably after go-live with predictable release cycles. Compatibility tests run when new iOS and Android versions are released to prevent disruption. User feedback and store reviews are evaluated systematically for feature prioritization. Version history and release notes are kept up to date for a transparent and traceable development process.",
+          "OS compatibility, bug fixes and new feature iterations run on a regular plan aligned with your product roadmap. Crash reports are monitored continuously and critical issues receive priority response within agreed SLA windows. Your app keeps evolving sustainably after go-live with predictable release cycles. Compatibility tests run when new iOS and Android versions are released to prevent disruption. User feedback and store reviews are evaluated systematically for feature prioritization. Version history and release notes are kept up to date for a transparent and traceable building process.",
       },
     ],
   },
@@ -303,7 +306,7 @@ export const serviceDetailsEn = {
       {
         title: "Code & Architecture Review",
         description:
-          "Code quality, maintainability, technical debt and scalability are assessed from a senior engineering perspective. Folder structure, separation of concerns and reuse patterns are reviewed for long-term sustainability. Anti-patterns, dead code and overly coupled modules that slow future development are documented. Database queries, caching strategy and API design are evaluated where they affect performance or reliability. Recommendations focus on practical refactors rather than theoretical perfection. Test coverage, CI/CD setup and deployment processes are part of the architecture review.",
+          "Code quality, maintainability, technical debt and scalability are assessed from a senior engineering perspective. Folder structure, separation of concerns and reuse patterns are reviewed for long-term sustainability. Anti-patterns, dead code and overly coupled modules that slow future work are documented. Database queries, caching strategy and API design are evaluated where they affect performance or reliability. Recommendations focus on practical refactors rather than theoretical perfection. Test coverage, CI/CD setup and deployment processes are part of the architecture review.",
       },
       {
         title: "Accessibility Check",

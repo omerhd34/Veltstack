@@ -2,7 +2,7 @@ export const blogPageTr = {
   heroBadge: "Blog",
   heroTitle: "Dijital dünyadan içgörüler",
   heroSubtitle:
-    "Web geliştirme, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler üretiyoruz. Gerçek projelerden öğrendiklerimizi ve sahada denenmiş yöntemleri sade bir dille paylaşıyoruz.",
+    "Web yapımı, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler üretiyoruz. Gerçek projelerden öğrendiklerimizi ve sahada denenmiş yöntemleri sade bir dille paylaşıyoruz.",
   heroSubtitleSecondary:
     "Kategoriye göre filtreleyip arama yaparak aradığınız içeriğe hızlıca ulaşın.",
   heroImageAlt:
@@ -18,7 +18,7 @@ export const blogPageTr = {
     },
     categories: {
       label: "İçerik Kategorisi",
-      hint: "Blog yazılarını web geliştirme, mobil, SEO, e-ticaret ve araçlar gibi konu başlıklarında topluyoruz.",
+      hint: "Blog yazılarını web yapımı, mobil, SEO, e-ticaret ve araçlar gibi konu başlıklarında topluyoruz.",
     },
     reading: {
       label: "Toplam Okuma(dakika)",
@@ -39,7 +39,7 @@ export const blogPageTr = {
   latestBadge: "Son Blog Yazıları",
   categories: [
     "Tümü",
-    "Web Geliştirme",
+    "Web Yapımı",
     "Mobil",
     "SEO",
     "E-Ticaret",

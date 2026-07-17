@@ -25,7 +25,7 @@ export const projectDetailsEn = {
   breadcrumbProjects: "Projects",
   metricHints: {
     developmentTime:
-      "Total development time from discovery to launch. May vary based on scope, integrations and approval cycles.",
+      "Total build time from discovery to launch. May vary based on scope, integrations and approval cycles.",
     siteType:
       "The project's architecture and business model — classified as SaaS, e-commerce, corporate site, portfolio and similar.",
     sector:
@@ -107,7 +107,7 @@ export const projectDetailsEn = {
       },
     ],
     metrics: [
-      { value: "12 weeks", label: "Development Time" },
+      { value: "12 weeks", label: "Build Time" },
       { value: "SaaS", label: "Site Type" },
       { value: "Finance", label: "Industry" },
       { value: "TR/EN", label: "Language Support" },
@@ -162,7 +162,7 @@ export const projectDetailsEn = {
       },
     ],
     metrics: [
-      { value: "11 weeks", label: "Development Time" },
+      { value: "11 weeks", label: "Build Time" },
       { value: "E-Commerce", label: "Site Type" },
       { value: "Retail", label: "Industry" },
       { value: "TR", label: "Language Support" },
@@ -219,7 +219,7 @@ export const projectDetailsEn = {
       },
     ],
     metrics: [
-      { value: "4 weeks", label: "Development Time" },
+      { value: "4 weeks", label: "Build Time" },
       { value: "Corporate", label: "Site Type" },
       { value: "Healthcare", label: "Industry" },
       { value: "TR", label: "Language Support" },
@@ -274,7 +274,7 @@ export const projectDetailsEn = {
       },
     ],
     metrics: [
-      { value: "4 weeks", label: "Development Time" },
+      { value: "4 weeks", label: "Build Time" },
       { value: "Corporate Catalog", label: "Site Type" },
       { value: "Furniture", label: "Industry" },
       { value: "TR/EN", label: "Language Support" },
@@ -326,7 +326,7 @@ export const projectDetailsEn = {
       },
     ],
     metrics: [
-      { value: "3 weeks", label: "Development Time" },
+      { value: "3 weeks", label: "Build Time" },
       { value: "Portfolio", label: "Site Type" },
       { value: "Technology", label: "Industry" },
       { value: "TR/EN", label: "Language Support" },
@@ -382,7 +382,7 @@ export const projectDetailsEn = {
       },
     ],
     metrics: [
-      { value: "4 weeks", label: "Development Time" },
+      { value: "4 weeks", label: "Build Time" },
       { value: "Corporate Catalog", label: "Site Type" },
       { value: "Accounting", label: "Industry" },
       { value: "TR", label: "Language Support" },

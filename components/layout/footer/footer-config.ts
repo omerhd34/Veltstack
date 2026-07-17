@@ -34,8 +34,8 @@ export const footerProjectItems = projectItems.map((project) => ({
 }));
 
 const footerBlogCategoryIcons: Record<string, IconType> = {
-  "Web Geliştirme": LuCode,
-  "Web Development": LuCode,
+  "Web Yapımı": LuCode,
+  "Web Building": LuCode,
   Mobil: LuSmartphone,
   Mobile: LuSmartphone,
   SEO: LuSearch,

@@ -26,8 +26,8 @@ export const workflowTr = {
     },
     {
       step: "4",
-      title: "Geliştirmeye Başlayalım",
-      desc: "Onayınızdan sonra geliştirmeye başlıyor ve süreci düzenli paylaşıyoruz.",
+      title: "Yapıma Başlayalım",
+      desc: "Onayınızdan sonra yapıma başlıyor ve süreci düzenli paylaşıyoruz.",
       timing: "Başlangıç",
     },
   ],

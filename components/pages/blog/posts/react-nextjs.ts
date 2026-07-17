@@ -12,8 +12,8 @@ export const blogPostEntry: BlogPostEntry = {
     "React ve Next.js'in temellerini ve ikisinin birlikte sunduğu avantajları sade bir dille anlatıyoruz.",
   excerptShortEn:
     "The fundamentals of React and Next.js and the advantages of using them together, in plain language.",
-  category: "Web Geliştirme",
-  categoryEn: "Web Development",
+  category: "Web Yapımı",
+  categoryEn: "Web Building",
   imageUrl: "/images/pages/blog/react-nextjs.png",
   readingTime: 10,
   publishedAt: "2026-06-21",
@@ -99,7 +99,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Framework güncellemelerini ertelemek; güvenlik ve performans yamaları kaçırılır.</li>
 </ul>
 
-<h2>Profesyonel Web Geliştirme Desteği</h2>
+<h2>Profesyonel Web Yapımı Desteği</h2>
 <p>React ve Next.js doğru kullanıldığında hızlı, ölçeklenebilir ve SEO uyumlu web projeleri üretmenizi sağlar. Veltstack olarak kurumsal siteler, e-ticaret ve özel yazılım projelerinde TypeScript, Tailwind CSS, Prisma ve modern deployment süreçleriyle uçtan uca geliştirme sunuyoruz.</p>
 
 <h2>Sonuç</h2>
@@ -186,7 +186,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Delaying framework updates; you miss security and performance patches.</li>
 </ul>
 
-<h2>Professional Web Development</h2>
+<h2>Professional Web Building</h2>
 <p>Used well, React and Next.js enable fast, scalable and SEO-friendly web projects. At Veltstack we deliver corporate sites, e-commerce and custom software with TypeScript, Tailwind CSS, Prisma and modern deployment workflows.</p>
 
 <h2>Conclusion</h2>

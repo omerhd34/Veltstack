@@ -43,7 +43,7 @@ export const faqTr = {
           slug: "projelerde-kim-calisyor",
           question: "Projelerde kim çalışıyor?",
           answer:
-            "Tüm projelerde doğrudan Ömer Halis Demir ile çalışırsınız. Tasarım, geliştirme, yayın ve bakım süreçlerinde tek muhatap olursunuz; gerektiğinde güvenilir uzmanlarla sınırlı ve şeffaf iş birliği yapılır.",
+            "Tüm projelerde doğrudan Ömer Halis Demir ile çalışırsınız. Tasarım, yapım, yayın ve bakım süreçlerinde tek muhatap olursunuz; gerektiğinde güvenilir uzmanlarla sınırlı ve şeffaf iş birliği yapılır.",
         },
         {
           slug: "hangi-sektorler",
@@ -72,13 +72,13 @@ export const faqTr = {
           slug: "hangi-hizmetler",
           question: "Hangi hizmetleri sunuyorsunuz?",
           answer:
-            "Web sitesi geliştirme, dijital yenileme, mobil uygulama geliştirme, SEO hizmetleri, teknik denetim ile bakım ve destek paketleri sunuyoruz. Her hizmetin kapsamı ve paket detayları ilgili hizmet sayfalarında yer alır.",
+            "Web sitesi yapımı, dijital yenileme, mobil uygulama yapımı, SEO hizmetleri, teknik denetim ile bakım ve destek paketleri sunuyoruz. Her hizmetin kapsamı ve paket detayları ilgili hizmet sayfalarında yer alır.",
         },
         {
           slug: "proje-sureci",
           question: "Proje süreci nasıl işliyor?",
           answer:
-            "İlk adımda ihtiyaç analizi ve keşif görüşmesi yapılır. Ardından kapsam, takvim ve teklif paylaşılır. Onay sonrası tasarım ve geliştirme aşamalarına geçilir; düzenli demo ve geri bildirim döngüleriyle ilerlenir. Yayın sonrası bakım ve destek seçenekleri sunulur.",
+            "İlk adımda ihtiyaç analizi ve keşif görüşmesi yapılır. Ardından kapsam, takvim ve teklif paylaşılır. Onay sonrası tasarım ve yapım aşamalarına geçilir; düzenli demo ve geri bildirim döngüleriyle ilerlenir. Yayın sonrası bakım ve destek seçenekleri sunulur.",
         },
         {
           slug: "teslim-suresi",
@@ -177,7 +177,7 @@ export const faqTr = {
           slug: "revizyon-hakki",
           question: "Kaç revizyon hakkı var?",
           answer:
-            "Her tasarım ve geliştirme aşaması için sözleşmede belirlenen revizyon turu sayısı yer alır. Küçük düzeltmeler bu turlar içinde değerlendirilir; kapsamı genişleten yeni özellik veya sayfa talepleri ayrı değerlendirilir. Revizyon hakları teklif ve sözleşmede açıkça yazılır.",
+            "Her tasarım ve yapım aşaması için sözleşmede belirlenen revizyon turu sayısı yer alır. Küçük düzeltmeler bu turlar içinde değerlendirilir; kapsamı genişleten yeni özellik veya sayfa talepleri ayrı değerlendirilir. Revizyon hakları teklif ve sözleşmede açıkça yazılır.",
         },
         {
           slug: "marka-kimligi-yok",

@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 
 const commonDesignTemelItems = [
-  "Cross-Platform iOS and Android Development",
+  "Cross-Platform iOS and Android Building",
   "Basic UI/UX and Brand Color Adaptation",
   "Splash Screen and App Icon Design",
   "Basic Page Transitions and Navigation",
@@ -162,7 +162,7 @@ export const appPackagesEn = {
         scope: "1-5",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [...commonDesignTemelItems],
           },
           {
@@ -185,7 +185,7 @@ export const appPackagesEn = {
         scope: "1-10",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               ...commonDesignTemelItems,
               "Premium UI Components and Modern Interface",
@@ -213,7 +213,7 @@ export const appPackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               "Scalable High-Speed Custom Infrastructure",
               "Pixel-Perfect Figma-to-Code Implementation",
@@ -254,7 +254,7 @@ export const appPackagesEn = {
         scope: "1-8",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               "Corporate-Branded iOS / Android Interface",
               "Basic UI/UX and Brand Color Adaptation",
@@ -286,7 +286,7 @@ export const appPackagesEn = {
         scope: "1-15",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               "Custom Corporate iOS / Android Interface Design",
               "Premium Components and Modern Interface",
@@ -322,7 +322,7 @@ export const appPackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               "High-Speed Custom Corporate Infrastructure",
               "Pixel-Perfect Corporate Figma-to-Code Implementation",
@@ -367,7 +367,7 @@ export const appPackagesEn = {
         scope: "1-12",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               "Ecommerce-Focused iOS / Android Interface",
               "Basic UI/UX and Brand Color Adaptation",
@@ -404,7 +404,7 @@ export const appPackagesEn = {
         scope: "1-20",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               "Premium Ecommerce iOS / Android Interface",
               "Advanced Filtering and Infinite Scroll",
@@ -436,7 +436,7 @@ export const appPackagesEn = {
         scope: "∞",
         featureGroups: [
           {
-            label: "Development & Design",
+            label: "Building & Design",
             items: [
               "Native-Feel High-Speed Custom Infrastructure",
               "Pixel-Perfect Ecommerce Figma-to-Code Implementation",

@@ -43,7 +43,7 @@ export const faqEn = {
           slug: "projelerde-kim-calisyor",
           question: "Who works on projects?",
           answer:
-            "You work directly with Ömer Halis Demir on every project. You have a single point of contact across design, development, launch and maintenance; trusted specialists are brought in only when needed, with full transparency.",
+            "You work directly with Ömer Halis Demir on every project. You have a single point of contact across design, building, launch and maintenance; trusted specialists are brought in only when needed, with full transparency.",
         },
         {
           slug: "hangi-sektorler",
@@ -72,13 +72,13 @@ export const faqEn = {
           slug: "hangi-hizmetler",
           question: "What services do you offer?",
           answer:
-            "We offer website development, digital refresh, mobile app development, SEO services, technical audits and maintenance and support packages. Scope and package details are listed on each service page.",
+            "We offer website building, digital refresh, mobile app building, SEO services, technical audits and maintenance and support packages. Scope and package details are listed on each service page.",
         },
         {
           slug: "proje-sureci",
           question: "How does the project process work?",
           answer:
-            "We start with needs analysis and a discovery call. Then we share scope, timeline and quotation. After approval we move to design and development with regular demos and feedback cycles. Post-launch maintenance and support options are available.",
+            "We start with needs analysis and a discovery call. Then we share scope, timeline and quotation. After approval we move to design and building with regular demos and feedback cycles. Post-launch maintenance and support options are available.",
         },
         {
           slug: "teslim-suresi",
@@ -177,7 +177,7 @@ export const faqEn = {
           slug: "revizyon-hakki",
           question: "How many revisions are included?",
           answer:
-            "Each design and development phase includes a defined number of revision rounds set out in the contract. Minor adjustments fall within those rounds; requests that expand scope—new features or pages—are evaluated separately. Revision allowances are stated clearly in the quote and agreement.",
+            "Each design and building phase includes a defined number of revision rounds set out in the contract. Minor adjustments fall within those rounds; requests that expand scope—new features or pages—are evaluated separately. Revision allowances are stated clearly in the quote and agreement.",
         },
         {
           slug: "marka-kimligi-yok",

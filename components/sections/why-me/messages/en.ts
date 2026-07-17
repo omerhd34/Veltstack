@@ -9,7 +9,7 @@ export const whyMeHomeEn = {
     "From discovery to launch you work with one contact; project context stays intact, decisions move faster and communication stays clear throughout the process.",
   whyMeFastTitle: "On-Schedule Delivery",
   whyMeFastDesc:
-    "We run planned, focused development; we progress steadily against the agreed timeline, keep every stage clear and complete delivery on time without rushing quality.",
+    "We run planned, focused building; we progress steadily against the agreed timeline, keep every stage clear and complete delivery on time without rushing quality.",
   whyMeSupportTitle: "Technical Support",
   whyMeSupportDesc:
     "We provide post-launch maintenance, performance tuning and technical support; when issues arise we respond quickly and keep your systems running reliably.",

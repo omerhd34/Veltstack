@@ -160,7 +160,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Mağaza inceleme sürecini planlamadan deadline koymak; Apple/Google onayı 1–2 hafta sürebilir.</li>
 </ul>
 
-<h2>Profesyonel Mobil Uygulama Geliştirme</h2>
+<h2>Profesyonel Mobil Uygulama Yapımı</h2>
 <p>Web'den mobile geçiş doğru planlandığında mevcut yatırımınızı korur ve yeni bir büyüme kanalı açar. Veltstack olarak React Native, Expo, TypeScript ve mevcut Node.js backend'inizle iOS ve Android uygulamalarını tek kod tabanından geliştiriyor; mağaza yayını ve push bildirimi entegrasyonunu uçtan uca yönetiyoruz.</p>
 
 <h2>Sonuç</h2>
@@ -303,7 +303,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Setting deadlines without planning store review; Apple/Google approval can take 1–2 weeks.</li>
 </ul>
 
-<h2>Professional Mobile App Development</h2>
+<h2>Professional Mobile App Building</h2>
 <p>A well-planned web-to-mobile transition preserves your existing investment and opens a new growth channel. At Veltstack we build iOS and Android apps from a single codebase with React Native, Expo, TypeScript and your existing Node.js backend; we handle store publishing and push notification integration end to end.</p>
 
 <h2>Conclusion</h2>

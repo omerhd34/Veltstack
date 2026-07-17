@@ -33,7 +33,7 @@ export const projectsPageEn = {
   showcaseBadge: "Case Studies",
   showcaseTitle: "Every project tells a business story",
   showcaseSubtitle:
-    "Development projects focused on business goals, balanced with performance and measurable results.",
+    "Building projects focused on business goals, balanced with performance and measurable results.",
   viewLabel: "View details",
   featuredLabel: "Featured",
   ctaTitle: "Is your project next?",

@@ -5,7 +5,7 @@ export const processHomeTr = {
   processSubtitle:
     "Projelerinizi adım adım, şeffaf ve ölçülebilir bir süreçle hayata geçiriyoruz.",
   processIntro:
-    "Keşiften yayına kadar her aşamada ne yapılacağını, ne zaman teslim edileceğini ve hangi çıktının alınacağını netleştiririz. Tasarım, geliştirme, test ve canlıya alma adımlarını öngörülebilir bir planla yönetir; sürecin her noktasında sizi bilgilendiririz.",
+    "Keşiften yayına kadar her aşamada ne yapılacağını, ne zaman teslim edileceğini ve hangi çıktının alınacağını netleştiririz. Tasarım, yapım, test ve canlıya alma adımlarını öngörülebilir bir planla yönetir; sürecin her noktasında sizi bilgilendiririz.",
   processSliderPrev: "Önceki adım",
   processSliderNext: "Sonraki adım",
   processSliderDot: "Adım",
@@ -28,10 +28,10 @@ export const processHomeTr = {
     {
       title: "Prototip ve Onay",
       description:
-        "İnteraktif prototiple projenizi görselleştirip onayınıza sunuyoruz. Tıklanabilir ekranlar sayesinde geliştirme öncesinde akışları birlikte test ederiz. Onayınız alındıktan sonra kodlama aşamasına geçilir; sürpriz revizyonlar en aza iner.",
+        "İnteraktif prototiple projenizi görselleştirip onayınıza sunuyoruz. Tıklanabilir ekranlar sayesinde yapım öncesinde akışları birlikte test ederiz. Onayınız alındıktan sonra kodlama aşamasına geçilir; sürpriz revizyonlar en aza iner.",
     },
     {
-      title: "Frontend Geliştirme",
+      title: "Frontend Yapımı",
       description:
         "Hızlı, erişilebilir ve responsive arayüzleri modern teknolojilerle kodluyoruz. Next.js, React ve Tailwind ile performans odaklı, SEO uyumlu sayfalar inşa ediyoruz. Her ekran farklı cihaz ve tarayıcılarda sorunsuz çalışacak şekilde test edilir.",
     },

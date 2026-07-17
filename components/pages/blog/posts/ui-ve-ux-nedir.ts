@@ -17,8 +17,8 @@ export const blogPostEntry: BlogPostEntry = {
     "UX ve UI nedir, farkları neler ve Veltstack neden shadcn ile Lightswind tercih ediyor, örneklerle anlatıyoruz.",
   excerptShortEn:
     "What UX and UI are, how they differ, and why Veltstack chooses shadcn with Lightswind, with examples.",
-  category: "Web Geliştirme",
-  categoryEn: "Web Development",
+  category: "Web Yapımı",
+  categoryEn: "Web Building",
   imageUrl: "/images/pages/blog/ui-nedir.png",
   readingTime: 11,
   publishedAt: "2026-07-07",
@@ -317,7 +317,7 @@ export const blogPostEntry: BlogPostEntry = {
 <li>Confusing <strong>UI</strong> and <strong>UX</strong> and focusing only on visual beauty; user flow stays broken.</li>
 </ul>
 
-<h2>Professional UX & UI Development</h2>
+<h2>Professional UX & UI Building</h2>
 <p>Strong <strong>UX</strong> and <strong>UI</strong> directly affect conversion, trust and brand perception. At Veltstack we work end to end from user flow planning to accessible interfaces for corporate sites, e-commerce and custom software, building premium, consistent experiences with shadcn, <strong>Lightswind</strong> and <strong>Radix UI</strong>.</p>
 
 <h2>Conclusion</h2>

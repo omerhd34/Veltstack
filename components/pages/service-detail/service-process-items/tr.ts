@@ -17,10 +17,10 @@ export const webSitesiGelistirmeProcessTr = [
   {
     title: "Prototip ve Onay",
     description:
-      "İnteraktif prototiple projenizi görselleştirip onayınıza sunuyoruz. Tıklanabilir ekranlar sayesinde geliştirme öncesinde akışları birlikte test ederiz. Onayınız alındıktan sonra kodlama aşamasına geçilir; sürpriz revizyonlar en aza iner.",
+      "İnteraktif prototiple projenizi görselleştirip onayınıza sunuyoruz. Tıklanabilir ekranlar sayesinde yapım öncesinde akışları birlikte test ederiz. Onayınız alındıktan sonra kodlama aşamasına geçilir; sürpriz revizyonlar en aza iner.",
   },
   {
-    title: "Frontend Geliştirme",
+    title: "Frontend Yapımı",
     description:
       "Hızlı, erişilebilir ve responsive arayüzleri modern teknolojilerle kodluyoruz. Next.js, React ve Tailwind ile performans odaklı, SEO uyumlu sayfalar inşa ediyoruz. Her ekran farklı cihaz ve tarayıcılarda sorunsuz çalışacak şekilde test edilir.",
   },
@@ -55,7 +55,7 @@ export const webSitesiYenilemeProcessTr = [
   {
     title: "Tasarım Yenileme ve Onay",
     description:
-      "Markanıza uygun güncel arayüz ve bilgi mimarisini hazırlıyoruz. İnteraktif prototiple onay alındıktan sonra geliştirme bu tasarıma göre ilerler.",
+      "Markanıza uygun güncel arayüz ve bilgi mimarisini hazırlıyoruz. İnteraktif prototiple onay alındıktan sonra yapım bu tasarıma göre ilerler.",
   },
   {
     title: "Altyapı Yenileme",
@@ -103,10 +103,10 @@ export const uygulamaGelistirmeProcessTr = [
   {
     title: "Prototip ve Onay",
     description:
-      "Tıklanabilir prototiple akışları birlikte test ediyoruz. Onay sonrası geliştirme aşamasına geçilir.",
+      "Tıklanabilir prototiple akışları birlikte test ediyoruz. Onay sonrası yapım aşamasına geçilir.",
   },
   {
-    title: "Mobil Geliştirme",
+    title: "Mobil Yapım",
     description:
       "React Native ve Expo ile iOS ve Android için tek kod tabanından uygulamayı geliştiriyoruz. Native performans ve akıcı animasyonlar hedeflenir.",
   },
@@ -242,7 +242,7 @@ export const bakimVeDestekProcessTr = [
   {
     title: "Destek Talepleri",
     description:
-      "Hata bildirimleri, küçük geliştirmeler ve içerik güncellemelerini öncelik sırasına göre ele alıyoruz.",
+      "Hata bildirimleri, küçük iyileştirmeler ve içerik güncellemelerini öncelik sırasına göre ele alıyoruz.",
   },
   {
     title: "Performans Kontrolü",

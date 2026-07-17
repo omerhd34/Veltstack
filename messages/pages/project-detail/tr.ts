@@ -25,7 +25,7 @@ export const projectDetailsTr = {
   breadcrumbProjects: "Projeler",
   metricHints: {
     developmentTime:
-      "Keşiften canlıya alıma kadar geçen toplam geliştirme süresi. Kapsam, entegrasyon ve onay döngülerine göre değişebilir.",
+      "Keşiften canlıya alıma kadar geçen toplam yapım süresi. Kapsam, entegrasyon ve onay döngülerine göre değişebilir.",
     siteType:
       "Projenin mimari yapısı ve iş modeli. SaaS, e-ticaret, kurumsal site veya portfolyo gibi kategorilerde sınıflandırılır.",
     sector: "Projenin hizmet verdiği sektör ve hedef kullanıcı kitlesi.",
@@ -106,7 +106,7 @@ export const projectDetailsTr = {
       },
     ],
     metrics: [
-      { value: "12 hafta", label: "Geliştirme Süresi" },
+      { value: "12 hafta", label: "Yapım Süresi" },
       { value: "SaaS", label: "Site Türü" },
       { value: "Finans", label: "Sektör" },
       { value: "TR/EN", label: "Dil Desteği" },
@@ -161,7 +161,7 @@ export const projectDetailsTr = {
       },
     ],
     metrics: [
-      { value: "11 hafta", label: "Geliştirme Süresi" },
+      { value: "11 hafta", label: "Yapım Süresi" },
       { value: "E-Ticaret", label: "Site Türü" },
       { value: "Perakende", label: "Sektör" },
       { value: "TR", label: "Dil Desteği" },
@@ -218,7 +218,7 @@ export const projectDetailsTr = {
       },
     ],
     metrics: [
-      { value: "4 hafta", label: "Geliştirme Süresi" },
+      { value: "4 hafta", label: "Yapım Süresi" },
       { value: "Kurumsal", label: "Site Türü" },
       { value: "Sağlık", label: "Sektör" },
       { value: "TR", label: "Dil Desteği" },
@@ -274,7 +274,7 @@ export const projectDetailsTr = {
       },
     ],
     metrics: [
-      { value: "4 hafta", label: "Geliştirme Süresi" },
+      { value: "4 hafta", label: "Yapım Süresi" },
       { value: "Kurumsal Katalog", label: "Site Türü" },
       { value: "Mobilya", label: "Sektör" },
       { value: "TR/EN", label: "Dil Desteği" },
@@ -326,7 +326,7 @@ export const projectDetailsTr = {
       },
     ],
     metrics: [
-      { value: "3 hafta", label: "Geliştirme Süresi" },
+      { value: "3 hafta", label: "Yapım Süresi" },
       { value: "Portfolyo", label: "Site Türü" },
       { value: "Teknoloji", label: "Sektör" },
       { value: "TR/EN", label: "Dil Desteği" },
@@ -383,7 +383,7 @@ export const projectDetailsTr = {
       },
     ],
     metrics: [
-      { value: "4 hafta", label: "Geliştirme Süresi" },
+      { value: "4 hafta", label: "Yapım Süresi" },
       { value: "Kurumsal Katalog", label: "Site Türü" },
       { value: "Mali Müşavirlik", label: "Sektör" },
       { value: "TR", label: "Dil Desteği" },

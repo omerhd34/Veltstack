@@ -9,7 +9,7 @@ export const whyMeHomeTr = {
     "Keşiften yayına kadar aynı muhatapla ilerlersiniz; proje bağlamı kaybolmaz, kararlar hızlı alınır ve süreç boyunca net iletişim korunur.",
   whyMeFastTitle: "Düzenli Teslimat",
   whyMeFastDesc:
-    "Planlı ve odaklı geliştirme yürütürüz; belirlenen takvime sadık kalarak düzenli ilerler, her aşamayı netleştirir ve teslimi söz verilen zamanda güvenle tamamlarız.",
+    "Planlı ve odaklı yapım yürütürüz; belirlenen takvime sadık kalarak düzenli ilerler, her aşamayı netleştirir ve teslimi söz verilen zamanda güvenle tamamlarız.",
   whyMeSupportTitle: "Teknik Destek",
   whyMeSupportDesc:
     "Yayın sonrası bakım, performans iyileştirmesi ve teknik destek sunarız; acil sorunlarda hızlı müdahale eder, sisteminizin güvenle çalışmasını sağlarız.",

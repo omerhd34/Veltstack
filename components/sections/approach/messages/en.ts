@@ -43,7 +43,7 @@ export const approachEn = {
     },
     {
       step: "7",
-      title: "Development & Integration",
+      title: "Building & Integration",
       desc: "We build code, API architecture, and third-party integrations with performance in mind. The result is a clean, scalable, and maintainable foundation.",
       timing: "Build phase",
     },

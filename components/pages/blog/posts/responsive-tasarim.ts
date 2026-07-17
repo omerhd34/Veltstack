@@ -12,8 +12,8 @@ export const blogPostEntry: BlogPostEntry = {
     "Mobil uyumluluk ile responsive tasarımın farkını ve her ekranda kusursuz çalışan arayüzün pratik kurallarını paylaşıyoruz.",
   excerptShortEn:
     "The difference between mobile-friendly and responsive design, plus practical rules for interfaces that work on every screen.",
-  category: "Web Geliştirme",
-  categoryEn: "Web Development",
+  category: "Web Yapımı",
+  categoryEn: "Web Building",
   imageUrl: "/images/pages/blog/responsive-tasarim.png",
   readingTime: 9,
   publishedAt: "2026-06-26",
