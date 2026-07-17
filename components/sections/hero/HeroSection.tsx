@@ -19,11 +19,11 @@ export async function HeroSection({ className }: HeroSectionProps) {
       className={`relative flex min-h-dvh items-center overflow-hidden bg-[#0A0A0F] pt-18 text-white ${className ?? ""}`}
     >
       <HeroImage alt={t("heroImageAlt")} />
-      <SiteContainer className="relative z-10 w-full py-8 sm:py-10 md:py-12 lg:py-14 xl:py-16">
+      <SiteContainer className="relative z-10 w-full py-10 sm:py-12 lg:py-16">
         <SectionScrollReveal
           direction="left"
           when="mount"
-          className="flex w-full max-w-78 flex-col items-start gap-5 text-left min-[400px]:max-w-sm sm:max-w-md md:max-w-88 lg:max-w-lg lg:gap-6 xl:max-w-xl xl:gap-8 2xl:max-w-2xl"
+          className="flex w-full max-w-xl flex-col items-start gap-7 text-left sm:max-w-2xl sm:gap-8 lg:gap-10"
         >
           <SectionBadge className="max-w-full px-3 tracking-[0.14em] sm:px-4 sm:tracking-[0.2em]">
             {t("heroBadge")}

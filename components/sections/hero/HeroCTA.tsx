@@ -12,15 +12,13 @@ interface HeroCTAProps {
 export function HeroCTA({ primary, secondary, className }: HeroCTAProps) {
   return (
     <div
-      className={`flex w-full flex-col gap-3 min-[480px]:w-auto min-[480px]:flex-row min-[480px]:flex-wrap min-[480px]:gap-4 ${className ?? ""}`}
+      className={`flex flex-wrap justify-start gap-3 sm:gap-4 ${className ?? ""}`}
     >
       <PrimaryCtaLink
         href="/iletisim"
         variant="accent"
         size="md"
         showArrow={false}
-        wrapperClassName="w-full min-[480px]:w-auto"
-        className="w-full justify-center min-[480px]:w-auto"
         leadingIcon={<LuRocket className="size-5" aria-hidden />}
       >
         {primary}
@@ -30,8 +28,6 @@ export function HeroCTA({ primary, secondary, className }: HeroCTAProps) {
         variant="glass"
         size="md"
         showArrow={false}
-        wrapperClassName="w-full min-[480px]:w-auto"
-        className="w-full justify-center min-[480px]:w-auto"
         leadingIcon={<LuEye className="size-5" aria-hidden />}
       >
         {secondary}

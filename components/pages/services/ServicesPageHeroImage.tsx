@@ -5,7 +5,7 @@ export const PAGE_HERO_IMAGE_WRAPPER_CLASS =
   "relative mx-auto w-full max-w-sm lg:mx-0 lg:max-w-none lg:w-full lg:justify-self-end";
 
 export const PAGE_HERO_IMAGE_FRAME_CLASS =
-  "relative h-[280px] w-full overflow-hidden rounded-3xl border border-emerald-700/30 shadow-[0_24px_80px_rgb(0_0_0/0.45)] sm:h-[320px] lg:h-[420px]";
+  "relative h-[180px] w-full overflow-hidden rounded-3xl border border-emerald-700/30 shadow-[0_24px_80px_rgb(0_0_0/0.45)] sm:h-[320px] lg:h-[420px]";
 
 interface ServicesPageHeroImageProps {
   alt: string;

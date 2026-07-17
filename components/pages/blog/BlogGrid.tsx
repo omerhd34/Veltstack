@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { LuSearch, LuX } from "react-icons/lu";
+import { SiteContainer } from "@/components/layout/SiteContainer";
 import { cn } from "@/lib/utils";
 import type { BlogPost } from "./blog-data";
 import { BlogCard } from "./BlogCard";
@@ -63,8 +64,8 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
 
   return (
     <div>
-      <div className="sticky top-18 z-30 border-b border-border/60 bg-background/95 py-4 backdrop-blur-md">
-        <div className="mx-auto max-w-site">
+      <div className="sticky top-18 z-30 overflow-x-clip border-b border-border/60 bg-background/95 py-4 backdrop-blur-md">
+        <SiteContainer>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="relative w-full sm:max-w-xs">
               <LuSearch
@@ -98,14 +99,14 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
               )}
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden sm:mx-0 sm:min-w-0 sm:flex-1 sm:px-0 lg:flex-none lg:flex-wrap lg:overflow-visible lg:pb-0">
               {uniqueCategories.map((cat) => (
                 <button
                   key={cat}
                   type="button"
                   onClick={() => setActiveCategory(cat)}
                   className={cn(
-                    "rounded-full px-4 py-1.5 text-xs font-semibold transition-all duration-200",
+                    "shrink-0 rounded-full px-4 py-1.5 text-xs font-semibold transition-all duration-200",
                     activeCategory === cat
                       ? "bg-brand-accent text-white shadow-sm shadow-brand-accent/30"
                       : "border border-border bg-card text-muted-foreground hover:border-brand-accent/40 hover:text-foreground",
@@ -116,10 +117,10 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
               ))}
             </div>
           </div>
-        </div>
+        </SiteContainer>
       </div>
 
-      <div className="mx-auto max-w-site py-16 md:py-20">
+      <SiteContainer className="py-6 sm:py-12 md:py-20">
         {filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-24 text-center">
             <div className="flex size-20 items-center justify-center rounded-full bg-muted/60">
@@ -145,7 +146,7 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
             ))}
           </div>
         )}
-      </div>
+      </SiteContainer>
     </div>
   );
 }

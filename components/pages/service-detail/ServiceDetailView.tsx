@@ -46,21 +46,25 @@ export async function ServiceDetailView({
     {
       value: heroStatValues.delivery,
       label: t("statDelivery"),
+      labelShort: t("statDeliveryShort"),
       hint: t("statDeliveryHint"),
     },
     {
       value: heroStatValues.support,
       label: t("statSupport"),
+      labelShort: t("statSupportShort"),
       hint: t("statSupportHint"),
     },
     {
       value: heroStatValues.tiers,
       label: t("statTiers"),
+      labelShort: t("statTiersShort"),
       hint: t("statTiersHint"),
     },
     {
       value: heroStatValues.revisions,
       label: t("statRevisions"),
+      labelShort: t("statRevisionsShort"),
       hint: t("statRevisionsHint"),
     },
   ];

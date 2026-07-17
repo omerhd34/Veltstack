@@ -66,6 +66,12 @@ export function SectionScrollReveal({
     ease: [0.16, 1, 0.3, 1] as const,
   };
 
+  const motionClassName = cn(
+    direction === "up" ? undefined : "overflow-x-clip",
+    "[--reveal-offset-up:24px] [--reveal-offset-x:20px] [--reveal-offset-y:10px] md:[--reveal-offset-up:56px] md:[--reveal-offset-x:52px] md:[--reveal-offset-y:22px]",
+    className,
+  );
+
   if (prefersReducedMotion) {
     return <div className={className}>{children}</div>;
   }
@@ -73,10 +79,7 @@ export function SectionScrollReveal({
   if (when === "mount") {
     return (
       <motion.div
-        className={cn(
-          "[--reveal-offset-up:24px] [--reveal-offset-x:20px] [--reveal-offset-y:10px] md:[--reveal-offset-up:56px] md:[--reveal-offset-x:52px] md:[--reveal-offset-y:22px]",
-          className,
-        )}
+        className={motionClassName}
         initial={initial}
         animate={visible}
         transition={transition}
@@ -88,10 +91,7 @@ export function SectionScrollReveal({
 
   return (
     <motion.div
-      className={cn(
-        "[--reveal-offset-up:24px] [--reveal-offset-x:20px] [--reveal-offset-y:10px] md:[--reveal-offset-up:56px] md:[--reveal-offset-x:52px] md:[--reveal-offset-y:22px]",
-        className,
-      )}
+      className={motionClassName}
       initial={initial}
       whileInView={visible}
       viewport={VIEWPORT[trigger]}

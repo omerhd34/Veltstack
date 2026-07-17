@@ -15,6 +15,7 @@ interface FaqCategory {
 
 interface FaqHeroStatCopy {
   label: string;
+  labelShort?: string;
   hint: string;
 }
 
@@ -38,21 +39,25 @@ export async function FaqPageView({ className }: FaqPageViewProps) {
     {
       value: String(allItems.length),
       label: statsCopy.questions.label,
+      labelShort: statsCopy.questions.labelShort,
       hint: statsCopy.questions.hint,
     },
     {
       value: String(categories.length),
       label: statsCopy.categories.label,
+      labelShort: statsCopy.categories.labelShort,
       hint: statsCopy.categories.hint,
     },
     {
       value: String(categories[1]?.items.length ?? 0),
       label: statsCopy.services.label,
+      labelShort: statsCopy.services.labelShort,
       hint: statsCopy.services.hint,
     },
     {
       value: String(categories[3]?.items.length ?? 0),
       label: statsCopy.support.label,
+      labelShort: statsCopy.support.labelShort,
       hint: statsCopy.support.hint,
     },
   ];

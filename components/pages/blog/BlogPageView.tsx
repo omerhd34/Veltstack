@@ -7,6 +7,7 @@ import { BlogGrid } from "./BlogGrid";
 
 interface BlogHeroStatCopy {
   label: string;
+  labelShort?: string;
   hint: string;
 }
 
@@ -39,21 +40,25 @@ export async function BlogPageView({ className }: BlogPageViewProps) {
     {
       value: String(blogPosts.length),
       label: statsCopy.posts.label,
+      labelShort: statsCopy.posts.labelShort,
       hint: statsCopy.posts.hint,
     },
     {
       value: String(getAllCategories(locale).length),
       label: statsCopy.categories.label,
+      labelShort: statsCopy.categories.labelShort,
       hint: statsCopy.categories.hint,
     },
     {
       value: String(totalReadingTime),
       label: statsCopy.reading.label,
+      labelShort: statsCopy.reading.labelShort,
       hint: statsCopy.reading.hint,
     },
     {
       value: String(getFeaturedPosts().length),
       label: statsCopy.featured.label,
+      labelShort: statsCopy.featured.labelShort,
       hint: statsCopy.featured.hint,
     },
   ];

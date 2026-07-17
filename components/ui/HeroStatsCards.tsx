@@ -10,6 +10,7 @@ import {
 export interface HeroStat {
   value: string;
   label: string;
+  labelShort?: string;
   hint?: string;
 }
 
@@ -29,7 +30,14 @@ export function HeroStatsCards({ stats }: HeroStatsCardsProps) {
               {stat.value}
             </p>
             <p className="mt-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-emerald-300/50 sm:text-[0.6875rem]">
-              {stat.label}
+              {stat.labelShort ? (
+                <>
+                  <span className="sm:hidden">{stat.labelShort}</span>
+                  <span className="hidden sm:inline">{stat.label}</span>
+                </>
+              ) : (
+                stat.label
+              )}
             </p>
           </div>
         );
