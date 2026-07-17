@@ -7,7 +7,8 @@ export const servicesPageEn = {
     "Every project type comes in three tiers: Startup, Professional and Premium. Scope, delivery and revisions are defined upfront, large projects scale without limits.",
   heroSubtitleSecondary:
     "Browse the packages below and switch between website, app, digital refresh, SEO, technical audit and maintenance tabs to find the scope that fits your project.",
-  heroImageAlt: "Modular interface illustration representing interconnected digital services",
+  heroImageAlt:
+    "Modular interface illustration representing interconnected digital services",
   scrollLabel: "View packages",
   ctaBadge: "Free Consultation",
   ctaTitle: "Need help choosing a package?",
@@ -23,21 +24,25 @@ export const servicesPageEn = {
     {
       value: "3-112",
       label: "Delivery (Days)",
+      labelShort: "Delivery",
       hint: "Estimated delivery range across all service categories. A clear timeline is shared once scope is defined.",
     },
     {
       value: "15-45",
-      label: "Support Period (Days)",
+      label: "Support (Days)",
+      labelShort: "Support",
       hint: "Post-launch support window for technical assistance, revisions and minor updates.",
     },
     {
       value: "6",
       label: "Service Types",
+      labelShort: "Services",
       hint: "Six service categories including website, app, digital refresh, SEO, technical audit and maintenance.",
     },
     {
       value: "14",
       label: "Ready Packages",
+      labelShort: "Packages",
       hint: "Total ready-made packages across all categories, each targeting different scope and scale.",
     },
   ],

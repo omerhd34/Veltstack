@@ -12,21 +12,25 @@ export const projectsPageEn = {
     {
       value: "4",
       label: "Selected Projects",
+      labelShort: "Projects",
       hint: "Selected projects with detailed case studies in our portfolio, each delivered against real business goals.",
     },
     {
       value: "__techCount__",
       label: "Technologies",
+      labelShort: "Tech",
       hint: "Technologies we use or can adopt across projects. The stack is chosen based on your project needs.",
     },
     {
       value: "100%",
       label: "Custom Code",
+      labelShort: "Custom",
       hint: "Every project uses bespoke, scalable and maintainable code instead of templates or off-the-shelf shortcuts.",
     },
     {
       value: "3-120",
       label: "Delivery Days",
+      labelShort: "Delivery",
       hint: "Delivery range across portfolio projects. Scope is the main factor for your new project timeline.",
     },
   ],

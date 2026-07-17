@@ -34,9 +34,13 @@ export const serviceDetailsEn = {
   deliveryLabel: "Delivery Time",
   heroImageAlt: "Digital building workspace",
   statDelivery: "Delivery (Days)",
+  statDeliveryShort: "Delivery",
   statSupport: "Support (Days)",
+  statSupportShort: "Support",
   statTiers: "Package",
+  statTiersShort: "Package",
   statRevisions: "Revision",
+  statRevisionsShort: "Revision",
   statDeliveryHint:
     "Estimated delivery range based on project scope. A clear timeline is shared after the discovery call.",
   statSupportHint:

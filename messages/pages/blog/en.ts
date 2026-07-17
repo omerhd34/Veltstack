@@ -10,18 +10,22 @@ export const blogPageEn = {
   heroStats: {
     posts: {
       label: "Published Articles",
+      labelShort: "Articles",
       hint: "Total articles in this section. We regularly add new content on web, mobile, SEO and digital transformation.",
     },
     featured: {
       label: "Featured Articles",
+      labelShort: "Featured",
       hint: "Editor-selected featured content we believe provides the most value.",
     },
     categories: {
-      label: "Content Category",
+      label: "Categories",
+      labelShort: "Topics",
       hint: "We group articles under topics like web building, mobile, SEO, e-commerce and tools.",
     },
     reading: {
       label: "Total Reading (minutes)",
+      labelShort: "Reading (minutes)",
       hint: "Estimated total reading time across all articles. You can also see each article's reading time at the top.",
     },
   },

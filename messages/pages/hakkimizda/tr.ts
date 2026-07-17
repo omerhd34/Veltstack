@@ -13,21 +13,25 @@ export const aboutTr = {
     {
       value: "500+",
       label: "Tamamlanan Proje",
+      labelShort: "Projeler",
       hint: "Farklı sektörlerde teslim ettiğimiz proje sayısı. Kurumsal web, e-ticaret ve mobil uygulama ağırlıklı portföy.",
     },
     {
       value: "6+",
       label: "Yıllık sektör deneyimi",
+      labelShort: "Deneyim",
       hint: "Web ve mobil yapımda birikmiş uzmanlık. Güncel teknolojiler ve üretim standartlarıyla çalışıyoruz.",
     },
     {
       value: "100%",
       label: "Uçtan Uca Teslim",
+      labelShort: "Teslim",
       hint: "Keşiften canlıya alıma kadar tüm süreçleri tek çizgide yönetiyoruz; parçalı teslim yerine bütüncül yaklaşım.",
     },
     {
       value: "6",
       label: "Hizmet Alanı",
+      labelShort: "Hizmet",
       hint: "Web, mobil, SEO, dijital yenileme, denetim ve bakım hizmetlerinde uçtan uca destek sunuyoruz.",
     },
   ],

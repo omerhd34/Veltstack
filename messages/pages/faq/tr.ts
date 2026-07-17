@@ -8,18 +8,22 @@ export const faqTr = {
   heroStats: {
     questions: {
       label: "Toplam Soru",
+      labelShort: "Sorular",
       hint: "SSS sayfasında yer alan tüm soru ve yanıt sayısı. Hizmetler, süreç, fiyatlandırma ve destek konularını kapsar.",
     },
     categories: {
       label: "Konu Başlığı",
+      labelShort: "Konular",
       hint: "Soruları genel bilgi, hizmetler, fiyatlandırma, destek, tasarım ve içerik ile SEO başlıklarında grupluyoruz.",
     },
     services: {
       label: "Hizmet ve Süreç",
+      labelShort: "Hizmetler",
       hint: "Hangi hizmetleri sunduğumuz, proje akışı, teslim süresi ve kullandığımız teknolojiler hakkındaki sorular.",
     },
     support: {
       label: "Yayın Sonrası Destek",
+      labelShort: "Destek",
       hint: "Bakım paketleri, kaynak kod devri ve mevcut site yenileme gibi yayın sonrası süreçlere dair sorular.",
     },
   },

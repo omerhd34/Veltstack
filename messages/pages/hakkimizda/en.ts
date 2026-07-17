@@ -13,21 +13,25 @@ export const aboutEn = {
     {
       value: "500+",
       label: "Completed Projects",
+      labelShort: "Projects",
       hint: "Projects delivered across industries, with a portfolio focused on corporate web, e-commerce and mobile apps.",
     },
     {
       value: "6+",
       label: "Years of industry experience",
+      labelShort: "Experience",
       hint: "Accumulated expertise in web and mobile building, working with current technologies and production standards.",
     },
     {
       value: "100%",
       label: "End-to-End Delivery",
+      labelShort: "Delivery",
       hint: "We manage the full process from discovery to launch in one line — holistic delivery instead of fragmented handoffs.",
     },
     {
       value: "6",
       label: "Service Areas",
+      labelShort: "Services",
       hint: "End-to-end support across web, mobile, SEO, digital refresh, audit and maintenance services.",
     },
   ],

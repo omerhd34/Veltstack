@@ -9,19 +9,23 @@ export const blogPageTr = {
     "Bilgi akışını ve dijital içgörüleri simgeleyen soyut ağ illüstrasyonu",
   heroStats: {
     posts: {
-      label: "Yayınlanan Blog Yazıları",
+      label: "Yayınlanan Yazılar",
+      labelShort: "Yazılar",
       hint: "Blog bölümünde yer alan toplam içerik sayısı. Web, mobil, SEO ve dijital dönüşüm üzerine düzenli olarak yeni blog yazıları ekliyoruz.",
     },
     featured: {
-      label: "Öne Çıkan Blog Yazıları",
+      label: "Öne Çıkan Yazılar",
+      labelShort: "Öne Çıkanlar",
       hint: "Editör tarafından seçilmiş, en çok değer kattığını düşündüğümüz öne çıkan içerikler.",
     },
     categories: {
-      label: "İçerik Kategorisi",
+      label: "Kategoriler",
+      labelShort: "Kategori",
       hint: "Blog yazılarını web yapımı, mobil, SEO, e-ticaret ve araçlar gibi konu başlıklarında topluyoruz.",
     },
     reading: {
-      label: "Toplam Okuma(dakika)",
+      label: "Toplam Okuma (DK)",
+      labelShort: "Okuma (DK)",
       hint: "Tüm blog yazılarının tahmini toplam okuma süresi. Her blog yazısının başında ayrı okuma süresini de görebilirsiniz.",
     },
   },

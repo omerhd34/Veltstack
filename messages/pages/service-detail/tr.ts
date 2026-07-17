@@ -33,10 +33,14 @@ export const serviceDetailsTr = {
   techCategoryTools: "Araçlar & Entegrasyon",
   deliveryLabel: "Teslim Süresi",
   heroImageAlt: "Dijital yapım çalışma ortamı",
-  statDelivery: "Teslim (Gün)",
-  statSupport: "Destek (Gün)",
-  statTiers: "Paket",
-  statRevisions: "Revizyon",
+  statDelivery: "Teslim Süresi (Gün)",
+  statDeliveryShort: "Teslim (Gün)",
+  statSupport: "Destek Süresi (Gün)",
+  statSupportShort: "Destek (Gün)",
+  statTiers: "Paketler",
+  statTiersShort: "Paketler",
+  statRevisions: "Revizyon Sayısı",
+  statRevisionsShort: "Revizyon",
   statDeliveryHint:
     "Proje kapsamına göre değişen tahmini teslim aralığı. Keşif görüşmesinden sonra net takvim paylaşılır.",
   statSupportHint:

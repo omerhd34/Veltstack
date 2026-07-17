@@ -8,18 +8,22 @@ export const faqEn = {
   heroStats: {
     questions: {
       label: "Total Questions",
+      labelShort: "Questions",
       hint: "The full count of questions and answers on this FAQ page, covering services, process, pricing and support.",
     },
     categories: {
       label: "Topic Sections",
+      labelShort: "Topics",
       hint: "Questions are grouped under general info, services, pricing, support, design and content, and SEO.",
     },
     services: {
       label: "Services & Process",
+      labelShort: "Services",
       hint: "Questions about what we offer, how projects run, delivery timelines and the technologies we use.",
     },
     support: {
       label: "Post-Launch Support",
+      labelShort: "Support",
       hint: "Questions about maintenance packages, source code handover and refreshing your existing site.",
     },
   },
