@@ -9,6 +9,7 @@ import {
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+import { CarouselPagination } from "@/components/ui/CarouselPagination";
 import { StardustIconButton } from "@/components/ui/StardustIconButton";
 import { cn } from "@/lib/utils";
 
@@ -51,19 +52,6 @@ interface ThreeDCarouselProps<T extends ThreeDCarouselItem> {
   labels?: ThreeDCarouselLabels;
 }
 
-function formatSlideNumber(value: number) {
-  return String(value).padStart(2, "0");
-}
-
-function getPagerWindow(active: number, total: number, size = 5) {
-  const half = Math.floor(size / 2);
-  return Array.from({ length: Math.min(size, total) }, (_, offset) => {
-    if (total <= size) return { slideIndex: offset, offset };
-    const slideIndex = (active - half + offset + total) % total;
-    return { slideIndex, offset };
-  });
-}
-
 function ThreeDCarousel<T extends ThreeDCarouselItem>({
   items,
   renderItem,
@@ -92,7 +80,6 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
   const dragEndX = useRef<number | null>(null);
   const dragIntentRef = useRef(false);
   const suppressClickRef = useRef(false);
-  const pagerWindow = getPagerWindow(active, items.length);
 
   const selectSlide = useCallback((index: number) => {
     setActive(index);
@@ -255,12 +242,6 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
 
   const isLight = theme === "light";
   const navButtonClass = isLight ? "shadow-sm" : "shadow-lg";
-  const pagerShellClass = isLight
-    ? "border-border/60 bg-white/70 shadow-[0_4px_20px_rgb(0,0,0,0.04)]"
-    : "border-white/15 bg-white/10 shadow-[0_4px_20px_rgb(0,0,0,0.12)]";
-  const pagerDotClass = isLight ? "bg-brand-accent/20 hover:bg-brand-accent/40" : "bg-white/25 hover:bg-white/45";
-  const pagerDividerClass = isLight ? "bg-border/80" : "bg-white/25";
-  const pagerTotalClass = isLight ? "text-muted-foreground" : "text-white/55";
 
   const activeItem = items[active];
   const slideLabel = getSlideLabel?.(activeItem) ?? String(active + 1);
@@ -351,61 +332,14 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
 
           {items.length > 1 ? (
             <div className="absolute inset-x-0 bottom-2 z-30 flex items-center justify-center sm:bottom-4">
-              <div
-                className={cn(
-                  "inline-flex items-center gap-1 rounded-full border px-2 py-1.5 backdrop-blur-md",
-                  pagerShellClass,
-                )}
-              >
-                {pagerWindow.map(({ slideIndex, offset }) => {
-                  const isActive = slideIndex === active;
-                  const distance = Math.abs(
-                    offset - Math.floor(pagerWindow.length / 2),
-                  );
-
-                  return (
-                    <button
-                      key={`pager-${offset}-${slideIndex}`}
-                      type="button"
-                      data-carousel-control
-                      onClick={() => selectSlide(slideIndex)}
-                      aria-label={`${labels.dot} ${slideIndex + 1}`}
-                      aria-current={isActive ? "true" : undefined}
-                      className={cn(
-                        "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-500 ease-out motion-reduce:transition-none",
-                        isActive
-                          ? "h-8 min-w-10 bg-brand-accent px-2.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)]"
-                          : cn(
-                              "size-2",
-                              pagerDotClass,
-                              distance === 1 && "size-2.5",
-                              distance === 2 && "size-1.5 opacity-70",
-                            ),
-                      )}
-                    >
-                      {isActive ? (
-                        formatSlideNumber(slideIndex + 1)
-                      ) : (
-                        <span className="sr-only">
-                          {formatSlideNumber(slideIndex + 1)}
-                        </span>
-                      )}
-                    </button>
-                  );
-                })}
-                <span
-                  aria-hidden
-                  className={cn("mx-1 h-3 w-px", pagerDividerClass)}
-                />
-                <span
-                  className={cn(
-                    "pr-1.5 font-(family-name:--font-heading) text-[11px] tracking-[0.14em]",
-                    pagerTotalClass,
-                  )}
-                >
-                  {formatSlideNumber(items.length)}
-                </span>
-              </div>
+              <CarouselPagination
+                activeIndex={active}
+                total={items.length}
+                onSelect={selectSlide}
+                getItemLabel={(index) => `${labels.dot} ${index + 1}`}
+                theme={theme}
+                dataCarouselControl
+              />
             </div>
           ) : null}
         </div>

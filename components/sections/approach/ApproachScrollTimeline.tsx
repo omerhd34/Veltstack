@@ -6,6 +6,7 @@ import {
   type TimelineEvent,
 } from "@/components/lightswind/scroll-timeline";
 import { BorderTrace } from "@/components/ui/BorderTrace";
+import { CarouselPagination } from "@/components/ui/CarouselPagination";
 import {
   LuCompass,
   LuFileText,
@@ -148,23 +149,7 @@ export function ApproachScrollTimeline({
         aria-live="polite"
         aria-label={`${activeStep + 1} / ${events.length}`}
       >
-        <div className="flex items-center rounded-full border border-black/5 bg-white/90 p-1.5 shadow-[0_8px_24px_rgb(58,107,82,0.12)] backdrop-blur-sm">
-          <div className="flex items-center gap-1.5 px-1.5" aria-hidden>
-            <span className="size-2 rounded-full bg-brand-accent/15" />
-            <span className="size-2 rounded-full bg-brand-accent/25" />
-          </div>
-          <span className="min-w-12 rounded-full bg-brand-accent px-3 py-2 text-center font-mono text-sm font-semibold text-white">
-            {String(activeStep + 1).padStart(2, "0")}
-          </span>
-          <div className="flex items-center gap-1.5 px-1.5" aria-hidden>
-            <span className="size-2 rounded-full bg-brand-accent/25" />
-            <span className="size-2 rounded-full bg-brand-accent/15" />
-          </div>
-          <span className="mx-1 h-5 w-px bg-border" aria-hidden />
-          <span className="min-w-8 px-1.5 text-center font-mono text-xs text-foreground/55">
-            {String(events.length).padStart(2, "0")}
-          </span>
-        </div>
+        <CarouselPagination activeIndex={activeStep} total={events.length} />
       </div>
 
       <ScrollTimeline

@@ -8,6 +8,7 @@ import {
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+import { CarouselPagination } from "@/components/ui/CarouselPagination";
 import { StardustIconButton } from "@/components/ui/StardustIconButton";
 import { cn } from "@/lib/utils";
 import { TestimonialCard } from "./TestimonialCard";
@@ -42,14 +43,6 @@ function formatSlideNumber(value: number) {
   return String(value).padStart(2, "0");
 }
 
-function getPagerWindow(active: number, total: number, size = 5) {
-  const half = Math.floor(size / 2);
-  return Array.from({ length: size }, (_, offset) => {
-    const slideIndex = (active - half + offset + total) % total;
-    return { slideIndex, offset };
-  });
-}
-
 export function TestimonialCarousel({
   testimonials,
   labels,
@@ -60,7 +53,6 @@ export function TestimonialCarousel({
   const [isDragging, setIsDragging] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const count = testimonials.length;
-  const pagerWindow = getPagerWindow(index, count);
   const carouselRef = useRef<HTMLDivElement>(null);
   const dragStartX = useRef<number | null>(null);
   const dragDelta = useRef(0);
@@ -195,47 +187,14 @@ export function TestimonialCarousel({
             <LuChevronLeft className="size-5" aria-hidden />
           </StardustIconButton>
 
-          <div className="inline-flex items-center gap-1 rounded-full border border-border/60 bg-white/70 px-2 py-1.5 shadow-[0_4px_20px_rgb(0,0,0,0.04)] backdrop-blur-md">
-            {pagerWindow.map(({ slideIndex, offset }) => {
-              const isActive = slideIndex === index;
-              const distance = Math.abs(offset - 2);
-
-              return (
-                <button
-                  key={`pager-${offset}-${slideIndex}`}
-                  type="button"
-                  onClick={() => goTo(slideIndex)}
-                  aria-label={labels.slide.replace(
-                    "{index}",
-                    String(slideIndex + 1),
-                  )}
-                  aria-current={isActive ? "true" : undefined}
-                  className={cn(
-                    "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-500 ease-out motion-reduce:transition-none",
-                    isActive
-                      ? "h-8 min-w-10 bg-brand-accent px-2.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)]"
-                      : cn(
-                          "size-2 bg-brand-accent/20 hover:bg-brand-accent/40",
-                          distance === 1 && "size-2.5",
-                          distance === 2 && "size-1.5 opacity-70",
-                        ),
-                  )}
-                >
-                  {isActive ? (
-                    formatSlideNumber(slideIndex + 1)
-                  ) : (
-                    <span className="sr-only">
-                      {formatSlideNumber(slideIndex + 1)}
-                    </span>
-                  )}
-                </button>
-              );
-            })}
-            <span aria-hidden className="mx-1 h-3 w-px bg-border/80" />
-            <span className="pr-1.5 font-(family-name:--font-heading) text-[11px] tracking-[0.14em] text-muted-foreground">
-              {formatSlideNumber(count)}
-            </span>
-          </div>
+          <CarouselPagination
+            activeIndex={index}
+            total={count}
+            onSelect={goTo}
+            getItemLabel={(slideIndex) =>
+              labels.slide.replace("{index}", String(slideIndex + 1))
+            }
+          />
 
           <StardustIconButton
             type="button"
