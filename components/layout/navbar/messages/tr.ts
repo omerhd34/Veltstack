@@ -29,6 +29,8 @@ export const navTr = {
   about: "Hakkımızda",
   contact: "İletişim",
   cta: "Görüşme Planla",
+  mobilePhone: "Telefon",
+  mobileEmail: "E-posta",
   localeTr: "Türkçe",
   localeEn: "İngilizce",
   switchToEn: "İngilizce'ye geç",

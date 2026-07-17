@@ -84,11 +84,20 @@ export function NavbarLinks({
     <nav className={className} aria-label="Ana navigasyon">
       <ul className="flex w-full flex-col gap-1.5">
         <li>
-          <div className="flex items-center gap-1">
+          <div
+            className={cn(
+              "flex items-center gap-1 rounded-xl",
+              servicesActive && "bg-brand-accent/12",
+            )}
+          >
             <Link
               href="/hizmetler"
               onClick={onNavigate}
-              className={cn(navItemClass(servicesActive, "mobile"), "flex-1")}
+              className={cn(
+                navItemClass(servicesActive, "mobile"),
+                "flex-1",
+                servicesActive && "bg-transparent",
+              )}
             >
               {tNav("services")}
             </Link>
@@ -134,11 +143,20 @@ export function NavbarLinks({
         </li>
 
         <li>
-          <div className="flex items-center gap-1">
+          <div
+            className={cn(
+              "flex items-center gap-1 rounded-xl",
+              projectsActive && "bg-brand-accent/12",
+            )}
+          >
             <Link
               href="/projeler"
               onClick={onNavigate}
-              className={cn(navItemClass(projectsActive, "mobile"), "flex-1")}
+              className={cn(
+                navItemClass(projectsActive, "mobile"),
+                "flex-1",
+                projectsActive && "bg-transparent",
+              )}
             >
               {tNav("projects")}
             </Link>
@@ -206,11 +224,20 @@ export function NavbarLinks({
         </li>
 
         <li>
-          <div className="flex items-center gap-1">
+          <div
+            className={cn(
+              "flex items-center gap-1 rounded-xl",
+              blogActive && "bg-brand-accent/12",
+            )}
+          >
             <Link
               href="/blog"
               onClick={onNavigate}
-              className={cn(navItemClass(blogActive, "mobile"), "flex-1")}
+              className={cn(
+                navItemClass(blogActive, "mobile"),
+                "flex-1",
+                blogActive && "bg-transparent",
+              )}
             >
               {tNav("blog")}
             </Link>

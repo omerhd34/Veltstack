@@ -27,4 +27,12 @@
   html::-webkit-scrollbar-thumb:hover {
     background: #325a45;
   }
+  @media (max-width: 639px) {
+    html {
+      scrollbar-width: none;
+    }
+    html::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }

@@ -29,6 +29,8 @@ export const navEn = {
   about: "About Us",
   contact: "Contact",
   cta: "Schedule a Call",
+  mobilePhone: "Phone",
+  mobileEmail: "Email",
   localeTr: "Turkish",
   localeEn: "English",
   switchToEn: "Switch to English",

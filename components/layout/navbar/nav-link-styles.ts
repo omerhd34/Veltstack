@@ -23,7 +23,7 @@ export function navItemClass(
   return cn(
     base,
     active
-      ? "bg-muted font-semibold text-foreground"
+      ? "bg-brand-accent/12 font-semibold text-brand-accent"
       : "text-foreground/80 hover:bg-muted/60 hover:text-foreground",
   );
 }

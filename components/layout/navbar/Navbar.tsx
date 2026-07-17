@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { LuMenu } from "react-icons/lu";
+import { RiMenu3Line } from "react-icons/ri";
 import { usePathname } from "@/i18n/navigation";
 import { useUiStore } from "@/store/uiSlice";
 import { Button } from "@/components/ui/shadcn";
@@ -111,19 +111,18 @@ export function Navbar({ className }: NavbarProps) {
           <NavbarLangSwitcher className="hidden xl:inline-flex" />
           <NavbarCta className="hidden md:inline-flex" />
           <Button
-            variant="outline"
+            variant="ghost"
             size="icon"
             type="button"
             className={cn(
-              "size-11 rounded-full border-0 xl:hidden [&_svg:not([class*='size-'])]:size-5",
-              overlay &&
-                "bg-white/10 text-white hover:bg-white/15 hover:text-white",
+              "size-11 justify-end rounded-none border-0 bg-transparent shadow-none hover:bg-transparent xl:hidden [&_svg:not([class*='size-'])]:size-6",
+              overlay && "text-white hover:text-white",
             )}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
             aria-expanded={mobileMenuOpen}
           >
-            <LuMenu />
+            <RiMenu3Line />
           </Button>
         </div>
       </SiteContainer>
