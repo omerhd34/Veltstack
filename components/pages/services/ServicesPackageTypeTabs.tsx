@@ -82,7 +82,7 @@ export function ServicesPackageTypeTabs({
       className={cn(
         "relative overflow-x-auto scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden",
         embedded
-          ? "flex w-full justify-center bg-emerald-950/25 px-2 py-2 sm:px-3"
+          ? "w-full bg-emerald-950/15 px-2 py-2 sm:px-3"
           : "rounded-2xl border border-emerald-900/40 bg-[#071510]/60 backdrop-blur-sm",
       )}
       role="tablist"
@@ -93,7 +93,7 @@ export function ServicesPackageTypeTabs({
         className={cn(
           "absolute top-1.5 bottom-1.5 transition-[left,width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
           embedded
-            ? "rounded-full bg-white/10 ring-1 ring-white/10 shadow-[inset_0_1px_0_rgb(255_255_255/0.08)]"
+            ? "rounded-full bg-linear-to-r from-emerald-500/18 to-brand-accent/12 ring-1 ring-emerald-400/25 shadow-[0_6px_20px_rgb(0_0_0/0.18),inset_0_1px_0_rgb(255_255_255/0.08)]"
             : "rounded-xl bg-brand-accent/15 ring-1 ring-brand-accent/30",
         )}
         style={{
@@ -119,13 +119,13 @@ export function ServicesPackageTypeTabs({
               aria-selected={isActive}
               onClick={() => onChange(tab.id)}
               className={cn(
-                "group relative z-10 flex shrink-0 items-center gap-1.5 px-3.5 py-2 text-xs font-medium tracking-tight transition-[color,transform] duration-300 sm:gap-2 sm:px-4 sm:py-2 sm:text-sm",
+                "group relative z-10 flex shrink-0 items-center gap-1.5 px-3.5 py-2.5 text-xs font-medium tracking-tight transition-[color,transform] duration-300 sm:gap-2 sm:px-4 sm:text-sm",
                 embedded ? "rounded-full" : "rounded-xl",
                 isActive
                   ? embedded
-                    ? "text-emerald-50"
+                    ? "text-white"
                     : "text-emerald-50"
-                  : "text-emerald-200/45 hover:text-emerald-100/75 active:scale-[0.98]",
+                  : "text-emerald-200/50 hover:text-emerald-100/85 active:scale-[0.98]",
               )}
             >
               <Icon
@@ -133,7 +133,7 @@ export function ServicesPackageTypeTabs({
                   "size-3.5 shrink-0 transition-colors duration-300 sm:size-4",
                   isActive
                     ? embedded
-                      ? "text-brand-accent"
+                      ? "text-emerald-300 drop-shadow-[0_0_8px_rgb(110_231_183/0.3)]"
                       : "text-brand-accent"
                     : "text-emerald-400/35 group-hover:text-emerald-300/55",
                 )}
