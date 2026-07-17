@@ -232,13 +232,13 @@ export function ServicesPackagesPanel({
           tabs={labels.tabs}
           active={activeCategory}
           onChange={handleCategoryChange}
-          className="mx-auto w-fit max-w-full"
+          className="mx-auto w-full max-w-full sm:w-fit"
         />
       ) : null}
 
       {showUnifiedNav ? (
-        <div className="relative mx-auto w-fit max-w-full rounded-[1.75rem] p-px bg-linear-to-r from-emerald-500/30 via-brand-accent/25 to-emerald-600/30 shadow-[0_12px_48px_rgb(0_0_0/0.12),0_4px_16px_rgb(58_107_82/0.08)]">
-          <div className="relative overflow-hidden rounded-[calc(1.75rem-1px)] bg-[#071510]/97 backdrop-blur-xl">
+        <div className="relative mx-auto w-full max-w-full rounded-[1.75rem] p-px bg-linear-to-r from-emerald-500/30 via-brand-accent/25 to-emerald-600/30 shadow-[0_12px_48px_rgb(0_0_0/0.12),0_4px_16px_rgb(58_107_82/0.08)] sm:w-fit">
+          <div className="relative min-w-0 overflow-hidden rounded-[calc(1.75rem-1px)] bg-[#071510]/97 backdrop-blur-xl">
             <span
               aria-hidden
               className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_90%_70%_at_50%_-10%,rgb(58_107_82/0.14),transparent_55%)]"

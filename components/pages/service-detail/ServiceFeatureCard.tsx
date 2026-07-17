@@ -1,8 +1,10 @@
 "use client";
 
+import { useId } from "react";
 import {
   LuArrowUpRight,
   LuChartLine,
+  LuChevronDown,
   LuLanguages,
   LuLayoutDashboard,
   LuSearch,
@@ -31,6 +33,12 @@ interface ServiceFeatureCardProps {
   description: string;
   index: number;
   detailLabel: string;
+  showFullDescription?: boolean;
+  fullWidthDescription?: boolean;
+  hideArrow?: boolean;
+  collapsible?: boolean;
+  expanded?: boolean;
+  onToggle?: () => void;
   className?: string;
 }
 
@@ -39,16 +47,40 @@ export function ServiceFeatureCard({
   description,
   index,
   detailLabel,
+  showFullDescription = false,
+  fullWidthDescription = false,
+  hideArrow = false,
+  collapsible = false,
+  expanded = false,
+  onToggle,
   className,
 }: ServiceFeatureCardProps) {
   const Icon = featureIcons[index % featureIcons.length];
+  const descriptionId = useId();
+  const showDescription = !collapsible || expanded;
 
   return (
     <article
       className={cn(
         "group relative overflow-hidden rounded-2xl border border-border/60 bg-white p-5 shadow-[0_2px_16px_rgb(0_0_0/0.04)] transition-all duration-300 hover:border-brand-accent/30 hover:shadow-[0_12px_32px_rgb(58_107_82/0.1)]",
+        collapsible && "cursor-pointer",
         className,
       )}
+      role={collapsible ? "button" : undefined}
+      tabIndex={collapsible ? 0 : undefined}
+      aria-expanded={collapsible ? expanded : undefined}
+      aria-controls={collapsible ? descriptionId : undefined}
+      onClick={collapsible ? onToggle : undefined}
+      onKeyDown={
+        collapsible
+          ? (event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                onToggle?.();
+              }
+            }
+          : undefined
+      }
     >
       <div className="flex items-start gap-4">
         <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/15">
@@ -62,16 +94,48 @@ export function ServiceFeatureCard({
           <h3 className="mt-1 font-(family-name:--font-heading) text-base font-bold leading-snug text-[#0A0A0F]">
             {title}
           </h3>
-          <p className="mt-2 line-clamp-4 text-sm leading-[1.75] text-muted-foreground">
-            {description}
-          </p>
+
+          {!collapsible && !fullWidthDescription && showDescription && (
+            <p
+              id={descriptionId}
+              className={cn(
+                "mt-2 text-sm leading-[1.75] text-muted-foreground",
+                !showFullDescription && "line-clamp-4",
+              )}
+            >
+              {description}
+            </p>
+          )}
         </div>
 
-        <LuArrowUpRight
-          className="size-4 shrink-0 text-muted-foreground/40 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-accent"
-          aria-hidden
-        />
+        {collapsible ? (
+          <LuChevronDown
+            className={cn(
+              "size-4 shrink-0 text-muted-foreground/50 transition-transform duration-300",
+              expanded && "rotate-180 text-brand-accent",
+            )}
+            aria-hidden
+          />
+        ) : !hideArrow ? (
+          <LuArrowUpRight
+            className="size-4 shrink-0 text-muted-foreground/40 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-accent"
+            aria-hidden
+          />
+        ) : null}
       </div>
+
+      {(collapsible || fullWidthDescription) && showDescription && (
+        <p
+          id={descriptionId}
+          className={cn(
+            "mt-4 text-sm leading-[1.75] text-muted-foreground",
+            collapsible &&
+              "motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-top-1 motion-safe:duration-200",
+          )}
+        >
+          {description}
+        </p>
+      )}
     </article>
   );
 }

@@ -11,12 +11,14 @@ interface ServicesPageHeroImageProps {
   alt: string;
   src?: string;
   className?: string;
+  frameClassName?: string;
 }
 
 export function ServicesPageHeroImage({
   alt,
   src = "/images/pages/services/hero.png",
   className,
+  frameClassName,
 }: ServicesPageHeroImageProps) {
   return (
     <div className={cn(PAGE_HERO_IMAGE_WRAPPER_CLASS, className)}>
@@ -24,7 +26,7 @@ export function ServicesPageHeroImage({
         aria-hidden
         className="absolute -inset-3 rounded-[2rem] bg-linear-to-br from-brand-accent/20 via-transparent to-emerald-600/10 blur-2xl"
       />
-      <div className={PAGE_HERO_IMAGE_FRAME_CLASS}>
+      <div className={cn(PAGE_HERO_IMAGE_FRAME_CLASS, frameClassName)}>
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 z-10 bg-linear-to-t from-[#050f0c]/90 via-[#050f0c]/15 to-transparent"

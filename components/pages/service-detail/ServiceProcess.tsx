@@ -1,6 +1,6 @@
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
-import { ProcessTimeline } from "@/components/sections/process/ProcessTimeline";
+import { ServiceProcessSlider } from "./ServiceProcessSlider";
 
 interface ProcessStep {
   title: string;
@@ -11,6 +11,11 @@ interface ServiceProcessProps {
   title: string;
   subtitle: string;
   steps: ProcessStep[];
+  sliderLabels: {
+    prev: string;
+    next: string;
+    step: string;
+  };
   className?: string;
 }
 
@@ -18,6 +23,7 @@ export function ServiceProcess({
   title,
   subtitle,
   steps,
+  sliderLabels,
   className,
 }: ServiceProcessProps) {
   return (
@@ -29,8 +35,12 @@ export function ServiceProcess({
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-500/30 to-transparent"
       />
 
-      <SiteContainer className="relative">
-        <SectionScrollReveal direction="left" trigger="entry">
+      <SiteContainer className="relative min-w-0">
+        <SectionScrollReveal
+          direction="left"
+          trigger="entry"
+          className="min-w-0"
+        >
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight md:text-4xl">
               {title}
@@ -40,10 +50,10 @@ export function ServiceProcess({
             </p>
           </div>
 
-          <ProcessTimeline
+          <ServiceProcessSlider
             className="mt-14 md:mt-16"
-            variant="dark"
             steps={steps}
+            labels={sliderLabels}
           />
         </SectionScrollReveal>
       </SiteContainer>

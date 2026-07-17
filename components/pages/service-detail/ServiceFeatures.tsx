@@ -4,9 +4,9 @@ import { LuCircleCheck } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
-import { cn, truncateToSentences } from "@/lib/utils";
-import { ServiceFeatureCard } from "./ServiceFeatureCard";
+import { cn } from "@/lib/utils";
 import { ServiceFeaturesCarousel } from "./ServiceFeaturesCarousel";
+import { ServiceFeaturesMobileSlider } from "./ServiceFeaturesMobileSlider";
 
 interface ServiceFeaturesCarouselLabels {
   prev: string;
@@ -34,7 +34,10 @@ export function ServiceFeatures({
 }: ServiceFeaturesProps) {
   return (
     <section
-      className={cn("relative bg-[#FAFBFA] py-24 md:py-32", className)}
+      className={cn(
+        "relative overflow-x-hidden bg-[#FAFBFA] py-24 md:py-32",
+        className,
+      )}
     >
       <div
         aria-hidden
@@ -50,8 +53,8 @@ export function ServiceFeatures({
         }}
       />
 
-      <SiteContainer className="relative px-4 sm:px-6">
-        <SectionScrollReveal direction="right">
+      <SiteContainer className="relative min-w-0 px-4 sm:px-6">
+        <SectionScrollReveal direction="right" className="min-w-0">
           <header>
             <SectionBadge variant="accent-card">
               <LuCircleCheck className="size-3.5" aria-hidden />
@@ -73,17 +76,12 @@ export function ServiceFeatures({
             labels={carouselLabels}
           />
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:hidden">
-            {features.map((feature, index) => (
-              <ServiceFeatureCard
-                key={feature.title}
-                title={feature.title}
-                description={truncateToSentences(feature.description, 2)}
-                index={index}
-                detailLabel={detailLabel}
-              />
-            ))}
-          </div>
+          <ServiceFeaturesMobileSlider
+            className="mt-10 lg:hidden"
+            features={features}
+            detailLabel={detailLabel}
+            labels={carouselLabels}
+          />
         </SectionScrollReveal>
       </SiteContainer>
     </section>

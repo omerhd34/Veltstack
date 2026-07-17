@@ -100,6 +100,11 @@ export async function ServiceDetailView({
       <ServiceProcess
         title={t("processTitle")}
         subtitle={t(`${slug}.processSubtitle`)}
+        sliderLabels={{
+          prev: t("processSliderPrev"),
+          next: t("processSliderNext"),
+          step: t("processSliderStep"),
+        }}
         steps={
           t.raw(`${slug}.processItems`) as {
             title: string;

@@ -80,7 +80,7 @@ export function ServicesPackageTypeTabs({
     <div
       ref={containerRef}
       className={cn(
-        "relative overflow-x-auto scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden",
+        "relative max-w-full overflow-x-auto overscroll-x-contain scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden",
         embedded
           ? "w-full bg-emerald-950/15 px-2 py-2 sm:px-3"
           : "rounded-2xl border border-emerald-900/40 bg-[#071510]/60 backdrop-blur-sm",

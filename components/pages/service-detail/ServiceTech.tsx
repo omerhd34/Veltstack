@@ -25,9 +25,15 @@ export function ServiceTech({
   className,
 }: ServiceTechProps) {
   return (
-    <section className={`bg-background py-24 md:py-32 ${className ?? ""}`}>
-      <SiteContainer>
-        <SectionScrollReveal direction="right" trigger="wide">
+    <section
+      className={`relative overflow-x-hidden bg-background py-24 md:py-32 ${className ?? ""}`}
+    >
+      <SiteContainer className="relative min-w-0">
+        <SectionScrollReveal
+          direction="right"
+          trigger="wide"
+          className="min-w-0"
+        >
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-[#0A0A0F] md:text-4xl">
               {title}
