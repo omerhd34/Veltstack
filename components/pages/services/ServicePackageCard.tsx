@@ -275,7 +275,18 @@ export function ServicePackageCard({
             className="min-w-0 rounded-xl border border-emerald-900/40 bg-[#071510]/60 px-1.5 py-3 text-center sm:px-2"
           >
             <p className="text-[0.55rem] font-bold uppercase tracking-wider text-emerald-400/55 sm:text-[0.6rem]">
-              {stat.label}
+              {stat.label === labels.statDelivery ? (
+                <>
+                  <span className="min-[405px]:hidden">
+                    {stat.label.split(" (")[0]}
+                  </span>
+                  <span className="hidden min-[405px]:inline">
+                    {stat.label}
+                  </span>
+                </>
+              ) : (
+                stat.label
+              )}
             </p>
             <p className="mt-1.5 wrap-break-word font-(family-name:--font-heading) text-base font-bold text-white sm:text-lg">
               {stat.value}
