@@ -13,15 +13,30 @@ interface NavbarLangSwitcherProps {
   labelStyle?: "code" | "full";
 }
 
-function LocaleFlag({ locale }: { locale: "tr" | "en" }) {
+function LocaleFlag({
+  locale,
+  background = false,
+}: {
+  locale: "tr" | "en";
+  background?: boolean;
+}) {
   return (
-    <span className="inline-flex size-4 shrink-0 items-center justify-center overflow-hidden rounded-full">
+    <span
+      className={cn(
+        "overflow-hidden",
+        background
+          ? "absolute inset-0 rounded-[inherit]"
+          : "relative inline-flex size-6 shrink-0 rounded-full",
+      )}
+    >
       <Image
         src={`/images/${locale}.png`}
         alt=""
-        width={16}
-        height={16}
-        className="block size-4 object-cover"
+        fill={background}
+        width={background ? undefined : 24}
+        height={background ? undefined : 24}
+        sizes={background ? "(min-width: 1200px) 40px, 100vw" : "24px"}
+        className={background ? "object-cover" : "object-contain"}
         aria-hidden
       />
     </span>
@@ -38,12 +53,7 @@ export function NavbarLangSwitcher({
   const tNav = useTranslations("nav");
 
   const nextLocale = locale === "tr" ? "en" : "tr";
-  const label =
-    labelStyle === "full"
-      ? locale === "tr"
-        ? tNav("localeTr")
-        : tNav("localeEn")
-      : locale.toUpperCase();
+  const fullLabel = locale === "tr" ? tNav("localeTr") : tNav("localeEn");
 
   return (
     <NavbarActionLink
@@ -52,16 +62,23 @@ export function NavbarLangSwitcher({
       scroll={false}
       onClick={saveLocaleSwitchScroll}
       solid={solid}
-      className={cn("h-11 w-auto min-w-11", className)}
-      innerClassName={cn(
-        "px-4 text-base font-semibold tracking-[-0.01em]",
-        labelStyle === "code" && "uppercase",
+      className={cn(
+        labelStyle === "full" ? "h-11 w-auto" : "h-10 w-10",
+        className,
       )}
-      contentClassName="gap-2.5 justify-center"
+      innerClassName={cn(
+        "relative overflow-hidden",
+        labelStyle === "full" ? "px-4 text-base font-semibold" : "p-0",
+      )}
+      contentClassName={cn(
+        labelStyle === "full"
+          ? "gap-2.5 justify-center"
+          : "absolute inset-0 overflow-hidden rounded-[inherit]",
+      )}
       ariaLabel={nextLocale === "en" ? tNav("switchToEn") : tNav("switchToTr")}
     >
-      <LocaleFlag locale={locale} />
-      {label}
+      <LocaleFlag locale={locale} background={labelStyle === "code"} />
+      {labelStyle === "full" && fullLabel}
     </NavbarActionLink>
   );
 }

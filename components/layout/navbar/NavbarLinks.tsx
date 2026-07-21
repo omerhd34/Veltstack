@@ -53,7 +53,7 @@ export function NavbarLinks({
   const projectLabels: Record<NavProjectKey, string> = {
     projectIqfinans: tNav("projectIqfinans"),
     projectYazici: tNav("projectYazici"),
-    projectFablessi: tNav("projectFablessi"),
+    projectGardossi: tNav("projectGardossi"),
     projectUzmanPsikolog: tNav("projectUzmanPsikolog"),
     projectPortfolio: tNav("projectPortfolio"),
     projectOnlinemuhasebe: tNav("projectOnlinemuhasebe"),
