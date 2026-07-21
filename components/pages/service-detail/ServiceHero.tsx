@@ -2,6 +2,7 @@ import { LuChevronDown } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
+import { PageHeroMobileBackdrop } from "@/components/ui/PageHeroMobileBackdrop";
 import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
@@ -41,11 +42,15 @@ export function ServiceHero({
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-20 top-20 size-[420px] rounded-full bg-emerald-600/6 blur-[120px]"
+          className="pointer-events-none absolute -right-20 top-20 size-105 rounded-full bg-emerald-600/6 blur-[120px]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -left-20 bottom-20 size-[360px] rounded-full bg-emerald-800/5 blur-[100px]"
+          className="pointer-events-none absolute -left-20 bottom-20 size-90 rounded-full bg-emerald-800/5 blur-[100px]"
+        />
+
+        <PageHeroMobileBackdrop
+          src={imageSrc.replace("/hero.png", "/hero-mobile.png")}
         />
 
         <SiteContainer className="relative flex h-[calc(100dvh-4.5rem)] flex-col pt-4 pb-5 sm:h-auto sm:min-h-[calc(100dvh-4.5rem)] sm:py-10">
@@ -53,7 +58,7 @@ export function ServiceHero({
             <SectionScrollReveal
               direction="left"
               when="mount"
-              className="min-w-0"
+              className="relative z-10 min-w-0"
             >
               <div className="min-w-0">
                 <SectionBadge className="hidden sm:inline-flex">
@@ -87,6 +92,7 @@ export function ServiceHero({
               <ServicesPageHeroImage
                 alt={imageAlt}
                 src={imageSrc}
+                className="hidden sm:block"
                 frameClassName="h-[180px] sm:h-[320px] lg:h-[420px]"
               />
             </SectionScrollReveal>

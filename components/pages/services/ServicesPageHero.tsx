@@ -4,6 +4,7 @@ import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
 import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
+import { PageHeroMobileBackdrop } from "@/components/ui/PageHeroMobileBackdrop";
 import { ServicesPageHeroImage } from "./ServicesPageHeroImage";
 
 interface ServicesPageHeroProps {
@@ -39,19 +40,21 @@ export function ServicesPageHero({
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -right-20 top-20 size-[420px] rounded-full bg-emerald-600/6 blur-[120px]"
+          className="pointer-events-none absolute -right-20 top-20 size-105 rounded-full bg-emerald-600/6 blur-[120px]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute -left-20 bottom-20 size-[360px] rounded-full bg-emerald-800/5 blur-[100px]"
+          className="pointer-events-none absolute -left-20 bottom-20 size-90 rounded-full bg-emerald-800/5 blur-[100px]"
         />
+
+        <PageHeroMobileBackdrop src="/images/pages/services/hero-mobile.png" />
 
         <SiteContainer className="relative flex h-[calc(100dvh-4.5rem)] flex-col pt-4 pb-5 sm:h-auto sm:min-h-[calc(100dvh-4.5rem)] sm:py-10">
           <div className="grid min-h-0 flex-1 items-start gap-4 overflow-hidden sm:gap-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-12">
             <SectionScrollReveal
               direction="left"
               when="mount"
-              className="min-w-0"
+              className="relative z-10 min-w-0"
             >
               <div className="min-w-0">
                 <SectionBadge className="hidden sm:inline-flex">
@@ -85,6 +88,7 @@ export function ServicesPageHero({
               <ServicesPageHeroImage
                 alt={imageAlt}
                 src="/images/pages/services/hero.png"
+                className="hidden sm:block"
               />
             </SectionScrollReveal>
           </div>
