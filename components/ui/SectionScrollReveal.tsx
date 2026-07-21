@@ -1,8 +1,24 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
+
+const MOBILE_QUERY = "(max-width: 767px)";
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia(MOBILE_QUERY);
+    const update = () => setIsMobile(mql.matches);
+    update();
+    mql.addEventListener("change", update);
+    return () => mql.removeEventListener("change", update);
+  }, []);
+
+  return isMobile;
+}
 
 type SectionScrollRevealDirection = "left" | "right" | "up";
 type SectionScrollRevealTrigger = "content" | "wide" | "entry";
@@ -51,6 +67,7 @@ export function SectionScrollReveal({
   when = "inView",
 }: SectionScrollRevealProps) {
   const prefersReducedMotion = useReducedMotion();
+  const isMobile = useIsMobile();
   const initial =
     direction === "up"
       ? { opacity: 0, y: OFFSET_UP }
@@ -72,7 +89,7 @@ export function SectionScrollReveal({
     className,
   );
 
-  if (prefersReducedMotion) {
+  if (prefersReducedMotion || isMobile) {
     return <div className={className}>{children}</div>;
   }
 

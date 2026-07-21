@@ -15,6 +15,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { useDragScroll } from "@/components/hooks/use-drag-scroll";
+import { CarouselPagination } from "@/components/ui/CarouselPagination";
 import { StardustIconButton } from "@/components/ui/StardustIconButton";
 import { cn } from "@/lib/utils";
 
@@ -25,11 +26,11 @@ function getVisibleColumnCount(columnsPerView: 1 | 2 | 3): number {
   if (typeof window === "undefined") return 1;
 
   const isMd = window.matchMedia("(min-width: 768px)").matches;
-  const isLg = window.matchMedia("(min-width: 1024px)").matches;
+  const isAbove1440 = window.matchMedia("(min-width: 1441px)").matches;
 
   if (!isMd) return 1;
   if (columnsPerView === 2) return 2;
-  return isLg ? 3 : 2;
+  return isAbove1440 ? 3 : 2;
 }
 
 export interface FeatureItem {
@@ -63,8 +64,9 @@ export interface ScrollCarouselProps {
   columnsPerView?: 1 | 2 | 3;
   viewportClassName?: string;
   loop?: boolean;
-  progressStyle?: "bar" | "pages" | "none";
-  navPlacement?: "inline" | "outside";
+  progressStyle?: "bar" | "pages" | "pagination" | "none";
+  navPlacement?: "inline" | "outside" | "bottom";
+  showNavigation?: boolean;
 }
 
 const useFeatureAnimations = (
@@ -200,6 +202,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
       loop = false,
       progressStyle = "bar",
       navPlacement = "inline",
+      showNavigation = true,
     },
     ref,
   ) => {
@@ -384,9 +387,32 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
       [columnsPerView, loop],
     );
 
-    const navOutside = navPlacement === "outside";
+    const scrollToPage = useCallback(
+      (pageIndex: number) => {
+        const viewport = viewportRef.current;
+        const firstCard = cardRefs.current[0];
+        const track = scrollContainerRef.current;
+        if (!viewport || !firstCard) return;
 
-    const navButtonShellClass = "hidden shrink-0 md:inline-flex";
+        const gap = track
+          ? Number.parseFloat(getComputedStyle(track).gap) || 32
+          : 32;
+        const pageSize = getVisibleColumnCount(columnsPerView);
+        const pageStep = (firstCard.offsetWidth + gap) * pageSize;
+        const maxScroll = viewport.scrollWidth - viewport.clientWidth;
+
+        viewport.scrollTo({
+          left: Math.min(pageIndex * pageStep, maxScroll),
+          behavior: "smooth",
+        });
+      },
+      [columnsPerView],
+    );
+
+    const navOutside = navPlacement === "outside";
+    const navBottom = navPlacement === "bottom";
+
+    const navButtonShellClass = "hidden shrink-0 lg:inline-flex";
     const navButtonClass = "shadow-lg";
 
     const renderFeatureCards = (
@@ -484,7 +510,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                     : "relative",
                 )}
               >
-                {navOutside ? (
+                {navOutside && showNavigation ? (
                   <StardustIconButton
                     type="button"
                     tone="glass"
@@ -506,10 +532,12 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                 >
                   <div
                     className={cn(
-                      !navOutside && "flex items-center gap-3 md:gap-4",
+                      !navOutside &&
+                        !navBottom &&
+                        "flex items-center gap-3 md:gap-4",
                     )}
                   >
-                    {!navOutside ? (
+                    {!navOutside && !navBottom && showNavigation ? (
                       <StardustIconButton
                         type="button"
                         tone="glass"
@@ -530,10 +558,12 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                         "scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
                         isDragMode && !isLgViewport && "cursor-grab",
                         "snap-x snap-mandatory",
-                        navOutside || !(alignStart && columnsPerView === 1)
+                        navOutside ||
+                          navBottom ||
+                          !(alignStart && columnsPerView === 1)
                           ? "w-full px-0"
                           : "min-w-0 flex-1 pl-[max(1rem,calc((100%-80rem)/2))] pr-4 md:pr-6",
-                        !navOutside && "min-w-0 flex-1",
+                        !navOutside && !navBottom && "min-w-0 flex-1",
                         viewportClassName,
                       )}
                     >
@@ -548,7 +578,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                       </div>
                     </div>
 
-                    {!navOutside ? (
+                    {!navOutside && !navBottom && showNavigation ? (
                       <StardustIconButton
                         type="button"
                         tone="glass"
@@ -563,7 +593,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                   </div>
                 </div>
 
-                {navOutside ? (
+                {navOutside && showNavigation ? (
                   <StardustIconButton
                     type="button"
                     tone="glass"
@@ -578,7 +608,42 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
               </div>
 
               {features.length > 1 && progressStyle !== "none" ? (
-                progressStyle === "pages" ? (
+                progressStyle === "pagination" ? (
+                  <div className="mt-4 flex items-center justify-center gap-3 md:mt-5">
+                    {navBottom && showNavigation ? (
+                      <StardustIconButton
+                        type="button"
+                        tone="glass"
+                        onClick={() => scrollByCard(-1)}
+                        aria-label={navLabels.prev}
+                        className={navButtonClass}
+                        shellClassName="hidden size-11 shrink-0 lg:inline-flex"
+                      >
+                        <LuChevronLeft className="size-5" aria-hidden />
+                      </StardustIconButton>
+                    ) : null}
+
+                    <CarouselPagination
+                      activeIndex={pageIndicator.current - 1}
+                      total={pageIndicator.total}
+                      onSelect={scrollToPage}
+                      theme="dark"
+                    />
+
+                    {navBottom && showNavigation ? (
+                      <StardustIconButton
+                        type="button"
+                        tone="glass"
+                        onClick={() => scrollByCard(1)}
+                        aria-label={navLabels.next}
+                        className={navButtonClass}
+                        shellClassName="hidden size-11 shrink-0 lg:inline-flex"
+                      >
+                        <LuChevronRight className="size-5" aria-hidden />
+                      </StardustIconButton>
+                    ) : null}
+                  </div>
+                ) : progressStyle === "pages" ? (
                   <p
                     className="mt-4 text-center text-sm font-medium tabular-nums tracking-wide text-white/45 md:mt-5"
                     aria-live="polite"

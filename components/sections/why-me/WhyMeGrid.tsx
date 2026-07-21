@@ -11,7 +11,7 @@ export async function WhyMeGrid({ className }: WhyMeGridProps) {
   const t = await getTranslations("home");
 
   return (
-    <div className={cn("grid gap-6 md:grid-cols-3", className)}>
+    <div className={cn("grid gap-6 md:grid-cols-2 xl:grid-cols-3", className)}>
       {whyMeItems.map((item, index) => (
         <WhyMeGridCard
           key={item.titleKey}

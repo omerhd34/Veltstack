@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/static-components */
 "use client";
 
 import { useState } from "react";
@@ -46,7 +47,7 @@ export function WhyMeGridCard({
 
       <span
         aria-hidden
-        className="absolute bottom-4 right-5 font-(family-name:--font-heading) text-4xl font-bold text-brand-accent/8"
+        className="absolute right-4 top-4 z-10 font-(family-name:--font-heading) text-3xl font-bold text-brand-accent/15"
       >
         {String(index + 1).padStart(2, "0")}
       </span>

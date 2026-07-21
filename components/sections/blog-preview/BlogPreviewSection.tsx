@@ -31,7 +31,7 @@ export async function BlogPreviewSection({
 
   return (
     <section
-      className={`relative overflow-hidden bg-[#061812] py-24 text-white md:py-32 ${className ?? ""}`}
+      className={`relative overflow-hidden bg-[#061812] py-16 text-white sm:py-20 lg:py-28 ${className ?? ""}`}
       aria-labelledby="blog-preview-section-title"
     >
       <div
@@ -48,21 +48,23 @@ export async function BlogPreviewSection({
       />
       <SiteContainer className="relative">
         <SectionScrollReveal direction="right">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between md:gap-10">
             <div className="max-w-3xl">
               <SectionBadge variant="emerald-label">
                 {toLatinUppercase(t("blogTitle"), locale)}
               </SectionBadge>
               <h2
                 id="blog-preview-section-title"
-                className="mt-5 font-(family-name:--font-heading) text-3xl font-bold tracking-tight text-white sm:mt-6 sm:text-4xl md:text-[2.5rem] lg:text-5xl"
+                className="mt-5 max-w-2xl font-(family-name:--font-heading) text-[clamp(2rem,5vw,3rem)] font-bold leading-[1.08] tracking-tight text-white sm:mt-6"
               >
                 {t("blogHeadline")}{" "}
                 <span className="text-brand-accent">
                   {t("blogHeadlineAccent")}
                 </span>
               </h2>
-              <p className="mt-3 text-base text-white/55 sm:mt-4 sm:text-lg">{t("blogSubtitle")}</p>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base lg:text-lg">
+                {t("blogSubtitle")}
+              </p>
             </div>
             <div className="hidden md:block">
               <BlogPreviewMoreButton label={t("blogMoreButton")} />
@@ -71,15 +73,16 @@ export async function BlogPreviewSection({
         </SectionScrollReveal>
       </SiteContainer>
 
-      <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
-        <BlogPreviewScrollCarousel className="mt-4 md:mt-8" posts={posts} />
-      </SectionScrollReveal>
-
       <SiteContainer className="relative">
-        <div className="mt-4 flex justify-center sm:mt-5 md:hidden">
-          <BlogPreviewMoreButton label={t("blogMoreButton")} />
-        </div>
+        <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
+          <BlogPreviewScrollCarousel
+            className="mt-6 sm:mt-8 lg:mt-10"
+            posts={posts}
+          />
+        </SectionScrollReveal>
+
       </SiteContainer>
+
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-400/20 to-transparent"

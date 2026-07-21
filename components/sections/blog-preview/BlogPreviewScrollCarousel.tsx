@@ -45,14 +45,15 @@ export function BlogPreviewScrollCarousel({
       interactionMode="drag"
       alignStart
       columnsPerView={3}
+      cardClassName="h-auto self-start"
       loop
       navLabels={{
         prev: t("blogSliderPrev"),
         next: t("blogSliderNext"),
       }}
       containerClassName="pt-0 pb-0 md:pb-6"
-      navPlacement="outside"
-      progressStyle="none"
+      navPlacement="bottom"
+      progressStyle="pagination"
       renderFeature={(feature) => {
         const post = postBySlug[feature.id as string];
         if (!post) return null;

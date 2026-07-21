@@ -12,7 +12,7 @@ export function SiteContainer({ id, className, children }: SiteContainerProps) {
     <div
       id={id}
       className={cn(
-        "mx-auto w-full max-w-site px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 2xl:px-0",
+        "mx-auto w-full max-w-site px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12",
         className,
       )}
     >

@@ -16,11 +16,11 @@ export function ServicesResponsiveSlider({
   return (
     <>
       <ServicesMobileSlider
-        className={`md:hidden ${className ?? ""}`}
+        className={`lg:hidden ${className ?? ""}`}
         services={services}
       />
       <ServicesThreeDCarousel
-        className={`hidden md:block ${className ?? ""}`}
+        className={`hidden lg:block ${className ?? ""}`}
         services={services}
       />
     </>

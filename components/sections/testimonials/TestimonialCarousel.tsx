@@ -150,7 +150,7 @@ export function TestimonialCarousel({
 
       <div
         className={cn(
-          "relative min-h-[320px] touch-pan-y select-none md:min-h-[340px]",
+          "relative min-h-80 touch-pan-y select-none md:min-h-85",
           count > 1 && (isDragging ? "cursor-grabbing" : "cursor-grab"),
         )}
         onPointerDown={onPointerDown}
@@ -181,7 +181,7 @@ export function TestimonialCarousel({
             tone="light"
             onClick={goPrev}
             aria-label={labels.prev}
-            shellClassName="hidden size-11 sm:inline-flex"
+            shellClassName="hidden size-11 lg:inline-flex"
             className={navButtonClassName}
           >
             <LuChevronLeft className="size-5" aria-hidden />
@@ -201,7 +201,7 @@ export function TestimonialCarousel({
             tone="light"
             onClick={goNext}
             aria-label={labels.next}
-            shellClassName="hidden size-11 sm:inline-flex"
+            shellClassName="hidden size-11 lg:inline-flex"
             className={navButtonClassName}
           >
             <LuChevronRight className="size-5" aria-hidden />

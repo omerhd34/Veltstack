@@ -88,7 +88,7 @@ export function ServicesMobileSlider({
             type="button"
             tone="glass"
             className="shadow-lg"
-            shellClassName="hidden size-11 sm:inline-flex"
+            shellClassName="hidden size-11 lg:inline-flex"
             onClick={() => goTo(active - 1)}
             aria-label={t("servicesSliderPrev")}
           >
@@ -109,7 +109,7 @@ export function ServicesMobileSlider({
             type="button"
             tone="glass"
             className="shadow-lg"
-            shellClassName="hidden size-11 sm:inline-flex"
+            shellClassName="hidden size-11 lg:inline-flex"
             onClick={() => goTo(active + 1)}
             aria-label={t("servicesSliderNext")}
           >
