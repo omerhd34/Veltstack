@@ -7,8 +7,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "webden-mobile-gecis",
-  titleTr: "Web'den Mobil'e Geçiş Nasıl Yapılır?",
-  titleEn: "How to Transition from Web to Mobile",
+  titleTr: "Web'den Mobil'e Geçiş",
+  titleEn: "From Web to Mobile",
   excerptTr:
     "Başarılı bir web projesini mobil uygulamaya taşımanın işletmelere sağladığı avantajları; React Native ve Expo ile modern geçiş sürecini, kod paylaşımını, mağaza yayın adımlarını ve dikkat edilmesi gereken noktaları gerçek deneyimlerimizden örneklerle birlikte anlatıyoruz.",
   excerptEn:

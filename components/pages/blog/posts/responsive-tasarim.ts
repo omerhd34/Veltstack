@@ -2,8 +2,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "responsive-tasarim",
-  titleTr: "Mobil Uyumluluk: Responsive Nedir?",
-  titleEn: "Mobile Compatibility: What Is Responsive?",
+  titleTr: "Responsive Nedir?",
+  titleEn: "What Is Responsive?",
   excerptTr:
     "Mobil uyumluluk ile responsive tasarım arasındaki farkı, mobile-first yaklaşımı ve gerçekten her ekranda kusursuz çalışan bir arayüz için pratik kuralları paylaşıyoruz; breakpoint yönetimi, esnek grid ve görsel optimizasyonunu gerçek örneklerle birlikte adım adım anlatıyoruz.",
   excerptEn:
@@ -111,7 +111,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Responsive Tasarımda Veltstack Yaklaşımı</h2>
-<p>Tüm web projelerimizde mobile-first Tailwind CSS, erişilebilir bileşenler (shadcn/ui) ve gerçek cihaz testleri standart sürecimizin parçasıdır. Yazıcı Ticaret, Fablessi ve kurumsal katalog projelerinde mobil dönüşüm oranlarını artırmak için responsive layout ve performans optimizasyonunu birlikte ele aldık.</p>
+<p>Tüm web projelerimizde mobile-first Tailwind CSS, erişilebilir bileşenler (shadcn/ui) ve gerçek cihaz testleri standart sürecimizin parçasıdır. Yazıcı Ticaret, Gardossi ve kurumsal katalog projelerinde mobil dönüşüm oranlarını artırmak için responsive layout ve performans optimizasyonunu birlikte ele aldık.</p>
 
 <h2>Sonuç</h2>
 <p>Gerçek mobil uyumluluk, responsive tasarım disiplini ve test kültürüyle gelir. Mobile-first düşünün, esnek layout kullanın, dokunma ve okuma deneyimini önceliklendirin. Web sitenizin mobilde gerçekten güçlü olmasını istiyorsanız bizimle iletişime geçin.</p>
@@ -208,7 +208,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Responsive Design at Veltstack</h2>
-<p>Every web project uses mobile-first Tailwind CSS, accessible components (shadcn/ui) and real device testing as standard. On Yazıcı Ticaret, Fablessi and corporate catalog projects we combined responsive layout with performance optimization to improve mobile conversion.</p>
+<p>Every web project uses mobile-first Tailwind CSS, accessible components (shadcn/ui) and real device testing as standard. On Yazıcı Ticaret, Gardossi and corporate catalog projects we combined responsive layout with performance optimization to improve mobile conversion.</p>
 
 <h2>Conclusion</h2>
 <p>Real mobile compatibility comes from responsive design discipline and a testing culture. Think mobile-first, use flexible layouts and prioritize touch and reading experience. Contact us if you want your site to perform truly well on mobile.</p>

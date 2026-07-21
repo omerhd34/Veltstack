@@ -10,10 +10,10 @@ export const projectsHomeEn = {
   projectYaziciDesc:
     "End-to-end e-commerce for home appliances and electronics. A conversion-focused sales flow from product discovery through checkout and order tracking.",
   projectYaziciTag: "E-Commerce - B2C",
-  projectFablessiTitle: "Fablessi | Corporate Website",
-  projectFablessiDesc:
+  projectGardossiTitle: "Gardossi | Corporate Website",
+  projectGardossiDesc:
     "Premium corporate product catalog for garden and balcony furniture. Rich visual showcase across six categories; WhatsApp for fast quotes and contact.",
-  projectFablessiTag: "Corporate - Catalog",
+  projectGardossiTag: "Corporate - Catalog",
   projectUzmanPsikologTitle: "Clinical Psychologist | Corporate Website",
   projectUzmanPsikologDesc:
     "Trust-focused corporate site for a clinical psychologist. In-person and online therapy, appointment requests, psychology content and service showcase in one flow.",

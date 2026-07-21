@@ -15,7 +15,7 @@ export const testimonialsHomeTr = {
     },
     {
       clientName: "Berat Ö.",
-      companyName: "Fablessi",
+      companyName: "Gardossi",
       feedback:
         "Şirketimize yakışan, düzgün çalışan bir site istiyorduk. Veltstack tüm isteklerimizi karşıladı. Süreç boyunca hep ilgiliydiler; teşekkür ederiz. Gönül rahatlığıyla tavsiye ederiz. Sonuçtan gerçekten memnunuz. Siteyle ilgili sorularımıza da hemen dönüş yaptılar.",
       rating: 5,

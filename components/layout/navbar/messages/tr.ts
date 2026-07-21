@@ -12,7 +12,7 @@ export const navTr = {
   projectsAll: "Projeleri İncele",
   projectIqfinans: "IQfinansAI | SaaS Platformu",
   projectYazici: "Yazıcı Ticaret | E-Ticaret",
-  projectFablessi: "Fablessi | Kurumsal Katalog",
+  projectGardossi: "Gardossi | Kurumsal Katalog",
   projectUzmanPsikolog: "Klinik Psikolog | Kurumsal Web Sitesi",
   projectPortfolio: "Ömer Halis Demir | Portfolyo",
   projectOnlinemuhasebe: "Online Muhasebe | Kurumsal Web Sitesi",

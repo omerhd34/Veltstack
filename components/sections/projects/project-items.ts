@@ -11,7 +11,7 @@ import {
 export const projectSlugs = [
   "iqfinansai",
   "yazici-ticaret",
-  "fablessi",
+  "gardossi",
   "uzman-klinik-psikolog",
   "portfolio",
   "onlinemuhasebe",
@@ -50,12 +50,12 @@ export const projectItems: ProjectItemConfig[] = [
     icon: LuShoppingCart,
   },
   {
-    slug: "fablessi",
-    href: "/projeler/fablessi",
-    titleKey: "projectFablessiTitle",
-    descKey: "projectFablessiDesc",
-    navDescKey: "projectFablessiDesc",
-    tagKey: "projectFablessiTag",
+    slug: "gardossi",
+    href: "/projeler/gardossi",
+    titleKey: "projectGardossiTitle",
+    descKey: "projectGardossiDesc",
+    navDescKey: "projectGardossiDesc",
+    tagKey: "projectGardossiTag",
     icon: LuArmchair,
   },
   {

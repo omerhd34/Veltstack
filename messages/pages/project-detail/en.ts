@@ -225,12 +225,12 @@ export const projectDetailsEn = {
       { value: "TR", label: "Language Support" },
     ],
   },
-  fablessi: {
-    metaTitle: "Fablessi | Garden & Balcony Furniture",
+  gardossi: {
+    metaTitle: "Gardossi | Garden & Balcony Furniture",
     metaDesc:
       "Premium corporate product showcase for garden and balcony furniture.",
     heroBadge: "Corporate / Catalog",
-    heroTitle: "Fablessi | Garden & Balcony Furniture",
+    heroTitle: "Gardossi | Garden & Balcony Furniture",
     heroSubtitle:
       "Premium corporate catalog for garden and balcony furniture. 6 categories from seating groups to sunbeds, hero carousel and WhatsApp contact.",
     summary:
@@ -238,7 +238,7 @@ export const projectDetailsEn = {
     challengeText:
       "The brand couldn't showcase its products effectively online; potential customers expected rich visuals, category-based discovery and quick contact. The existing setup didn't reflect the outdoor living aesthetic, the product portfolio was presented in a scattered way and direct channels like WhatsApp weren't integrated. In a visually driven sector like garden and balcony furniture, showcase quality directly shapes brand perception and pre-sale confidence.",
     solutionText:
-      "We developed a premium corporate catalog site for Fablessi. A hero carousel delivers full-screen visual showcases, a six-category product catalog and featured product areas strengthen the brand's outdoor living identity. The full product family, from seating groups to sunbeds, is presented in a structured way; WhatsApp routing enables one-click contact. Emphasis on İnegöl craftsmanship and seasonal campaign areas complete the brand story digitally.",
+      "We developed a premium corporate catalog site for Gardossi. A hero carousel delivers full-screen visual showcases, a six-category product catalog and featured product areas strengthen the brand's outdoor living identity. The full product family, from seating groups to sunbeds, is presented in a structured way; WhatsApp routing enables one-click contact. Emphasis on İnegöl craftsmanship and seasonal campaign areas complete the brand story digitally.",
     details:
       "Corporate catalog built with Next.js, React and Node.js; Prisma and MySQL backend for category and product management. Turkish and English multilingual structure with locale-based content and routing. Product, pricing and image updates are managed via the admin panel; SEO-friendly meta tags, sitemap and structured data support search visibility. Premium typography, outdoor aesthetics and responsive design deliver a consistent showcase experience across devices. Vercel deployment targets fast load times and uninterrupted service in production.",
     features: [

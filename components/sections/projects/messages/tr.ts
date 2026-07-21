@@ -10,10 +10,10 @@ export const projectsHomeTr = {
   projectYaziciDesc:
     "Beyaz eşya ve elektronik kategorilerinde uçtan uca e-ticaret deneyimi kurduk. Ürün keşfinden ödeme ve sipariş takibine kadar dönüşüm odaklı bir satış altyapısı tasarladık.",
   projectYaziciTag: "E-Ticaret - B2C",
-  projectFablessiTitle: "Fablessi | Kurumsal Web Sitesi",
-  projectFablessiDesc:
+  projectGardossiTitle: "Gardossi | Kurumsal Web Sitesi",
+  projectGardossiDesc:
     "Bahçe ve balkon mobilyaları için premium kurumsal ürün kataloğu. Oturma gruplarından şezlonglara altı kategoride zengin görsel vitrin sunuyor; WhatsApp ile hızlı teklif ve iletişim akışı sağlıyor.",
-  projectFablessiTag: "Kurumsal - Katalog",
+  projectGardossiTag: "Kurumsal - Katalog",
   projectUzmanPsikologTitle: "Klinik Psikolog | Kurumsal Web Sitesi",
   projectUzmanPsikologDesc:
     "Uzman Klinik Psikolog için güven odaklı kurumsal web sitesi. Yüz yüze ve online terapi hizmetlerini tanıtır; randevu talebi, psikoloji içerikleri ve hizmet vitrini tek akışta sunar.",

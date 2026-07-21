@@ -12,7 +12,7 @@ export const navEn = {
   projectsAll: "View Projects",
   projectIqfinans: "IQfinansAI | SaaS Platform",
   projectYazici: "Yazıcı Ticaret | E-Commerce",
-  projectFablessi: "Fablessi | Corporate Catalog",
+  projectGardossi: "Gardossi | Corporate Catalog",
   projectUzmanPsikolog: "Clinical Psychologist | Corporate Website",
   projectPortfolio: "Ömer Halis Demir | Portfolio",
   projectOnlinemuhasebe: "Online Accounting | Corporate Website",

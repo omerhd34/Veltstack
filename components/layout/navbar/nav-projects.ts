@@ -3,7 +3,7 @@ import { projectItems } from "@/components/sections/projects/project-items";
 export type NavProjectKey =
   | "projectIqfinans"
   | "projectYazici"
-  | "projectFablessi"
+  | "projectGardossi"
   | "projectUzmanPsikolog"
   | "projectPortfolio"
   | "projectOnlinemuhasebe";

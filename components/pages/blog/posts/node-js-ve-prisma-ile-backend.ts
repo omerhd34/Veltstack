@@ -7,8 +7,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "node-js-ve-prisma-ile-backend",
-  titleTr: "Node.js ve Prisma ile Backend Geliştirme",
-  titleEn: "Backend Development with Node.js and Prisma",
+  titleTr: "Node.js ve Prisma ile Backend",
+  titleEn: "Backend with Node.js and Prisma",
   excerptTr:
     "Node.js ve Prisma ORM ile backend geliştirmenin temellerini, Next.js Route Handlers ile entegrasyonu ve modern API mimarisini anlatıyoruz; veritabanı modelleme, tip güvenliği, migration yönetimi ve performans konularını gerçek örneklerle birlikte adım adım ele alıyoruz.",
   excerptEn:

@@ -2,8 +2,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "en-iyi-sanal-pos-firmalari",
-  titleTr: "En İyi Sanal POS Firmaları Hangileridir?",
-  titleEn: "Which Are the Best Virtual POS Providers?",
+  titleTr: "En İyi Sanal POS Firmaları",
+  titleEn: "Best Virtual POS Providers",
   excerptTr:
     "Türkiye'de e-ticaret ve online ödeme için PayTR, iyzico, Param, Paynet, Shopier ve iPara sanal POS sağlayıcılarını komisyon, entegrasyon kolaylığı ve destek açısından karşılaştırıyoruz; projenize en uygun ödeme altyapısını seçmenize adım adım yardımcı oluyoruz.",
   excerptEn:

@@ -224,19 +224,19 @@ export const projectDetailsTr = {
       { value: "TR", label: "Dil Desteği" },
     ],
   },
-  fablessi: {
-    metaTitle: "Fablessi | Bahçe & Balkon Mobilyaları",
+  gardossi: {
+    metaTitle: "Gardossi | Bahçe & Balkon Mobilyaları",
     metaDesc:
       "Bahçe ve balkon mobilyaları için premium kurumsal ürün vitrini. Hero carousel, WhatsApp entegrasyonu ve SEO uyumlu katalog.",
     heroBadge: "Kurumsal / Katalog",
-    heroTitle: "Fablessi | Bahçe & Balkon Mobilyaları",
+    heroTitle: "Gardossi | Bahçe & Balkon Mobilyaları",
     heroSubtitle:
       "Bahçe ve balkon mobilyaları için premium kurumsal katalog. Oturma gruplarından şezlonglara 6 kategori, hero carousel ve WhatsApp iletişimi.",
     summary: "Bahçe ve balkon mobilyaları için premium kurumsal ürün vitrini.",
     challengeText:
       "Marka dijital vitrinde ürünlerini yeterince sergileyemiyordu; potansiyel müşteriler zengin görseller, kategori bazlı keşif ve hızlı iletişim bekliyordu. Mevcut yapı outdoor living estetiğini yansıtmıyor, ürün portföyü dağınık sunuluyor ve WhatsApp gibi doğrudan iletişim kanalları entegre değildi. Bahçe ve balkon mobilyası gibi görsel odaklı bir sektörde vitrin kalitesi, marka algısını ve satış öncesi güveni doğrudan belirliyordu.",
     solutionText:
-      "Fablessi için premium bir kurumsal katalog sitesi geliştirdik. Hero carousel ile tam ekran görsel vitrin, altı kategorili ürün kataloğu ve öne çıkan ürün alanları markanın outdoor living kimliğini güçlendiriyor. Oturma gruplarından şezlonglara kadar tüm ürün ailesi yapılandırılmış biçimde sunuluyor; WhatsApp yönlendirmesi tek tıkla iletişim sağlıyor. İnegöl ustalığı vurgusu ve sezonluk kampanya alanları marka hikâyesini dijitalde tamamlıyor.",
+      "Gardossi için premium bir kurumsal katalog sitesi geliştirdik. Hero carousel ile tam ekran görsel vitrin, altı kategorili ürün kataloğu ve öne çıkan ürün alanları markanın outdoor living kimliğini güçlendiriyor. Oturma gruplarından şezlonglara kadar tüm ürün ailesi yapılandırılmış biçimde sunuluyor; WhatsApp yönlendirmesi tek tıkla iletişim sağlıyor. İnegöl ustalığı vurgusu ve sezonluk kampanya alanları marka hikâyesini dijitalde tamamlıyor.",
     details:
       "Next.js, React ve Node.js ile geliştirilen kurumsal katalog; Prisma ve MySQL backend üzerinde kategori ve ürün yönetimi sunuyor. Türkçe ve İngilizce çok dilli yapı ile locale bazlı içerik ve yönlendirme sağlandı. Admin panelinden ürün, fiyat ve görsel güncellemeleri yapılabiliyor; SEO uyumlu meta etiketleri, sitemap ve yapılandırılmış veri arama görünürlüğünü destekliyor. Premium tipografi, outdoor estetiği ve responsive tasarım tüm cihazlarda tutarlı bir vitrin deneyimi sağlıyor. Vercel deploy ile hızlı yükleme süreleri ve production ortamında kesintisiz hizmet hedeflendi.",
     features: [

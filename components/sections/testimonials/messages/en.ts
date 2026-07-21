@@ -15,8 +15,8 @@ export const testimonialsHomeEn = {
     },
     {
       clientName: "Berat Ö.",
-      companyName: "Fablessi",
-      feedback:
+      companyName: "Gardossi",
+      feedback: 
         "We needed a site that fits our company and works well. Veltstack met all our requests. They stayed attentive the whole time — thank you. We would happily recommend them. We are truly happy with the result. They also replied quickly whenever we had questions.",
       rating: 5,
     },
