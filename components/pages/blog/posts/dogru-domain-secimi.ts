@@ -3,8 +3,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "dogru-domain-secimi",
-  titleTr: "Doğru Domain Seçimi Nasıl Yapılır?",
-  titleEn: "How to Choose the Right Domain",
+  titleTr: "Doğru Domain Seçimi",
+  titleEn: "Choosing the Right Domain",
   excerptTr:
     "Markanıza uygun domain adını nasıl belirleyeceğinizi, doğru uzantıyı seçmenin inceliklerini ve sık yapılan hataları pratik bir rehberle paylaşıyoruz; ismin SEO üzerindeki etkisini, akılda kalıcılığı ve marka güvenini artıran ipuçlarını da adım adım örneklerle ele alıyoruz.",
   excerptEn:

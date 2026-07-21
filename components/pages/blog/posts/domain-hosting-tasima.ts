@@ -2,8 +2,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "domain-hosting-tasima",
-  titleTr: "Domain ve Hosting Nasıl Taşınır?",
-  titleEn: "How to Migrate Domain and Hosting",
+  titleTr: "Domain ve Hosting Taşıma",
+  titleEn: "Domain & Hosting Migration",
   excerptTr:
     "Domain veya hosting sağlayıcısı değiştirirken izlemeniz gereken adımları, DNS güncellemesini ve kesintisiz geçiş için dikkat edilecek noktaları anlatıyoruz; e-posta, SSL ve veri yedeğini kaybetmeden, ziyaretçi kaybı yaşamadan taşımayı gerçek deneyimlerimizle adım adım paylaşıyoruz.",
   excerptEn:

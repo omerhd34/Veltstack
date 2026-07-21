@@ -20,8 +20,8 @@ const VERCEL_LINK =
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "domain-hosting",
-  titleTr: "Domain & Hosting Nedir?",
-  titleEn: "What Are Domain & Hosting?",
+  titleTr: "Domain & Hosting",
+  titleEn: "Domain & Hosting",
   excerptTr:
     "Domain ve hosting kavramlarını sade bir dille açıklıyoruz; ikisinin farkını, birlikte nasıl çalıştıklarını, DNS'in rolünü ve domain satın alma sürecini adım adım ele alıyor, ilk web sitenizi yayına almadan önce bilmeniz gereken her şeyi anlatıyoruz.",
   excerptEn:

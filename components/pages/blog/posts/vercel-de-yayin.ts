@@ -2,8 +2,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "vercel-de-yayin",
-  titleTr: "Vercel'de Yayın Nasıl Yapılır?",
-  titleEn: "How to Deploy on Vercel",
+  titleTr: "Vercel'de Yayın",
+  titleEn: "Deploy on Vercel",
   excerptTr:
     "Next.js projelerini Vercel'e nasıl deploy edeceğinizi adım adım anlatıyoruz; ortam değişkenleri, özel domain bağlama, preview ortamları, otomatik dağıtım ve sık karşılaşılan hataları kapsıyor, sorunsuz bir yayın süreci için pratik ipuçlarını da paylaşıyoruz.",
   excerptEn:

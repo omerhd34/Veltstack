@@ -7,7 +7,7 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "geleneksel-yazilim-yapay-zeka",
-  titleTr: "Geleneksel Yazılım | Yapay Zeka",
+  titleTr: "Geleneksel Yazılım | AI",
   titleEn: "Traditional Software | AI",
   excerptTr:
     "Kaliteli yazılımda insan geliştiricinin kod yazmasının neden şart olduğunu; yapay zekânın yalnızca yardımcı bir araç olarak sınırlarını, risklerini ve doğru kullanım yaklaşımını detaylı biçimde anlatıyor, üretkenliği artırırken kaliteyi nasıl koruyacağınızı gerçek örneklerle ele alıyoruz.",

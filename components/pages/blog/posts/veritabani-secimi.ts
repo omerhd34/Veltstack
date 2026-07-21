@@ -2,8 +2,8 @@ import type { BlogPostEntry } from "./types";
 
 export const blogPostEntry: BlogPostEntry = {
   slug: "veritabani-secimi",
-  titleTr: "Veritabanı Seçimi Nasıl Yapılır?",
-  titleEn: "How to Choose a Database",
+  titleTr: "Veritabanı Seçimi",
+  titleEn: "Choosing a Database",
   excerptTr:
     "SQL ve NoSQL arasındaki farkı, MySQL, PostgreSQL ve MongoDB karşılaştırmasını ve projenize uygun veritabanını seçerken dikkat edilecek kriterleri ele alıyoruz; ölçeklenebilirlik, performans, veri modeli ve maliyet açısından doğru kararı vermenize gerçek örneklerle yardımcı oluyoruz.",
   excerptEn:

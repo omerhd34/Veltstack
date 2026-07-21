@@ -101,7 +101,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 <p>Modern web geliştirme pratiklerini takip eden bir ekip olarak, her konuya hem teorik hem de pratik bir bakış açısıyla yaklaşıyoruz. Araçlarımızı, kütüphanelerimizi ve süreçlerimizi sürekli güncelliyoruz.</p>
 
 <h2>Gerçek Proje Deneyimleri</h2>
-<p>IQfinansAI, Yazıcı Ticaret ve Fablessi gibi projelerimizde öğrendiklerimizi bu yazıda paylaşıyoruz. Her proje bize yeni bir bakış açısı kazandırdı.</p>
+<p>IQfinansAI, Yazıcı Ticaret ve Gardossi gibi projelerimizde öğrendiklerimizi bu yazıda paylaşıyoruz. Her proje bize yeni bir bakış açısı kazandırdı.</p>
 
 <h2>Sonuç</h2>
 <p>Dijital dünyada başarılı olmak için teknik mükemmellik kadar doğru strateji de gereklidir. Veltstack olarak her projede bu dengeyi korumaya çalışıyoruz.</p>
@@ -116,7 +116,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 <p>As a team that follows modern web development practices, we approach every topic from both a theoretical and practical perspective, keeping our tools, libraries and processes continuously updated.</p>
 
 <h2>Real Project Experience</h2>
-<p>We share lessons learned from projects like IQfinansAI, Yazıcı Ticaret and Fablessi. Each project gave us a fresh perspective.</p>
+<p>We share lessons learned from projects like IQfinansAI, Yazıcı Ticaret and Gardossi. Each project gave us a fresh perspective.</p>
 
 <h2>Conclusion</h2>
 <p>Succeeding in the digital world requires the right strategy as well as technical excellence. At Veltstack, we strive to maintain that balance in every project.</p>
