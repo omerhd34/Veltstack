@@ -36,7 +36,11 @@ function LocaleFlag({
         width={background ? undefined : 24}
         height={background ? undefined : 24}
         sizes={background ? "(min-width: 1200px) 40px, 100vw" : "24px"}
-        className={background ? "object-cover" : "object-contain"}
+        className={
+          background
+            ? "h-full w-full object-cover"
+            : "h-auto w-auto object-contain"
+        }
         aria-hidden
       />
     </span>

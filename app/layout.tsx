@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="h-full">
+    <html className="h-full" data-scroll-behavior="smooth">
       <body
         className={`${blackOpsOne.variable} ${inter.variable} ${jetbrainsMono.variable} min-h-full flex flex-col antialiased`}
       >
