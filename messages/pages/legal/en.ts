@@ -76,7 +76,7 @@ export const legalEn = {
         title: "8. Your Rights",
         paragraphs: [
           "Under the KVKK you may ask whether your data is processed, request information if it is, request correction or deletion, learn who it has been shared with, object to processing and claim compensation for damage caused by unlawful processing.",
-          "Send requests to [demirome123@gmail.com](mailto:demirome123@gmail.com) with enough detail for us to verify your identity. We respond within 30 days at the latest.",
+          "Send requests to [veltstack@outlook.com](mailto:veltstack@outlook.com) with enough detail for us to verify your identity. We respond within 30 days at the latest.",
         ],
       },
       {
@@ -189,7 +189,7 @@ export const legalEn = {
         title: "8. Security",
         paragraphs: [
           "There is no public user account on the site. The admin panel is accessible only to authorised persons.",
-          "If you discover a security vulnerability, please report it to [demirome123@gmail.com](mailto:demirome123@gmail.com).",
+          "If you discover a security vulnerability, please report it to [veltstack@outlook.com](mailto:veltstack@outlook.com).",
         ],
       },
       {
@@ -270,7 +270,7 @@ export const legalEn = {
         id: "privacy-link",
         title: "7. Personal Data and Your Rights",
         paragraphs: [
-          "Personal data processed via cookies is subject to the KVKK. To exercise your rights or ask a question, write to [demirome123@gmail.com](mailto:demirome123@gmail.com) or use our [Contact](/iletisim) page.",
+          "Personal data processed via cookies is subject to the KVKK. To exercise your rights or ask a question, write to [veltstack@outlook.com](mailto:veltstack@outlook.com) or use our [Contact](/iletisim) page.",
         ],
       },
       {
@@ -307,7 +307,7 @@ export const legalEn = {
         items: [
           "**Data controller:** Ömer Halis Demir (**Veltstack**)",
           "**Address:** Turkey",
-          "**Email:** [demirome123@gmail.com](mailto:demirome123@gmail.com)",
+          "**Email:** [veltstack@outlook.com](mailto:veltstack@outlook.com)",
           "**Phone:** [+90 507 849 29 03](tel:+905078492903)",
         ],
       },
@@ -376,7 +376,7 @@ export const legalEn = {
         id: "application",
         title: "8. How to Apply",
         paragraphs: [
-          "To exercise your rights, submit a written application with identity verification details to [demirome123@gmail.com](mailto:demirome123@gmail.com) or use our [Contact](/iletisim) page.",
+          "To exercise your rights, submit a written application with identity verification details to [veltstack@outlook.com](mailto:veltstack@outlook.com) or use our [Contact](/iletisim) page.",
           "Applications are handled free of charge within **30 days** at the latest. If the process incurs additional cost, a fee may be charged according to the tariff set by the Personal Data Protection Authority.",
         ],
       },

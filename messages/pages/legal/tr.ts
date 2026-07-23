@@ -76,7 +76,7 @@ export const legalTr = {
         title: "8. Haklarınız",
         paragraphs: [
           "KVKK kapsamında; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi alma, düzeltilmesini veya silinmesini isteme, aktarıldığı tarafları bilme, işleme itiraz etme ve kanuna aykırı işlemeden doğan zararın giderilmesini talep etme haklarına sahipsiniz.",
-          "Başvurularınızı [demirome123@gmail.com](mailto:demirome123@gmail.com) adresine iletebilirsiniz. Taleplerinizi kimliğinizi doğrulayabilecek bilgilerle göndermeniz yeterlidir; en geç 30 gün içinde yanıtlarız.",
+          "Başvurularınızı [veltstack@outlook.com](mailto:veltstack@outlook.com) adresine iletebilirsiniz. Taleplerinizi kimliğinizi doğrulayabilecek bilgilerle göndermeniz yeterlidir; en geç 30 gün içinde yanıtlarız.",
         ],
       },
       {
@@ -189,7 +189,7 @@ export const legalTr = {
         title: "8. Güvenlik",
         paragraphs: [
           "Site üzerinde herkese açık bir kullanıcı hesabı bulunmamaktadır. Admin paneli yalnızca yetkili kişiler tarafından erişilebilir.",
-          "Güvenlik açığı tespit etmeniz hâlinde [demirome123@gmail.com](mailto:demirome123@gmail.com) adresine bildirmenizi rica ederiz.",
+          "Güvenlik açığı tespit etmeniz hâlinde [veltstack@outlook.com](mailto:veltstack@outlook.com) adresine bildirmenizi rica ederiz.",
         ],
       },
       {
@@ -268,7 +268,7 @@ export const legalTr = {
         id: "kvkk-baglanti",
         title: "7. Kişisel Veriler ve Haklarınız",
         paragraphs: [
-          "Çerezler aracılığıyla işlenen kişisel veriler KVKK kapsamındadır. Haklarınızı kullanmak veya soru sormak için [demirome123@gmail.com](mailto:demirome123@gmail.com) adresine yazabilir veya [İletişim](/iletisim) sayfamızı kullanabilirsiniz.",
+          "Çerezler aracılığıyla işlenen kişisel veriler KVKK kapsamındadır. Haklarınızı kullanmak veya soru sormak için [veltstack@outlook.com](mailto:veltstack@outlook.com) adresine yazabilir veya [İletişim](/iletisim) sayfamızı kullanabilirsiniz.",
         ],
       },
       {
@@ -305,7 +305,7 @@ export const legalTr = {
         items: [
           "**Veri sorumlusu:** Ömer Halis Demir (**Veltstack**)",
           "**Adres:** Türkiye",
-          "**E-posta:** [demirome123@gmail.com](mailto:demirome123@gmail.com)",
+          "**E-posta:** [veltstack@outlook.com](mailto:veltstack@outlook.com)",
           "**Telefon:** [+90 507 849 29 03](tel:+905078492903)",
         ],
       },
@@ -374,7 +374,7 @@ export const legalTr = {
         id: "basvuru",
         title: "8. Başvuru Yöntemi",
         paragraphs: [
-          "Haklarınızı kullanmak için kimliğinizi doğrulayıcı bilgilerle birlikte [demirome123@gmail.com](mailto:demirome123@gmail.com) adresine yazılı başvuruda bulunabilir veya [İletişim](/iletisim) sayfamızı kullanabilirsiniz.",
+          "Haklarınızı kullanmak için kimliğinizi doğrulayıcı bilgilerle birlikte [veltstack@outlook.com](mailto:veltstack@outlook.com) adresine yazılı başvuruda bulunabilir veya [İletişim](/iletisim) sayfamızı kullanabilirsiniz.",
           "Başvurular ücretsiz olarak en geç **30 gün** içinde sonuçlandırılır. İşlemin ayrıca bir maliyet gerektirmesi hâlinde Kişisel Verileri Koruma Kurulu tarafından belirlenen tarifeye göre ücret talep edilebilir.",
         ],
       },

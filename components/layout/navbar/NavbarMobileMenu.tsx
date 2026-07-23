@@ -94,7 +94,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
                 <FaWhatsapp className="size-4.5" aria-hidden />
               </Link>
               <Link
-                href="mailto:demirome123@gmail.com"
+                href="mailto:veltstack@outlook.com"
                 aria-label="E-posta"
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >

@@ -104,8 +104,8 @@ export const contactTr = {
     },
     {
       label: "E-posta",
-      value: "demirome123@gmail.com",
-      href: "mailto:demirome123@gmail.com",
+      value: "veltstack@outlook.com",
+      href: "mailto:veltstack@outlook.com",
     },
     {
       label: "Portfolyo",
