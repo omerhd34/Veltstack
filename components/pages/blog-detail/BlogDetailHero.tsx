@@ -106,7 +106,7 @@ export async function BlogDetailHero({
 
                 <div
                   aria-hidden
-                  className="mt-8 h-px w-12 bg-linear-to-r from-brand-accent to-transparent"
+                  className="mt-8 hidden h-px w-12 bg-linear-to-r from-brand-accent to-transparent lg:block"
                 />
 
                 <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem]">
