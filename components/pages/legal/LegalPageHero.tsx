@@ -1,6 +1,7 @@
 import { getLocale } from "next-intl/server";
 import type { IconType } from "react-icons";
 import { LuChevronDown } from "react-icons/lu";
+import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
@@ -82,7 +83,7 @@ export async function LegalPageHero({
         </SectionScrollReveal>
       </SiteContainer>
 
-      <a
+      <Link
         href="#legal-content"
         className="absolute inset-x-0 bottom-7 z-20 mx-auto flex w-fit flex-col items-center gap-1.5 text-emerald-100/85 transition-colors hover:text-white sm:bottom-9"
       >
@@ -90,7 +91,7 @@ export async function LegalPageHero({
           {scrollLabel}
         </span>
         <LuChevronDown className="size-4 animate-bounce" aria-hidden />
-      </a>
+      </Link>
 
       <div
         aria-hidden

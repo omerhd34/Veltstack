@@ -1,6 +1,7 @@
 import type { IconType } from "react-icons";
 import { LuChevronDown, LuExternalLink } from "react-icons/lu";
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
@@ -103,7 +104,7 @@ export function ProjectHero({
                   className="absolute -inset-3 rounded-[2rem] bg-linear-to-br from-brand-accent/20 via-transparent to-emerald-600/10 blur-2xl"
                 />
                 {demoUrl ? (
-                  <a
+                  <Link
                     href={demoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -120,7 +121,7 @@ export function ProjectHero({
                       <LuExternalLink className="size-3.5" aria-hidden />
                       {demoLabel}
                     </span>
-                  </a>
+                  </Link>
                 ) : (
                   <PreviewFrame
                     imageUrl={imageUrl}
@@ -141,7 +142,7 @@ export function ProjectHero({
           >
             <HeroStatsCards stats={metrics} />
 
-            <a
+            <Link
               href="#project-overview"
               className="mt-6 flex flex-col items-center gap-1.5 text-emerald-300/50 transition-colors hover:text-emerald-300/80 sm:mt-8"
             >
@@ -149,7 +150,7 @@ export function ProjectHero({
                 {scrollLabel}
               </span>
               <LuChevronDown className="size-4 animate-bounce" aria-hidden />
-            </a>
+            </Link>
           </SectionScrollReveal>
         </SiteContainer>
       </section>

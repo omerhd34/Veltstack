@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { getFreelancerPlatformsContent } from "./freelancer-platforms-data";
 
@@ -47,13 +48,13 @@ export function BlogFreelancerPlatformsTable({
                 }
               >
                 <td>
-                  <a
+                  <Link
                     href={row.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <strong>{row.name}</strong>
-                  </a>
+                  </Link>
                 </td>
                 <td>{row.model}</td>
                 <td>{row.scenario}</td>

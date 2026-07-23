@@ -9,6 +9,7 @@ import {
   LuEye,
   LuRocket,
 } from "react-icons/lu";
+import { Link } from "@/i18n/navigation";
 import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
 import { cn } from "@/lib/utils";
 
@@ -64,7 +65,7 @@ export function ProjectDetailCard({
 
         <div className="mt-6 flex flex-wrap items-center gap-4">
           {demoUrl ? (
-            <a
+            <Link
               href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -73,7 +74,7 @@ export function ProjectDetailCard({
               <LuEye className="size-4" aria-hidden />
               {labels.demo}
               <LuExternalLink className="size-3.5 opacity-80" aria-hidden />
-            </a>
+            </Link>
           ) : null}
 
           <button

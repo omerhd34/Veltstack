@@ -1,4 +1,5 @@
 import { LuChevronDown } from "react-icons/lu";
+import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
@@ -99,7 +100,7 @@ export function ServiceHero({
               <HeroStatsCards stats={stats} />
             </SectionScrollReveal>
 
-            <a
+            <Link
               href="#service-features"
               className="mt-4 flex flex-col items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-300/80 lg:mt-8"
             >
@@ -107,7 +108,7 @@ export function ServiceHero({
                 {scrollLabel}
               </span>
               <LuChevronDown className="size-4 animate-bounce" aria-hidden />
-            </a>
+            </Link>
           </div>
         </SiteContainer>
       </section>

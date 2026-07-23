@@ -151,7 +151,7 @@ export async function BlogDetailHero({
           </div>
 
           <div className="mt-auto shrink-0 pt-6 sm:pt-8">
-            <a
+            <Link
               href="#blog-article"
               className="flex flex-col items-center gap-1.5 text-emerald-300/50 transition-colors hover:text-emerald-300/80"
             >
@@ -159,7 +159,7 @@ export async function BlogDetailHero({
                 {scrollLabel}
               </span>
               <LuChevronDown className="size-4 animate-bounce" aria-hidden />
-            </a>
+            </Link>
           </div>
         </SiteContainer>
 

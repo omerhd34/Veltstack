@@ -5,16 +5,6 @@ const TOKEN_RE = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
 const BOLD_RE = /^\*\*([^*]+)\*\*$/;
 const LINK_RE = /^\[([^\]]+)\]\(([^)]+)\)$/;
 
-function isExternalHref(href: string) {
-  return (
-    href.startsWith("http://") ||
-    href.startsWith("https://") ||
-    href.startsWith("mailto:") ||
-    href.startsWith("tel:")
-  );
-}
-
-/** Renders `**bold**` and `[label](href)` markers. */
 export function LegalRichText({ text }: { text: string }): ReactNode {
   const parts = text.split(TOKEN_RE);
 
@@ -34,16 +24,15 @@ export function LegalRichText({ text }: { text: string }): ReactNode {
       const className =
         "font-medium text-foreground underline decoration-brand-accent/40 underline-offset-[3px] transition-colors hover:decoration-brand-accent";
 
-      if (isExternalHref(href)) {
-        return (
-          <a key={index} href={href} className={className}>
-            {label}
-          </a>
-        );
-      }
-
       return (
-        <Link key={index} href={href} className={className}>
+        <Link
+          key={index}
+          href={href}
+          {...(href.startsWith("http")
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+          className={className}
+        >
           {label}
         </Link>
       );

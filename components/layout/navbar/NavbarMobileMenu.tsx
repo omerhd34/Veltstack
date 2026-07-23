@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { LuGithub, LuLinkedin, LuMail, LuPhone, LuX } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa6";
+import { Link } from "@/i18n/navigation";
 import { useUiStore } from "@/store/uiSlice";
 import { Button } from "@/components/ui/shadcn";
 import { cn } from "@/lib/utils";
@@ -76,14 +77,14 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
           </div>
           <div className="flex shrink-0 flex-col gap-3 border-t border-brand-accent/15 p-4">
             <div className="grid grid-cols-5 gap-2">
-              <a
+              <Link
                 href="tel:+905078492903"
                 aria-label="Telefon"
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >
                 <LuPhone className="size-4.5" aria-hidden />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://wa.me/905078492903"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -91,15 +92,15 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >
                 <FaWhatsapp className="size-4.5" aria-hidden />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="mailto:demirome123@gmail.com"
                 aria-label="E-posta"
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >
                 <LuMail className="size-4.5" aria-hidden />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/in/omerhd1/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -107,8 +108,8 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >
                 <LuLinkedin className="size-4.5" aria-hidden />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://github.com/omerhd34"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -116,7 +117,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >
                 <LuGithub className="size-4.5" aria-hidden />
-              </a>
+              </Link>
             </div>
             <NavbarLangSwitcher
               solid

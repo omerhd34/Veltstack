@@ -197,25 +197,16 @@ export function NavbarLinks({
 
                 return (
                   <li key={item.href}>
-                    {isExternalHref(item.href) ? (
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={onNavigate}
-                        className={className}
-                      >
-                        {content}
-                      </a>
-                    ) : (
-                      <Link
-                        href={item.href}
-                        onClick={onNavigate}
-                        className={className}
-                      >
-                        {content}
-                      </Link>
-                    )}
+                    <Link
+                      href={item.href}
+                      {...(isExternalHref(item.href)
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      onClick={onNavigate}
+                      className={className}
+                    >
+                      {content}
+                    </Link>
                   </li>
                 );
               })}

@@ -1,4 +1,5 @@
 import { LuChevronDown } from "react-icons/lu";
+import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
@@ -93,7 +94,7 @@ export function AboutHero({
             <HeroStatsCards stats={stats} />
           </SectionScrollReveal>
 
-          <a
+          <Link
             href="#about-story"
             className="mt-4 flex flex-col items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-300/80 lg:mt-8"
           >
@@ -101,7 +102,7 @@ export function AboutHero({
               {scrollLabel}
             </span>
             <LuChevronDown className="size-4 animate-bounce" aria-hidden />
-          </a>
+          </Link>
         </div>
       </SiteContainer>
       <PageScrollAnchor id="about-story" />

@@ -101,17 +101,14 @@ export function ProjectShowcaseCard({
     </>
   );
 
-  return isExternalHref(href) ? (
-    <a
+  return (
+    <Link
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      {...(isExternalHref(href)
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
       className={cardClassName}
     >
-      {content}
-    </a>
-  ) : (
-    <Link href={href} className={cardClassName}>
       {content}
     </Link>
   );
