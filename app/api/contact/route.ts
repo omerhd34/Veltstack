@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     const data = contactSchema.parse(body);
 
-    await prisma.message.create({
+    const message = await prisma.message.create({
       data: {
         ...data,
         subject: `İletişim formu - ${data.name}`,
@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     });
 
     try {
-      await sendContactNotification(data);
+      await sendContactNotification({ ...data, messageId: message.id });
     } catch (emailError) {
       console.error("[contact] email notification failed:", emailError);
     }
