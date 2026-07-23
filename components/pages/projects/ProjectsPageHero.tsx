@@ -1,12 +1,5 @@
-import { LuChevronDown } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
-import { SiteContainer } from "@/components/layout/SiteContainer";
-import { SectionBadge } from "@/components/ui/SectionBadge";
-import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
-import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
-import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
-import { PageHeroMobileBackdrop } from "@/components/ui/PageHeroMobileBackdrop";
-import { ServicesPageHeroImage } from "@/components/pages/services/ServicesPageHeroImage";
+import type { HeroStat } from "@/components/ui/HeroStatsCards";
+import { PageHeroListing } from "@/components/ui/page-hero";
 
 interface ProjectsPageHeroProps {
   badge: string;
@@ -30,84 +23,18 @@ export function ProjectsPageHero({
   className,
 }: ProjectsPageHeroProps) {
   return (
-    <>
-      <section
-        data-page-hero
-        className={`relative flex min-h-dvh flex-col overflow-hidden bg-[#050f0c] pt-18 text-white ${className ?? ""}`}
-      >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 overflow-hidden"
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgb(58_107_82/0.14),transparent)]" />
-          <div className="absolute -right-20 top-20 size-105 rounded-full bg-emerald-600/6 blur-[120px]" />
-          <div className="absolute -left-20 bottom-20 size-90 rounded-full bg-emerald-800/5 blur-[100px]" />
-        </div>
-
-        <PageHeroMobileBackdrop src="/images/pages/projects/hero-mobile.png" />
-
-        <SiteContainer className="relative flex min-h-0 flex-1 flex-col pt-4 pb-6 lg:py-10">
-          <div className="grid min-h-0 flex-1 items-start gap-4 sm:gap-5 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-12">
-            <SectionScrollReveal
-              direction="left"
-              when="mount"
-              className="relative z-10 min-w-0 max-w-4xl lg:max-w-none"
-            >
-              <div className="min-w-0 max-w-4xl lg:max-w-none">
-                <SectionBadge className="hidden sm:inline-flex">
-                  {badge}
-                </SectionBadge>
-
-                <div
-                  aria-hidden
-                  className="mt-6 hidden h-px w-12 bg-linear-to-r from-brand-accent to-transparent lg:block"
-                />
-
-                <h1 className="font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:mt-4 sm:text-4xl lg:mt-6 lg:text-[3rem]">
-                  {title}
-                </h1>
-
-                <p className="mt-4 max-w-2xl text-sm leading-[1.7] text-emerald-50/75 sm:mt-4 sm:max-w-3xl sm:text-base sm:leading-[1.75] md:max-w-4xl lg:mt-6 lg:max-w-xl lg:text-lg lg:leading-[1.85]">
-                  {subtitle}
-                </p>
-                <p className="mt-3 hidden max-w-2xl text-sm leading-[1.7] text-emerald-50/65 sm:block sm:mt-3 sm:max-w-3xl sm:text-[0.9375rem] sm:leading-[1.75] md:max-w-4xl lg:max-w-xl">
-                  {subtitleSecondary}
-                </p>
-              </div>
-            </SectionScrollReveal>
-
-            <SectionScrollReveal
-              direction="right"
-              when="mount"
-              delay={0.14}
-              className="min-w-0 min-h-0"
-            >
-              <ServicesPageHeroImage
-                alt={imageAlt}
-                src="/images/pages/projects/hero.png"
-                className="hidden lg:block"
-              />
-            </SectionScrollReveal>
-          </div>
-
-          <div className="mt-auto shrink-0 pt-4 lg:border-t lg:border-emerald-900/35 lg:pt-8">
-            <SectionScrollReveal direction="up" when="mount" delay={0.28}>
-              <HeroStatsCards stats={stats} />
-            </SectionScrollReveal>
-
-            <Link
-              href="#projects-showcase"
-              className="mt-4 flex flex-col items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-300/80 lg:mt-8"
-            >
-              <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em]">
-                {scrollLabel}
-              </span>
-              <LuChevronDown className="size-4 animate-bounce" aria-hidden />
-            </Link>
-          </div>
-        </SiteContainer>
-      </section>
-      <PageScrollAnchor id="projects-showcase" />
-    </>
+    <PageHeroListing
+      badge={badge}
+      title={title}
+      subtitle={subtitle}
+      subtitleSecondary={subtitleSecondary}
+      imageAlt={imageAlt}
+      imageSrc="/images/pages/projects/hero.png"
+      imageMobileSrc="/images/pages/projects/hero-mobile.png"
+      scrollHref="#projects-showcase"
+      scrollLabel={scrollLabel}
+      stats={stats}
+      className={className}
+    />
   );
 }

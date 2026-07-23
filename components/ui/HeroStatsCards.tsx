@@ -14,7 +14,7 @@ interface HeroStatsCardsProps {
   stats: HeroStat[];
 }
 
-const HINT_QUERY = "(min-width: 1024px) and (hover: hover)";
+const HINT_QUERY = "(min-width: 992px) and (hover: hover)";
 
 function StatCard({
   value,
@@ -22,11 +22,11 @@ function StatCard({
   labelShort,
 }: Pick<HeroStat, "value" | "label" | "labelShort">) {
   return (
-    <div className="w-full cursor-default rounded-2xl border border-emerald-900/45 bg-[#0a1612]/70 px-4 py-4 text-left backdrop-blur-sm transition-colors hover:border-emerald-700/60 hover:bg-[#0d1c17]/80 sm:px-5 sm:py-5">
-      <p className="font-(family-name:--font-heading) text-2xl font-bold text-white sm:text-3xl">
+    <div className="w-full cursor-default rounded-xl border border-emerald-900/30 bg-[#0a1612]/45 px-3 py-2.5 text-left transition-colors hover:border-emerald-700/45 hover:bg-[#0d1c17]/55 sm:px-5 sm:py-4">
+      <p className="font-(family-name:--font-heading) text-xl font-bold tracking-tight text-white sm:text-3xl 2xl:text-[2rem]">
         {value}
       </p>
-      <p className="mt-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-emerald-300/50 sm:text-[0.6875rem]">
+      <p className="mt-1 text-[0.5625rem] font-semibold uppercase tracking-[0.14em] text-emerald-300/45 sm:mt-1.5 sm:text-[0.6875rem] sm:tracking-[0.16em]">
         {labelShort ? (
           <>
             <span className="sm:hidden">{labelShort}</span>
@@ -111,7 +111,7 @@ function StatHint({
 
 export function HeroStatsCards({ stats }: HeroStatsCardsProps) {
   return (
-    <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+    <div className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4 2xl:gap-4">
       {stats.map((stat) => {
         const card = (
           <StatCard

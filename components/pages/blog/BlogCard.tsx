@@ -65,11 +65,6 @@ export function BlogCard({
         <div className="relative px-4 pb-4 pt-14">
           <div className="mb-2 flex items-center gap-3 text-[0.6875rem] font-medium text-white/70">
             <span className="inline-flex items-center gap-1">
-              <LuCalendar className="size-3 text-emerald-300/80" aria-hidden />
-              {date}
-            </span>
-            <span className="size-0.5 rounded-full bg-white/40" aria-hidden />
-            <span className="inline-flex items-center gap-1">
               <LuClock className="size-3 text-emerald-300/80" aria-hidden />
               {readingTimeLabel}
             </span>
@@ -98,7 +93,7 @@ export function BlogCard({
           isHorizontal ? "text-sm" : "text-xs",
         )}
       >
-        <span className="flex items-center gap-1.5">
+        <span className="hidden items-center gap-1.5 lg:flex">
           <LuCalendar
             className={cn(
               "text-brand-accent/70",
