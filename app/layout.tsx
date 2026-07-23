@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Black_Ops_One, Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-
-const blackOpsOne = Black_Ops_One({
-  variable: "--font-logo",
-  subsets: ["latin"],
-  weight: "400",
-});
 
 const inter = Inter({
   variable: "--font-sans",
@@ -36,7 +30,7 @@ export default function RootLayout({
   return (
     <html className="h-full" data-scroll-behavior="smooth">
       <body
-        className={`${blackOpsOne.variable} ${inter.variable} ${jetbrainsMono.variable} min-h-full flex flex-col antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} min-h-full flex flex-col antialiased`}
       >
         {children}
       </body>
