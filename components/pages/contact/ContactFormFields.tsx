@@ -51,6 +51,18 @@ interface ContactFormFieldsProps {
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
+type FieldKey =
+  | "name"
+  | "email"
+  | "service"
+  | "servicePackage"
+  | "serviceTier"
+  | "budget";
+
+type FieldErrors = Partial<Record<FieldKey, boolean>>;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const inputInner =
   "w-full rounded-[9px] border-0 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 outline-none focus:ring-0";
 
@@ -64,6 +76,9 @@ export function ContactFormFields({
 }: ContactFormFieldsProps) {
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [selectedService, setSelectedService] = useState("");
   const [selectedPackage, setSelectedPackage] = useState("");
   const [selectedTier, setSelectedTier] = useState("");
@@ -83,8 +98,38 @@ export function ContactFormFields({
   )!;
   const packageOptions = [...basePackageOptions, unknownOption];
 
+  function clearFieldError(key: FieldKey) {
+    setFieldErrors((prev) => {
+      if (!prev[key]) return prev;
+      const next = { ...prev };
+      delete next[key];
+      return next;
+    });
+  }
+
+  function validateFields(values: {
+    name: string;
+    email: string;
+    service: string;
+    servicePackage: string;
+    serviceTier: string;
+    budget: string;
+  }): FieldErrors {
+    const errors: FieldErrors = {};
+    if (values.name.trim().length < 2) errors.name = true;
+    if (!EMAIL_RE.test(values.email.trim())) errors.email = true;
+    if (!values.service) errors.service = true;
+    if (!values.servicePackage) errors.servicePackage = true;
+    if (!values.serviceTier) errors.serviceTier = true;
+    if (!values.budget) errors.budget = true;
+    return errors;
+  }
+
   function resetToIdle() {
     setFormState("idle");
+    setFieldErrors({});
+    setName("");
+    setEmail("");
     setSelectedService("");
     setSelectedPackage("");
     setSelectedTier("");
@@ -101,13 +146,35 @@ export function ContactFormFields({
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setFormState("submitting");
     setErrorMsg("");
 
     const form = e.currentTarget;
+    const content =
+      (
+        form.elements.namedItem("content") as HTMLTextAreaElement
+      ).value.trim() || "";
+
+    const errors = validateFields({
+      name,
+      email,
+      service: selectedService,
+      servicePackage: selectedPackage,
+      serviceTier: selectedTier,
+      budget: selectedBudget,
+    });
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      setFormState("idle");
+      return;
+    }
+
+    setFieldErrors({});
+    setFormState("submitting");
+
     const data = {
-      name: (form.elements.namedItem("name") as HTMLInputElement).value,
-      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      name: name.trim(),
+      email: email.trim(),
       phone: phoneNumber.trim()
         ? `${phoneCountryCode} ${phoneNumber.trim()}`
         : undefined,
@@ -115,10 +182,7 @@ export function ContactFormFields({
       servicePackage: selectedPackage,
       serviceTier: selectedTier,
       budget: selectedBudget,
-      content:
-        (
-          form.elements.namedItem("content") as HTMLTextAreaElement
-        ).value.trim() || "",
+      content,
     };
 
     try {
@@ -187,7 +251,7 @@ export function ContactFormFields({
               </span>
             </span>
           </label>
-          <ContactFormFieldShell>
+          <ContactFormFieldShell invalid={fieldErrors.name}>
             <input
               id="cf-name"
               name="name"
@@ -196,6 +260,12 @@ export function ContactFormFields({
               minLength={2}
               maxLength={100}
               autoComplete="name"
+              value={name}
+              aria-invalid={fieldErrors.name || undefined}
+              onChange={(e) => {
+                setName(e.target.value);
+                clearFieldError("name");
+              }}
               placeholder={labels.fieldNamePlaceholder}
               className={inputInner}
             />
@@ -210,13 +280,19 @@ export function ContactFormFields({
               </span>
             </span>
           </label>
-          <ContactFormFieldShell>
+          <ContactFormFieldShell invalid={fieldErrors.email}>
             <input
               id="cf-email"
               name="email"
               type="email"
               required
               autoComplete="email"
+              value={email}
+              aria-invalid={fieldErrors.email || undefined}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                clearFieldError("email");
+              }}
               placeholder={labels.fieldEmailPlaceholder}
               className={inputInner}
             />
@@ -256,9 +332,12 @@ export function ContactFormFields({
             placeholder={labels.fieldServicePlaceholder}
             options={labels.serviceOptions}
             value={selectedService}
+            invalid={fieldErrors.service}
             onChange={(value) => {
               setSelectedService(value);
               setSelectedPackage("");
+              clearFieldError("service");
+              clearFieldError("servicePackage");
             }}
           />
         </div>
@@ -278,7 +357,11 @@ export function ContactFormFields({
             placeholder={labels.fieldPackagePlaceholder}
             options={packageOptions}
             value={selectedPackage}
-            onChange={setSelectedPackage}
+            invalid={fieldErrors.servicePackage}
+            onChange={(value) => {
+              setSelectedPackage(value);
+              clearFieldError("servicePackage");
+            }}
           />
         </div>
         <div>
@@ -297,7 +380,11 @@ export function ContactFormFields({
             placeholder={labels.fieldTierPlaceholder}
             options={labels.tierOptions}
             value={selectedTier}
-            onChange={setSelectedTier}
+            invalid={fieldErrors.serviceTier}
+            onChange={(value) => {
+              setSelectedTier(value);
+              clearFieldError("serviceTier");
+            }}
           />
         </div>
         <div>
@@ -316,7 +403,11 @@ export function ContactFormFields({
             placeholder={labels.fieldBudgetPlaceholder}
             options={labels.budgetOptions}
             value={selectedBudget}
-            onChange={setSelectedBudget}
+            invalid={fieldErrors.budget}
+            onChange={(value) => {
+              setSelectedBudget(value);
+              clearFieldError("budget");
+            }}
           />
         </div>
       </div>
@@ -332,7 +423,13 @@ export function ContactFormFields({
             maxLength={2000}
             rows={4}
             placeholder={labels.fieldMessagePlaceholder}
-            className={cn(inputInner, "resize-none leading-relaxed")}
+            className={cn(
+              inputInner,
+              "resize-none leading-relaxed",
+              "[scrollbar-color:var(--brand-accent)_rgb(var(--brand-accent-rgb)/0.1)] scrollbar-thin",
+              "[&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-brand-accent/10",
+              "[&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-brand-accent",
+            )}
           />
         </ContactFormFieldShell>
       </div>

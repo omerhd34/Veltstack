@@ -18,6 +18,7 @@ interface ContactFormSelectProps {
   options: readonly ContactSelectOption[];
   value: string;
   onChange: (value: string) => void;
+  invalid?: boolean;
   className?: string;
 }
 
@@ -32,6 +33,7 @@ export function ContactFormSelect({
   options,
   value,
   onChange,
+  invalid,
   className,
 }: ContactFormSelectProps) {
   const [open, setOpen] = useState(false);
@@ -70,12 +72,13 @@ export function ContactFormSelect({
     <div ref={containerRef} className={cn("relative", className)}>
       <input type="hidden" name={name} value={value} required={required} />
 
-      <ContactFormFieldShell active={open}>
+      <ContactFormFieldShell active={open} invalid={invalid}>
         <button
           type="button"
           id={id}
           aria-haspopup="listbox"
           aria-expanded={open}
+          aria-invalid={invalid || undefined}
           onClick={() => setOpen((prev) => !prev)}
           className={cn(
             "flex w-full items-center justify-between rounded-[9px] border-0 bg-background px-4 py-3 text-sm outline-none focus-visible:ring-0",

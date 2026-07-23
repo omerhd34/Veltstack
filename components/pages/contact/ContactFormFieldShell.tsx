@@ -7,23 +7,37 @@ interface ContactFormFieldShellProps {
   children: React.ReactNode;
   className?: string;
   active?: boolean;
+  invalid?: boolean;
 }
 
 export function ContactFormFieldShell({
   children,
   className,
   active,
+  invalid,
 }: ContactFormFieldShellProps) {
   return (
     <div
       className={cn(
         "group relative overflow-visible rounded-xl",
-        "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
+        "box-border border-[3px] border-solid",
+        invalid
+          ? "border-destructive"
+          : "border-trace-hover-fallback border-transparent",
         className,
       )}
       data-active={active ? "true" : undefined}
+      data-invalid={invalid ? "true" : undefined}
     >
-      <BorderTrace loop trigger="focus" radius={12} durationSec={4} active={active} />
+      {!invalid && (
+        <BorderTrace
+          loop
+          trigger="focus"
+          radius={12}
+          durationSec={4}
+          active={active}
+        />
+      )}
       {children}
     </div>
   );
