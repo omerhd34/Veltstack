@@ -88,7 +88,7 @@ export function ProjectsPageHero({
               <ServicesPageHeroImage
                 alt={imageAlt}
                 src="/images/pages/projects/hero.png"
-                className="hidden sm:block"
+                className="hidden lg:block"
               />
             </SectionScrollReveal>
           </div>

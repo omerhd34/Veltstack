@@ -92,7 +92,7 @@ export function ServiceHero({
               <ServicesPageHeroImage
                 alt={imageAlt}
                 src={imageSrc}
-                className="hidden sm:block"
+                className="hidden lg:block"
                 frameClassName="h-[180px] sm:h-[320px] lg:h-[420px]"
               />
             </SectionScrollReveal>

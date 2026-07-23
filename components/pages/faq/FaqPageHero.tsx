@@ -97,7 +97,7 @@ export async function FaqPageHero({
             <ServicesPageHeroImage
               src="/images/pages/faq/hero.png"
               alt={imageAlt}
-              className="hidden sm:block"
+              className="hidden lg:block"
             />
           </SectionScrollReveal>
         </div>

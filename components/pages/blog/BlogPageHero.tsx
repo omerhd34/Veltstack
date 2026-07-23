@@ -97,7 +97,7 @@ export async function BlogPageHero({
             <ServicesPageHeroImage
               src="/images/pages/blog/hero.png"
               alt={imageAlt}
-              className="hidden sm:block"
+              className="hidden lg:block"
             />
           </SectionScrollReveal>
         </div>

@@ -22,7 +22,7 @@ export function HeroStatsCards({ stats }: HeroStatsCardsProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+    <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
       {stats.map((stat, index) => {
         const card = (
           <div className="w-full cursor-default rounded-2xl border border-emerald-900/45 bg-[#0a1612]/70 px-4 py-4 text-left backdrop-blur-sm transition-colors hover:border-emerald-700/60 hover:bg-[#0d1c17]/80 sm:px-5 sm:py-5">

@@ -9,7 +9,7 @@ export function PageHeroMobileBackdrop({ src }: PageHeroMobileBackdropProps) {
     <ServicesPageHeroImage
       alt=""
       src={src}
-      className="pointer-events-none absolute inset-0 h-full max-w-none opacity-70 sm:hidden"
+      className="pointer-events-none absolute inset-0 h-full max-w-none opacity-70 lg:hidden"
       frameClassName="h-full rounded-none border-0 shadow-none"
     />
   );
