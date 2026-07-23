@@ -80,8 +80,8 @@ export function ContactForm({
   };
 
   const formCard = (
-    <div className="h-full rounded-2xl border border-border/60 bg-card p-6 shadow-[0_2px_16px_rgb(0_0_0/0.04)] sm:p-8">
-      <ContactFormFields labels={formLabels} />
+    <div className="flex h-full flex-col rounded-2xl border border-border/60 bg-card p-6 shadow-[0_2px_16px_rgb(0_0_0/0.04)] sm:p-8">
+      <ContactFormFields labels={formLabels} className="h-full" />
     </div>
   );
 

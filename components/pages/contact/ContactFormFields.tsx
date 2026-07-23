@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LuCheck, LuLoader, LuRotateCcw } from "react-icons/lu";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
@@ -83,6 +83,22 @@ export function ContactFormFields({
   )!;
   const packageOptions = [...basePackageOptions, unknownOption];
 
+  function resetToIdle() {
+    setFormState("idle");
+    setSelectedService("");
+    setSelectedPackage("");
+    setSelectedTier("");
+    setSelectedBudget("");
+    setPhoneCountryCode(defaultPhoneCountryCode);
+    setPhoneNumber("");
+  }
+
+  useEffect(() => {
+    if (formState !== "success") return;
+    const timer = window.setTimeout(resetToIdle, 10_000);
+    return () => window.clearTimeout(timer);
+  }, [formState]);
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setFormState("submitting");
@@ -128,7 +144,7 @@ export function ContactFormFields({
     return (
       <div
         className={cn(
-          "flex flex-col items-center justify-center gap-5 rounded-2xl border border-brand-accent/25 bg-brand-accent/5 px-8 py-16 text-center",
+          "flex h-full min-h-0 flex-col items-center justify-center gap-5 rounded-2xl border border-brand-accent/25 bg-brand-accent/5 px-8 py-16 text-center",
           className,
         )}
       >
@@ -145,15 +161,7 @@ export function ContactFormFields({
         </div>
         <button
           type="button"
-          onClick={() => {
-            setFormState("idle");
-            setSelectedService("");
-            setSelectedPackage("");
-            setSelectedTier("");
-            setSelectedBudget("");
-            setPhoneCountryCode(defaultPhoneCountryCode);
-            setPhoneNumber("");
-          }}
+          onClick={resetToIdle}
           className="mt-2 inline-flex items-center gap-2 rounded-full border border-border/70 bg-background px-5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand-accent/40 hover:text-brand-accent"
         >
           <LuRotateCcw className="size-3.5" aria-hidden />
@@ -353,7 +361,7 @@ export function ContactFormFields({
         <span
           aria-hidden
           className={cn(
-            "pointer-events-none absolute inset-[-3px] rounded-full bg-brand-accent",
+            "pointer-events-none absolute -inset-0.75 rounded-full bg-brand-accent",
             "shadow-[0_4px_14px_rgb(58_107_82/0.25)] transition-all duration-1000 ease-in-out motion-reduce:transition-none",
             "group-hover:bg-[#325a45] group-hover:shadow-[0_6px_18px_rgb(58_107_82/0.3)]",
             "group-disabled:shadow-none",
