@@ -61,59 +61,81 @@ export function WorkflowTimeline({
         </p>
       </div>
 
-      <ol className="relative mt-14 grid gap-10 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-6">
+      <ol className="relative mt-14 lg:mt-16 lg:grid lg:grid-cols-4 lg:gap-6">
         {showConnector ? (
           <div
             aria-hidden
-            className="pointer-events-none absolute top-5 right-[calc(25%-16rem)] left-5 hidden h-px bg-border lg:block"
+            className="pointer-events-none absolute top-5 right-[calc((100%-4.5rem)/4-1.25rem)] left-5 hidden h-px bg-border lg:block"
           />
         ) : null}
 
-        {steps.map((item) => (
-          <li
-            key={item.step}
-            className="group relative flex h-full flex-col items-center text-center lg:items-start lg:text-left"
-          >
-            <span
-              aria-hidden
-              className={cn(
-                "relative z-10 flex size-10 shrink-0 items-center justify-center overflow-visible rounded-full",
-                "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
-                slowTransition,
-              )}
+        {steps.map((item, index) => {
+          const isLast = index === steps.length - 1;
+
+          return (
+            <li
+              key={item.step}
+              className="group relative flex gap-4 lg:flex-col lg:gap-0"
             >
+              {showConnector && !isLast ? (
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute top-10 bottom-0 left-5 w-px -translate-x-1/2 bg-border lg:hidden"
+                />
+              ) : null}
+
               <span
                 aria-hidden
                 className={cn(
-                  "pointer-events-none absolute inset-[-3px] rounded-full bg-background",
-                  "group-hover:bg-brand-accent group-hover:shadow-[0_4px_14px_rgb(58_107_82/0.28)]",
-                  slowTransition,
-                )}
-              />
-              <BorderTrace loop trigger="hover" durationSec={2.5} radius={20} />
-              <span
-                className={cn(
-                  "relative z-10 text-sm font-bold text-muted-foreground group-hover:text-white",
+                  "relative z-10 flex size-10 shrink-0 items-center justify-center overflow-visible rounded-full",
+                  "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
                   slowTransition,
                 )}
               >
-                {item.step}
+                <span
+                  aria-hidden
+                  className={cn(
+                    "pointer-events-none absolute -inset-0.75 rounded-full bg-background",
+                    "group-hover:bg-brand-accent group-hover:shadow-[0_4px_14px_rgb(58_107_82/0.28)]",
+                    slowTransition,
+                  )}
+                />
+                <BorderTrace
+                  loop
+                  trigger="hover"
+                  durationSec={2.5}
+                  radius={20}
+                />
+                <span
+                  className={cn(
+                    "relative z-10 text-sm font-bold text-muted-foreground group-hover:text-white",
+                    slowTransition,
+                  )}
+                >
+                  {item.step}
+                </span>
               </span>
-            </span>
 
-            <div className="mt-5 flex flex-1 flex-col">
-              <h3 className="text-base font-semibold text-foreground">
-                {item.title}
-              </h3>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
-                {item.desc}
-              </p>
-            </div>
-            <span className="mt-4 inline-flex rounded-full border border-border/70 bg-muted/30 px-3 py-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-              {item.timing}
-            </span>
-          </li>
-        ))}
+              <div
+                className={cn(
+                  "flex min-w-0 flex-1 flex-col",
+                  isLast ? "pb-0" : "pb-10",
+                  "lg:mt-5 lg:pb-0",
+                )}
+              >
+                <h3 className="text-base font-semibold text-foreground">
+                  {item.title}
+                </h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
+                  {item.desc}
+                </p>
+                <span className="mt-4 inline-flex w-fit rounded-full border border-border/70 bg-muted/30 px-3 py-1 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+                  {item.timing}
+                </span>
+              </div>
+            </li>
+          );
+        })}
       </ol>
     </div>
   );
