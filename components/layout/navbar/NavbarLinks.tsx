@@ -22,6 +22,8 @@ function MobileNavIcon({ icon: Icon }: { icon: IconType }) {
   );
 }
 
+const mobileNestedListClass = "mobile-nav-tree";
+
 interface NavbarLinksProps {
   className?: string;
   orientation?: "horizontal" | "vertical";
@@ -36,9 +38,17 @@ export function NavbarLinks({
   const tNav = useTranslations("nav");
   const locale = useLocale() as "tr" | "en";
   const pathname = usePathname();
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [projectsOpen, setProjectsOpen] = useState(false);
-  const [blogOpen, setBlogOpen] = useState(false);
+  const [openSection, setOpenSection] = useState<
+    "services" | "projects" | "blog" | null
+  >(null);
+
+  const toggleSection = (section: "services" | "projects" | "blog") => {
+    setOpenSection((current) => (current === section ? null : section));
+  };
+
+  const servicesOpen = openSection === "services";
+  const projectsOpen = openSection === "projects";
+  const blogOpen = openSection === "blog";
   const navBlogPosts = getNavBlogPosts(locale);
 
   const serviceLabels: Record<NavServiceKey, string> = {
@@ -103,7 +113,7 @@ export function NavbarLinks({
             </Link>
             <button
               type="button"
-              onClick={() => setServicesOpen((open) => !open)}
+              onClick={() => toggleSection("services")}
               className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-brand-accent/10 hover:text-foreground"
               aria-expanded={servicesOpen}
               aria-label={tNav("services")}
@@ -116,7 +126,7 @@ export function NavbarLinks({
             </button>
           </div>
           {servicesOpen && (
-            <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
+            <ul className={mobileNestedListClass}>
               {serviceItems.map((item) => {
                 const navKey = item.navDescKey.replace(
                   /Desc$/,
@@ -162,7 +172,7 @@ export function NavbarLinks({
             </Link>
             <button
               type="button"
-              onClick={() => setProjectsOpen((open) => !open)}
+              onClick={() => toggleSection("projects")}
               className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-brand-accent/10 hover:text-foreground"
               aria-expanded={projectsOpen}
               aria-label={tNav("projects")}
@@ -175,7 +185,7 @@ export function NavbarLinks({
             </button>
           </div>
           {projectsOpen && (
-            <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
+            <ul className={mobileNestedListClass}>
               {projectItems.map((item) => {
                 const navKey = item.navDescKey.replace(
                   /Desc$/,
@@ -234,7 +244,7 @@ export function NavbarLinks({
             </Link>
             <button
               type="button"
-              onClick={() => setBlogOpen((open) => !open)}
+              onClick={() => toggleSection("blog")}
               className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-brand-accent/10 hover:text-foreground"
               aria-expanded={blogOpen}
               aria-label={tNav("blog")}
@@ -247,7 +257,7 @@ export function NavbarLinks({
             </button>
           </div>
           {blogOpen && (
-            <ul className="mt-1.5 ml-2 flex flex-col gap-1 border-l-2 border-border/80 pl-3">
+            <ul className={mobileNestedListClass}>
               {navBlogPosts.map((post) => (
                 <li key={post.slug}>
                   <Link
