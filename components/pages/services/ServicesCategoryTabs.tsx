@@ -79,7 +79,7 @@ export function ServicesCategoryTabs({
     <div
       ref={containerRef}
       className={cn(
-        "relative max-w-full overflow-x-auto overscroll-x-contain scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none lg:overflow-visible [&::-webkit-scrollbar]:hidden",
+        "relative max-w-full overflow-x-auto overscroll-x-contain scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden",
         embedded && "px-2 py-2 sm:px-3",
         !embedded &&
           "rounded-[calc(1.75rem-1px)] bg-[#071510]/95 backdrop-blur-md",

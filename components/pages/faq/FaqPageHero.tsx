@@ -38,20 +38,13 @@ export async function FaqPageHero({
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgb(58_107_82/0.18),transparent)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgb(58_107_82/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(58_107_82/0.04)_1px,transparent_1px)] bg-size-[56px_56px] mask-[radial-gradient(ellipse_80%_70%_at_50%_40%,black,transparent)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-20 top-20 size-105 rounded-full bg-emerald-600/6 blur-[120px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-20 bottom-20 size-90 rounded-full bg-emerald-800/5 blur-[100px]"
-      />
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_0%,rgb(58_107_82/0.18),transparent)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgb(58_107_82/0.04)_1px,transparent_1px),linear-gradient(90deg,rgb(58_107_82/0.04)_1px,transparent_1px)] bg-size-[56px_56px] mask-[radial-gradient(ellipse_80%_70%_at_50%_40%,black,transparent)]" />
+        <div className="absolute -right-20 top-20 size-105 rounded-full bg-emerald-600/6 blur-[120px]" />
+        <div className="absolute -left-20 bottom-20 size-90 rounded-full bg-emerald-800/5 blur-[100px]" />
+      </div>
 
       <PageHeroMobileBackdrop src="/images/pages/faq/hero-mobile.png" />
 

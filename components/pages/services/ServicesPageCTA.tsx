@@ -38,20 +38,13 @@ export async function ServicesPageCTA({
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_100%_0%,rgb(58_107_82/0.08),transparent_55%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_0%_100%,rgb(58_107_82/0.07),transparent_50%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-20 top-1/3 size-80 rounded-full bg-brand-accent/5 blur-3xl"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-16 bottom-1/4 size-72 rounded-full bg-brand-accent/6 blur-3xl"
-      />
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_100%_0%,rgb(58_107_82/0.08),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_45%_at_0%_100%,rgb(58_107_82/0.07),transparent_50%)]" />
+        <div className="absolute -left-20 top-1/3 size-80 rounded-full bg-brand-accent/5 blur-3xl" />
+        <div className="absolute -right-16 bottom-1/4 size-72 rounded-full bg-brand-accent/6 blur-3xl" />
+      </div>
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-accent/25 to-transparent"
@@ -62,7 +55,7 @@ export async function ServicesPageCTA({
           <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-[#0A0A0F] px-6 py-14 shadow-[0_24px_80px_rgb(58_107_82/0.12)] md:px-14 md:py-20">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-0 size-[480px] -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
+            className="pointer-events-none absolute left-1/2 top-0 size-120 -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
           />
           <div
             aria-hidden
