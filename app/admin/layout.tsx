@@ -1,14 +1,21 @@
-export default function AdminLayout({
+import type { Metadata } from "next";
+import { AdminProviders } from "@/components/admin/AdminProviders";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Admin",
+    template: "%s | Veltstack Admin",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
+
+export default function AdminRootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div className="flex min-h-screen bg-muted/30">
-      <aside className="hidden w-64 border-r border-border bg-card p-6 md:block">
-        <p className="font-bold">Veltstack Admin</p>
-      </aside>
-      <div className="flex-1 p-6">{children}</div>
-    </div>
-  );
+  return <AdminProviders>{children}</AdminProviders>;
 }
