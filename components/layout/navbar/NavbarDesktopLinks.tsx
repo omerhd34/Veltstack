@@ -76,11 +76,11 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
 
   return (
     <nav
-      className={cn("items-center gap-1 xl:gap-1.5", className)}
+      className={cn("items-center gap-0.5 xl:gap-1", className)}
       aria-label="Ana navigasyon"
     >
       <div
-        className="relative h-full"
+        className="relative"
         onMouseEnter={openServicesMenu}
         onMouseLeave={scheduleCloseServicesMenu}
         onFocusCapture={openServicesMenu}
@@ -99,7 +99,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
       </div>
 
       <div
-        className="relative h-full"
+        className="relative"
         onMouseEnter={openProjectsMenu}
         onMouseLeave={scheduleCloseProjectsMenu}
         onFocusCapture={openProjectsMenu}
@@ -118,7 +118,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
       </div>
 
       <div
-        className="relative h-full"
+        className="relative"
         onMouseEnter={openBlogMenu}
         onMouseLeave={scheduleCloseBlogMenu}
         onFocusCapture={openBlogMenu}
@@ -135,7 +135,7 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
       </div>
 
       <div
-        className="relative h-full"
+        className="relative"
         onMouseEnter={openFaqMenu}
         onMouseLeave={scheduleCloseFaqMenu}
         onFocusCapture={openFaqMenu}

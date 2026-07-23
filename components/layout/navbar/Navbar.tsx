@@ -105,7 +105,7 @@ export function Navbar({ className }: NavbarProps) {
       <SiteContainer className="relative flex min-h-18 items-center justify-between gap-3 sm:gap-4">
         <Logo variant="navbar" className="shrink-0" />
 
-        <NavbarDesktopLinks className="absolute left-1/2 hidden -translate-x-1/2 xl:flex" />
+        <NavbarDesktopLinks className="absolute top-1/2 left-1/2 hidden -translate-x-1/2 -translate-y-1/2 xl:flex" />
 
         <div className="ml-auto flex shrink-0 items-center gap-1.5 sm:gap-2 md:gap-3">
           <NavbarLangSwitcher className="hidden xl:inline-flex" />

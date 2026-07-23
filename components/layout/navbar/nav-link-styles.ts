@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { cn } from "@/lib/utils";
 
 export function navItemClass(
@@ -6,10 +7,10 @@ export function navItemClass(
 ) {
   if (variant === "desktop") {
     return cn(
-      "group relative inline-flex h-12 items-center gap-1 px-4 text-base font-semibold tracking-[-0.01em] transition-colors duration-200 xl:max-[1300px]:px-3",
+      "group relative inline-flex h-10 items-center gap-1 rounded-t-lg border-b-2 border-transparent px-4 text-base font-semibold tracking-[-0.01em] transition-[color,background-color,border-color] duration-200 xl:max-[1300px]:px-3",
       active
-        ? "text-foreground group-data-[overlay=true]/header:text-white"
-        : "text-foreground/70 hover:text-foreground group-data-[overlay=true]/header:text-white/75 group-data-[overlay=true]/header:hover:text-white",
+        ? "border-brand-accent bg-brand-accent/10 text-brand-accent group-data-[overlay=true]/header:border-white group-data-[overlay=true]/header:bg-white/15 group-data-[overlay=true]/header:text-white"
+        : "text-foreground/70 hover:border-brand-accent hover:bg-brand-accent/10 hover:text-brand-accent group-data-[overlay=true]/header:text-white/75 group-data-[overlay=true]/header:hover:border-white group-data-[overlay=true]/header:hover:bg-white/15 group-data-[overlay=true]/header:hover:text-white",
     );
   }
 
@@ -28,14 +29,8 @@ export function navItemClass(
   );
 }
 
-export function navItemLabelClass(active: boolean) {
-  return cn(
-    "relative inline-flex h-full items-center",
-    "after:absolute after:bottom-2 after:left-0 after:right-0 after:h-0.5 after:rounded-full after:bg-(--border-trace-stroke) after:transition-opacity after:duration-200",
-    active
-      ? "after:opacity-100"
-      : "after:opacity-0 group-hover:after:opacity-100",
-  );
+export function navItemLabelClass(_active: boolean) {
+  return "relative inline-flex items-center";
 }
 
 export function navItemCaretClass(
@@ -52,9 +47,9 @@ export function navItemCaretClass(
   }
 
   return cn(
-    "size-3.5 shrink-0 transition-opacity duration-200",
+    "size-3.5 shrink-0 transition-[color,opacity] duration-200",
     active
-      ? "opacity-80 text-foreground group-data-[overlay=true]/header:text-white"
-      : "opacity-50 text-foreground/70 group-hover:opacity-80 group-data-[overlay=true]/header:text-white/60 group-data-[overlay=true]/header:group-hover:text-white/90",
+      ? "opacity-100 text-brand-accent group-data-[overlay=true]/header:text-white"
+      : "opacity-50 text-foreground/70 group-hover:opacity-100 group-hover:text-brand-accent group-data-[overlay=true]/header:text-white/60 group-data-[overlay=true]/header:group-hover:text-white",
   );
 }
