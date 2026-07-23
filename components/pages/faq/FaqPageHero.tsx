@@ -75,7 +75,7 @@ export async function FaqPageHero({
               <p className="mt-4 max-w-xl text-sm leading-[1.85] text-emerald-50/75 sm:mt-6 sm:text-base lg:text-lg">
                 {subtitle}
               </p>
-              <p className="mt-3 hidden max-w-xl text-sm leading-[1.85] text-emerald-50/45 sm:block sm:text-[0.9375rem]">
+              <p className="mt-3 hidden max-w-xl text-sm leading-[1.85] text-emerald-50/65 sm:block sm:text-[0.9375rem]">
                 {subtitleSecondary}
               </p>
             </div>
