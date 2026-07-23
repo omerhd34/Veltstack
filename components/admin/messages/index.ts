@@ -1,3 +1,2 @@
-export { MessagesTable } from "./MessagesTable"
-export { MessagesTableRow } from "./MessagesTableRow"
-export { MessageDetail } from "./MessageDetail"
+export { MessagesInbox } from "./MessagesInbox";
+export type { AdminMessageItem } from "./types";
