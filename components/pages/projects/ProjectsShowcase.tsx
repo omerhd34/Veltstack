@@ -14,7 +14,7 @@ import { ProjectShowcaseCard } from "./ProjectShowcaseCard";
 const featuredProjectSlugs = new Set<ProjectSlug>([
   "iqfinansai",
   "yazici-ticaret",
-  "fablessi",
+  "gardossi",
 ]);
 
 interface ProjectsShowcaseProps {
