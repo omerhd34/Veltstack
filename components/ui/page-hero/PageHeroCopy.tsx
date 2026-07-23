@@ -20,7 +20,6 @@ interface PageHeroCopyProps {
   badgeVariant?: BadgeVariant;
   badgeAlwaysVisible?: boolean;
   accentAlwaysVisible?: boolean;
-  secondaryAlwaysVisible?: boolean;
   secondaryMuted?: boolean;
   leading?: ReactNode;
   trailing?: ReactNode;
@@ -35,7 +34,6 @@ export function PageHeroCopy({
   badgeVariant,
   badgeAlwaysVisible = false,
   accentAlwaysVisible = false,
-  secondaryAlwaysVisible = false,
   secondaryMuted = false,
   leading,
   trailing,
@@ -89,7 +87,6 @@ export function PageHeroCopy({
             className={cn(
               "mt-3 max-w-2xl text-sm leading-[1.75] sm:max-w-3xl sm:text-[0.9375rem] sm:leading-[1.8] lg:max-w-xl",
               secondaryMuted ? "text-emerald-50/45" : "text-emerald-50/65",
-              !secondaryAlwaysVisible && "hidden sm:block",
             )}
           >
             {subtitleSecondary}
