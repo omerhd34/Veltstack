@@ -32,7 +32,7 @@ export function ServicesPageHero({
     <>
       <section
         data-page-hero
-        className={`relative flex min-h-dvh flex-col overflow-hidden bg-[#050f0c] pt-18 text-white ${className ?? ""}`}
+        className={`relative flex h-dvh max-h-dvh flex-col overflow-hidden bg-[#050f0c] pt-18 text-white ${className ?? ""}`}
       >
         <div
           aria-hidden
@@ -45,7 +45,7 @@ export function ServicesPageHero({
 
         <PageHeroMobileBackdrop src="/images/pages/services/hero-mobile.png" />
 
-        <SiteContainer className="relative flex h-[calc(100dvh-4.5rem)] flex-col pt-4 pb-5 sm:h-auto sm:min-h-[calc(100dvh-4.5rem)] sm:py-10">
+        <SiteContainer className="relative flex min-h-0 flex-1 flex-col pt-4 pb-6 lg:py-10">
           <div className="grid min-h-0 flex-1 items-start gap-4 overflow-hidden sm:gap-6 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-12">
             <SectionScrollReveal
               direction="left"
@@ -89,14 +89,14 @@ export function ServicesPageHero({
             </SectionScrollReveal>
           </div>
 
-          <div className="mt-auto shrink-0 border-t border-emerald-900/35 pt-4 sm:pt-8">
+          <div className="mt-auto shrink-0 pt-4 lg:border-t lg:border-emerald-900/35 lg:pt-8">
             <SectionScrollReveal direction="up" when="mount" delay={0.28}>
               <HeroStatsCards stats={stats} />
             </SectionScrollReveal>
 
             <a
               href="#services-packages"
-              className="mt-4 flex flex-col items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-300/80 sm:mt-8"
+              className="mt-4 flex flex-col items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-300/80 lg:mt-8"
             >
               <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em]">
                 {scrollLabel}

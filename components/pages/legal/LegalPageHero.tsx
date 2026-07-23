@@ -40,11 +40,11 @@ export async function LegalPageHero({
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-16 right-[12%] size-[340px] rounded-full bg-emerald-600/8 blur-[110px]"
+        className="pointer-events-none absolute top-16 right-[12%] size-85 rounded-full bg-emerald-600/8 blur-[110px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-24 bottom-0 size-[300px] rounded-full bg-emerald-800/6 blur-[100px]"
+        className="pointer-events-none absolute -left-24 bottom-0 size-75 rounded-full bg-emerald-800/6 blur-[100px]"
       />
 
       <SiteContainer className="relative flex min-h-[calc(100dvh-4.5rem)] flex-col justify-center pb-24 pt-8 sm:pb-28 sm:pt-10">
