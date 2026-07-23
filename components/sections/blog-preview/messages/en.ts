@@ -10,6 +10,6 @@ export const blogPreviewHomeEn = {
   blogMoreButton: "View All",
   blogSliderPrev: "Previous article",
   blogSliderNext: "Next article",
-  readingTime: "{minutes} min read",
+  readingTime: "{minutes} min",
   readMore: "Read more",
 } as const;

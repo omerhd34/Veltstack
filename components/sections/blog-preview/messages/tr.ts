@@ -10,6 +10,6 @@ export const blogPreviewHomeTr = {
   blogMoreButton: "Diğerleri",
   blogSliderPrev: "Önceki yazı",
   blogSliderNext: "Sonraki yazı",
-  readingTime: "{minutes} dk okuma",
+  readingTime: "{minutes} dk",
   readMore: "Devamını oku",
 } as const;

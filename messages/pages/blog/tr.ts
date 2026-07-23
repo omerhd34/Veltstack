@@ -35,7 +35,7 @@ export const blogPageTr = {
   clearSearch: "Aramayı temizle",
   allCategories: "Tümü",
   readMore: "Devamını oku",
-  readingTime: "{minutes} dk okuma",
+  readingTime: "{minutes} dk",
   writtenByLabel: "Yazan",
   noResults: "Arama kriterlerinize uygun blog yazısı bulunamadı.",
   noResultsSub: "Farklı bir anahtar kelime veya kategori deneyin.",

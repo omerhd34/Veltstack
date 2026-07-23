@@ -35,7 +35,7 @@ export const blogPageEn = {
   clearSearch: "Clear search",
   allCategories: "All",
   readMore: "Read more",
-  readingTime: "{minutes} min read",
+  readingTime: "{minutes} min",
   writtenByLabel: "Written by",
   noResults: "No articles found matching your search criteria.",
   noResultsSub: "Try a different keyword or category.",
