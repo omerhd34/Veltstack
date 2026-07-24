@@ -483,7 +483,8 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
     return (
       <div
         className={cn(
-          "relative overflow-hidden bg-transparent text-foreground",
+          "relative bg-transparent text-foreground",
+          isDragMode ? "overflow-x-clip" : "overflow-hidden",
           className,
         )}
         ref={ref}
@@ -556,6 +557,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                       className={cn(
                         "overflow-x-auto overflow-y-hidden",
                         "scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
+                        isDragMode && "pt-2",
                         isDragMode && !isLgViewport && "cursor-grab",
                         "snap-x snap-mandatory",
                         navOutside ||
