@@ -7,8 +7,15 @@ import {
   validateProjectSlug,
 } from "@/components/pages/project-detail/ProjectDetailView";
 import { BreadcrumbSchema } from "@/components/seo";
-import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import {
+  SITE_URL,
+  absoluteUrl,
+  buildPageAlternates,
+  buildSocialMetadata,
+  localizedPath,
+} from "@/lib/seo";
+
 interface ProjectDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
@@ -27,21 +34,16 @@ export async function generateMetadata({
   if (!validateProjectSlug(slug)) return {};
 
   const t = await getTranslations({ locale, namespace: "projectDetails" });
-  const canonical = `https://www.veltstack.com${getPathname({
-    locale: locale as Locale,
-    href: `/projeler/${slug}`,
-  })}`;
+  const loc = locale as Locale;
+  const href = `/projeler/${slug}`;
+  const title = t(`${slug}.metaTitle`);
+  const description = t(`${slug}.metaDesc`);
 
   return {
-    title: t(`${slug}.metaTitle`),
-    description: t(`${slug}.metaDesc`),
-    alternates: { canonical },
-    openGraph: {
-      title: t(`${slug}.metaTitle`),
-      description: t(`${slug}.metaDesc`),
-      type: "website",
-      locale: locale === "tr" ? "tr_TR" : "en_US",
-    },
+    title,
+    description,
+    alternates: buildPageAlternates(loc, href),
+    ...buildSocialMetadata({ title, description, locale: loc, href }),
   };
 }
 
@@ -54,20 +56,15 @@ export default async function ProjectDetailPage({
   if (!validateProjectSlug(slug)) notFound();
 
   const t = await getTranslations("projectDetails");
-  const projectUrl = `https://www.veltstack.com${getPathname({
-    locale: locale as Locale,
-    href: `/projeler/${slug}`,
-  })}`;
-  const projectsUrl = `https://www.veltstack.com${getPathname({
-    locale: locale as Locale,
-    href: "/projeler",
-  })}`;
+  const loc = locale as Locale;
+  const projectUrl = absoluteUrl(localizedPath(loc, `/projeler/${slug}`));
+  const projectsUrl = absoluteUrl(localizedPath(loc, "/projeler"));
 
   return (
     <>
       <BreadcrumbSchema
         items={[
-          { name: t("breadcrumbHome"), url: "https://www.veltstack.com" },
+          { name: t("breadcrumbHome"), url: SITE_URL },
           { name: t("breadcrumbProjects"), url: projectsUrl },
           { name: t(`${slug}.heroTitle`), url: projectUrl },
         ]}

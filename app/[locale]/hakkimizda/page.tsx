@@ -1,8 +1,20 @@
 import { setRequestLocale } from "next-intl/server";
 import { AboutPageView } from "@/components/pages/about";
+import { createPageMetadata } from "@/lib/create-page-metadata";
 
 interface AboutPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: AboutPageProps) {
+  const { locale } = await params;
+  return createPageMetadata({
+    locale,
+    namespace: "pages",
+    titleKey: "aboutTitle",
+    descriptionKey: "aboutSubtitle",
+    href: "/hakkimizda",
+  });
 }
 
 export default async function AboutPage({ params }: AboutPageProps) {

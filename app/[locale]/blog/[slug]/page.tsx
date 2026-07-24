@@ -3,7 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
-import { BreadcrumbSchema } from "@/components/seo";
+import { ArticleSchema, BreadcrumbSchema } from "@/components/seo";
 import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { BlogCard } from "@/components/pages/blog/BlogCard";
 import { BlogArticleBody } from "@/components/pages/blog-detail/BlogArticleBody";
@@ -15,8 +15,14 @@ import {
 } from "@/components/pages/blog/blog-data";
 import { getBlogArticleContent } from "@/components/pages/blog/blog-articles";
 import { toLatinUppercase } from "@/lib/utils";
-import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import {
+  SITE_URL,
+  absoluteUrl,
+  buildPageAlternates,
+  buildSocialMetadata,
+  localizedPath,
+} from "@/lib/seo";
 
 interface BlogDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -33,30 +39,26 @@ export async function generateMetadata({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
 
+  const loc = locale as Locale;
+  const href = `/blog/${slug}`;
   const title = locale === "tr" ? post.titleTr : post.titleEn;
   const desc = locale === "tr" ? post.excerptShortTr : post.excerptShortEn;
-  const canonical = `https://www.veltstack.com${getPathname({
-    locale: locale as Locale,
-    href: `/blog/${slug}`,
-  })}`;
+  const images = post.imageUrl
+    ? [{ url: absoluteUrl(getBlogDetailImageUrl(post.imageUrl)) }]
+    : undefined;
 
   return {
     title,
     description: desc,
-    alternates: { canonical },
-    openGraph: {
+    alternates: buildPageAlternates(loc, href),
+    ...buildSocialMetadata({
       title,
       description: desc,
+      locale: loc,
+      href,
       type: "article",
-      locale: locale === "tr" ? "tr_TR" : "en_US",
-      images: post.imageUrl
-        ? [
-            {
-              url: `https://www.veltstack.com${getBlogDetailImageUrl(post.imageUrl)}`,
-            },
-          ]
-        : [],
-    },
+      images,
+    }),
   };
 }
 
@@ -76,8 +78,8 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
   const date = formatDate(post.publishedAt, loc);
   const readingTime = t("readingTime", { minutes: post.readingTime });
 
-  const blogUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: "/blog" })}`;
-  const postUrl = `https://www.veltstack.com${getPathname({ locale: loc, href: `/blog/${slug}` })}`;
+  const blogUrl = absoluteUrl(localizedPath(loc, "/blog"));
+  const postUrl = absoluteUrl(localizedPath(loc, `/blog/${slug}`));
 
   const relatedPosts = blogPosts
     .filter(
@@ -130,11 +132,23 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
         items={[
           {
             name: loc === "tr" ? "Ana Sayfa" : "Home",
-            url: "https://www.veltstack.com",
+            url: SITE_URL,
           },
           { name: t("heroBadge"), url: blogUrl },
           { name: title, url: postUrl },
         ]}
+      />
+      <ArticleSchema
+        title={title}
+        description={excerpt}
+        url={postUrl}
+        datePublished={post.publishedAt}
+        dateModified={post.publishedAt}
+        imageUrl={
+          post.imageUrl
+            ? absoluteUrl(getBlogDetailImageUrl(post.imageUrl))
+            : undefined
+        }
       />
 
       <BlogDetailHero
