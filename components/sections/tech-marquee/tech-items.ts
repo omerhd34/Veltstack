@@ -71,41 +71,34 @@ export const techCategories: TechCategory[] = [
       {
         name: "TypeScript",
         icon: SiTypescript,
-        url: "https://www.typescriptlang.org/",
       },
       {
         name: "JavaScript",
         icon: SiJavascript,
-        url: "https://developer.mozilla.org/docs/Web/JavaScript",
       },
       {
         name: "Tailwind CSS",
         icon: SiTailwindcss,
-        url: "https://tailwindcss.com/",
       },
       {
         name: "Sass & SCSS",
         icon: SiSass,
-        url: "https://sass-lang.com/",
       },
       {
         name: "Next.js",
         icon: SiNextdotjs,
-        url: "https://nextjs.org/",
       },
-      { name: "React", icon: SiReact, url: "https://react.dev/" },
-      { name: "Redux", icon: SiRedux, url: "https://redux.js.org/" },
+      { name: "React", icon: SiReact },
+      { name: "Redux", icon: SiRedux },
       {
         name: "Zustand",
         icon: ZustandIcon,
-        url: "https://zustand.docs.pmnd.rs/",
       },
       {
         name: "Bootstrap",
         icon: SiBootstrap,
-        url: "https://getbootstrap.com/",
       },
-      { name: "Figma", icon: SiFigma, url: "https://www.figma.com/" },
+      { name: "Figma", icon: SiFigma },
       {
         name: "UI(shadcn, lightswind, ...)",
         icon: TbComponents,
@@ -118,14 +111,12 @@ export const techCategories: TechCategory[] = [
       {
         name: "Node.js",
         icon: SiNodedotjs,
-        url: "https://nodejs.org/",
       },
       {
         name: "Express.js",
         icon: SiExpress,
-        url: "https://expressjs.com/",
       },
-      { name: "NestJS", icon: SiNestjs, url: "https://nestjs.com/" },
+      { name: "NestJS", icon: SiNestjs },
       {
         name: "REST API",
         icon: TbApi,
@@ -133,25 +124,22 @@ export const techCategories: TechCategory[] = [
       {
         name: "Postman",
         icon: SiPostman,
-        url: "https://www.postman.com/",
       },
     ],
   },
   {
     key: "database",
     items: [
-      { name: "MySQL", icon: GrMysql, url: "https://www.mysql.com/" },
+      { name: "MySQL", icon: GrMysql },
       {
         name: "MongoDB",
         icon: SiMongodb,
-        url: "https://www.mongodb.com/",
       },
       {
         name: "PostgreSQL",
         icon: SiPostgresql,
-        url: "https://www.postgresql.org/",
       },
-      { name: "Prisma", icon: SiPrisma, url: "https://www.prisma.io/" },
+      { name: "Prisma", icon: SiPrisma },
     ],
   },
   {
@@ -160,46 +148,40 @@ export const techCategories: TechCategory[] = [
       {
         name: "React Native",
         icon: TbBrandReactNative,
-        url: "https://reactnative.dev/",
       },
-      { name: "Flutter", icon: SiFlutter, url: "https://flutter.dev/" },
-      { name: "Expo", icon: SiExpo, url: "https://expo.dev/" },
-      { name: "Kotlin", icon: SiKotlin, url: "https://kotlinlang.org/" },
+      { name: "Flutter", icon: SiFlutter },
+      { name: "Expo", icon: SiExpo },
+      { name: "Kotlin", icon: SiKotlin },
       {
         name: "Android",
         icon: SiAndroid,
-        url: "https://developer.android.com/",
       },
       {
         name: "iOS",
         icon: SiIos,
-        url: "https://developer.apple.com/ios/",
       },
       {
         name: "App Store",
         icon: SiAppstore,
-        url: "https://developer.apple.com/app-store/",
       },
       {
         name: "Google Play",
         icon: SiGoogleplay,
-        url: "https://play.google.com/console/",
       },
     ],
   },
   {
     key: "hosting",
     items: [
-      { name: "Vercel", icon: SiVercel, url: "https://vercel.com/" },
+      { name: "Vercel", icon: SiVercel },
       {
         name: "ixirhost",
         icon: IxirhostIcon,
         brandIcon: true,
-        url: "https://www.ixirhost.com/",
       },
-      { name: "Railway", icon: SiRailway, url: "https://railway.com/" },
-      { name: "Git", icon: SiGit, url: "https://git-scm.com/" },
-      { name: "GitHub", icon: SiGithub, url: "https://github.com/" },
+      { name: "Railway", icon: SiRailway },
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
     ],
   },
   {
@@ -208,32 +190,26 @@ export const techCategories: TechCategory[] = [
       {
         name: "Google Analytics",
         icon: SiGoogleanalytics,
-        url: "https://marketingplatform.google.com/about/analytics/",
       },
       {
         name: "Meta Pixel",
         icon: SiMeta,
-        url: "https://developers.facebook.com/docs/meta-pixel/",
       },
       {
         name: "Lighthouse",
         icon: SiLighthouse,
-        url: "https://developer.chrome.com/docs/lighthouse/",
       },
       {
         name: "PageSpeed Insights",
         icon: SiPagespeedinsights,
-        url: "https://pagespeed.web.dev/",
       },
       {
         name: "Google Search Console",
         icon: SiGooglesearchconsole,
-        url: "https://search.google.com/search-console/",
       },
       {
         name: "Google Tag Manager",
         icon: SiGoogletagmanager,
-        url: "https://tagmanager.google.com/",
       },
     ],
   },

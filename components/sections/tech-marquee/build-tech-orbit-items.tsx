@@ -79,7 +79,6 @@ export function buildTechOrbitItems(
 
         return {
           label: item.tooltip ?? item.name,
-          ...(item.url ? { href: item.url } : {}),
           emphasis: true,
           iconSize: ringIconSize + 8,
           angleOffset,
