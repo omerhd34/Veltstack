@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { getPathname } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import {
+  buildPageAlternates,
+  buildSocialMetadata,
+} from "@/lib/seo";
 
 interface CreatePageMetadataOptions {
   locale: string;
@@ -9,6 +12,7 @@ interface CreatePageMetadataOptions {
   titleKey: string;
   descriptionKey: string;
   href: string;
+  absoluteTitle?: boolean;
 }
 
 export async function createPageMetadata({
@@ -17,22 +21,23 @@ export async function createPageMetadata({
   titleKey,
   descriptionKey,
   href,
+  absoluteTitle = false,
 }: CreatePageMetadataOptions): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace });
-  const canonical = `https://www.veltstack.com${getPathname({
-    locale: locale as Locale,
+  const loc = locale as Locale;
+  const title = t(titleKey);
+  const description = t(descriptionKey);
+  const social = buildSocialMetadata({
+    title,
+    description,
+    locale: loc,
     href,
-  })}`;
+  });
 
   return {
-    title: t(titleKey),
-    description: t(descriptionKey),
-    alternates: { canonical },
-    openGraph: {
-      title: t(titleKey),
-      description: t(descriptionKey),
-      type: "website",
-      locale: locale === "tr" ? "tr_TR" : "en_US",
-    },
+    title: absoluteTitle ? { absolute: title } : title,
+    description,
+    alternates: buildPageAlternates(loc, href),
+    ...social,
   };
 }
