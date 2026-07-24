@@ -99,9 +99,7 @@ export function ServicesMobileSlider({
             activeIndex={active}
             total={count}
             onSelect={goTo}
-            getItemLabel={(index) =>
-              `${t("servicesSliderDot")} ${index + 1}`
-            }
+            getItemLabel={(index) => `${t("servicesSliderDot")} ${index + 1}`}
             theme="dark"
           />
 
