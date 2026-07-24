@@ -55,9 +55,22 @@ export const serviceDetailsEn = {
   breadcrumbHome: "Home",
   breadcrumbServices: "Services",
   "web-sitesi-gelistirme": {
-    metaTitle: "Website Building",
+    metaTitle: "Website Development | Next.js Corporate Sites",
     metaDesc:
-      "End-to-end web building for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
+      "End-to-end website development for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
+    keywords: [
+      "website development",
+      "website design",
+      "corporate website",
+      "Next.js website",
+      "e-commerce website development",
+      "landing page development",
+      "SSR website",
+      "React website",
+      "portfolio website",
+      "corporate brochure site",
+      "scalable web application",
+    ],
     heroBadge: "Web Building",
     heroTitle: "Website Building",
     heroImageAlt:
@@ -121,9 +134,21 @@ export const serviceDetailsEn = {
     ],
   },
   "web-sitesi-yenileme": {
-    metaTitle: "Digital Refresh",
+    metaTitle: "Website Redesign | Digital Refresh",
     metaDesc:
       "Refresh your outdated or slow website and mobile app with modern design, fast infrastructure and SEO improvements. Secure migration while preserving your content.",
+    keywords: [
+      "website redesign",
+      "website refresh",
+      "modernize old website",
+      "SEO-safe site migration",
+      "WordPress to Next.js migration",
+      "speed up slow website",
+      "mobile-friendly redesign",
+      "UI UX refresh",
+      "digital transformation web",
+      "website migration",
+    ],
     heroBadge: "Web & App Refresh",
     heroTitle: "Digital Refresh",
     heroImageAlt:
@@ -172,9 +197,21 @@ export const serviceDetailsEn = {
     ],
   },
   "uygulama-gelistirme": {
-    metaTitle: "Mobile App Building",
+    metaTitle: "Mobile App Development | React Native",
     metaDesc:
       "High-performance mobile apps for iOS and Android with React Native and Expo.",
+    keywords: [
+      "mobile app development",
+      "React Native app",
+      "iOS Android app development",
+      "Expo mobile app",
+      "cross platform app",
+      "App Store publishing",
+      "Google Play app",
+      "mobile app design",
+      "native mobile app",
+      "startup mobile app",
+    ],
     heroBadge: "App Building",
     heroTitle: "Mobile App Building",
     heroImageAlt:
@@ -223,9 +260,22 @@ export const serviceDetailsEn = {
     ],
   },
   "seo-hizmetleri": {
-    metaTitle: "SEO Services",
+    metaTitle: "SEO Services | Grow Organic Traffic",
     metaDesc:
       "Sustainable organic growth through technical SEO, content strategy and performance optimization.",
+    keywords: [
+      "SEO services",
+      "grow organic traffic",
+      "technical SEO consulting",
+      "on-page SEO",
+      "keyword research",
+      "content SEO strategy",
+      "Search Console",
+      "local SEO",
+      "SEO agency",
+      "ranking improvement",
+      "blog SEO",
+    ],
     heroBadge: "SEO",
     heroTitle: "SEO Services",
     heroImageAlt:
@@ -274,9 +324,21 @@ export const serviceDetailsEn = {
     ],
   },
   "teknik-denetim": {
-    metaTitle: "Technical Audit",
+    metaTitle: "Technical SEO Audit | Speed & Security",
     metaDesc:
       "Technical audit for your website, mobile app and digital infrastructure focused on performance, security, SEO and code quality.",
+    keywords: [
+      "technical SEO audit",
+      "site speed analysis",
+      "Core Web Vitals audit",
+      "website security audit",
+      "Lighthouse score",
+      "accessibility audit",
+      "code quality review",
+      "performance audit",
+      "sitemap robots audit",
+      "technical debt analysis",
+    ],
     heroBadge: "Technical Audit",
     heroTitle: "Technical Audit",
     heroImageAlt:
@@ -328,6 +390,18 @@ export const serviceDetailsEn = {
     metaTitle: "Website Maintenance & Support",
     metaDesc:
       "Regular maintenance, updates and technical support for your website, mobile app and backend infrastructure.",
+    keywords: [
+      "website maintenance",
+      "site maintenance support",
+      "Next.js maintenance",
+      "website technical support",
+      "security updates",
+      "backup service",
+      "uptime monitoring",
+      "emergency support",
+      "CMS maintenance",
+      "monthly website care",
+    ],
     heroBadge: "Maintenance & Support",
     heroTitle: "Maintenance & Support",
     heroImageAlt:

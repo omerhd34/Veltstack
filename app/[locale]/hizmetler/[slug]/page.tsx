@@ -38,10 +38,12 @@ export async function generateMetadata({
   const href = `/hizmetler/${slug}`;
   const title = t(`${slug}.metaTitle`);
   const description = t(`${slug}.metaDesc`);
+  const keywords = t.raw(`${slug}.keywords`) as string[];
 
   return {
     title,
     description,
+    keywords,
     alternates: buildPageAlternates(loc, href),
     ...buildSocialMetadata({ title, description, locale: loc, href }),
   };

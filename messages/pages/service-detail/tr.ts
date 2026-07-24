@@ -55,9 +55,22 @@ export const serviceDetailsTr = {
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
   "web-sitesi-gelistirme": {
-    metaTitle: "Web Sitesi Yapımı",
+    metaTitle: "Web Sitesi Yapımı | Next.js Kurumsal Site",
     metaDesc:
-      "Kurumsal web sitesi, e-ticaret ve portfolyo projelerinde uçtan uca web yapımı. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
+      "Kurumsal web sitesi yapımı, e-ticaret ve portfolyo projelerinde uçtan uca web yapımı. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
+    keywords: [
+      "web sitesi yapımı",
+      "web sitesi tasarımı",
+      "kurumsal web sitesi",
+      "Next.js web sitesi",
+      "e-ticaret web sitesi yapımı",
+      "landing page yapımı",
+      "SSR web sitesi",
+      "React web sitesi",
+      "portfolyo sitesi",
+      "kurumsal tanıtım sitesi",
+      "ölçeklenebilir web uygulaması",
+    ],
     heroBadge: "Web Yapımı",
     heroTitle: "Web Sitesi Yapımı",
     heroImageAlt:
@@ -121,9 +134,21 @@ export const serviceDetailsTr = {
     ],
   },
   "web-sitesi-yenileme": {
-    metaTitle: "Dijital Yenileme",
+    metaTitle: "Web Sitesi Yenileme | Modern Redesign",
     metaDesc:
-      "Eski veya yavaş web sitenizi ve mobil uygulamanızı modern tasarım, hızlı altyapı ve SEO iyileştirmeleriyle yenileyin. İçeriklerinizi koruyarak güvenli geçiş.",
+      "Eski veya yavaş web sitenizi modern tasarım, hızlı altyapı ve SEO iyileştirmeleriyle yenileyin. İçeriklerinizi koruyarak güvenli geçiş.",
+    keywords: [
+      "web sitesi yenileme",
+      "web sitesi redesign",
+      "eski siteyi modernleştirme",
+      "site yenileme SEO",
+      "WordPress’ten Next.js geçiş",
+      "yavaş site hızlandırma",
+      "mobil uyumlu site yenileme",
+      "UI UX yenileme",
+      "dijital dönüşüm web",
+      "site migrasyonu",
+    ],
     heroBadge: "Web & Uygulama Yenileme",
     heroTitle: "Dijital Yenileme",
     heroImageAlt:
@@ -172,9 +197,21 @@ export const serviceDetailsTr = {
     ],
   },
   "uygulama-gelistirme": {
-    metaTitle: "Mobil Uygulama Yapımı",
+    metaTitle: "Mobil Uygulama Geliştirme | React Native",
     metaDesc:
-      "iOS ve Android için React Native ve Expo ile performanslı mobil uygulama yapımı hizmeti.",
+      "iOS ve Android için React Native ve Expo ile performanslı mobil uygulama geliştirme hizmeti.",
+    keywords: [
+      "mobil uygulama geliştirme",
+      "React Native uygulama",
+      "iOS Android uygulama yapımı",
+      "Expo mobil uygulama",
+      "cross platform uygulama",
+      "App Store yayın",
+      "Google Play uygulama",
+      "mobil uygulama tasarımı",
+      "native mobil uygulama",
+      "startup mobil uygulama",
+    ],
     heroBadge: "Uygulama Yapımı",
     heroTitle: "Mobil Uygulama Yapımı",
     heroImageAlt:
@@ -223,9 +260,22 @@ export const serviceDetailsTr = {
     ],
   },
   "seo-hizmetleri": {
-    metaTitle: "SEO Hizmeti",
+    metaTitle: "SEO Hizmetleri | Organik Trafik Artırma",
     metaDesc:
       "Teknik SEO, içerik stratejisi ve performans optimizasyonu ile sürdürülebilir organik büyüme.",
+    keywords: [
+      "SEO hizmetleri",
+      "organik trafik artırma",
+      "teknik SEO danışmanlığı",
+      "on-page SEO",
+      "anahtar kelime araştırması",
+      "içerik SEO stratejisi",
+      "Search Console",
+      "yerel SEO",
+      "SEO ajansı",
+      "sıralama iyileştirme",
+      "blog SEO",
+    ],
     heroBadge: "SEO",
     heroTitle: "SEO Hizmetleri",
     heroImageAlt:
@@ -274,9 +324,21 @@ export const serviceDetailsTr = {
     ],
   },
   "teknik-denetim": {
-    metaTitle: "Teknik Denetim",
+    metaTitle: "Teknik SEO Denetimi | Site Hızı & Güvenlik",
     metaDesc:
       "Web sitesi, mobil uygulama ve dijital altyapınız için performans, güvenlik, SEO ve kod kalitesi odaklı teknik denetim hizmeti.",
+    keywords: [
+      "teknik SEO denetimi",
+      "site hızı analizi",
+      "Core Web Vitals denetimi",
+      "web sitesi güvenlik denetimi",
+      "Lighthouse skoru",
+      "erişilebilirlik denetimi",
+      "kod kalitesi incelemesi",
+      "performans audit",
+      "sitemap robots denetimi",
+      "teknik borç analizi",
+    ],
     heroBadge: "Teknik Denetim",
     heroTitle: "Teknik Denetim",
     heroImageAlt:
@@ -328,6 +390,18 @@ export const serviceDetailsTr = {
     metaTitle: "Web Sitesi Bakım ve Destek",
     metaDesc:
       "Web sitesi, mobil uygulama ve backend altyapınız için düzenli bakım, güncelleme ve teknik destek hizmeti.",
+    keywords: [
+      "web sitesi bakım",
+      "site bakım destek paketi",
+      "Next.js bakım",
+      "web sitesi teknik destek",
+      "güvenlik güncellemesi",
+      "yedekleme hizmeti",
+      "uptime izleme",
+      "acil müdahale destek",
+      "CMS bakım",
+      "aylık site bakımı",
+    ],
     heroBadge: "Bakım & Destek",
     heroTitle: "Bakım & Destek",
     heroImageAlt:
