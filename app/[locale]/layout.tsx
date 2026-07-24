@@ -36,9 +36,11 @@ export default async function LocaleLayout({
       <LocaleHtmlLang />
       <LocaleScrollRestoration />
       <LocalBusinessSchema />
-      <Navbar />
-      <main className="flex-1">{children}</main>
-      <Footer />
+      <div className="flex min-h-dvh flex-col">
+        <Navbar />
+        <main className="flex flex-1 flex-col">{children}</main>
+        <Footer />
+      </div>
       <BackToTop />
     </NextIntlClientProvider>
   );
