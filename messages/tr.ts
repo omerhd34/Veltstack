@@ -24,6 +24,7 @@ import { workflowTr } from "@/components/sections/workflow/messages/tr";
 import { approachTr } from "@/components/sections/approach/messages/tr";
 import { legalTr } from "@/messages/pages/legal/tr";
 import { faqTr } from "@/messages/pages/faq/tr";
+import { statusTr } from "@/messages/pages/status/tr";
 
 const messages = {
   nav: navTr,
@@ -56,6 +57,7 @@ const messages = {
   approach: approachTr,
   legal: legalTr,
   faqPage: faqTr,
+  status: statusTr,
 } as const;
 
 export default messages;

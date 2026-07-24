@@ -24,6 +24,7 @@ import { workflowEn } from "@/components/sections/workflow/messages/en";
 import { approachEn } from "@/components/sections/approach/messages/en";
 import { legalEn } from "@/messages/pages/legal/en";
 import { faqEn } from "@/messages/pages/faq/en";
+import { statusEn } from "@/messages/pages/status/en";
 
 const messages = {
   nav: navEn,
@@ -56,6 +57,7 @@ const messages = {
   approach: approachEn,
   legal: legalEn,
   faqPage: faqEn,
+  status: statusEn,
 } as const;
 
 export default messages;
