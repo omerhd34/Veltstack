@@ -42,7 +42,7 @@ export function CarouselPagination({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-1 rounded-full border px-2 py-1.5 backdrop-blur-md",
+        "inline-flex items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md",
         isDark
           ? "border-white/15 bg-white/10 shadow-[0_4px_20px_rgb(0,0,0,0.12)]"
           : "border-border/60 bg-white/70 shadow-[0_4px_20px_rgb(0,0,0,0.04)]",
@@ -61,15 +61,18 @@ export function CarouselPagination({
         const itemClassName = cn(
           "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-500 ease-out motion-reduce:transition-none",
           isActive
-            ? "h-8 min-w-10 bg-brand-accent px-2.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)]"
+            ? "h-11 min-w-11 bg-brand-accent px-2.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)]"
             : cn(
-                "size-2",
-                isDark
-                  ? "bg-white/25 hover:bg-white/45"
-                  : "bg-brand-accent/20 hover:bg-brand-accent/40",
-                distance === 1 && "size-2.5",
-                distance === 2 && "size-1.5 opacity-70",
+                "size-11",
+                isDark ? "hover:bg-white/10" : "hover:bg-brand-accent/10",
               ),
+        );
+        const dotClassName = cn(
+          "rounded-full",
+          isDark ? "bg-white/35" : "bg-brand-accent/35",
+          distance === 0 && "size-2.5",
+          distance === 1 && "size-2",
+          distance >= 2 && "size-1.5 opacity-70",
         );
 
         return onSelect ? (
@@ -82,7 +85,7 @@ export function CarouselPagination({
             aria-current={isActive ? "true" : undefined}
             className={itemClassName}
           >
-            {content}
+            {isActive ? content : <span aria-hidden className={dotClassName} />}
           </button>
         ) : (
           <span
@@ -90,7 +93,7 @@ export function CarouselPagination({
             aria-hidden={!isActive}
             className={itemClassName}
           >
-            {content}
+            {isActive ? content : <span className={dotClassName} />}
           </span>
         );
       })}
@@ -102,7 +105,7 @@ export function CarouselPagination({
       <span
         className={cn(
           "pr-1.5 font-(family-name:--font-heading) text-[11px] tracking-[0.14em]",
-          isDark ? "text-white/55" : "text-muted-foreground",
+          isDark ? "text-white/70" : "text-foreground/65",
         )}
       >
         {formatNumber(total)}

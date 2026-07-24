@@ -157,15 +157,15 @@ export function ServiceCard({
               className={cn(
                 "leading-relaxed",
                 compact
-                  ? "mt-1.5 line-clamp-3 h-[calc(0.75rem*1.625*3)] text-xs leading-relaxed text-muted-foreground"
+                  ? "mt-1.5 line-clamp-3 h-[calc(0.75rem*1.625*3)] text-xs leading-relaxed text-foreground/70"
                   : isSlide
                     ? cn(
                         "mt-2 mb-0 line-clamp-3 h-[calc(0.875rem*1.7*3)] text-sm leading-[1.7] sm:h-[calc(0.9375rem*1.7*3)] sm:text-[0.9375rem] md:text-[0.9375rem]",
                         isActive
-                          ? "text-foreground/60"
-                          : "text-foreground/45 group-hover:text-foreground/58",
+                          ? "text-foreground/70"
+                          : "text-foreground/65 group-hover:text-foreground/75",
                       )
-                    : "mt-1.5 text-sm text-muted-foreground",
+                    : "mt-1.5 text-sm text-foreground/70",
               )}
             >
               {description}
@@ -192,7 +192,7 @@ export function ServiceCard({
                     !isActive &&
                       "bg-brand-accent/8 text-brand-accent/85 group-hover:bg-brand-accent/10 group-hover:text-brand-accent",
                   )
-                : "bg-muted font-normal text-muted-foreground",
+                : "bg-muted font-normal text-foreground/70",
             )}
           >
             {tag}

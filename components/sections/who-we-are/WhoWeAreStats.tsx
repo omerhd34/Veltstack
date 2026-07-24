@@ -44,7 +44,7 @@ function StatCard({
         className="relative justify-start text-2xl sm:text-3xl md:text-4xl"
         numberClassName="font-(family-name:--font-heading) font-bold"
       />
-      <p className="relative mt-1.5 text-[0.6875rem] font-medium leading-snug text-muted-foreground sm:mt-2 sm:text-xs sm:leading-normal">
+      <p className="relative mt-1.5 text-[0.6875rem] font-medium leading-snug text-foreground/70 sm:mt-2 sm:text-xs sm:leading-normal">
         {label}
       </p>
     </div>

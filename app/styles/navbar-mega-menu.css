@@ -51,9 +51,17 @@
 
 .navbar-mega-menu-panel[data-state="closed"] {
   pointer-events: none;
+  visibility: hidden;
   opacity: 0;
-  transform: perspective(1200px) rotateX(-10deg) translateY(-12px) scale(0.98);
+  transform: translate3d(0, -10px, 0) scale(0.98);
   box-shadow: 0 0 0 transparent;
+  transition:
+    opacity 0.28s ease,
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.35s,
+    box-shadow 0.4s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .navbar-mega-menu-panel[data-state="closed"]::before {
@@ -63,13 +71,21 @@
 
 .navbar-mega-menu-panel[data-state="open"] {
   pointer-events: auto;
+  visibility: visible;
   opacity: 1;
-  transform: perspective(1200px) rotateX(0deg) translateY(0) scale(1);
-  animation: mega-menu-panel-unfold 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transform: translate3d(0, 0, 0) scale(1);
+  animation: none;
   box-shadow:
     0 24px 48px -24px rgb(0 0 0 / 0.18),
     0 12px 28px -16px rgb(var(--brand-accent-rgb) / 0.12),
     0 0 0 1px rgb(var(--brand-accent-rgb) / 0.06);
+  transition:
+    opacity 0.28s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0s,
+    box-shadow 0.45s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .navbar-mega-menu-panel--overlay[data-state="open"] {
@@ -89,45 +105,27 @@
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(1) {
-  --mega-x: -16px;
-  --mega-y: 14px;
-  --mega-r: -3deg;
-  animation-delay: 0.1s;
+  animation-delay: 0.06s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(2) {
-  --mega-x: 0px;
-  --mega-y: 18px;
-  --mega-r: 0deg;
-  animation-delay: 0.14s;
+  animation-delay: 0.1s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(3) {
-  --mega-x: 16px;
-  --mega-y: 14px;
-  --mega-r: 3deg;
-  animation-delay: 0.18s;
+  animation-delay: 0.14s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(4) {
-  --mega-x: -14px;
-  --mega-y: 20px;
-  --mega-r: 2deg;
-  animation-delay: 0.22s;
+  animation-delay: 0.18s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(5) {
-  --mega-x: 0px;
-  --mega-y: 22px;
-  --mega-r: 0deg;
-  animation-delay: 0.26s;
+  animation-delay: 0.22s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(6) {
-  --mega-x: 14px;
-  --mega-y: 20px;
-  --mega-r: -2deg;
-  animation-delay: 0.3s;
+  animation-delay: 0.26s;
 }
 
 .mobile-nav-tree {

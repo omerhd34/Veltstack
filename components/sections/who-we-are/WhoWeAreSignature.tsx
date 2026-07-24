@@ -44,7 +44,7 @@ export function WhoWeAreSignature({
         <p className="whitespace-nowrap font-(family-name:--font-heading) text-base font-bold text-[#0A0A0F]">
           {name}
         </p>
-        <p className="text-sm text-muted-foreground">{role}</p>
+        <p className="text-sm text-foreground/70">{role}</p>
       </div>
     </div>
   );

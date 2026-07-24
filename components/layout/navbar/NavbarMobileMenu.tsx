@@ -37,6 +37,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
         className,
       )}
       aria-hidden={!mobileMenuOpen}
+      inert={!mobileMenuOpen ? true : undefined}
     >
       <div
         className={cn(

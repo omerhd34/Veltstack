@@ -21,7 +21,9 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
           alt={alt}
           fill
           priority
-          sizes="100vw"
+          fetchPriority="high"
+          quality={60}
+          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 65vw, 55vw"
           className="object-cover object-[62%_50%] max-sm:object-[52%_44%] sm:object-[58%_48%] md:object-[64%_50%] lg:object-[66%_50%] xl:object-[68%_50%]"
         />
       </div>

@@ -54,27 +54,33 @@ export function Navbar({ className }: NavbarProps) {
     servicesMenuOpen || projectsMenuOpen || blogMenuOpen || faqMenuOpen;
 
   useEffect(() => {
-    const updateScrolled = () => {
-      if (heroOverlayPage) {
-        const hero = document.querySelector<HTMLElement>("[data-page-hero]");
-        if (hero) {
-          const headerHeight =
-            headerRef.current?.getBoundingClientRect().height ?? 72;
-          setScrolled(hero.getBoundingClientRect().bottom <= headerHeight + 1);
-          return;
-        }
-      }
+    if (!heroOverlayPage) {
+      const updateScrolled = () => setScrolled(window.scrollY > 48);
+      updateScrolled();
+      window.addEventListener("scroll", updateScrolled, { passive: true });
+      return () => window.removeEventListener("scroll", updateScrolled);
+    }
 
+    const hero = document.querySelector<HTMLElement>("[data-page-hero]");
+    if (!hero) {
       setScrolled(window.scrollY > 48);
-    };
+      return;
+    }
 
-    updateScrolled();
-    window.addEventListener("scroll", updateScrolled, { passive: true });
-    window.addEventListener("resize", updateScrolled, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", updateScrolled);
-      window.removeEventListener("resize", updateScrolled);
-    };
+    const headerHeight = headerRef.current?.offsetHeight ?? 72;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setScrolled(!entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0,
+        rootMargin: `-${headerHeight + 1}px 0px 0px 0px`,
+      },
+    );
+
+    observer.observe(hero);
+    return () => observer.disconnect();
   }, [heroOverlayPage]);
 
   const overlay = heroOverlayPage && !scrolled;
@@ -133,6 +139,7 @@ export function Navbar({ className }: NavbarProps) {
         onMouseEnter={openServicesMenu}
         onMouseLeave={scheduleCloseServicesMenu}
         aria-hidden={!servicesMenuOpen}
+        inert={!servicesMenuOpen ? true : undefined}
       >
         <NavbarServicesMegaMenuPanel />
       </div>
@@ -143,6 +150,7 @@ export function Navbar({ className }: NavbarProps) {
         onMouseEnter={openProjectsMenu}
         onMouseLeave={scheduleCloseProjectsMenu}
         aria-hidden={!projectsMenuOpen}
+        inert={!projectsMenuOpen ? true : undefined}
       >
         <NavbarProjectsMegaMenuPanel />
       </div>
@@ -153,6 +161,7 @@ export function Navbar({ className }: NavbarProps) {
         onMouseEnter={openBlogMenu}
         onMouseLeave={scheduleCloseBlogMenu}
         aria-hidden={!blogMenuOpen}
+        inert={!blogMenuOpen ? true : undefined}
       >
         <NavbarBlogMegaMenuPanel />
       </div>
@@ -163,6 +172,7 @@ export function Navbar({ className }: NavbarProps) {
         onMouseEnter={openFaqMenu}
         onMouseLeave={scheduleCloseFaqMenu}
         aria-hidden={!faqMenuOpen}
+        inert={!faqMenuOpen ? true : undefined}
       >
         <NavbarFaqMegaMenuPanel />
       </div>
