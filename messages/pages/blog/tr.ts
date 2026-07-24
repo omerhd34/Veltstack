@@ -3,6 +3,28 @@ export const blogPageTr = {
   heroTitle: "Dijital dünyadan içgörüler",
   heroSubtitle:
     "Web yapımı, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler üretiyoruz. Gerçek projelerden öğrendiklerimizi ve sahada denenmiş yöntemleri sade bir dille paylaşıyoruz.",
+  keywords: [
+    "GEO SEO",
+    "generatif motor optimizasyonu",
+    "React Next.js",
+    "Next.js nedir",
+    "domain hosting",
+    "domain seçimi",
+    "domain hosting taşıma",
+    "Tailwind CSS",
+    "neden Tailwind CSS",
+    "web geliştirme blog",
+    "freelancer siteleri",
+    "en iyi freelancer siteleri",
+    "sanal POS",
+    "en iyi sanal POS firmaları",
+    "UI UX nedir",
+    "responsive tasarım",
+    "veritabanı seçimi",
+    "Prisma Node.js",
+    "Vercel'de yayın",
+    "özel yazılım CMS",
+  ],
   heroSubtitleSecondary:
     "Kategoriye göre filtreleyip arama yaparak aradığınız içeriğe hızlıca ulaşın.",
   heroImageAlt:

@@ -3,6 +3,28 @@ export const blogPageEn = {
   heroTitle: "Insights from the digital world",
   heroSubtitle:
     "We publish practical content on web building, mobile apps, SEO and digital transformation. We share lessons from real projects and field-tested methods in plain language.",
+  keywords: [
+    "GEO SEO",
+    "generative engine optimization",
+    "React Next.js",
+    "what is Next.js",
+    "domain hosting",
+    "domain selection",
+    "domain hosting migration",
+    "Tailwind CSS",
+    "why Tailwind CSS",
+    "web development blog",
+    "freelancer websites",
+    "best freelancer websites",
+    "virtual POS",
+    "best virtual POS providers",
+    "what is UI UX",
+    "responsive design",
+    "database selection",
+    "Prisma Node.js",
+    "deploy on Vercel",
+    "custom software CMS",
+  ],
   heroSubtitleSecondary:
     "Filter by category or search to quickly find what you need.",
   heroImageAlt:
