@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { RiMenu3Line } from "react-icons/ri";
 import { usePathname } from "@/i18n/navigation";
 import { useUiStore } from "@/store/uiSlice";
@@ -27,6 +28,7 @@ export function Navbar({ className }: NavbarProps) {
   const heroOverlayPage = isHeroOverlayPath(pathname);
   const headerRef = useRef<HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [hasPageHero, setHasPageHero] = useState(heroOverlayPage);
   const mobileMenuOpen = useUiStore((state) => state.mobileMenuOpen);
   const setMobileMenuOpen = useUiStore((state) => state.setMobileMenuOpen);
   const servicesMenuOpen = useUiStore((state) => state.servicesMenuOpen);
@@ -53,8 +55,9 @@ export function Navbar({ className }: NavbarProps) {
   const megaMenuOpen =
     servicesMenuOpen || projectsMenuOpen || blogMenuOpen || faqMenuOpen;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!heroOverlayPage) {
+      setHasPageHero(false);
       const updateScrolled = () => setScrolled(window.scrollY > 48);
       updateScrolled();
       window.addEventListener("scroll", updateScrolled, { passive: true });
@@ -63,9 +66,13 @@ export function Navbar({ className }: NavbarProps) {
 
     const hero = document.querySelector<HTMLElement>("[data-page-hero]");
     if (!hero) {
-      setScrolled(window.scrollY > 48);
+      // Error/not-found: akışta yer kaplasın ki içerik 404 ile aynı hizalansın.
+      setHasPageHero(false);
+      setScrolled(true);
       return;
     }
+
+    setHasPageHero(true);
 
     const headerHeight = headerRef.current?.offsetHeight ?? 72;
     const observer = new IntersectionObserver(
@@ -83,7 +90,8 @@ export function Navbar({ className }: NavbarProps) {
     return () => observer.disconnect();
   }, [heroOverlayPage]);
 
-  const overlay = heroOverlayPage && !scrolled;
+  const overlay = heroOverlayPage && hasPageHero && !scrolled;
+  const fixedOverlayNav = heroOverlayPage && hasPageHero;
 
   const megaMenuPanelClass = cn(
     "navbar-mega-menu-panel absolute left-1/2 top-full z-50 isolate mt-2 w-[min(calc(100%-1.5rem),50rem)] -translate-x-1/2 overflow-hidden rounded-2xl backdrop-blur-xl data-[state=open]:overflow-visible",
@@ -96,7 +104,7 @@ export function Navbar({ className }: NavbarProps) {
       data-overlay={overlay ? "true" : undefined}
       className={cn(
         "group/header top-0 z-50 w-full transition-[background-color,box-shadow,border-color] duration-300",
-        heroOverlayPage ? "fixed" : "sticky border-b",
+        fixedOverlayNav ? "fixed" : "sticky border-b",
         overlay
           ? "border-b-0 bg-transparent shadow-none"
           : cn(
