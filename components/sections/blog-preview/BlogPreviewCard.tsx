@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import { LuArrowUpRight } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn, toLatinUppercase } from "@/lib/utils";
 import { BlogPreviewImage } from "./BlogPreviewImage";
@@ -27,7 +27,7 @@ export function BlogPreviewCard({
   const t = useTranslations("home");
 
   return (
-    <Link
+    <SoftPrefetchLink
       href={href}
       className={cn(
         "group relative flex flex-col rounded-2xl bg-white",
@@ -68,6 +68,6 @@ export function BlogPreviewCard({
           {excerpt}
         </p>
       </div>
-    </Link>
+    </SoftPrefetchLink>
   );
 }

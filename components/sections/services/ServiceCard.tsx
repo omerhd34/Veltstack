@@ -2,7 +2,7 @@
 
 import type { IconType } from "react-icons";
 import { LuArrowUpRight } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import { Badge } from "@/components/ui/shadcn";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { CardIndexNumber } from "@/components/ui/CardIndexNumber";
@@ -97,7 +97,11 @@ export function ServiceCard({
           index={index}
           theme="light"
           reveal={isSlide ? "always" : "hover"}
-          className={isSlide ? "right-3 top-3 sm:right-4 sm:top-4 md:right-5 md:top-5" : undefined}
+          className={
+            isSlide
+              ? "right-3 top-3 sm:right-4 sm:top-4 md:right-5 md:top-5"
+              : undefined
+          }
         />
       ) : null}
       <div
@@ -223,13 +227,13 @@ export function ServiceCard({
   }
 
   const linkBody = (
-    <Link
+    <SoftPrefetchLink
       href={href}
       onClick={onNavigate}
       className={cn(cardClassName, isSlide && "w-full")}
     >
       {content}
-    </Link>
+    </SoftPrefetchLink>
   );
 
   if (stardust && compact && !isSlide) {

@@ -4,7 +4,8 @@ import { useState } from "react";
 import type { IconType } from "react-icons";
 import { NavCaretIcon } from "./NavCaretIcon";
 import { useLocale, useTranslations } from "next-intl";
-import { Link, usePathname } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
+import { usePathname } from "@/i18n/navigation";
 import { cn, isExternalHref } from "@/lib/utils";
 import { getNavBlogPosts } from "@/components/pages/blog/blog-data";
 import { getFooterBlogCategoryIcon } from "@/components/layout/footer/footer-config";
@@ -100,7 +101,7 @@ export function NavbarLinks({
               servicesActive && "bg-brand-accent/12",
             )}
           >
-            <Link
+            <SoftPrefetchLink
               href="/hizmetler"
               onClick={onNavigate}
               className={cn(
@@ -110,7 +111,7 @@ export function NavbarLinks({
               )}
             >
               {tNav("services")}
-            </Link>
+            </SoftPrefetchLink>
             <button
               type="button"
               onClick={() => toggleSection("services")}
@@ -134,7 +135,7 @@ export function NavbarLinks({
                 ) as NavServiceKey;
                 return (
                   <li key={item.href}>
-                    <Link
+                    <SoftPrefetchLink
                       href={item.href}
                       onClick={onNavigate}
                       className={cn(
@@ -144,7 +145,7 @@ export function NavbarLinks({
                     >
                       <MobileNavIcon icon={item.icon} />
                       {serviceLabels[navKey]}
-                    </Link>
+                    </SoftPrefetchLink>
                   </li>
                 );
               })}
@@ -159,7 +160,7 @@ export function NavbarLinks({
               projectsActive && "bg-brand-accent/12",
             )}
           >
-            <Link
+            <SoftPrefetchLink
               href="/projeler"
               onClick={onNavigate}
               className={cn(
@@ -169,7 +170,7 @@ export function NavbarLinks({
               )}
             >
               {tNav("projects")}
-            </Link>
+            </SoftPrefetchLink>
             <button
               type="button"
               onClick={() => toggleSection("projects")}
@@ -207,7 +208,7 @@ export function NavbarLinks({
 
                 return (
                   <li key={item.href}>
-                    <Link
+                    <SoftPrefetchLink
                       href={item.href}
                       {...(isExternalHref(item.href)
                         ? { target: "_blank", rel: "noopener noreferrer" }
@@ -216,7 +217,7 @@ export function NavbarLinks({
                       className={className}
                     >
                       {content}
-                    </Link>
+                    </SoftPrefetchLink>
                   </li>
                 );
               })}
@@ -231,7 +232,7 @@ export function NavbarLinks({
               blogActive && "bg-brand-accent/12",
             )}
           >
-            <Link
+            <SoftPrefetchLink
               href="/blog"
               onClick={onNavigate}
               className={cn(
@@ -241,7 +242,7 @@ export function NavbarLinks({
               )}
             >
               {tNav("blog")}
-            </Link>
+            </SoftPrefetchLink>
             <button
               type="button"
               onClick={() => toggleSection("blog")}
@@ -260,7 +261,7 @@ export function NavbarLinks({
             <ul className={mobileNestedListClass}>
               {navBlogPosts.map((post) => (
                 <li key={post.slug}>
-                  <Link
+                  <SoftPrefetchLink
                     href={`/blog/${post.slug}`}
                     onClick={onNavigate}
                     className={cn(
@@ -275,7 +276,7 @@ export function NavbarLinks({
                       icon={getFooterBlogCategoryIcon(post.category)}
                     />
                     {post.title}
-                  </Link>
+                  </SoftPrefetchLink>
                 </li>
               ))}
             </ul>
@@ -283,24 +284,24 @@ export function NavbarLinks({
         </li>
 
         <li>
-          <Link
+          <SoftPrefetchLink
             href="/sss"
             onClick={onNavigate}
             className={navItemClass(faqActive, "mobile")}
           >
             {tNav("faqMobile")}
-          </Link>
+          </SoftPrefetchLink>
         </li>
 
         {links.map((link) => (
           <li key={link.href}>
-            <Link
+            <SoftPrefetchLink
               href={link.href}
               onClick={onNavigate}
               className={navItemClass(isActive(link.href), "mobile")}
             >
               {link.label}
-            </Link>
+            </SoftPrefetchLink>
           </li>
         ))}
       </ul>

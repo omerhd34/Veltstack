@@ -1,8 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { TechBeamCircle } from "./TechBeamCircle";
-import { TechCategoryButtons, type TechCategoryOption } from "./TechCategoryButtons";
+import { TechBeamCircleLazy } from "./TechBeamCircleLazy";
+import {
+  TechCategoryButtons,
+  type TechCategoryOption,
+} from "./TechCategoryButtons";
 
 interface TechMarqueeContentProps {
   categories: TechCategoryOption[];
@@ -28,7 +31,7 @@ export function TechMarqueeContent({
       </div>
 
       <div className="min-w-0 overflow-x-clip">
-        <TechBeamCircle
+        <TechBeamCircleLazy
           className="mx-auto w-full max-w-2xl lg:mx-0 lg:ml-auto"
           selectedOrbitId={selectedOrbitId}
           onOrbitSelect={setSelectedOrbitId}

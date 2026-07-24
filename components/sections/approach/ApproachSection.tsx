@@ -3,7 +3,7 @@ import { LuClock } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { cn } from "@/lib/utils";
-import { ApproachScrollTimeline } from "./ApproachScrollTimeline";
+import { ApproachScrollTimelineLazy } from "./ApproachScrollTimelineLazy";
 import type { ApproachTimelineStep } from "./ApproachScrollTimeline";
 
 interface ApproachSectionProps {
@@ -63,7 +63,7 @@ export async function ApproachSection({ className }: ApproachSectionProps) {
           </p>
         </div>
 
-        <ApproachScrollTimeline
+        <ApproachScrollTimelineLazy
           steps={steps}
           className="mt-10 md:mt-14"
         />

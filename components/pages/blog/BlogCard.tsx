@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { LuArrowUpRight, LuCalendar, LuClock, LuPenLine } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { cn } from "@/lib/utils";
@@ -171,7 +171,7 @@ export function BlogCard({
   );
 
   return (
-    <Link
+    <SoftPrefetchLink
       href={`/blog/${post.slug}`}
       className={cn(
         "group relative flex rounded-3xl bg-white",
@@ -207,6 +207,6 @@ export function BlogCard({
           <div className={textClassName}>{textSection}</div>
         </>
       )}
-    </Link>
+    </SoftPrefetchLink>
   );
 }

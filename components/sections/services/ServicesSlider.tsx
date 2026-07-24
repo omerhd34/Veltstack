@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { ServicesResponsiveSlider } from "./ServicesResponsiveSlider";
+import { ServicesResponsiveSliderLazy } from "./ServicesResponsiveSliderLazy";
 import { serviceItems } from "./service-items";
 
 interface ServicesSliderProps {
@@ -19,6 +19,6 @@ export async function ServicesSlider({ className }: ServicesSliderProps) {
   }));
 
   return (
-    <ServicesResponsiveSlider className={className} services={services} />
+    <ServicesResponsiveSliderLazy className={className} services={services} />
   );
 }

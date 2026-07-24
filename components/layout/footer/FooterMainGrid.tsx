@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import {
   footerCorporateItems,
   footerLegalItems,
@@ -39,12 +39,12 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
             return (
               <li key={item.href}>
-                <Link href={item.href} className={footerLinkClassName}>
+                <SoftPrefetchLink href={item.href} className={footerLinkClassName}>
                   <span className="inline-flex size-4 shrink-0 items-center justify-center">
                     <Icon className="size-4" aria-hidden />
                   </span>
                   {serviceLabels[item.navKey]}
-                </Link>
+                </SoftPrefetchLink>
               </li>
             );
           })}
@@ -61,12 +61,12 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
             return (
               <li key={item.href}>
-                <Link href={item.href} className={footerLinkClassName}>
+                <SoftPrefetchLink href={item.href} className={footerLinkClassName}>
                   <span className="inline-flex size-4 shrink-0 items-center justify-center">
                     <Icon className="size-4" aria-hidden />
                   </span>
                   {corporateLabels[item.labelKey]}
-                </Link>
+                </SoftPrefetchLink>
               </li>
             );
           })}
@@ -83,12 +83,12 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
             return (
               <li key={item.href}>
-                <Link href={item.href} className={footerLinkClassName}>
+                <SoftPrefetchLink href={item.href} className={footerLinkClassName}>
                   <span className="inline-flex size-4 shrink-0 items-center justify-center">
                     <Icon className="size-4" aria-hidden />
                   </span>
                   {legalLabels[item.labelKey]}
-                </Link>
+                </SoftPrefetchLink>
               </li>
             );
           })}

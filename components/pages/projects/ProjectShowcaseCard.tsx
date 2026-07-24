@@ -1,6 +1,6 @@
 import type { IconType } from "react-icons";
 import Image from "next/image";
-import { Link } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import { cn, isExternalHref } from "@/lib/utils";
 
 interface ProjectShowcaseCardProps {
@@ -102,7 +102,7 @@ export function ProjectShowcaseCard({
   );
 
   return (
-    <Link
+    <SoftPrefetchLink
       href={href}
       {...(isExternalHref(href)
         ? { target: "_blank", rel: "noopener noreferrer" }
@@ -110,6 +110,6 @@ export function ProjectShowcaseCard({
       className={cardClassName}
     >
       {content}
-    </Link>
+    </SoftPrefetchLink>
   );
 }

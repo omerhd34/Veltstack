@@ -2,7 +2,7 @@
 
 import type { IconType } from "react-icons";
 import { LuArrowUpRight } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import { cn } from "@/lib/utils";
 
 interface NavbarMegaMenuItemProps {
@@ -20,7 +20,7 @@ export function NavbarMegaMenuItem({
 }: NavbarMegaMenuItemProps) {
   return (
     <div className="mega-menu-card">
-      <Link
+      <SoftPrefetchLink
         href={href}
         onClick={onNavigate}
         className={cn(
@@ -52,7 +52,7 @@ export function NavbarMegaMenuItem({
           className="size-4 shrink-0 text-brand-accent opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100 group-data-[overlay=true]/header:text-white"
           aria-hidden
         />
-      </Link>
+      </SoftPrefetchLink>
     </div>
   );
 }

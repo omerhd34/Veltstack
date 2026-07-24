@@ -8,7 +8,7 @@ import {
 } from "@/components/pages/blog/blog-data";
 import { toLatinUppercase } from "@/lib/utils";
 import { BlogPreviewMoreButton } from "./BlogPreviewMoreButton";
-import { BlogPreviewScrollCarousel } from "./BlogPreviewScrollCarousel";
+import { BlogPreviewScrollCarouselLazy } from "./BlogPreviewScrollCarouselLazy";
 
 interface BlogPreviewSectionProps {
   className?: string;
@@ -75,12 +75,11 @@ export async function BlogPreviewSection({
 
       <SiteContainer className="relative">
         <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
-          <BlogPreviewScrollCarousel
+          <BlogPreviewScrollCarouselLazy
             className="mt-6 sm:mt-8 lg:mt-10"
             posts={posts}
           />
         </SectionScrollReveal>
-
       </SiteContainer>
 
       <div

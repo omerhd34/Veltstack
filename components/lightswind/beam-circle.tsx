@@ -7,7 +7,7 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
-import { Link } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import { cn } from "@/lib/utils";
 
 export type OrbitIconConfig = {
@@ -185,7 +185,7 @@ function OrbitRing({
                   </span>
                 ) : null}
                 {orbitIcon.href ? (
-                  <Link
+                  <SoftPrefetchLink
                     href={orbitIcon.href}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -206,7 +206,7 @@ function OrbitRing({
                     >
                       {orbitIcon.icon}
                     </div>
-                  </Link>
+                  </SoftPrefetchLink>
                 ) : (
                   <button
                     type="button"

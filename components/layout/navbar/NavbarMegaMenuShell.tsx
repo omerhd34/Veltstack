@@ -2,7 +2,7 @@
 
 import type { ReactNode } from "react";
 import { LuArrowRight } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
+import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import { StardustShell } from "@/components/lightswind/stardust-button";
 import {
   stardustContent,
@@ -43,7 +43,7 @@ export function NavbarMegaMenuShell({
           beamBorderRadius={8}
           beamSize={40}
         >
-          <Link
+          <SoftPrefetchLink
             href={allHref}
             onClick={onNavigate}
             className={cn(
@@ -60,7 +60,7 @@ export function NavbarMegaMenuShell({
                 aria-hidden
               />
             </span>
-          </Link>
+          </SoftPrefetchLink>
         </StardustShell>
       </div>
     </div>

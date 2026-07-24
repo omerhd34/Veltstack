@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import { TestimonialCarousel, type TestimonialItem } from "./TestimonialCarousel";
+import { TestimonialCarouselLazy } from "./TestimonialCarouselLazy";
+import type { TestimonialItem } from "./TestimonialCarousel";
 
 interface TestimonialSliderProps {
   className?: string;
@@ -10,7 +11,7 @@ export async function TestimonialSlider({ className }: TestimonialSliderProps) {
   const testimonials = t.raw("testimonialItems") as TestimonialItem[];
 
   return (
-    <TestimonialCarousel
+    <TestimonialCarouselLazy
       testimonials={testimonials}
       labels={{
         prev: t("testimonialsPrev"),
