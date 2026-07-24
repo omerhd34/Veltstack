@@ -14,10 +14,6 @@ const staticPages = [
   "/hakkimizda",
   "/iletisim",
   "/sss",
-  "/gizlilik-politikasi",
-  "/kullanim-sartlari",
-  "/cerez-politikasi",
-  "/kvkk-aydinlatma-metni",
 ] as const;
 
 function localizedUrl(locale: (typeof routing.locales)[number], href: string) {
