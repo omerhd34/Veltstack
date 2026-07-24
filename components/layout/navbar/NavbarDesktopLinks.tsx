@@ -40,7 +40,10 @@ export function NavbarDesktopLinks({ className }: NavbarDesktopLinksProps) {
     (state) => state.scheduleCloseFaqMenu,
   );
 
-  const trailingLinks = [{ href: "/iletisim", label: tNav("contact") }];
+  const trailingLinks = [
+    { href: "/hakkimizda", label: tNav("about") },
+    { href: "/iletisim", label: tNav("contact") },
+  ];
 
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
