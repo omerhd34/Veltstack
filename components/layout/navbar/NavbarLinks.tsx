@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import type { IconType } from "react-icons";
 import { NavCaretIcon } from "./NavCaretIcon";
 import { useLocale, useTranslations } from "next-intl";
@@ -17,9 +17,44 @@ import { navItemClass } from "./nav-link-styles";
 
 function MobileNavIcon({ icon: Icon }: { icon: IconType }) {
   return (
-    <span className="flex size-7 shrink-0 items-center justify-center rounded-md bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/15">
+    <span className="flex size-7 shrink-0 items-center justify-center rounded-[10px] bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/15">
       <Icon className="size-3.5" strokeWidth={1.75} aria-hidden />
     </span>
+  );
+}
+
+function MobileNavTreeItem({
+  isLast,
+  children,
+}: {
+  isLast: boolean;
+  children: ReactNode;
+}) {
+  return (
+    <li className="mobile-nav-tree-item">
+      <span className="mobile-nav-tree-guide" aria-hidden>
+        <span
+          className={cn(
+            "mobile-nav-tree-stem",
+            isLast && "mobile-nav-tree-stem--end",
+          )}
+        />
+        <svg
+          className="mobile-nav-tree-elbow"
+          viewBox="0 0 14 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 0C1 6 1 9 9 9H14"
+            stroke="currentColor"
+            strokeWidth="2"
+            vectorEffect="non-scaling-stroke"
+          />
+        </svg>
+      </span>
+      {children}
+    </li>
   );
 }
 
@@ -115,7 +150,7 @@ export function NavbarLinks({
             <button
               type="button"
               onClick={() => toggleSection("services")}
-              className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-brand-accent/10 hover:text-foreground"
+              className="flex size-11 shrink-0 appearance-none items-center justify-center border-0 bg-transparent p-0 text-foreground/70 shadow-none outline-none ring-0 transition-colors hover:text-foreground focus:outline-none focus-visible:outline-none focus-visible:ring-0"
               aria-expanded={servicesOpen}
               aria-label={tNav("services")}
             >
@@ -128,13 +163,16 @@ export function NavbarLinks({
           </div>
           {servicesOpen && (
             <ul className={mobileNestedListClass}>
-              {serviceItems.map((item) => {
+              {serviceItems.map((item, index) => {
                 const navKey = item.navDescKey.replace(
                   /Desc$/,
                   "",
                 ) as NavServiceKey;
                 return (
-                  <li key={item.href}>
+                  <MobileNavTreeItem
+                    key={item.href}
+                    isLast={index === serviceItems.length - 1}
+                  >
                     <SoftPrefetchLink
                       href={item.href}
                       onClick={onNavigate}
@@ -146,7 +184,7 @@ export function NavbarLinks({
                       <MobileNavIcon icon={item.icon} />
                       {serviceLabels[navKey]}
                     </SoftPrefetchLink>
-                  </li>
+                  </MobileNavTreeItem>
                 );
               })}
             </ul>
@@ -174,7 +212,7 @@ export function NavbarLinks({
             <button
               type="button"
               onClick={() => toggleSection("projects")}
-              className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-brand-accent/10 hover:text-foreground"
+              className="flex size-11 shrink-0 appearance-none items-center justify-center border-0 bg-transparent p-0 text-foreground/70 shadow-none outline-none ring-0 transition-colors hover:text-foreground focus:outline-none focus-visible:outline-none focus-visible:ring-0"
               aria-expanded={projectsOpen}
               aria-label={tNav("projects")}
             >
@@ -187,7 +225,7 @@ export function NavbarLinks({
           </div>
           {projectsOpen && (
             <ul className={mobileNestedListClass}>
-              {projectItems.map((item) => {
+              {projectItems.map((item, index) => {
                 const navKey = item.navDescKey.replace(
                   /Desc$/,
                   "",
@@ -207,7 +245,10 @@ export function NavbarLinks({
                 );
 
                 return (
-                  <li key={item.href}>
+                  <MobileNavTreeItem
+                    key={item.href}
+                    isLast={index === projectItems.length - 1}
+                  >
                     <SoftPrefetchLink
                       href={item.href}
                       {...(isExternalHref(item.href)
@@ -218,7 +259,7 @@ export function NavbarLinks({
                     >
                       {content}
                     </SoftPrefetchLink>
-                  </li>
+                  </MobileNavTreeItem>
                 );
               })}
             </ul>
@@ -246,7 +287,7 @@ export function NavbarLinks({
             <button
               type="button"
               onClick={() => toggleSection("blog")}
-              className="flex size-11 shrink-0 items-center justify-center rounded-xl text-foreground/70 transition-colors hover:bg-brand-accent/10 hover:text-foreground"
+              className="flex size-11 shrink-0 appearance-none items-center justify-center border-0 bg-transparent p-0 text-foreground/70 shadow-none outline-none ring-0 transition-colors hover:text-foreground focus:outline-none focus-visible:outline-none focus-visible:ring-0"
               aria-expanded={blogOpen}
               aria-label={tNav("blog")}
             >
@@ -259,8 +300,11 @@ export function NavbarLinks({
           </div>
           {blogOpen && (
             <ul className={mobileNestedListClass}>
-              {navBlogPosts.map((post) => (
-                <li key={post.slug}>
+              {navBlogPosts.map((post, index) => (
+                <MobileNavTreeItem
+                  key={post.slug}
+                  isLast={index === navBlogPosts.length - 1}
+                >
                   <SoftPrefetchLink
                     href={`/blog/${post.slug}`}
                     onClick={onNavigate}
@@ -277,7 +321,7 @@ export function NavbarLinks({
                     />
                     {post.title}
                   </SoftPrefetchLink>
-                </li>
+                </MobileNavTreeItem>
               ))}
             </ul>
           )}
