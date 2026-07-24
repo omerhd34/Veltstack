@@ -24,7 +24,21 @@ export function ArticleSchema({
     datePublished,
     dateModified,
     image: imageUrl,
-    author: { "@type": "Person", name: "Veltstack" },
+    author: {
+      "@type": "Person",
+      name: "Ömer Halis Demir",
+      url: "https://www.omerhalisdemir.com.tr/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Veltstack",
+      url: "https://www.veltstack.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.veltstack.com/images/logo.png",
+      },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
   };
 
   return (

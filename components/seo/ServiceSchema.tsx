@@ -11,7 +11,13 @@ export function ServiceSchema({ name, description, url }: ServiceSchemaProps) {
     name,
     description,
     url,
-    provider: { "@type": "Organization", name: "Veltstack" },
+    provider: {
+      "@type": "Organization",
+      name: "Veltstack",
+      url: "https://www.veltstack.com",
+    },
+    areaServed: "TR",
+    availableLanguage: ["Turkish", "English"],
   };
 
   return (
