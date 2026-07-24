@@ -12,7 +12,7 @@ export function BlogPreviewImage({ src, alt }: BlogPreviewImageProps) {
         src={src}
         alt={alt}
         fill
-        className="object-contain transition-transform duration-500 group-hover:scale-105"
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
         sizes="(max-width: 768px) 100vw, 33vw"
       />
     </div>
