@@ -42,7 +42,7 @@ export function CarouselPagination({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md",
+        "inline-flex items-center gap-0 rounded-full border px-1 py-0.5 backdrop-blur-md lg:gap-0.5 lg:px-1.5 lg:py-1",
         isDark
           ? "border-white/15 bg-white/10 shadow-[0_4px_20px_rgb(0,0,0,0.12)]"
           : "border-border/60 bg-white/70 shadow-[0_4px_20px_rgb(0,0,0,0.04)]",
@@ -61,18 +61,18 @@ export function CarouselPagination({
         const itemClassName = cn(
           "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-500 ease-out motion-reduce:transition-none",
           isActive
-            ? "h-11 min-w-11 bg-brand-accent px-2.5 text-xs font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)]"
+            ? "h-8 min-w-8 bg-brand-accent px-2 text-[10px] font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)] lg:h-11 lg:min-w-11 lg:px-2.5 lg:text-xs"
             : cn(
-                "size-11",
+                "size-8 lg:size-11",
                 isDark ? "hover:bg-white/10" : "hover:bg-brand-accent/10",
               ),
         );
         const dotClassName = cn(
           "rounded-full",
           isDark ? "bg-white/35" : "bg-brand-accent/35",
-          distance === 0 && "size-2.5",
-          distance === 1 && "size-2",
-          distance >= 2 && "size-1.5 opacity-70",
+          distance === 0 && "size-2 lg:size-2.5",
+          distance === 1 && "size-1.5 lg:size-2",
+          distance >= 2 && "size-1 lg:size-1.5 opacity-70",
         );
 
         return onSelect ? (
@@ -100,11 +100,14 @@ export function CarouselPagination({
 
       <span
         aria-hidden
-        className={cn("mx-1 h-3 w-px", isDark ? "bg-white/25" : "bg-border/80")}
+        className={cn(
+          "mx-0.5 h-2.5 w-px lg:mx-1 lg:h-3",
+          isDark ? "bg-white/25" : "bg-border/80",
+        )}
       />
       <span
         className={cn(
-          "pr-1.5 font-(family-name:--font-heading) text-[11px] tracking-[0.14em]",
+          "pr-1 font-(family-name:--font-heading) text-[10px] tracking-[0.14em] lg:pr-1.5 lg:text-[11px]",
           isDark ? "text-white/70" : "text-foreground/65",
         )}
       >
