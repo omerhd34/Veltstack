@@ -205,7 +205,7 @@ export function BackToTop({ className }: BackToTopProps) {
         beamColorFrom={onDark ? "#3A6B52" : "#111111"}
         beamColorTo={onDark ? "#6ee7b7" : "#3f3f3f"}
         className={cn(
-          "size-11 shrink-0 overflow-visible rounded-none",
+          "size-12 shrink-0 overflow-visible rounded-none",
           !onDark &&
             "shadow-[0_0_18px_rgb(0_0_0/0.14)] [&_.stardust-shell__border]:border-foreground/55 [&_.stardust-shell__border]:shadow-none",
         )}
@@ -236,7 +236,7 @@ export function BackToTop({ className }: BackToTopProps) {
             <PiArrowFatLinesUpFill
               aria-hidden
               className={cn(
-                "size-4 transition-transform duration-300 ease-out",
+                "size-6 transition-transform duration-300 ease-out",
                 "group-hover/stardust:-translate-y-0.5",
                 stardustIcon,
               )}
