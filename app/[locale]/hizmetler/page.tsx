@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: ServicesPageProps) {
     namespace: "pages",
     titleKey: "servicesTitle",
     descriptionKey: "servicesSubtitle",
+    keywordsKey: "servicesKeywords",
     href: "/hizmetler",
   });
 }

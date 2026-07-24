@@ -22,6 +22,7 @@ export async function generateMetadata({ params }: HomePageProps) {
     namespace: "pages",
     titleKey: "homeTitle",
     descriptionKey: "homeSubtitle",
+    keywordsKey: "homeKeywords",
     href: "/",
     absoluteTitle: true,
   });

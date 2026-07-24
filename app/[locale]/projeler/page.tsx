@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: ProjectsPageProps) {
     namespace: "pages",
     titleKey: "projectsTitle",
     descriptionKey: "projectsSubtitle",
+    keywordsKey: "projectsKeywords",
     href: "/projeler",
   });
 }

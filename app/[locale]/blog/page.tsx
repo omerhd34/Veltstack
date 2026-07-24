@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: BlogPageProps) {
     namespace: "blogPage",
     titleKey: "heroBadge",
     descriptionKey: "heroSubtitle",
+    keywordsKey: "keywords",
     href: "/blog",
   });
 }

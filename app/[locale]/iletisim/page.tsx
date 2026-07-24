@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: ContactPageProps) {
     namespace: "pages",
     titleKey: "contactTitle",
     descriptionKey: "contactSubtitle",
+    keywordsKey: "contactKeywords",
     href: "/iletisim",
   });
 }

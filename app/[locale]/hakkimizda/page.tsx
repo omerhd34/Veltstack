@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: AboutPageProps) {
     namespace: "pages",
     titleKey: "aboutTitle",
     descriptionKey: "aboutSubtitle",
+    keywordsKey: "aboutKeywords",
     href: "/hakkimizda",
   });
 }
