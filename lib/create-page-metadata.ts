@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
-import {
-  buildPageAlternates,
-  buildSocialMetadata,
-} from "@/lib/seo";
+import { buildPageAlternates, buildSocialMetadata } from "@/lib/seo";
 
 interface CreatePageMetadataOptions {
   locale: string;
@@ -13,6 +10,7 @@ interface CreatePageMetadataOptions {
   descriptionKey: string;
   href: string;
   absoluteTitle?: boolean;
+  keywordsKey?: string;
 }
 
 export async function createPageMetadata({
@@ -22,11 +20,13 @@ export async function createPageMetadata({
   descriptionKey,
   href,
   absoluteTitle = false,
+  keywordsKey,
 }: CreatePageMetadataOptions): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace });
   const loc = locale as Locale;
   const title = t(titleKey);
   const description = t(descriptionKey);
+  const keywords = keywordsKey ? (t.raw(keywordsKey) as string[]) : undefined;
   const social = buildSocialMetadata({
     title,
     description,
@@ -37,6 +37,7 @@ export async function createPageMetadata({
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
+    ...(keywords ? { keywords } : {}),
     alternates: buildPageAlternates(loc, href),
     ...social,
   };
