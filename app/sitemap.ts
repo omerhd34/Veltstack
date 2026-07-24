@@ -4,6 +4,7 @@ import { routing } from "@/i18n/routing";
 import { serviceSlugs } from "@/components/sections/services/service-items";
 import { projectSlugs } from "@/components/sections/projects/project-items";
 import { blogPosts } from "@/components/pages/blog/posts";
+import { SITE_URL, buildLanguageAlternates } from "@/lib/seo";
 
 const staticPages = [
   "/",
@@ -20,46 +21,61 @@ const staticPages = [
 ] as const;
 
 function localizedUrl(locale: (typeof routing.locales)[number], href: string) {
-  return `https://www.veltstack.com${getPathname({ locale, href })}`;
+  return `${SITE_URL}${getPathname({ locale, href })}`;
+}
+
+function entriesForHref(
+  href: string,
+  options: {
+    lastModified: Date;
+    changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+    priority: number;
+  },
+): MetadataRoute.Sitemap {
+  const languages = buildLanguageAlternates(href);
+
+  return routing.locales.map((locale) => ({
+    url: localizedUrl(locale, href),
+    lastModified: options.lastModified,
+    changeFrequency: options.changeFrequency,
+    priority: options.priority,
+    alternates: { languages },
+  }));
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
   const staticEntries = staticPages.flatMap((page) =>
-    routing.locales.map((locale) => ({
-      url: localizedUrl(locale, page),
+    entriesForHref(page, {
       lastModified: now,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: page === "/" ? 1 : 0.8,
-    })),
+    }),
   );
 
   const serviceEntries = serviceSlugs.flatMap((slug) =>
-    routing.locales.map((locale) => ({
-      url: localizedUrl(locale, `/hizmetler/${slug}`),
+    entriesForHref(`/hizmetler/${slug}`, {
       lastModified: now,
-      changeFrequency: "monthly" as const,
+      changeFrequency: "monthly",
       priority: 0.9,
-    })),
+    }),
   );
 
   const projectEntries = projectSlugs.flatMap((slug) =>
-    routing.locales.map((locale) => ({
-      url: localizedUrl(locale, `/projeler/${slug}`),
+    entriesForHref(`/projeler/${slug}`, {
       lastModified: now,
-      changeFrequency: "yearly" as const,
+      changeFrequency: "yearly",
       priority: 0.7,
-    })),
+    }),
   );
 
   const postEntries = blogPosts.flatMap((post) =>
-    routing.locales.map((locale) => ({
-      url: localizedUrl(locale, `/blog/${post.slug}`),
+    entriesForHref(`/blog/${post.slug}`, {
       lastModified: new Date(post.publishedAt),
-      changeFrequency: "weekly" as const,
+      changeFrequency: "weekly",
       priority: 0.8,
-    })),
+    }),
   );
 
   return [

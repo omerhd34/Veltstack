@@ -4,7 +4,8 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Veltstack",
     short_name: "Veltstack",
-    description: "Full Stack Developer - Veltstack",
+    description:
+      "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
     start_url: "/",
     display: "standalone",
     background_color: "#0A0A0F",
