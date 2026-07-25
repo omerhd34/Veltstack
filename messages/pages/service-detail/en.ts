@@ -197,7 +197,7 @@ export const serviceDetailsEn = {
     ],
   },
   "uygulama-gelistirme": {
-    metaTitle: "Mobile App Development | React Native",
+    metaTitle: "Mobile App Development",
     metaDesc:
       "High-performance mobile apps for iOS and Android with React Native and Expo.",
     keywords: [
@@ -260,9 +260,9 @@ export const serviceDetailsEn = {
     ],
   },
   "seo-hizmetleri": {
-    metaTitle: "SEO Services | Grow Organic Traffic",
+    metaTitle: "SEO Services",
     metaDesc:
-      "Sustainable organic growth through technical SEO, content strategy and performance optimization.",
+      "We grow your organic visibility with technical SEO, keyword strategy and content optimization — measurable steps, lasting results.",
     keywords: [
       "SEO services",
       "grow organic traffic",

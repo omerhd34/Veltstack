@@ -17,6 +17,7 @@ import { getBlogArticleContent } from "@/components/pages/blog/blog-articles";
 import { toLatinUppercase } from "@/lib/utils";
 import type { Locale } from "@/i18n/routing";
 import {
+  SITE_NAME,
   SITE_URL,
   absoluteUrl,
   buildPageAlternates,
@@ -41,14 +42,14 @@ export async function generateMetadata({
 
   const loc = locale as Locale;
   const href = `/blog/${slug}`;
-  const title = locale === "tr" ? post.titleTr : post.titleEn;
+  const title = `${locale === "tr" ? post.titleTr : post.titleEn} | ${SITE_NAME}`;
   const desc = locale === "tr" ? post.excerptShortTr : post.excerptShortEn;
   const images = post.imageUrl
     ? [{ url: absoluteUrl(getBlogDetailImageUrl(post.imageUrl)) }]
     : undefined;
 
   return {
-    title,
+    title: { absolute: title },
     description: desc,
     alternates: buildPageAlternates(loc, href),
     ...buildSocialMetadata({

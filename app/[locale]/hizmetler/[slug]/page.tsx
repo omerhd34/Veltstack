@@ -9,6 +9,7 @@ import {
 import { BreadcrumbSchema, ServiceSchema } from "@/components/seo";
 import type { Locale } from "@/i18n/routing";
 import {
+  SITE_NAME,
   SITE_URL,
   absoluteUrl,
   buildPageAlternates,
@@ -36,12 +37,12 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "serviceDetails" });
   const loc = locale as Locale;
   const href = `/hizmetler/${slug}`;
-  const title = t(`${slug}.metaTitle`);
+  const title = `${t(`${slug}.metaTitle`)} | ${SITE_NAME}`;
   const description = t(`${slug}.metaDesc`);
   const keywords = t.raw(`${slug}.keywords`) as string[];
 
   return {
-    title,
+    title: { absolute: title },
     description,
     keywords,
     alternates: buildPageAlternates(loc, href),

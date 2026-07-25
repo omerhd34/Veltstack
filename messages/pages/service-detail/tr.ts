@@ -55,7 +55,7 @@ export const serviceDetailsTr = {
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
   "web-sitesi-gelistirme": {
-    metaTitle: "Web Sitesi Yapımı | Next.js Kurumsal Site",
+    metaTitle: "Web Sitesi Yapımı",
     metaDesc:
       "Kurumsal web sitesi yapımı, e-ticaret ve portfolyo projelerinde uçtan uca web yapımı. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
     keywords: [
@@ -197,7 +197,7 @@ export const serviceDetailsTr = {
     ],
   },
   "uygulama-gelistirme": {
-    metaTitle: "Mobil Uygulama Geliştirme | React Native",
+    metaTitle: "Mobil Uygulama Geliştirme",
     metaDesc:
       "iOS ve Android için React Native ve Expo ile performanslı mobil uygulama geliştirme hizmeti.",
     keywords: [
@@ -260,9 +260,9 @@ export const serviceDetailsTr = {
     ],
   },
   "seo-hizmetleri": {
-    metaTitle: "SEO Hizmetleri | Organik Trafik Artırma",
+    metaTitle: "SEO Hizmetleri",
     metaDesc:
-      "Teknik SEO, içerik stratejisi ve performans optimizasyonu ile sürdürülebilir organik büyüme.",
+      "Teknik SEO, anahtar kelime ve içerik stratejisiyle organik görünürlüğünüzü ölçülebilir adımlarla büyütüyoruz.",
     keywords: [
       "SEO hizmetleri",
       "organik trafik artırma",
@@ -387,7 +387,7 @@ export const serviceDetailsTr = {
     ],
   },
   "bakim-ve-destek": {
-    metaTitle: "Web Sitesi Bakım ve Destek",
+    metaTitle: "Bakım ve Destek",
     metaDesc:
       "Web sitesi, mobil uygulama ve backend altyapınız için düzenli bakım, güncelleme ve teknik destek hizmeti.",
     keywords: [
