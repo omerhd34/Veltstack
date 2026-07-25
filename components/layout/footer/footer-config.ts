@@ -4,11 +4,15 @@ import { serviceItems } from "@/components/sections/services/service-items";
 import { projectItems } from "@/components/sections/projects/project-items";
 import type { IconType } from "react-icons";
 import {
+  LuBot,
   LuCircleHelp,
   LuCode,
   LuCookie,
   LuFileText,
+  LuFolderKanban,
   LuGlobe,
+  LuHouse,
+  LuLayoutTemplate,
   LuMail,
   LuNewspaper,
   LuScale,
@@ -18,14 +22,23 @@ import {
   LuSmartphone,
   LuUsers,
   LuWrench,
-  LuFolderKanban,
 } from "react-icons/lu";
 
-export const footerServiceItems = serviceItems.map((service) => ({
-  href: service.href,
-  navKey: service.navDescKey.replace(/Desc$/, "") as NavServiceKey,
-  icon: service.icon,
-}));
+export const footerServiceItems = [
+  "web-sitesi-gelistirme",
+  "uygulama-gelistirme",
+  "seo-hizmetleri",
+  "web-sitesi-yenileme",
+  "teknik-denetim",
+  "bakim-ve-destek",
+].map((slug) => {
+  const service = serviceItems.find((item) => item.slug === slug)!;
+  return {
+    href: service.href,
+    navKey: service.navDescKey.replace(/Desc$/, "") as NavServiceKey,
+    icon: service.icon,
+  };
+});
 
 export const footerProjectItems = projectItems.map((project) => ({
   href: project.href,
@@ -36,6 +49,10 @@ export const footerProjectItems = projectItems.map((project) => ({
 const footerBlogCategoryIcons: Record<string, IconType> = {
   "Web Yapımı": LuCode,
   "Web Building": LuCode,
+  "Yapay Zeka": LuBot,
+  "Artificial Intelligence": LuBot,
+  "Özel Yazılım": LuLayoutTemplate,
+  "Custom Software": LuLayoutTemplate,
   Mobil: LuSmartphone,
   Mobile: LuSmartphone,
   SEO: LuSearch,
@@ -51,6 +68,7 @@ export function getFooterBlogCategoryIcon(category: string): IconType {
 }
 
 export const footerCorporateItems = [
+  { href: "/", labelKey: "home", icon: LuHouse },
   { href: "/hakkimizda", labelKey: "about", icon: LuUsers },
   { href: "/projeler", labelKey: "projects", icon: LuFolderKanban },
   { href: "/blog", labelKey: "blog", icon: LuNewspaper },

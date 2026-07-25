@@ -12,7 +12,12 @@ export function FooterCopyright({ className }: FooterCopyrightProps) {
 
   return (
     <p className={`text-sm text-background/50 ${className ?? ""}`}>
-      {t("copyright", { year })}
+      {t.rich("copyright", {
+        year,
+        brand: (chunks) => (
+          <span className="font-bold text-background/80">{chunks}</span>
+        ),
+      })}
     </p>
   );
 }

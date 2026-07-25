@@ -46,7 +46,9 @@ export function Logo({
       aria-label="Veltstack"
     >
       <Image
-        src="/images/logo.png"
+        src={
+          variant === "footer" ? "/images/logo-overlay.png" : "/images/logo.png"
+        }
         alt="Veltstack"
         width={image.width}
         height={image.height}

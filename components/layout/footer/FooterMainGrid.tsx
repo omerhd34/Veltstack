@@ -1,11 +1,13 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
+import { getFooterBlogPosts } from "@/components/pages/blog/blog-data";
 import {
   footerCorporateItems,
   footerLegalItems,
   footerServiceItems,
+  getFooterBlogCategoryIcon,
 } from "./footer-config";
 import { FooterColumn } from "./FooterColumn";
 
@@ -15,11 +17,14 @@ interface FooterMainGridProps {
 
 export function FooterMainGrid({ className }: FooterMainGridProps) {
   const t = useTranslations("footer");
+  const locale = useLocale() as "tr" | "en";
   const serviceLabels = t.raw("serviceLabels") as Record<string, string>;
   const corporateLabels = t.raw("corporateLabels") as Record<string, string>;
   const legalLabels = t.raw("legalLabels") as Record<string, string>;
+  const blogPosts = getFooterBlogPosts(locale);
 
-  const footerLinkClassName = "inline-flex items-center gap-2.5 text-sm text-background/60 transition-colors hover:text-background";
+  const footerLinkClassName =
+    "inline-flex items-center gap-2.5 text-sm text-background/60 transition-colors hover:text-background";
 
   const footerColumnClassName = "w-full sm:w-fit";
 
@@ -27,7 +32,7 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
   return (
     <div
-      className={`grid grid-cols-1 gap-y-10 sm:grid-cols-3 sm:gap-x-16 lg:gap-x-24 ${className ?? ""}`}
+      className={`grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-12 lg:grid-cols-4 lg:gap-x-16 ${className ?? ""}`}
     >
       <FooterColumn
         title={t("servicesTitle")}
@@ -53,7 +58,7 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
       <FooterColumn
         title={t("corporateTitle")}
-        className={`${footerColumnClassName} sm:justify-self-center`}
+        className={`${footerColumnClassName} lg:justify-self-center`}
       >
         <ul className={footerListClassName}>
           {footerCorporateItems.map((item) => {
@@ -74,8 +79,33 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
       </FooterColumn>
 
       <FooterColumn
+        title={t("blogTitle")}
+        className={`${footerColumnClassName} lg:justify-self-center`}
+      >
+        <ul className={footerListClassName}>
+          {blogPosts.map((post) => {
+            const Icon = getFooterBlogCategoryIcon(post.category);
+
+            return (
+              <li key={post.slug}>
+                <SoftPrefetchLink
+                  href={`/blog/${post.slug}`}
+                  className={footerLinkClassName}
+                >
+                  <span className="inline-flex size-4 shrink-0 items-center justify-center">
+                    <Icon className="size-4" aria-hidden />
+                  </span>
+                  {post.title}
+                </SoftPrefetchLink>
+              </li>
+            );
+          })}
+        </ul>
+      </FooterColumn>
+
+      <FooterColumn
         title={t("legalTitle")}
-        className={`${footerColumnClassName} sm:justify-self-end`}
+        className={`${footerColumnClassName} sm:justify-self-end lg:justify-self-end`}
       >
         <ul className={footerListClassName}>
           {footerLegalItems.map((item) => {
