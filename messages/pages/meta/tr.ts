@@ -78,9 +78,4 @@ export const pagesTr = {
     "psikolog web sitesi",
     "React proje örnekleri",
   ],
-  blogTitle: "Blog",
-  blogSubtitle: "Blog yazıları yakında burada listelenecek.",
-  serviceDetailSuffix: "Hizmet detay sayfası | Veltstack",
-  projectDetailSuffix: "Proje detay sayfası | Veltstack",
-  blogDetailSuffix: "Blog Yazısı | Veltstack",
 } as const;

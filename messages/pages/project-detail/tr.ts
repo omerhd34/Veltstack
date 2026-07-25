@@ -17,10 +17,6 @@ export const projectDetailsTr = {
   relatedServicesTitle: "İlgili Hizmetler",
   relatedServicesSubtitle:
     "Bu projede kullandığım ve benzer ihtiyaçlara yönelik hizmet alanları.",
-  ctaTitle: "Benzer bir proje mi planlıyorsunuz?",
-  ctaSubtitle:
-    "Finans, e-ticaret veya kurumsal platform ihtiyaçlarınızı ücretsiz ön görüşmede birlikte değerlendirelim ve 24 saat içinde size dönüş yapalım.",
-  ctaButton: "Teklif Al",
   breadcrumbHome: "Ana Sayfa",
   breadcrumbProjects: "Projeler",
   metricHints: {

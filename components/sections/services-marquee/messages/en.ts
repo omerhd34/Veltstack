@@ -1,5 +1,5 @@
 export const servicesMarqueeHomeEn = {
-  "servicesMarqueeItems": [
+  servicesMarqueeItems: [
     "Web Building",
     "Digital Refresh",
     "Mobile App Building",
@@ -9,6 +9,6 @@ export const servicesMarqueeHomeEn = {
     "Technical Audit",
     "Portfolio Website",
     "API Building",
-    "Maintenance and Support"
-  ]
-} as const
+    "Maintenance and Support",
+  ],
+} as const;

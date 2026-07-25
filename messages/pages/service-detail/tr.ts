@@ -16,11 +16,7 @@ export const serviceDetailsTr = {
   processSliderPrev: "Önceki süreç adımı",
   processSliderNext: "Sonraki süreç adımı",
   processSliderStep: "Süreç adımı",
-  processSubtitle:
-    "Keşiften yayına kadar her aşamada ne yapılacağını, ne zaman teslim edileceğini ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve canlıya alma adımlarını öngörülebilir bir planla yönetiyor; proje boyunca düzenli iletişimle sizi bilgilendiriyoruz.",
   techTitle: "Kullandığımız Teknolojiler",
-  techSubtitle:
-    "Projenizin ihtiyacına göre seçilmiş, güncel ve ölçeklenebilir araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
   techCategoryFrontend: "Frontend",
   techCategoryMobile: "Mobil Yapım",
   techCategoryUi: "UI Kütüphaneleri",
@@ -31,8 +27,6 @@ export const serviceDetailsTr = {
   techCategoryPayment: "Ödeme",
   techCategoryStore: "Mağaza & Yayın",
   techCategoryTools: "Araçlar & Entegrasyon",
-  deliveryLabel: "Teslim Süresi",
-  heroImageAlt: "Dijital yapım çalışma ortamı",
   statDelivery: "Teslim Süresi (Gün)",
   statDeliveryShort: "Teslim (Gün)",
   statSupport: "Destek Süresi (Gün)",
@@ -78,9 +72,7 @@ export const serviceDetailsTr = {
     heroSubtitle:
       "Kurumsal siteden e-ticarete, portfolyodan tanıtım sayfasına kadar her web projesini uçtan uca geliştiriyorum.",
     heroSubtitleSecondary:
-      "Projenize uygun modern altyapı, SEO uyumlu yapı ve mobil öncelikli tasarımla markanızı dijitalde güçlü bir şekilde temsil edecek, hızlı ve ölçeklenebilir çözümler sunuyorum.",
-    deliveryTime: "14-84 gün",
-    processSubtitle:
+      "Projenize uygun modern altyapı, SEO uyumlu yapı ve mobil öncelikli tasarımla markanızı dijitalde güçlü bir şekilde temsil edecek, hızlı ve ölçeklenebilir çözümler sunuyorum.",    processSubtitle:
       "Keşiften yayına kadar her aşamada ne yapılacağını, ne zaman teslim edileceğini ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve canlıya alma adımlarını öngörülebilir bir planla yönetiyor; proje boyunca düzenli iletişimle sizi bilgilendiriyoruz.",
     techSubtitle:
       "Projenizin ihtiyacına göre seçilmiş, güncel ve ölçeklenebilir araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
@@ -156,9 +148,7 @@ export const serviceDetailsTr = {
     heroSubtitle:
       "Güncelliğini yitirmiş, yavaş veya mobil uyumsuz web ve uygulama deneyimlerinizi modern, hızlı ve dönüşüm odaklı bir yapıya taşıyoruz.",
     heroSubtitleSecondary:
-      "Mevcut içeriklerinizi koruyarak SEO sıralamanızı riske atmadan yeni tasarım ve altyapıya güvenli geçiş sağlıyoruz.",
-    deliveryTime: "7-49 gün",
-    processSubtitle:
+      "Mevcut içeriklerinizi koruyarak SEO sıralamanızı riske atmadan yeni tasarım ve altyapıya güvenli geçiş sağlıyoruz.",    processSubtitle:
       "Mevcut sitenizi veya uygulamanızı analizden canlıya almaya kadar ölçülebilir adımlarla yeniliyoruz. SEO kaybı riskini en aza indiren geçiş planı, tasarım onayı ve içerik migrasyonu süreç boyunca şeffaf iletişimle yönetilir.",
     techSubtitle:
       "Mevcut sitenizi modern altyapıya taşırken kullandığımız güncel ve ölçeklenebilir araçlar.",
@@ -219,9 +209,7 @@ export const serviceDetailsTr = {
     heroSubtitle:
       "Tek kod tabanıyla iOS ve Android'de çalışan, kullanıcı dostu ve ölçeklenebilir mobil uygulamalar geliştiriyorum.",
     heroSubtitleSecondary:
-      "React Native ve Expo ile hızlı teslimat, sorunsuz mağaza yayını ve backend entegrasyonlarını tek çatı altında yönetiyorum.",
-    deliveryTime: "21-120 gün",
-    processSubtitle:
+      "React Native ve Expo ile hızlı teslimat, sorunsuz mağaza yayını ve backend entegrasyonlarını tek çatı altında yönetiyorum.",    processSubtitle:
       "Uygulama fikrinden mağaza yayınına kadar her aşamada ne yapılacağını ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve yayın adımlarını öngörülebilir bir planla yönetiyoruz.",
     techSubtitle:
       "Mobil uygulama projelerinde kullandığımız güncel ve ölçeklenebilir araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
@@ -283,9 +271,7 @@ export const serviceDetailsTr = {
     heroSubtitle:
       "Teknik altyapıdan içerik stratejisine kadar arama motorlarında görünürlüğünüzü artırıyorum.",
     heroSubtitleSecondary:
-      "Site denetiminden anahtar kelime planlamasına, on-page optimizasyondan düzenli raporlamaya kadar sürdürülebilir organik büyüme için uçtan uca SEO desteği sunuyorum.",
-    deliveryTime: "7-30 gün",
-    processSubtitle:
+      "Site denetiminden anahtar kelime planlamasına, on-page optimizasyondan düzenli raporlamaya kadar sürdürülebilir organik büyüme için uçtan uca SEO desteği sunuyorum.",    processSubtitle:
       "Site analizinden sürekli iyileştirmeye kadar SEO çalışmalarını ölçülebilir adımlarla yürütüyoruz. Her aşamada yapılan işleri ve beklenen çıktıları şeffaf şekilde paylaşıyoruz.",
     techSubtitle:
       "SEO projelerinde analiz, izleme ve optimizasyon için kullandığımız araçlar.",
@@ -346,9 +332,7 @@ export const serviceDetailsTr = {
     heroSubtitle:
       "Mevcut dijital varlıklarınızı performans, güvenlik, SEO ve kod kalitesi açısından analiz ediyoruz; önceliklendirilmiş aksiyon planı sunuyoruz.",
     heroSubtitleSecondary:
-      "Lighthouse skorlarından erişilebilirliğe, altyapı risklerinden teknik borca kadar kapsamlı bir denetim raporu ile net bir yol haritası çıkarıyoruz.",
-    deliveryTime: "3-10 gün",
-    processSubtitle:
+      "Lighthouse skorlarından erişilebilirliğe, altyapı risklerinden teknik borca kadar kapsamlı bir denetim raporu ile net bir yol haritası çıkarıyoruz.",    processSubtitle:
       "Denetim sürecini briefing'den aksiyon planına kadar net adımlarla yönetiyoruz. Bulguları öncelik sırasına göre raporlayıp uygulanabilir öneriler sunuyoruz.",
     techSubtitle:
       "Teknik denetimlerde performans, güvenlik ve SEO analizi için kullandığımız araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
@@ -409,9 +393,7 @@ export const serviceDetailsTr = {
     heroSubtitle:
       "Yayına aldıktan sonra da yanınızdayım. Güncelleme, yedekleme, güvenlik ve teknik destek tek çatı altında.",
     heroSubtitleSecondary:
-      "Web siteniz, mobil uygulamanız ve backend altyapınız için kesintisiz izleme, hızlı müdahale ve düzenli raporlama sunuyorum.",
-    deliveryTime: "7-14 gün",
-    processSubtitle:
+      "Web siteniz, mobil uygulamanız ve backend altyapınız için kesintisiz izleme, hızlı müdahale ve düzenli raporlama sunuyorum.",    processSubtitle:
       "Proje devralmadan aylık raporlamaya kadar bakım sürecini düzenli ve öngörülebilir adımlarla yönetiyoruz. Güncelleme, izleme ve destek talepleri net bir takvimle ilerler.",
     techSubtitle:
       "Bakım ve destek hizmetlerinde kullandığımız altyapı ve izleme araçları. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",

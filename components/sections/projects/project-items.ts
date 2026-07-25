@@ -25,7 +25,6 @@ export interface ProjectItemConfig {
   titleKey: string;
   descKey: string;
   navDescKey: string;
-  tagKey: string;
   icon: IconType;
   external?: boolean;
 }
@@ -37,7 +36,6 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectIqfinansTitle",
     descKey: "projectIqfinansDesc",
     navDescKey: "projectIqfinansDesc",
-    tagKey: "projectIqfinansTag",
     icon: LuChartLine,
   },
   {
@@ -46,7 +44,6 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectYaziciTitle",
     descKey: "projectYaziciDesc",
     navDescKey: "projectYaziciDesc",
-    tagKey: "projectYaziciTag",
     icon: LuShoppingCart,
   },
   {
@@ -55,7 +52,6 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectGardossiTitle",
     descKey: "projectGardossiDesc",
     navDescKey: "projectGardossiDesc",
-    tagKey: "projectGardossiTag",
     icon: LuArmchair,
   },
   {
@@ -64,7 +60,6 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectUzmanPsikologTitle",
     descKey: "projectUzmanPsikologDesc",
     navDescKey: "projectUzmanPsikologDesc",
-    tagKey: "projectUzmanPsikologTag",
     icon: LuBrain,
   },
   {
@@ -73,7 +68,6 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectPortfolioTitle",
     descKey: "projectPortfolioDesc",
     navDescKey: "projectPortfolioDesc",
-    tagKey: "projectPortfolioTag",
     icon: LuGlobe,
   },
   {
@@ -82,7 +76,6 @@ export const projectItems: ProjectItemConfig[] = [
     titleKey: "projectOnlinemuhasebeTitle",
     descKey: "projectOnlinemuhasebeDesc",
     navDescKey: "projectOnlinemuhasebeDesc",
-    tagKey: "projectOnlinemuhasebeTag",
     icon: LuCalculator,
   },
 ];

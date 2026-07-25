@@ -41,10 +41,4 @@ export const servicesHomeTr = {
   servicesMaintenanceDesc:
     "Güncelleme, yedekleme ve teknik destekle web ve uygulama varlıklarınızı güvenli, güncel ve kesintisiz tutuyoruz; acil müdahale süreçlerini yönetiyor, izleme ve bakım ritmini kurarak riskleri yayına yansımadan önce ele alıyoruz.",
   servicesMaintenanceTag: "Güncelleme - Yedekleme - Destek",
-  servicesStats: [
-    { num: "6", label: "Hizmet Kategorisi" },
-    { num: "100+", label: "Tamamlanan Proje" },
-    { num: "6+", label: "Yıl Deneyim" },
-    { num: "100%", label: "Müşteri Memnuniyeti" },
-  ],
 } as const;

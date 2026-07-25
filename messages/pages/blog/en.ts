@@ -61,8 +61,6 @@ export const blogPageEn = {
   writtenByLabel: "Written by",
   noResults: "No articles found matching your search criteria.",
   noResultsSub: "Try a different keyword or category.",
-  featuredBadge: "Featured",
-  latestBadge: "Latest Articles",
   categories: [
     "All",
     "Web Building",

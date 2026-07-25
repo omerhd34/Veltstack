@@ -41,10 +41,4 @@ export const servicesHomeEn = {
   servicesMaintenanceDesc:
     "We keep your websites and apps secure and up to date with scheduled updates, backups and responsive support; we respond quickly to urgent issues, monitor systems closely and catch problems before they affect users.",
   servicesMaintenanceTag: "Updates - Backup - Support",
-  servicesStats: [
-    { num: "6", label: "Service Categories" },
-    { num: "500+", label: "Completed Projects" },
-    { num: "6+", label: "Years of Experience" },
-    { num: "100%", label: "Client Satisfaction" },
-  ],
 } as const;

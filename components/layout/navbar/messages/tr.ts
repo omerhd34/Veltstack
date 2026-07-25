@@ -1,8 +1,6 @@
 export const navTr = {
   services: "Hizmetler",
   servicesAll: "Paketleri İncele",
-  servicesMegaMenuIntro:
-    "Markanızın web, uygulama, SEO ve bakım ihtiyaçlarını tek çatı altında yönetiyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
   serviceWeb: "Web Sitesi",
   serviceRefresh: "Dijital Yenileme",
   serviceApp: "Uygulama",
@@ -16,21 +14,15 @@ export const navTr = {
   projectUzmanPsikolog: "Klinik Psikolog | Kurumsal Web Sitesi",
   projectPortfolio: "Ömer Halis Demir | Portfolyo",
   projectOnlinemuhasebe: "Online Muhasebe | Kurumsal Web Sitesi",
-  projectsMegaMenuIntro:
-    "FinTech, e-ticaret ve kurumsal sektörlerde iş hedeflerini merkeze alan dijital ürünler geliştiriyoruz. Tasarım ve yapımı tek süreçte birleştirir, performans ve kullanıcı deneyimini önceliklendiririz. Farklı sektörlerdeki deneyimimizi ölçülebilir iş sonuçlarına dönüştürüyoruz.",
   projects: "Projeler",
   faq: "SSS",
   faqMobile: "Sıkça Sorulan Sorular",
   faqAll: "Sıkça Sorulan Soruları İncele",
   blog: "Blog",
   blogAll: "Blog Yazılarını İncele",
-  blogMegaMenuIntro:
-    "Web yapımı, mobil uygulama, SEO, hosting ve dijital dönüşüm üzerine pratik içerikler hazırlıyoruz. Gerçek projelerden öğrendiklerimizi sade bir dille paylaşıyoruz. Teknik konuları anlaşılır biçimde sunuyoruz. Yazılım ve altyapı sorularına net yanıtlar veriyoruz.",
   about: "Hakkımızda",
   contact: "İletişim",
   cta: "Görüşme Planla",
-  mobilePhone: "Telefon",
-  mobileEmail: "E-posta",
   localeTr: "Türkçe",
   localeEn: "İngilizce",
   switchToEn: "İngilizce'ye geç",

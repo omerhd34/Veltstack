@@ -1,8 +1,6 @@
 export const navEn = {
   services: "Services",
   servicesAll: "View Packages",
-  servicesMegaMenuIntro:
-    "We handle your web, app, SEO and maintenance needs under one roof. We define scope upfront, manage delivery transparently and focus on measurable outcomes. From design through launch we prioritize performance, accessibility and SEO.",
   serviceWeb: "Website",
   serviceRefresh: "Digital Refresh",
   serviceApp: "App",
@@ -16,21 +14,15 @@ export const navEn = {
   projectUzmanPsikolog: "Clinical Psychologist | Corporate Website",
   projectPortfolio: "Ömer Halis Demir | Portfolio",
   projectOnlinemuhasebe: "Online Accounting | Corporate Website",
-  projectsMegaMenuIntro:
-    "We build digital products for FinTech, e-commerce and corporate sectors, keeping business goals at the center. Design and building move as one process, with performance and user experience as priorities. We turn cross-sector experience into measurable outcomes.",
   projects: "Projects",
   faq: "FAQ",
   faqMobile: "Frequently Asked Questions",
   faqAll: "All FAQ",
   blog: "Articles",
   blogAll: "View Articles",
-  blogMegaMenuIntro:
-    "Practical content on web building, mobile apps, SEO, hosting and digital transformation. We share lessons from real projects in plain language. Technical topics are presented in an accessible way. We answer common software and infrastructure questions clearly.",
   about: "About Us",
   contact: "Contact",
   cta: "Schedule a Call",
-  mobilePhone: "Phone",
-  mobileEmail: "Email",
   localeTr: "Turkish",
   localeEn: "English",
   switchToEn: "Switch to English",

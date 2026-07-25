@@ -38,6 +38,5 @@ export const projectsPageTr = {
   showcaseTitle: "Her proje, bir iş hikayesi",
   showcaseSubtitle:
     "İş hedeflerine odaklı, performans ve ölçülebilir sonuçlarla dengelenmiş yapım projeleri.",
-  viewLabel: "Detayları incele",
   featuredLabel: "Öne Çıkan",
 } as const;

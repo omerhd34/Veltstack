@@ -16,11 +16,7 @@ export const serviceDetailsEn = {
   processSliderPrev: "Previous process step",
   processSliderNext: "Next process step",
   processSliderStep: "Process step",
-  processSubtitle:
-    "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, building, testing and go-live follow a predictable plan, with regular updates throughout the project.",
   techTitle: "Technologies We Use",
-  techSubtitle:
-    "Modern, scalable tools selected for your project needs. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
   techCategoryFrontend: "Frontend",
   techCategoryMobile: "Mobile Building",
   techCategoryUi: "UI Libraries",
@@ -31,8 +27,6 @@ export const serviceDetailsEn = {
   techCategoryPayment: "Payments",
   techCategoryStore: "Store & Publishing",
   techCategoryTools: "Tools & Integrations",
-  deliveryLabel: "Delivery Time",
-  heroImageAlt: "Digital building workspace",
   statDelivery: "Delivery (Days)",
   statDeliveryShort: "Delivery",
   statSupport: "Support (Days)",
@@ -79,7 +73,6 @@ export const serviceDetailsEn = {
       "I build every kind of web project end to end, from corporate sites and e-commerce to portfolios and promotional pages.",
     heroSubtitleSecondary:
       "With a modern stack tailored to your project, SEO-ready architecture and mobile-first design, I deliver fast, scalable solutions that represent your brand with confidence online.",
-    deliveryTime: "14-84 days",
     processSubtitle:
       "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, building, testing and go-live follow a predictable plan, with regular updates throughout the project.",
     techSubtitle:
@@ -157,7 +150,6 @@ export const serviceDetailsEn = {
       "We transform outdated, slow or mobile-unfriendly websites and apps into modern, fast and conversion-focused experiences.",
     heroSubtitleSecondary:
       "We preserve your existing content and migrate to new design and infrastructure without putting your SEO rankings at risk.",
-    deliveryTime: "7-49 days",
     processSubtitle:
       "We renew your existing site or app through measurable steps from audit to go-live. Migration planning, design approval and content migration are managed with transparent communication to minimize SEO loss risk.",
     techSubtitle:
@@ -220,7 +212,6 @@ export const serviceDetailsEn = {
       "User-friendly, scalable mobile apps that run on iOS and Android from a single codebase.",
     heroSubtitleSecondary:
       "With React Native and Expo, I manage fast delivery, smooth store publishing and backend integrations under one roof.",
-    deliveryTime: "21-120 days",
     processSubtitle:
       "From app concept to store launch, we clarify what will be done and what deliverable you can expect at each stage. Design, building, testing and publishing follow a predictable plan.",
     techSubtitle:
@@ -284,7 +275,6 @@ export const serviceDetailsEn = {
       "I improve your search visibility from technical infrastructure to content strategy.",
     heroSubtitleSecondary:
       "From site audits and keyword planning to on-page optimization and regular reporting, I provide end-to-end SEO support for sustainable organic growth.",
-    deliveryTime: "7-30 days",
     processSubtitle:
       "We run SEO work through measurable steps from site analysis to continuous improvement. We share what is done and expected outcomes transparently at each stage.",
     techSubtitle:
@@ -347,7 +337,6 @@ export const serviceDetailsEn = {
       "We analyze your existing digital assets for performance, security, SEO and code quality, then deliver a prioritized action plan.",
     heroSubtitleSecondary:
       "From Lighthouse scores and accessibility to infrastructure risks and technical debt, we produce a comprehensive audit report with a clear roadmap.",
-    deliveryTime: "3-10 days",
     processSubtitle:
       "We manage the audit process through clear steps from briefing to action plan. Findings are reported by priority with actionable recommendations.",
     techSubtitle:
@@ -410,7 +399,6 @@ export const serviceDetailsEn = {
       "I stay by your side after launch. Updates, backups, security and technical support all under one roof.",
     heroSubtitleSecondary:
       "Continuous monitoring, rapid response and regular reporting for your website, mobile app and backend infrastructure.",
-    deliveryTime: "7-14 days",
     processSubtitle:
       "We manage maintenance from project handover to monthly reporting through regular, predictable steps. Updates, monitoring and support requests follow a clear schedule.",
     techSubtitle:

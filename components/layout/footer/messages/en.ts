@@ -1,8 +1,9 @@
 export const footerEn = {
-  copyright: "© {year} Veltstack. All rights reserved.",
+  copyright: "© {year} <brand>VeltStack</brand>. All rights reserved.",
   backToTop: "Back to top",
   servicesTitle: "Services",
-  corporateTitle: "Company",
+  corporateTitle: "Explore",
+  blogTitle: "Blog",
   legalTitle: "Legal",
   serviceLabels: {
     serviceWeb: "Website Building",
@@ -13,6 +14,7 @@ export const footerEn = {
     serviceMaintenance: "Maintenance & Support",
   },
   corporateLabels: {
+    home: "Home",
     about: "About Us",
     projects: "Our Projects",
     blog: "Articles",

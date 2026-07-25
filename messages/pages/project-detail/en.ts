@@ -17,10 +17,6 @@ export const projectDetailsEn = {
   relatedServicesTitle: "Related Services",
   relatedServicesSubtitle:
     "Service areas I applied on this project and for similar needs.",
-  ctaTitle: "Planning a similar project?",
-  ctaSubtitle:
-    "Let's evaluate your finance, e-commerce or corporate platform needs in a free initial consultation and get back to you within 24 hours.",
-  ctaButton: "Get a Quote",
   breadcrumbHome: "Home",
   breadcrumbProjects: "Projects",
   metricHints: {

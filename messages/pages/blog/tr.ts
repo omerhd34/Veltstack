@@ -52,7 +52,7 @@ export const blogPageTr = {
       hint: "Tüm blog yazılarının tahmini toplam okuma süresi. Her blog yazısının başında ayrı okuma süresini de görebilirsiniz.",
     },
   },
-  scrollLabel: "Blog Yazılarını İncele",
+  scrollLabel: "Yazıları İncele",
   articleScrollLabel: "Blog Yazısını oku",
   searchPlaceholder: "Blog Yazısı ara...",
   clearSearch: "Aramayı temizle",
@@ -62,8 +62,6 @@ export const blogPageTr = {
   writtenByLabel: "Yazan",
   noResults: "Arama kriterlerinize uygun blog yazısı bulunamadı.",
   noResultsSub: "Farklı bir anahtar kelime veya kategori deneyin.",
-  featuredBadge: "Öne Çıkan",
-  latestBadge: "Son Blog Yazıları",
   categories: [
     "Tümü",
     "Web Yapımı",

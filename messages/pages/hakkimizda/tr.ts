@@ -1,6 +1,5 @@
 export const aboutTr = {
   heroBadge: "Hakkımızda",
-  heroTagline: "Dijital Ürün Yapımı",
   heroTitle: "Hedef odaklı çözümler",
   heroSubtitle:
     "Veltstack; web sitesi, mobil uygulama ve SEO odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eden bir yapım markasıdır.",

@@ -38,10 +38,5 @@ export const projectsPageEn = {
   showcaseTitle: "Every project tells a business story",
   showcaseSubtitle:
     "Building projects focused on business goals, balanced with performance and measurable results.",
-  viewLabel: "View details",
   featuredLabel: "Featured",
-  ctaTitle: "Is your project next?",
-  ctaSubtitle:
-    "In a free consultation we'll discuss scope, timeline, and the right tech stack together and get back to you within 24 hours.",
-  ctaButton: "Schedule a Call",
 } as const;

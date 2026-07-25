@@ -77,9 +77,4 @@ export const pagesEn = {
     "psychologist website",
     "React project examples",
   ],
-  blogTitle: "Articles",
-  blogSubtitle: "Articles will be listed here soon.",
-  serviceDetailSuffix: "Service detail page | Veltstack",
-  projectDetailSuffix: "Project detail page | Veltstack",
-  blogDetailSuffix: "Article | Veltstack",
 } as const;
