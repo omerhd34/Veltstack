@@ -23,11 +23,11 @@ export function FaqContactHint({
         />
 
         <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex items-start gap-4">
+          <div className="flex items-center gap-4">
             <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-brand-accent/12 text-brand-accent ring-1 ring-brand-accent/15">
               <LuMessageCircle className="size-5" strokeWidth={1.75} aria-hidden />
             </div>
-            <p className="pt-1 text-sm leading-relaxed text-foreground/80 sm:text-[0.9375rem]">
+            <p className="text-sm leading-relaxed text-foreground/80 sm:text-[0.9375rem]">
               {hint}
             </p>
           </div>
