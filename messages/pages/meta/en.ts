@@ -62,9 +62,9 @@ export const pagesEn = {
     "digital transformation",
     "maintenance support package",
   ],
-  projectsTitle: "Projects | Fintech, E-Commerce and Corporate",
+  projectsTitle: "Projects",
   projectsSubtitle:
-    "Selected web and mobile projects from fintech to e-commerce with detailed case studies.",
+    "From fintech to e-commerce, corporate catalogs to healthcare platforms, every project is built for measurable outcomes and user experience.",
   projectsKeywords: [
     "web project portfolio",
     "Next.js projects",

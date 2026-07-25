@@ -1,6 +1,7 @@
 export const faqEn = {
   badge: "FAQ",
   title: "Frequently Asked Questions",
+  metaTitle: "Frequently Asked Questions | Veltstack",
   subtitle:
     "Find answers to the most common questions about Veltstack services, our process and how we work together.",
   subtitleSecondary:

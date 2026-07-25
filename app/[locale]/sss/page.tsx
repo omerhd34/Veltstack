@@ -11,9 +11,10 @@ export async function generateMetadata({ params }: PageProps) {
   return createPageMetadata({
     locale,
     namespace: "faqPage",
-    titleKey: "title",
+    titleKey: "metaTitle",
     descriptionKey: "subtitle",
     href: "/sss",
+    absoluteTitle: true,
   });
 }
 

@@ -2,7 +2,7 @@ export const blogPageTr = {
   heroBadge: "Blog",
   heroTitle: "Dijital dünyadan içgörüler",
   heroSubtitle:
-    "Web yapımı, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler üretiyoruz. Gerçek projelerden öğrendiklerimizi ve sahada denenmiş yöntemleri sade bir dille paylaşıyoruz.",
+    "Web yapımı, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler. Gerçek projelerden öğrendiklerimizi sade dille paylaşıyoruz.",
   keywords: [
     "GEO SEO",
     "generatif motor optimizasyonu",
@@ -11,6 +11,7 @@ export const blogPageTr = {
     "domain hosting",
     "domain seçimi",
     "domain hosting taşıma",
+    "ixirhost",
     "Tailwind CSS",
     "neden Tailwind CSS",
     "web geliştirme blog",

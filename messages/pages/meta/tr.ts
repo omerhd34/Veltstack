@@ -1,7 +1,7 @@
 export const pagesTr = {
-  homeTitle: "Veltstack | Web Sitesi Yapımı, Mobil Uygulama ve SEO",
+  homeTitle: "Veltstack | Web Sitesi, Mobil Uygulama ve SEO",
   homeSubtitle:
-    "Kurumsal web sitesi yapımı, e-ticaret, mobil uygulama geliştirme ve SEO hizmetleri. Fikirden yayına net süreç ve ölçülebilir sonuç.",
+    "Kurumsal web’den e-ticarete, mobil uygulamadan SEO’ya — fikirden yayına net süreç, ölçülebilir sonuç.",
   homeKeywords: [
     "web sitesi yapımı",
     "web sitesi tasarımı",
@@ -19,12 +19,13 @@ export const pagesTr = {
     "SSR web sitesi",
     "Vercel deploy",
   ],
-  aboutTitle: "Hakkımızda | Ömer Halis Demir & Veltstack",
+  aboutTitle: "Hakkımızda | Veltstack",
   aboutSubtitle:
     "Veltstack; web sitesi yapımı, mobil uygulama ve SEO odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eder.",
   aboutKeywords: [
     "Ömer Halis Demir",
     "Veltstack",
+    "freelancer",
     "freelancer web geliştirici",
     "full stack developer Türkiye",
     "solo geliştirici",
@@ -45,7 +46,7 @@ export const pagesTr = {
     "yazılım firması iletişim",
     "ücretsiz keşif görüşmesi",
   ],
-  servicesTitle: "Hizmetler | Web, Mobil ve SEO",
+  servicesTitle: "Hizmetler | Web Sitesi, Mobil Uygulama ve SEO",
   servicesSubtitle:
     "Web sitesi yapımı, site yenileme, mobil uygulama, teknik SEO denetimi, SEO ve bakım destek paketleri.",
   servicesKeywords: [
@@ -62,9 +63,9 @@ export const pagesTr = {
     "dijital dönüşüm",
     "bakım destek paketi",
   ],
-  projectsTitle: "Projeler | Fintech, E-Ticaret ve Kurumsal",
+  projectsTitle: "Projeler",
   projectsSubtitle:
-    "Fintech'ten e-ticarete seçilmiş web ve mobil projeler ile detaylı proje incelemeleri.",
+    "Finansal teknolojiden e-ticarete, kurumsal katalogdan sağlık platformlarına; her proje ölçülebilir sonuçlar ve kullanıcı deneyimi odaklı geliştirildi.",
   projectsKeywords: [
     "web proje portföyü",
     "Next.js projeleri",
