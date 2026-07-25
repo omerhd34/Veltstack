@@ -77,11 +77,11 @@ export function FaqAccordion({ items, className }: FaqAccordionProps) {
               aria-expanded={isOpen}
               aria-controls={`faq-panel-${item.slug}`}
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className="relative flex w-full items-start gap-4 px-5 py-5 text-left sm:gap-5 sm:px-6 sm:py-5"
+              className="relative flex w-full items-center gap-4 px-5 py-5 text-left sm:gap-5 sm:px-6 sm:py-5"
             >
               <span
                 className={cn(
-                  "mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-xl text-[0.6875rem] font-bold tabular-nums transition-colors duration-300 sm:size-9 sm:text-xs",
+                  "flex size-8 shrink-0 items-center justify-center rounded-xl text-[0.6875rem] font-bold tabular-nums transition-colors duration-300 sm:size-9 sm:text-xs",
                   isOpen
                     ? "bg-brand-accent text-white shadow-[0_4px_14px_rgb(58_107_82/0.28)]"
                     : "bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/15 group-hover:bg-brand-accent/15",
@@ -90,7 +90,7 @@ export function FaqAccordion({ items, className }: FaqAccordionProps) {
                 {String(index + 1).padStart(2, "0")}
               </span>
 
-              <span className="min-w-0 flex-1 pt-0.5">
+              <span className="min-w-0 flex-1">
                 <span className="font-(family-name:--font-heading) text-sm font-semibold leading-snug text-foreground sm:text-[0.9375rem]">
                   {item.question}
                 </span>
@@ -98,7 +98,7 @@ export function FaqAccordion({ items, className }: FaqAccordionProps) {
 
               <span
                 className={cn(
-                  "mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 sm:size-9",
+                  "flex size-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 sm:size-9",
                   isOpen
                     ? "border-brand-accent/25 bg-brand-accent/10 text-brand-accent"
                     : "border-border/70 bg-muted/30 text-muted-foreground group-hover:border-brand-accent/20 group-hover:text-brand-accent",
