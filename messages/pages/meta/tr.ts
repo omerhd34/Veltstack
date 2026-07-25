@@ -1,5 +1,5 @@
 export const pagesTr = {
-  homeTitle: "Veltstack | Web Sitesi, Mobil Uygulama ve SEO",
+  homeTitle: "Veltstack | Fikirden Yayına Web & Mobil",
   homeSubtitle:
     "Kurumsal web’den e-ticarete, mobil uygulamadan SEO’ya — fikirden yayına net süreç, ölçülebilir sonuç.",
   homeKeywords: [

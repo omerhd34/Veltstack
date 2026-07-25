@@ -1,5 +1,5 @@
 export const pagesEn = {
-  homeTitle: "Veltstack | Website Development, Mobile Apps and SEO",
+  homeTitle: "Veltstack | From Idea to Launch — Web & Mobile",
   homeSubtitle:
     "Corporate website development, e-commerce, mobile app development and SEO services. From idea to launch with a clear process and measurable results.",
   homeKeywords: [
