@@ -40,14 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# lightswind CLI compile artifacts
-/hooks/*.js
-/hooks/*.d.ts
-/hooks/*.map
-/lib/*.js
-/lib/*.d.ts
-/lib/*.map
-
 AGENTS.md
 CLAUDE.md
 .cursorignore
