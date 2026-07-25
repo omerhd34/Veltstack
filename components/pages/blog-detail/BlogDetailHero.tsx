@@ -42,6 +42,30 @@ export async function BlogDetailHero({
   const locale = (await getLocale()) as "tr" | "en";
   const t = await getTranslations("nav");
 
+  const authorCard = (
+    <div className="inline-flex max-w-md items-center gap-3 rounded-2xl border border-emerald-900/45 bg-[#0a1612]/75 px-3.5 py-3 shadow-[0_8px_28px_rgb(0_0_0/0.2)] backdrop-blur-sm sm:min-w-[20rem] sm:max-w-lg sm:gap-4 sm:px-6 sm:py-4 sm:shadow-[0_12px_40px_rgb(0_0_0/0.25)]">
+      <div className="relative size-10 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-accent/35 ring-offset-2 ring-offset-[#0a1612] sm:size-12">
+        <Image
+          src={AUTHOR.avatar}
+          alt={AUTHOR.name}
+          fill
+          sizes="48px"
+          className="object-cover"
+        />
+      </div>
+      <div className="min-w-0">
+        <p className="flex items-center gap-1.5 text-[0.625rem] font-semibold tracking-[0.14em] text-emerald-400/55">
+          <LuPenLine className="size-3" aria-hidden />
+          {toLatinUppercase(writtenByLabel, locale)}
+        </p>
+        <p className="mt-0.5 text-sm font-semibold text-white sm:text-base">
+          {AUTHOR.name}
+        </p>
+        <p className="text-xs text-emerald-400/65 sm:text-sm">{AUTHOR.role}</p>
+      </div>
+    </div>
+  );
+
   return (
     <PageHeroDetail
       className={className}
@@ -77,31 +101,10 @@ export async function BlogDetailHero({
           </span>
         </div>
       }
-      belowMedia={
-        <div className="inline-flex max-w-md items-center gap-3 rounded-2xl border border-emerald-900/45 bg-[#0a1612]/75 px-3.5 py-3 shadow-[0_8px_28px_rgb(0_0_0/0.2)] backdrop-blur-sm sm:min-w-[20rem] sm:max-w-lg sm:gap-4 sm:px-6 sm:py-4 sm:shadow-[0_12px_40px_rgb(0_0_0/0.25)]">
-          <div className="relative size-10 shrink-0 overflow-hidden rounded-full ring-2 ring-brand-accent/35 ring-offset-2 ring-offset-[#0a1612] sm:size-12">
-            <Image
-              src={AUTHOR.avatar}
-              alt={AUTHOR.name}
-              fill
-              sizes="48px"
-              className="object-cover"
-            />
-          </div>
-          <div className="min-w-0">
-            <p className="flex items-center gap-1.5 text-[0.625rem] font-semibold tracking-[0.14em] text-emerald-400/55">
-              <LuPenLine className="size-3" aria-hidden />
-              {toLatinUppercase(writtenByLabel, locale)}
-            </p>
-            <p className="mt-0.5 text-sm font-semibold text-white sm:text-base">
-              {AUTHOR.name}
-            </p>
-            <p className="text-xs text-emerald-400/65 sm:text-sm">
-              {AUTHOR.role}
-            </p>
-          </div>
-        </div>
+      trailing={
+        <div className="mt-5 hidden xl:block sm:mt-6">{authorCard}</div>
       }
+      belowMedia={<div className="xl:hidden">{authorCard}</div>}
     />
   );
 }
