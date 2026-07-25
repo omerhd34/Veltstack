@@ -66,7 +66,7 @@ export function PageHeroListing({
       >
         <PageHeroMobileBackdrop src={imageMobileSrc} />
 
-        <SiteContainer className="relative flex min-h-0 flex-1 flex-col pt-4 pb-6 lg:py-10 2xl:py-12">
+        <SiteContainer className="relative flex min-h-0 flex-1 flex-col pt-8 pb-6 sm:pt-6 lg:py-10 2xl:py-12">
           <div className="grid min-h-0 flex-1 items-start gap-4 sm:gap-5 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center lg:gap-12 xl:gap-14 2xl:gap-16">
             <PageHeroCopy
               badge={badge}

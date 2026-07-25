@@ -72,7 +72,7 @@ export function PageHeroCopy({
             "font-(family-name:--font-heading) text-[1.625rem] font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-[3rem] 2xl:text-[3.25rem]",
             badgeAlwaysVisible || accentAlwaysVisible || !badge
               ? "mt-4 sm:mt-6"
-              : "sm:mt-4 lg:mt-6",
+              : "mt-2 sm:mt-4 lg:mt-6",
           )}
         >
           {title}

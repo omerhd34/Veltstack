@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
@@ -66,13 +67,13 @@ export function Navbar({ className }: NavbarProps) {
 
     const hero = document.querySelector<HTMLElement>("[data-page-hero]");
     if (!hero) {
-      // Error/not-found: akışta yer kaplasın ki içerik 404 ile aynı hizalansın.
       setHasPageHero(false);
       setScrolled(true);
       return;
     }
 
     setHasPageHero(true);
+    setScrolled(false);
 
     const headerHeight = headerRef.current?.offsetHeight ?? 72;
     const observer = new IntersectionObserver(
@@ -88,7 +89,7 @@ export function Navbar({ className }: NavbarProps) {
 
     observer.observe(hero);
     return () => observer.disconnect();
-  }, [heroOverlayPage]);
+  }, [pathname]);
 
   const overlay = heroOverlayPage && hasPageHero && !scrolled;
   const fixedOverlayNav = heroOverlayPage && hasPageHero;
