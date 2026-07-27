@@ -17,30 +17,40 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
     >
       <div className="absolute inset-y-0 right-0 h-full w-full md:left-[36%] lg:left-[34%] xl:left-[32%]">
         <Image
+          src="/hero/veltstack-mobile.png"
+          alt={alt}
+          fill
+          priority
+          fetchPriority="high"
+          quality={70}
+          sizes="100vw"
+          className="object-cover object-[50%_62%] lg:hidden"
+        />
+        <Image
           src="/hero/veltstack.png"
           alt={alt}
           fill
           priority
           fetchPriority="high"
-          quality={60}
-          sizes="(max-width: 767px) 100vw, (max-width: 1200px) 65vw, 55vw"
-          className="object-cover object-[62%_50%] max-sm:object-[52%_44%] sm:object-[58%_48%] md:object-[64%_50%] lg:object-[66%_50%] xl:object-[68%_50%]"
+          quality={70}
+          sizes="(max-width: 1200px) 65vw, 55vw"
+          className="hidden object-cover object-[58%_48%] lg:block lg:object-[60%_46%] xl:object-[62%_45%]"
         />
       </div>
       <div
-        className="absolute inset-0 bg-[#0A0A0F]/40 max-sm:bg-[#0A0A0F]/52 md:max-lg:bg-[#0A0A0F]/38"
+        className="absolute inset-0 bg-[#0A0A0F]/22 max-sm:bg-[#0A0A0F]/36 md:max-lg:bg-[#0A0A0F]/20"
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-[linear-gradient(to_right,rgb(10_10_15/0.96)_0%,rgb(10_10_15/0.78)_32%,rgb(10_10_15/0.32)_54%,transparent_72%)] max-sm:bg-[linear-gradient(to_right,rgb(10_10_15/0.94)_0%,rgb(10_10_15/0.82)_48%,rgb(10_10_15/0.4)_78%,transparent_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(to_right,rgb(10_10_15/0.96)_0%,rgb(10_10_15/0.72)_28%,rgb(10_10_15/0.22)_52%,transparent_70%)] max-sm:bg-[linear-gradient(to_right,rgb(10_10_15/0.92)_0%,rgb(10_10_15/0.7)_42%,rgb(10_10_15/0.28)_72%,transparent_100%)]"
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-[linear-gradient(to_bottom,rgb(10_10_15/0.2)_0%,transparent_14%,transparent_82%,rgb(10_10_15/0.6)_100%)]"
+        className="absolute inset-0 bg-[linear-gradient(to_bottom,rgb(10_10_15/0.15)_0%,transparent_16%,transparent_84%,rgb(10_10_15/0.45)_100%)]"
         aria-hidden
       />
       <div
-        className="absolute inset-0 bg-[radial-gradient(ellipse_50%_55%_at_24%_42%,rgb(10_10_15/0.72),transparent_70%)] max-sm:bg-[radial-gradient(ellipse_110%_75%_at_12%_34%,rgb(10_10_15/0.88),transparent_72%)]"
+        className="absolute inset-0 bg-[radial-gradient(ellipse_48%_52%_at_22%_42%,rgb(10_10_15/0.55),transparent_70%)] max-sm:bg-[radial-gradient(ellipse_110%_70%_at_12%_30%,rgb(10_10_15/0.78),transparent_72%)]"
         aria-hidden
       />
     </div>
