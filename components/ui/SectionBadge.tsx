@@ -8,13 +8,15 @@ const sectionBadgeVariants = cva(
     variants: {
       variant: {
         emerald:
-          "border-emerald-500/25 bg-emerald-500/8 text-[0.6875rem] uppercase tracking-[0.2em] text-emerald-300/90",
+          "border-white/25 bg-white/8 text-[0.6875rem] uppercase tracking-[0.2em] text-white/90",
         "emerald-soft":
-          "border-emerald-500/30 bg-emerald-500/10 text-xs uppercase tracking-[0.18em] text-emerald-300/90",
+          "border-white/25 bg-white/8 text-xs uppercase tracking-[0.18em] text-white/90",
         "emerald-muted":
-          "border-emerald-500/25 bg-emerald-500/10 text-[0.6875rem] tracking-[0.2em] text-emerald-300/90",
+          "border-white/25 bg-white/8 text-[0.6875rem] tracking-[0.2em] text-white/90",
         "emerald-label":
-          "border-emerald-500/30 bg-emerald-500/10 text-xs tracking-[0.18em] text-emerald-300/90",
+          "border-white/25 bg-white/8 text-xs tracking-[0.18em] text-white/90",
+        soft:
+          "border-white/25 bg-white/8 text-[0.6875rem] uppercase tracking-[0.2em] text-white/90",
         accent:
           "border-brand-accent/30 bg-brand-accent/8 text-xs uppercase tracking-[0.18em] text-brand-accent",
         "accent-card":
@@ -24,7 +26,7 @@ const sectionBadgeVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "emerald",
+      variant: "soft",
     },
   },
 );

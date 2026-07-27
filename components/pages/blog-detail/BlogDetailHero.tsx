@@ -88,7 +88,7 @@ export async function BlogDetailHero({
             <LuArrowLeft className="size-3.5" aria-hidden />
             {t("blog")}
           </Link>
-          <span className="inline-flex items-center rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1 text-[0.6875rem] font-semibold text-emerald-300 sm:px-4 sm:py-1.5">
+          <span className="inline-flex items-center rounded-full border border-white/25 bg-white/8 px-3 py-1 text-[0.6875rem] font-semibold text-white/90 sm:px-4 sm:py-1.5">
             {category}
           </span>
           <span className="hidden items-center gap-1.5 lg:flex">

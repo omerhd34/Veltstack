@@ -47,7 +47,7 @@ export async function LegalPageHero({
 
           <div
             aria-hidden
-            className="mt-7 hidden h-px w-14 bg-linear-to-r from-brand-accent via-brand-accent/50 to-transparent lg:block"
+            className="mt-7 hidden h-px w-14 bg-linear-to-r from-white/45 via-white/25 to-transparent lg:block"
           />
 
           <h1 className="mt-6 font-(family-name:--font-heading) text-[33.75px] font-bold leading-[1.2] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl lg:leading-tight">
