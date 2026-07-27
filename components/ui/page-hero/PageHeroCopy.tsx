@@ -65,7 +65,7 @@ export function PageHeroCopy({
 
         <h1
           className={cn(
-            "font-(family-name:--font-heading) text-[33.75px] font-bold leading-[1.2] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl lg:leading-tight",
+            "font-(family-name:--font-heading) text-[28px] font-bold leading-[1.2] tracking-tight sm:text-3xl md:text-4xl lg:text-5xl lg:leading-tight",
             badgeAlwaysVisible || accentAlwaysVisible || !badge
               ? "mt-4 sm:mt-6"
               : "mt-2 sm:mt-4 lg:mt-6",
@@ -74,7 +74,7 @@ export function PageHeroCopy({
           {title}
         </h1>
 
-        <p className="mt-3 max-w-2xl text-lg leading-relaxed text-emerald-50/75 sm:mt-5 sm:max-w-3xl lg:mt-6 lg:max-w-xl">
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-emerald-50/75 sm:mt-5 sm:max-w-3xl sm:text-lg lg:mt-6 lg:max-w-xl">
           {subtitle}
         </p>
 
