@@ -35,7 +35,6 @@ export function ServiceHero({
       scrollHref="#service-features"
       scrollLabel={scrollLabel}
       stats={stats}
-      imageFrameClassName="h-[180px] sm:h-[320px] lg:h-[420px] 2xl:h-[460px]"
       className={className}
     />
   );

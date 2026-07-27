@@ -8,6 +8,7 @@ type BadgeVariant =
   | "emerald-soft"
   | "emerald-muted"
   | "emerald-label"
+  | "soft"
   | "accent"
   | "accent-card"
   | "accent-glass";
@@ -19,6 +20,7 @@ interface PageHeroCopyProps {
   badgeVariant?: BadgeVariant;
   badgeAlwaysVisible?: boolean;
   accentAlwaysVisible?: boolean;
+  align?: "left" | "center";
   leading?: ReactNode;
   trailing?: ReactNode;
   className?: string;
@@ -31,17 +33,24 @@ export function PageHeroCopy({
   badgeVariant,
   badgeAlwaysVisible = false,
   accentAlwaysVisible = false,
+  align = "left",
   leading,
   trailing,
   className,
 }: PageHeroCopyProps) {
+  const centered = align === "center";
+
   return (
     <SectionScrollReveal
-      direction="left"
+      direction={centered ? "up" : "left"}
       when="mount"
-      className={cn("relative z-10 min-w-0", className)}
+      className={cn(
+        "relative z-10 min-w-0",
+        centered && "mx-auto w-full max-w-3xl",
+        className,
+      )}
     >
-      <div className="min-w-0">
+      <div className={cn("min-w-0", centered && "flex flex-col items-center text-center")}>
         {leading}
 
         {badge ? (
@@ -56,10 +65,12 @@ export function PageHeroCopy({
         <div
           aria-hidden
           className={cn(
-            "bg-linear-to-r from-brand-accent to-transparent",
             accentAlwaysVisible
               ? "mt-7 h-px w-14"
               : "mt-6 hidden h-px w-12 lg:block",
+            centered
+              ? "bg-linear-to-r from-transparent via-white/45 to-transparent"
+              : "bg-linear-to-r from-white/45 to-transparent",
           )}
         />
 
@@ -74,7 +85,14 @@ export function PageHeroCopy({
           {title}
         </h1>
 
-        <p className="mt-3 max-w-2xl text-base leading-relaxed text-emerald-50/75 sm:mt-5 sm:max-w-3xl sm:text-lg lg:mt-6 lg:max-w-xl">
+        <p
+          className={cn(
+            "mt-3 text-base leading-relaxed text-emerald-50/75 sm:mt-5 sm:text-lg lg:mt-6",
+            centered
+              ? "max-w-2xl sm:max-w-3xl"
+              : "max-w-2xl sm:max-w-3xl lg:max-w-xl",
+          )}
+        >
           {subtitle}
         </p>
 

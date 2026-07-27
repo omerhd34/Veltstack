@@ -16,6 +16,7 @@ type BadgeVariant =
   | "emerald-soft"
   | "emerald-muted"
   | "emerald-label"
+  | "soft"
   | "accent"
   | "accent-card"
   | "accent-glass";

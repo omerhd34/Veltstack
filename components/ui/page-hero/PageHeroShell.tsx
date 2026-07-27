@@ -65,7 +65,7 @@ export function PageHeroShell({
       {showBottomHairline ? (
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-500/20 to-transparent"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent"
         />
       ) : null}
     </section>

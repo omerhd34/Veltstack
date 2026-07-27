@@ -29,8 +29,8 @@ export function PageHeroFooter({
       className={cn(
         "mt-auto shrink-0 pt-4",
         borderAlways
-          ? "border-t border-emerald-900/35 pt-4 sm:pt-6 lg:pt-8"
-          : "lg:border-t lg:border-emerald-900/35 lg:pt-8",
+          ? "border-t border-white/15 pt-4 sm:pt-6 lg:pt-8"
+          : "lg:border-t lg:border-white/15 lg:pt-8",
         className,
       )}
     >
