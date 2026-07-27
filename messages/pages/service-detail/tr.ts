@@ -70,7 +70,7 @@ export const serviceDetailsTr = {
     heroImageAlt:
       "Modern web sitesi yapımını simgeleyen soyut tarayıcı ve layout illüstrasyonu",
     heroSubtitle:
-      "Kurumsal siteden e-ticarete, portfolyodan tanıtım sayfasına kadar her web projesini uçtan uca geliştiriyorum.",
+      "Kurumsal siteden e-ticarete, portfolyodan tanıtım sayfasına kadar her web projesini uçtan uca geliştiriyorum; modern altyapı, SEO uyumlu yapı ve mobil öncelikli tasarımla hızlı, ölçeklenebilir çözümler sunuyorum.",
     processSubtitle:
       "Keşiften yayına kadar her aşamada ne yapılacağını, ne zaman teslim edileceğini ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve canlıya alma adımlarını öngörülebilir bir planla yönetiyor; proje boyunca düzenli iletişimle sizi bilgilendiriyoruz.",
     techSubtitle:
@@ -145,7 +145,7 @@ export const serviceDetailsTr = {
     heroImageAlt:
       "Web sitesi yenilemeyi simgeleyen dönüşen arayüz panelleri illüstrasyonu",
     heroSubtitle:
-      "Güncelliğini yitirmiş, yavaş veya mobil uyumsuz web ve uygulama deneyimlerinizi modern, hızlı ve dönüşüm odaklı bir yapıya taşıyoruz.",
+      "Güncelliğini yitirmiş, yavaş veya mobil uyumsuz deneyimlerinizi modern, hızlı ve dönüşüm odaklı bir yapıya taşıyoruz; mevcut içerikleri koruyarak SEO’yu riske atmadan güvenli geçiş sağlıyoruz.",
     processSubtitle:
       "Mevcut sitenizi veya uygulamanızı analizden canlıya almaya kadar ölçülebilir adımlarla yeniliyoruz. SEO kaybı riskini en aza indiren geçiş planı, tasarım onayı ve içerik migrasyonu süreç boyunca şeffaf iletişimle yönetilir.",
     techSubtitle:
@@ -205,7 +205,7 @@ export const serviceDetailsTr = {
     heroImageAlt:
       "Mobil uygulama yapımını simgeleyen yüzen telefon ve arayüz illüstrasyonu",
     heroSubtitle:
-      "Tek kod tabanıyla iOS ve Android'de çalışan, kullanıcı dostu ve ölçeklenebilir mobil uygulamalar geliştiriyorum.",
+      "Tek kod tabanıyla iOS ve Android'de çalışan mobil uygulamalar geliştiriyorum; React Native ve Expo ile hızlı teslimat, mağaza yayını ve backend entegrasyonlarını tek çatı altında yönetiyorum.",
     processSubtitle:
       "Uygulama fikrinden mağaza yayınına kadar her aşamada ne yapılacağını ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve yayın adımlarını öngörülebilir bir planla yönetiyoruz.",
     techSubtitle:
@@ -266,7 +266,7 @@ export const serviceDetailsTr = {
     heroImageAlt:
       "SEO ve arama görünürlüğünü simgeleyen yükselen sıralama grafiği illüstrasyonu",
     heroSubtitle:
-      "Teknik altyapıdan içerik stratejisine kadar arama motorlarında görünürlüğünüzü artırıyorum.",
+      "Teknik altyapıdan içerik stratejisine kadar görünürlüğünüzü artırıyorum; denetimden anahtar kelime planına ve düzenli raporlamaya kadar uçtan uca SEO desteği sunuyorum.",
     processSubtitle:
       "Site analizinden sürekli iyileştirmeye kadar SEO çalışmalarını ölçülebilir adımlarla yürütüyoruz. Her aşamada yapılan işleri ve beklenen çıktıları şeffaf şekilde paylaşıyoruz.",
     techSubtitle:
@@ -326,7 +326,7 @@ export const serviceDetailsTr = {
     heroImageAlt:
       "Teknik denetimi simgeleyen tarama ve güvenlik kontrol illüstrasyonu",
     heroSubtitle:
-      "Mevcut dijital varlıklarınızı performans, güvenlik, SEO ve kod kalitesi açısından analiz ediyoruz; önceliklendirilmiş aksiyon planı sunuyoruz.",
+      "Dijital varlıklarınızı performans, güvenlik, SEO ve kod kalitesi açısından analiz edip önceliklendirilmiş aksiyon planı sunuyoruz; Lighthouse’tan teknik borca kadar net bir yol haritası çıkarıyoruz.",
     processSubtitle:
       "Denetim sürecini briefing'den aksiyon planına kadar net adımlarla yönetiyoruz. Bulguları öncelik sırasına göre raporlayıp uygulanabilir öneriler sunuyoruz.",
     techSubtitle:
@@ -386,7 +386,7 @@ export const serviceDetailsTr = {
     heroImageAlt:
       "Bakım ve desteği simgeleyen koruyucu kalkan ve sistem izleme illüstrasyonu",
     heroSubtitle:
-      "Yayına aldıktan sonra da yanınızdayım. Güncelleme, yedekleme, güvenlik ve teknik destek tek çatı altında.",
+      "Yayına aldıktan sonra da yanınızdayım: güncelleme, yedekleme, güvenlik ve teknik destek tek çatı altında; web, mobil ve backend için kesintisiz izleme, hızlı müdahale ve düzenli raporlama.",
     processSubtitle:
       "Proje devralmadan aylık raporlamaya kadar bakım sürecini düzenli ve öngörülebilir adımlarla yönetiyoruz. Güncelleme, izleme ve destek talepleri net bir takvimle ilerler.",
     techSubtitle:

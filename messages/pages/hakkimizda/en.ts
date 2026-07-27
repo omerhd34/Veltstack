@@ -2,7 +2,7 @@ export const aboutEn = {
   heroBadge: "About Us",
   heroTitle: "We build digital solutions aligned with your business goals.",
   heroSubtitle:
-    "Veltstack is a product-building brand that delivers websites, mobile apps and SEO-focused digital products, from idea to launch with a clear process and measurable outcomes.",
+    "Veltstack delivers websites, mobile apps and SEO-focused digital products from idea to launch with a clear process and measurable outcomes—uniting design, software and growth goals from corporate web to performance-driven infrastructure in a single delivery line.",
   heroImageAlt:
     "Abstract digital structure illustration symbolizing vision and growth",
   scrollLabel: "Read more",

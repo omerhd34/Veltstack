@@ -3,7 +3,7 @@ export const faqEn = {
   title: "Frequently Asked Questions",
   metaTitle: "Frequently Asked Questions | Veltstack",
   subtitle:
-    "Find answers to the most common questions about Veltstack services, our process and how we work together.",
+    "Find answers to the most common questions about Veltstack services, our process and how we work together—browse by topic to quickly find what you need.",
   heroStats: {
     questions: {
       label: "Total Questions",

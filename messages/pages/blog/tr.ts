@@ -2,7 +2,7 @@ export const blogPageTr = {
   heroBadge: "Blog",
   heroTitle: "Dijital dünyadan içgörüler",
   heroSubtitle:
-    "Web yapımı, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler. Gerçek projelerden öğrendiklerimizi sade dille paylaşıyoruz.",
+    "Web yapımı, mobil uygulama, SEO ve dijital dönüşüm üzerine pratik içerikler; gerçek projelerden öğrendiklerimizi sade dille paylaşıyoruz. Kategori veya arama ile aradığınız içeriğe hızlıca ulaşın.",
   keywords: [
     "GEO SEO",
     "generatif motor optimizasyonu",

@@ -3,7 +3,7 @@ export const faqTr = {
   title: "Sıkça Sorulan Sorular",
   metaTitle: "Sıkça Sorulan Sorular | Veltstack",
   subtitle:
-    "Veltstack hizmetleri, süreçler ve iş birliği modeli hakkında en çok merak edilen soruların yanıtlarını burada bulabilirsiniz.",
+    "Veltstack hizmetleri, süreçler ve iş birliği modeli hakkında en çok merak edilen soruların yanıtlarını burada bulabilirsiniz. Konu başlıklarına göre düzenlenmiş yanıtlardan aradığınız bilgiye hızlıca ulaşın.",
   heroStats: {
     questions: {
       label: "Toplam Soru",

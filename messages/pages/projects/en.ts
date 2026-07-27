@@ -2,7 +2,7 @@ export const projectsPageEn = {
   heroBadge: "Portfolio",
   heroTitle: "Projects that serve real business goals",
   heroSubtitle:
-    "From fintech to e-commerce, corporate catalogs to healthcare platforms, every project is built for measurable outcomes and user experience.",
+    "From fintech to e-commerce, corporate catalogs to healthcare platforms, every project is built for measurable outcomes and user experience—explore case studies covering scope, tech stack and delivery metrics.",
   heroImageAlt:
     "Futuristic portfolio gallery illustration symbolizing completed digital projects",
   scrollLabel: "Browse projects",

@@ -70,7 +70,7 @@ export const serviceDetailsEn = {
     heroImageAlt:
       "Abstract browser and layout illustration symbolizing modern website building",
     heroSubtitle:
-      "I build every kind of web project end to end, from corporate sites and e-commerce to portfolios and promotional pages.",
+      "I build every kind of web project end to end—from corporate sites and e-commerce to portfolios—with a modern, SEO-ready, mobile-first stack for fast, scalable solutions that represent your brand online.",
     processSubtitle:
       "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, building, testing and go-live follow a predictable plan, with regular updates throughout the project.",
     techSubtitle:
@@ -145,7 +145,7 @@ export const serviceDetailsEn = {
     heroImageAlt:
       "Transforming interface panels illustration symbolizing website redesign",
     heroSubtitle:
-      "We transform outdated, slow or mobile-unfriendly websites and apps into modern, fast and conversion-focused experiences.", 
+      "We transform outdated, slow or mobile-unfriendly sites into modern, conversion-focused experiences—preserving your content and migrating without putting SEO rankings at risk.", 
     processSubtitle:
       "We renew your existing site or app through measurable steps from audit to go-live. Migration planning, design approval and content migration are managed with transparent communication to minimize SEO loss risk.",
     techSubtitle:
@@ -205,7 +205,7 @@ export const serviceDetailsEn = {
     heroImageAlt:
       "Floating phone and interface illustration symbolizing mobile app building",
     heroSubtitle:
-      "User-friendly, scalable mobile apps that run on iOS and Android from a single codebase.",
+      "User-friendly, scalable apps for iOS and Android from a single codebase—React Native and Expo for fast delivery, store publishing and backend integrations under one roof.",
     processSubtitle:
       "From app concept to store launch, we clarify what will be done and what deliverable you can expect at each stage. Design, building, testing and publishing follow a predictable plan.",
     techSubtitle:
@@ -266,7 +266,7 @@ export const serviceDetailsEn = {
     heroImageAlt:
       "Ascending ranking graph illustration symbolizing SEO and search visibility",
     heroSubtitle:
-      "I improve your search visibility from technical infrastructure to content strategy.",
+      "I improve search visibility from technical infrastructure to content strategy—audits, keyword planning, on-page work and regular reporting for sustainable organic growth.",
     processSubtitle:
       "We run SEO work through measurable steps from site analysis to continuous improvement. We share what is done and expected outcomes transparently at each stage.",
     techSubtitle:
@@ -326,7 +326,7 @@ export const serviceDetailsEn = {
     heroImageAlt:
       "Scan and security check illustration symbolizing technical audit",
     heroSubtitle:
-      "We analyze your existing digital assets for performance, security, SEO and code quality, then deliver a prioritized action plan.",
+      "We analyze your digital assets for performance, security, SEO and code quality, then deliver a prioritized action plan—from Lighthouse scores to technical debt, with a clear roadmap.",
     processSubtitle:
       "We manage the audit process through clear steps from briefing to action plan. Findings are reported by priority with actionable recommendations.",
     techSubtitle:
@@ -386,7 +386,7 @@ export const serviceDetailsEn = {
     heroImageAlt:
       "Protective shield and system monitoring illustration symbolizing maintenance and support",
     heroSubtitle:
-      "I stay by your side after launch. Updates, backups, security and technical support all under one roof.",
+      "I stay by your side after launch—updates, backups, security and support under one roof, with continuous monitoring, rapid response and regular reporting for web, mobile and backend.",
     processSubtitle:
       "We manage maintenance from project handover to monthly reporting through regular, predictable steps. Updates, monitoring and support requests follow a clear schedule.",
     techSubtitle:

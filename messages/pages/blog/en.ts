@@ -2,7 +2,7 @@ export const blogPageEn = {
   heroBadge: "Articles",
   heroTitle: "Insights from the digital world",
   heroSubtitle:
-    "We publish practical content on web building, mobile apps, SEO and digital transformation. We share lessons from real projects and field-tested methods in plain language.",
+    "We publish practical content on web building, mobile apps, SEO and digital transformation—lessons from real projects in plain language. Filter by category or search to find what you need.",
   keywords: [
     "GEO SEO",
     "generative engine optimization",
