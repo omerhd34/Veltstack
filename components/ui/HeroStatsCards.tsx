@@ -22,11 +22,11 @@ function StatCard({
   labelShort,
 }: Pick<HeroStat, "value" | "label" | "labelShort">) {
   return (
-    <div className="w-full cursor-default rounded-xl border border-emerald-900/30 bg-[#0a1612]/45 px-3 py-2.5 text-left transition-colors hover:border-emerald-700/45 hover:bg-[#0d1c17]/55 sm:px-5 sm:py-4">
-      <p className="font-(family-name:--font-heading) text-xl font-bold tracking-tight text-white sm:text-3xl 2xl:text-[2rem]">
+    <div className="w-full cursor-default rounded-xl border border-emerald-900/30 bg-[#0a1612]/45 px-4 py-3.5 text-left transition-colors hover:border-emerald-700/45 hover:bg-[#0d1c17]/55 sm:px-5 sm:py-4">
+      <p className="font-(family-name:--font-heading) text-2xl font-bold tracking-tight text-white sm:text-3xl 2xl:text-[2rem]">
         {value}
       </p>
-      <p className="mt-1 text-[0.5625rem] font-semibold uppercase tracking-[0.14em] text-emerald-300/45 sm:mt-1.5 sm:text-[0.6875rem] sm:tracking-[0.16em]">
+      <p className="mt-1.5 text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-emerald-300/45 sm:mt-1.5 sm:text-[0.6875rem] sm:tracking-[0.16em]">
         {labelShort ? (
           <>
             <span className="sm:hidden">{labelShort}</span>
