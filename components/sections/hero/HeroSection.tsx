@@ -24,7 +24,10 @@ export async function HeroSection({ className }: HeroSectionProps) {
             {t("heroBadge")}
           </SectionBadge>
           <HeroContent title={t("heroTitle")} subtitle={t("heroSubtitle")} />
-          <HeroCTA primary={t("ctaPrimary")} secondary={t("ctaSecondary")} />
+          <HeroCTA
+            primary={t("heroCtaPrimary")}
+            secondary={t("heroCtaSecondary")}
+          />
         </div>
       </SiteContainer>
     </section>
