@@ -8,7 +8,7 @@ interface WorkflowFullProcessLinkProps {
 export function WorkflowFullProcessLink({ label }: WorkflowFullProcessLinkProps) {
   return (
     <PrimaryCtaLink
-      href="/#approach"
+      href="/hizmetler#approach"
       showArrow={false}
       leadingIcon={<LuClock className="size-5" aria-hidden />}
     >
