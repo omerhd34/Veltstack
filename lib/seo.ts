@@ -4,6 +4,7 @@ import { routing, type Locale } from "@/i18n/routing";
 
 export const SITE_URL = "https://www.veltstack.com";
 export const SITE_NAME = "Veltstack";
+export const SITE_DOMAIN = "veltstack.com";
 export const DEFAULT_OG_IMAGE = "/hero/veltstack.png";
 
 export function absoluteUrl(path = ""): string {

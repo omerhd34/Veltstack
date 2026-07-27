@@ -1,10 +1,12 @@
-import { SITE_NAME, SITE_URL } from "@/lib/seo";
+import { SITE_DOMAIN, SITE_NAME, SITE_URL } from "@/lib/seo";
 
 interface LocalBusinessSchemaProps {
   className?: string;
 }
 
 export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
+  const homeUrl = `${SITE_URL}/`;
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -12,8 +14,12 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
         name: SITE_NAME,
-        url: SITE_URL,
-        logo: `${SITE_URL}/images/logo.png`,
+        alternateName: SITE_DOMAIN,
+        url: homeUrl,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/images/logo.png`,
+        },
         image: `${SITE_URL}/hero/veltstack.png`,
         description:
           "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
@@ -35,8 +41,9 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
       {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
-        url: SITE_URL,
+        url: homeUrl,
         name: SITE_NAME,
+        alternateName: [SITE_DOMAIN],
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: ["tr-TR", "en-US"],
       },
@@ -44,7 +51,7 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         "@type": "ProfessionalService",
         "@id": `${SITE_URL}/#localbusiness`,
         name: SITE_NAME,
-        url: SITE_URL,
+        url: homeUrl,
         image: `${SITE_URL}/hero/veltstack.png`,
         description:
           "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
