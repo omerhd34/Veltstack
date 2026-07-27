@@ -4,8 +4,6 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import {
   PAGE_HERO_DETAIL_CTA_CLASS,
-  PAGE_HERO_DETAIL_FRAME_CLASS,
-  PAGE_HERO_IMAGE_FRAME_CLASS,
   PAGE_HERO_IMAGE_WRAPPER_CLASS,
   PageHeroDetail,
 } from "@/components/ui/page-hero";
@@ -82,10 +80,9 @@ function ProjectHeroPreview({
   const frame = (
     <div
       className={cn(
-        PAGE_HERO_IMAGE_FRAME_CLASS,
-        PAGE_HERO_DETAIL_FRAME_CLASS,
+        "relative aspect-21/10 w-full overflow-hidden rounded-2xl border border-emerald-700/30 shadow-[0_24px_80px_rgb(0_0_0/0.45)] sm:rounded-3xl",
         "transition-transform duration-500 group-hover/preview:scale-[1.01]",
-        !imageUrl && cn("bg-linear-to-br", coverGradient),
+        imageUrl ? "bg-[#050f0c]" : cn("bg-linear-to-br", coverGradient),
       )}
     >
       {imageUrl ? (

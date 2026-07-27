@@ -37,7 +37,7 @@ export function ProjectShowcaseCard({
     <>
       <div
         className={cn(
-          "relative aspect-16/10 overflow-hidden bg-muted",
+          "relative aspect-21/10 overflow-hidden bg-muted",
           !imageUrl && cn("bg-linear-to-br", coverGradient),
         )}
       >

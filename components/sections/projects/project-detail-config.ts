@@ -78,7 +78,14 @@ export const projectDemoUrls: Record<ProjectSlug, string> = {
   onlinemuhasebe: "https://www.onlinemuhasebe.org/",
 };
 
-export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {};
+export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {
+  iqfinansai: "/images/websites/IQfinansAI.png",
+  "yazici-ticaret": "/images/websites/YaziciTicaret.png",
+  gardossi: "/images/websites/gardossi.png",
+  "uzman-klinik-psikolog": "/images/websites/psikolog.png",
+  portfolio: "/images/websites/OHD.png",
+  onlinemuhasebe: "/images/websites/sahin.png",
+};
 
 export const projectCoverGradients: Record<ProjectSlug, string> = {
   iqfinansai: "from-[#0a2e1f] via-[#145c3a] to-[#1a7a4a]",
