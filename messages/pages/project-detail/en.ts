@@ -1,7 +1,5 @@
 export const projectDetailsEn = {
   demo: "View Live Site",
-  heroSubtitleSecondary:
-    "Below you can explore the project's business problem, solution approach, technical details and key features alongside measurable metrics.",
   scrollLabel: "View details",
   showMore: "Show More",
   showLess: "Show Less",
@@ -24,8 +22,7 @@ export const projectDetailsEn = {
       "Total build time from discovery to launch. May vary based on scope, integrations and approval cycles.",
     siteType:
       "The project's architecture and business model — classified as SaaS, e-commerce, corporate site, portfolio and similar.",
-    sector:
-      "The industry the project serves and its target user base.",
+    sector: "The industry the project serves and its target user base.",
     languageSupport:
       "Interface languages offered on the platform. Multilingual setups support locale-based content and routing.",
   },

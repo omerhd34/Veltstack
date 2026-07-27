@@ -26,8 +26,6 @@ export const blogPageTr = {
     "Vercel'de yayın",
     "özel yazılım CMS",
   ],
-  heroSubtitleSecondary:
-    "Kategoriye göre filtreleyip arama yaparak aradığınız içeriğe hızlıca ulaşın.",
   heroImageAlt:
     "Bilgi akışını ve dijital içgörüleri simgeleyen soyut ağ illüstrasyonu",
   heroStats: {

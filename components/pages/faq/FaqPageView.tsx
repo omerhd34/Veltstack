@@ -69,7 +69,6 @@ export async function FaqPageView({ className }: FaqPageViewProps) {
         badge={t("badge")}
         title={t("title")}
         subtitle={t("subtitle")}
-        subtitleSecondary={t("subtitleSecondary")}
         imageAlt={t("imageAlt")}
         scrollLabel={t("scrollLabel")}
         stats={heroStats}

@@ -21,7 +21,6 @@ interface PageHeroListingProps {
   badge: string;
   title: string;
   subtitle: string;
-  subtitleSecondary: string;
   imageSrc: string;
   imageMobileSrc: string;
   imageAlt: string;
@@ -40,7 +39,6 @@ export function PageHeroListing({
   badge,
   title,
   subtitle,
-  subtitleSecondary,
   imageSrc,
   imageMobileSrc,
   imageAlt,
@@ -72,7 +70,6 @@ export function PageHeroListing({
               badge={badge}
               title={title}
               subtitle={subtitle}
-              subtitleSecondary={subtitleSecondary}
               badgeVariant={badgeVariant}
             />
 

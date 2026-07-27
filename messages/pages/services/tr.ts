@@ -5,8 +5,6 @@ export const servicesPageTr = {
   heroTitle: "Net paketler, net kapsam",
   heroSubtitle:
     "Her proje tipi üç kademede sunulur: Girişim, Profesyonel ve Premium. Kapsam, teslim süresi ve revizyon sayısı baştan netleştirilir, büyük projeler sınırsız ölçeklenebilir.",
-  heroSubtitleSecondary:
-    "Paketleri inceleyin; web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım sekmeleri arasında geçiş yaparak size en uygun kapsamı belirleyin.",
   heroImageAlt:
     "Dijital hizmetleri temsil eden bağlantılı modüler arayüz illüstrasyonu",
   scrollLabel: "Paketleri incele",

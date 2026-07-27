@@ -3,8 +3,6 @@ export const projectsPageTr = {
   heroTitle: "Hedef odaklı projeler",
   heroSubtitle:
     "Finansal teknolojiden e-ticarete, kurumsal katalogdan sağlık platformlarına; her proje ölçülebilir sonuçlar ve kullanıcı deneyimi odaklı geliştirildi.",
-  heroSubtitleSecondary:
-    "Detaylı proje incelemeleriyle her projenin kapsamını, teknoloji yığınını ve teslim metriklerini inceleyebilirsiniz.",
   heroImageAlt:
     "Tamamlanan dijital projeleri simgeleyen fütüristik portföy galerisi illüstrasyonu",
   scrollLabel: "Projeleri İncele",

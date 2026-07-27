@@ -15,7 +15,6 @@ interface ProjectHeroProps {
   badge: string;
   title: string;
   subtitle: string;
-  subtitleSecondary: string;
   metrics: { value: string; label: string }[];
   demoUrl?: string;
   demoLabel: string;
@@ -30,7 +29,6 @@ export function ProjectHero({
   badge,
   title,
   subtitle,
-  subtitleSecondary,
   metrics,
   demoUrl,
   demoLabel,
@@ -46,7 +44,6 @@ export function ProjectHero({
       badge={badge}
       title={title}
       subtitle={subtitle}
-      subtitleSecondary={subtitleSecondary}
       scrollHref="#project-overview"
       scrollLabel={scrollLabel}
       stats={metrics}

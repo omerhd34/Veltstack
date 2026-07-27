@@ -1,7 +1,5 @@
 export const projectDetailsTr = {
   demo: "Canlı Siteyi Gör",
-  heroSubtitleSecondary:
-    "Aşağıda projenin iş problemi, çözüm yaklaşımı, teknik detayları ve öne çıkan özelliklerini ölçülebilir metriklerle birlikte inceleyebilirsiniz.",
   scrollLabel: "Detayları incele",
   showMore: "Daha Fazla Göster",
   showLess: "Daha Az Göster",

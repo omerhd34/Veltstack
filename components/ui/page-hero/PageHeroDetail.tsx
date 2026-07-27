@@ -26,7 +26,6 @@ interface PageHeroDetailProps {
   scrollHref: string;
   scrollLabel: string;
   badge?: string;
-  subtitleSecondary?: string;
   badgeVariant?: BadgeVariant;
   leading?: ReactNode;
   trailing?: ReactNode;
@@ -49,7 +48,6 @@ export function PageHeroDetail({
   scrollHref,
   scrollLabel,
   badge,
-  subtitleSecondary,
   badgeVariant,
   leading,
   trailing,
@@ -81,10 +79,8 @@ export function PageHeroDetail({
               badge={badge}
               title={title}
               subtitle={subtitle}
-              subtitleSecondary={subtitleSecondary}
               badgeVariant={badgeVariant}
               badgeAlwaysVisible
-              secondaryMuted
               leading={leading}
               trailing={trailing}
             />

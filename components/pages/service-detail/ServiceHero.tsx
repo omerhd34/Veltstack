@@ -5,7 +5,6 @@ interface ServiceHeroProps {
   badge: string;
   title: string;
   subtitle: string;
-  subtitleSecondary: string;
   imageAlt: string;
   imageSrc: string;
   imageMobileSrc: string;
@@ -18,7 +17,6 @@ export function ServiceHero({
   badge,
   title,
   subtitle,
-  subtitleSecondary,
   imageAlt,
   imageSrc,
   imageMobileSrc,
@@ -31,7 +29,6 @@ export function ServiceHero({
       badge={badge}
       title={title}
       subtitle={subtitle}
-      subtitleSecondary={subtitleSecondary}
       imageAlt={imageAlt}
       imageSrc={imageSrc}
       imageMobileSrc={imageMobileSrc}

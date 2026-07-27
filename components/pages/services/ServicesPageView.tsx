@@ -18,7 +18,6 @@ export async function ServicesPageView({ className }: ServicesPageViewProps) {
         badge={t("heroBadge")}
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        subtitleSecondary={t("heroSubtitleSecondary")}
         imageAlt={t("heroImageAlt")}
         scrollLabel={t("scrollLabel")}
         stats={stats}

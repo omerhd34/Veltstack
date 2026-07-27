@@ -79,7 +79,6 @@ export async function BlogPageView({ className }: BlogPageViewProps) {
         badge={t("heroBadge")}
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        subtitleSecondary={t("heroSubtitleSecondary")}
         imageAlt={t("heroImageAlt")}
         scrollLabel={t("scrollLabel")}
         stats={heroStats}

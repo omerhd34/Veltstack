@@ -3,8 +3,6 @@ export const aboutEn = {
   heroTitle: "We build digital solutions aligned with your business goals.",
   heroSubtitle:
     "Veltstack is a product-building brand that delivers websites, mobile apps and SEO-focused digital products, from idea to launch with a clear process and measurable outcomes.",
-  heroSubtitleSecondary:
-    "From corporate web and e-commerce to performance-driven infrastructure, we unite design, software and growth goals in a single delivery line.",
   heroImageAlt:
     "Abstract digital structure illustration symbolizing vision and growth",
   scrollLabel: "Read more",

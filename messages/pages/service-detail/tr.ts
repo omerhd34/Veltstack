@@ -71,8 +71,7 @@ export const serviceDetailsTr = {
       "Modern web sitesi yapımını simgeleyen soyut tarayıcı ve layout illüstrasyonu",
     heroSubtitle:
       "Kurumsal siteden e-ticarete, portfolyodan tanıtım sayfasına kadar her web projesini uçtan uca geliştiriyorum.",
-    heroSubtitleSecondary:
-      "Projenize uygun modern altyapı, SEO uyumlu yapı ve mobil öncelikli tasarımla markanızı dijitalde güçlü bir şekilde temsil edecek, hızlı ve ölçeklenebilir çözümler sunuyorum.",    processSubtitle:
+    processSubtitle:
       "Keşiften yayına kadar her aşamada ne yapılacağını, ne zaman teslim edileceğini ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve canlıya alma adımlarını öngörülebilir bir planla yönetiyor; proje boyunca düzenli iletişimle sizi bilgilendiriyoruz.",
     techSubtitle:
       "Projenizin ihtiyacına göre seçilmiş, güncel ve ölçeklenebilir araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
@@ -147,8 +146,7 @@ export const serviceDetailsTr = {
       "Web sitesi yenilemeyi simgeleyen dönüşen arayüz panelleri illüstrasyonu",
     heroSubtitle:
       "Güncelliğini yitirmiş, yavaş veya mobil uyumsuz web ve uygulama deneyimlerinizi modern, hızlı ve dönüşüm odaklı bir yapıya taşıyoruz.",
-    heroSubtitleSecondary:
-      "Mevcut içeriklerinizi koruyarak SEO sıralamanızı riske atmadan yeni tasarım ve altyapıya güvenli geçiş sağlıyoruz.",    processSubtitle:
+    processSubtitle:
       "Mevcut sitenizi veya uygulamanızı analizden canlıya almaya kadar ölçülebilir adımlarla yeniliyoruz. SEO kaybı riskini en aza indiren geçiş planı, tasarım onayı ve içerik migrasyonu süreç boyunca şeffaf iletişimle yönetilir.",
     techSubtitle:
       "Mevcut sitenizi modern altyapıya taşırken kullandığımız güncel ve ölçeklenebilir araçlar.",
@@ -208,8 +206,7 @@ export const serviceDetailsTr = {
       "Mobil uygulama yapımını simgeleyen yüzen telefon ve arayüz illüstrasyonu",
     heroSubtitle:
       "Tek kod tabanıyla iOS ve Android'de çalışan, kullanıcı dostu ve ölçeklenebilir mobil uygulamalar geliştiriyorum.",
-    heroSubtitleSecondary:
-      "React Native ve Expo ile hızlı teslimat, sorunsuz mağaza yayını ve backend entegrasyonlarını tek çatı altında yönetiyorum.",    processSubtitle:
+    processSubtitle:
       "Uygulama fikrinden mağaza yayınına kadar her aşamada ne yapılacağını ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve yayın adımlarını öngörülebilir bir planla yönetiyoruz.",
     techSubtitle:
       "Mobil uygulama projelerinde kullandığımız güncel ve ölçeklenebilir araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
@@ -270,8 +267,7 @@ export const serviceDetailsTr = {
       "SEO ve arama görünürlüğünü simgeleyen yükselen sıralama grafiği illüstrasyonu",
     heroSubtitle:
       "Teknik altyapıdan içerik stratejisine kadar arama motorlarında görünürlüğünüzü artırıyorum.",
-    heroSubtitleSecondary:
-      "Site denetiminden anahtar kelime planlamasına, on-page optimizasyondan düzenli raporlamaya kadar sürdürülebilir organik büyüme için uçtan uca SEO desteği sunuyorum.",    processSubtitle:
+    processSubtitle:
       "Site analizinden sürekli iyileştirmeye kadar SEO çalışmalarını ölçülebilir adımlarla yürütüyoruz. Her aşamada yapılan işleri ve beklenen çıktıları şeffaf şekilde paylaşıyoruz.",
     techSubtitle:
       "SEO projelerinde analiz, izleme ve optimizasyon için kullandığımız araçlar.",
@@ -331,8 +327,7 @@ export const serviceDetailsTr = {
       "Teknik denetimi simgeleyen tarama ve güvenlik kontrol illüstrasyonu",
     heroSubtitle:
       "Mevcut dijital varlıklarınızı performans, güvenlik, SEO ve kod kalitesi açısından analiz ediyoruz; önceliklendirilmiş aksiyon planı sunuyoruz.",
-    heroSubtitleSecondary:
-      "Lighthouse skorlarından erişilebilirliğe, altyapı risklerinden teknik borca kadar kapsamlı bir denetim raporu ile net bir yol haritası çıkarıyoruz.",    processSubtitle:
+    processSubtitle:
       "Denetim sürecini briefing'den aksiyon planına kadar net adımlarla yönetiyoruz. Bulguları öncelik sırasına göre raporlayıp uygulanabilir öneriler sunuyoruz.",
     techSubtitle:
       "Teknik denetimlerde performans, güvenlik ve SEO analizi için kullandığımız araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
@@ -392,8 +387,7 @@ export const serviceDetailsTr = {
       "Bakım ve desteği simgeleyen koruyucu kalkan ve sistem izleme illüstrasyonu",
     heroSubtitle:
       "Yayına aldıktan sonra da yanınızdayım. Güncelleme, yedekleme, güvenlik ve teknik destek tek çatı altında.",
-    heroSubtitleSecondary:
-      "Web siteniz, mobil uygulamanız ve backend altyapınız için kesintisiz izleme, hızlı müdahale ve düzenli raporlama sunuyorum.",    processSubtitle:
+    processSubtitle:
       "Proje devralmadan aylık raporlamaya kadar bakım sürecini düzenli ve öngörülebilir adımlarla yönetiyoruz. Güncelleme, izleme ve destek talepleri net bir takvimle ilerler.",
     techSubtitle:
       "Bakım ve destek hizmetlerinde kullandığımız altyapı ve izleme araçları. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",

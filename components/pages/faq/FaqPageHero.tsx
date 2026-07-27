@@ -7,7 +7,6 @@ interface FaqPageHeroProps {
   badge: string;
   title: string;
   subtitle: string;
-  subtitleSecondary: string;
   imageAlt: string;
   scrollLabel: string;
   stats: HeroStat[];
@@ -17,7 +16,6 @@ export async function FaqPageHero({
   badge,
   title,
   subtitle,
-  subtitleSecondary,
   imageAlt,
   scrollLabel,
   stats,
@@ -29,7 +27,6 @@ export async function FaqPageHero({
       badge={toLatinUppercase(badge, locale)}
       title={title}
       subtitle={subtitle}
-      subtitleSecondary={subtitleSecondary}
       imageAlt={imageAlt}
       imageSrc="/images/pages/faq/hero.png"
       imageMobileSrc="/images/pages/faq/hero-mobile.png"

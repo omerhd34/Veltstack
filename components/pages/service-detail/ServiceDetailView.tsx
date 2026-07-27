@@ -84,7 +84,6 @@ export async function ServiceDetailView({
         badge={t(`${slug}.heroBadge`)}
         title={t(`${slug}.heroTitle`)}
         subtitle={t(`${slug}.heroSubtitle`)}
-        subtitleSecondary={t(`${slug}.heroSubtitleSecondary`)}
         imageAlt={t(`${slug}.heroImageAlt`)}
         imageSrc={serviceHeroImages[slug]}
         imageMobileSrc={serviceHeroMobileImages[slug]}

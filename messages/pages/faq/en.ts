@@ -4,8 +4,6 @@ export const faqEn = {
   metaTitle: "Frequently Asked Questions | Veltstack",
   subtitle:
     "Find answers to the most common questions about Veltstack services, our process and how we work together.",
-  subtitleSecondary:
-    "Browse answers organized by topic to quickly find what you need.",
   heroStats: {
     questions: {
       label: "Total Questions",

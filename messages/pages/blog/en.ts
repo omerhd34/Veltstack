@@ -25,8 +25,6 @@ export const blogPageEn = {
     "deploy on Vercel",
     "custom software CMS",
   ],
-  heroSubtitleSecondary:
-    "Filter by category or search to quickly find what you need.",
   heroImageAlt:
     "Abstract network illustration symbolizing knowledge flow and digital insights",
   heroStats: {

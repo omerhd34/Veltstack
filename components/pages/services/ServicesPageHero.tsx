@@ -5,7 +5,6 @@ interface ServicesPageHeroProps {
   badge: string;
   title: string;
   subtitle: string;
-  subtitleSecondary: string;
   imageAlt: string;
   scrollLabel: string;
   stats: HeroStat[];
@@ -16,7 +15,6 @@ export function ServicesPageHero({
   badge,
   title,
   subtitle,
-  subtitleSecondary,
   imageAlt,
   scrollLabel,
   stats,
@@ -27,7 +25,6 @@ export function ServicesPageHero({
       badge={badge}
       title={title}
       subtitle={subtitle}
-      subtitleSecondary={subtitleSecondary}
       imageAlt={imageAlt}
       imageSrc="/images/pages/services/hero.png"
       imageMobileSrc="/images/pages/services/hero-mobile.png"
