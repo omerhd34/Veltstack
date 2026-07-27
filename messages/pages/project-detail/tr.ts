@@ -269,7 +269,7 @@ export const projectDetailsTr = {
     ],
     metrics: [
       { value: "4 hafta", label: "Yapım Süresi" },
-      { value: "Kurumsal Katalog", label: "Site Türü" },
+      { value: "Kurumsal", label: "Site Türü" },
       { value: "Mobilya", label: "Sektör" },
       { value: "TR/EN", label: "Dil Desteği" },
     ],
@@ -378,7 +378,7 @@ export const projectDetailsTr = {
     ],
     metrics: [
       { value: "4 hafta", label: "Yapım Süresi" },
-      { value: "Kurumsal Katalog", label: "Site Türü" },
+      { value: "Kurumsal", label: "Site Türü" },
       { value: "Mali Müşavirlik", label: "Sektör" },
       { value: "TR", label: "Dil Desteği" },
     ],
