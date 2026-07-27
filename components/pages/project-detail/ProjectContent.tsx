@@ -31,7 +31,7 @@ export function ProjectContent({
   className,
 }: ProjectContentProps) {
   return (
-    <section className={cn("bg-background py-24 md:py-32", className)}>
+    <section className={cn("bg-background pt-10 pb-24 md:pt-14 md:pb-32", className)}>
       <SiteContainer>
         <SectionScrollReveal direction="left" trigger="entry">
           <div className="mx-auto max-w-3xl text-center">

@@ -11,9 +11,14 @@ import {
 } from "@/components/sections/projects/project-detail-config";
 import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { projectRelatedServices } from "./project-detail-config";
+import {
+  projectHeroImages,
+  projectHeroMobileImages,
+} from "./project-hero-images";
 import { ProjectContent } from "./ProjectContent";
 import { ProjectFeatures } from "./ProjectFeatures";
 import { ProjectHero } from "./ProjectHero";
+import { ProjectPreview } from "./ProjectPreview";
 import { ProjectRelated } from "./ProjectRelated";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { ProjectDetailCard } from "./ProjectDetailCard";
@@ -91,12 +96,18 @@ export async function ProjectDetailView({
         title={t(`${slug}.heroTitle`)}
         subtitle={t(`${slug}.heroSubtitle`)}
         metrics={metrics}
-        demoUrl={projectDemoUrls[slug]}
-        demoLabel={t("demo")}
         scrollLabel={t("scrollLabel")}
+        imageSrc={projectHeroImages[slug]}
+        imageMobileSrc={projectHeroMobileImages[slug]}
+        imageAlt={t(`${slug}.heroTitle`)}
+      />
+      <ProjectPreview
+        title={t(`${slug}.heroTitle`)}
         imageUrl={projectImageUrls[slug]}
         coverGradient={projectCoverGradients[slug]}
         icon={project.icon}
+        demoUrl={projectDemoUrls[slug]}
+        demoLabel={t("demo")}
       />
       <ProjectContent
         badge={t("overviewBadge")}
