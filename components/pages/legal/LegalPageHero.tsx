@@ -50,11 +50,11 @@ export async function LegalPageHero({
             className="mt-7 hidden h-px w-14 bg-linear-to-r from-brand-accent via-brand-accent/50 to-transparent lg:block"
           />
 
-          <h1 className="mt-6 font-(family-name:--font-heading) text-[2rem] font-bold leading-[1.08] tracking-tight sm:text-4xl lg:text-[3rem] 2xl:text-[3.25rem]">
+          <h1 className="mt-6 font-(family-name:--font-heading) text-[33.75px] font-bold leading-[1.2] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl lg:leading-tight">
             {title}
           </h1>
 
-          <p className="mt-5 max-w-2xl text-sm leading-[1.85] text-emerald-50/70 sm:text-base lg:text-lg">
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-emerald-50/70">
             {subtitle}
           </p>
 

@@ -69,7 +69,7 @@ export function PageHeroCopy({
 
         <h1
           className={cn(
-            "font-(family-name:--font-heading) text-[1.625rem] font-bold leading-[1.1] tracking-tight sm:text-4xl lg:text-[3rem] 2xl:text-[3.25rem]",
+            "font-(family-name:--font-heading) text-[33.75px] font-bold leading-[1.2] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl lg:leading-tight",
             badgeAlwaysVisible || accentAlwaysVisible || !badge
               ? "mt-4 sm:mt-6"
               : "mt-2 sm:mt-4 lg:mt-6",
@@ -78,14 +78,14 @@ export function PageHeroCopy({
           {title}
         </h1>
 
-        <p className="mt-3 max-w-2xl text-sm leading-[1.65] text-emerald-50/75 sm:mt-5 sm:max-w-3xl sm:text-base sm:leading-[1.8] lg:mt-6 lg:max-w-xl lg:text-lg lg:leading-[1.85]">
+        <p className="mt-3 max-w-2xl text-lg leading-relaxed text-emerald-50/75 sm:mt-5 sm:max-w-3xl lg:mt-6 lg:max-w-xl">
           {subtitle}
         </p>
 
         {subtitleSecondary ? (
           <p
             className={cn(
-              "mt-3 max-w-2xl text-sm leading-[1.75] sm:max-w-3xl sm:text-[0.9375rem] sm:leading-[1.8] lg:max-w-xl",
+              "mt-3 max-w-2xl text-lg leading-relaxed sm:max-w-3xl lg:max-w-xl",
               secondaryMuted ? "text-emerald-50/45" : "text-emerald-50/65",
             )}
           >
