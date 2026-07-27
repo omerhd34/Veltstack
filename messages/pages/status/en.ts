@@ -17,4 +17,8 @@ export const statusEn = {
     retryCta: "Try again",
     homeCta: "Back to home",
   },
+  loading: {
+    label: "Loading",
+    aria: "Loading page",
+  },
 } as const;

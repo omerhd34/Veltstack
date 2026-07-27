@@ -73,3 +73,128 @@
   background-size: 40px 40px;
   animation: scroll-carousel-wave 2s linear infinite;
 }
+
+@keyframes loading-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes loading-ring-pulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.55;
+  }
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+@keyframes loading-favicon-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes loading-logo-settle {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes loading-bar-slide {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes loading-ambient-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(18px, -14px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes loading-dot {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+.loading-content {
+  animation: loading-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.loading-ring {
+  animation: loading-ring-pulse 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+.loading-ring-delayed {
+  animation: loading-ring-pulse 2.2s cubic-bezier(0.22, 1, 0.36, 1) 0.55s
+    infinite;
+}
+
+.loading-favicon {
+  animation: loading-favicon-breathe 2.4s ease-in-out infinite;
+}
+
+.loading-logo {
+  animation: loading-logo-settle 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+}
+
+.loading-bar {
+  animation: loading-bar-slide 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.loading-ambient {
+  animation: loading-ambient-drift 7s ease-in-out infinite;
+}
+
+.loading-ambient-delayed {
+  animation: loading-ambient-drift 9s ease-in-out 1.2s infinite reverse;
+}
+
+.loading-dots span {
+  display: inline-block;
+  animation: loading-dot 1.2s ease-in-out infinite;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.36s;
+}

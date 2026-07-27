@@ -17,4 +17,8 @@ export const statusTr = {
     retryCta: "Tekrar dene",
     homeCta: "Ana sayfaya dön",
   },
+  loading: {
+    label: "Yükleniyor",
+    aria: "Sayfa yükleniyor",
+  },
 } as const;

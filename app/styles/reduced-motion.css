@@ -32,4 +32,27 @@
     border: 2px solid rgb(58 107 82 / 0.85) !important;
     box-shadow: 0 0 0 1px rgb(58 107 82 / 0.35) !important;
   }
+
+  .loading-content,
+  .loading-ring,
+  .loading-ring-delayed,
+  .loading-favicon,
+  .loading-logo,
+  .loading-bar,
+  .loading-ambient,
+  .loading-ambient-delayed,
+  .loading-dots span {
+    animation: none !important;
+  }
+
+  .loading-content,
+  .loading-logo {
+    opacity: 1;
+    transform: none;
+  }
+
+  .loading-bar {
+    width: 40%;
+    transform: none;
+  }
 }
