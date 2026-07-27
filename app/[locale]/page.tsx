@@ -5,7 +5,7 @@ import { ServicesMarqueeSection } from "@/components/sections/services-marquee";
 import { WhoWeAreSection } from "@/components/sections/who-we-are";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { BlogPreviewSection } from "@/components/sections/blog-preview";
-import { ApproachSection } from "@/components/sections/approach";
+import { WorkflowSection } from "@/components/sections/workflow";
 import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
 import { createPageMetadata } from "@/lib/create-page-metadata";
 
@@ -38,7 +38,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <ServicesMarqueeSection />
       <WhoWeAreSection />
       <ServicesSection />
-      <ApproachSection />
+      <WorkflowSection />
       <TestimonialsSection />
       <BlogPreviewSection />
       <ServicesConsultationCTA />
