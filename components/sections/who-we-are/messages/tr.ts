@@ -1,6 +1,6 @@
 export const whoWeAreHomeTr = {
   whoWeAreTitle: "Biz Kimiz?",
-  whoWeAreHeadline: "Sadece proje teslim etmiyoruz,",
+  whoWeAreHeadline: "Sadece proje teslim etmiyoruz, ayrıca",
   whoWeAreHeadlineAccent: "işinizi sahiplenen bir ortağız.",
   whoWeAreDescription:
     "Projenizin başından sonuna aynı kişiyle iletişim kurarsınız; ara katman yok, kararlar gecikmez. Kapsamı baştan netleştiriyor, düzenli bilgilendirme yapıyor ve her aşamada iş hedeflerinize odaklanıyoruz. Tasarım, geliştirme ve yayına alma sürecini tek elden yöneterek şeffaf, öngörülebilir ve sonuç odaklı bir yapım yaklaşımı sunuyoruz.",
