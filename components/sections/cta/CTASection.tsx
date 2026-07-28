@@ -44,7 +44,7 @@ export async function CTASection({ className }: CTASectionProps) {
         <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-[#0A0A0F] px-5 py-12 shadow-[0_24px_80px_rgb(58_107_82/0.12)] sm:rounded-3xl sm:px-8 sm:py-14 md:px-14 md:py-20">
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-0 size-[480px] -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
+            className="pointer-events-none absolute left-1/2 top-0 size-120 -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
           />
           <div
             aria-hidden
