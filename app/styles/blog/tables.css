@@ -1,10 +1,31 @@
 @layer components {
   .blog-prose .blog-table-wrap {
-    @apply my-10 overflow-x-auto overflow-y-hidden rounded-2xl border border-border/60 bg-card p-0 shadow-[0_4px_24px_rgb(0_0_0/0.05)];
+    @apply my-10 overflow-x-auto overflow-y-hidden overscroll-x-contain rounded-2xl border border-border/60 bg-card p-0 shadow-[0_4px_24px_rgb(0_0_0/0.05)];
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: var(--brand-accent) rgb(var(--brand-accent-rgb) / 0.12);
+    scrollbar-width: thin;
+  }
+
+  .blog-prose .blog-table-wrap::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .blog-prose .blog-table-wrap::-webkit-scrollbar-track {
+    background: rgb(var(--brand-accent-rgb) / 0.12);
+    border-radius: 9999px;
+  }
+
+  .blog-prose .blog-table-wrap::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background: var(--brand-accent);
+  }
+
+  .blog-prose .blog-table-wrap::-webkit-scrollbar-thumb:hover {
+    background: #325a45;
   }
 
   .blog-prose .blog-table-wrap table {
-    @apply m-0 border-collapse text-sm;
+    @apply m-0 w-max min-w-full table-auto border-collapse text-sm;
   }
 
   .blog-prose .blog-table-wrap thead {
@@ -12,12 +33,12 @@
   }
 
   .blog-prose .blog-table-wrap th {
-    @apply border-b border-brand-accent/20 text-left text-[0.8125rem] font-semibold text-foreground/80;
+    @apply whitespace-nowrap border-b border-brand-accent/20 text-left text-[0.8125rem] font-semibold text-foreground/80;
     padding: 1rem 1.5rem !important;
   }
 
   .blog-prose .blog-table-wrap td {
-    @apply border-b border-border/40 align-top leading-relaxed text-foreground/75 transition-colors duration-200;
+    @apply whitespace-nowrap border-b border-border/40 align-top leading-relaxed text-foreground/75 transition-colors duration-200;
     padding: 1rem 1.5rem !important;
   }
 
@@ -69,16 +90,18 @@
   }
 
   .blog-prose .blog-table-compare table {
-    @apply w-full table-fixed;
+    @apply w-max min-w-full table-auto;
   }
 
-  .blog-prose .blog-table-compare-col-feature {
-    width: 20%;
-  }
-
+  .blog-prose .blog-table-compare-col-feature,
   .blog-prose .blog-table-compare-col-domain,
   .blog-prose .blog-table-compare-col-hosting {
-    width: 40%;
+    @apply w-auto;
+  }
+
+  .blog-prose .blog-table-compare th,
+  .blog-prose .blog-table-compare td {
+    @apply whitespace-nowrap;
   }
 
   .blog-prose .blog-table-compare thead th {
@@ -160,17 +183,14 @@
   }
 
   .blog-prose .blog-table-compare--4 table {
-    @apply min-w-176 table-fixed;
+    @apply w-max min-w-full table-auto;
   }
 
-  .blog-prose .blog-table-compare--4 .blog-table-compare-col-feature {
-    width: 24%;
-  }
-
+  .blog-prose .blog-table-compare--4 .blog-table-compare-col-feature,
   .blog-prose .blog-table-compare--4 .blog-table-compare-col-domain,
   .blog-prose .blog-table-compare--4 .blog-table-compare-col-hosting,
   .blog-prose .blog-table-compare--4 .blog-table-compare-col-alt {
-    width: 25.33%;
+    @apply w-auto;
   }
 
   .blog-prose .blog-table-compare--4 thead th:nth-child(4) {
@@ -228,6 +248,11 @@
 
   .blog-prose .blog-table-price table {
     @apply table-fixed w-full min-w-0;
+  }
+
+  .blog-prose .blog-table-price th,
+  .blog-prose .blog-table-price td {
+    @apply whitespace-normal;
   }
 
   .blog-prose .blog-table-price th:first-child,
