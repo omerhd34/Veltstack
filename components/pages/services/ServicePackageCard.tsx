@@ -17,6 +17,12 @@ import {
 } from "@/components/ui/interactive-hover";
 import {
   buildFeatureGroupComparison,
+  buildLanguageFeatureItem,
+  buildPagesFeatureItem,
+  buildRevisionFeatureItem,
+  buildSupportFeatureItem,
+  findLanguagesGroupLabel,
+  findSupportGroupLabel,
   sortFeatureGroupsForDisplay,
 } from "./package-accordion";
 import type { PackageTier } from "./packages-config";
@@ -31,6 +37,8 @@ export interface PackageTierData {
   deliveryDays: string;
   revisions?: string;
   pages?: string;
+  supportDays?: string;
+  languages?: string;
   features?: string[];
   featureGroups?: PackageFeatureGroup[];
 }
@@ -49,6 +57,9 @@ interface PackageCardLabels {
   statDelivery: string;
   statDeliveryUnit: string;
   statRevision: string;
+  statSupport: string;
+  statLanguages: string;
+  statPages: string;
   getQuote: string;
   deliveryGroupLabel: string;
   hideMiddleStat?: boolean;
@@ -98,31 +109,52 @@ export function ServicePackageCard({
     labels.deliveryGroupLabel,
   );
 
+  const pagesFeature = buildPagesFeatureItem(
+    data.tiers,
+    activeTier,
+    labels.statPages,
+  );
+
   const stats = [
     {
       label: labels.statDelivery,
       value: tier.deliveryDays,
     },
-    ...(labels.hideMiddleStat
-      ? []
-      : [
-          {
-            label: labels.statRevision,
-            value: tier.pages ?? tier.revisions,
-          },
-        ]),
   ];
+
+  const languagesGroupLabel = findLanguagesGroupLabel(featureGroups);
+  const languageFeature = buildLanguageFeatureItem(
+    data.tiers,
+    activeTier,
+    labels.statLanguages,
+  );
+  const supportGroupLabel = findSupportGroupLabel(
+    featureGroups,
+    labels.deliveryGroupLabel,
+  );
+  const revisionFeature = labels.hideMiddleStat
+    ? null
+    : buildRevisionFeatureItem(
+        data.tiers,
+        activeTier,
+        labels.statRevision,
+      );
+  const supportFeature = buildSupportFeatureItem(
+    data.tiers,
+    activeTier,
+    labels.statSupport,
+  );
 
   const renderFeatureGroup = (
     group: PackageFeatureGroup,
     groupIndex: number,
   ) => {
     const isOpen = openGroups.has(group.label);
-    const panelId = `${activeTiers}-${group.label}-panel`;
+    const panelId = `${activeTier}-${group.label}-panel`;
 
     return (
       <div
-        key={`${activeTiers}-${group.label}`}
+        key={`${activeTier}-${group.label}`}
         data-package-group={groupIndex}
         data-package-group-label={group.label}
         className={cn(
@@ -160,13 +192,25 @@ export function ServicePackageCard({
         >
           <div className="overflow-hidden" data-package-group-content>
             <ul className="flex flex-col gap-2.5 px-2 pb-3.5">
-              {buildFeatureGroupComparison(
-                data.tiers,
-                group.label,
-                activeTier,
-              ).map((feature) => (
+              {[
+                ...(pagesFeature && groupIndex === 0 ? [pagesFeature] : []),
+                ...(languageFeature && group.label === languagesGroupLabel
+                  ? [languageFeature]
+                  : []),
+                ...(group.label === supportGroupLabel
+                  ? [
+                      ...(revisionFeature ? [revisionFeature] : []),
+                      ...(supportFeature ? [supportFeature] : []),
+                    ]
+                  : []),
+                ...buildFeatureGroupComparison(
+                  data.tiers,
+                  group.label,
+                  activeTier,
+                ),
+              ].map((feature) => (
                 <li
-                  key={`${activeTiers}-${group.label}-${feature.text}`}
+                  key={`${activeTier}-${group.label}-${feature.text}`}
                   className="flex items-start justify-between gap-3 text-[0.8125rem] leading-snug"
                 >
                   <span
@@ -179,7 +223,11 @@ export function ServicePackageCard({
                   >
                     {feature.text}
                   </span>
-                  {feature.included ? (
+                  {feature.included && feature.value ? (
+                    <span className="mt-0.5 shrink-0 font-(family-name:--font-heading) text-xs font-bold text-brand-accent">
+                      {feature.value}
+                    </span>
+                  ) : feature.included ? (
                     <LuCircleCheck
                       className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
                       strokeWidth={2.5}
@@ -267,7 +315,9 @@ export function ServicePackageCard({
       <div
         className={cn(
           "grid gap-1.5 border-b border-emerald-900/35 px-3 py-5 sm:gap-2 sm:px-4",
-          stats.length === 1 ? "grid-cols-1" : "grid-cols-2",
+          stats.length === 1 && "grid-cols-1",
+          stats.length === 2 && "grid-cols-2",
+          stats.length >= 3 && "grid-cols-3",
         )}
       >
         {stats.map((stat) => (
@@ -316,7 +366,7 @@ export function ServicePackageCard({
             <ul className="flex flex-col gap-2.5 px-2 py-3.5">
               {tier.features.map((feature) => (
                 <li
-                  key={`${activeTiers}-${feature}`}
+                  key={`${activeTier}-${feature}`}
                   className="flex items-start justify-between gap-3 text-[0.8125rem] leading-snug text-emerald-50/85"
                 >
                   <span className="min-w-0 flex-1">{feature}</span>
