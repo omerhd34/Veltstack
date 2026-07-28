@@ -1,7 +1,6 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { LuCircleHelp } from "react-icons/lu";
 import { getNavFaqItems } from "@/components/pages/faq/faq-data";
 import { useUiStore } from "@/store/uiSlice";
 import { NavbarMegaMenuItem } from "./NavbarMegaMenuItem";
@@ -26,7 +25,7 @@ export function NavbarFaqMegaMenuPanel() {
           key={item.slug}
           href={`/sss#${item.slug}`}
           title={item.question}
-          icon={LuCircleHelp}
+          icon={item.icon}
           onNavigate={closeMenu}
         />
       ))}
