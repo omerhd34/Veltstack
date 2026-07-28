@@ -1,6 +1,5 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
 import {
   LuChevronDown,
   LuCircleCheck,
@@ -17,7 +16,13 @@ import {
 } from "@/components/ui/interactive-hover";
 import {
   buildFeatureGroupMatrix,
+  buildLanguageMatrixItem,
+  buildPagesMatrixItem,
+  buildRevisionMatrixItem,
+  buildSupportMatrixItem,
   collectAllTierGroupLabels,
+  findLanguagesGroupLabel,
+  findSupportGroupLabel,
   sortFeatureGroupsForDisplay,
   type PackageFeatureMatrixItem,
 } from "./package-accordion";
@@ -34,6 +39,9 @@ interface ComparisonLabels {
   tierPro: string;
   statDelivery: string;
   statRevision: string;
+  statSupport: string;
+  statLanguages: string;
+  statPages: string;
   getQuote: string;
   deliveryGroupLabel: string;
   hideMiddleStat?: boolean;
@@ -56,8 +64,7 @@ const tierLabelKey: Record<PackageTier, keyof ComparisonLabels> = {
   pro: "tierPro",
 };
 
-const COLS =
-  "grid grid-cols-[minmax(11rem,1.35fr)_repeat(3,minmax(6.5rem,1fr))]";
+const COLS = "grid grid-cols-[minmax(11rem,1.2fr)_repeat(3,minmax(8rem,1fr))]";
 
 function buildInclusionCells(
   included: Record<PackageTier, boolean>,
@@ -97,9 +104,18 @@ function groupFeaturesByInclusion(features: PackageFeatureMatrixItem[]) {
   const grouped: PackageFeatureMatrixItem[][] = [];
 
   for (const feature of features) {
+    if (feature.values) {
+      grouped.push([feature]);
+      continue;
+    }
+
     const key = inclusionPatternKey(feature.included);
     const last = grouped[grouped.length - 1];
-    if (last && inclusionPatternKey(last[0].included) === key) {
+    if (
+      last &&
+      !last[0].values &&
+      inclusionPatternKey(last[0].included) === key
+    ) {
       last.push(feature);
     } else {
       grouped.push([feature]);
@@ -128,28 +144,8 @@ function ComparisonCorner({
   categoryLabel: string;
   packageTitle: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [angle, setAngle] = useState(45);
-
-  useLayoutEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const update = () => {
-      const { width, height } = el.getBoundingClientRect();
-      if (width > 0 && height > 0) {
-        setAngle((Math.atan(height / width) * 180) / Math.PI);
-      }
-    };
-
-    update();
-    const observer = new ResizeObserver(update);
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div ref={ref} className="relative min-h-34 overflow-hidden sm:min-h-38">
+    <div className="relative min-h-20 overflow-hidden sm:min-h-24">
       <svg
         aria-hidden
         className="pointer-events-none absolute inset-0 size-full"
@@ -167,21 +163,68 @@ function ComparisonCorner({
         />
       </svg>
 
-      <div
-        className="absolute top-1/2 left-1/2 w-[125%]"
-        style={{
-          transform: `translate(-50%, -50%) rotate(${angle}deg)`,
-        }}
-      >
-        <p className="absolute bottom-full left-1/2 mb-3 w-48 -translate-x-1/2 text-center font-(family-name:--font-heading) text-xs font-bold uppercase tracking-[0.12em] text-emerald-400/70 sm:mb-3.5 sm:w-56 sm:text-sm">
-          {categoryLabel}
-        </p>
-        <p className="absolute top-full left-1/2 mt-3 w-48 -translate-x-1/2 text-center font-(family-name:--font-heading) text-sm font-semibold leading-snug text-emerald-50/95 sm:mt-3.5 sm:w-56 sm:text-base">
-          {packageTitle}
-        </p>
-      </div>
+      <p className="absolute top-2.5 right-2.5 max-w-[70%] text-right font-(family-name:--font-heading) text-xs font-bold uppercase tracking-[0.12em] text-emerald-400/70 sm:top-3 sm:right-3 sm:text-sm">
+        {categoryLabel}
+      </p>
+      <p className="absolute bottom-2.5 left-2.5 max-w-[70%] text-left font-(family-name:--font-heading) text-sm font-semibold leading-snug text-emerald-50/95 sm:bottom-3 sm:left-3 sm:text-base">
+        {packageTitle}
+      </p>
     </div>
   );
+}
+
+function buildDeliveryMatrixItem(
+  data: PackageCardData,
+  labels: ComparisonLabels,
+): PackageFeatureMatrixItem | null {
+  if (!tierOrder.some((tier) => Boolean(data.tiers[tier].deliveryDays))) {
+    return null;
+  }
+
+  const values = {} as Record<PackageTier, string | null>;
+  const included = {} as Record<PackageTier, boolean>;
+  for (const tier of tierOrder) {
+    const value = data.tiers[tier].deliveryDays || null;
+    values[tier] = value;
+    included[tier] = Boolean(value);
+  }
+
+  return {
+    text: labels.statDelivery,
+    included,
+    values,
+  };
+}
+
+function ValueCells({
+  values,
+  tierNames,
+}: {
+  values: Record<PackageTier, string | null>;
+  tierNames: Record<PackageTier, string>;
+}) {
+  return tierOrder.map((tierKey) => {
+    const value = values[tierKey];
+    return (
+      <span
+        key={tierKey}
+        className="flex items-center justify-center self-stretch border-l border-emerald-900/25 px-1"
+        aria-label={`${tierNames[tierKey]}: ${value ?? "✗"}`}
+      >
+        {value ? (
+          <span className="font-(family-name:--font-heading) text-sm font-bold text-brand-accent sm:text-base">
+            {value}
+          </span>
+        ) : (
+          <LuCircleX
+            className="size-3.5 text-red-400/70"
+            strokeWidth={2.5}
+            aria-hidden
+          />
+        )}
+      </span>
+    );
+  });
 }
 
 export function ServicePackageComparison({
@@ -193,14 +236,49 @@ export function ServicePackageComparison({
   className,
 }: ServicePackageComparisonProps) {
   const allLabels = collectAllTierGroupLabels(data);
-  const groups = sortFeatureGroupsForDisplay(
+  const deliveryRow = buildDeliveryMatrixItem(data, labels);
+  const pagesRow = buildPagesMatrixItem(data.tiers, labels.statPages);
+  const languageRow = buildLanguageMatrixItem(data.tiers, labels.statLanguages);
+  const revisionRow = labels.hideMiddleStat
+    ? null
+    : buildRevisionMatrixItem(data.tiers, labels.statRevision);
+  const supportRow = buildSupportMatrixItem(data.tiers, labels.statSupport);
+  const sortedGroups = sortFeatureGroupsForDisplay(
     collectTierGroups(data),
     allLabels,
     labels.deliveryGroupLabel,
-  )
-    .map((group) => ({
+  );
+  const hasDeliveryGroup = sortedGroups.some(
+    (group) => group.label === labels.deliveryGroupLabel,
+  );
+  const languagesGroupLabel = findLanguagesGroupLabel(sortedGroups);
+  const supportGroupLabel = findSupportGroupLabel(
+    sortedGroups,
+    labels.deliveryGroupLabel,
+  );
+
+  const groups = sortedGroups
+    .map((group, index) => ({
       ...group,
-      features: buildFeatureGroupMatrix(data.tiers, group.label),
+      features: [
+        ...(index === 0 && pagesRow ? [pagesRow] : []),
+        ...(index === 0 && !hasDeliveryGroup && deliveryRow
+          ? [deliveryRow]
+          : []),
+        ...(group.label === labels.deliveryGroupLabel && deliveryRow
+          ? [deliveryRow]
+          : []),
+        ...(languageRow && group.label === languagesGroupLabel
+          ? [languageRow]
+          : []),
+        ...(group.label === supportGroupLabel
+          ? [
+              ...(revisionRow ? [revisionRow] : []),
+              ...(supportRow ? [supportRow] : []),
+            ]
+          : []),
+        ...buildFeatureGroupMatrix(data.tiers, group.label),
+      ],
     }))
     .filter((group) => group.features.length);
 
@@ -218,7 +296,7 @@ export function ServicePackageComparison({
       )}
     >
       <div className="overflow-x-auto">
-        <div className="min-w-2xl">
+        <div className="min-w-3xl">
           <div
             className={cn(
               COLS,
@@ -230,47 +308,16 @@ export function ServicePackageComparison({
               packageTitle={data.title}
             />
 
-            {tierOrder.map((tierKey) => {
-              const tier = data.tiers[tierKey];
-              const middleStat = tier.pages ?? tier.revisions;
-
-              return (
-                <div
-                  key={tierKey}
-                  className="flex flex-col border-l border-emerald-900/35 px-3 py-5 text-center sm:px-4"
-                >
-                  <p className="font-(family-name:--font-heading) text-base font-bold tracking-tight text-white sm:text-lg">
-                    {labels[tierLabelKey[tierKey]]}
-                  </p>
-
-                  <div
-                    className={cn(
-                      "mt-4 grid gap-2",
-                      labels.hideMiddleStat ? "grid-cols-1" : "grid-cols-2",
-                    )}
-                  >
-                    <div className="rounded-lg border border-emerald-900/40 bg-[#0b1812]/70 px-1.5 py-2.5">
-                      <p className="text-[0.55rem] font-bold uppercase tracking-wider text-emerald-400/55">
-                        {labels.statDelivery.split(" (")[0]}
-                      </p>
-                      <p className="mt-1 font-(family-name:--font-heading) text-sm font-bold text-white sm:text-base">
-                        {tier.deliveryDays}
-                      </p>
-                    </div>
-                    {!labels.hideMiddleStat && middleStat ? (
-                      <div className="rounded-lg border border-emerald-900/40 bg-[#0b1812]/70 px-1.5 py-2.5">
-                        <p className="text-[0.55rem] font-bold uppercase tracking-wider text-emerald-400/55">
-                          {labels.statRevision}
-                        </p>
-                        <p className="mt-1 font-(family-name:--font-heading) text-sm font-bold text-white sm:text-base">
-                          {middleStat}
-                        </p>
-                      </div>
-                    ) : null}
-                  </div>
-                </div>
-              );
-            })}
+            {tierOrder.map((tierKey) => (
+              <div
+                key={tierKey}
+                className="flex items-center justify-center border-l border-emerald-900/35 px-2 py-5 text-center sm:px-3"
+              >
+                <p className="font-(family-name:--font-heading) text-base font-bold tracking-tight text-white sm:text-lg">
+                  {labels[tierLabelKey[tierKey]]}
+                </p>
+              </div>
+            ))}
           </div>
 
           {groups.map((group) => {
@@ -316,9 +363,12 @@ export function ServicePackageComparison({
                     <ul className="pb-1">
                       {groupFeaturesByInclusion(features).map(
                         (featureGroup) => {
-                          const inclusionCells = buildInclusionCells(
-                            featureGroup[0].included,
-                          );
+                          const valuedFeature = featureGroup[0].values
+                            ? featureGroup[0]
+                            : null;
+                          const inclusionCells = valuedFeature
+                            ? null
+                            : buildInclusionCells(featureGroup[0].included);
                           const isMultiRow = featureGroup.length > 1;
 
                           return (
@@ -345,41 +395,48 @@ export function ServicePackageComparison({
                                   </p>
                                 ))}
                               </div>
-                              {inclusionCells.map((cell) => {
-                                const isMulti = isMultiRow || cell.span > 1;
-                                const iconClass = cn(
-                                  isMulti ? "size-5 sm:size-6" : "size-3.5",
-                                  cell.included
-                                    ? "text-brand-accent"
-                                    : "text-red-400/70",
-                                );
+                              {valuedFeature?.values ? (
+                                <ValueCells
+                                  values={valuedFeature.values}
+                                  tierNames={tierNames}
+                                />
+                              ) : (
+                                inclusionCells?.map((cell) => {
+                                  const isMulti = isMultiRow || cell.span > 1;
+                                  const iconClass = cn(
+                                    isMulti ? "size-5 sm:size-6" : "size-3.5",
+                                    cell.included
+                                      ? "text-brand-accent"
+                                      : "text-red-400/70",
+                                  );
 
-                                return (
-                                  <span
-                                    key={cell.key}
-                                    className={cn(
-                                      "flex items-center justify-center self-stretch border-l border-emerald-900/25 px-1",
-                                      cell.span === 2 && "col-span-2",
-                                      cell.span === 3 && "col-span-3",
-                                    )}
-                                    aria-label={`${cell.tiers.map((tier) => tierNames[tier]).join(", ")}: ${cell.included ? "✓" : "✗"}`}
-                                  >
-                                    {cell.included ? (
-                                      <LuCircleCheck
-                                        className={iconClass}
-                                        strokeWidth={isMulti ? 2.25 : 2.5}
-                                        aria-hidden
-                                      />
-                                    ) : (
-                                      <LuCircleX
-                                        className={iconClass}
-                                        strokeWidth={isMulti ? 2.25 : 2.5}
-                                        aria-hidden
-                                      />
-                                    )}
-                                  </span>
-                                );
-                              })}
+                                  return (
+                                    <span
+                                      key={cell.key}
+                                      className={cn(
+                                        "flex items-center justify-center self-stretch border-l border-emerald-900/25 px-1",
+                                        cell.span === 2 && "col-span-2",
+                                        cell.span === 3 && "col-span-3",
+                                      )}
+                                      aria-label={`${cell.tiers.map((tier) => tierNames[tier]).join(", ")}: ${cell.included ? "✓" : "✗"}`}
+                                    >
+                                      {cell.included ? (
+                                        <LuCircleCheck
+                                          className={iconClass}
+                                          strokeWidth={isMulti ? 2.25 : 2.5}
+                                          aria-hidden
+                                        />
+                                      ) : (
+                                        <LuCircleX
+                                          className={iconClass}
+                                          strokeWidth={isMulti ? 2.25 : 2.5}
+                                          aria-hidden
+                                        />
+                                      )}
+                                    </span>
+                                  );
+                                })
+                              )}
                             </li>
                           );
                         },
