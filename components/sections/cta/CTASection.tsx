@@ -88,7 +88,7 @@ export async function CTASection({ className }: CTASectionProps) {
                 {t("ctaButton")}
               </PrimaryCtaLink>
               <PrimaryCtaLink
-                href="/projeler#projects-showcase"
+                href="/projeler"
                 variant="glass"
                 wrapperClassName="w-full sm:w-auto"
                 className="w-full justify-center sm:w-auto"

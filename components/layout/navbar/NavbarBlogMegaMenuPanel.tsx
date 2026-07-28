@@ -17,7 +17,7 @@ export function NavbarBlogMegaMenuPanel() {
 
   return (
     <NavbarMegaMenuShell
-      allHref="/blog#blog-grid"
+      allHref="/blog"
       allLabel={tNav("blogAll")}
       onNavigate={closeMenu}
     >

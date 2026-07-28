@@ -15,7 +15,7 @@ export function NavbarProjectsMegaMenuPanel() {
 
   return (
     <NavbarMegaMenuShell
-      allHref="/projeler#projects-showcase"
+      allHref="/projeler"
       allLabel={tNav("projectsAll")}
       onNavigate={closeMenu}
     >
