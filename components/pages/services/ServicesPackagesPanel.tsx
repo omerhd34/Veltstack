@@ -39,6 +39,8 @@ interface PackagesPanelLabels {
   statRevision: string;
   statMonthlyRequests: string;
   statPages: string;
+  statSupport: string;
+  statLanguages: string;
   getQuote: string;
   deliveryGroupLabel: string;
 }
@@ -195,6 +197,9 @@ export function ServicesPackagesPanel({
     statDelivery: labels[deliveryKey] as string,
     statDeliveryUnit: labels.statDeliveryUnit,
     statRevision: labels[revisionKey] as string,
+    statSupport: labels.statSupport,
+    statLanguages: labels.statLanguages,
+    statPages: labels.statPages,
     getQuote: labels.getQuote,
     deliveryGroupLabel: labels.deliveryGroupLabel,
     hideMiddleStat: activeCategory === "audit",
