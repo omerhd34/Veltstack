@@ -428,6 +428,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
           }}
           className={cn(
             "feature-card relative z-10 h-full shrink-0 snap-start snap-always transition-all duration-300 ease-in-out",
+            "hover:z-20 focus-within:z-20",
             isDragMode && columnsPerView > 1
               ? null
               : isDragMode
@@ -484,7 +485,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
       <div
         className={cn(
           "relative bg-transparent text-foreground",
-          isDragMode ? "overflow-x-clip" : "overflow-hidden",
+          isDragMode ? "overflow-visible" : "overflow-hidden",
           className,
         )}
         ref={ref}
@@ -555,7 +556,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                       ref={viewportRef}
                       onClickCapture={handleClickCapture}
                       className={cn(
-                        "overflow-x-auto overflow-y-hidden",
+                        "overflow-x-auto overflow-y-visible",
                         "scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
                         isDragMode && "pt-2",
                         isDragMode && !isLgViewport && "cursor-grab",
