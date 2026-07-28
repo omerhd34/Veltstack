@@ -1,4 +1,3 @@
-/** Shared LCP-friendly placeholder for full-bleed hero backdrops (#050f0c). */
 export const HERO_BLUR_DATA_URL =
   "data:image/svg+xml;charset=utf-8," +
   encodeURIComponent(
