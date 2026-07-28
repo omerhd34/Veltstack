@@ -9,36 +9,58 @@ const maintenanceMonitoringTemel = [
 ] as const;
 
 const maintenanceMonitoringStandart = [
+  "Uptime monitoring and outage alerts",
+  "Monthly full backup (files + database)",
+  "Basic error log tracking and critical alerts",
   "Weekly automated backups and monthly restore testing",
-  "Framework, package and security patch updates",
+  "Framework and security patch updates",
   "SSL certificate tracking and renewal",
-  "Monthly content, image and minor page updates",
+  "Monthly content and minor page updates",
 ] as const;
 
 const maintenanceMonitoringPro = [
+  "Uptime monitoring and outage alerts",
+  "Monthly full backup (files + database)",
+  "Basic error log tracking and critical alerts",
+  "Weekly automated backups and monthly restore testing",
+  "Framework and security patch updates",
+  "SSL certificate tracking and renewal",
+  "Monthly content and minor page updates",
   "Daily automated backups and disaster recovery planning",
-  "CI/CD pipeline maintenance and deploy process management",
-  "Cloud infrastructure monitoring and cost/performance optimization",
-  "Extended content and design update support",
+  "CI/CD pipeline maintenance and deploy management",
+  "Cloud infrastructure monitoring and cost optimization",
+  "Extended content and design updates",
+] as const;
+
+const maintenanceSecurityTemel = [
+  "SSL certificate validity check",
+  "Basic security scanning",
 ] as const;
 
 const maintenanceSecurityStandart = [
+  "SSL certificate validity check",
+  "Basic security scanning",
   "Core Web Vitals and page speed monitoring",
   "Server resource tracking (CPU, RAM, disk)",
-  "Dependency and basic security scanning",
+  "Dependency security scanning",
 ] as const;
 
 const maintenanceSecurityPro = [
-  "24/7 uptime monitoring and instant alert notifications",
+  "SSL certificate validity check",
+  "Basic security scanning",
+  "Core Web Vitals and page speed monitoring",
+  "Server resource tracking (CPU, RAM, disk)",
+  "Dependency security scanning",
+  "24/7 uptime monitoring and instant alerts",
   "Advanced security scanning and patch management",
-  "Critical incident response targeted within 4 hours",
+  "Critical incident response within 4 hours",
   "Server and access security configuration support",
 ] as const;
 
 const maintenanceSupportTemel = [
-  "Email technical support channel",
+  "Email technical support",
   "48-hour response target on business days",
-  "Up to 2 content and text update requests per month",
+  "Up to 2 content update requests per month",
 ] as const;
 
 const maintenanceSupportStandart = [
@@ -73,7 +95,7 @@ export const maintenancePackagesEn = {
           },
           {
             label: MAINTENANCE_GROUP_SECURITY,
-            items: [],
+            items: [...maintenanceSecurityTemel],
           },
           {
             label: MAINTENANCE_GROUP_SUPPORT,

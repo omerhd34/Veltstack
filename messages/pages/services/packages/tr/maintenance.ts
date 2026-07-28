@@ -9,40 +9,62 @@ const maintenanceMonitoringTemel = [
 ] as const;
 
 const maintenanceMonitoringStandart = [
+  "Uptime izleme ve kesinti bildirimleri",
+  "Aylık tam yedekleme (dosya + veritabanı)",
+  "Temel hata log takibi ve kritik uyarılar",
   "Haftalık otomatik yedekleme ve aylık geri yükleme testi",
-  "Framework, paket ve güvenlik yamaları",
+  "Framework ve güvenlik yamaları",
   "SSL sertifikası takibi ve yenileme",
-  "Aylık içerik, görsel ve küçük sayfa güncellemeleri",
+  "Aylık içerik ve küçük sayfa güncellemeleri",
 ] as const;
 
 const maintenanceMonitoringPro = [
+  "Uptime izleme ve kesinti bildirimleri",
+  "Aylık tam yedekleme (dosya + veritabanı)",
+  "Temel hata log takibi ve kritik uyarılar",
+  "Haftalık otomatik yedekleme ve aylık geri yükleme testi",
+  "Framework ve güvenlik yamaları",
+  "SSL sertifikası takibi ve yenileme",
+  "Aylık içerik ve küçük sayfa güncellemeleri",
   "Günlük otomatik yedekleme ve felaket kurtarma planı",
-  "CI/CD pipeline bakımı ve deploy süreç yönetimi",
-  "Bulut altyapı izleme ve maliyet/performans optimizasyonu",
-  "Genişletilmiş içerik ve tasarım güncelleme desteği",
+  "CI/CD pipeline bakımı ve deploy yönetimi",
+  "Bulut altyapı izleme ve maliyet optimizasyonu",
+  "Genişletilmiş içerik ve tasarım güncellemeleri",
+] as const;
+
+const maintenanceSecurityTemel = [
+  "SSL sertifikası geçerlilik kontrolü",
+  "Temel güvenlik taraması",
 ] as const;
 
 const maintenanceSecurityStandart = [
+  "SSL sertifikası geçerlilik kontrolü",
+  "Temel güvenlik taraması",
   "Core Web Vitals ve sayfa hızı izleme",
   "Sunucu kaynak kullanımı takibi (CPU, RAM, disk)",
-  "Bağımlılık ve temel güvenlik taraması",
+  "Bağımlılık güvenlik taraması",
 ] as const;
 
 const maintenanceSecurityPro = [
-  "7/24 uptime izleme ve anlık uyarı bildirimleri",
+  "SSL sertifikası geçerlilik kontrolü",
+  "Temel güvenlik taraması",
+  "Core Web Vitals ve sayfa hızı izleme",
+  "Sunucu kaynak kullanımı takibi (CPU, RAM, disk)",
+  "Bağımlılık güvenlik taraması",
+  "7/24 uptime izleme ve anlık uyarı",
   "Gelişmiş güvenlik taraması ve yama yönetimi",
-  "Kritik olaylarda 4 saat içi müdahale hedefi",
+  "Kritik olaylarda 4 saat içi müdahale",
   "Sunucu ve erişim güvenliği yapılandırma desteği",
 ] as const;
 
 const maintenanceSupportTemel = [
-  "E-posta ile teknik destek kanalı",
+  "E-posta ile teknik destek",
   "İş günü içi 48 saat yanıt hedefi",
-  "Aylık 2 içerik ve metin güncelleme talebi",
+  "Aylık 2 içerik güncelleme talebi",
 ] as const;
 
 const maintenanceSupportStandart = [
-  "E-posta ve WhatsApp destek kanalı",
+  "E-posta ve WhatsApp destek",
   "İş günü içi 24 saat yanıt hedefi",
   "Aylık durum özeti raporu",
 ] as const;
@@ -73,7 +95,7 @@ export const maintenancePackagesTr = {
           },
           {
             label: MAINTENANCE_GROUP_SECURITY,
-            items: [],
+            items: [...maintenanceSecurityTemel],
           },
           {
             label: MAINTENANCE_GROUP_SUPPORT,
