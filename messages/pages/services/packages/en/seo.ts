@@ -1,24 +1,17 @@
-// ---------------------------------------------------------------------------
-// SEO Services — tier-based features
-// ---------------------------------------------------------------------------
-
-const seoOptimizationTemelAudit = [
-  "Site speed, Core Web Vitals and performance analysis",
-  "Title, meta description and heading tag audit",
-  "Mobile compatibility and usability check",
-  "Crawl errors and indexability report",
-] as const;
-
-const seoOptimizationTemelSetup = [
-  "On-page SEO optimization for included pages",
-  "Google Search Console and Google Analytics 4 setup",
-  "Google Business Profile and local search visibility",
+const seoOptimizationTemel = [
+  "Site speed and Core Web Vitals analysis",
+  "Title, meta and heading tag audit",
+  "Mobile compatibility check",
+  "Crawl errors and indexing report",
+  "On-page SEO for included pages",
+  "Google Search Console and Analytics 4 setup",
+  "Google Business Profile and local visibility",
   "Keyword position tracking",
-  "Monthly performance and visibility summary",
 ] as const;
 
 const seoOptimizationStandart = [
-  "Technical SEO, site architecture and indexing audit",
+  ...seoOptimizationTemel,
+  "Technical SEO, architecture and indexing audit",
   "Schema and structured data implementation",
   "Competitor visibility and content gap analysis",
   "Backlink opportunity and authority assessment",
@@ -26,25 +19,30 @@ const seoOptimizationStandart = [
 ] as const;
 
 const seoOptimizationPro = [
+  ...seoOptimizationStandart,
   "Unlimited page SEO scope",
-  "Multilingual (hreflang) and multi-domain SEO management",
+  "Multilingual (hreflang) and multi-domain SEO",
   "Log analysis and crawl budget optimization",
-  "Ecommerce product, category and filter page SEO",
-  "Advanced schema and rich result optimization",
+  "Ecommerce product, category and filter SEO",
+  "Advanced schema and rich-result optimization",
 ] as const;
 
+const seoAdsTemel = ["Monthly performance and visibility summary"] as const;
+
 const seoAdsStandart = [
-  "Google Ads (Search Network) campaign setup and configuration",
-  "Meta Pixel and basic conversion tracking setup",
-  "Detailed monthly SEO and ad performance report",
-  "Prioritized improvement recommendations and action tracking",
+  ...seoAdsTemel,
+  "Google Ads (Search) campaign setup",
+  "Meta Pixel and basic conversion tracking",
+  "Monthly SEO and ads performance report",
+  "Prioritized recommendations and action tracking",
 ] as const;
 
 const seoAdsPro = [
+  ...seoAdsStandart,
   "100+ keyword position and trend tracking",
   "Google Ads and Meta Ads campaign management",
-  "Conversion API and advanced conversion tracking setup",
-  "Custom Looker Studio dashboard and reporting",
+  "Conversion API and advanced conversion tracking",
+  "Custom Looker Studio dashboard",
   "Weekly performance report",
   "Monthly strategy call",
   "Priority technical support",
@@ -57,7 +55,7 @@ export const seoPackagesEn = {
   seoServices: {
     title: "Digital Marketing & SEO",
     description:
-      "End-to-end SEO and digital marketing support for sustainable search growth, from technical audits and monthly optimization to local visibility and ad campaigns.",
+      "End-to-end SEO and digital marketing support for sustainable search growth—from technical audits and monthly optimization to local visibility and ad campaigns.",
     tiers: {
       temel: {
         deliveryDays: "7-10",
@@ -65,11 +63,11 @@ export const seoPackagesEn = {
         featureGroups: [
           {
             label: SEO_GROUP_OPTIMIZATION,
-            items: [...seoOptimizationTemelAudit, ...seoOptimizationTemelSetup],
+            items: [...seoOptimizationTemel],
           },
           {
             label: SEO_GROUP_ADS,
-            items: [],
+            items: [...seoAdsTemel],
           },
         ],
       },
