@@ -41,7 +41,7 @@ const faqByLocale = {
   en: faqEn,
 } as const;
 
-function getAllFaqItems(locale: "tr" | "en"): FaqNavItem[] {
+function getAllFaqItems(locale: "tr" | "en"): Omit<FaqNavItem, "icon">[] {
   return faqByLocale[locale].categories.flatMap((category) =>
     category.items.map((item) => ({
       slug: item.slug,
@@ -56,8 +56,6 @@ export function getNavFaqItems(locale: "tr" | "en"): FaqNavItem[] {
 
   return NAV_FAQ_SLUGS.flatMap((slug) => {
     const item = items.find((entry) => entry.slug === slug);
-    return item
-      ? [{ ...item, icon: NAV_FAQ_ICONS[slug] ?? LuCircleHelp }]
-      : [];
+    return item ? [{ ...item, icon: NAV_FAQ_ICONS[slug] ?? LuCircleHelp }] : [];
   });
 }
