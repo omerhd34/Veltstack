@@ -67,7 +67,6 @@ export const webPackagesTr = {
       temel: {
         deliveryDays: "10-14",
         revisions: "3",
-        scope: "1-5",
         featureGroups: [
           {
             label: "Tasarım & Yapım",
@@ -90,7 +89,6 @@ export const webPackagesTr = {
       standart: {
         deliveryDays: "21-30",
         revisions: "5",
-        scope: "1-10",
         featureGroups: [
           {
             label: "Tasarım & Yapım",
@@ -126,7 +124,6 @@ export const webPackagesTr = {
       pro: {
         deliveryDays: "30-45",
         revisions: "7",
-        scope: "∞",
         featureGroups: [
           {
             label: "Tasarım & Yapım",
@@ -179,7 +176,6 @@ export const webPackagesTr = {
       temel: {
         deliveryDays: "14-21",
         revisions: "3",
-        scope: "1-10",
         featureGroups: [
           {
             label: "Tasarım & Yapım",
@@ -202,7 +198,6 @@ export const webPackagesTr = {
       standart: {
         deliveryDays: "28-42",
         revisions: "5",
-        scope: "1-25",
         featureGroups: [
           {
             label: "Tasarım & Yapım",
@@ -241,7 +236,6 @@ export const webPackagesTr = {
       pro: {
         deliveryDays: "42-60",
         revisions: "8",
-        scope: "∞",
         featureGroups: [
           {
             label: "Tasarım & Yapım",
@@ -297,7 +291,6 @@ export const webPackagesTr = {
       temel: {
         deliveryDays: "21-30",
         revisions: "3",
-        scope: "1-15",
         featureGroups: [
           {
             label: "Tasarım & Yapım",
@@ -331,7 +324,6 @@ export const webPackagesTr = {
       standart: {
         deliveryDays: "42-56",
         revisions: "5",
-        scope: "1-35",
         featureGroups: [
           {
             label: "Tasarım & Yapım",
@@ -382,7 +374,6 @@ export const webPackagesTr = {
       pro: {
         deliveryDays: "56-84",
         revisions: "10",
-        scope: "∞",
         featureGroups: [
           {
             label: "Tasarım & Yapım",

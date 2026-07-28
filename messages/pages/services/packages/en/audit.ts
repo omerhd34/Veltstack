@@ -146,7 +146,6 @@ export const auditPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
-        scope: "1",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -160,7 +159,6 @@ export const auditPackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
-        scope: "1",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -174,7 +172,6 @@ export const auditPackagesEn = {
       },
       pro: {
         deliveryDays: "7-10",
-        scope: "1",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -197,7 +194,6 @@ export const auditPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
-        scope: "1",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -211,7 +207,6 @@ export const auditPackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
-        scope: "1",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -225,7 +220,6 @@ export const auditPackagesEn = {
       },
       pro: {
         deliveryDays: "7-10",
-        scope: "1",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -248,7 +242,6 @@ export const auditPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
-        scope: "1",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -262,7 +255,6 @@ export const auditPackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
-        scope: "1-2",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -276,7 +268,6 @@ export const auditPackagesEn = {
       },
       pro: {
         deliveryDays: "7-10",
-        scope: "2-3",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,

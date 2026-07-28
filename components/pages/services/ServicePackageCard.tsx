@@ -31,7 +31,6 @@ export interface PackageTierData {
   deliveryDays: string;
   revisions?: string;
   pages?: string;
-  scope: string;
   features?: string[];
   featureGroups?: PackageFeatureGroup[];
 }
@@ -50,7 +49,6 @@ interface PackageCardLabels {
   statDelivery: string;
   statDeliveryUnit: string;
   statRevision: string;
-  statScope: string;
   getQuote: string;
   deliveryGroupLabel: string;
   hideMiddleStat?: boolean;
@@ -97,6 +95,21 @@ export function ServicePackageCard({
     commonGroupLabels,
     labels.deliveryGroupLabel,
   );
+
+  const stats = [
+    {
+      label: labels.statDelivery,
+      value: tier.deliveryDays,
+    },
+    ...(labels.hideMiddleStat
+      ? []
+      : [
+          {
+            label: labels.statRevision,
+            value: tier.pages ?? tier.revisions,
+          },
+        ]),
+  ];
 
   const renderFeatureGroup = (
     group: PackageFeatureGroup,
@@ -252,24 +265,10 @@ export function ServicePackageCard({
       <div
         className={cn(
           "grid gap-1.5 border-b border-emerald-900/35 px-3 py-5 sm:gap-2 sm:px-4",
-          labels.hideMiddleStat ? "grid-cols-2" : "grid-cols-3",
+          stats.length === 1 ? "grid-cols-1" : "grid-cols-2",
         )}
       >
-        {[
-          {
-            label: labels.statDelivery,
-            value: tier.deliveryDays,
-          },
-          ...(labels.hideMiddleStat
-            ? []
-            : [
-                {
-                  label: labels.statRevision,
-                  value: tier.pages ?? tier.revisions,
-                },
-              ]),
-          { label: labels.statScope, value: tier.scope },
-        ].map((stat) => (
+        {stats.map((stat) => (
           <div
             key={stat.label}
             className="min-w-0 rounded-xl border border-emerald-900/40 bg-[#071510]/60 px-1.5 py-3 text-center sm:px-2"

@@ -159,7 +159,6 @@ export const appPackagesEn = {
       temel: {
         deliveryDays: "21-30",
         revisions: "3",
-        scope: "1-5",
         featureGroups: [
           {
             label: "Building & Design",
@@ -182,7 +181,6 @@ export const appPackagesEn = {
       standart: {
         deliveryDays: "30-45",
         revisions: "5",
-        scope: "1-10",
         featureGroups: [
           {
             label: "Building & Design",
@@ -210,7 +208,6 @@ export const appPackagesEn = {
       pro: {
         deliveryDays: "45-60",
         revisions: "7",
-        scope: "∞",
         featureGroups: [
           {
             label: "Building & Design",
@@ -251,7 +248,6 @@ export const appPackagesEn = {
       temel: {
         deliveryDays: "28-42",
         revisions: "3",
-        scope: "1-8",
         featureGroups: [
           {
             label: "Building & Design",
@@ -283,7 +279,6 @@ export const appPackagesEn = {
       standart: {
         deliveryDays: "42-56",
         revisions: "5",
-        scope: "1-15",
         featureGroups: [
           {
             label: "Building & Design",
@@ -319,7 +314,6 @@ export const appPackagesEn = {
       pro: {
         deliveryDays: "56-84",
         revisions: "8",
-        scope: "∞",
         featureGroups: [
           {
             label: "Building & Design",
@@ -364,7 +358,6 @@ export const appPackagesEn = {
       temel: {
         deliveryDays: "42-56",
         revisions: "3",
-        scope: "1-12",
         featureGroups: [
           {
             label: "Building & Design",
@@ -401,7 +394,6 @@ export const appPackagesEn = {
       standart: {
         deliveryDays: "56-77",
         revisions: "5",
-        scope: "1-20",
         featureGroups: [
           {
             label: "Building & Design",
@@ -433,7 +425,6 @@ export const appPackagesEn = {
       pro: {
         deliveryDays: "84-120",
         revisions: "8",
-        scope: "∞",
         featureGroups: [
           {
             label: "Building & Design",

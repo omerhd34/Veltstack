@@ -62,14 +62,10 @@ export const seoPackagesEn = {
       temel: {
         deliveryDays: "7-10",
         pages: "10",
-        scope: "10-25",
         featureGroups: [
           {
             label: SEO_GROUP_OPTIMIZATION,
-            items: [
-              ...seoOptimizationTemelAudit,
-              ...seoOptimizationTemelSetup,
-            ],
+            items: [...seoOptimizationTemelAudit, ...seoOptimizationTemelSetup],
           },
           {
             label: SEO_GROUP_ADS,
@@ -80,7 +76,6 @@ export const seoPackagesEn = {
       standart: {
         deliveryDays: "10-14",
         pages: "25",
-        scope: "25-75",
         featureGroups: [
           {
             label: SEO_GROUP_OPTIMIZATION,
@@ -95,7 +90,6 @@ export const seoPackagesEn = {
       pro: {
         deliveryDays: "14-21",
         pages: "∞",
-        scope: "100+",
         featureGroups: [
           {
             label: SEO_GROUP_OPTIMIZATION,

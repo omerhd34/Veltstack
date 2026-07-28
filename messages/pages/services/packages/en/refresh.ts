@@ -211,7 +211,6 @@ export const refreshPackagesEn = {
       temel: {
         deliveryDays: "7-14",
         revisions: "2",
-        scope: "1-8",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -234,7 +233,6 @@ export const refreshPackagesEn = {
       standart: {
         deliveryDays: "14-21",
         revisions: "4",
-        scope: "1-15",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -257,7 +255,6 @@ export const refreshPackagesEn = {
       pro: {
         deliveryDays: "21-30",
         revisions: "6",
-        scope: "∞",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -290,7 +287,6 @@ export const refreshPackagesEn = {
       temel: {
         deliveryDays: "10-18",
         revisions: "2",
-        scope: "1-15",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -313,7 +309,6 @@ export const refreshPackagesEn = {
       standart: {
         deliveryDays: "18-28",
         revisions: "4",
-        scope: "1-30",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -336,7 +331,6 @@ export const refreshPackagesEn = {
       pro: {
         deliveryDays: "28-42",
         revisions: "6",
-        scope: "∞",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -369,7 +363,6 @@ export const refreshPackagesEn = {
       temel: {
         deliveryDays: "14-21",
         revisions: "2",
-        scope: "1-20",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -392,7 +385,6 @@ export const refreshPackagesEn = {
       standart: {
         deliveryDays: "21-35",
         revisions: "4",
-        scope: "1-40",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -415,7 +407,6 @@ export const refreshPackagesEn = {
       pro: {
         deliveryDays: "35-49",
         revisions: "6",
-        scope: "∞",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,

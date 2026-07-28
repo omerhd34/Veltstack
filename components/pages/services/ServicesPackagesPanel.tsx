@@ -38,9 +38,6 @@ interface PackagesPanelLabels {
   statRevision: string;
   statMonthlyRequests: string;
   statPages: string;
-  statScreens: string;
-  statKeywords: string;
-  statProjects: string;
   getQuote: string;
   deliveryGroupLabel: string;
 }
@@ -82,15 +79,6 @@ const deliveryLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   maintenance: "statDeliverySetup",
 };
 
-const scopeLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
-  web: "statPages",
-  refresh: "statPages",
-  app: "statScreens",
-  seo: "statKeywords",
-  audit: "statProjects",
-  maintenance: "statProjects",
-};
-
 const revisionLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   web: "statRevision",
   refresh: "statRevision",
@@ -125,7 +113,6 @@ export function ServicesPackagesPanel({
   const intro = intros[activeCategory];
   const categoryPackages = packages[activeCategory];
   const icons = categoryIcons[activeCategory];
-  const scopeKey = scopeLabelKey[activeCategory];
   const revisionKey = revisionLabelKey[activeCategory];
   const deliveryKey = deliveryLabelKey[activeCategory];
 
@@ -207,7 +194,6 @@ export function ServicesPackagesPanel({
     statDelivery: labels[deliveryKey] as string,
     statDeliveryUnit: labels.statDeliveryUnit,
     statRevision: labels[revisionKey] as string,
-    statScope: labels[scopeKey] as string,
     getQuote: labels.getQuote,
     deliveryGroupLabel: labels.deliveryGroupLabel,
     hideMiddleStat: activeCategory === "audit",

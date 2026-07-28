@@ -66,7 +66,6 @@ export const maintenancePackagesEn = {
       temel: {
         deliveryDays: "3-5",
         revisions: "2",
-        scope: "1",
         featureGroups: [
           {
             label: MAINTENANCE_GROUP_MONITORING,
@@ -85,7 +84,6 @@ export const maintenancePackagesEn = {
       standart: {
         deliveryDays: "5-7",
         revisions: "5",
-        scope: "1-2",
         featureGroups: [
           {
             label: MAINTENANCE_GROUP_MONITORING,
@@ -104,7 +102,6 @@ export const maintenancePackagesEn = {
       pro: {
         deliveryDays: "7-14",
         revisions: "10",
-        scope: "∞",
         featureGroups: [
           {
             label: MAINTENANCE_GROUP_MONITORING,
