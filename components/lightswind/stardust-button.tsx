@@ -58,16 +58,19 @@ export function StardustShell({
   const [hovered, setHovered] = useState(false);
   const isControlled = active !== undefined;
   const isEffectActive = isControlled ? active : hovered;
-  const setHoveredState = useCallback((next: boolean) => {
-    if (isControlled) return;
-    hoveringRef.current = next;
-    setHovered(next);
-    if (!next) {
-      particlesRef.current = particlesRef.current.filter(
-        (particle) => particle.idle,
-      );
-    }
-  }, [isControlled]);
+  const setHoveredState = useCallback(
+    (next: boolean) => {
+      if (isControlled) return;
+      hoveringRef.current = next;
+      setHovered(next);
+      if (!next) {
+        particlesRef.current = particlesRef.current.filter(
+          (particle) => particle.idle,
+        );
+      }
+    },
+    [isControlled],
+  );
 
   useEffect(() => {
     if (!isControlled) return;
@@ -225,7 +228,7 @@ export function StardustShell({
     <span
       ref={rootRef}
       className={cn(
-        "stardust-shell group/stardust relative inline-flex h-full overflow-hidden rounded-full",
+        "stardust-shell group/stardust relative inline-flex h-full rounded-full",
         interactive &&
           "transition-transform duration-400 ease-out hover:scale-[1.03] focus-within:scale-[1.03] active:scale-[0.98] motion-reduce:scale-100",
         isEffectActive &&
@@ -249,30 +252,32 @@ export function StardustShell({
     >
       <span
         aria-hidden
-        className={cn(
-          "stardust-shell__face pointer-events-none absolute inset-0 z-0 rounded-[inherit] transition-[background-color,filter] duration-300",
-          "group-hover/stardust:brightness-110 group-focus-within/stardust:brightness-110",
-          faceClassName,
-        )}
-      />
-
-      <canvas
-        ref={canvasRef}
-        aria-hidden
-        className={cn(
-          "pointer-events-none absolute inset-0 z-1 rounded-[inherit] motion-reduce:hidden",
-          isEffectActive ? "opacity-100" : "opacity-60",
-          "transition-opacity duration-500",
-        )}
-      />
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden rounded-[inherit]"
+      >
+        <span
+          className={cn(
+            "stardust-shell__face absolute inset-0 rounded-[inherit] transition-[background-color,filter] duration-300",
+            "group-hover/stardust:brightness-110 group-focus-within/stardust:brightness-110",
+            faceClassName,
+          )}
+        />
+        <canvas
+          ref={canvasRef}
+          className={cn(
+            "absolute inset-0 rounded-[inherit] motion-reduce:hidden",
+            isEffectActive ? "opacity-100" : "opacity-60",
+            "transition-opacity duration-500",
+          )}
+        />
+      </span>
 
       <span
         aria-hidden
         className={cn(
-          "stardust-shell__border pointer-events-none absolute inset-0 z-2 rounded-[inherit] transition-all duration-300",
+          "stardust-shell__border pointer-events-none absolute inset-0 z-2 rounded-[inherit] transition-[box-shadow,opacity] duration-300",
           isEffectActive
-            ? "border-2 border-emerald-200/80 opacity-100 shadow-[inset_0_0_18px_rgb(110_231_183/0.16)]"
-            : "border border-white/10 opacity-0",
+            ? "opacity-100 shadow-[inset_0_0_0_2px_rgb(167_243_208/0.8),inset_0_0_18px_rgb(110_231_183/0.16)]"
+            : "opacity-0 shadow-[inset_0_0_0_1px_rgb(255_255_255/0.1)]",
         )}
       />
 

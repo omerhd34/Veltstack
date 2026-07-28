@@ -16,8 +16,8 @@ export const stardustFocus =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent/45 focus-visible:ring-offset-2 focus-visible:ring-offset-background";
 
 export const stardustGlassFace = cn(
-  "bg-white/10 backdrop-blur-sm",
-  "group-hover/stardust:bg-white/16 group-focus-within/stardust:bg-white/16",
+  "bg-white/[0.08]",
+  "group-hover/stardust:bg-white/[0.14] group-focus-within/stardust:bg-white/[0.14]",
 );
 
 export const stardustCardFace = cn(
@@ -26,7 +26,7 @@ export const stardustCardFace = cn(
 );
 
 export const stardustFaceOverlay = cn(
-  "group-data-[overlay=true]/header:bg-white/10 group-data-[overlay=true]/header:backdrop-blur-sm",
-  "group-data-[overlay=true]/header:group-hover/stardust:bg-white/16",
-  "group-data-[overlay=true]/header:group-focus-within/stardust:bg-white/16",
+  "group-data-[overlay=true]/header:bg-white/[0.08]",
+  "group-data-[overlay=true]/header:group-hover/stardust:bg-white/[0.14]",
+  "group-data-[overlay=true]/header:group-focus-within/stardust:bg-white/[0.14]",
 );
