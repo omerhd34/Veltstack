@@ -3,42 +3,64 @@
 // ---------------------------------------------------------------------------
 
 const webAuditTechnicalTemel = [
-  "Lighthouse and PageSpeed analysis",
-  "Core Web Vitals assessment",
-  "Basic SEO and meta structure check",
-  "Mobile compatibility test",
+  "Lighthouse and PageSpeed Insights analysis",
+  "Core Web Vitals measurement (LCP, INP, CLS)",
+  "Meta structure and heading hierarchy check",
+  "Mobile compatibility and responsive testing",
 ] as const;
 
 const webAuditTechnicalStandart = [
-  "Detailed performance profile and bottleneck detection",
-  "Security and HTTPS configuration",
-  "Accessibility (WCAG) check",
-  "Structured data audit",
+  "Lighthouse and PageSpeed Insights analysis",
+  "Core Web Vitals measurement (LCP, INP, CLS)",
+  "Meta structure and heading hierarchy check",
+  "Mobile compatibility and responsive testing",
+  "Page-level performance profile and bottleneck detection",
+  "HTTPS and security headers check",
+  "Accessibility (WCAG 2.1) audit",
+  "Schema and structured data check",
   "Crawl errors and indexing analysis",
 ] as const;
 
 const webAuditTechnicalPro = [
-  "Source code and architecture analysis",
+  "Lighthouse and PageSpeed Insights analysis",
+  "Core Web Vitals measurement (LCP, INP, CLS)",
+  "Meta structure and heading hierarchy check",
+  "Mobile compatibility and responsive testing",
+  "Page-level performance profile and bottleneck detection",
+  "HTTPS and security headers check",
+  "Accessibility (WCAG 2.1) audit",
+  "Schema and structured data check",
+  "Crawl errors and indexing analysis",
+  "Source code and architecture assessment",
   "Dependency and vulnerability scan",
-  "CDN, cache and server configuration",
-  "Log analysis and error monitoring",
-  "Competitor performance comparison",
+  "CDN and cache configuration review",
+  "Error logs and critical user flows",
+  "Industry benchmark comparison",
 ] as const;
 
 const webAuditReportingTemel = [
   "Prioritized findings list",
-  "Quick-win improvement recommendations",
-  "PDF audit report summary",
+  "Quick-win recommendations",
+  "PDF summary report",
 ] as const;
 
 const webAuditReportingStandart = [
-  "Priority matrix with impact analysis",
-  "Actionable improvement plan",
+  "Prioritized findings list",
+  "Quick-win recommendations",
+  "PDF summary report",
+  "Impact-effort matrix prioritization",
+  "Step-by-step actionable plan",
   "Detailed PDF report and presentation",
 ] as const;
 
 const webAuditReportingPro = [
-  "Roadmap and sprint plan",
+  "Prioritized findings list",
+  "Quick-win recommendations",
+  "PDF summary report",
+  "Impact-effort matrix prioritization",
+  "Step-by-step actionable plan",
+  "Detailed PDF report and presentation",
+  "Improvement roadmap and sprint plan",
   "1-hour results review call",
   "Implementation quote preparation",
 ] as const;
@@ -48,23 +70,36 @@ const webAuditReportingPro = [
 // ---------------------------------------------------------------------------
 
 const appAuditTechnicalTemel = [
-  "Launch time and performance test",
-  "Basic UX and navigation assessment",
-  "Store compliance check",
-  "Crash and error log review",
+  "Launch time and performance testing",
+  "Navigation and usability assessment",
+  "App Store and Google Play compliance check",
+  "Crash logs and error review",
 ] as const;
 
 const appAuditTechnicalStandart = [
-  "Memory and CPU usage profile",
-  "API security and authentication",
+  "Launch time and performance testing",
+  "Navigation and usability assessment",
+  "App Store and Google Play compliance check",
+  "Crash logs and error review",
+  "Memory, CPU and network usage profile",
+  "API security and authentication check",
   "Offline behavior and data sync",
   "Push notification infrastructure check",
-  "Accessibility assessment",
+  "Accessibility (VoiceOver/TalkBack) assessment",
 ] as const;
 
 const appAuditTechnicalPro = [
-  "Source code and architecture analysis",
-  "Dependency security scan",
+  "Launch time and performance testing",
+  "Navigation and usability assessment",
+  "App Store and Google Play compliance check",
+  "Crash logs and error review",
+  "Memory, CPU and network usage profile",
+  "API security and authentication check",
+  "Offline behavior and data sync",
+  "Push notification infrastructure check",
+  "Accessibility (VoiceOver/TalkBack) assessment",
+  "Source code and architecture assessment",
+  "Dependency and vulnerability scan",
   "Store review risk assessment",
   "CI/CD and build process analysis",
   "Backend API integration audit",
@@ -72,17 +107,26 @@ const appAuditTechnicalPro = [
 
 const appAuditReportingTemel = [
   "Prioritized findings list",
-  "Quick-win improvement recommendations",
-  "PDF audit report summary",
+  "Quick-win recommendations",
+  "PDF summary report",
 ] as const;
 
 const appAuditReportingStandart = [
+  "Prioritized findings list",
+  "Quick-win recommendations",
+  "PDF summary report",
   "Platform-specific (iOS/Android) findings",
-  "Actionable improvement plan",
+  "Step-by-step actionable plan",
   "Detailed PDF report",
 ] as const;
 
 const appAuditReportingPro = [
+  "Prioritized findings list",
+  "Quick-win recommendations",
+  "PDF summary report",
+  "Platform-specific (iOS/Android) findings",
+  "Step-by-step actionable plan",
+  "Detailed PDF report",
   "Restructuring roadmap",
   "1-hour results review call",
   "Implementation quote preparation",
@@ -93,41 +137,63 @@ const appAuditReportingPro = [
 // ---------------------------------------------------------------------------
 
 const infraAuditTechnicalTemel = [
-  "Server resource usage analysis",
-  "SSL and domain configuration",
-  "Backup status check",
-  "Basic security configuration",
+  "Server resource usage analysis (CPU, RAM, disk)",
+  "SSL/TLS and domain configuration check",
+  "Backup frequency and restore status",
+  "Firewall and basic access security review",
 ] as const;
 
 const infraAuditTechnicalStandart = [
-  "Database performance and configuration",
-  "CI/CD pipeline security check",
-  "Access control and identity management",
-  "DDoS and firewall configuration",
-  "Log and monitoring infrastructure assessment",
+  "Server resource usage analysis (CPU, RAM, disk)",
+  "SSL/TLS and domain configuration check",
+  "Backup frequency and restore status",
+  "Firewall and basic access security review",
+  "Database performance and indexing check",
+  "CI/CD pipeline security and secret management",
+  "Access control and identity management (IAM)",
+  "DDoS protection and firewall rules",
+  "Log collection and monitoring infrastructure review",
 ] as const;
 
 const infraAuditTechnicalPro = [
-  "Cloud infrastructure (AWS/GCP/Azure) optimization",
-  "Kubernetes and container security",
+  "Server resource usage analysis (CPU, RAM, disk)",
+  "SSL/TLS and domain configuration check",
+  "Backup frequency and restore status",
+  "Firewall and basic access security review",
+  "Database performance and indexing check",
+  "CI/CD pipeline security and secret management",
+  "Access control and identity management (IAM)",
+  "DDoS protection and firewall rules",
+  "Log collection and monitoring infrastructure review",
+  "Cloud infrastructure (AWS/GCP/Azure) architecture and cost review",
+  "Kubernetes and container security configuration",
   "Penetration test readiness assessment",
   "Disaster recovery and SLA analysis",
-  "Cost optimization recommendations",
+  "Resource usage and cost optimization",
 ] as const;
 
 const infraAuditReportingTemel = [
   "Prioritized risk list",
   "Critical items requiring immediate action",
-  "PDF audit report summary",
+  "PDF summary report",
 ] as const;
 
 const infraAuditReportingStandart = [
-  "Risk matrix and impact analysis",
+  "Prioritized risk list",
+  "Critical items requiring immediate action",
+  "PDF summary report",
+  "Risk matrix with business impact",
   "Actionable security improvement plan",
   "Detailed PDF report",
 ] as const;
 
 const infraAuditReportingPro = [
+  "Prioritized risk list",
+  "Critical items requiring immediate action",
+  "PDF summary report",
+  "Risk matrix with business impact",
+  "Actionable security improvement plan",
+  "Detailed PDF report",
   "Infrastructure modernization roadmap",
   "1-hour results review call",
   "Implementation quote preparation",

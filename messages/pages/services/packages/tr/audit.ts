@@ -1,116 +1,114 @@
-// ---------------------------------------------------------------------------
-// Web Sitesi Denetimi
-// ---------------------------------------------------------------------------
-
 const webAuditTechnicalTemel = [
   "Lighthouse ve PageSpeed Insights analizi",
   "Core Web Vitals (LCP, INP, CLS) ölçümü",
-  "Meta yapısı, başlık hiyerarşisi ve temel SEO kontrolü",
-  "Mobil uyumluluk ve responsive davranış testi",
+  "Meta yapısı ve başlık hiyerarşisi kontrolü",
+  "Mobil uyumluluk ve responsive test",
 ] as const;
 
 const webAuditTechnicalStandart = [
+  ...webAuditTechnicalTemel,
   "Sayfa bazlı performans profili ve darboğaz tespiti",
-  "HTTPS, güvenlik başlıkları ve temel güvenlik yapılandırması",
-  "Erişilebilirlik (WCAG 2.1) kontrolü",
-  "Schema ve yapılandırılmış veri denetimi",
-  "Tarama hataları, robots.txt ve indeksleme analizi",
+  "HTTPS ve güvenlik başlıkları kontrolü",
+  "Erişilebilirlik (WCAG 2.1) denetimi",
+  "Schema ve yapılandırılmış veri kontrolü",
+  "Tarama hataları ve indeksleme analizi",
 ] as const;
 
 const webAuditTechnicalPro = [
+  ...webAuditTechnicalStandart,
   "Kaynak kodu, mimari ve teknik borç değerlendirmesi",
-  "Bağımlılık ve bilinen güvenlik açığı taraması",
+  "Bağımlılık ve güvenlik açığı taraması",
   "CDN, önbellek ve sunucu yapılandırması incelemesi",
-  "Hata logları, izleme altyapısı ve kritik kullanıcı akışları",
-  "Sektör benchmark'ı ile performans karşılaştırması",
+  "Hata logları ve kritik kullanıcı akışları",
+  "Sektör benchmark karşılaştırması",
 ] as const;
 
 const webAuditReportingTemel = [
-  "Etki ve önceliğe göre sıralanmış bulgu listesi",
-  "Hızlı kazanım odaklı iyileştirme önerileri",
+  "Önceliklendirilmiş bulgu listesi",
+  "Hızlı kazanım önerileri",
   "PDF özet denetim raporu",
 ] as const;
 
 const webAuditReportingStandart = [
-  "Etki–çaba matrisi ile önceliklendirilmiş bulgular",
+  ...webAuditReportingTemel,
+  "Etki–çaba matrisi",
   "Adım adım uygulanabilir iyileştirme planı",
   "Detaylı PDF rapor ve sunum dosyası",
 ] as const;
 
 const webAuditReportingPro = [
+  ...webAuditReportingStandart,
   "İyileştirme yol haritası ve sprint önerisi",
   "1 saatlik sonuç değerlendirme toplantısı",
   "Uygulama kapsamı için teklif önerisi",
 ] as const;
 
-// ---------------------------------------------------------------------------
-// Mobil Uygulama Denetimi
-// ---------------------------------------------------------------------------
-
 const appAuditTechnicalTemel = [
   "Açılış süresi ve temel performans testi",
   "Navigasyon akışı ve kullanılabilirlik değerlendirmesi",
-  "App Store ve Google Play yönerge uyumluluğu kontrolü",
-  "Çökme kayıtları, hata logları ve kararlılık incelemesi",
+  "App Store ve Google Play yönerge uyumluluğu",
+  "Çökme kayıtları ve kararlılık incelemesi",
 ] as const;
 
 const appAuditTechnicalStandart = [
+  ...appAuditTechnicalTemel,
   "Bellek, CPU ve ağ kullanım profili",
-  "API güvenliği, kimlik doğrulama ve yetkilendirme",
+  "API güvenliği ve kimlik doğrulama kontrolü",
   "Çevrimdışı davranış ve veri senkronizasyonu",
-  "Push bildirim altyapısı ve teslimat kontrolü",
+  "Push bildirim altyapısı kontrolü",
   "Erişilebilirlik (VoiceOver / TalkBack) değerlendirmesi",
 ] as const;
 
 const appAuditTechnicalPro = [
+  ...appAuditTechnicalStandart,
   "Kaynak kodu, mimari ve teknik borç değerlendirmesi",
-  "Bağımlılık ve bilinen güvenlik açığı taraması",
+  "Bağımlılık ve güvenlik açığı taraması",
   "Mağaza onay süreci ve politika risk değerlendirmesi",
-  "CI/CD, build süreçleri ve sürüm yönetimi analizi",
-  "Backend API entegrasyonu ve hata yönetimi denetimi",
+  "CI/CD ve sürüm yönetimi analizi",
+  "Backend API ve hata yönetimi denetimi",
 ] as const;
 
 const appAuditReportingTemel = [
-  "Platform ve önceliğe göre sıralanmış bulgu listesi",
-  "Hızlı kazanım odaklı iyileştirme önerileri",
+  "Platform bazlı önceliklendirilmiş bulgu listesi",
+  "Hızlı kazanım önerileri",
   "PDF özet denetim raporu",
 ] as const;
 
 const appAuditReportingStandart = [
+  ...appAuditReportingTemel,
   "iOS ve Android için ayrıştırılmış bulgular",
   "Adım adım uygulanabilir iyileştirme planı",
   "Detaylı PDF denetim raporu",
 ] as const;
 
 const appAuditReportingPro = [
-  "Yeniden yapılandırma ve modernizasyon yol haritası",
+  ...appAuditReportingStandart,
+  "Modernizasyon yol haritası",
   "1 saatlik sonuç değerlendirme toplantısı",
   "Uygulama kapsamı için teklif önerisi",
 ] as const;
 
-// ---------------------------------------------------------------------------
-// Altyapı ve Güvenlik Denetimi
-// ---------------------------------------------------------------------------
-
 const infraAuditTechnicalTemel = [
   "Sunucu kaynak kullanımı (CPU, RAM, disk) analizi",
   "SSL/TLS ve domain yapılandırması kontrolü",
-  "Yedekleme sıklığı, saklama ve geri yükleme durumu",
-  "Firewall, port ve temel erişim güvenliği incelemesi",
+  "Yedekleme sıklığı ve geri yükleme durumu",
+  "Firewall, port ve temel erişim güvenliği",
 ] as const;
 
 const infraAuditTechnicalStandart = [
-  "Veritabanı performansı, indeksleme ve yapılandırma",
+  ...infraAuditTechnicalTemel,
+  "Veritabanı performansı ve indeksleme",
   "CI/CD pipeline güvenliği ve secret yönetimi",
-  "Erişim kontrolü, IAM ve kimlik yönetimi",
-  "DDoS koruması ve firewall kuralları değerlendirmesi",
-  "Log toplama, izleme ve uyarı altyapısı incelemesi",
+  "Erişim kontrolü ve IAM incelemesi",
+  "DDoS koruması ve firewall kuralları",
+  "Log, izleme ve uyarı altyapısı",
 ] as const;
 
 const infraAuditTechnicalPro = [
-  "Bulut altyapısı (AWS / GCP / Azure) mimari ve maliyet incelemesi",
+  ...infraAuditTechnicalStandart,
+  "Bulut mimarisi ve maliyet incelemesi (AWS / GCP / Azure)",
   "Kubernetes ve container güvenlik yapılandırması",
-  "Penetrasyon testine hazırlık ve yüzey alanı değerlendirmesi",
+  "Penetrasyon testine hazırlık değerlendirmesi",
   "Felaket kurtarma, yedeklilik ve SLA analizi",
   "Kaynak kullanımı ve maliyet optimizasyonu önerileri",
 ] as const;
@@ -122,12 +120,14 @@ const infraAuditReportingTemel = [
 ] as const;
 
 const infraAuditReportingStandart = [
+  ...infraAuditReportingTemel,
   "İş etkisiyle risk matrisi",
   "Uygulanabilir güvenlik iyileştirme planı",
   "Detaylı PDF denetim raporu",
 ] as const;
 
 const infraAuditReportingPro = [
+  ...infraAuditReportingStandart,
   "Altyapı modernizasyon yol haritası",
   "1 saatlik sonuç değerlendirme toplantısı",
   "Uygulama kapsamı için teklif önerisi",
@@ -147,14 +147,8 @@ export const auditPackagesTr = {
       temel: {
         deliveryDays: "3-5",
         featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...webAuditTechnicalTemel],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...webAuditReportingTemel],
-          },
+          { label: AUDIT_GROUP_TECHNICAL, items: [...webAuditTechnicalTemel] },
+          { label: AUDIT_GROUP_REPORTING, items: [...webAuditReportingTemel] },
         ],
       },
       standart: {
@@ -173,14 +167,8 @@ export const auditPackagesTr = {
       pro: {
         deliveryDays: "7-10",
         featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...webAuditTechnicalPro],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...webAuditReportingPro],
-          },
+          { label: AUDIT_GROUP_TECHNICAL, items: [...webAuditTechnicalPro] },
+          { label: AUDIT_GROUP_REPORTING, items: [...webAuditReportingPro] },
         ],
       },
     },
@@ -195,14 +183,8 @@ export const auditPackagesTr = {
       temel: {
         deliveryDays: "3-5",
         featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...appAuditTechnicalTemel],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...appAuditReportingTemel],
-          },
+          { label: AUDIT_GROUP_TECHNICAL, items: [...appAuditTechnicalTemel] },
+          { label: AUDIT_GROUP_REPORTING, items: [...appAuditReportingTemel] },
         ],
       },
       standart: {
@@ -221,14 +203,8 @@ export const auditPackagesTr = {
       pro: {
         deliveryDays: "7-10",
         featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...appAuditTechnicalPro],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...appAuditReportingPro],
-          },
+          { label: AUDIT_GROUP_TECHNICAL, items: [...appAuditTechnicalPro] },
+          { label: AUDIT_GROUP_REPORTING, items: [...appAuditReportingPro] },
         ],
       },
     },
