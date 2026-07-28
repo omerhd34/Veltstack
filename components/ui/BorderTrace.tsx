@@ -106,20 +106,21 @@ export function BorderTrace({
       const style = getComputedStyle(target);
       const strokeWidth =
         Number.parseFloat(style.borderTopWidth) || borderWidth;
-      const borderTop = Number.parseFloat(style.borderTopWidth) || strokeWidth;
-      const borderLeft =
-        Number.parseFloat(style.borderLeftWidth) || strokeWidth;
+      const width = target.clientWidth;
+      const height = target.clientHeight;
+      const outerRadius = readBorderRadius(target, radius);
+      const innerRadius = Math.max(0, outerRadius - strokeWidth);
 
       setLayout({
-        width: target.offsetWidth,
-        height: target.offsetHeight,
-        radius: readBorderRadius(target, radius),
+        width,
+        height,
+        radius: innerRadius,
         strokeWidth,
-        offsetTop: -borderTop,
-        offsetLeft: -borderLeft,
+        offsetTop: 0,
+        offsetLeft: 0,
       });
 
-      if (target.offsetWidth > 0) setIsReady(true);
+      if (width > 0) setIsReady(true);
     };
 
     measure();
