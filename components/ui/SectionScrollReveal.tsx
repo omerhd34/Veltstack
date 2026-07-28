@@ -89,7 +89,6 @@ export function SectionScrollReveal({
   };
 
   const motionClassName = cn(
-    direction === "up" ? undefined : "overflow-x-clip",
     "[--reveal-offset-up:24px] [--reveal-offset-x:20px] [--reveal-offset-y:10px] md:[--reveal-offset-up:56px] md:[--reveal-offset-x:52px] md:[--reveal-offset-y:22px]",
     className,
   );
