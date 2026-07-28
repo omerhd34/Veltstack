@@ -10,13 +10,229 @@ const tierOrder: PackageTier[] = ["temel", "standart", "pro"];
 export interface PackageFeatureItem {
   text: string;
   included: boolean;
+  value?: string | null;
 }
 
-const exclusiveItemPatterns: RegExp[] = [
-  /^\d+\s*(g[üu]n|days?)\b/i,
-  /dil[\s\S]*deste(ğ|g)i/i,
-  /language[\s\S]*support/i,
+const exclusiveItemPatterns: RegExp[] = [/^\d+\s*(g[üu]n|days?)\b/i];
+
+const languagesGroupNeedles = [
+  "içerik",
+  "content",
+  "özellik",
+  "feature",
+  "tasarım",
+  "design",
+  "redesign",
 ];
+
+function normalizeGroupLabel(label: string): string {
+  return label.toLocaleLowerCase("tr-TR");
+}
+
+export function findLanguagesGroupLabel(
+  groups: { label: string }[],
+): string | null {
+  for (const needle of languagesGroupNeedles) {
+    const match = groups.find((group) =>
+      normalizeGroupLabel(group.label).includes(needle),
+    );
+    if (match) return match.label;
+  }
+  return null;
+}
+
+export function buildLanguageFeatureItem(
+  tiers: Record<PackageTier, PackageTierData>,
+  activeTier: PackageTier,
+  label: string,
+): PackageFeatureItem | null {
+  if (!tierOrder.some((tier) => Boolean(tiers[tier].languages))) {
+    return null;
+  }
+
+  const value = tiers[activeTier].languages || null;
+  return {
+    text: label,
+    included: Boolean(value),
+    value,
+  };
+}
+
+export function buildLanguageMatrixItem(
+  tiers: Record<PackageTier, PackageTierData>,
+  label: string,
+): PackageFeatureMatrixItem | null {
+  if (!tierOrder.some((tier) => Boolean(tiers[tier].languages))) {
+    return null;
+  }
+
+  const included = {} as Record<PackageTier, boolean>;
+  const values = {} as Record<PackageTier, string | null>;
+
+  for (const tier of tierOrder) {
+    const value = tiers[tier].languages || null;
+    values[tier] = value;
+    included[tier] = Boolean(value);
+  }
+
+  return { text: label, included, values };
+}
+
+export function findSupportGroupLabel(
+  groups: { label: string }[],
+  deliveryGroupLabel: string,
+): string | null {
+  const supportMatch = groups.find(
+    (group) =>
+      group.label !== deliveryGroupLabel &&
+      /destek|support/i.test(group.label),
+  );
+  if (supportMatch) return supportMatch.label;
+
+  const exact = groups.find((group) => group.label === deliveryGroupLabel);
+  if (exact) return exact.label;
+
+  return (
+    groups.find((group) => /destek|support|technical/i.test(group.label))
+      ?.label ?? null
+  );
+}
+
+export function buildSupportFeatureItem(
+  tiers: Record<PackageTier, PackageTierData>,
+  activeTier: PackageTier,
+  label: string,
+): PackageFeatureItem | null {
+  if (!tierOrder.some((tier) => Boolean(tiers[tier].supportDays))) {
+    return null;
+  }
+
+  const value = tiers[activeTier].supportDays || null;
+  return {
+    text: label,
+    included: Boolean(value),
+    value,
+  };
+}
+
+export function buildSupportMatrixItem(
+  tiers: Record<PackageTier, PackageTierData>,
+  label: string,
+): PackageFeatureMatrixItem | null {
+  if (!tierOrder.some((tier) => Boolean(tiers[tier].supportDays))) {
+    return null;
+  }
+
+  const included = {} as Record<PackageTier, boolean>;
+  const values = {} as Record<PackageTier, string | null>;
+
+  for (const tier of tierOrder) {
+    const value = tiers[tier].supportDays || null;
+    values[tier] = value;
+    included[tier] = Boolean(value);
+  }
+
+  return { text: label, included, values };
+}
+
+function getRevisionValue(tier: PackageTierData): string | null {
+  return tier.revisions ?? null;
+}
+
+function getPagesValue(tier: PackageTierData): string | null {
+  return tier.pages ?? null;
+}
+
+function prefersPagesAsRevision(
+  tiers: Record<PackageTier, PackageTierData>,
+): boolean {
+  return (
+    !tierOrder.some((tier) => Boolean(tiers[tier].revisions)) &&
+    tierOrder.some((tier) => Boolean(tiers[tier].pages))
+  );
+}
+
+export function buildRevisionFeatureItem(
+  tiers: Record<PackageTier, PackageTierData>,
+  activeTier: PackageTier,
+  label: string,
+): PackageFeatureItem | null {
+  const read = prefersPagesAsRevision(tiers)
+    ? getPagesValue
+    : getRevisionValue;
+
+  if (!tierOrder.some((tier) => Boolean(read(tiers[tier])))) {
+    return null;
+  }
+
+  const value = read(tiers[activeTier]);
+  return {
+    text: label,
+    included: Boolean(value),
+    value,
+  };
+}
+
+export function buildRevisionMatrixItem(
+  tiers: Record<PackageTier, PackageTierData>,
+  label: string,
+): PackageFeatureMatrixItem | null {
+  const read = prefersPagesAsRevision(tiers)
+    ? getPagesValue
+    : getRevisionValue;
+
+  if (!tierOrder.some((tier) => Boolean(read(tiers[tier])))) {
+    return null;
+  }
+
+  const included = {} as Record<PackageTier, boolean>;
+  const values = {} as Record<PackageTier, string | null>;
+
+  for (const tier of tierOrder) {
+    const value = read(tiers[tier]);
+    values[tier] = value;
+    included[tier] = Boolean(value);
+  }
+
+  return { text: label, included, values };
+}
+
+export function buildPagesMatrixItem(
+  tiers: Record<PackageTier, PackageTierData>,
+  label: string,
+): PackageFeatureMatrixItem | null {
+  const hasPages = tierOrder.some((tier) => Boolean(tiers[tier].pages));
+  const hasRevisions = tierOrder.some((tier) => Boolean(tiers[tier].revisions));
+  if (!hasPages || !hasRevisions) return null;
+
+  const included = {} as Record<PackageTier, boolean>;
+  const values = {} as Record<PackageTier, string | null>;
+
+  for (const tier of tierOrder) {
+    const value = getPagesValue(tiers[tier]);
+    values[tier] = value;
+    included[tier] = Boolean(value);
+  }
+
+  return { text: label, included, values };
+}
+
+export function buildPagesFeatureItem(
+  tiers: Record<PackageTier, PackageTierData>,
+  activeTier: PackageTier,
+  label: string,
+): PackageFeatureItem | null {
+  const hasPages = tierOrder.some((tier) => Boolean(tiers[tier].pages));
+  const hasRevisions = tierOrder.some((tier) => Boolean(tiers[tier].revisions));
+  if (!hasPages || !hasRevisions) return null;
+
+  const value = getPagesValue(tiers[activeTier]);
+  return {
+    text: label,
+    included: Boolean(value),
+    value,
+  };
+}
 
 function matchExclusivePattern(text: string): RegExp | undefined {
   return exclusiveItemPatterns.find((pattern) => pattern.test(text));
@@ -96,6 +312,7 @@ export function buildFeatureGroupComparison(
 export interface PackageFeatureMatrixItem {
   text: string;
   included: Record<PackageTier, boolean>;
+  values?: Record<PackageTier, string | null>;
 }
 
 export function buildFeatureGroupMatrix(
@@ -179,12 +396,18 @@ export function sortFeatureGroupsForDisplay(
   const commonSet = new Set(commonLabels);
   const groupByLabel = new Map(groups.map((group) => [group.label, group]));
 
-  const orderedCommon = [...commonLabels];
-  const deliveryIndex = orderedCommon.indexOf(deliveryGroupLabel);
-  if (deliveryIndex >= 0 && deliveryIndex !== orderedCommon.length - 1) {
-    orderedCommon.splice(deliveryIndex, 1);
+  const supportLabels = commonLabels.filter(
+    (label) =>
+      label !== deliveryGroupLabel && /destek|support/i.test(label),
+  );
+  const orderedCommon = commonLabels.filter(
+    (label) =>
+      label !== deliveryGroupLabel && !supportLabels.includes(label),
+  );
+  if (commonLabels.includes(deliveryGroupLabel)) {
     orderedCommon.push(deliveryGroupLabel);
   }
+  orderedCommon.push(...supportLabels);
 
   const common = orderedCommon
     .map((label) => groupByLabel.get(label))
