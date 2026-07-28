@@ -106,7 +106,7 @@ export const BorderBeam = ({
   return (
     <div
       className={cn(
-        "pointer-events-none absolute inset-0 rounded-[inherit]",
+        "pointer-events-none absolute inset-px rounded-[inherit]",
         "border border-transparent [mask-clip:padding-box,border-box]",
         "mask-intersect mask-[linear-gradient(transparent,transparent),linear-gradient(#000,#000)]",
       )}
