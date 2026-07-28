@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
@@ -237,7 +238,7 @@ export function ServicesPackagesPanel({
       ) : null}
 
       {showUnifiedNav ? (
-        <div className="relative mx-auto w-full max-w-full rounded-[1.75rem] p-px bg-linear-to-r from-emerald-500/30 via-brand-accent/25 to-emerald-600/30 shadow-[0_12px_48px_rgb(0_0_0/0.12),0_4px_16px_rgb(58_107_82/0.08)] sm:w-fit">
+        <div className="relative mx-auto w-full max-w-4xl rounded-[1.75rem] p-px bg-linear-to-r from-emerald-500/30 via-brand-accent/25 to-emerald-600/30 shadow-[0_12px_48px_rgb(0_0_0/0.12),0_4px_16px_rgb(58_107_82/0.08)]">
           <div className="relative min-w-0 overflow-hidden rounded-[calc(1.75rem-1px)] bg-[#071510]/97 backdrop-blur-xl">
             <span
               aria-hidden

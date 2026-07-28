@@ -82,7 +82,7 @@ export function ServicesPackageTypeTabs({
       className={cn(
         "relative max-w-full overflow-x-auto overscroll-x-contain scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden",
         embedded
-          ? "w-full bg-emerald-950/15 px-2 py-2 sm:px-3"
+          ? "w-full bg-emerald-950/15 px-3 py-2.5 sm:px-4"
           : "rounded-2xl border border-emerald-900/40 bg-[#071510]/60 backdrop-blur-sm",
       )}
       role="tablist"
@@ -102,7 +102,12 @@ export function ServicesPackageTypeTabs({
         }}
       />
 
-      <div className="relative mx-auto flex min-w-max items-center gap-0.5 sm:gap-1">
+      <div
+        className={cn(
+          "relative mx-auto flex min-w-max items-center gap-0.5 sm:gap-1",
+          embedded && "w-full sm:min-w-0 sm:justify-center sm:gap-2",
+        )}
+      >
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const isActive = active === tab.id;

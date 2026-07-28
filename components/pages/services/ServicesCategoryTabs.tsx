@@ -80,7 +80,7 @@ export function ServicesCategoryTabs({
       ref={containerRef}
       className={cn(
         "relative max-w-full overflow-x-auto overscroll-x-contain scroll-smooth p-1.5 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden",
-        embedded && "px-2 py-2 sm:px-3",
+        embedded && "px-3 py-2.5 sm:px-4",
         !embedded &&
           "rounded-[calc(1.75rem-1px)] bg-[#071510]/95 backdrop-blur-md",
       )}
@@ -105,7 +105,8 @@ export function ServicesCategoryTabs({
       <div
         className={cn(
           "relative flex min-w-max items-center gap-0.5 sm:gap-1",
-          embedded && "mx-auto justify-start lg:justify-center",
+          embedded &&
+            "mx-auto w-full justify-start sm:min-w-0 sm:justify-center sm:gap-1.5",
         )}
       >
         {tabs.map((tab) => {
