@@ -22,7 +22,7 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
         priority
         fetchPriority="high"
         quality={100}
-        sizes="100vw"
+        sizes="(max-width: 991px) 100vw, 0px"
         className="object-cover object-center lg:hidden"
       />
       <Image
@@ -32,7 +32,7 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
         priority
         fetchPriority="high"
         quality={100}
-        sizes="100vw"
+        sizes="(min-width: 992px) 100vw, 0px"
         className="hidden object-cover object-[58%_45%] lg:block"
       />
       <div
