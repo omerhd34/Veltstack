@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { HERO_BLUR_DATA_URL, HERO_IMAGE_QUALITY } from "@/lib/hero-image";
 
 interface HeroImageProps {
   alt?: string;
@@ -10,28 +11,32 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
   return (
     <div
       className={cn(
-        "pointer-events-none absolute inset-0 overflow-hidden",
+        "pointer-events-none absolute inset-0 overflow-hidden bg-[#050f0c]",
         className,
       )}
       aria-hidden={alt === ""}
     >
       <Image
-        src="/hero/veltstack-mobile.png"
+        src="/hero/veltstack-mobile.webp"
         alt={alt}
         fill
         priority
         fetchPriority="high"
-        quality={100}
+        quality={HERO_IMAGE_QUALITY}
+        placeholder="blur"
+        blurDataURL={HERO_BLUR_DATA_URL}
         sizes="(max-width: 991px) 100vw, 0px"
         className="object-cover object-center lg:hidden"
       />
       <Image
-        src="/hero/veltstack.png"
+        src="/hero/veltstack.webp"
         alt={alt}
         fill
         priority
         fetchPriority="high"
-        quality={100}
+        quality={HERO_IMAGE_QUALITY}
+        placeholder="blur"
+        blurDataURL={HERO_BLUR_DATA_URL}
         sizes="(min-width: 992px) 100vw, 0px"
         className="hidden object-cover object-[58%_45%] lg:block"
       />

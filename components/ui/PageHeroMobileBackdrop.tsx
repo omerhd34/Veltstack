@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HERO_BLUR_DATA_URL, HERO_IMAGE_QUALITY } from "@/lib/hero-image";
 
 interface PageHeroMobileBackdropProps {
   src: string;
@@ -12,13 +13,17 @@ export function PageHeroMobileBackdrop({
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-0 overflow-hidden opacity-70"
+      className="pointer-events-none absolute inset-0 overflow-hidden bg-[#050f0c] opacity-70"
     >
       <Image
         src={src}
         alt=""
         fill
         priority
+        fetchPriority="high"
+        quality={HERO_IMAGE_QUALITY}
+        placeholder="blur"
+        blurDataURL={HERO_BLUR_DATA_URL}
         sizes={desktopSrc ? "(max-width: 991px) 100vw, 0px" : "100vw"}
         className={desktopSrc ? "object-cover lg:hidden" : "object-cover"}
       />
@@ -28,6 +33,10 @@ export function PageHeroMobileBackdrop({
           alt=""
           fill
           priority
+          fetchPriority="high"
+          quality={HERO_IMAGE_QUALITY}
+          placeholder="blur"
+          blurDataURL={HERO_BLUR_DATA_URL}
           sizes="(min-width: 992px) 100vw, 0px"
           className="hidden object-cover lg:block"
         />

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { HERO_BLUR_DATA_URL, HERO_IMAGE_QUALITY } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
 
 export const PAGE_HERO_IMAGE_WRAPPER_CLASS =
@@ -21,7 +22,7 @@ interface PageHeroImageProps {
 
 export function PageHeroImage({
   alt,
-  src = "/images/pages/services/hero.png",
+  src = "/images/pages/services/hero.webp",
   className,
   frameClassName,
 }: PageHeroImageProps) {
@@ -45,6 +46,9 @@ export function PageHeroImage({
           alt={alt}
           fill
           priority
+          quality={HERO_IMAGE_QUALITY}
+          placeholder="blur"
+          blurDataURL={HERO_BLUR_DATA_URL}
           sizes="(min-width: 992px) 50vw, 90vw"
           className="object-cover"
         />
