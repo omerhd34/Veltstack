@@ -62,7 +62,7 @@ export async function BlogPreviewSection({
                   {t("blogHeadlineAccent")}
                 </span>
               </h2>
-              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base lg:text-lg">
+              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-white/60 sm:text-base lg:text-lg">
                 {t("blogSubtitle")}
               </p>
             </div>
