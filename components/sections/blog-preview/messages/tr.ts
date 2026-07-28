@@ -4,7 +4,7 @@ export const blogPreviewHomeTr = {
   blogHeadlineAccent: "içgörüler",
   blogSubtitle:
     "Dijital dünyadan güncel içerikler, pratik ipuçları ve gerçek projelerden süzülen deneyimler.",
-  blogMoreButton: "Diğerleri",
+  blogMoreButton: "Hepsini İncele",
   blogSliderPrev: "Önceki yazı",
   blogSliderNext: "Sonraki yazı",
   readingTime: "{minutes} dk",

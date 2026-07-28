@@ -4,7 +4,7 @@ export const blogPreviewHomeEn = {
   blogHeadlineAccent: "digital world",
   blogSubtitle:
     "Latest insights, practical tips and lessons distilled from real projects in the digital world.",
-  blogMoreButton: "View All",
+  blogMoreButton: "View all",
   blogSliderPrev: "Previous article",
   blogSliderNext: "Next article",
   readingTime: "{minutes} min",
