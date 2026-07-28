@@ -64,6 +64,7 @@ interface ServicePackageCardProps {
   onToggleGroup: (label: string) => void;
   commonGroupLabels?: string[];
   variant?: "default" | "tier-column";
+  hideFeatures?: boolean;
   className?: string;
 }
 
@@ -85,6 +86,7 @@ export function ServicePackageCard({
   onToggleGroup,
   commonGroupLabels = [],
   variant = "default",
+  hideFeatures = false,
   className,
 }: ServicePackageCardProps) {
   const tier = data.tiers[activeTier];
@@ -116,11 +118,11 @@ export function ServicePackageCard({
     groupIndex: number,
   ) => {
     const isOpen = openGroups.has(group.label);
-    const panelId = `${activeTier}-${group.label}-panel`;
+    const panelId = `${activeTiers}-${group.label}-panel`;
 
     return (
       <div
-        key={`${activeTier}-${group.label}`}
+        key={`${activeTiers}-${group.label}`}
         data-package-group={groupIndex}
         data-package-group-label={group.label}
         className={cn(
@@ -164,7 +166,7 @@ export function ServicePackageCard({
                 activeTier,
               ).map((feature) => (
                 <li
-                  key={`${activeTier}-${group.label}-${feature.text}`}
+                  key={`${activeTiers}-${group.label}-${feature.text}`}
                   className="flex items-start justify-between gap-3 text-[0.8125rem] leading-snug"
                 >
                   <span
@@ -294,41 +296,49 @@ export function ServicePackageCard({
         ))}
       </div>
 
+      {!hideFeatures ? (
+        <div
+          className={cn(
+            "relative flex flex-col px-3 py-2 sm:px-4",
+            !isTierColumn && "min-h-0 flex-1",
+          )}
+        >
+          {featureGroups.length ? (
+            <div
+              className={cn("flex flex-col", !isTierColumn && "min-h-0 flex-1")}
+            >
+              {featureGroups.map((group, groupIndex) =>
+                renderFeatureGroup(group, groupIndex),
+              )}
+            </div>
+          ) : null}
+          {!featureGroups.length && tier.features ? (
+            <ul className="flex flex-col gap-2.5 px-2 py-3.5">
+              {tier.features.map((feature) => (
+                <li
+                  key={`${activeTiers}-${feature}`}
+                  className="flex items-start justify-between gap-3 text-[0.8125rem] leading-snug text-emerald-50/85"
+                >
+                  <span className="min-w-0 flex-1">{feature}</span>
+                  <LuCircleCheck
+                    className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
+                    strokeWidth={2.5}
+                    aria-hidden
+                  />
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
+      ) : null}
+
       <div
         className={cn(
-          "relative flex flex-col px-3 py-2 sm:px-4",
-          !isTierColumn && "min-h-0 flex-1",
+          "p-5",
+          !isTierColumn && "mt-auto",
+          hideFeatures ? "pt-5" : "pt-0",
         )}
       >
-        {featureGroups.length ? (
-          <div
-            className={cn("flex flex-col", !isTierColumn && "min-h-0 flex-1")}
-          >
-            {featureGroups.map((group, groupIndex) =>
-              renderFeatureGroup(group, groupIndex),
-            )}
-          </div>
-        ) : null}
-        {!featureGroups.length && tier.features ? (
-          <ul className="flex flex-col gap-2.5 px-2 py-3.5">
-            {tier.features.map((feature) => (
-              <li
-                key={`${activeTier}-${feature}`}
-                className="flex items-start justify-between gap-3 text-[0.8125rem] leading-snug text-emerald-50/85"
-              >
-                <span className="min-w-0 flex-1">{feature}</span>
-                <LuCircleCheck
-                  className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
-                  strokeWidth={2.5}
-                  aria-hidden
-                />
-              </li>
-            ))}
-          </ul>
-        ) : null}
-      </div>
-
-      <div className={cn("p-5 pt-0", !isTierColumn && "mt-auto")}>
         <StardustShell className="w-full" faceClassName="bg-brand-accent/88">
           <Link
             href="/iletisim"

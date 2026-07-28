@@ -17,6 +17,7 @@ import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
 import { ServicesPackageTypeTabs } from "./ServicesPackageTypeTabs";
 import { ServicesPackagesIntro } from "./ServicesPackagesIntro";
 import { ServicePackageCard, type PackageCardData } from "./ServicePackageCard";
+import { ServicePackageComparison } from "./ServicePackageComparison";
 import { usePackageGroupHeightSync } from "./usePackageGroupHeightSync";
 
 interface PackagesIntro {
@@ -172,7 +173,7 @@ export function ServicesPackagesPanel({
       resolvedPackageSlug,
       useTierComparison ? "compare" : activeTier,
     ],
-    openGroupsKey,
+    useTierComparison ? "" : openGroupsKey,
   );
 
   const toggleGroup = (label: string) => {
@@ -224,7 +225,7 @@ export function ServicesPackagesPanel({
       ) : null}
 
       {showUnifiedNav ? (
-        <div className="relative mx-auto w-full max-w-4xl rounded-[1.75rem] p-px bg-linear-to-r from-emerald-500/30 via-brand-accent/25 to-emerald-600/30 shadow-[0_12px_48px_rgb(0_0_0/0.12),0_4px_16px_rgb(58_107_82/0.08)]">
+        <div className="relative mx-auto w-full max-w-6xl rounded-[1.75rem] p-px bg-linear-to-r from-emerald-500/30 via-brand-accent/25 to-emerald-600/30 shadow-[0_12px_48px_rgb(0_0_0/0.12),0_4px_16px_rgb(58_107_82/0.08)]">
           <div className="relative min-w-0 overflow-hidden rounded-[calc(1.75rem-1px)] bg-[#071510]/97 backdrop-blur-xl">
             <span
               aria-hidden
@@ -279,46 +280,40 @@ export function ServicesPackagesPanel({
         p2={displayIntro.p2}
       />
 
-      <div
-        ref={gridRef}
-        key={`${activeCategory}-${resolvedPackageSlug}-${useTierComparison ? "compare" : activeTier}`}
-        className={`${
-          lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"
-        } grid gap-6 lg:gap-5 xl:gap-6 lg:grid-cols-3 ${
-          useTierComparison ? "items-start" : "items-stretch"
-        }`}
-      >
-        {useTierComparison
-          ? tierOrder.map((tierKey) => (
-              <ServicePackageCard
-                key={`${activeCategory}-${resolvedPackageSlug}-${tierKey}`}
-                icon={icons[resolvedPackageSlug]}
-                data={selectedPackage}
-                labels={cardLabels}
-                activeTier={tierKey}
-                openGroups={openGroups}
-                onToggleGroup={toggleGroup}
-                commonGroupLabels={collectCommonFeatureGroupLabels(
-                  [selectedPackage],
-                  tierKey,
-                )}
-                variant="tier-column"
-              />
-            ))
-          : slugs.map((slug) => (
-              <ServicePackageCard
-                key={`${activeCategory}-${slug}`}
-                icon={icons[slug]}
-                data={categoryPackages[slug]}
-                labels={cardLabels}
-                activeTier={activeTier}
-                onTierChange={setActiveTier}
-                openGroups={openGroups}
-                onToggleGroup={toggleGroup}
-                commonGroupLabels={commonGroupLabels}
-              />
-            ))}
-      </div>
+      {useTierComparison ? (
+        <ServicePackageComparison
+          className={lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"}
+          data={selectedPackage}
+          labels={cardLabels}
+          categoryLabel={
+            labels.tabs.find((tab) => tab.id === activeCategory)?.label ?? ""
+          }
+          openGroups={openGroups}
+          onToggleGroup={toggleGroup}
+        />
+      ) : (
+        <div
+          ref={gridRef}
+          key={`${activeCategory}-${resolvedPackageSlug}-${activeTier}`}
+          className={`${
+            lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"
+          } grid items-stretch gap-6 lg:grid-cols-3 lg:gap-5 xl:gap-6`}
+        >
+          {slugs.map((slug) => (
+            <ServicePackageCard
+              key={`${activeCategory}-${slug}`}
+              icon={icons[slug]}
+              data={categoryPackages[slug]}
+              labels={cardLabels}
+              activeTier={activeTier}
+              onTierChange={setActiveTier}
+              openGroups={openGroups}
+              onToggleGroup={toggleGroup}
+              commonGroupLabels={commonGroupLabels}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

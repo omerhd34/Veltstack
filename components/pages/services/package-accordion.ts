@@ -93,6 +93,50 @@ export function buildFeatureGroupComparison(
   }));
 }
 
+export interface PackageFeatureMatrixItem {
+  text: string;
+  included: Record<PackageTier, boolean>;
+}
+
+export function buildFeatureGroupMatrix(
+  tiers: Record<PackageTier, PackageTierData>,
+  groupLabel: string,
+): PackageFeatureMatrixItem[] {
+  const ordered: string[] = [];
+  const seen = new Set<string>();
+  const exactTiers = new Map<string, Set<PackageTier>>();
+  const minTierIndex = new Map<string, number>();
+
+  tierOrder.forEach((tierKey, tierIndex) => {
+    const group = tiers[tierKey].featureGroups?.find(
+      (entry) => entry.label === groupLabel,
+    );
+    for (const item of group?.items ?? []) {
+      if (!seen.has(item)) {
+        seen.add(item);
+        ordered.push(item);
+        minTierIndex.set(item, tierIndex);
+      }
+      const set = exactTiers.get(item) ?? new Set();
+      set.add(tierKey);
+      exactTiers.set(item, set);
+    }
+  });
+
+  return ordered.map((text) => {
+    const pattern = matchExclusivePattern(text);
+    const included = {} as Record<PackageTier, boolean>;
+
+    tierOrder.forEach((tierKey, tierIndex) => {
+      included[tierKey] = pattern
+        ? (exactTiers.get(text)?.has(tierKey) ?? false)
+        : (minTierIndex.get(text) ?? 0) <= tierIndex;
+    });
+
+    return { text, included };
+  });
+}
+
 export const compactAccordionQuery = "(max-width: 1023px)";
 export const desktopGridQuery = "(min-width: 1024px)";
 export const packageAccordionDurationMs = 500;
