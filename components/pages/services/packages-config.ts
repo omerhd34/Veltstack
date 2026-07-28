@@ -56,7 +56,7 @@ export const webPackageIcons: Record<WebPackageSlug, IconType> = {
 };
 
 export const appPackageIcons: Record<WebPackageSlug, IconType> = {
-  portfolio: LuSmartphone,
+  portfolio: LuContact,
   corporate: LuBuilding2,
   ecommerce: LuShoppingCart,
 };
