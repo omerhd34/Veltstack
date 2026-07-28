@@ -36,15 +36,7 @@ export async function BlogPreviewSection({
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_0%,rgb(58_107_82/0.2),transparent_55%)]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-400/30 to-transparent"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-24 top-1/4 size-80 rounded-full bg-brand-accent/8 blur-3xl"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-400/20 to-transparent"
       />
       <SiteContainer className="relative">
         <SectionScrollReveal direction="right">
@@ -84,7 +76,7 @@ export async function BlogPreviewSection({
 
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-400/20 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-linear-to-r from-transparent via-emerald-400/15 to-transparent"
       />
     </section>
   );
