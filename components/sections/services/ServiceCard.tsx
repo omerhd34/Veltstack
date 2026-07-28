@@ -61,8 +61,9 @@ export function ServiceCard({
       ? cn("bg-transparent p-4", stardustCardFace)
       : isSlide
         ? cn(
-            "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99] bg-white p-4 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)] sm:p-5 md:p-6",
-            isActive && "cursor-pointer",
+            "box-border border-[3px] border-solid border-[#8aab99] bg-white p-4 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)] sm:p-5 md:p-6",
+            isActive &&
+              "cursor-pointer hover:scale-[1.04] motion-reduce:hover:scale-100",
             !isActive &&
               "border-[#9db8a8] bg-[#f8faf9] shadow-[0_2px_6px_rgb(0,0,0,0.03),0_8px_20px_rgb(58,107,82,0.05)] hover:border-[#8aab99] hover:bg-white hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
           )
@@ -79,19 +80,7 @@ export function ServiceCard({
 
   const content = (
     <>
-      {!stardust ? (
-        <BorderTrace
-          durationSec={2.5}
-          {...(isSlide
-            ? {
-                radius: 16,
-                loop: true,
-                trigger: "hover" as const,
-                stroke: "var(--brand-accent)",
-              }
-            : {})}
-        />
-      ) : null}
+      {!stardust && !isSlide ? <BorderTrace durationSec={2.5} /> : null}
       {numbered && index != null ? (
         <CardIndexNumber
           index={index}
