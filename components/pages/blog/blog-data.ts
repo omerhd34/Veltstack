@@ -24,12 +24,20 @@ export function getHomepageBlogPosts(): BlogPost[] {
 
 const BLOG_IMAGE_BASE = "/images/pages/blog/";
 
+function toWebp(url: string): string {
+  return url.replace(/\.png$/i, ".webp");
+}
+
 export function getBlogListImageUrl(imageUrl: string): string {
-  return imageUrl.replace(BLOG_IMAGE_BASE, `${BLOG_IMAGE_BASE}version1/`);
+  return toWebp(
+    imageUrl.replace(BLOG_IMAGE_BASE, `${BLOG_IMAGE_BASE}version1/`),
+  );
 }
 
 export function getBlogDetailImageUrl(imageUrl: string): string {
-  return imageUrl.replace(BLOG_IMAGE_BASE, `${BLOG_IMAGE_BASE}version2/`);
+  return toWebp(
+    imageUrl.replace(BLOG_IMAGE_BASE, `${BLOG_IMAGE_BASE}version2/`),
+  );
 }
 
 export function getAllCategories(locale: "tr" | "en"): string[] {
