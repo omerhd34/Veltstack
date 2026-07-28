@@ -189,7 +189,7 @@ export const appPackagesTr = {
             items: [
               ...commonDesignTemelItems,
               "Premium UI Bileşenleri ve Modern Arayüz",
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Farklı Ekran Boyutları İçin Gelişmiş Uyumluluk ve Cihaz Testleri",
             ],
           },
@@ -218,7 +218,7 @@ export const appPackagesTr = {
               "Ölçeklenebilir Yüksek Hızlı Özel Altyapı",
               "Figma'dan Piksel Uyumlu Arayüz Kodlama",
               "Gelişmiş Animasyonlar ve Mikro Etkileşimler",
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
             ],
           },
           {
@@ -290,7 +290,7 @@ export const appPackagesTr = {
             items: [
               "Kurumsal Özel iOS / Android Arayüz Tasarımı",
               "Premium Bileşenler ve Modern Arayüz",
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Gelişmiş Performans ve Pil Optimizasyonu",
             ],
           },
@@ -327,7 +327,7 @@ export const appPackagesTr = {
               "Yüksek Hızlı Kurumsal Özel Altyapı",
               "Figma'dan Piksel Uyumlu Kurumsal Arayüz",
               "Tabletler İçin Özel Optimizasyon",
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
             ],
           },
           {
@@ -408,7 +408,7 @@ export const appPackagesTr = {
             items: [
               "Premium E-Ticaret iOS / Android Arayüzü",
               "Gelişmiş Filtreleme ve Kaydırma (Infinite Scroll)",
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Akıcı Kategori Geçişleri ve Animasyonlar",
             ],
           },
@@ -441,7 +441,7 @@ export const appPackagesTr = {
               "Native Hisli Yüksek Hızlı Özel Altyapı",
               "Figma'dan Piksel Uyumlu E-Ticaret Arayüzü",
               "Özel Sepet ve Ödeme Sayfası Animasyonları",
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
             ],
           },
           {

@@ -9,7 +9,7 @@ const commonRedesignItems = [
 ] as const;
 
 const standartDesignExtras = [
-  "Dark / Light Mod Desteği",
+  "Koyu / Açık Mod Desteği",
   "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
 ] as const;
 

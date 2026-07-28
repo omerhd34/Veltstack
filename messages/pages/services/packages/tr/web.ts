@@ -49,7 +49,7 @@ const tierSeoProItems = [
   "Domain, www/non-www ve Yönlendirme Ayarları",
   "Dönüşüm Takibi (Form, Tıklama, CTA)",
   "Canlı Destek ve Hızlı İletişim Entegrasyonu",
-  "CRM ve E-posta Pazarlama Aracı Entegrasyonu (Mailchimp vb.)",
+  "CRM ve E-posta Pazarlama Aracı Entegrasyonu",
   "Üçüncü Parti API Entegrasyon Hazırlığı",
 ] as const;
 
@@ -96,7 +96,7 @@ export const webPackagesTr = {
             label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
@@ -132,7 +132,7 @@ export const webPackagesTr = {
             label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Figma Tasarımlarına Piksel Uyumlu Arayüz Kodlama",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
               "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
@@ -208,7 +208,7 @@ export const webPackagesTr = {
             label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
@@ -247,7 +247,7 @@ export const webPackagesTr = {
             label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Figma Tasarımlarına Piksel Uyumlu Kurumsal Arayüz Kodlama",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
               "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
@@ -337,7 +337,7 @@ export const webPackagesTr = {
             label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
             ],
           },
@@ -388,7 +388,7 @@ export const webPackagesTr = {
             label: "Tasarım & Yapım",
             items: [
               ...commonDesignItems,
-              "Dark / Light Mod Desteği",
+              "Koyu / Açık Mod Desteği",
               "Figma Tasarımlarına Piksel Uyumlu E-Ticaret Arayüzü Kodlama",
               "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
               "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
@@ -428,7 +428,7 @@ export const webPackagesTr = {
               "En Fazla 5 Dil Desteği",
               "Çoklu Para Birimi Desteği",
               "Blog ve İçerik Pazarlama Modülü",
-              "CRM, SMS ve Pazarlama Araçları Entegrasyonu (Mailchimp vb.)",
+              "CRM, SMS ve Pazarlama Araçları Entegrasyonu",
             ],
           },
           {
