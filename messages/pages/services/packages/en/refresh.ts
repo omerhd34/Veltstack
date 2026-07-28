@@ -1,59 +1,56 @@
 // ---------------------------------------------------------------------------
-// Shared feature groups — redesign packages
+// Shared feature groups — refresh packages
 // ---------------------------------------------------------------------------
 
 const commonRedesignItems = [
-  "Responsive Design for All Devices",
-  "SSL, HTTPS and Security Configuration",
-  "Fast Load Times and SEO-Friendly Performance Optimization",
+  "Fluid responsive design for mobile, tablet and desktop",
+  "SSL / HTTPS and security configuration",
+  "Fast loading and Core Web Vitals optimization",
 ] as const;
 
 const standartDesignExtras = [
-  "Dark / Light Mode Support",
-  "Smooth Page Transitions and Micro-interactions",
+  "Dark / light mode support",
+  "Smooth page transitions and micro-interactions",
 ] as const;
 
 const commonDeliveryTemel = [
-  "Go-live and DNS Transition Support",
-  "15 Days Technical Support",
+  "Go-live and DNS transition support",
 ] as const;
 
 const commonDeliveryStandart = [
-  "Source Code and Project Files Delivery",
-  "Go-live and Migration Support",
-  "30 Days Technical Support",
+  "Source code and project file delivery",
+  "Go-live and migration support",
 ] as const;
 
 const commonDeliveryPro = [
-  "Source Code and Project Files Delivery",
-  "Go-live and Migration Support",
-  "45 Days Technical Support",
+  "Source code and project file delivery",
+  "Go-live and migration support",
 ] as const;
 
 const seoMigrationStandartItems = [
-  "Meta, Open Graph and Schema Data Preservation",
-  "Advanced Redirect Map",
-  "Search Console Transition Tracking",
-  "Sitemap and robots.txt Update",
+  "Meta, Open Graph and schema data preservation",
+  "Advanced 301 redirect map",
+  "Google Search Console transition tracking",
+  "Sitemap and robots.txt update",
 ] as const;
 
 const seoMigrationProItems = [
   ...seoMigrationStandartItems,
-  "Comprehensive Technical SEO and Indexing Optimization",
-  "Google Analytics 4 and Conversion Tracking",
+  "Comprehensive technical SEO and indexing optimization",
+  "Google Analytics 4 and conversion tracking",
 ] as const;
 
 const REFRESH_GROUP_ANALYSIS = "Analysis & Planning";
 const REFRESH_GROUP_DESIGN = "Design & Redesign";
 const REFRESH_GROUP_SEO = "SEO & Migration Protection";
-const REFRESH_GROUP_DELIVERY = "Delivery & Support";
+const REFRESH_GROUP_DELIVERY = "Launch & Delivery";
 
 // ---------------------------------------------------------------------------
 // Portfolio / Promotional
 // ---------------------------------------------------------------------------
 
-const portfolioAnalysisTemel = [
-  "Current site performance, SEO and content audit",
+const portfolioAnalysis = [
+  "Current site performance, SEO and content analysis",
   "Content inventory and migration plan",
   "URL structure and 301 redirect strategy",
 ] as const;
@@ -67,45 +64,41 @@ const portfolioDesignTemel = [
 const portfolioDesignStandart = [
   ...commonRedesignItems,
   ...standartDesignExtras,
-  "Brand-aligned interface redesign",
-  "Comprehensive UX and performance audit",
-  "Core Web Vitals improvement",
+  "Brand-aligned interface refresh",
+  "Comprehensive UX and performance review",
+  "Core Web Vitals improvements",
 ] as const;
 
 const portfolioDesignPro = [
   ...commonRedesignItems,
   ...standartDesignExtras,
-  "Migration to Modern Next.js Infrastructure",
-  "Custom Design and Animations",
-  "Scalable Infrastructure for High Traffic",
+  "Migration to a Next.js-based modern stack",
+  "Custom design and animations",
+  "Scalable infrastructure for high traffic",
+  "Dynamic content management panel",
 ] as const;
 
 const portfolioSeoTemel = ["301 redirect setup"] as const;
 
-const portfolioSeoProExtras = [
-  "Dynamic Content Management Panel",
-  "Up to 5 Languages Support",
-] as const;
-
 const portfolioDeliveryProExtras = [
-  "User Guide and Short Management Training",
+  "User guide and short admin training",
 ] as const;
 
 // ---------------------------------------------------------------------------
 // Corporate
 // ---------------------------------------------------------------------------
 
-const corporateAnalysisTemel = [
-  "Current site technical, SEO and security audit",
+const corporateAnalysis = [
+  "Technical, SEO and security audit of the current site",
   "Content and page structure analysis",
-  "Transition timeline and risk plan",
+  "Migration timeline and risk plan",
 ] as const;
 
 const corporateDesignTemel = [
   ...commonRedesignItems,
-  "Corporate identity-aligned interface refresh",
+  "Brand-aligned corporate UI refresh",
   "Content migration",
-  "Basic performance and security update",
+  "Baseline performance and security updates",
 ] as const;
 
 const corporateDesignStandart = [
@@ -115,48 +108,50 @@ const corporateDesignStandart = [
   "Premium UI components",
   "Accessibility (WCAG) improvements",
   "Mobile navigation and content experience optimization",
+  "Form and integration updates",
+  "Privacy-compliant cookie notice",
 ] as const;
 
 const corporateDesignPro = [
   ...commonRedesignItems,
   ...standartDesignExtras,
-  "Scalable Infrastructure for High Traffic",
-  "Advanced CMS and Content Management",
-  "Up to 5 Languages and Multi-department Structure",
-  "API and Third-party Integrations",
-] as const;
-
-const corporateSeoStandart = [
-  "Modern framework migration",
-  ...seoMigrationStandartItems,
-  "Form and integration update",
-] as const;
-
-const corporateSeoPro = [
-  "Comprehensive security audit and improvement",
+  "Scalable infrastructure for high traffic",
+  "Advanced CMS and content management",
+  "Support for up to 5 languages and multi-department structure",
+  "API and third-party integrations",
   "CDN and cache optimization",
-  "GDPR Compliant Cookie Notice",
-  "Backup and restore plan",
+  "Comprehensive security audit and hardening",
+  "Form and integration updates",
+  "Privacy-compliant cookie notice",
 ] as const;
 
-const corporateDeliveryProExtras = ["Team Training and Documentation"] as const;
+const corporateSeoTemel = ["301 redirect setup"] as const;
+
+const corporateSeoStandart = [...seoMigrationStandartItems] as const;
+
+const corporateSeoPro = [...seoMigrationProItems] as const;
+
+const corporateDeliveryProExtras = [
+  "Backup and restore plan",
+  "Team training and documentation",
+] as const;
 
 // ---------------------------------------------------------------------------
 // Ecommerce
 // ---------------------------------------------------------------------------
 
-const ecommerceAnalysisTemel = [
-  "Current store performance and conversion analysis",
+const ecommerceAnalysis = [
+  "Store performance and conversion analysis",
   "Product and category migration plan",
-  "Payment, order and shipping flow audit",
+  "Payment, order and shipping flow review",
 ] as const;
 
 const ecommerceDesignTemel = [
   ...commonRedesignItems,
   "Modern ecommerce interface",
   "Product and category migration",
-  "Basic payment integration update",
-  "Mobile shopping experience improvement",
+  "Baseline payment integration update",
+  "Mobile shopping experience improvements",
 ] as const;
 
 const ecommerceDesignStandart = [
@@ -165,56 +160,61 @@ const ecommerceDesignStandart = [
   "Advanced product filtering and search",
   "Cart and checkout flow optimization",
   "Stock and variant management update",
-  "Shipping integration and delivery options refresh",
+  "Shipping integration and delivery options update",
+  "Abandoned cart reminder infrastructure",
 ] as const;
 
 const ecommerceDesignPro = [
   ...commonRedesignItems,
   ...standartDesignExtras,
-  "Migration to Scalable Modern Infrastructure",
-  "Up to 5 Languages and Multi-currency Support",
-  "Advanced Campaign and Promotion Module",
-  "ERP, Accounting and Invoice Integration Readiness",
+  "Migration to a scalable modern stack",
+  "Support for up to 5 languages and multi-currency",
+  "Advanced campaign and promotion module",
+  "ERP, accounting and invoicing integration readiness",
+  "PCI-DSS compliant payment gateway infrastructure",
+  "Advanced security and fraud protection",
+  "Real-time stock synchronization",
+  "Abandoned cart reminder infrastructure",
 ] as const;
 
+const ecommerceSeoTemel = ["Product URL and meta preservation plan"] as const;
+
 const ecommerceSeoStandart = [
-  "Product URL and meta protection plan",
-  "Product, Offer and Breadcrumb Schema Configuration",
-  "Google Analytics 4 and conversion tracking reconfiguration",
-  "Abandoned Cart Infrastructure",
+  "Product URL and meta preservation plan",
+  "Product, Offer and Breadcrumb schema configuration",
+  "Google Analytics 4 and conversion tracking re-setup",
 ] as const;
 
 const ecommerceSeoPro = [
-  "High-traffic and campaign period optimization",
-  "PCI-DSS Compliant Virtual POS Integration Infrastructure",
-  "Advanced security and fraud protection",
-  "Real-time stock synchronization",
+  ...ecommerceSeoStandart,
+  "High-traffic and campaign-period SEO optimization",
 ] as const;
 
 const ecommerceDeliveryTemel = [
-  "Go-live and Test Order Verification",
-  "15 Days Technical Support",
+  "Go-live and test-order verification",
 ] as const;
 
 const ecommerceDeliveryProExtras = [
-  "Store Management Training and Documentation",
+  "Store management training and documentation",
 ] as const;
 
 export const refreshPackagesEn = {
   portfolio: {
-    title: "Portfolio / Promotional Site Redesign",
+    title: "Portfolio / Promotional",
     description:
-      "Renew your promotional site with modern design, fast infrastructure and SEO protection — build a stronger digital presence without losing your content.",
+      "Refresh your promotional site with modern design, fast infrastructure and SEO protection—without losing your content.",
     introP2:
-      "Startup, Professional and Premium tiers define the scope of your promotional site redesign. We plan a performance and conversion-focused migration while protecting your SEO rankings.",
+      "Startup, Professional and Premium tiers clarify redesign scope. We plan a conversion-focused migration while protecting your search rankings.",
     tiers: {
       temel: {
         deliveryDays: "7-14",
         revisions: "2",
+        supportDays: "15",
+        languages: "1",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [...portfolioAnalysisTemel],
+            items: [...portfolioAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -233,10 +233,11 @@ export const refreshPackagesEn = {
       standart: {
         deliveryDays: "14-21",
         revisions: "4",
+        supportDays: "30",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...portfolioAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -255,10 +256,12 @@ export const refreshPackagesEn = {
       pro: {
         deliveryDays: "21-30",
         revisions: "6",
+        supportDays: "45",
+        languages: "∞",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...portfolioAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -266,7 +269,7 @@ export const refreshPackagesEn = {
           },
           {
             label: REFRESH_GROUP_SEO,
-            items: [...seoMigrationProItems, ...portfolioSeoProExtras],
+            items: [...seoMigrationProItems],
           },
           {
             label: REFRESH_GROUP_DELIVERY,
@@ -278,19 +281,20 @@ export const refreshPackagesEn = {
   },
 
   corporate: {
-    title: "Corporate Site Redesign",
+    title: "Corporate",
     description:
-      "Renew your corporate website with current design, secure infrastructure and a planned transition — protect your brand trust and organic visibility.",
+      "Refresh your corporate site with updated design, secure infrastructure and a planned migration—while protecting brand trust and organic visibility.",
     introP2:
-      "Startup, Professional and Premium tiers define the scope of your corporate site redesign. We preserve your existing content and integrations for a seamless transition.",
+      "Startup, Professional and Premium tiers clarify redesign scope. We migrate existing content and integrations with minimal downtime.",
     tiers: {
       temel: {
         deliveryDays: "10-18",
         revisions: "2",
+        supportDays: "15",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [...corporateAnalysisTemel],
+            items: [...corporateAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -298,7 +302,7 @@ export const refreshPackagesEn = {
           },
           {
             label: REFRESH_GROUP_SEO,
-            items: [],
+            items: [...corporateSeoTemel],
           },
           {
             label: REFRESH_GROUP_DELIVERY,
@@ -309,10 +313,11 @@ export const refreshPackagesEn = {
       standart: {
         deliveryDays: "18-28",
         revisions: "4",
+        supportDays: "30",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...corporateAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -331,10 +336,11 @@ export const refreshPackagesEn = {
       pro: {
         deliveryDays: "28-42",
         revisions: "6",
+        supportDays: "45",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...corporateAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -354,19 +360,20 @@ export const refreshPackagesEn = {
   },
 
   ecommerce: {
-    title: "Ecommerce Site Redesign",
+    title: "Ecommerce",
     description:
-      "Renew your ecommerce site with modern infrastructure, smooth checkout and SEO protection — move to a conversion-focused store without risking product data or rankings.",
+      "Refresh your store with modern infrastructure, smoother checkout and SEO protection—without risking product data or rankings.",
     introP2:
-      "Startup, Professional and Premium tiers define the scope of your ecommerce store redesign. We protect your product data and organic visibility while moving to a conversion-focused store.",
+      "Startup, Professional and Premium tiers clarify redesign scope. We protect catalog data and organic visibility while moving to a conversion-focused storefront.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
         revisions: "2",
+        supportDays: "15",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [...ecommerceAnalysisTemel],
+            items: [...ecommerceAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -374,7 +381,7 @@ export const refreshPackagesEn = {
           },
           {
             label: REFRESH_GROUP_SEO,
-            items: [],
+            items: [...ecommerceSeoTemel],
           },
           {
             label: REFRESH_GROUP_DELIVERY,
@@ -385,10 +392,11 @@ export const refreshPackagesEn = {
       standart: {
         deliveryDays: "21-35",
         revisions: "4",
+        supportDays: "30",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...ecommerceAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -407,10 +415,11 @@ export const refreshPackagesEn = {
       pro: {
         deliveryDays: "35-49",
         revisions: "6",
+        supportDays: "45",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...ecommerceAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,

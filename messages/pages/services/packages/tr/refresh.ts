@@ -3,56 +3,53 @@
 // ---------------------------------------------------------------------------
 
 const commonRedesignItems = [
-  "Tüm Cihazlara Uyumlu Responsive Tasarım",
-  "SSL, HTTPS ve Güvenlik Yapılandırması",
-  "Hızlı Yükleme Süreleri ve SEO Dostu Performans Optimizasyonu",
+  "Mobil, tablet ve masaüstünde akıcı responsive tasarım",
+  "SSL / HTTPS ve güvenlik yapılandırması",
+  "Hızlı yükleme ve Core Web Vitals optimizasyonu",
 ] as const;
 
 const standartDesignExtras = [
-  "Koyu / Açık Mod Desteği",
-  "Akıcı Sayfa Geçişleri ve Mikro Etkileşimler",
+  "Koyu / açık mod desteği",
+  "Akıcı sayfa geçişleri ve mikro etkileşimler",
 ] as const;
 
 const commonDeliveryTemel = [
-  "Canlıya Alma ve DNS Geçiş Desteği",
-  "15 Gün Teknik Destek",
+  "Canlıya alma ve DNS geçiş desteği",
 ] as const;
 
 const commonDeliveryStandart = [
-  "Kaynak Kodu ve Proje Dosyalarının Teslimi",
-  "Canlıya Alma ve Geçiş Desteği",
-  "30 Gün Teknik Destek",
+  "Kaynak kodu ve proje dosyalarının teslimi",
+  "Canlıya alma ve geçiş desteği",
 ] as const;
 
 const commonDeliveryPro = [
-  "Kaynak Kodu ve Proje Dosyalarının Teslimi",
-  "Canlıya Alma ve Geçiş Desteği",
-  "45 Gün Teknik Destek",
+  "Kaynak kodu ve proje dosyalarının teslimi",
+  "Canlıya alma ve geçiş desteği",
 ] as const;
 
 const seoMigrationStandartItems = [
-  "Meta, Open Graph ve Schema Verilerinin Korunması",
-  "Gelişmiş Yönlendirme Haritası",
-  "Google Search Console Geçiş Takibi",
-  "Sitemap ve robots.txt Güncellemesi",
+  "Meta, Open Graph ve schema verilerinin korunması",
+  "Gelişmiş 301 yönlendirme haritası",
+  "Google Search Console geçiş takibi",
+  "Sitemap ve robots.txt güncellemesi",
 ] as const;
 
 const seoMigrationProItems = [
   ...seoMigrationStandartItems,
-  "Kapsamlı Teknik SEO ve İndeksleme Optimizasyonu",
-  "Google Analytics 4 ve Dönüşüm Takibi",
+  "Kapsamlı teknik SEO ve indeksleme optimizasyonu",
+  "Google Analytics 4 ve dönüşüm takibi",
 ] as const;
 
 const REFRESH_GROUP_ANALYSIS = "Analiz & Planlama";
 const REFRESH_GROUP_DESIGN = "Tasarım & Yenileme";
 const REFRESH_GROUP_SEO = "SEO & Geçiş Koruması";
-const REFRESH_GROUP_DELIVERY = "Teslim & Destek";
+const REFRESH_GROUP_DELIVERY = "Yayın & Teslimat";
 
 // ---------------------------------------------------------------------------
 // Portföy / Tanıtım
 // ---------------------------------------------------------------------------
 
-const portfolioAnalysisTemel = [
+const portfolioAnalysis = [
   "Mevcut sitenin performans, SEO ve içerik durumu analizi",
   "İçerik envanteri ve migrasyon planı",
   "URL yapısı ve 301 yönlendirme stratejisi",
@@ -75,27 +72,23 @@ const portfolioDesignStandart = [
 const portfolioDesignPro = [
   ...commonRedesignItems,
   ...standartDesignExtras,
-  "Next.js Tabanlı Modern Altyapıya Geçiş",
-  "Özel Tasarım ve Animasyonlar",
-  "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
+  "Next.js tabanlı modern altyapıya geçiş",
+  "Özel tasarım ve animasyonlar",
+  "Yüksek trafiğe hazır ölçeklenebilir altyapı",
+  "Dinamik içerik yönetim paneli",
 ] as const;
 
 const portfolioSeoTemel = ["301 yönlendirme kurulumu"] as const;
 
-const portfolioSeoProExtras = [
-  "Dinamik İçerik Yönetim Paneli",
-  "En Fazla 5 Dil Desteği",
-] as const;
-
 const portfolioDeliveryProExtras = [
-  "Kullanım Kılavuzu ve Kısa Yönetim Eğitimi",
+  "Kullanım kılavuzu ve kısa yönetim eğitimi",
 ] as const;
 
 // ---------------------------------------------------------------------------
 // Kurumsal
 // ---------------------------------------------------------------------------
 
-const corporateAnalysisTemel = [
+const corporateAnalysis = [
   "Mevcut sitenin teknik, SEO ve güvenlik denetimi",
   "İçerik ve sayfa yapısı analizi",
   "Geçiş takvimi ve risk planı",
@@ -115,37 +108,39 @@ const corporateDesignStandart = [
   "Premium UI bileşenleri",
   "Erişilebilirlik (WCAG) iyileştirmeleri",
   "Mobil navigasyon ve içerik deneyimi optimizasyonu",
+  "Form ve entegrasyon güncellemesi",
+  "KVKK uyumlu çerez bildirimi",
 ] as const;
 
 const corporateDesignPro = [
   ...commonRedesignItems,
   ...standartDesignExtras,
-  "Yüksek Trafik İçin Ölçeklenebilir Altyapı",
-  "Gelişmiş CMS ve İçerik Yönetimi",
-  "En Fazla 5 Dil Desteği ve Çoklu Departman Yapısı",
-  "API ve Üçüncü Taraf Entegrasyonları",
-] as const;
-
-const corporateSeoStandart = [
-  "Modern framework geçişi",
-  ...seoMigrationStandartItems,
-  "Form ve entegrasyon güncellemesi",
-] as const;
-
-const corporateSeoPro = [
-  "Kapsamlı güvenlik denetimi ve iyileştirme",
+  "Yüksek trafiğe hazır ölçeklenebilir altyapı",
+  "Gelişmiş CMS ve içerik yönetimi",
+  "En Fazla 5 Dil Desteği ve çoklu departman yapısı",
+  "API ve üçüncü taraf entegrasyonları",
   "CDN ve önbellek optimizasyonu",
-  "KVKK Uyumlu Çerez Bildirimi",
-  "Yedekleme ve geri yükleme planı",
+  "Kapsamlı güvenlik denetimi ve iyileştirme",
+  "Form ve entegrasyon güncellemesi",
+  "KVKK uyumlu çerez bildirimi",
 ] as const;
 
-const corporateDeliveryProExtras = ["Ekip Eğitimi ve Dokümantasyon"] as const;
+const corporateSeoTemel = ["301 yönlendirme kurulumu"] as const;
+
+const corporateSeoStandart = [...seoMigrationStandartItems] as const;
+
+const corporateSeoPro = [...seoMigrationProItems] as const;
+
+const corporateDeliveryProExtras = [
+  "Yedekleme ve geri yükleme planı",
+  "Ekip eğitimi ve dokümantasyon",
+] as const;
 
 // ---------------------------------------------------------------------------
 // E-Ticaret
 // ---------------------------------------------------------------------------
 
-const ecommerceAnalysisTemel = [
+const ecommerceAnalysis = [
   "Mevcut mağazanın performans ve dönüşüm analizi",
   "Ürün ve kategori migrasyon planı",
   "Ödeme, sipariş ve kargo akışı denetimi",
@@ -166,38 +161,41 @@ const ecommerceDesignStandart = [
   "Sepet ve ödeme akışı optimizasyonu",
   "Stok ve varyasyon yönetimi güncellemesi",
   "Kargo entegrasyonu ve teslimat seçenekleri güncellemesi",
+  "Terk edilen sepet hatırlatma altyapısı",
 ] as const;
 
 const ecommerceDesignPro = [
   ...commonRedesignItems,
   ...standartDesignExtras,
-  "Ölçeklenebilir Modern Altyapıya Geçiş",
-  "En Fazla 5 Dil ve Çoklu Para Birimi Desteği",
-  "Gelişmiş Kampanya ve Promosyon Modülü",
-  "ERP, Muhasebe ve Fatura Entegrasyon Hazırlığı",
+  "Ölçeklenebilir modern altyapıya geçiş",
+  "En Fazla 5 Dil ve çoklu para birimi desteği",
+  "Gelişmiş kampanya ve promosyon modülü",
+  "ERP, muhasebe ve fatura entegrasyon hazırlığı",
+  "PCI-DSS uyumlu sanal POS entegrasyon altyapısı",
+  "Gelişmiş güvenlik ve fraud koruması",
+  "Anlık stok senkronizasyonu",
+  "Terk edilen sepet hatırlatma altyapısı",
 ] as const;
+
+const ecommerceSeoTemel = ["Ürün URL ve meta koruma planı"] as const;
 
 const ecommerceSeoStandart = [
   "Ürün URL ve meta koruma planı",
-  "Product, Offer ve Breadcrumb Schema Yapılandırması",
+  "Product, Offer ve Breadcrumb schema yapılandırması",
   "Google Analytics 4 ve dönüşüm takibi yeniden kurulumu",
-  "Terk Edilen Sepet Altyapısı",
 ] as const;
 
 const ecommerceSeoPro = [
-  "Yüksek trafik ve kampanya dönemi optimizasyonu",
-  "PCI-DSS Uyumlu Sanal POS Entegrasyon Altyapısı",
-  "Gelişmiş güvenlik ve fraud koruması",
-  "Anlık stok senkronizasyonu",
+  ...ecommerceSeoStandart,
+  "Yüksek trafik ve kampanya dönemi SEO optimizasyonu",
 ] as const;
 
 const ecommerceDeliveryTemel = [
-  "Canlıya Alma ve Test Siparişi Doğrulaması",
-  "15 Gün Teknik Destek",
+  "Canlıya alma ve test siparişi doğrulaması",
 ] as const;
 
 const ecommerceDeliveryProExtras = [
-  "Mağaza Yönetimi Eğitimi ve Dokümantasyon",
+  "Mağaza yönetimi eğitimi ve dokümantasyon",
 ] as const;
 
 export const refreshPackagesTr = {
@@ -211,10 +209,12 @@ export const refreshPackagesTr = {
       temel: {
         deliveryDays: "7-14",
         revisions: "2",
+        supportDays: "15",
+        languages: "1",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [...portfolioAnalysisTemel],
+            items: [...portfolioAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -233,10 +233,11 @@ export const refreshPackagesTr = {
       standart: {
         deliveryDays: "14-21",
         revisions: "4",
+        supportDays: "30",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...portfolioAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -255,10 +256,12 @@ export const refreshPackagesTr = {
       pro: {
         deliveryDays: "21-30",
         revisions: "6",
+        supportDays: "45",
+        languages: "∞",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...portfolioAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -266,7 +269,7 @@ export const refreshPackagesTr = {
           },
           {
             label: REFRESH_GROUP_SEO,
-            items: [...seoMigrationProItems, ...portfolioSeoProExtras],
+            items: [...seoMigrationProItems],
           },
           {
             label: REFRESH_GROUP_DELIVERY,
@@ -287,10 +290,11 @@ export const refreshPackagesTr = {
       temel: {
         deliveryDays: "10-18",
         revisions: "2",
+        supportDays: "15",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [...corporateAnalysisTemel],
+            items: [...corporateAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -298,7 +302,7 @@ export const refreshPackagesTr = {
           },
           {
             label: REFRESH_GROUP_SEO,
-            items: [],
+            items: [...corporateSeoTemel],
           },
           {
             label: REFRESH_GROUP_DELIVERY,
@@ -309,10 +313,11 @@ export const refreshPackagesTr = {
       standart: {
         deliveryDays: "18-28",
         revisions: "4",
+        supportDays: "30",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...corporateAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -331,10 +336,11 @@ export const refreshPackagesTr = {
       pro: {
         deliveryDays: "28-42",
         revisions: "6",
+        supportDays: "45",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...corporateAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -363,10 +369,11 @@ export const refreshPackagesTr = {
       temel: {
         deliveryDays: "14-21",
         revisions: "2",
+        supportDays: "15",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [...ecommerceAnalysisTemel],
+            items: [...ecommerceAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -374,7 +381,7 @@ export const refreshPackagesTr = {
           },
           {
             label: REFRESH_GROUP_SEO,
-            items: [],
+            items: [...ecommerceSeoTemel],
           },
           {
             label: REFRESH_GROUP_DELIVERY,
@@ -385,10 +392,11 @@ export const refreshPackagesTr = {
       standart: {
         deliveryDays: "21-35",
         revisions: "4",
+        supportDays: "30",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...ecommerceAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
@@ -407,10 +415,11 @@ export const refreshPackagesTr = {
       pro: {
         deliveryDays: "35-49",
         revisions: "6",
+        supportDays: "45",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
-            items: [],
+            items: [...ecommerceAnalysis],
           },
           {
             label: REFRESH_GROUP_DESIGN,
