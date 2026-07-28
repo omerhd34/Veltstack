@@ -21,7 +21,7 @@ function useIsMobile() {
 }
 
 type SectionScrollRevealDirection = "left" | "right" | "up";
-type SectionScrollRevealTrigger = "content" | "wide" | "entry";
+type SectionScrollRevealTrigger = "content" | "wide" | "entry" | "peek";
 
 interface SectionScrollRevealProps {
   children: ReactNode;
@@ -39,7 +39,7 @@ const OFFSET_UP = "var(--reveal-offset-up)";
 
 const VIEWPORT: Record<
   SectionScrollRevealTrigger,
-  { once: true; amount: number; margin: string }
+  { once: true; amount: number | "some"; margin: string }
 > = {
   content: {
     once: true,
@@ -55,6 +55,11 @@ const VIEWPORT: Record<
     once: true,
     amount: 0.08,
     margin: "0px 0px -35% 0px",
+  },
+  peek: {
+    once: true,
+    amount: "some",
+    margin: "0px 0px 12% 0px",
   },
 };
 
