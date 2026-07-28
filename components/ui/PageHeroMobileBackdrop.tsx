@@ -19,7 +19,7 @@ export function PageHeroMobileBackdrop({
         alt=""
         fill
         priority
-        sizes="100vw"
+        sizes={desktopSrc ? "(max-width: 991px) 100vw, 0px" : "100vw"}
         className={desktopSrc ? "object-cover lg:hidden" : "object-cover"}
       />
       {desktopSrc ? (
@@ -28,7 +28,7 @@ export function PageHeroMobileBackdrop({
           alt=""
           fill
           priority
-          sizes="100vw"
+          sizes="(min-width: 992px) 100vw, 0px"
           className="hidden object-cover lg:block"
         />
       ) : null}
