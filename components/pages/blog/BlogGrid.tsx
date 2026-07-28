@@ -135,13 +135,14 @@ export function BlogGrid({ posts, locale, labels }: BlogGridProps) {
           </div>
         ) : (
           <div className="space-y-6">
-            {filtered.map((post) => (
+            {filtered.map((post, index) => (
               <BlogCard
                 key={post.slug}
                 post={post}
                 locale={locale}
                 readMoreLabel={labels.readMore}
                 readingTimeLabel={post.readingTimeLabel}
+                index={index}
               />
             ))}
           </div>

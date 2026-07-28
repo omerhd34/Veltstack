@@ -18,6 +18,7 @@ interface BlogCardProps {
   readMoreLabel: string;
   readingTimeLabel: string;
   layout?: "horizontal" | "vertical";
+  index?: number;
   className?: string;
 }
 
@@ -27,6 +28,7 @@ export function BlogCard({
   readMoreLabel,
   readingTimeLabel,
   layout = "horizontal",
+  index = 0,
   className,
 }: BlogCardProps) {
   const title = locale === "tr" ? post.titleTr : post.titleEn;
@@ -187,15 +189,16 @@ export function BlogCard({
         <>
           <SectionScrollReveal
             direction="left"
-            trigger="entry"
+            trigger="peek"
+            delay={Math.min(index * 0.05, 0.2)}
             className={imageClassName}
           >
             {imageSection}
           </SectionScrollReveal>
           <SectionScrollReveal
             direction="right"
-            delay={0.14}
-            trigger="entry"
+            delay={0.1 + Math.min(index * 0.05, 0.2)}
+            trigger="peek"
             className={textClassName}
           >
             {textSection}
