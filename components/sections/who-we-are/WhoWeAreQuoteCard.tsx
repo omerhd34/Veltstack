@@ -58,7 +58,7 @@ export function WhoWeAreQuoteCard({
         </p>
       </blockquote>
 
-      <footer className="relative mx-5 mt-8 shrink-0 rounded-2xl border border-brand-accent/10 bg-[#f3faf6] p-5 md:mx-6 md:mt-10 md:p-6">
+      <footer className="relative mx-5 mt-auto shrink-0 rounded-2xl border border-brand-accent/10 bg-[#f3faf6] p-5 md:mx-6 md:p-6">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <WhoWeAreSignature name={name} role={role} />
 
