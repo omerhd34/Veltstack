@@ -86,41 +86,41 @@ export async function BlogDetailHero({
               subtitle={excerpt}
               align="center"
               leading={
-                <div className="mb-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-emerald-300/60 sm:gap-x-6">
-                  <Link
-                    href="/blog"
-                    className="inline-flex items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-200"
-                  >
-                    <LuArrowLeft className="size-3.5" aria-hidden />
-                    {t("blog")}
-                  </Link>
-                  <span className="inline-flex items-center rounded-full border border-white/25 bg-white/8 px-3 py-1 text-[0.6875rem] font-semibold text-white/90 sm:px-4 sm:py-1.5">
+                <div className="flex flex-col items-center text-sm text-emerald-300/60">
+                  <div className="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-6">
+                    <Link
+                      href="/blog"
+                      className="inline-flex items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-200"
+                    >
+                      <LuArrowLeft className="size-3.5" aria-hidden />
+                      {t("blog")}
+                    </Link>
+                    <span className="hidden items-center gap-1.5 lg:flex">
+                      <LuCalendar
+                        className="size-3.5 text-emerald-400/70"
+                        aria-hidden
+                      />
+                      {date}
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <LuClock
+                        className="size-3.5 text-emerald-400/70"
+                        aria-hidden
+                      />
+                      {readingTime}
+                    </span>
+                  </div>
+                  <span className="mt-4 inline-flex items-center rounded-full border border-white/25 bg-white/8 px-3 py-1 text-[0.6875rem] font-semibold text-white/90 sm:mt-6 sm:px-4 sm:py-1.5">
                     {category}
-                  </span>
-                  <span className="hidden items-center gap-1.5 lg:flex">
-                    <LuCalendar
-                      className="size-3.5 text-emerald-400/70"
-                      aria-hidden
-                    />
-                    {date}
-                  </span>
-                  <span className="flex items-center gap-1.5">
-                    <LuClock
-                      className="size-3.5 text-emerald-400/70"
-                      aria-hidden
-                    />
-                    {readingTime}
                   </span>
                 </div>
               }
-              trailing={<div className="mt-5 sm:mt-6">{authorCard}</div>}
             />
           </div>
 
-          <PageHeroFooter
-            scrollHref="#blog-article"
-            scrollLabel={scrollLabel}
-          />
+          <PageHeroFooter scrollHref="#blog-article" scrollLabel={scrollLabel}>
+            <div className="flex justify-center">{authorCard}</div>
+          </PageHeroFooter>
         </SiteContainer>
       </PageHeroShell>
       <PageScrollAnchor id="blog-article" />
