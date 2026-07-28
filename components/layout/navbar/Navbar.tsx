@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
@@ -65,31 +64,54 @@ export function Navbar({ className }: NavbarProps) {
       return () => window.removeEventListener("scroll", updateScrolled);
     }
 
-    const hero = document.querySelector<HTMLElement>("[data-page-hero]");
-    if (!hero) {
-      setHasPageHero(false);
-      setScrolled(true);
-      return;
-    }
+    let cancelled = false;
+    let io: IntersectionObserver | null = null;
+
+    const bindHero = (hero: HTMLElement) => {
+      if (cancelled) return;
+      setHasPageHero(true);
+      setScrolled(false);
+
+      const headerHeight = headerRef.current?.offsetHeight ?? 72;
+      io = new IntersectionObserver(
+        ([entry]) => {
+          setScrolled(!entry.isIntersecting);
+        },
+        {
+          root: null,
+          threshold: 0,
+          rootMargin: `-${headerHeight + 1}px 0px 0px 0px`,
+        },
+      );
+      io.observe(hero);
+    };
 
     setHasPageHero(true);
-    setScrolled(false);
+    setScrolled(true);
 
-    const headerHeight = headerRef.current?.offsetHeight ?? 72;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setScrolled(!entry.isIntersecting);
-      },
-      {
-        root: null,
-        threshold: 0,
-        rootMargin: `-${headerHeight + 1}px 0px 0px 0px`,
-      },
-    );
+    const hero = document.querySelector<HTMLElement>("[data-page-hero]");
+    if (hero) {
+      bindHero(hero);
+      return () => {
+        cancelled = true;
+        io?.disconnect();
+      };
+    }
 
-    observer.observe(hero);
-    return () => observer.disconnect();
-  }, [pathname]);
+    const mo = new MutationObserver(() => {
+      const el = document.querySelector<HTMLElement>("[data-page-hero]");
+      if (!el) return;
+      mo.disconnect();
+      bindHero(el);
+    });
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      cancelled = true;
+      mo.disconnect();
+      io?.disconnect();
+    };
+  }, [pathname, heroOverlayPage]);
 
   const overlay = heroOverlayPage && hasPageHero && !scrolled;
   const fixedOverlayNav = heroOverlayPage && hasPageHero;
