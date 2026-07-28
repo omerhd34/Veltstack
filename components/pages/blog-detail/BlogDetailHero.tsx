@@ -2,9 +2,13 @@ import { getLocale, getTranslations } from "next-intl/server";
 import Image from "next/image";
 import { LuArrowLeft, LuCalendar, LuClock, LuPenLine } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
+import { SiteContainer } from "@/components/layout/SiteContainer";
+import { PageHeroMobileBackdrop } from "@/components/ui/PageHeroMobileBackdrop";
+import { PageScrollAnchor } from "@/components/ui/PageScrollAnchor";
 import {
-  PAGE_HERO_DETAIL_FRAME_CLASS,
-  PageHeroDetail,
+  PageHeroCopy,
+  PageHeroFooter,
+  PageHeroShell,
 } from "@/components/ui/page-hero";
 import { toLatinUppercase } from "@/lib/utils";
 
@@ -34,7 +38,6 @@ export async function BlogDetailHero({
   title,
   excerpt,
   imageUrl,
-  imageAlt,
   writtenByLabel,
   scrollLabel,
   className,
@@ -53,7 +56,7 @@ export async function BlogDetailHero({
           className="object-cover"
         />
       </div>
-      <div className="min-w-0">
+      <div className="min-w-0 text-left">
         <p className="flex items-center gap-1.5 text-[0.625rem] font-semibold tracking-[0.14em] text-emerald-400/55">
           <LuPenLine className="size-3" aria-hidden />
           {toLatinUppercase(writtenByLabel, locale)}
@@ -67,44 +70,60 @@ export async function BlogDetailHero({
   );
 
   return (
-    <PageHeroDetail
-      className={className}
-      title={title}
-      subtitle={excerpt}
-      scrollHref="#blog-article"
-      scrollLabel={scrollLabel}
-      imageSrc={imageUrl}
-      imageAlt={imageAlt}
-      frameClassName={PAGE_HERO_DETAIL_FRAME_CLASS}
-      showGrid
-      showBottomHairline
-      glow="rich"
-      leading={
-        <div className="mb-1 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-emerald-300/60 sm:gap-x-6">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-200"
-          >
-            <LuArrowLeft className="size-3.5" aria-hidden />
-            {t("blog")}
-          </Link>
-          <span className="inline-flex items-center rounded-full border border-white/25 bg-white/8 px-3 py-1 text-[0.6875rem] font-semibold text-white/90 sm:px-4 sm:py-1.5">
-            {category}
-          </span>
-          <span className="hidden items-center gap-1.5 lg:flex">
-            <LuCalendar className="size-3.5 text-emerald-400/70" aria-hidden />
-            {date}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <LuClock className="size-3.5 text-emerald-400/70" aria-hidden />
-            {readingTime}
-          </span>
-        </div>
-      }
-      trailing={
-        <div className="mt-5 hidden xl:block sm:mt-6">{authorCard}</div>
-      }
-      belowMedia={<div className="xl:hidden">{authorCard}</div>}
-    />
+    <>
+      <PageHeroShell
+        className={className}
+        showGrid
+        showBottomHairline
+        glow="rich"
+      >
+        <PageHeroMobileBackdrop src={imageUrl} />
+
+        <SiteContainer className="relative flex min-h-0 flex-1 flex-col pt-8 pb-6 sm:pt-6 lg:py-10 2xl:py-12">
+          <div className="flex min-h-0 flex-1 items-start justify-center lg:items-center">
+            <PageHeroCopy
+              title={title}
+              subtitle={excerpt}
+              align="center"
+              leading={
+                <div className="mb-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-emerald-300/60 sm:gap-x-6">
+                  <Link
+                    href="/blog"
+                    className="inline-flex items-center gap-1.5 text-emerald-300/55 transition-colors hover:text-emerald-200"
+                  >
+                    <LuArrowLeft className="size-3.5" aria-hidden />
+                    {t("blog")}
+                  </Link>
+                  <span className="inline-flex items-center rounded-full border border-white/25 bg-white/8 px-3 py-1 text-[0.6875rem] font-semibold text-white/90 sm:px-4 sm:py-1.5">
+                    {category}
+                  </span>
+                  <span className="hidden items-center gap-1.5 lg:flex">
+                    <LuCalendar
+                      className="size-3.5 text-emerald-400/70"
+                      aria-hidden
+                    />
+                    {date}
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <LuClock
+                      className="size-3.5 text-emerald-400/70"
+                      aria-hidden
+                    />
+                    {readingTime}
+                  </span>
+                </div>
+              }
+              trailing={<div className="mt-5 sm:mt-6">{authorCard}</div>}
+            />
+          </div>
+
+          <PageHeroFooter
+            scrollHref="#blog-article"
+            scrollLabel={scrollLabel}
+          />
+        </SiteContainer>
+      </PageHeroShell>
+      <PageScrollAnchor id="blog-article" />
+    </>
   );
 }
