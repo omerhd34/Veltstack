@@ -26,8 +26,8 @@ export function ServicesPageHero({
       title={title}
       subtitle={subtitle}
       imageAlt={imageAlt}
-      imageSrc="/images/pages/services/hero.png"
-      imageMobileSrc="/images/pages/services/hero-mobile.png"
+      imageSrc="/images/pages/services/hero.webp"
+      imageMobileSrc="/images/pages/services/hero-mobile.webp"
       scrollHref="#services-packages"
       scrollLabel={scrollLabel}
       stats={stats}

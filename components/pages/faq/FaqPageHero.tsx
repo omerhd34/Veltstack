@@ -28,8 +28,8 @@ export async function FaqPageHero({
       title={title}
       subtitle={subtitle}
       imageAlt={imageAlt}
-      imageSrc="/images/pages/faq/hero.png"
-      imageMobileSrc="/images/pages/faq/hero-mobile.png"
+      imageSrc="/images/pages/faq/hero.webp"
+      imageMobileSrc="/images/pages/faq/hero-mobile.webp"
       scrollHref="#faq-content"
       scrollLabel={scrollLabel}
       stats={stats}

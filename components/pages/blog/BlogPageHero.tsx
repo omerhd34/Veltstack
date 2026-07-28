@@ -28,8 +28,8 @@ export async function BlogPageHero({
       title={title}
       subtitle={subtitle}
       imageAlt={imageAlt}
-      imageSrc="/images/pages/blog/hero.png"
-      imageMobileSrc="/images/pages/blog/hero-mobile.png"
+      imageSrc="/images/pages/blog/hero.webp"
+      imageMobileSrc="/images/pages/blog/hero-mobile.webp"
       scrollHref="#blog-grid"
       scrollLabel={scrollLabel}
       stats={stats}

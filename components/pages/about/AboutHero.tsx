@@ -26,8 +26,8 @@ export function AboutHero({
       title={title}
       subtitle={subtitle}
       imageAlt={imageAlt}
-      imageSrc="/images/pages/about/hero.png"
-      imageMobileSrc="/images/pages/about/hero-mobile.png"
+      imageSrc="/images/pages/about/hero.webp"
+      imageMobileSrc="/images/pages/about/hero-mobile.webp"
       scrollHref="#about-story"
       scrollLabel={scrollLabel}
       stats={stats}

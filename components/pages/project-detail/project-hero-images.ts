@@ -1,20 +1,20 @@
 import type { ProjectSlug } from "@/components/sections/projects/project-items";
 
 export const projectHeroImages: Record<ProjectSlug, string> = {
-  iqfinansai: "/images/pages/projects/iqfinansai.png",
-  "yazici-ticaret": "/images/pages/projects/yazici-ticaret.png",
-  gardossi: "/images/pages/projects/gardossi.png",
-  "uzman-klinik-psikolog": "/images/pages/projects/uzman-klinik-psikolog.png",
-  portfolio: "/images/pages/projects/portfolio.png",
-  onlinemuhasebe: "/images/pages/projects/onlinemuhasebe.png",
+  iqfinansai: "/images/pages/projects/iqfinansai.webp",
+  "yazici-ticaret": "/images/pages/projects/yazici-ticaret.webp",
+  gardossi: "/images/pages/projects/gardossi.webp",
+  "uzman-klinik-psikolog": "/images/pages/projects/uzman-klinik-psikolog.webp",
+  portfolio: "/images/pages/projects/portfolio.webp",
+  onlinemuhasebe: "/images/pages/projects/onlinemuhasebe.webp",
 };
 
 export const projectHeroMobileImages: Record<ProjectSlug, string> = {
-  iqfinansai: "/images/pages/projects/iqfinansai-mobile.png",
-  "yazici-ticaret": "/images/pages/projects/yazici-ticaret-mobile.png",
-  gardossi: "/images/pages/projects/gardossi-mobile.png",
+  iqfinansai: "/images/pages/projects/iqfinansai-mobile.webp",
+  "yazici-ticaret": "/images/pages/projects/yazici-ticaret-mobile.webp",
+  gardossi: "/images/pages/projects/gardossi-mobile.webp",
   "uzman-klinik-psikolog":
-    "/images/pages/projects/uzman-klinik-psikolog-mobile.png",
-  portfolio: "/images/pages/projects/portfolio-mobile.png",
-  onlinemuhasebe: "/images/pages/projects/onlinemuhasebe-mobile.png",
+    "/images/pages/projects/uzman-klinik-psikolog-mobile.webp",
+  portfolio: "/images/pages/projects/portfolio-mobile.webp",
+  onlinemuhasebe: "/images/pages/projects/onlinemuhasebe-mobile.webp",
 };

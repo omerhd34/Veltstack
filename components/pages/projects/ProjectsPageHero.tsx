@@ -26,8 +26,8 @@ export function ProjectsPageHero({
       title={title}
       subtitle={subtitle}
       imageAlt={imageAlt}
-      imageSrc="/images/pages/projects/hero.png"
-      imageMobileSrc="/images/pages/projects/hero-mobile.png"
+      imageSrc="/images/pages/projects/hero.webp"
+      imageMobileSrc="/images/pages/projects/hero-mobile.webp"
       scrollHref="#projects-showcase"
       scrollLabel={scrollLabel}
       stats={stats}
