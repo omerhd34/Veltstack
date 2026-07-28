@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 
 const commonRedesignItems = [
-  "Mobile, Tablet and Desktop Responsive Interface",
+  "Responsive Design for All Devices",
   "SSL, HTTPS and Security Configuration",
   "Fast Load Times and SEO-Friendly Performance Optimization",
 ] as const;

@@ -1,5 +1,5 @@
 const commonDesignItems = [
-  "Responsive development",
+  "Responsive Design for All Devices",
   "Cross-browser compatibility testing",
   "SSL certificate and security setup",
   "Fast load times and SEO-friendly performance optimization",

@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 
 const commonRedesignItems = [
-  "Mobil, Tablet ve Masaüstü Uyumlu Arayüz",
+  "Tüm Cihazlara Uyumlu Responsive Tasarım",
   "SSL, HTTPS ve Güvenlik Yapılandırması",
   "Hızlı Yükleme Süreleri ve SEO Dostu Performans Optimizasyonu",
 ] as const;

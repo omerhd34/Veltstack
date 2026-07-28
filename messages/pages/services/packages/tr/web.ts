@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 
 const commonDesignItems = [
-  "Mobil, Tablet ve Masaüstü Uyumu",
+  "Tüm Cihazlara Uyumlu Responsive Tasarım",
   "Çoklu Tarayıcı Uyumluluğu",
   "SSL, HTTPS ve Temel Güvenlik Yapılandırması",
   "Hızlı Yükleme Süreleri ve SEO Dostu Performans Optimizasyonu",
