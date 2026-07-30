@@ -10,9 +10,10 @@ export async function generateMetadata({ params }: PageProps) {
   const { locale } = await params;
   return createPageMetadata({
     locale,
-    namespace: "faqPage",
-    titleKey: "metaTitle",
-    descriptionKey: "subtitle",
+    namespace: "pages",
+    titleKey: "faqTitle",
+    descriptionKey: "faqSubtitle",
+    keywordsKey: "faqKeywords",
     href: "/sss",
     absoluteTitle: true,
   });

@@ -1,7 +1,6 @@
 export const faqTr = {
   badge: "SSS",
   title: "Sıkça Sorulan Sorular",
-  metaTitle: "Sıkça Sorulan Sorular | Veltstack",
   subtitle:
     "Veltstack hizmetleri, süreçler ve iş birliği modeli hakkında en çok merak edilen soruların yanıtlarını burada bulabilirsiniz. Konu başlıklarına göre düzenlenmiş yanıtlardan aradığınız bilgiye hızlıca ulaşın.",
   heroStats: {
