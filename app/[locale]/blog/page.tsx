@@ -10,10 +10,10 @@ export async function generateMetadata({ params }: BlogPageProps) {
   const { locale } = await params;
   return createPageMetadata({
     locale,
-    namespace: "blogPage",
-    titleKey: "heroBadge",
-    descriptionKey: "heroSubtitle",
-    keywordsKey: "keywords",
+    namespace: "pages",
+    titleKey: "blogTitle",
+    descriptionKey: "blogSubtitle",
+    keywordsKey: "blogKeywords",
     href: "/blog",
   });
 }
