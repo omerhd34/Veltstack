@@ -1,4 +1,4 @@
-import { SITE_DOMAIN, SITE_NAME, SITE_URL } from "@/lib/seo";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
 
 interface LocalBusinessSchemaProps {
   className?: string;
@@ -14,7 +14,7 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
         name: SITE_NAME,
-        alternateName: SITE_DOMAIN,
+        legalName: SITE_NAME,
         url: homeUrl,
         logo: {
           "@type": "ImageObject",
@@ -43,7 +43,6 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         "@id": `${SITE_URL}/#website`,
         url: homeUrl,
         name: SITE_NAME,
-        alternateName: [SITE_DOMAIN],
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: ["tr-TR", "en-US"],
       },
