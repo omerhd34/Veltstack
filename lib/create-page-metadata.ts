@@ -11,6 +11,7 @@ interface CreatePageMetadataOptions {
   href: string;
   absoluteTitle?: boolean;
   keywordsKey?: string;
+  noIndex?: boolean;
 }
 
 export async function createPageMetadata({
@@ -21,6 +22,7 @@ export async function createPageMetadata({
   href,
   absoluteTitle = false,
   keywordsKey,
+  noIndex = false,
 }: CreatePageMetadataOptions): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace });
   const loc = locale as Locale;
@@ -38,6 +40,7 @@ export async function createPageMetadata({
     title: absoluteTitle ? { absolute: title } : title,
     description,
     ...(keywords ? { keywords } : {}),
+    ...(noIndex ? { robots: { index: false, follow: false } } : {}),
     alternates: buildPageAlternates(loc, href),
     ...social,
   };
