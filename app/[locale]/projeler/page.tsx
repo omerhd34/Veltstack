@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: ProjectsPageProps) {
     descriptionKey: "projectsSubtitle",
     keywordsKey: "projectsKeywords",
     href: "/projeler",
+    absoluteTitle: true,
   });
 }
 

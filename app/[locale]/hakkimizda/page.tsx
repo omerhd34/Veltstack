@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: AboutPageProps) {
     descriptionKey: "aboutSubtitle",
     keywordsKey: "aboutKeywords",
     href: "/hakkimizda",
+    absoluteTitle: true,
   });
 }
 
