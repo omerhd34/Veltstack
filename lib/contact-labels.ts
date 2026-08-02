@@ -11,7 +11,10 @@ function findLabel(
   options: readonly { value: string; label: string }[] | undefined,
   value: string,
 ) {
-  return options?.find((option) => option.value === value)?.label ?? value;
+  const label = options?.find((option) => option.value === value)?.label;
+  if (label) return label;
+  if (!value) return value;
+  return value.charAt(0).toLocaleUpperCase("tr-TR") + value.slice(1);
 }
 
 export function resolveContactLabels(data: ContactLabelFields) {
