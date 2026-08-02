@@ -30,3 +30,20 @@ export async function PATCH(
     return NextResponse.json({ error: "Mesaj bulunamadı" }, { status: 404 });
   }
 }
+
+export async function DELETE(
+  _request: Request,
+  { params }: { params: Promise<{ id: string }> },
+) {
+  const { error } = await requireAdminSession();
+  if (error) return error;
+
+  const { id } = await params;
+
+  try {
+    await prisma.message.delete({ where: { id } });
+    return NextResponse.json({ ok: true });
+  } catch {
+    return NextResponse.json({ error: "Mesaj bulunamadı" }, { status: 404 });
+  }
+}
