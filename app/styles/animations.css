@@ -198,3 +198,43 @@
 .loading-dots span:nth-child(3) {
   animation-delay: 0.36s;
 }
+
+.section-scroll-reveal {
+  --reveal-delay: 0s;
+  --reveal-offset-up: 16px;
+  --reveal-offset-x: 14px;
+  --reveal-offset-y: 8px;
+  opacity: 0;
+  transition:
+    opacity 0.48s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay),
+    transform 0.48s cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay);
+}
+
+@media (min-width: 768px) {
+  .section-scroll-reveal {
+    --reveal-offset-up: 36px;
+    --reveal-offset-x: 36px;
+    --reveal-offset-y: 14px;
+  }
+}
+
+.section-scroll-reveal--left {
+  transform: translate3d(
+    calc(var(--reveal-offset-x) * -1),
+    var(--reveal-offset-y),
+    0
+  );
+}
+
+.section-scroll-reveal--right {
+  transform: translate3d(var(--reveal-offset-x), var(--reveal-offset-y), 0);
+}
+
+.section-scroll-reveal--up {
+  transform: translate3d(0, var(--reveal-offset-up), 0);
+}
+
+.section-scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}

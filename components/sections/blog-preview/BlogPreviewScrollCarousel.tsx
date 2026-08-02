@@ -41,8 +41,6 @@ export function BlogPreviewScrollCarousel({
     <ScrollCarousel
       className={className}
       features={features}
-      hideSecondRow
-      interactionMode="drag"
       alignStart
       columnsPerView={3}
       cardClassName="h-auto self-start"

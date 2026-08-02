@@ -1,10 +1,16 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import { useEffect, useState, type ReactNode } from "react";
+import {
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type ReactNode,
+} from "react";
 import { cn } from "@/lib/utils";
 
 const MOBILE_QUERY = "(max-width: 767px)";
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,6 +26,20 @@ function useIsMobile() {
   return isMobile;
 }
 
+function usePrefersReducedMotion() {
+  const [reduced, setReduced] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia(REDUCED_MOTION_QUERY);
+    const update = () => setReduced(mql.matches);
+    update();
+    mql.addEventListener("change", update);
+    return () => mql.removeEventListener("change", update);
+  }, []);
+
+  return reduced;
+}
+
 type SectionScrollRevealDirection = "left" | "right" | "up";
 type SectionScrollRevealTrigger = "content" | "wide" | "entry" | "peek";
 
@@ -32,34 +52,25 @@ interface SectionScrollRevealProps {
   when?: "inView" | "mount";
 }
 
-const OFFSET_X = "var(--reveal-offset-x)";
-const OFFSET_X_NEGATIVE = "calc(var(--reveal-offset-x) * -1)";
-const OFFSET_Y = "var(--reveal-offset-y)";
-const OFFSET_UP = "var(--reveal-offset-up)";
-
 const VIEWPORT: Record<
   SectionScrollRevealTrigger,
-  { once: true; amount: number | "some"; margin: string }
+  { threshold: number; rootMargin: string }
 > = {
   content: {
-    once: true,
-    amount: 0.45,
-    margin: "-6% 0px -18% 0px",
+    threshold: 0.45,
+    rootMargin: "-6% 0px -18% 0px",
   },
   wide: {
-    once: true,
-    amount: 0.22,
-    margin: "-4% 0px -20% 0px",
+    threshold: 0.22,
+    rootMargin: "-4% 0px -20% 0px",
   },
   entry: {
-    once: true,
-    amount: 0.08,
-    margin: "0px 0px -35% 0px",
+    threshold: 0.08,
+    rootMargin: "0px 0px -35% 0px",
   },
   peek: {
-    once: true,
-    amount: "some",
-    margin: "0px 0px 12% 0px",
+    threshold: 0.01,
+    rootMargin: "0px 0px 12% 0px",
   },
 };
 
@@ -71,54 +82,57 @@ export function SectionScrollReveal({
   trigger = "content",
   when = "inView",
 }: SectionScrollRevealProps) {
-  const prefersReducedMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = usePrefersReducedMotion();
   const isMobile = useIsMobile();
-  const initial =
-    direction === "up"
-      ? { opacity: 0, y: OFFSET_UP }
-      : {
-          opacity: 0,
-          x: direction === "left" ? OFFSET_X_NEGATIVE : OFFSET_X,
-          y: OFFSET_Y,
-        };
-  const visible = { opacity: 1, x: "0px", y: "0px" };
-  const transition = {
-    duration: 0.48,
-    delay,
-    ease: [0.16, 1, 0.3, 1] as const,
-  };
+  const [visible, setVisible] = useState(false);
+  const skipAnimation = prefersReducedMotion || isMobile;
 
-  const motionClassName = cn(
-    "[--reveal-offset-up:16px] [--reveal-offset-x:14px] [--reveal-offset-y:8px] md:[--reveal-offset-up:36px] md:[--reveal-offset-x:36px] md:[--reveal-offset-y:14px]",
-    className,
-  );
+  useEffect(() => {
+    if (skipAnimation) return;
 
-  if (prefersReducedMotion || isMobile) {
+    if (when === "mount") {
+      const id = requestAnimationFrame(() => setVisible(true));
+      return () => cancelAnimationFrame(id);
+    }
+
+    const node = ref.current;
+    if (!node) return;
+
+    const { threshold, rootMargin } = VIEWPORT[trigger];
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry?.isIntersecting) return;
+        setVisible(true);
+        observer.disconnect();
+      },
+      { threshold, rootMargin },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [skipAnimation, trigger, when]);
+
+  if (skipAnimation) {
     return <div className={className}>{children}</div>;
   }
 
-  if (when === "mount") {
-    return (
-      <motion.div
-        className={motionClassName}
-        initial={initial}
-        animate={visible}
-        transition={transition}
-      >
-        {children}
-      </motion.div>
-    );
-  }
-
   return (
-    <motion.div
-      className={motionClassName}
-      initial={initial}
-      whileInView={visible}
-      viewport={VIEWPORT[trigger]}
-      transition={transition}
+    <div
+      ref={ref}
+      className={cn(
+        "section-scroll-reveal",
+        `section-scroll-reveal--${direction}`,
+        visible && "is-visible",
+        className,
+      )}
+      style={
+        {
+          "--reveal-delay": `${delay}s`,
+        } as CSSProperties
+      }
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

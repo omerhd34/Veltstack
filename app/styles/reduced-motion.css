@@ -27,6 +27,12 @@
     opacity: 0 !important;
   }
 
+  .section-scroll-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
   .stardust-shell--active .stardust-shell__border {
     opacity: 1 !important;
     box-shadow:

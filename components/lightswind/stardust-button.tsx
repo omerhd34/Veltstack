@@ -34,7 +34,6 @@ type Particle = {
   radius: number;
   alpha: number;
   twinkle: number;
-  idle?: boolean;
 };
 
 export function StardustShell({
@@ -55,6 +54,8 @@ export function StardustShell({
   const particlesRef = useRef<Particle[]>([]);
   const frameRef = useRef<number | null>(null);
   const hoveringRef = useRef(false);
+  const reducedMotionRef = useRef(false);
+  const startLoopRef = useRef<() => void>(() => {});
   const [hovered, setHovered] = useState(false);
   const isControlled = active !== undefined;
   const isEffectActive = isControlled ? active : hovered;
@@ -63,24 +64,14 @@ export function StardustShell({
       if (isControlled) return;
       hoveringRef.current = next;
       setHovered(next);
-      if (!next) {
-        particlesRef.current = particlesRef.current.filter(
-          (particle) => particle.idle,
-        );
-      }
     },
     [isControlled],
   );
 
   useEffect(() => {
     if (!isControlled) return;
-    hoveringRef.current = isEffectActive;
+    hoveringRef.current = Boolean(isEffectActive);
     setHovered(false);
-    if (!isEffectActive) {
-      particlesRef.current = particlesRef.current.filter(
-        (particle) => particle.idle,
-      );
-    }
   }, [isControlled, isEffectActive]);
 
   useEffect(() => {
@@ -89,18 +80,15 @@ export function StardustShell({
   }, [hoverResetToken, isControlled, setHoveredState]);
 
   const spawnParticle = useCallback(
-    (width: number, height: number, idle = false): Particle => {
+    (width: number, height: number): Particle => {
       return {
         x: Math.random() * width,
-        y: idle ? Math.random() * height : height + Math.random() * 10,
-        vx: idle ? (Math.random() - 0.5) * 0.08 : (Math.random() - 0.5) * 0.55,
-        vy: idle
-          ? (Math.random() - 0.5) * 0.08
-          : -(Math.random() * 1.35 + 0.45),
-        radius: idle ? Math.random() * 1.15 + 0.35 : Math.random() * 1.5 + 0.5,
-        alpha: idle ? Math.random() * 0.38 + 0.2 : Math.random() * 0.55 + 0.35,
+        y: height + Math.random() * 10,
+        vx: (Math.random() - 0.5) * 0.55,
+        vy: -(Math.random() * 1.35 + 0.45),
+        radius: Math.random() * 1.5 + 0.5,
+        alpha: Math.random() * 0.55 + 0.35,
         twinkle: Math.random() * Math.PI * 2,
-        idle,
       };
     },
     [],
@@ -114,6 +102,24 @@ export function StardustShell({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncReducedMotion = () => {
+      reducedMotionRef.current = motionQuery.matches;
+    };
+    syncReducedMotion();
+
+    const stopLoop = () => {
+      if (frameRef.current != null) {
+        cancelAnimationFrame(frameRef.current);
+        frameRef.current = null;
+      }
+    };
+
+    const clearCanvas = () => {
+      const rect = root.getBoundingClientRect();
+      ctx.clearRect(0, 0, rect.width, rect.height);
+    };
+
     const resize = () => {
       const rect = root.getBoundingClientRect();
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -122,29 +128,17 @@ export function StardustShell({
       canvas.style.width = `${rect.width}px`;
       canvas.style.height = `${rect.height}px`;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-      const width = rect.width;
-      const height = rect.height;
-      const idleParticles = particlesRef.current.filter(
-        (particle) => particle.idle,
-      );
-      particlesRef.current = idleParticles;
-
-      const targetIdleCount = Math.min(
-        32,
-        Math.max(14, Math.floor((width * height) / 700)),
-      );
-
-      while (particlesRef.current.length < targetIdleCount) {
-        particlesRef.current.push(spawnParticle(width, height, true));
-      }
     };
 
-    resize();
-    const observer = new ResizeObserver(resize);
-    observer.observe(root);
-
     const tick = () => {
+      frameRef.current = null;
+
+      if (reducedMotionRef.current || document.hidden) {
+        clearCanvas();
+        particlesRef.current = [];
+        return;
+      }
+
       const rect = root.getBoundingClientRect();
       const width = rect.width;
       const height = rect.height;
@@ -165,18 +159,9 @@ export function StardustShell({
       particlesRef.current = particlesRef.current.filter((particle) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
-        particle.twinkle += particle.idle ? 0.04 : 0.1;
+        particle.twinkle += 0.1;
 
-        if (particle.idle) {
-          if (particle.x < 0) particle.x = width;
-          if (particle.x > width) particle.x = 0;
-          if (particle.y < 0) particle.y = height;
-          if (particle.y > height) particle.y = 0;
-        } else if (
-          particle.y < -8 ||
-          particle.x < -8 ||
-          particle.x > width + 8
-        ) {
+        if (particle.y < -8 || particle.x < -8 || particle.x > width + 8) {
           return false;
         }
 
@@ -184,20 +169,14 @@ export function StardustShell({
           particle.alpha * (0.45 + 0.55 * Math.sin(particle.twinkle));
 
         ctx.beginPath();
-        ctx.arc(
-          particle.x,
-          particle.y,
-          particle.radius * (particle.idle ? 1.6 : 2.4),
-          0,
-          Math.PI * 2,
-        );
+        ctx.arc(particle.x, particle.y, particle.radius * 2.4, 0, Math.PI * 2);
         ctx.fillStyle = particleColor;
-        ctx.globalAlpha = twinkleAlpha * (particle.idle ? 0.22 : 0.24);
+        ctx.globalAlpha = twinkleAlpha * 0.24;
         ctx.fill();
 
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        ctx.fillStyle = particle.idle ? "#d1fae5" : particleColor;
+        ctx.fillStyle = particleColor;
         ctx.globalAlpha = twinkleAlpha;
         ctx.fill();
         ctx.globalAlpha = 1;
@@ -205,17 +184,80 @@ export function StardustShell({
         return true;
       });
 
-      frameRef.current = requestAnimationFrame(tick);
+      if (hoveringRef.current || particlesRef.current.length > 0) {
+        frameRef.current = requestAnimationFrame(tick);
+      } else {
+        clearCanvas();
+      }
     };
 
-    frameRef.current = requestAnimationFrame(tick);
+    const startLoop = () => {
+      if (frameRef.current != null) return;
+      if (reducedMotionRef.current || document.hidden) return;
+      if (!hoveringRef.current && particlesRef.current.length === 0) return;
+      frameRef.current = requestAnimationFrame(tick);
+    };
+    startLoopRef.current = startLoop;
+
+    resize();
+    const observer = new ResizeObserver(resize);
+    observer.observe(root);
+
+    const onVisibility = () => {
+      if (document.hidden) {
+        stopLoop();
+        clearCanvas();
+        particlesRef.current = [];
+        return;
+      }
+      startLoop();
+    };
+
+    const onMotionChange = () => {
+      syncReducedMotion();
+      if (reducedMotionRef.current) {
+        stopLoop();
+        clearCanvas();
+        particlesRef.current = [];
+        return;
+      }
+      startLoop();
+    };
+
+    document.addEventListener("visibilitychange", onVisibility);
+    motionQuery.addEventListener("change", onMotionChange);
+    startLoop();
 
     return () => {
       observer.disconnect();
-      if (frameRef.current != null) cancelAnimationFrame(frameRef.current);
+      document.removeEventListener("visibilitychange", onVisibility);
+      motionQuery.removeEventListener("change", onMotionChange);
+      stopLoop();
       particlesRef.current = [];
+      startLoopRef.current = () => {};
     };
   }, [particleColor, spawnParticle]);
+
+  useEffect(() => {
+    hoveringRef.current = Boolean(isEffectActive);
+    if (isEffectActive) {
+      startLoopRef.current();
+      return;
+    }
+    if (particlesRef.current.length === 0) {
+      const canvas = canvasRef.current;
+      const root = rootRef.current;
+      if (canvas && root) {
+        const ctx = canvas.getContext("2d");
+        if (ctx) {
+          const rect = root.getBoundingClientRect();
+          ctx.clearRect(0, 0, rect.width, rect.height);
+        }
+      }
+    } else {
+      startLoopRef.current();
+    }
+  }, [isEffectActive]);
 
   const handleBlur = (event: FocusEvent<HTMLSpanElement>) => {
     if (!interactive || isControlled) return;
@@ -265,8 +307,8 @@ export function StardustShell({
           ref={canvasRef}
           className={cn(
             "absolute inset-0 rounded-[inherit] motion-reduce:hidden",
-            isEffectActive ? "opacity-100" : "opacity-60",
-            "transition-opacity duration-500",
+            isEffectActive ? "opacity-100" : "opacity-0",
+            "transition-opacity duration-300",
           )}
         />
       </span>
@@ -281,20 +323,19 @@ export function StardustShell({
         )}
       />
 
-      <BorderBeam
-        size={beamSize}
-        duration={2.8}
-        colorFrom={beamColorFrom}
-        colorTo={beamColorTo}
-        borderThickness={2}
-        opacity={isEffectActive ? 1 : 0}
-        glowIntensity={isEffectActive ? 1.6 : 0}
-        beamBorderRadius={beamBorderRadius}
-        className={cn(
-          "z-3 rounded-[inherit] motion-reduce:hidden transition-opacity duration-300",
-          isEffectActive ? "opacity-100" : "opacity-0",
-        )}
-      />
+      {isEffectActive ? (
+        <BorderBeam
+          size={beamSize}
+          duration={2.8}
+          colorFrom={beamColorFrom}
+          colorTo={beamColorTo}
+          borderThickness={2}
+          opacity={1}
+          glowIntensity={1.6}
+          beamBorderRadius={beamBorderRadius}
+          className="z-3 rounded-[inherit] motion-reduce:hidden"
+        />
+      ) : null}
 
       <span className="relative z-4 inline-flex h-full w-full rounded-[inherit]">
         {children}

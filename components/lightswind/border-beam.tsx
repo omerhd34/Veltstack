@@ -92,12 +92,13 @@ export const BorderBeam = ({
   pauseOnHover = false,
   speedMultiplier = 1,
 }: BorderBeamProps) => {
-  // Calculate actual duration based on speed multiplier
+  // Idle/hidden beams must not keep a Framer Infinity loop alive.
+  if (opacity <= 0) return null;
+
   const actualDuration = speedMultiplier
     ? duration / speedMultiplier
     : duration;
 
-  // Generate box shadow for glow effect
   const glowEffect =
     glowIntensity > 0
       ? `0 0 ${glowIntensity * 5}px ${glowIntensity * 2}px var(--color-from)`
