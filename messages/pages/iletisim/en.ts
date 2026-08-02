@@ -30,14 +30,14 @@ export const contactEn = {
     { value: "teknik-denetim", label: "Technical Audit" },
     { value: "seo-hizmetleri", label: "SEO Services" },
     { value: "bakim-ve-destek", label: "Maintenance & Support" },
-    { value: "diger", label: "Other / Not sure yet" },
+    { value: "diger", label: "Other / Unspecified" },
   ],
 
   tierOptions: [
     { value: "temel", label: "Startup" },
     { value: "standart", label: "Professional" },
     { value: "pro", label: "Premium" },
-    { value: "belirsiz", label: "Not sure yet" },
+    { value: "belirsiz", label: "Unspecified" },
   ],
 
   servicePackages: {
@@ -81,7 +81,7 @@ export const contactEn = {
     { value: "150k-200k", label: "$4,500 - $6,000" },
     { value: "200k-250k", label: "$6,000 - $7,500" },
     { value: "250k+", label: "$7,500+" },
-    { value: "belirsiz", label: "Not sure yet" },
+    { value: "belirsiz", label: "Unspecified" },
   ],
 
   submitButton: "Send and Get a Quote",

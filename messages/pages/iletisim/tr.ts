@@ -30,14 +30,14 @@ export const contactTr = {
     { value: "teknik-denetim", label: "Teknik Denetim" },
     { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
     { value: "bakim-ve-destek", label: "Bakım & Destek" },
-    { value: "diger", label: "Diğer / Henüz bilmiyorum" },
+    { value: "diger", label: "Diğer / Belirsiz" },
   ],
 
   tierOptions: [
     { value: "temel", label: "Girişim" },
     { value: "standart", label: "Profesyonel" },
     { value: "pro", label: "Premium" },
-    { value: "belirsiz", label: "Henüz bilmiyorum" },
+    { value: "belirsiz", label: "Belirsiz" },
   ],
 
   servicePackages: {
@@ -78,7 +78,7 @@ export const contactTr = {
     { value: "150k-200k", label: "150.000 - 200.000 ₺" },
     { value: "200k-250k", label: "200.000 - 250.000 ₺" },
     { value: "250k+", label: "250.000 ₺ ve üzeri" },
-    { value: "belirsiz", label: "Henüz bilmiyorum" },
+    { value: "belirsiz", label: "Belirsiz" },
   ],
 
   submitButton: "Gönder ve Teklif Al",
