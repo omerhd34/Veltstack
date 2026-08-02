@@ -12,11 +12,11 @@
     0 24px 48px -24px rgb(0 0 0 / 0.18),
     0 0 0 1px rgb(0 0 0 / 0.04);
   transition:
-    opacity 0.35s ease,
-    transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 0.5s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease;
+    opacity 0.15s ease,
+    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.2s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .navbar-mega-menu-panel--overlay {
@@ -53,15 +53,15 @@
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transform: translate3d(0, -10px, 0) scale(0.98);
+  transform: translate3d(0, -6px, 0) scale(0.98);
   box-shadow: 0 0 0 transparent;
   transition:
-    opacity 0.28s ease,
-    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 0s linear 0.35s,
-    box-shadow 0.4s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease;
+    opacity 0.12s ease,
+    transform 0.16s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0s linear 0.16s,
+    box-shadow 0.16s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .navbar-mega-menu-panel[data-state="closed"]::before {
@@ -80,12 +80,12 @@
     0 12px 28px -16px rgb(var(--brand-accent-rgb) / 0.12),
     0 0 0 1px rgb(var(--brand-accent-rgb) / 0.06);
   transition:
-    opacity 0.28s ease,
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.12s ease,
+    transform 0.18s cubic-bezier(0.22, 1, 0.36, 1),
     visibility 0s linear 0s,
-    box-shadow 0.45s ease,
-    background-color 0.3s ease,
-    border-color 0.3s ease;
+    box-shadow 0.18s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
 }
 
 .navbar-mega-menu-panel--overlay[data-state="open"] {
@@ -96,36 +96,36 @@
 }
 
 .navbar-mega-menu-panel[data-state="open"]::before {
-  animation: mega-menu-accent-sweep 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.06s
+  animation: mega-menu-accent-sweep 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.02s
     both;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card {
-  animation: mega-menu-card-pop 0.6s cubic-bezier(0.34, 1.2, 0.64, 1) both;
+  animation: mega-menu-card-pop 0.28s cubic-bezier(0.34, 1.2, 0.64, 1) both;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(1) {
-  animation-delay: 0.06s;
+  animation-delay: 0.02s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(2) {
-  animation-delay: 0.1s;
+  animation-delay: 0.04s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(3) {
-  animation-delay: 0.14s;
+  animation-delay: 0.06s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(4) {
-  animation-delay: 0.18s;
+  animation-delay: 0.08s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(5) {
-  animation-delay: 0.22s;
+  animation-delay: 0.1s;
 }
 
 .navbar-mega-menu-panel[data-state="open"] .mega-menu-card:nth-child(6) {
-  animation-delay: 0.26s;
+  animation-delay: 0.12s;
 }
 
 .mobile-nav-tree {
