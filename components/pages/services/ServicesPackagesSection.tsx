@@ -138,6 +138,8 @@ export async function ServicesPackagesSection({
             statSupport: t("statSupport"),
             statLanguages: t("statLanguages"),
             getQuote: t("getQuote"),
+            featureIncluded: t("featureIncluded"),
+            featureNotIncluded: t("featureNotIncluded"),
             deliveryGroupLabel: t("deliveryGroupLabel"),
           }}
           intros={{

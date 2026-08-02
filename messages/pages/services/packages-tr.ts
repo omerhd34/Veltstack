@@ -33,6 +33,8 @@ export const servicesPackagesTr = {
   statSupport: "Destek gün sayısı",
   statLanguages: "Dil sayısı",
   getQuote: "Teklif Al",
+  featureIncluded: "dahil",
+  featureNotIncluded: "dahil değil",
   deliveryGroupLabel: "Yayın & Teslimat",
   webIntroTitle: "İhtiyacınıza göre web yapımı",
   webIntroP1:

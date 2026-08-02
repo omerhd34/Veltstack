@@ -33,6 +33,8 @@ export const servicesPackagesEn = {
   statSupport: "Support days",
   statLanguages: "Languages",
   getQuote: "Get a Quote",
+  featureIncluded: "included",
+  featureNotIncluded: "not included",
   deliveryGroupLabel: "Launch & Delivery",
   webIntroTitle: "End-to-end web building",
   webIntroP1:

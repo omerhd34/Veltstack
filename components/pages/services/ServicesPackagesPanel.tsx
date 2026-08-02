@@ -42,6 +42,8 @@ interface PackagesPanelLabels {
   statSupport: string;
   statLanguages: string;
   getQuote: string;
+  featureIncluded: string;
+  featureNotIncluded: string;
   deliveryGroupLabel: string;
 }
 
@@ -201,6 +203,8 @@ export function ServicesPackagesPanel({
     statLanguages: labels.statLanguages,
     statPages: labels.statPages,
     getQuote: labels.getQuote,
+    featureIncluded: labels.featureIncluded,
+    featureNotIncluded: labels.featureNotIncluded,
     deliveryGroupLabel: labels.deliveryGroupLabel,
     hideMiddleStat: activeCategory === "audit",
   };
