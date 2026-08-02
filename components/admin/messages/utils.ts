@@ -9,18 +9,22 @@ export const SORT_COLUMNS: {
   label: string;
   className?: string;
 }[] = [
-  { key: "status", label: "DURUM", className: "w-[88px]" },
-  { key: "name", label: "KİŞİ", className: "min-w-[160px]" },
-  { key: "service", label: "HİZMET" },
-  { key: "servicePackage", label: "PAKET" },
-  { key: "serviceTier", label: "KADEME", className: "w-[110px]" },
-  { key: "budget", label: "BÜTÇE", className: "w-[140px]" },
-  { key: "content", label: "MESAJ", className: "min-w-[200px]" },
-  { key: "createdAt", label: "TARİH", className: "w-[120px]" },
+  { key: "status", label: "DURUM", className: "w-[60px] max-w-[60px]" },
+  { key: "name", label: "KİŞİ", className: "w-[120px] max-w-[120px]" },
+  { key: "service", label: "HİZMET", className: "w-[100px] max-w-[100px]" },
+  {
+    key: "servicePackage",
+    label: "PAKET",
+    className: "w-[120px] max-w-[120px]",
+  },
+  { key: "serviceTier", label: "KADEME", className: "w-[80px] max-w-[80px]" },
+  { key: "budget", label: "BÜTÇE", className: "w-[100px] max-w-[100px]" },
+  { key: "content", label: "MESAJ", className: "w-[120px] max-w-[120px]" },
+  { key: "createdAt", label: "TARİH", className: "w-[60px] max-w-[60px]" },
 ];
 
 export const inputClassName =
-  "h-10 w-full rounded-xl border border-border/80 bg-[#F8FAF9] py-2 pr-3 pl-10 text-sm text-foreground outline-none transition placeholder:text-muted-foreground/80 hover:border-border hover:bg-white focus:border-brand-accent focus:bg-white focus:ring-2 focus:ring-brand-accent/15";
+  "h-10 w-full rounded-xl border border-border/80 bg-[#F8FAF9] py-2 pr-3 pl-10 text-sm text-foreground outline-none transition placeholder:text-muted-foreground/80 hover:border-border hover:bg-white focus:border-brand-accent focus:bg-white focus:ring-2 focus:ring-brand-accent/15 [&::-webkit-search-cancel-button]:cursor-pointer";
 
 export const STATUS_OPTIONS = [
   { value: "all", label: "Tüm durumlar" },

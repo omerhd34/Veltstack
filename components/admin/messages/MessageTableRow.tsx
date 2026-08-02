@@ -39,7 +39,7 @@ export function MessageTableRow({
         isSelected && "bg-brand-accent/8 hover:bg-brand-accent/8",
       )}
     >
-      <td className="px-4 py-3.5 first:pl-5 sm:px-5 sm:py-4">
+      <td className="w-15 max-w-15 px-4 py-3.5 first:pl-5 sm:px-5 sm:py-4">
         {!message.isRead ? (
           <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-accent/12 px-2.5 py-1 text-[11px] font-semibold text-brand-accent">
             <span className="size-1.5 rounded-full bg-brand-accent" />
@@ -51,7 +51,7 @@ export function MessageTableRow({
           </span>
         )}
       </td>
-      <td className="px-4 py-3.5 sm:px-5 sm:py-4">
+      <td className="w-30 max-w-30 px-4 py-3.5 sm:px-5 sm:py-4">
         <div className="flex min-w-0 items-center gap-3">
           <span
             className={cn(
@@ -79,25 +79,25 @@ export function MessageTableRow({
           </div>
         </div>
       </td>
-      <td className="px-4 py-3.5 text-sm text-foreground/85 sm:px-5 sm:py-4">
+      <td className="w-25 max-w-25 px-4 py-3.5 text-sm text-foreground/85 sm:px-5 sm:py-4">
         <span className="line-clamp-1">{labels.service || "—"}</span>
       </td>
-      <td className="px-4 py-3.5 text-sm text-foreground/75 sm:px-5 sm:py-4">
+      <td className="w-30 max-w-30 px-4 py-3.5 text-sm text-foreground/75 sm:px-5 sm:py-4">
         <span className="line-clamp-1">{labels.servicePackage || "—"}</span>
       </td>
-      <td className="px-4 py-3.5 sm:px-5 sm:py-4">
+      <td className="w-20 max-w-20 px-4 py-3.5 sm:px-5 sm:py-4">
         {labels.serviceTier ? (
-          <span className="inline-flex rounded-lg bg-muted/80 px-2 py-0.5 text-xs font-medium text-foreground/80">
+          <span className="inline-flex max-w-full truncate rounded-lg bg-muted/80 px-2 py-0.5 text-xs font-medium text-foreground/80">
             {labels.serviceTier}
           </span>
         ) : (
           <span className="text-sm text-muted-foreground">—</span>
         )}
       </td>
-      <td className="px-4 py-3.5 text-sm whitespace-nowrap text-foreground/80 sm:px-5 sm:py-4">
+      <td className="w-25 max-w-30 truncate px-4 py-3.5 text-sm text-foreground/80 sm:px-5 sm:py-4">
         {labels.budget || "—"}
       </td>
-      <td className="max-w-70 px-4 py-3.5 sm:px-5 sm:py-4">
+      <td className="w-30wmax-w-30 py-3.5 sm:px-5 sm:py-4">
         {message.content ? (
           <p className="line-clamp-1 break-all text-sm text-muted-foreground group-hover:text-foreground/70">
             {message.content}
@@ -106,7 +106,7 @@ export function MessageTableRow({
           <span className="text-sm text-muted-foreground">—</span>
         )}
       </td>
-      <td className="px-4 py-3.5 last:pr-5 sm:px-5 sm:py-4">
+      <td className="w-15 max-w-15 px-4 py-3.5 last:pr-5 sm:px-5 sm:py-4">
         <time
           dateTime={message.createdAt}
           className="text-xs whitespace-nowrap text-muted-foreground tabular-nums"

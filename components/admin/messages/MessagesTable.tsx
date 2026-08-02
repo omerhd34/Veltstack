@@ -24,7 +24,7 @@ export function MessagesTable({
   return (
     <div className="overflow-hidden rounded-2xl border border-border/60 bg-white shadow-[0_1px_2px_rgb(0_0_0/0.04),0_8px_24px_rgb(58_107_82/0.04)]">
       <div className="overflow-x-auto">
-        <table className="w-full min-w-275 border-collapse text-left">
+        <table className="w-full min-w-195 table-fixed border-collapse text-left">
           <thead>
             <tr className="border-b border-border/60 bg-[#F7F9F8]">
               {SORT_COLUMNS.map((column) => {
