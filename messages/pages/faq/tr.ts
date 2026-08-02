@@ -39,7 +39,7 @@ export const faqTr = {
           slug: "velstack-nedir",
           question: "Veltstack nedir?",
           answer:
-            "Veltstack, Ömer Halis Demir tarafından yönetilen bir full stack geliştirici markasıdır. Web sitesi, mobil uygulama, SEO, teknik denetim ve bakım hizmetlerini tek çatı altında sunar; ajans tarzı profesyonel sunumla solo geliştirici esnekliğini birleştirir.",
+            "Veltstack adını iki parçadan alır: Velt, velocity (hız ve çeviklik); Stack ise teknoloji yığınını ifade eder. Veltstack, Ömer Halis Demir tarafından yönetilen bir full stack geliştirici markasıdır. Web sitesi, mobil uygulama, SEO, teknik denetim ve bakım hizmetlerini tek çatı altında sunar; ajans tarzı profesyonel sunumla solo geliştirici esnekliğini birleştirir.",
         },
         {
           slug: "projelerde-kim-calisyor",

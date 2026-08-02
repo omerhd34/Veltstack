@@ -3,9 +3,9 @@ import {
   LuCircleHelp,
   LuClock,
   LuCreditCard,
+  LuInfo,
   LuLifeBuoy,
   LuTag,
-  LuUsers,
   LuWorkflow,
 } from "react-icons/lu";
 import { faqEn } from "@/messages/pages/faq/en";
@@ -19,19 +19,19 @@ export interface FaqNavItem {
 }
 
 const NAV_FAQ_SLUGS = [
+  "velstack-nedir",
   "odeme-nasil-yapilir",
   "yayin-sonrasi-destek",
   "fiyatlar-sabit-mi",
-  "projelerde-kim-calisyor",
   "proje-sureci",
   "teslim-suresi",
 ] as const;
 
 const NAV_FAQ_ICONS: Record<(typeof NAV_FAQ_SLUGS)[number], IconType> = {
+  "velstack-nedir": LuInfo,
   "odeme-nasil-yapilir": LuCreditCard,
   "yayin-sonrasi-destek": LuLifeBuoy,
   "fiyatlar-sabit-mi": LuTag,
-  "projelerde-kim-calisyor": LuUsers,
   "proje-sureci": LuWorkflow,
   "teslim-suresi": LuClock,
 };

@@ -39,7 +39,7 @@ export const faqEn = {
           slug: "velstack-nedir",
           question: "What is Veltstack?",
           answer:
-            "Veltstack is a full stack developer brand led by Ömer Halis Demir. It delivers website, mobile app, SEO, technical audit and maintenance services under one roof, combining agency-style professionalism with solo-developer agility.",
+            "The name Veltstack has two parts: Velt from velocity (speed and agility), and Stack for the technology stack. Veltstack is a full stack developer brand led by Ömer Halis Demir. It delivers website, mobile app, SEO, technical audit and maintenance services under one roof, combining agency-style professionalism with solo-developer agility.",
         },
         {
           slug: "projelerde-kim-calisyor",
