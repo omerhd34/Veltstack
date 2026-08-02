@@ -173,7 +173,7 @@ export const appPackagesTr = {
         deliveryDays: "45-60",
         revisions: "7",
         supportDays: "45",
-        languages: "∞",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: "Geliştirme & Altyapı",
@@ -287,7 +287,7 @@ export const appPackagesTr = {
         deliveryDays: "56-84",
         revisions: "8",
         supportDays: "45",
-        languages: "∞",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: "Geliştirme & Altyapı",
@@ -402,7 +402,7 @@ export const appPackagesTr = {
         deliveryDays: "84-120",
         revisions: "8",
         supportDays: "45",
-        languages: "∞",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: "Geliştirme & Altyapı",

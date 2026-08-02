@@ -121,8 +121,8 @@ export const webPackagesTr = {
         deliveryDays: "30-45",
         revisions: "7",
         supportDays: "45",
-        pages: "∞",
-        languages: "∞",
+        pages: "Sınırsız",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: "Geliştirme & Altyapı",
@@ -229,8 +229,8 @@ export const webPackagesTr = {
         deliveryDays: "42-60",
         revisions: "8",
         supportDays: "45",
-        pages: "∞",
-        languages: "∞",
+        pages: "Sınırsız",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: "Geliştirme & Altyapı",
@@ -363,8 +363,8 @@ export const webPackagesTr = {
         deliveryDays: "56-84",
         revisions: "10",
         supportDays: "45",
-        pages: "∞",
-        languages: "∞",
+        pages: "Sınırsız",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: "Geliştirme & Altyapı",

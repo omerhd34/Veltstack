@@ -173,7 +173,7 @@ export const appPackagesEn = {
         deliveryDays: "45-60",
         revisions: "7",
         supportDays: "45",
-        languages: "∞",
+        languages: "Unlimited",
         featureGroups: [
           {
             label: "Development & Infrastructure",
@@ -290,7 +290,7 @@ export const appPackagesEn = {
         deliveryDays: "56-84",
         revisions: "8",
         supportDays: "45",
-        languages: "∞",
+        languages: "Unlimited",
         featureGroups: [
           {
             label: "Development & Infrastructure",
@@ -405,7 +405,7 @@ export const appPackagesEn = {
         deliveryDays: "84-120",
         revisions: "8",
         supportDays: "45",
-        languages: "∞",
+        languages: "Unlimited",
         featureGroups: [
           {
             label: "Development & Infrastructure",

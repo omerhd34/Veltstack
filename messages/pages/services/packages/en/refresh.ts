@@ -13,9 +13,7 @@ const standartDesignExtras = [
   "Smooth page transitions and micro-interactions",
 ] as const;
 
-const commonDeliveryTemel = [
-  "Go-live and DNS transition support",
-] as const;
+const commonDeliveryTemel = ["Go-live and DNS transition support"] as const;
 
 const commonDeliveryStandart = [
   "Source code and project file delivery",
@@ -190,9 +188,7 @@ const ecommerceSeoPro = [
   "High-traffic and campaign-period SEO optimization",
 ] as const;
 
-const ecommerceDeliveryTemel = [
-  "Go-live and test-order verification",
-] as const;
+const ecommerceDeliveryTemel = ["Go-live and test-order verification"] as const;
 
 const ecommerceDeliveryProExtras = [
   "Store management training and documentation",
@@ -257,7 +253,7 @@ export const refreshPackagesEn = {
         deliveryDays: "21-30",
         revisions: "6",
         supportDays: "45",
-        languages: "∞",
+        languages: "Unlimited",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,

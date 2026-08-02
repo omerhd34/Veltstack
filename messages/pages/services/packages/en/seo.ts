@@ -87,7 +87,7 @@ export const seoPackagesEn = {
       },
       pro: {
         deliveryDays: "14-21",
-        pages: "∞",
+        pages: "Unlimited",
         featureGroups: [
           {
             label: SEO_GROUP_OPTIMIZATION,

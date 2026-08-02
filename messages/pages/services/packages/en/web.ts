@@ -124,8 +124,8 @@ export const webPackagesEn = {
         deliveryDays: "30-45",
         revisions: "7",
         supportDays: "45",
-        pages: "∞",
-        languages: "∞",
+        pages: "Unlimited",
+        languages: "Unlimited",
         featureGroups: [
           {
             label: "Development & Infrastructure",
@@ -235,8 +235,8 @@ export const webPackagesEn = {
         deliveryDays: "42-60",
         revisions: "8",
         supportDays: "45",
-        pages: "∞",
-        languages: "∞",
+        pages: "Unlimited",
+        languages: "Unlimited",
         featureGroups: [
           {
             label: "Development & Infrastructure",
@@ -372,8 +372,8 @@ export const webPackagesEn = {
         deliveryDays: "56-84",
         revisions: "10",
         supportDays: "45",
-        pages: "∞",
-        languages: "∞",
+        pages: "Unlimited",
+        languages: "Unlimited",
         featureGroups: [
           {
             label: "Development & Infrastructure",

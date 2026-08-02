@@ -87,7 +87,7 @@ export const seoPackagesTr = {
       },
       pro: {
         deliveryDays: "14-21",
-        pages: "∞",
+        pages: "Sınırsız",
         featureGroups: [
           {
             label: SEO_GROUP_OPTIMIZATION,
