@@ -66,7 +66,7 @@ export async function BlogPreviewSection({
       </SiteContainer>
 
       <SiteContainer className="relative">
-        <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
+        <SectionScrollReveal direction="right" delay={0.06} trigger="wide">
           <BlogPreviewScrollCarouselLazy
             className="mt-6 sm:mt-8 lg:mt-10"
             posts={posts}

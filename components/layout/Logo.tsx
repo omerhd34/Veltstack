@@ -40,7 +40,7 @@ export function Logo({
     <Link
       href={href}
       className={cn(
-        "relative inline-flex origin-left select-none items-center transition-transform duration-500 ease-out hover:scale-[1.04]",
+        "relative inline-flex origin-left select-none items-center transition-transform duration-300 ease-out hover:scale-[1.04]",
         className,
       )}
       aria-label="Veltstack"

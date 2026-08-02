@@ -29,7 +29,7 @@ export function WhoWeAreSignature({
           "ring-2 ring-brand-accent/15",
         )}
       >
-        <BorderTrace durationSec={2.5} radius={24} />
+        <BorderTrace durationSec={1.4} radius={24} />
         <div className="relative size-full overflow-hidden rounded-full">
           <Image
             src="/images/img.jpg"

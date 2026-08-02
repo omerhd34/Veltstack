@@ -61,7 +61,7 @@ export async function ServicesIntro({ className }: ServicesIntroProps) {
 
         <SectionScrollReveal
           direction="right"
-          delay={0.14}
+          delay={0.06}
           className="flex flex-col gap-6"
         >
           <p className="text-[0.9375rem] leading-[1.9] text-white/55">

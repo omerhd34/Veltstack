@@ -20,7 +20,7 @@ export function WhyMeSection({ className }: WhyMeSectionProps) {
             <WhyMeIntro />
           </div>
         </SectionScrollReveal>
-        <SectionScrollReveal direction="right" delay={0.14} trigger="wide">
+        <SectionScrollReveal direction="right" delay={0.06} trigger="wide">
           <WhyMeGrid className="mt-14" />
         </SectionScrollReveal>
       </SiteContainer>

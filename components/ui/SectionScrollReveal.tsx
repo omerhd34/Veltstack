@@ -83,13 +83,13 @@ export function SectionScrollReveal({
         };
   const visible = { opacity: 1, x: "0px", y: "0px" };
   const transition = {
-    duration: 0.95,
+    duration: 0.48,
     delay,
     ease: [0.16, 1, 0.3, 1] as const,
   };
 
   const motionClassName = cn(
-    "[--reveal-offset-up:24px] [--reveal-offset-x:20px] [--reveal-offset-y:10px] md:[--reveal-offset-up:56px] md:[--reveal-offset-x:52px] md:[--reveal-offset-y:22px]",
+    "[--reveal-offset-up:16px] [--reveal-offset-x:14px] [--reveal-offset-y:8px] md:[--reveal-offset-up:36px] md:[--reveal-offset-x:36px] md:[--reveal-offset-y:14px]",
     className,
   );
 

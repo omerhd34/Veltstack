@@ -34,7 +34,7 @@ export function ContactFormFieldShell({
           loop
           trigger="focus"
           radius={12}
-          durationSec={4}
+          durationSec={1.6}
           active={active}
         />
       )}

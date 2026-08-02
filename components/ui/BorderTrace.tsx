@@ -76,7 +76,7 @@ export function BorderTrace({
   className,
   radius = 18,
   borderWidth = 3,
-  durationSec = 3,
+  durationSec = 1.4,
   stroke = "var(--border-trace-stroke)",
   loop = false,
   trigger = "both",

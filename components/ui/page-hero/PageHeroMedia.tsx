@@ -21,7 +21,7 @@ export function PageHeroMedia({
     <SectionScrollReveal
       direction="right"
       when="mount"
-      delay={0.14}
+      delay={0.06}
       className={cn("min-h-0 min-w-0", className)}
     >
       <PageHeroImage

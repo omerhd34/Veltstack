@@ -125,7 +125,7 @@ function TimelineEventRow({
       scale: 1,
       rotateY: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.4,
         delay: baseDelay,
         ease: [0.25, 0.1, 0.25, 1.0] as [number, number, number, number],
       },
@@ -195,7 +195,7 @@ function TimelineEventRow({
               : {}
           }
           transition={{
-            duration: 0.8,
+            duration: 0.5,
             repeat: Infinity,
             repeatDelay: 4,
             ease: "easeInOut",
@@ -223,18 +223,18 @@ function TimelineEventRow({
             "group relative z-20 flex w-full flex-col overflow-hidden rounded-2xl bg-white p-4 text-left sm:p-5 md:p-6",
             "border-trace-hover-fallback box-border border-[3px] border-solid border-[#8aab99]",
             "shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)]",
-            "cursor-pointer transition-all duration-500 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
+            "cursor-pointer transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]",
             "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent",
             variantClasses[cardVariant ?? "default"],
             effectClasses[cardEffect ?? "none"],
           )}
         >
-          <BorderTrace durationSec={2.5} />
+          <BorderTrace durationSec={1.4} />
 
           {dateFormat === "badge" ? (
             <span
               className={cn(
-                "absolute right-4 top-4 font-mono text-2xl font-bold leading-none tracking-tight text-brand-accent/20 transition-colors duration-500 group-hover:text-brand-accent/35 sm:right-5 sm:top-5 sm:text-3xl",
+                "absolute right-4 top-4 font-mono text-2xl font-bold leading-none tracking-tight text-brand-accent/20 transition-colors duration-300 group-hover:text-brand-accent/35 sm:right-5 sm:top-5 sm:text-3xl",
                 event.yearClassName,
               )}
             >
@@ -248,7 +248,7 @@ function TimelineEventRow({
 
           <div className="flex items-center gap-2.5 pr-12 sm:gap-3 sm:pr-14">
             {event.icon || (
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 transition-all duration-500 group-hover:scale-105 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50">
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 transition-all duration-300 group-hover:scale-105 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50">
                 <Calendar className="size-4" aria-hidden />
               </span>
             )}

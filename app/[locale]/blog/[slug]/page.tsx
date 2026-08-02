@@ -197,7 +197,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
                 <SectionScrollReveal
                   key={related.slug}
                   direction="right"
-                  delay={0.14 + index * 0.12}
+                  delay={0.06 + index * 0.05}
                   trigger="entry"
                 >
                   <BlogCard

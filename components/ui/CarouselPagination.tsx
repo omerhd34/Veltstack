@@ -59,7 +59,7 @@ export function CarouselPagination({
           <span className="sr-only">{formatNumber(index + 1)}</span>
         );
         const itemClassName = cn(
-          "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-500 ease-out motion-reduce:transition-none",
+          "flex items-center justify-center rounded-full font-(family-name:--font-heading) transition-all duration-300 ease-out motion-reduce:transition-none",
           isActive
             ? "h-8 min-w-8 bg-brand-accent px-2 text-[10px] font-semibold tracking-[0.12em] text-white shadow-[0_6px_16px_rgb(58,107,82,0.28)] lg:h-11 lg:min-w-11 lg:px-2.5 lg:text-xs"
             : cn(

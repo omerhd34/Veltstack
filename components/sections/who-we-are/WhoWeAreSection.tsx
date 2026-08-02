@@ -45,7 +45,7 @@ export async function WhoWeAreSection({ className }: WhoWeAreSectionProps) {
 
           <SectionScrollReveal
             direction="right"
-            delay={0.14}
+            delay={0.06}
             className="flex h-full min-w-0 self-stretch"
           >
             <WhoWeAreQuoteCard

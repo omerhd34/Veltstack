@@ -215,7 +215,7 @@ function ThreeDCarousel<T extends ThreeDCarouselItem>({
 
   const getCardAnimationClass = (index: number) => {
     const base =
-      "absolute top-1/2 w-[min(88%,20.5rem)] -translate-y-1/2 transition-all duration-500 ease-out sm:w-[min(70%,24rem)] md:w-1/2";
+      "absolute top-1/2 w-[min(88%,20.5rem)] -translate-y-1/2 transition-all duration-300 ease-out sm:w-[min(70%,24rem)] md:w-1/2";
 
     if (index === active) {
       return cn(base, "left-1/2 z-20 -translate-x-1/2 scale-100 opacity-100");

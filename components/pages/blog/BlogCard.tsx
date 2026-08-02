@@ -8,7 +8,7 @@ import type { BlogPost } from "./blog-data";
 import { formatDate, getBlogListImageUrl } from "./blog-data";
 
 const slowTransition =
-  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+  "transition-all duration-300 ease-in-out motion-reduce:transition-none";
 
 const AUTHOR_NAME = "Ömer Halis Demir";
 
@@ -43,7 +43,7 @@ export function BlogCard({
         src={getBlogListImageUrl(post.imageUrl)}
         alt={title}
         fill
-        className="object-cover transition-transform duration-700 group-hover:scale-105"
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
         sizes={
           isHorizontal
             ? "(max-width: 768px) 100vw, 42vw"
@@ -52,7 +52,7 @@ export function BlogCard({
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 sm:block"
+        className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:block"
       />
 
       <span className="absolute left-3 top-3 z-10 rounded-full border border-white/25 bg-black/80 px-3 py-1 text-[0.6875rem] font-semibold text-white sm:left-4 sm:top-4">
@@ -184,7 +184,7 @@ export function BlogCard({
         className,
       )}
     >
-      <BorderTrace durationSec={2.5} />
+      <BorderTrace durationSec={1.4} />
       {isHorizontal ? (
         <>
           <SectionScrollReveal

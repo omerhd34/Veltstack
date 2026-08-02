@@ -91,7 +91,7 @@ export function ApproachScrollTimeline({
       subtitle: item.timing,
       description: item.desc,
       icon: (
-        <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 transition-all duration-500 group-hover:scale-105 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50">
+        <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 transition-all duration-300 group-hover:scale-105 group-hover:bg-brand-accent group-hover:text-brand-accent-foreground group-hover:ring-brand-accent/50">
           <Icon className="size-4" strokeWidth={1.75} aria-hidden />
         </span>
       ),
@@ -111,12 +111,12 @@ export function ApproachScrollTimeline({
               key={event.id}
               className="group relative flex w-[82vw] max-w-88 shrink-0 snap-start scroll-ml-4 flex-col not-last:after:absolute not-last:after:top-1/2 not-last:after:left-full not-last:after:h-0.5 not-last:after:w-4 not-last:after:-translate-y-1/2 not-last:after:bg-brand-accent/45"
             >
-              <article className="border-trace-hover-fallback relative flex h-full min-h-64 flex-col overflow-hidden rounded-2xl border-[3px] border-solid border-[#8aab99] bg-white p-5 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] transition-all duration-500 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]">
-                <BorderTrace durationSec={2.5} />
+              <article className="border-trace-hover-fallback relative flex h-full min-h-64 flex-col overflow-hidden rounded-2xl border-[3px] border-solid border-[#8aab99] bg-white p-5 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_12px_32px_rgb(58,107,82,0.07)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_16px_48px_rgb(58,107,82,0.14)]">
+                <BorderTrace durationSec={1.4} />
 
                 <span
                   aria-hidden
-                  className="absolute top-4 right-4 font-mono text-3xl font-bold leading-none tracking-tighter text-brand-accent/18 transition-colors duration-500 group-hover:text-brand-accent/35"
+                  className="absolute top-4 right-4 font-mono text-3xl font-bold leading-none tracking-tighter text-brand-accent/18 transition-colors duration-300 group-hover:text-brand-accent/35"
                 >
                   {event.year}
                 </span>

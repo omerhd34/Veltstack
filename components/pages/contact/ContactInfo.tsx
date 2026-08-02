@@ -58,7 +58,7 @@ const badgeClassName =
   "inline-flex w-fit items-center gap-2 justify-self-start rounded-full border border-brand-accent/30 bg-brand-accent/8 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-brand-accent";
 
 const slowTransition =
-  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+  "transition-all duration-300 ease-in-out motion-reduce:transition-none";
 
 export function ContactSectionBadge({ badge }: ContactSectionBadgeProps) {
   return (
@@ -211,7 +211,7 @@ export function ContactInfo({
                     "hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgb(58_107_82/0.08)]",
                   )}
                 >
-                  <BorderTrace durationSec={2.5} />
+                  <BorderTrace durationSec={1.4} />
                   {content}
                 </Link>
               </li>
@@ -224,7 +224,7 @@ export function ContactInfo({
               className={cn(stretchItems && "flex min-h-0 flex-1")}
             >
               <div className={itemClassName}>
-                <BorderTrace durationSec={2.5} />
+                <BorderTrace durationSec={1.4} />
                 {content}
               </div>
             </li>

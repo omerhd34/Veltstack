@@ -30,7 +30,7 @@ export function ProjectPreview({
     <div
       className={cn(
         "relative aspect-21/10 w-full overflow-hidden rounded-2xl border border-border/80 shadow-[0_24px_80px_rgb(0_0_0/0.12)] sm:rounded-3xl",
-        "transition-transform duration-500 group-hover/preview:scale-[1.01]",
+        "transition-transform duration-300 group-hover/preview:scale-[1.01]",
         imageUrl ? "bg-[#050f0c]" : cn("bg-linear-to-br", coverGradient),
       )}
     >
@@ -41,7 +41,7 @@ export function ProjectPreview({
             alt={title}
             fill
             sizes="(min-width: 992px) 60vw, 90vw"
-            className="object-cover transition-transform duration-700 group-hover/preview:scale-105"
+            className="object-cover transition-transform duration-300 group-hover/preview:scale-105"
           />
           <div
             aria-hidden

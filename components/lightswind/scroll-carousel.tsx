@@ -162,7 +162,7 @@ const useFeatureAnimations = (
             {
               opacity: 1,
               x: 0,
-              duration: 1,
+              duration: 0.45,
               ease: "power2.out",
               scrollTrigger: {
                 trigger: card,

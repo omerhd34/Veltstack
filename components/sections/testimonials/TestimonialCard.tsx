@@ -3,7 +3,7 @@ import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
 
 const slowTransition =
-  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+  "transition-all duration-300 ease-in-out motion-reduce:transition-none";
 
 interface TestimonialCardProps {
   clientName: string;
@@ -82,7 +82,7 @@ export function TestimonialCard({
         className="pointer-events-none absolute -right-8 -top-8 size-40 rounded-full bg-brand-accent/4 blur-2xl"
       />
 
-      <BorderTrace durationSec={2.5} />
+      <BorderTrace durationSec={1.4} />
 
       <div
         aria-hidden

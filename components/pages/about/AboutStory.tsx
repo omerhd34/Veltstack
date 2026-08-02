@@ -34,7 +34,7 @@ export function AboutStory({
           </div>
         </SectionScrollReveal>
 
-        <SectionScrollReveal direction="left" delay={0.14} trigger="entry">
+        <SectionScrollReveal direction="left" delay={0.06} trigger="entry">
           <div className="mx-auto mt-10 max-w-5xl space-y-5">
             {paragraphs.map((paragraph, index) => (
               <p

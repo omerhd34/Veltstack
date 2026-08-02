@@ -42,15 +42,15 @@ function ProjectFeatureItem({
   icon: Icon,
 }: ProjectFeatureItemProps) {
   return (
-    <article className="group relative overflow-hidden rounded-3xl border border-border/70 bg-white p-6 shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-500 hover:-translate-y-1 hover:border-brand-accent/35 hover:shadow-[0_20px_48px_rgb(58_107_82/0.12)] sm:p-7">
+    <article className="group relative overflow-hidden rounded-3xl border border-border/70 bg-white p-6 shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-300 hover:-translate-y-1 hover:border-brand-accent/35 hover:shadow-[0_20px_48px_rgb(58_107_82/0.12)] sm:p-7">
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-brand-accent transition-transform duration-500 group-hover:scale-x-100"
+        className="pointer-events-none absolute inset-x-0 top-0 h-0.5 origin-left scale-x-0 bg-brand-accent transition-transform duration-300 group-hover:scale-x-100"
       />
 
       <span
         aria-hidden
-        className="pointer-events-none absolute right-5 top-5 font-(family-name:--font-heading) text-5xl font-bold leading-none text-brand-accent/10 transition-colors duration-500 group-hover:text-brand-accent/20"
+        className="pointer-events-none absolute right-5 top-5 font-(family-name:--font-heading) text-5xl font-bold leading-none text-brand-accent/10 transition-colors duration-300 group-hover:text-brand-accent/20"
       >
         {String(index + 1).padStart(2, "0")}
       </span>

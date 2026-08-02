@@ -57,7 +57,7 @@ export function FaqCategorySection({
         </div>
       </SectionScrollReveal>
 
-      <SectionScrollReveal direction="right" delay={0.12} trigger="entry">
+      <SectionScrollReveal direction="right" delay={0.05} trigger="entry">
         <FaqAccordion items={items} className="mt-6 sm:mt-7" />
       </SectionScrollReveal>
     </div>

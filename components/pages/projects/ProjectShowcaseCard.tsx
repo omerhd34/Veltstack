@@ -29,7 +29,7 @@ export function ProjectShowcaseCard({
   className,
 }: ProjectShowcaseCardProps) {
   const cardClassName = cn(
-    "group relative flex flex-col overflow-hidden rounded-3xl border border-border/70 bg-white shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-500 hover:border-brand-accent/35 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
+    "group relative flex flex-col overflow-hidden rounded-3xl border border-border/70 bg-white shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-300 hover:border-brand-accent/35 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
     className,
   );
 
@@ -54,7 +54,7 @@ export function ProjectShowcaseCard({
             />
             <div className="flex h-full min-h-48 items-center justify-center">
               <Icon
-                className="size-16 text-white/20 transition-transform duration-500 group-hover:scale-110 group-hover:text-white/35"
+                className="size-16 text-white/20 transition-transform duration-300 group-hover:scale-110 group-hover:text-white/35"
                 strokeWidth={1.25}
                 aria-hidden
               />
@@ -65,14 +65,14 @@ export function ProjectShowcaseCard({
             src={imageUrl}
             alt={title}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 33vw"
           />
         )}
 
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
         />
 
         {showFeaturedBadge && featuredLabel ? (
@@ -83,7 +83,7 @@ export function ProjectShowcaseCard({
 
         <span
           aria-hidden
-          className="pointer-events-none absolute bottom-3 right-4 font-(family-name:--font-heading) text-6xl font-bold leading-none text-white/10 transition-colors duration-500 group-hover:text-white/15"
+          className="pointer-events-none absolute bottom-3 right-4 font-(family-name:--font-heading) text-6xl font-bold leading-none text-white/10 transition-colors duration-300 group-hover:text-white/15"
         >
           {String(index).padStart(2, "0")}
         </span>

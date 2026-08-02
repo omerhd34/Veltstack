@@ -450,7 +450,7 @@ export function ContactFormFields({
           "group relative flex h-12 w-full items-center justify-center gap-2 overflow-visible rounded-full px-8",
           "border-trace-hover-fallback box-border border-[3px] border-solid border-transparent",
           "bg-transparent text-sm font-semibold text-white",
-          "transition-all duration-1000 ease-in-out motion-reduce:transition-none",
+          "transition-all duration-300 ease-in-out motion-reduce:transition-none",
           "focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-brand-accent/25",
           "disabled:pointer-events-none disabled:opacity-60",
         )}
@@ -459,12 +459,12 @@ export function ContactFormFields({
           aria-hidden
           className={cn(
             "pointer-events-none absolute -inset-0.75 rounded-full bg-brand-accent",
-            "shadow-[0_4px_14px_rgb(58_107_82/0.25)] transition-all duration-1000 ease-in-out motion-reduce:transition-none",
+            "shadow-[0_4px_14px_rgb(58_107_82/0.25)] transition-all duration-300 ease-in-out motion-reduce:transition-none",
             "group-hover:bg-[#325a45] group-hover:shadow-[0_6px_18px_rgb(58_107_82/0.3)]",
             "group-disabled:shadow-none",
           )}
         />
-        <BorderTrace durationSec={2.5} radius={24} />
+        <BorderTrace durationSec={1.4} radius={24} />
         <span className="relative z-10 inline-flex items-center gap-2">
           {formState === "submitting" ? (
             <>

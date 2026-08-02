@@ -14,7 +14,7 @@ interface WhoWeAreQuoteCardProps {
 }
 
 const slowTransition =
-  "transition-all duration-700 ease-out motion-reduce:transition-none";
+  "transition-all duration-300 ease-out motion-reduce:transition-none";
 
 export function WhoWeAreQuoteCard({
   description,
@@ -31,7 +31,7 @@ export function WhoWeAreQuoteCard({
         slowTransition,
       )}
     >
-      <BorderTrace durationSec={2.5} stroke="rgb(58 107 82 / 0.55)" />
+      <BorderTrace durationSec={1.4} stroke="rgb(58 107 82 / 0.55)" />
 
       <div
         aria-hidden

@@ -23,7 +23,7 @@ interface WorkflowTimelineProps {
 }
 
 const slowTransition =
-  "transition-all duration-1000 ease-out motion-reduce:transition-none";
+  "transition-all duration-300 ease-out motion-reduce:transition-none";
 
 export function WorkflowTimeline({
   badge,
@@ -103,7 +103,7 @@ export function WorkflowTimeline({
                 <BorderTrace
                   loop
                   trigger="hover"
-                  durationSec={2.5}
+                  durationSec={1.4}
                   radius={20}
                 />
                 <span

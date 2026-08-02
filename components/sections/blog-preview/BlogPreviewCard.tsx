@@ -6,7 +6,7 @@ import { cn, toLatinUppercase } from "@/lib/utils";
 import { BlogPreviewImage } from "./BlogPreviewImage";
 
 const slowTransition =
-  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+  "transition-all duration-300 ease-in-out motion-reduce:transition-none";
 
 interface BlogPreviewCardProps {
   title: string;
@@ -36,13 +36,13 @@ export function BlogPreviewCard({
         slowTransition,
       )}
     >
-      <BorderTrace durationSec={2.5} />
+      <BorderTrace durationSec={1.4} />
       <div className="relative aspect-16/10 shrink-0 overflow-hidden rounded-t-[calc(1rem-3px)]">
         <BlogPreviewImage src={image} alt={title} />
         <span
           className={cn(
             "absolute right-3 top-3 z-10 inline-flex size-9 items-center justify-center bg-transparent text-white drop-shadow-md sm:right-4 sm:top-4 sm:size-10",
-            "transition-[color,transform] duration-500 ease-out",
+            "transition-[color,transform] duration-300 ease-out",
             "group-hover:scale-105 group-hover:text-brand-accent",
             "motion-reduce:group-hover:scale-100",
           )}

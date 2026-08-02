@@ -162,7 +162,7 @@ export function TestimonialCarousel({
           <div
             key={`${testimonial.clientName}-${slideIndex}`}
             className={cn(
-              "w-full transition-all duration-500 ease-out motion-reduce:transition-none",
+              "w-full transition-all duration-300 ease-out motion-reduce:transition-none",
               slideIndex === index
                 ? "relative translate-y-0 opacity-100"
                 : "pointer-events-none absolute inset-0 translate-y-3 opacity-0",

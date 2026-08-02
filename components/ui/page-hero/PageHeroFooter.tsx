@@ -34,7 +34,7 @@ export function PageHeroFooter({
         className,
       )}
     >
-      <SectionScrollReveal direction="up" when="mount" delay={0.28}>
+      <SectionScrollReveal direction="up" when="mount" delay={0.1}>
         {stats ? <HeroStatsCards stats={stats} /> : null}
         {children}
       </SectionScrollReveal>

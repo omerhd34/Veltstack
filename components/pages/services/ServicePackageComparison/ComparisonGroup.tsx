@@ -38,7 +38,7 @@ export function ComparisonGroup({
         </span>
         <LuChevronDown
           className={cn(
-            "relative z-10 ml-auto size-3.5 shrink-0 text-emerald-400/40 transition-transform duration-500 ease-in-out",
+            "relative z-10 ml-auto size-3.5 shrink-0 text-emerald-400/40 transition-transform duration-300 ease-in-out",
             isOpen && "rotate-180",
           )}
           strokeWidth={2.5}
@@ -49,7 +49,7 @@ export function ComparisonGroup({
       <div
         id={panelId}
         className={cn(
-          "grid transition-[grid-template-rows,opacity] duration-500 ease-in-out",
+          "grid transition-[grid-template-rows,opacity] duration-300 ease-in-out",
           isOpen
             ? "grid-rows-[1fr] opacity-100"
             : "grid-rows-[0fr] opacity-0",

@@ -11,7 +11,7 @@ interface WhyMeCardProps {
 }
 
 const slowTransition =
-  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+  "transition-all duration-300 ease-in-out motion-reduce:transition-none";
 
 export function WhyMeCard({
   title,
@@ -28,7 +28,7 @@ export function WhyMeCard({
         slowTransition,
       )}
     >
-      <BorderTrace durationSec={2.5} />
+      <BorderTrace durationSec={1.4} />
       <CardIndexNumber index={index} theme="light" />
 
       <div className="flex gap-4">

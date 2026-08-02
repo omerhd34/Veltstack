@@ -137,7 +137,7 @@ export function WhyMeCarousel({
       <div ref={viewportRef} className="w-full overflow-hidden">
         <div
           ref={trackRef}
-          className="flex transition-transform duration-500 ease-out"
+          className="flex transition-transform duration-300 ease-out"
           style={{
             gap: `${gap}px`,
             transform:

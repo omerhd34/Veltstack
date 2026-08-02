@@ -95,7 +95,7 @@ export function ServicesCategoryTabs({
 
       <span
         aria-hidden
-        className="absolute top-1.5 bottom-1.5 rounded-full bg-linear-to-r from-brand-accent to-emerald-500 shadow-[0_4px_24px_rgb(58_107_82/0.45),inset_0_1px_0_rgb(255_255_255/0.12)] transition-[left,width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
+        className="absolute top-1.5 bottom-1.5 rounded-full bg-linear-to-r from-brand-accent to-emerald-500 shadow-[0_4px_24px_rgb(58_107_82/0.45),inset_0_1px_0_rgb(255_255_255/0.12)] transition-[left,width] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
         style={{
           left: indicator.left,
           width: indicator.width,

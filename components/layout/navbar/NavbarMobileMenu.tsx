@@ -41,14 +41,14 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
     >
       <div
         className={cn(
-          "absolute inset-0 bg-foreground/25 backdrop-blur-sm transition-opacity duration-300",
+          "absolute inset-0 bg-foreground/25 backdrop-blur-sm transition-opacity duration-200",
           mobileMenuOpen ? "opacity-100" : "opacity-0",
         )}
         onClick={closeMenu}
       />
       <div
         className={cn(
-          "absolute top-0 right-0 flex h-dvh w-[calc(100%-2rem)] max-w-96 flex-col overflow-hidden bg-[#EDF6F1] shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+          "absolute top-0 right-0 flex h-dvh w-[calc(100%-2rem)] max-w-96 flex-col overflow-hidden bg-[#EDF6F1] shadow-2xl transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)]",
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full",
         )}
         role="dialog"

@@ -52,7 +52,7 @@ export function ServiceCard({
   const Icon = icon ?? (slug ? serviceIconBySlug[slug] : LuArrowUpRight);
   const isSlide = variant === "slide";
   const slowTransition =
-    "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+    "transition-all duration-300 ease-in-out motion-reduce:transition-none";
 
   const cardClassName = cn(
     "group relative flex h-full flex-col rounded-2xl bg-card",
@@ -80,7 +80,7 @@ export function ServiceCard({
 
   const content = (
     <>
-      {!stardust && !isSlide ? <BorderTrace durationSec={2.5} /> : null}
+      {!stardust && !isSlide ? <BorderTrace durationSec={1.4} /> : null}
       {numbered && index != null ? (
         <CardIndexNumber
           index={index}

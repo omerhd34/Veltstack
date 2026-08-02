@@ -103,7 +103,7 @@ export function ContactForm({
                 titleId="contact-form-title"
               />
             </SectionScrollReveal>
-            <SectionScrollReveal direction="left" delay={0.14} trigger="entry">
+            <SectionScrollReveal direction="left" delay={0.06} trigger="entry">
               <div className="mt-10">{formCard}</div>
             </SectionScrollReveal>
           </section>
@@ -133,12 +133,12 @@ export function ContactForm({
             </div>
           </SectionScrollReveal>
           <div aria-hidden />
-          <SectionScrollReveal direction="left" delay={0.14} className="h-full">
+          <SectionScrollReveal direction="left" delay={0.06} className="h-full">
             <div className="h-full">{formCard}</div>
           </SectionScrollReveal>
           <SectionScrollReveal
             direction="right"
-            delay={0.14}
+            delay={0.06}
             trigger="entry"
             className="h-full"
           >

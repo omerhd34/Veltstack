@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 const slowTransition =
-  "transition-all duration-1000 ease-in-out motion-reduce:transition-none";
+  "transition-all duration-300 ease-in-out motion-reduce:transition-none";
 
 interface CardIndexNumberProps {
   index: number;

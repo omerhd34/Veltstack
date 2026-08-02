@@ -91,7 +91,7 @@ export function ServicesPackageTypeTabs({
       <span
         aria-hidden
         className={cn(
-          "absolute top-1.5 bottom-1.5 transition-[left,width] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]",
+          "absolute top-1.5 bottom-1.5 transition-[left,width] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
           embedded
             ? "rounded-full bg-linear-to-r from-emerald-500/18 to-brand-accent/12 ring-1 ring-emerald-400/25 shadow-[0_6px_20px_rgb(0_0_0/0.18),inset_0_1px_0_rgb(255_255_255/0.08)]"
             : "rounded-xl bg-brand-accent/15 ring-1 ring-brand-accent/30",

@@ -128,7 +128,7 @@ export function ServiceFeaturesCarousel({
           <div
             key={feature.title}
             className={cn(
-              "w-full transition-all duration-500 ease-out motion-reduce:transition-none",
+              "w-full transition-all duration-300 ease-out motion-reduce:transition-none",
               index === activeIndex
                 ? "relative translate-y-0 opacity-100"
                 : "pointer-events-none absolute inset-0 translate-y-2 opacity-0",

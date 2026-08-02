@@ -158,7 +158,7 @@ export function ServicePackageCard({
         data-package-group={groupIndex}
         data-package-group-label={group.label}
         className={cn(
-          "border-b border-emerald-900/35 transition-[min-height] duration-500 ease-in-out",
+          "border-b border-emerald-900/35 transition-[min-height] duration-300 ease-in-out",
         )}
       >
         <button
@@ -173,7 +173,7 @@ export function ServicePackageCard({
           </span>
           <LuChevronDown
             className={cn(
-              "size-3.5 shrink-0 text-emerald-400/40 transition-transform duration-500 ease-in-out",
+              "size-3.5 shrink-0 text-emerald-400/40 transition-transform duration-300 ease-in-out",
               isOpen && "rotate-180",
             )}
             strokeWidth={2.5}
@@ -184,7 +184,7 @@ export function ServicePackageCard({
           id={panelId}
           data-package-group-panel
           className={cn(
-            "grid transition-[grid-template-rows,opacity] duration-500 ease-in-out",
+            "grid transition-[grid-template-rows,opacity] duration-300 ease-in-out",
             isOpen
               ? "grid-rows-[1fr] opacity-100"
               : "grid-rows-[0fr] opacity-0",
@@ -253,7 +253,7 @@ export function ServicePackageCard({
     <article
       data-package-card
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-2xl border bg-[#0b1812] text-white transition-all duration-500",
+        "group relative flex flex-col overflow-hidden rounded-2xl border bg-[#0b1812] text-white transition-all duration-300",
         isTierColumn ? "h-auto" : "h-full",
         isPro
           ? "border-brand-accent/40 shadow-[0_0_48px_rgb(58_107_82/0.12)]"
@@ -263,7 +263,7 @@ export function ServicePackageCard({
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-brand-accent/6 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-brand-accent/6 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       />
 
       {isTierColumn ? (
