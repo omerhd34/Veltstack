@@ -84,8 +84,7 @@ export function findSupportGroupLabel(
 ): string | null {
   const supportMatch = groups.find(
     (group) =>
-      group.label !== deliveryGroupLabel &&
-      /destek|support/i.test(group.label),
+      group.label !== deliveryGroupLabel && /destek|support/i.test(group.label),
   );
   if (supportMatch) return supportMatch.label;
 
@@ -157,9 +156,7 @@ export function buildRevisionFeatureItem(
   activeTier: PackageTier,
   label: string,
 ): PackageFeatureItem | null {
-  const read = prefersPagesAsRevision(tiers)
-    ? getPagesValue
-    : getRevisionValue;
+  const read = prefersPagesAsRevision(tiers) ? getPagesValue : getRevisionValue;
 
   if (!tierOrder.some((tier) => Boolean(read(tiers[tier])))) {
     return null;
@@ -177,9 +174,7 @@ export function buildRevisionMatrixItem(
   tiers: Record<PackageTier, PackageTierData>,
   label: string,
 ): PackageFeatureMatrixItem | null {
-  const read = prefersPagesAsRevision(tiers)
-    ? getPagesValue
-    : getRevisionValue;
+  const read = prefersPagesAsRevision(tiers) ? getPagesValue : getRevisionValue;
 
   if (!tierOrder.some((tier) => Boolean(read(tiers[tier])))) {
     return null;
@@ -397,12 +392,10 @@ export function sortFeatureGroupsForDisplay(
   const groupByLabel = new Map(groups.map((group) => [group.label, group]));
 
   const supportLabels = commonLabels.filter(
-    (label) =>
-      label !== deliveryGroupLabel && /destek|support/i.test(label),
+    (label) => label !== deliveryGroupLabel && /destek|support/i.test(label),
   );
   const orderedCommon = commonLabels.filter(
-    (label) =>
-      label !== deliveryGroupLabel && !supportLabels.includes(label),
+    (label) => label !== deliveryGroupLabel && !supportLabels.includes(label),
   );
   if (commonLabels.includes(deliveryGroupLabel)) {
     orderedCommon.push(deliveryGroupLabel);
