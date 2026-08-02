@@ -28,14 +28,11 @@ export function LocaleScrollRestoration() {
 
       const header = document.querySelector("header");
       const headerHeight = header?.getBoundingClientRect().height ?? 72;
-      const pastHero = 28;
+      const gap = 16;
       const top =
-        window.scrollY +
-        el.getBoundingClientRect().top -
-        headerHeight +
-        pastHero;
+        window.scrollY + el.getBoundingClientRect().top - headerHeight - gap;
 
-      window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "auto" });
+      window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "smooth" });
       return true;
     };
 
@@ -59,15 +56,19 @@ export function LocaleScrollRestoration() {
         clearLocaleSwitchScroll();
       }
     }, 0);
+    // FAQ accordion açıldıktan sonra yüksekliği netleşince yeniden hizala
+    const hashRetryId = window.setTimeout(applyScroll, 320);
 
     const onHashChange = () => {
       scrollToHash();
+      window.setTimeout(scrollToHash, 320);
     };
     window.addEventListener("hashchange", onHashChange);
 
     return () => {
       cancelAnimationFrame(rafId);
       window.clearTimeout(timeoutId);
+      window.clearTimeout(hashRetryId);
       window.removeEventListener("hashchange", onHashChange);
     };
   }, [pathname]);

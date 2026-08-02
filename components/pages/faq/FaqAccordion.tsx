@@ -24,15 +24,12 @@ export function FaqAccordion({ items, className }: FaqAccordionProps) {
       if (!slug) return;
 
       const index = items.findIndex((item) => item.slug === slug);
-      if (index === -1) return;
+      if (index === -1) {
+        setOpenIndex(null);
+        return;
+      }
 
       setOpenIndex(index);
-      window.requestAnimationFrame(() => {
-        document.getElementById(slug)?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      });
     };
 
     openFromHash();
@@ -50,7 +47,7 @@ export function FaqAccordion({ items, className }: FaqAccordionProps) {
             key={item.slug}
             id={item.slug}
             className={cn(
-              "group relative overflow-hidden rounded-2xl border bg-white shadow-[0_2px_16px_rgb(0_0_0/0.04)] transition-all duration-300 dark:bg-card",
+              "group relative scroll-mt-28 overflow-hidden rounded-2xl border bg-white shadow-[0_2px_16px_rgb(0_0_0/0.04)] transition-all duration-300 dark:bg-card",
               isOpen
                 ? "border-brand-accent/35 shadow-[0_12px_40px_rgb(58_107_82/0.1)]"
                 : "border-border/60 hover:border-brand-accent/20 hover:shadow-[0_8px_28px_rgb(58_107_82/0.07)]",

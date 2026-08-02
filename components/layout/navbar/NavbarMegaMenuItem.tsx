@@ -1,6 +1,7 @@
 "use client";
 
 import type { IconType } from "react-icons";
+import type { MouseEvent } from "react";
 import { LuArrowUpRight } from "react-icons/lu";
 import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
 import { StardustShell } from "@/components/lightswind/stardust-button";
@@ -11,7 +12,7 @@ interface NavbarMegaMenuItemProps {
   href: string;
   title: string;
   icon: IconType;
-  onNavigate?: () => void;
+  onNavigate?: (event: MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export function NavbarMegaMenuItem({
