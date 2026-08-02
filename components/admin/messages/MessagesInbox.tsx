@@ -28,6 +28,7 @@ export function MessagesInbox({
   const router = useRouter();
   const [messages, setMessages] = useState(initialMessages);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
   const [query, setQuery] = useState("");
@@ -171,6 +172,26 @@ export function MessagesInbox({
     setSelectedId(null);
   }
 
+  async function deleteMessage(id: string) {
+    const snapshot = messages;
+    setDeletingId(id);
+    setMessages((prev) => prev.filter((message) => message.id !== id));
+    setSelectedId(null);
+
+    try {
+      const response = await fetch(`/api/admin/messages/${id}`, {
+        method: "DELETE",
+      });
+      if (!response.ok) throw new Error("delete-failed");
+      startTransition(() => router.refresh());
+    } catch {
+      setMessages(snapshot);
+      setSelectedId(id);
+    } finally {
+      setDeletingId(null);
+    }
+  }
+
   useEffect(() => {
     if (!selectedId) return;
     function onKeyDown(event: KeyboardEvent) {
@@ -225,7 +246,9 @@ export function MessagesInbox({
         <MessageDetailPanel
           message={selected}
           marking={isPending}
+          deleting={deletingId === selected.id}
           onClose={closeDetail}
+          onDelete={deleteMessage}
         />
       ) : null}
     </>
