@@ -257,7 +257,7 @@ export const refreshPackagesTr = {
         deliveryDays: "21-30",
         revisions: "6",
         supportDays: "45",
-        languages: "∞",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
