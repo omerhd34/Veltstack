@@ -40,7 +40,15 @@ export async function createPageMetadata({
     title: absoluteTitle ? { absolute: title } : title,
     description,
     ...(keywords ? { keywords } : {}),
-    ...(noIndex ? { robots: { index: false, follow: false } } : {}),
+    ...(noIndex
+      ? {
+          robots: {
+            index: false,
+            follow: false,
+            googleBot: { index: false, follow: false },
+          },
+        }
+      : {}),
     alternates: buildPageAlternates(loc, href),
     ...social,
   };

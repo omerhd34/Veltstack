@@ -2,5 +2,6 @@
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
   "less.lint.unknownAtRules": "ignore",
-  "tailwindCSS.experimental.configFile": "app/globals.css"
+  "tailwindCSS.experimental.configFile": "app/globals.css",
+  "postman.settings.dotenv-detection-notification-visibility": false
 }
