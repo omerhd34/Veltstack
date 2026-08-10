@@ -146,6 +146,7 @@ export const auditPackagesTr = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
+        price: "6.000 ₺",
         featureGroups: [
           { label: AUDIT_GROUP_TECHNICAL, items: [...webAuditTechnicalTemel] },
           { label: AUDIT_GROUP_REPORTING, items: [...webAuditReportingTemel] },
@@ -153,6 +154,7 @@ export const auditPackagesTr = {
       },
       standart: {
         deliveryDays: "5-7",
+        price: "10.000 ₺",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -166,6 +168,7 @@ export const auditPackagesTr = {
       },
       pro: {
         deliveryDays: "7-10",
+        price: "15.000 ₺",
         featureGroups: [
           { label: AUDIT_GROUP_TECHNICAL, items: [...webAuditTechnicalPro] },
           { label: AUDIT_GROUP_REPORTING, items: [...webAuditReportingPro] },
@@ -182,6 +185,7 @@ export const auditPackagesTr = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
+        price: "8.000 ₺",
         featureGroups: [
           { label: AUDIT_GROUP_TECHNICAL, items: [...appAuditTechnicalTemel] },
           { label: AUDIT_GROUP_REPORTING, items: [...appAuditReportingTemel] },
@@ -189,6 +193,7 @@ export const auditPackagesTr = {
       },
       standart: {
         deliveryDays: "5-7",
+        price: "12.000 ₺",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -202,6 +207,7 @@ export const auditPackagesTr = {
       },
       pro: {
         deliveryDays: "7-10",
+        price: "18.000 ₺",
         featureGroups: [
           { label: AUDIT_GROUP_TECHNICAL, items: [...appAuditTechnicalPro] },
           { label: AUDIT_GROUP_REPORTING, items: [...appAuditReportingPro] },
@@ -218,6 +224,7 @@ export const auditPackagesTr = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
+        price: "10.000 ₺",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -231,6 +238,7 @@ export const auditPackagesTr = {
       },
       standart: {
         deliveryDays: "5-7",
+        price: "15.000 ₺",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -244,6 +252,7 @@ export const auditPackagesTr = {
       },
       pro: {
         deliveryDays: "7-10",
+        price: "22.000 ₺",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,

@@ -104,6 +104,7 @@ export const appPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "21-30",
+        price: "₺50,000",
         revisions: "3",
         supportDays: "15",
         languages: "1",
@@ -133,6 +134,7 @@ export const appPackagesEn = {
       },
       standart: {
         deliveryDays: "30-45",
+        price: "₺70,000",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
@@ -171,6 +173,7 @@ export const appPackagesEn = {
       },
       pro: {
         deliveryDays: "45-60",
+        price: "₺90,000",
         revisions: "7",
         supportDays: "45",
         languages: "Unlimited",
@@ -217,6 +220,7 @@ export const appPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "28-42",
+        price: "₺65,000",
         revisions: "3",
         supportDays: "15",
         languages: "1",
@@ -250,6 +254,7 @@ export const appPackagesEn = {
       },
       standart: {
         deliveryDays: "42-56",
+        price: "₺85,000",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
@@ -288,6 +293,7 @@ export const appPackagesEn = {
       },
       pro: {
         deliveryDays: "56-84",
+        price: "₺100,000",
         revisions: "8",
         supportDays: "45",
         languages: "Unlimited",
@@ -333,6 +339,7 @@ export const appPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "42-56",
+        price: "₺75,000",
         revisions: "3",
         supportDays: "15",
         languages: "1",
@@ -367,6 +374,7 @@ export const appPackagesEn = {
       },
       standart: {
         deliveryDays: "56-77",
+        price: "₺90,000",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
@@ -403,6 +411,7 @@ export const appPackagesEn = {
       },
       pro: {
         deliveryDays: "84-120",
+        price: "₺100,000",
         revisions: "8",
         supportDays: "45",
         languages: "Unlimited",

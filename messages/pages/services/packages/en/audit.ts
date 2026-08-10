@@ -212,6 +212,7 @@ export const auditPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
+        price: "₺6,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -225,6 +226,7 @@ export const auditPackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
+        price: "₺10,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -238,6 +240,7 @@ export const auditPackagesEn = {
       },
       pro: {
         deliveryDays: "7-10",
+        price: "₺15,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -260,6 +263,7 @@ export const auditPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
+        price: "₺8,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -273,6 +277,7 @@ export const auditPackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
+        price: "₺12,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -286,6 +291,7 @@ export const auditPackagesEn = {
       },
       pro: {
         deliveryDays: "7-10",
+        price: "₺18,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -308,6 +314,7 @@ export const auditPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
+        price: "₺10,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -321,6 +328,7 @@ export const auditPackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
+        price: "₺15,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -334,6 +342,7 @@ export const auditPackagesEn = {
       },
       pro: {
         deliveryDays: "7-10",
+        price: "₺22,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,

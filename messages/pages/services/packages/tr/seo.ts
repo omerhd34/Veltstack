@@ -59,6 +59,7 @@ export const seoPackagesTr = {
     tiers: {
       temel: {
         deliveryDays: "7-10",
+        price: "12.000 ₺",
         pages: "10",
         featureGroups: [
           {
@@ -73,6 +74,7 @@ export const seoPackagesTr = {
       },
       standart: {
         deliveryDays: "10-14",
+        price: "20.000 ₺",
         pages: "25",
         featureGroups: [
           {
@@ -87,6 +89,7 @@ export const seoPackagesTr = {
       },
       pro: {
         deliveryDays: "14-21",
+        price: "32.000 ₺",
         pages: "Sınırsız",
         featureGroups: [
           {

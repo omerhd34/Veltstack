@@ -41,8 +41,8 @@ const tierSeoStandartItems = [
   ...commonSeoItems,
   "Meta, Open Graph ve temel schema optimizasyonu",
   ...commonIntegrationItems,
-  "Google Search Console kurulumu",
-  "Google Analytics 4 entegrasyonu",
+  "Aramada görünürlük takibi (Google Search Console)",
+  "Ziyaretçi ve trafik ölçümü (Google Analytics 4)",
 ] as const;
 
 const tierSeoProItems = [
@@ -64,6 +64,7 @@ export const webPackagesTr = {
     tiers: {
       temel: {
         deliveryDays: "10-14",
+        price: "30.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
@@ -84,6 +85,7 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "21-30",
+        price: "45.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
@@ -120,6 +122,7 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "30-45",
+        price: "70.000 ₺",
         revisions: "7",
         supportDays: "45",
         pages: "Sınırsız",
@@ -170,6 +173,7 @@ export const webPackagesTr = {
     tiers: {
       temel: {
         deliveryDays: "14-21",
+        price: "45.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
@@ -190,6 +194,7 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "28-42",
+        price: "70.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
@@ -228,6 +233,7 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "42-60",
+        price: "95.000 ₺",
         revisions: "8",
         supportDays: "45",
         pages: "Sınırsız",
@@ -281,6 +287,7 @@ export const webPackagesTr = {
     tiers: {
       temel: {
         deliveryDays: "21-30",
+        price: "70.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
@@ -309,6 +316,7 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "42-56",
+        price: "85.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
@@ -362,6 +370,7 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "56-84",
+        price: "100.000 ₺",
         revisions: "10",
         supportDays: "45",
         pages: "Sınırsız",

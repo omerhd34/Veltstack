@@ -87,6 +87,7 @@ export const maintenancePackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
+        price: "₺4,000/mo",
         revisions: "2",
         featureGroups: [
           {
@@ -105,6 +106,7 @@ export const maintenancePackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
+        price: "₺6,000/mo",
         revisions: "5",
         featureGroups: [
           {
@@ -123,6 +125,7 @@ export const maintenancePackagesEn = {
       },
       pro: {
         deliveryDays: "7-14",
+        price: "₺10,000/mo",
         revisions: "10",
         featureGroups: [
           {
