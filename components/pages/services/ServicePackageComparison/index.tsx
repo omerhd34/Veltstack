@@ -16,7 +16,6 @@ import { cn } from "@/lib/utils";
 import { COLS, tierLabelKey, tierOrder } from "./constants";
 import { ComparisonCorner } from "./ComparisonCorner";
 import { ComparisonGroup } from "./ComparisonGroup";
-import { ComparisonPrices } from "./ComparisonPrices";
 import { ComparisonQuoteCta } from "./ComparisonQuoteCta";
 import type { ServicePackageComparisonProps } from "./types";
 import { buildDeliveryMatrixItem, collectTierGroups } from "./utils";
@@ -129,14 +128,6 @@ export function ServicePackageComparison({
               notIncludedLabel={labels.featureNotIncluded}
             />
           ))}
-
-          <ComparisonPrices
-            tiers={data.tiers}
-            groupLabel={labels.pricingGroupLabel}
-            priceLabel={labels.statPrice}
-            isOpen={openGroups.has(labels.pricingGroupLabel)}
-            onToggle={() => onToggleGroup(labels.pricingGroupLabel)}
-          />
         </div>
       </div>
 

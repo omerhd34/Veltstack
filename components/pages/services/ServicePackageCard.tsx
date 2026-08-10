@@ -35,7 +35,6 @@ export interface PackageFeatureGroup {
 
 export interface PackageTierData {
   deliveryDays: string;
-  price?: string;
   revisions?: string;
   pages?: string;
   supportDays?: string;
@@ -61,7 +60,6 @@ interface PackageCardLabels {
   statSupport: string;
   statLanguages: string;
   statPages: string;
-  statPrice: string;
   getQuote: string;
   deliveryGroupLabel: string;
   hideMiddleStat?: boolean;
@@ -387,11 +385,6 @@ export function ServicePackageCard({
           hideFeatures ? "pt-5" : "pt-0",
         )}
       >
-        {tier.price ? (
-          <p className="mb-4 text-center font-(family-name:--font-heading) text-2xl font-bold tracking-tight text-emerald-100">
-            {tier.price}
-          </p>
-        ) : null}
         <StardustShell className="w-full" faceClassName="bg-brand-accent/88">
           <Link
             href="/iletisim"
