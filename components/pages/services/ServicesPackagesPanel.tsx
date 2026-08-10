@@ -11,7 +11,6 @@ import {
 import {
   collectAllTierGroupLabels,
   collectCommonFeatureGroupLabels,
-  getDefaultOpenGroups,
 } from "./package-accordion";
 import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
 import { ServicesPackageTypeTabs } from "./ServicesPackageTypeTabs";
@@ -155,12 +154,7 @@ export function ServicesPackagesPanel({
   }, [activeTier, selectedPackage, useTierComparison, visiblePackages]);
 
   useLayoutEffect(() => {
-    if (useTierComparison) {
-      setOpenGroups(new Set());
-      return;
-    }
-
-    setOpenGroups(getDefaultOpenGroups(visiblePackages, activeTier));
+    setOpenGroups(new Set());
   }, [
     activeTier,
     activeCategory,
