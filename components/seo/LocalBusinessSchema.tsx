@@ -22,7 +22,7 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         },
         image: `${SITE_URL}/hero/veltstack.png`,
         description:
-          "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
+          "Kurumsal web sitesi, e-ticaret, mobil uygulama ve dijital yenileme hizmetleri.",
         email: "veltstack@outlook.com",
         telephone: "+90-507-849-29-03",
         founder: {
@@ -53,7 +53,7 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         url: homeUrl,
         image: `${SITE_URL}/hero/veltstack.png`,
         description:
-          "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
+          "Kurumsal web sitesi, e-ticaret, mobil uygulama ve dijital yenileme hizmetleri.",
         telephone: "+90-507-849-29-03",
         email: "veltstack@outlook.com",
         priceRange: "$$",

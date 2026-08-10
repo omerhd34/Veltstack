@@ -1,7 +1,7 @@
 export const pagesTr = {
   homeTitle: "Veltstack | Fikirden Yayına Web & Mobil",
   homeSubtitle:
-    "Web siteleri ve mobil uygulamalar geliştiriyor, markaları SEO ile büyütüyoruz. Şeffaf süreç ve ölçülebilir sonuçlarla fikirden yayına yanınızdayız.",
+    "Web siteleri ve mobil uygulamalar geliştiriyor, dijital yenileme ile markaları büyütüyoruz. Şeffaf süreç ve ölçülebilir sonuçlarla fikirden yayına yanınızdayız.",
   homeKeywords: [
     "web sitesi yapımı",
     "web sitesi tasarımı",
@@ -43,7 +43,7 @@ export const pagesTr = {
   ],
   aboutTitle: "Hakkımızda | Veltstack",
   aboutSubtitle:
-    "Veltstack; web sitesi yapımı, mobil uygulama ve SEO odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eder.",
+    "Veltstack; web sitesi yapımı, mobil uygulama ve dijital yenileme odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eder.",
   aboutKeywords: [
     "Ömer Halis Demir",
     "Veltstack",
@@ -70,7 +70,7 @@ export const pagesTr = {
   ],
   contactTitle: "İletişim | Web & Mobil Proje Teklifi",
   contactSubtitle:
-    "Web sitesi, mobil uygulama veya SEO için teklif alın. Hedefinizi paylaşın, size net bir yol haritası çıkaralım.",
+    "Web sitesi, mobil uygulama veya dijital yenileme için teklif alın. Hedefinizi paylaşın, size net bir yol haritası çıkaralım.",
   contactKeywords: [
     "web sitesi teklif",
     "web sitesi fiyat",
@@ -91,22 +91,19 @@ export const pagesTr = {
     "WhatsApp destek",
     "online görüşme talebi",
   ],
-  servicesTitle: "Hizmetler | Web Sitesi, Mobil Uygulama ve SEO",
+  servicesTitle: "Hizmetler | Web Sitesi Geliştirme, Uygulama Geliştirme ve Web Sitesi & Uygulama Yenileme",
   servicesSubtitle:
-    "Markanızı büyüten web siteleri ve mobil uygulamalar. Teknik SEO, bakım ve destekle görünürlüğünüzü kalıcı hale getiriyoruz.",
+    "Markanızı büyüten web siteleri, mobil uygulamalar ve dijital yenileme. Net paketler, şeffaf süreç ve ölçülebilir sonuçlar.",
   servicesKeywords: [
     "web sitesi yapımı",
     "web sitesi yenileme",
     "web sitesi redesign",
     "mobil uygulama geliştirme",
-    "teknik SEO denetimi",
-    "SEO hizmetleri",
-    "web sitesi bakım",
+    "dijital yenileme",
     "site hızı optimizasyonu",
     "e-ticaret geliştirme",
     "kurumsal yazılım",
     "dijital dönüşüm",
-    "bakım destek paketi",
     "web tasarım hizmeti",
     "landing page tasarımı",
     "kurumsal web sitesi yapımı",
@@ -120,8 +117,7 @@ export const pagesTr = {
     "Android uygulama geliştirme",
     "React Native geliştirme",
     "Core Web Vitals iyileştirme",
-    "yerel SEO",
-    "içerik SEO",
+    "SEO uyumlu web sitesi",
     "Google Search Console kurulumu",
     "web sitesi güvenliği",
     "hosting ve domain yönetimi",
@@ -154,15 +150,15 @@ export const pagesTr = {
   ],
   faqTitle: "Sıkça Sorulan Sorular | Veltstack",
   faqSubtitle:
-    "Web sitesi, mobil uygulama, SEO ve bakım hakkında süreç, fiyat, teslim süresi ve destek sorularının yanıtları tek sayfada.",
+    "Web sitesi, mobil uygulama ve dijital yenileme hakkında süreç, fiyat, teslim süresi ve destek sorularının yanıtları tek sayfada.",
   faqKeywords: [
     "sıkça sorulan sorular",
     "web sitesi yapımı SSS",
     "web sitesi fiyatları",
     "mobil uygulama maliyeti",
-    "SEO hizmeti soruları",
+    "dijital yenileme soruları",
     "proje teslim süresi",
-    "bakım destek paketi",
+    "yayın sonrası destek",
     "web sitesi süreci",
     "web sitesi ne kadar sürede biter",
     "web sitesi ne kadara mal olur",

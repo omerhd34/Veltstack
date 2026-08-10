@@ -1,7 +1,7 @@
 export const pagesEn = {
   homeTitle: "Veltstack | From Idea to Launch — Web & Mobile",
   homeSubtitle:
-    "Corporate website development, e-commerce, mobile app development and SEO services. From idea to launch with a clear process and measurable results.",
+    "Website building, mobile apps and digital refresh. From idea to launch with a clear process and measurable results.",
   homeKeywords: [
     "website development",
     "website design",
@@ -40,7 +40,7 @@ export const pagesEn = {
   ],
   aboutTitle: "About | Ömer Halis Demir & Veltstack",
   aboutSubtitle:
-    "Veltstack delivers website development, mobile apps and SEO-focused digital products from idea to launch with a clear process and measurable outcomes.",
+    "Veltstack delivers website building, mobile apps and digital refresh from idea to launch with a clear process and measurable outcomes.",
   aboutKeywords: [
     "Ömer Halis Demir",
     "Veltstack",
@@ -64,7 +64,7 @@ export const pagesEn = {
   ],
   contactTitle: "Contact | Web & Mobile Project Quote",
   contactSubtitle:
-    "Request a quote for website development, mobile app and SEO projects. Share your goal and we will outline a clear roadmap.",
+    "Request a quote for website building, mobile app or digital refresh. Share your goal and we will outline a clear roadmap.",
   contactKeywords: [
     "website quote",
     "website pricing",
@@ -85,22 +85,19 @@ export const pagesEn = {
     "WhatsApp support",
     "book a call",
   ],
-  servicesTitle: "Services | Web, Mobile and SEO",
+  servicesTitle: "Services | Website Development, App Development and Website & App Refresh",
   servicesSubtitle:
-    "Websites and mobile apps built to grow your brand, with technical SEO, maintenance, and support to boost your visibility.",
+    "Websites, mobile apps and digital refresh built to grow your brand—with clear packages, transparent process and measurable results.",
   servicesKeywords: [
     "website development",
     "website redesign",
     "website refresh",
     "mobile app development",
-    "technical SEO audit",
-    "SEO services",
-    "website maintenance",
+    "digital refresh",
     "site speed optimization",
     "e-commerce development",
     "enterprise software",
     "digital transformation",
-    "maintenance support package",
     "web design service",
     "landing page design",
     "corporate website development",
@@ -114,8 +111,7 @@ export const pagesEn = {
     "Android app development",
     "React Native development",
     "Core Web Vitals improvement",
-    "local SEO",
-    "content SEO",
+    "SEO friendly website",
     "Google Search Console setup",
     "website security",
     "hosting and domain management",
@@ -148,15 +144,15 @@ export const pagesEn = {
   ],
   faqTitle: "Frequently Asked Questions | Veltstack",
   faqSubtitle:
-    "Answers about our website, mobile app, SEO and maintenance services: process, pricing, delivery times and post-launch support in one place.",
+    "Answers about website building, mobile apps and digital refresh: process, pricing, delivery times and post-launch support in one place.",
   faqKeywords: [
     "frequently asked questions",
     "website development FAQ",
     "website pricing questions",
     "mobile app cost",
-    "SEO service questions",
+    "digital refresh questions",
     "project delivery time",
-    "maintenance support package",
+    "post-launch support",
     "web project process",
     "how long does a website take",
     "how much does a website cost",
