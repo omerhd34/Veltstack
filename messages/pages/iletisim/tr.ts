@@ -24,19 +24,16 @@ export const contactTr = {
     "Projenizi, beklentilerinizi ve varsa teknik gereksinimlerinizi anlatın…",
 
   serviceOptions: [
-    { value: "web-sitesi-gelistirme", label: "Web Sitesi Yapımı" },
-    { value: "web-sitesi-yenileme", label: "Dijital Yenileme" },
-    { value: "uygulama-gelistirme", label: "Uygulama Yapımı" },
-    { value: "teknik-denetim", label: "Teknik Denetim" },
-    { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
-    { value: "bakim-ve-destek", label: "Bakım & Destek" },
+    { value: "web-sitesi-gelistirme", label: "Web Sitesi Geliştirme" },
+    { value: "uygulama-gelistirme", label: "Uygulama Geliştirme" },
+    { value: "web-sitesi-yenileme", label: "Web Sitesi & Uygulama Yenileme" },
     { value: "diger", label: "Diğer / Belirsiz" },
   ],
 
   tierOptions: [
     { value: "temel", label: "Girişim" },
     { value: "standart", label: "Profesyonel" },
-    { value: "pro", label: "Premium" },
+    { value: "pro", label: "Gelişmiş" },
     { value: "belirsiz", label: "Belirsiz" },
   ],
 
@@ -55,17 +52,6 @@ export const contactTr = {
       { value: "portfolio", label: "Portföy / Tanıtım Uygulaması" },
       { value: "corporate", label: "Kurumsal Mobil Uygulama" },
       { value: "ecommerce", label: "E-Ticaret Mobil Uygulama" },
-    ],
-    "seo-hizmetleri": [
-      { value: "seoServices", label: "Dijital Pazarlama & SEO" },
-    ],
-    "teknik-denetim": [
-      { value: "webAudit", label: "Web Sitesi Teknik Denetimi" },
-      { value: "appAudit", label: "Mobil Uygulama Teknik Denetimi" },
-      { value: "infrastructureAudit", label: "Altyapı ve Güvenlik Denetimi" },
-    ],
-    "bakim-ve-destek": [
-      { value: "maintenanceServices", label: "Bakım & Destek Hizmetleri" },
     ],
   },
 
