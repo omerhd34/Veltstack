@@ -55,7 +55,7 @@ export function ComparisonPrices({
         <div className="overflow-hidden">
           <div className={cn(COLS, "bg-[#071510]/55")}>
             <div className="flex items-center px-3 py-5 sm:px-4">
-              <p className="font-(family-name:--font-heading) text-sm font-semibold leading-snug text-emerald-50/95 sm:text-base">
+              <p className="text-[0.8125rem] font-normal leading-snug text-emerald-50/85">
                 {priceLabel}
               </p>
             </div>
