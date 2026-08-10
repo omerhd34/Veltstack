@@ -3,10 +3,7 @@ import { serviceItems } from "@/components/sections/services/service-items";
 export type NavServiceKey =
   | "serviceWeb"
   | "serviceRefresh"
-  | "serviceApp"
-  | "serviceSeo"
-  | "serviceAudit"
-  | "serviceMaintenance";
+  | "serviceApp";
 
 export type NavServiceItem = {
   href: string;
