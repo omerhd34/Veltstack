@@ -144,104 +144,8 @@ export const uygulamaGelistirmeTechCategories: ServiceTechCategoryDefinition[] =
     },
   ];
 
-export const seoHizmetleriTechCategories: ServiceTechCategoryDefinition[] = [
-  {
-    key: "frontend",
-    items: ["Next.js", "React", "TypeScript", "HTML", "Angular", "Vue"],
-  },
-  {
-    key: "analytics",
-    items: [
-      "Google Analytics",
-      "Google Search Console",
-      "Google Search",
-      "Google Tag Manager",
-      "Lighthouse",
-      "PageSpeed Insights",
-      "Semrush",
-      "Ahrefs",
-      "Moz",
-      "Google Looker Studio",
-      "Meta Pixel",
-      "Google Trends",
-      "Screaming Frog SEO Spider",
-    ],
-  },
-  {
-    key: "tools",
-    items: ["JSON-LD"],
-  },
-  {
-    key: "devops",
-    items: ["Vercel"],
-  },
-];
 
-export const teknikDenetimTechCategories: ServiceTechCategoryDefinition[] = [
-  {
-    key: "analytics",
-    items: [
-      "Lighthouse",
-      "PageSpeed Insights",
-      "Google Search Console",
-      "Google Analytics",
-    ],
-  },
-  {
-    key: "frontend",
-    items: ["Next.js", "React", "TypeScript", "React Native", "Expo"],
-  },
-  {
-    key: "backend",
-    items: ["Node.js", "REST API", "Express.js"],
-  },
-  {
-    key: "database",
-    items: ["MySQL", "PostgreSQL", "Prisma", "MongoDB", "Railway"],
-  },
-  {
-    key: "devops",
-    items: ["Vercel", "GitHub", "Docker", "ixirhost", "cPanel"],
-  },
-  {
-    key: "tools",
-    items: ["Postman", "Git", "Swagger / OpenAPI"],
-  },
-];
 
-export const bakimVeDestekTechCategories: ServiceTechCategoryDefinition[] = [
-  {
-    key: "frontend",
-    items: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "React Native",
-      "Expo",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    key: "backend",
-    items: ["Node.js", "REST API", "Express.js"],
-  },
-  {
-    key: "database",
-    items: ["MySQL", "PostgreSQL", "Prisma", "MongoDB", "Redis", "Railway"],
-  },
-  {
-    key: "devops",
-    items: ["Vercel", "ixirhost", "cPanel", "Docker"],
-  },
-  {
-    key: "analytics",
-    items: ["Google Analytics", "Lighthouse", "PageSpeed Insights"],
-  },
-  {
-    key: "tools",
-    items: ["Git", "GitHub", "Postman", "Upstash"],
-  },
-];
 
 export const serviceTechCategories: Partial<
   Record<ServiceSlug, ServiceTechCategoryDefinition[]>
@@ -249,9 +153,6 @@ export const serviceTechCategories: Partial<
   "web-sitesi-gelistirme": webSitesiTechCategories,
   "web-sitesi-yenileme": webSitesiTechCategories,
   "uygulama-gelistirme": uygulamaGelistirmeTechCategories,
-  "seo-hizmetleri": seoHizmetleriTechCategories,
-  "teknik-denetim": teknikDenetimTechCategories,
-  "bakim-ve-destek": bakimVeDestekTechCategories,
 };
 
 export const serviceTechCategoryMessageKeys: Record<

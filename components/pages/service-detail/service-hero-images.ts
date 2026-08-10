@@ -5,9 +5,6 @@ export const serviceHeroImages: Record<ServiceSlug, string> = {
     "/images/pages/services/web-sitesi-gelistirme/hero.webp",
   "web-sitesi-yenileme": "/images/pages/services/web-sitesi-yenileme/hero.webp",
   "uygulama-gelistirme": "/images/pages/services/uygulama-gelistirme/hero.webp",
-  "teknik-denetim": "/images/pages/services/teknik-denetim/hero.webp",
-  "seo-hizmetleri": "/images/pages/services/seo-hizmetleri/hero.webp",
-  "bakim-ve-destek": "/images/pages/services/bakim-ve-destek/hero.webp",
 };
 
 export const serviceHeroMobileImages: Record<ServiceSlug, string> = {
@@ -17,7 +14,4 @@ export const serviceHeroMobileImages: Record<ServiceSlug, string> = {
     "/images/pages/services/web-sitesi-yenileme/hero-mobile.webp",
   "uygulama-gelistirme":
     "/images/pages/services/uygulama-gelistirme/hero-mobile.webp",
-  "teknik-denetim": "/images/pages/services/teknik-denetim/hero-mobile.webp",
-  "seo-hizmetleri": "/images/pages/services/seo-hizmetleri/hero-mobile.webp",
-  "bakim-ve-destek": "/images/pages/services/bakim-ve-destek/hero-mobile.webp",
 };

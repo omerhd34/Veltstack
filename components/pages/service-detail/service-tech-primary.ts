@@ -1,6 +1,5 @@
 import {
   flattenTechCategories,
-  seoHizmetleriTechCategories,
   webSitesiTechCategories,
 } from "./service-tech-categories";
 
@@ -60,51 +59,12 @@ export const uygulamaGelistirmePrimaryTech = [
   "Sentry",
 ] as const;
 
-export const seoHizmetleriPrimaryTech = flattenTechCategories(
-  seoHizmetleriTechCategories,
-);
-
-export const teknikDenetimPrimaryTech = [
-  "Lighthouse",
-  "PageSpeed Insights",
-  "Google Search Console",
-  "Google Analytics",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "Prisma",
-  "GitHub",
-  "Vercel",
-  "Postman",
-] as const;
-
-export const bakimVeDestekPrimaryTech = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Node.js",
-  "MySQL",
-  "Prisma",
-  "PostgreSQL",
-  "Vercel",
-  "ixirhost",
-  "GitHub",
-  "Git",
-  "Postman",
-  "Lighthouse",
-  "Upstash",
-  "Redis",
-] as const;
-
 export const servicePrimaryTechStacks: Partial<
   Record<string, readonly string[]>
 > = {
   "web-sitesi-gelistirme": webSitesiPrimaryTech,
   "web-sitesi-yenileme": webSitesiYenilemePrimaryTech,
   "uygulama-gelistirme": uygulamaGelistirmePrimaryTech,
-  "seo-hizmetleri": seoHizmetleriPrimaryTech,
-  "teknik-denetim": teknikDenetimPrimaryTech,
-  "bakim-ve-destek": bakimVeDestekPrimaryTech,
 };
 
 export const techIconColors: Record<string, string> = {
