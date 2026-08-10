@@ -156,8 +156,7 @@ export function ServicesPackagesPanel({
 
   useLayoutEffect(() => {
     if (useTierComparison) {
-      const labels = collectAllTierGroupLabels(selectedPackage);
-      setOpenGroups(!labels.length ? new Set() : new Set([labels[0]]));
+      setOpenGroups(new Set());
       return;
     }
 

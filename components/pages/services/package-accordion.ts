@@ -414,16 +414,6 @@ export function sortFeatureGroupsForDisplay(
   return [...common, ...rest];
 }
 
-export function getDefaultOpenGroups(
-  packages: PackageCardData[],
-  tier: PackageTier,
-) {
-  const labels = collectFeatureGroupLabels(packages, tier);
-  if (!labels.length) {
-    return new Set<string>();
-  }
-  return new Set([labels[0]]);
-}
 
 export function collectAllTierGroupLabels(pkg: PackageCardData): string[] {
   const labels: string[] = [];
