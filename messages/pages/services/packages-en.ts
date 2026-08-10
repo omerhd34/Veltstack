@@ -32,6 +32,8 @@ export const servicesPackagesEn = {
   statPages: "Page count",
   statSupport: "Support days",
   statLanguages: "Languages",
+  statPrice: "Price",
+  pricingGroupLabel: "Pricing",
   getQuote: "Get a Quote",
   featureIncluded: "included",
   featureNotIncluded: "not included",

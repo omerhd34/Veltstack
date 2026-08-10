@@ -32,6 +32,8 @@ export const servicesPackagesTr = {
   statPages: "Sayfa sayısı",
   statSupport: "Destek gün sayısı",
   statLanguages: "Dil sayısı",
+  statPrice: "Fiyat",
+  pricingGroupLabel: "Ücretlendirme",
   getQuote: "Teklif Al",
   featureIncluded: "dahil",
   featureNotIncluded: "dahil değil",

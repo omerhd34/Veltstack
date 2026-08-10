@@ -137,6 +137,8 @@ export async function ServicesPackagesSection({
             statPages: t("statPages"),
             statSupport: t("statSupport"),
             statLanguages: t("statLanguages"),
+            statPrice: t("statPrice"),
+            pricingGroupLabel: t("pricingGroupLabel"),
             getQuote: t("getQuote"),
             featureIncluded: t("featureIncluded"),
             featureNotIncluded: t("featureNotIncluded"),
