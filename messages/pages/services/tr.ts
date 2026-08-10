@@ -4,7 +4,7 @@ export const servicesPageTr = {
   heroBadge: "Dijital Hizmetler",
   heroTitle: "Net paketler, net kapsam",
   heroSubtitle:
-    "Her proje tipi üç kademede sunulur: Girişim, Profesyonel ve Premium. Kapsam baştan netleştirilir; web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım paketleri arasından size uygun kapsamı seçebilirsiniz.",
+    "Her proje tipi üç kademede sunulur: Girişim, Profesyonel ve Gelişmiş. Kapsam baştan netleştirilir; web sitesi, uygulama ve dijital yenileme paketleri arasından size uygun kapsamı seçebilirsiniz.",
   heroImageAlt:
     "Dijital hizmetleri temsil eden bağlantılı modüler arayüz illüstrasyonu",
   scrollLabel: "Paketleri incele",
@@ -16,11 +16,11 @@ export const servicesPageTr = {
     "Ücretsiz görüşmede projenizi dinleyip doğru paketi birlikte belirleyelim ve 24 saat içinde size dönüş yaparız.",
   ctaPoint1: "Ücretsiz keşif görüşmesi",
   ctaPoint2: "Size özel paket önerisi",
-  ctaPoint3: "Net kapsam ve fiyat",
+  ctaPoint3: "Yazılı teklif",
   ctaButton: "Görüşme Planla",
   stats: [
     {
-      value: "3-112",
+      value: "7-120",
       label: "Teslim Süresi (Gün)",
       labelShort: "Teslim (Gün)",
       hint: "Tüm hizmet kategorilerindeki paketlerin tahmini teslim aralığı. Kapsam netleştikten sonra kesin takvim paylaşılır.",
@@ -32,16 +32,16 @@ export const servicesPageTr = {
       hint: "Yayın sonrası teknik destek, revizyon ve küçük düzenlemeler için ayrılan süre aralığı.",
     },
     {
-      value: "6",
+      value: "3",
       label: "Hizmet Alanları",
       labelShort: "Hizmet",
-      hint: "Web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım dahil altı farklı hizmet kategorisi.",
+      hint: "Web sitesi yapımı, uygulama yapımı ve dijital yenileme olmak üzere üç hizmet kategorisi.",
     },
     {
-      value: "14",
+      value: "9",
       label: "Hazır Paketler",
       labelShort: "Paketler",
-      hint: "Altı kategoride sunulan toplam hazır paket sayısı. Her paket farklı kapsam ve ölçek hedefler.",
+      hint: "Üç kategoride sunulan toplam hazır paket sayısı. Her paket farklı kapsam ve ölçek hedefler.",
     },
   ],
   ...servicesPackagesTr,

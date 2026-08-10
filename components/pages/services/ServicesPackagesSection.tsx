@@ -22,21 +22,12 @@ export async function ServicesPackagesSection({
     web: t.raw("webPackages") as Record<string, PackageCardData>,
     refresh: t.raw("refreshPackages") as Record<string, PackageCardData>,
     app: t.raw("appPackages") as Record<string, PackageCardData>,
-    seo: t.raw("seoPackages") as Record<string, PackageCardData>,
-    audit: t.raw("auditPackages") as Record<string, PackageCardData>,
-    maintenance: t.raw("maintenancePackages") as Record<
-      string,
-      PackageCardData
-    >,
   };
 
   const tabs: { id: PackageCategory; label: string }[] = [
     { id: "web", label: t("tabWeb") },
     { id: "app", label: t("tabApp") },
     { id: "refresh", label: t("tabRefresh") },
-    { id: "audit", label: t("tabAudit") },
-    { id: "seo", label: t("tabSeo") },
-    { id: "maintenance", label: t("tabMaintenance") },
   ];
 
   const activeCategory = lockedCategory ?? "web";
@@ -55,21 +46,6 @@ export async function ServicesPackagesSection({
       title: t("appIntroTitle"),
       p1: t("appIntroP1"),
       p2: t("appIntroP2"),
-    },
-    seo: {
-      title: t("seoIntroTitle"),
-      p1: t("seoIntroP1"),
-      p2: t("seoIntroP2"),
-    },
-    audit: {
-      title: t("auditIntroTitle"),
-      p1: t("auditIntroP1"),
-      p2: t("auditIntroP2"),
-    },
-    maintenance: {
-      title: t("maintenanceIntroTitle"),
-      p1: t("maintenanceIntroP1"),
-      p2: t("maintenanceIntroP2"),
     },
   }[activeCategory];
 
@@ -137,8 +113,6 @@ export async function ServicesPackagesSection({
             statPages: t("statPages"),
             statSupport: t("statSupport"),
             statLanguages: t("statLanguages"),
-            statPrice: t("statPrice"),
-            pricingGroupLabel: t("pricingGroupLabel"),
             getQuote: t("getQuote"),
             featureIncluded: t("featureIncluded"),
             featureNotIncluded: t("featureNotIncluded"),
@@ -159,21 +133,6 @@ export async function ServicesPackagesSection({
               title: t("appIntroTitle"),
               p1: t("appIntroP1"),
               p2: t("appIntroP2"),
-            },
-            seo: {
-              title: t("seoIntroTitle"),
-              p1: t("seoIntroP1"),
-              p2: t("seoIntroP2"),
-            },
-            audit: {
-              title: t("auditIntroTitle"),
-              p1: t("auditIntroP1"),
-              p2: t("auditIntroP2"),
-            },
-            maintenance: {
-              title: t("maintenanceIntroTitle"),
-              p1: t("maintenanceIntroP1"),
-              p2: t("maintenanceIntroP2"),
             },
           }}
           packages={packages}
