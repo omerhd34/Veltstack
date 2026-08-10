@@ -22,7 +22,7 @@ export const faqEn = {
     support: {
       label: "Post-Launch Support",
       labelShort: "Support",
-      hint: "Questions about maintenance packages, source code handover and refreshing your existing site.",
+      hint: "Questions about post-launch support, source code handover and refreshing your existing site.",
     },
   },
   scrollLabel: "Browse questions",
@@ -39,7 +39,7 @@ export const faqEn = {
           slug: "velstack-nedir",
           question: "What is Veltstack?",
           answer:
-            "The name Veltstack has two parts: Velt from velocity (speed and agility), and Stack for the technology stack. Veltstack is a full stack developer brand led by Ömer Halis Demir. It delivers website, mobile app, SEO, technical audit and maintenance services under one roof, combining agency-style professionalism with solo-developer agility.",
+            "The name Veltstack has two parts: Velt from velocity (speed and agility), and Stack for the technology stack. Veltstack is a full stack developer brand led by Ömer Halis Demir. It delivers website building, mobile apps and digital refresh under one roof, combining agency-style professionalism with solo-developer agility.",
         },
         {
           slug: "projelerde-kim-calisyor",
@@ -74,13 +74,13 @@ export const faqEn = {
           slug: "hangi-hizmetler",
           question: "What services do you offer?",
           answer:
-            "We offer website building, digital refresh, mobile app building, SEO services, technical audits and maintenance and support packages. Scope and package details are listed on each service page.",
+            "We offer website building, mobile app building and digital refresh. Scope and package details are listed on each service page.",
         },
         {
           slug: "proje-sureci",
           question: "How does the project process work?",
           answer:
-            "We start with needs analysis and a discovery call. Then we share scope, timeline and quotation. After approval we move to design and building with regular demos and feedback cycles. Post-launch maintenance and support options are available.",
+            "We start with needs analysis and a discovery call. Then we share scope, timeline and quotation. After approval we move to design and building with regular demos and feedback cycles. Post-launch technical support is planned according to the package.",
         },
         {
           slug: "teslim-suresi",
@@ -115,7 +115,7 @@ export const faqEn = {
           slug: "fiyatlar-sabit-mi",
           question: "Are prices fixed?",
           answer:
-            "Service pages show reference price ranges. The final quote is customized based on scope, integrations and delivery timeline. You can request a free initial assessment via the contact form or email.",
+            "We don't publish fixed package prices; every project gets a custom quote based on scope. The final amount depends on scope, integrations and delivery timeline. You can request a free initial assessment via the contact form or email.",
         },
         {
           slug: "odeme-nasil-yapilir",
@@ -133,7 +133,7 @@ export const faqEn = {
           slug: "proje-fiyatlari-nasil-belirleniyor",
           question: "How are project prices determined?",
           answer:
-            "Pricing depends on project scope, page or feature count, design complexity, third-party integrations, content preparation and delivery timeline. Service pages show reference ranges; the final quote is shared in writing after the discovery call. Unexpected scope changes are presented for your approval before proceeding.",
+            "Pricing depends on project scope, page or feature count, design complexity, third-party integrations, content preparation and delivery timeline. We don't publish fixed package prices; the final quote is shared in writing after the discovery call. Unexpected scope changes are presented for your approval before proceeding.",
         },
       ],
     },
@@ -144,7 +144,7 @@ export const faqEn = {
           slug: "yayin-sonrasi-destek",
           question: "Do you provide post-launch support?",
           answer:
-            "Yes. Maintenance and support packages cover security updates, minor content changes, performance monitoring and technical support. Packages can be planned monthly or annually based on your needs.",
+            "Yes. Post-launch support covers security updates, minor content changes, performance monitoring and technical assistance. Scope and duration are defined upfront in the project package.",
         },
         {
           slug: "kaynak-kod-ve-erisimler",
@@ -162,7 +162,7 @@ export const faqEn = {
           slug: "veri-guvenligi-yedekleme",
           question: "Is my data safe? Do you handle backups?",
           answer:
-            "Yes. We treat core security practices as standard: HTTPS, secure authentication and access control. We configure automatic backups on hosting and database providers; for critical projects we add extra backup and restore procedures. Maintenance packages include regular backup checks and security updates.",
+            "Yes. We treat core security practices as standard: HTTPS, secure authentication and access control. We configure automatic backups on hosting and database providers; for critical projects we add extra backup and restore procedures. Post-launch support includes regular backup checks and security updates.",
         },
       ],
     },
@@ -196,13 +196,13 @@ export const faqEn = {
           slug: "seo-dahil-mi",
           question: "Is SEO included in the project?",
           answer:
-            "We set up essential SEO infrastructure on every web project: meaningful URLs, meta tags, sitemap, robots.txt and mobile responsiveness. For in-depth keyword research, content optimisation and ongoing SEO tracking, we offer dedicated SEO service packages.",
+            "We set up essential SEO infrastructure on every web project: meaningful URLs, meta tags, sitemap, robots.txt and mobile responsiveness. Deeper keyword research, content optimisation and ongoing SEO tracking are scoped separately within the project when needed.",
         },
         {
           slug: "performans-optimizasyonu",
           question: "Do you prioritise site speed and performance?",
           answer:
-            "Yes. We target Core Web Vitals through image optimisation, code splitting, caching strategies and modern hosting. Performance tests run before launch; maintenance packages include ongoing monitoring and improvement recommendations.",
+            "Yes. We target Core Web Vitals through image optimisation, code splitting, caching strategies and modern hosting. Performance tests run before launch; post-launch support includes monitoring and improvement recommendations.",
         },
         {
           slug: "analitik-kurulumu",
