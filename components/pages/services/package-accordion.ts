@@ -16,6 +16,10 @@ export interface PackageFeatureItem {
 const exclusiveItemPatterns: RegExp[] = [/^\d+\s*(g[üu]n|days?)\b/i];
 
 const languagesGroupNeedles = [
+  "geliştirme",
+  "development",
+  "altyapı",
+  "infrastructure",
   "içerik",
   "content",
   "özellik",
