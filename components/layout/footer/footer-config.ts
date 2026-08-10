@@ -1,6 +1,4 @@
 import type { NavProjectKey } from "@/components/layout/navbar/nav-projects";
-import type { NavServiceKey } from "@/components/layout/navbar/nav-services";
-import { serviceItems } from "@/components/sections/services/service-items";
 import { projectItems } from "@/components/sections/projects/project-items";
 import type { IconType } from "react-icons";
 import {
@@ -23,22 +21,6 @@ import {
   LuUsers,
   LuWrench,
 } from "react-icons/lu";
-
-export const footerServiceItems = [
-  "web-sitesi-gelistirme",
-  "uygulama-gelistirme",
-  "seo-hizmetleri",
-  "web-sitesi-yenileme",
-  "teknik-denetim",
-  "bakim-ve-destek",
-].map((slug) => {
-  const service = serviceItems.find((item) => item.slug === slug)!;
-  return {
-    href: service.href,
-    navKey: service.navDescKey.replace(/Desc$/, "") as NavServiceKey,
-    icon: service.icon,
-  };
-});
 
 export const footerProjectItems = projectItems.map((project) => ({
   href: project.href,
