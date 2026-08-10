@@ -41,7 +41,7 @@ ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 
 <div class="blog-callout">
   <p class="blog-callout-title">Veltstack perspektifi</p>
-  <p>Veltstack olarak web sitesi, mobil uygulama, SEO ve bakım hizmetlerini tek çatı altında sunuyoruz, proje boyunca tutarlı iletişim ve kalite garantisi sağlıyoruz.</p>
+  <p>Veltstack olarak web sitesi, mobil uygulama ve dijital yenileme hizmetlerini tek çatı altında sunuyoruz, proje boyunca tutarlı iletişim ve kalite garantisi sağlıyoruz.</p>
 </div>
 
 <h2>Freelancer Seçerken Dikkat Edilecekler</h2>
@@ -79,7 +79,7 @@ ${BLOG_FREELANCER_PLATFORMS_PLACEHOLDER}
 
 <div class="blog-callout">
   <p class="blog-callout-title">Veltstack perspective</p>
-  <p>At Veltstack we deliver website, mobile app, SEO and maintenance under one roof, consistent communication and quality across the project.</p>
+  <p>At Veltstack we deliver website building, mobile apps and digital refresh under one roof, consistent communication and quality across the project.</p>
 </div>
 
 <h2>Tips for Choosing a Freelancer</h2>

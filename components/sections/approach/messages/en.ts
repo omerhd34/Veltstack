@@ -73,8 +73,8 @@ export const approachEn = {
     },
     {
       step: "12",
-      title: "Maintenance & Support",
-      desc: "Security updates, technical support, and periodic maintenance keep us by your side. Fast response in urgent cases, predictable support in the routine.",
+      title: "Post-Launch Support",
+      desc: "Security updates, technical support, and periodic checks keep us by your side. Fast response in urgent cases, predictable support in the routine.",
       timing: "15–45 days support",
     },
   ],

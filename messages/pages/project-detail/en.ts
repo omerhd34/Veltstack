@@ -297,7 +297,7 @@ export const projectDetailsEn = {
       {
         title: "Service Packages",
         description:
-          "Clear package structure for web, mobile, SEO and maintenance.",
+          "Clear package structure for website, mobile and digital refresh.",
       },
       {
         title: "Blog & Content",

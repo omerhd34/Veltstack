@@ -298,7 +298,7 @@ export const projectDetailsTr = {
       {
         title: "Hizmet Paketleri",
         description:
-          "Web, mobil, SEO ve bakım hizmetleri için net paket yapısı.",
+          "Web sitesi, mobil uygulama ve dijital yenileme için net paket yapısı.",
       },
       {
         title: "Blog & İçerik",

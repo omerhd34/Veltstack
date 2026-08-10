@@ -73,8 +73,8 @@ export const approachTr = {
     },
     {
       step: "12",
-      title: "Bakım & Destek",
-      desc: "Güvenlik güncellemeleri, teknik destek ve periyodik bakımla projenizin yanında kalırız. Acil durumlarda hızlı müdahale, rutinde öngörülebilir bir destek ritmi sunarız.",
+      title: "Yayın Sonrası Destek",
+      desc: "Güvenlik güncellemeleri, teknik destek ve periyodik kontrollerle projenizin yanında kalırız. Acil durumlarda hızlı müdahale, rutinde öngörülebilir bir destek ritmi sunarız.",
       timing: "15–45 gün destek",
     },
   ],
