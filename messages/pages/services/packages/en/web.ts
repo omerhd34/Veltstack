@@ -28,6 +28,7 @@ const commonSupportStandartItems = [
   "User guide and short admin training",
 ] as const;
 
+const GROUP_PANEL = "Content & Admin";
 const GROUP_LAUNCH = "Launch & Delivery";
 const GROUP_SUPPORT = "Technical Support";
 
@@ -47,7 +48,7 @@ const tierSeoStandartItems = [
 const tierSeoProItems = [
   ...tierSeoStandartItems,
   "Comprehensive technical SEO and indexing optimization",
-  "Organization, BreadcrumbList and rich-result schema",
+  "Organization, BreadcrumbList & rich-result schema",
   "Conversion tracking (forms, clicks, CTAs)",
   "Live chat or WhatsApp integration",
   "CRM / email marketing tool connection",
@@ -74,7 +75,7 @@ export const webPackagesEn = {
           },
           { label: "SEO & Integration", items: [...tierSeoTemelItems] },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: [
               "Services and project showcase sections",
               "Contact and call-to-action areas",
@@ -101,7 +102,7 @@ export const webPackagesEn = {
           },
           { label: "SEO & Integration", items: [...tierSeoStandartItems] },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: [
               "Services and project showcase sections",
               "Contact and call-to-action areas",
@@ -139,7 +140,7 @@ export const webPackagesEn = {
           },
           { label: "SEO & Integration", items: [...tierSeoProItems] },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: [
               "Services and project showcase sections",
               "Contact and call-to-action areas",
@@ -183,7 +184,7 @@ export const webPackagesEn = {
           },
           { label: "SEO & Integration", items: [...tierSeoTemelItems] },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: [
               "Services, about and contact pages",
               "Forms routed to corporate email",
@@ -210,7 +211,7 @@ export const webPackagesEn = {
           },
           { label: "SEO & Integration", items: [...tierSeoStandartItems] },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: [
               "Services, about and contact pages",
               "Forms routed to corporate email",
@@ -250,7 +251,7 @@ export const webPackagesEn = {
           },
           { label: "SEO & Integration", items: [...tierSeoProItems] },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: [
               "Services, about and contact pages",
               "Forms routed to corporate email",
@@ -308,7 +309,7 @@ export const webPackagesEn = {
             ],
           },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: ["Product, category and order management"],
           },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
@@ -351,7 +352,7 @@ export const webPackagesEn = {
             ],
           },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: [
               "Product, category and order management",
               "Store management panel",
@@ -414,7 +415,7 @@ export const webPackagesEn = {
             ],
           },
           {
-            label: "Content & Panel",
+            label: GROUP_PANEL,
             items: [
               "Product, category and order management",
               "Store management panel",

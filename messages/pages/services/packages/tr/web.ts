@@ -28,6 +28,7 @@ const commonSupportStandartItems = [
   "Kullanım kılavuzu ve kısa yönetim eğitimi",
 ] as const;
 
+const GROUP_PANEL = "İçerik & Yönetim";
 const GROUP_LAUNCH = "Yayın & Teslimat";
 const GROUP_SUPPORT = "Teknik Destek";
 
@@ -47,7 +48,7 @@ const tierSeoStandartItems = [
 const tierSeoProItems = [
   ...tierSeoStandartItems,
   "Kapsamlı teknik SEO ve indeksleme optimizasyonu",
-  "Organization, BreadcrumbList ve zengin sonuç schema yapıları",
+  "Organization, BreadcrumbList ve zengin sonuç schema",
   "Dönüşüm takibi (form, tıklama, CTA)",
   "Canlı destek veya WhatsApp entegrasyonu",
   "CRM / e-posta pazarlama aracı bağlantısı",
@@ -71,7 +72,7 @@ export const webPackagesTr = {
           { label: "Geliştirme & Altyapı", items: [...commonDesignItems] },
           { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: [
               "Hizmet ve proje tanıtım bölümleri",
               "İletişim ve çağrıya yönlendirme alanları",
@@ -98,7 +99,7 @@ export const webPackagesTr = {
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: [
               "Hizmet ve proje tanıtım bölümleri",
               "İletişim ve çağrıya yönlendirme alanları",
@@ -136,7 +137,7 @@ export const webPackagesTr = {
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: [
               "Hizmet ve proje tanıtım bölümleri",
               "İletişim ve çağrıya yönlendirme alanları",
@@ -177,7 +178,7 @@ export const webPackagesTr = {
           { label: "Geliştirme & Altyapı", items: [...commonDesignItems] },
           { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: [
               "Hizmetler, hakkımızda ve iletişim sayfaları",
               "Kurumsal e-posta yönlendirmeli formlar",
@@ -204,7 +205,7 @@ export const webPackagesTr = {
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: [
               "Hizmetler, hakkımızda ve iletişim sayfaları",
               "Kurumsal e-posta yönlendirmeli formlar",
@@ -244,7 +245,7 @@ export const webPackagesTr = {
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: [
               "Hizmetler, hakkımızda ve iletişim sayfaları",
               "Kurumsal e-posta yönlendirmeli formlar",
@@ -299,7 +300,7 @@ export const webPackagesTr = {
             ],
           },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: ["Ürün, kategori ve sipariş yönetimi"],
           },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
@@ -342,7 +343,7 @@ export const webPackagesTr = {
             ],
           },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: [
               "Ürün, kategori ve sipariş yönetimi",
               "Mağaza yönetim paneli",
@@ -405,7 +406,7 @@ export const webPackagesTr = {
             ],
           },
           {
-            label: "İçerik & Yönetim Paneli",
+            label: GROUP_PANEL,
             items: [
               "Ürün, kategori ve sipariş yönetimi",
               "Mağaza yönetim paneli",
