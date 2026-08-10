@@ -28,19 +28,19 @@ const commonSupportStandartItems = [
   "User guide and short admin training",
 ] as const;
 
+const GROUP_DEV = "Development & Infrastructure";
+const GROUP_SEO = "SEO & Analytics";
+const GROUP_INTEGRATION = "Integrations";
 const GROUP_PANEL = "Content & Admin";
 const GROUP_LAUNCH = "Launch & Delivery";
 const GROUP_SUPPORT = "Technical Support";
+const GROUP_STORE = "Store & Payment";
 
-const tierSeoTemelItems = [
-  ...commonSeoItems,
-  ...commonIntegrationItems,
-] as const;
+const tierSeoTemelItems = [...commonSeoItems] as const;
 
 const tierSeoStandartItems = [
   ...commonSeoItems,
   "Meta, Open Graph and baseline schema optimization",
-  ...commonIntegrationItems,
   "Search visibility tracking (Google Search Console)",
   "Visitor and traffic measurement (Google Analytics 4)",
 ] as const;
@@ -50,8 +50,22 @@ const tierSeoProItems = [
   "Comprehensive technical SEO and indexing optimization",
   "Organization, BreadcrumbList & rich-result schema",
   "Conversion tracking (forms, clicks, CTAs)",
+] as const;
+
+const tierIntegrationTemelItems = [...commonIntegrationItems] as const;
+
+const tierIntegrationStandartItems = [...commonIntegrationItems] as const;
+
+const tierIntegrationProItems = [
+  ...commonIntegrationItems,
   "Live chat or WhatsApp integration",
   "CRM / email marketing tool connection",
+] as const;
+
+const tierIntegrationEcommerceProItems = [
+  ...commonIntegrationItems,
+  "Live chat or WhatsApp integration",
+  "CRM, SMS and marketing tool integration",
 ] as const;
 
 export const webPackagesEn = {
@@ -60,21 +74,18 @@ export const webPackagesEn = {
     description:
       "Present your personal brand or business with a modern website that builds trust. Showcase your portfolio, services and story in a clear, compelling digital storefront.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to promotional projects of different scales. I clarify scope around your needs and build a structure that can grow with you. If none of the packages fit, feel free to get in touch.",
+      "Startup, Professional and Advanced tiers adapt to promotional projects of different scales. I clarify scope around your needs and build a structure that can grow with you. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "10-14",
-        price: "₺30,000",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
         languages: "1",
         featureGroups: [
-          {
-            label: "Development & Infrastructure",
-            items: [...commonDesignItems],
-          },
-          { label: "SEO & Integration", items: [...tierSeoTemelItems] },
+          { label: GROUP_DEV, items: [...commonDesignItems] },
+          { label: GROUP_SEO, items: [...tierSeoTemelItems] },
+          { label: GROUP_INTEGRATION, items: [...tierIntegrationTemelItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -88,21 +99,24 @@ export const webPackagesEn = {
       },
       standart: {
         deliveryDays: "21-30",
-        price: "₺45,000",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
               "Dark / light mode support",
               "Smooth page transitions and micro-interactions",
             ],
           },
-          { label: "SEO & Integration", items: [...tierSeoStandartItems] },
+          { label: GROUP_SEO, items: [...tierSeoStandartItems] },
+          {
+            label: GROUP_INTEGRATION,
+            items: [...tierIntegrationStandartItems],
+          },
           {
             label: GROUP_PANEL,
             items: [
@@ -113,10 +127,7 @@ export const webPackagesEn = {
               "Content management panel",
             ],
           },
-          {
-            label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -125,14 +136,13 @@ export const webPackagesEn = {
       },
       pro: {
         deliveryDays: "30-45",
-        price: "₺70,000",
         revisions: "7",
         supportDays: "45",
         pages: "Unlimited",
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
               "Dark / light mode support",
@@ -141,7 +151,8 @@ export const webPackagesEn = {
               "Scalable infrastructure for high traffic",
             ],
           },
-          { label: "SEO & Integration", items: [...tierSeoProItems] },
+          { label: GROUP_SEO, items: [...tierSeoProItems] },
+          { label: GROUP_INTEGRATION, items: [...tierIntegrationProItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -154,10 +165,7 @@ export const webPackagesEn = {
               "Project filtering and category management",
             ],
           },
-          {
-            label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -172,21 +180,18 @@ export const webPackagesEn = {
     description:
       "A trustworthy corporate website aligned with your brand identity and built to win customers. Present your services, team and contact channels in a professional structure.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to corporate web projects of different scales. On Premium, you can grow without page limits. If none of the packages fit, feel free to get in touch.",
+      "Startup, Professional and Advanced tiers adapt to corporate web projects of different scales. On Advanced, you can grow without page limits. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
-        price: "₺45,000",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
         languages: "1",
         featureGroups: [
-          {
-            label: "Development & Infrastructure",
-            items: [...commonDesignItems],
-          },
-          { label: "SEO & Integration", items: [...tierSeoTemelItems] },
+          { label: GROUP_DEV, items: [...commonDesignItems] },
+          { label: GROUP_SEO, items: [...tierSeoTemelItems] },
+          { label: GROUP_INTEGRATION, items: [...tierIntegrationTemelItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -200,21 +205,24 @@ export const webPackagesEn = {
       },
       standart: {
         deliveryDays: "28-42",
-        price: "₺70,000",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
               "Dark / light mode support",
               "Smooth page transitions and micro-interactions",
             ],
           },
-          { label: "SEO & Integration", items: [...tierSeoStandartItems] },
+          { label: GROUP_SEO, items: [...tierSeoStandartItems] },
+          {
+            label: GROUP_INTEGRATION,
+            items: [...tierIntegrationStandartItems],
+          },
           {
             label: GROUP_PANEL,
             items: [
@@ -227,10 +235,7 @@ export const webPackagesEn = {
               "Media / press kit and document area",
             ],
           },
-          {
-            label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -239,14 +244,13 @@ export const webPackagesEn = {
       },
       pro: {
         deliveryDays: "42-60",
-        price: "₺95,000",
         revisions: "8",
         supportDays: "45",
         pages: "Unlimited",
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
               "Dark / light mode support",
@@ -255,7 +259,8 @@ export const webPackagesEn = {
               "Scalable infrastructure for high traffic",
             ],
           },
-          { label: "SEO & Integration", items: [...tierSeoProItems] },
+          { label: GROUP_SEO, items: [...tierSeoProItems] },
+          { label: GROUP_INTEGRATION, items: [...tierIntegrationProItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -271,10 +276,7 @@ export const webPackagesEn = {
               "Video gallery and media management",
             ],
           },
-          {
-            label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -289,23 +291,20 @@ export const webPackagesEn = {
     description:
       "A modern ecommerce solution with secure payments so you can start selling online fast. Manage products, orders and the customer experience from a single scalable storefront.",
     introP2:
-      "Startup, Professional and Premium tiers scale with different product catalogs and order volumes. On Premium, you can scale without product or category limits. If none of the packages fit, feel free to get in touch.",
+      "Startup, Professional and Advanced tiers scale with different product catalogs and order volumes. On Advanced, you can scale without product or category limits. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
-        price: "₺70,000",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
         languages: "1",
         featureGroups: [
+          { label: GROUP_DEV, items: [...commonDesignItems] },
+          { label: GROUP_SEO, items: [...tierSeoTemelItems] },
+          { label: GROUP_INTEGRATION, items: [...tierIntegrationTemelItems] },
           {
-            label: "Development & Infrastructure",
-            items: [...commonDesignItems],
-          },
-          { label: "SEO & Integration", items: [...tierSeoTemelItems] },
-          {
-            label: "Store & Payment",
+            label: GROUP_STORE,
             items: [
               "Product listing and detail pages",
               "Category management",
@@ -325,23 +324,26 @@ export const webPackagesEn = {
       },
       standart: {
         deliveryDays: "42-56",
-        price: "₺85,000",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
               "Dark / light mode support",
               "Smooth page transitions and micro-interactions",
             ],
           },
-          { label: "SEO & Integration", items: [...tierSeoStandartItems] },
+          { label: GROUP_SEO, items: [...tierSeoStandartItems] },
           {
-            label: "Store & Payment",
+            label: GROUP_INTEGRATION,
+            items: [...tierIntegrationStandartItems],
+          },
+          {
+            label: GROUP_STORE,
             items: [
               "Product listing and detail pages",
               "Category management",
@@ -367,10 +369,7 @@ export const webPackagesEn = {
               "Customer and stock management",
             ],
           },
-          {
-            label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -379,14 +378,13 @@ export const webPackagesEn = {
       },
       pro: {
         deliveryDays: "56-84",
-        price: "₺100,000",
         revisions: "10",
         supportDays: "45",
         pages: "Unlimited",
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
               "Dark / light mode support",
@@ -395,9 +393,13 @@ export const webPackagesEn = {
               "Scalable infrastructure for high traffic",
             ],
           },
-          { label: "SEO & Integration", items: [...tierSeoProItems] },
+          { label: GROUP_SEO, items: [...tierSeoProItems] },
           {
-            label: "Store & Payment",
+            label: GROUP_INTEGRATION,
+            items: [...tierIntegrationEcommerceProItems],
+          },
+          {
+            label: GROUP_STORE,
             items: [
               "Product listing and detail pages",
               "Category management",
@@ -431,13 +433,9 @@ export const webPackagesEn = {
               "Customer and stock management",
               "Multi-currency support",
               "Blog and content marketing module",
-              "CRM, SMS and marketing tool integration",
             ],
           },
-          {
-            label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],

@@ -1,3 +1,11 @@
+const GROUP_DEV = "Development & Infrastructure";
+const GROUP_FEATURES = "Features & Functions";
+const GROUP_STORE = "Store & Payment";
+const GROUP_INTEGRATION = "Integrations";
+const GROUP_SECURITY = "Security & Analytics";
+const GROUP_LAUNCH = "Launch & Delivery";
+const GROUP_SUPPORT = "Technical Support";
+
 const commonDesignTemelItems = [
   "Cross-platform iOS and Android build",
   "Brand-aligned UI/UX",
@@ -6,11 +14,10 @@ const commonDesignTemelItems = [
   "Fast launch and performance optimization",
 ] as const;
 
-const commonDeliveryBase = [
+const commonLaunchItems = [
   "Source code and project file delivery",
   "App Store and Play Store publishing support",
   "Store listing screenshots and descriptions",
-  "Technical Support",
 ] as const;
 
 const commonSecurityTemelItems = [
@@ -82,6 +89,8 @@ const ecommerceStoreStandart = [
   "Favorites and order history",
   "Saved address management",
   "Multiple payments (card, bank transfer)",
+  "Coupon and cart discount support",
+  "Order and campaign push notifications",
 ] as const;
 
 const ecommerceStorePro = [
@@ -89,9 +98,12 @@ const ecommerceStorePro = [
   "Favorites and order history",
   "Saved address management",
   "Multiple payments (card, bank transfer)",
+  "Coupon and cart discount support",
+  "Order and campaign push notifications",
   "Advanced stock and dynamic variant management",
   "Product reviews and star ratings",
   "Multi-currency support",
+  "Abandoned cart and personalized notifications",
 ] as const;
 
 export const appPackagesEn = {
@@ -100,47 +112,36 @@ export const appPackagesEn = {
     description:
       "A trusted iOS and Android app that introduces your brand in one tap. Bring your portfolio, services and contact channels to users’ pockets.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to promotional apps of different scales. We build once for iOS and Android—from store publishing to integrations.",
+      "Startup, Professional and Advanced tiers adapt to promotional apps of different scales. We build once for iOS and Android—from store publishing to integrations.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
-        price: "₺50,000",
         revisions: "3",
         supportDays: "15",
         languages: "1",
         featureGroups: [
+          { label: GROUP_DEV, items: [...commonDesignTemelItems] },
+          { label: GROUP_FEATURES, items: [...portfolioFeaturesTemel] },
           {
-            label: "Development & Infrastructure",
-            items: [...commonDesignTemelItems],
+            label: GROUP_INTEGRATION,
+            items: ["REST API connection", "Map and location display"],
           },
           {
-            label: "Features & Functions",
-            items: [...portfolioFeaturesTemel],
+            label: GROUP_SECURITY,
+            items: ["Firebase Analytics setup", ...commonSecurityTemelItems],
           },
-          {
-            label: "Integration & Security",
-            items: [
-              "REST API connection",
-              "Map and location display",
-              "Firebase Analytics setup",
-              ...commonSecurityTemelItems,
-            ],
-          },
-          {
-            label: "Support",
-            items: [...commonDeliveryBase, "Basic user guide"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          { label: GROUP_SUPPORT, items: ["Basic user guide"] },
         ],
       },
       standart: {
         deliveryDays: "30-45",
-        price: "₺70,000",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignTemelItems,
               "Premium UI components",
@@ -148,38 +149,34 @@ export const appPackagesEn = {
               "Advanced device and screen compatibility testing",
             ],
           },
+          { label: GROUP_FEATURES, items: [...portfolioFeaturesStandart] },
           {
-            label: "Features & Functions",
-            items: [...portfolioFeaturesStandart],
-          },
-          {
-            label: "Integration & Security",
+            label: GROUP_INTEGRATION,
             items: [
               "Advanced REST API integration",
               "Social sharing integration",
               "Map and location display",
-              "Firebase Analytics setup",
-              ...commonSecurityTemelItems,
             ],
           },
           {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "User guide and short admin training",
-            ],
+            label: GROUP_SECURITY,
+            items: ["Firebase Analytics setup", ...commonSecurityTemelItems],
+          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          {
+            label: GROUP_SUPPORT,
+            items: ["User guide and short admin training"],
           },
         ],
       },
       pro: {
         deliveryDays: "45-60",
-        price: "₺90,000",
         revisions: "7",
         supportDays: "45",
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignTemelItems,
               "Dark / light mode support",
@@ -188,24 +185,22 @@ export const appPackagesEn = {
               "Scalable high-performance infrastructure",
             ],
           },
+          { label: GROUP_FEATURES, items: [...portfolioFeaturesPro] },
           {
-            label: "Features & Functions",
-            items: [...portfolioFeaturesPro],
+            label: GROUP_INTEGRATION,
+            items: ["Custom API and third-party integrations"],
           },
           {
-            label: "Integration & Security",
+            label: GROUP_SECURITY,
             items: [
-              "Custom API and third-party integrations",
               "Firebase and GA4 analytics setup",
               "KVKK / GDPR compliant security stack",
             ],
           },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
           {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "Comprehensive training and documentation",
-            ],
+            label: GROUP_SUPPORT,
+            items: ["Comprehensive training and documentation"],
           },
         ],
       },
@@ -216,17 +211,16 @@ export const appPackagesEn = {
     description:
       "A reliable corporate mobile experience for employees or customers. Deliver content, communication and workflows in a consistent iOS and Android interface.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to corporate mobile projects of different scales. We build once for iOS and Android.",
+      "Startup, Professional and Advanced tiers adapt to corporate mobile projects of different scales. We build once for iOS and Android.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
-        price: "₺65,000",
         revisions: "3",
         supportDays: "15",
         languages: "1",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               "Brand-aligned iOS / Android UI",
               "Brand-aligned UI/UX",
@@ -234,33 +228,27 @@ export const appPackagesEn = {
               "Performance and device optimization",
             ],
           },
+          { label: GROUP_FEATURES, items: [...corporateFeaturesTemel] },
           {
-            label: "Features & Functions",
-            items: [...corporateFeaturesTemel],
-          },
-          {
-            label: "Integration & Security",
+            label: GROUP_SECURITY,
             items: [
               "Firebase Analytics setup",
               "Data encryption",
               ...commonSecurityTemelItems,
             ],
           },
-          {
-            label: "Support",
-            items: [...commonDeliveryBase, "Basic user guide"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          { label: GROUP_SUPPORT, items: ["Basic user guide"] },
         ],
       },
       standart: {
         deliveryDays: "42-56",
-        price: "₺85,000",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               "Custom corporate iOS / Android UI",
               "Premium components and modern interface",
@@ -268,38 +256,40 @@ export const appPackagesEn = {
               "Advanced performance and battery optimization",
             ],
           },
+          { label: GROUP_FEATURES, items: [...corporateFeaturesStandart] },
           {
-            label: "Features & Functions",
-            items: [...corporateFeaturesStandart],
+            label: GROUP_INTEGRATION,
+            items: ["API integration with existing company systems"],
           },
           {
-            label: "Integration & Security",
+            label: GROUP_SECURITY,
             items: [
               "Analytics and crash tracking (Crashlytics)",
-              "API integration with existing company systems",
               "KVKK-compliant data processing",
             ],
           },
           {
-            label: "Support",
+            label: GROUP_LAUNCH,
             items: [
-              ...commonDeliveryBase.slice(0, 2),
+              ...commonLaunchItems.slice(0, 2),
               "App Store and Play Store organization account setup",
-              ...commonDeliveryBase.slice(2),
-              "User guide and short admin training",
+              ...commonLaunchItems.slice(2),
             ],
+          },
+          {
+            label: GROUP_SUPPORT,
+            items: ["User guide and short admin training"],
           },
         ],
       },
       pro: {
         deliveryDays: "56-84",
-        price: "₺100,000",
         revisions: "8",
         supportDays: "45",
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               "High-performance custom corporate stack",
               "Pixel-perfect corporate Figma-to-code UI",
@@ -307,24 +297,19 @@ export const appPackagesEn = {
               "Dark / light mode support",
             ],
           },
+          { label: GROUP_FEATURES, items: [...corporateFeaturesPro] },
+          { label: GROUP_INTEGRATION, items: ["CRM / ERP integration"] },
           {
-            label: "Features & Functions",
-            items: [...corporateFeaturesPro],
-          },
-          {
-            label: "Integration & Security",
+            label: GROUP_SECURITY,
             items: [
-              "CRM / ERP integration",
               "Biometric login (Face ID, fingerprint)",
               "KVKK / GDPR compliant security stack",
             ],
           },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
           {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "Corporate user guide and comprehensive training",
-            ],
+            label: GROUP_SUPPORT,
+            items: ["Corporate user guide and comprehensive training"],
           },
         ],
       },
@@ -335,17 +320,16 @@ export const appPackagesEn = {
     description:
       "A store-ready ecommerce app with payments, catalog and order management. Bring your cart flow and customer journey to mobile with a smooth, trustworthy experience.",
     introP2:
-      "Startup, Professional and Premium tiers scale with different catalogs and order volumes. If you are unsure which package to choose, feel free to get in touch.",
+      "Startup, Professional and Advanced tiers scale with different catalogs and order volumes. If you are unsure which package to choose, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "42-56",
-        price: "₺75,000",
         revisions: "3",
         supportDays: "15",
         languages: "1",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               "Ecommerce-focused iOS / Android UI",
               "Brand-aligned UI/UX",
@@ -353,34 +337,31 @@ export const appPackagesEn = {
               "Fast product image loading optimization",
             ],
           },
+          { label: GROUP_STORE, items: [...ecommerceStoreTemel] },
           {
-            label: "Store & Functions",
-            items: [...ecommerceStoreTemel],
+            label: GROUP_INTEGRATION,
+            items: ["Single payment gateway integration"],
           },
           {
-            label: "Marketing & Security",
+            label: GROUP_SECURITY,
             items: [
-              "Single payment gateway integration",
               "SSL data security and API communication",
               "Distance sales agreement and privacy module",
               "Firebase Analytics setup",
             ],
           },
-          {
-            label: "Support",
-            items: [...commonDeliveryBase, "Basic store user guide"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          { label: GROUP_SUPPORT, items: ["Basic store user guide"] },
         ],
       },
       standart: {
         deliveryDays: "56-77",
-        price: "₺90,000",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               "Premium ecommerce iOS / Android UI",
               "Advanced filtering and infinite scroll",
@@ -388,36 +369,34 @@ export const appPackagesEn = {
               "Smooth category transitions and animations",
             ],
           },
+          { label: GROUP_STORE, items: [...ecommerceStoreStandart] },
           {
-            label: "Store & Functions",
-            items: [...ecommerceStoreStandart],
+            label: GROUP_INTEGRATION,
+            items: ["Single payment gateway integration"],
           },
           {
-            label: "Marketing & Security",
+            label: GROUP_SECURITY,
             items: [
-              "Order and campaign push notifications",
-              "Coupon and cart discount support",
+              "SSL data security and API communication",
               "Privacy and legal consent infrastructure",
+              "Firebase Analytics setup",
             ],
           },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
           {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "User guide and short admin training",
-            ],
+            label: GROUP_SUPPORT,
+            items: ["User guide and short admin training"],
           },
         ],
       },
       pro: {
         deliveryDays: "84-120",
-        price: "₺100,000",
         revisions: "8",
         supportDays: "45",
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               "Native-feel high-performance custom stack",
               "Pixel-perfect ecommerce Figma-to-code UI",
@@ -425,24 +404,26 @@ export const appPackagesEn = {
               "Dark / light mode support",
             ],
           },
+          { label: GROUP_STORE, items: [...ecommerceStorePro] },
           {
-            label: "Store & Functions",
-            items: [...ecommerceStorePro],
-          },
-          {
-            label: "Marketing & Security",
+            label: GROUP_INTEGRATION,
             items: [
-              "Abandoned cart and personalized notifications",
-              "GA4 / Firebase ecommerce conversion analytics",
+              "Single payment gateway integration",
               "Shipping, logistics and Apple / Google Pay integration",
             ],
           },
           {
-            label: "Support",
+            label: GROUP_SECURITY,
             items: [
-              ...commonDeliveryBase,
-              "Comprehensive store management training",
+              "SSL data security and API communication",
+              "Privacy and legal consent infrastructure",
+              "GA4 / Firebase ecommerce conversion analytics",
             ],
+          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          {
+            label: GROUP_SUPPORT,
+            items: ["Comprehensive store management training"],
           },
         ],
       },

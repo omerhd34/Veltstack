@@ -1,3 +1,11 @@
+const GROUP_DEV = "Geliştirme & Altyapı";
+const GROUP_FEATURES = "Özellikler & Fonksiyonlar";
+const GROUP_STORE = "Mağaza & Ödeme";
+const GROUP_INTEGRATION = "Entegrasyonlar";
+const GROUP_SECURITY = "Güvenlik & Analitik";
+const GROUP_LAUNCH = "Yayın & Teslimat";
+const GROUP_SUPPORT = "Teknik Destek";
+
 const commonDesignTemelItems = [
   "iOS ve Android uyumlu yapım",
   "Marka renklerine uyumlu UI/UX",
@@ -6,11 +14,10 @@ const commonDesignTemelItems = [
   "Hızlı açılış ve performans optimizasyonu",
 ] as const;
 
-const commonDeliveryBase = [
+const commonLaunchItems = [
   "Kaynak kodu ve proje dosyalarının teslimi",
   "App Store ve Play Store yayın desteği",
   "Mağaza listeleme görselleri ve açıklama metinleri",
-  "Teknik Destek",
 ] as const;
 
 const commonSecurityTemelItems = [
@@ -82,6 +89,8 @@ const ecommerceStoreStandart = [
   "Favoriler ve sipariş geçmişi",
   "Kayıtlı adres yönetimi",
   "Çoklu ödeme (kart, havale)",
+  "Kupon ve sepet indirimi desteği",
+  "Sipariş ve kampanya push bildirimleri",
 ] as const;
 
 const ecommerceStorePro = [
@@ -89,9 +98,12 @@ const ecommerceStorePro = [
   "Favoriler ve sipariş geçmişi",
   "Kayıtlı adres yönetimi",
   "Çoklu ödeme (kart, havale)",
+  "Kupon ve sepet indirimi desteği",
+  "Sipariş ve kampanya push bildirimleri",
   "Gelişmiş stok ve dinamik varyasyon yönetimi",
   "Ürün yorumu ve yıldızlı değerlendirme",
   "Çoklu para birimi desteği",
+  "Terk edilen sepet ve kişiselleştirilmiş bildirimler",
 ] as const;
 
 export const appPackagesTr = {
@@ -100,47 +112,36 @@ export const appPackagesTr = {
     description:
       "Markanızı tek dokunuşla tanıtan, güven veren iOS ve Android uygulaması. Portföyünüzü, hizmetlerinizi ve iletişim kanallarınızı kullanıcıların cebine taşıyın.",
     introP2:
-      "Girişim, Profesyonel ve Premium paketleri farklı ölçeklerdeki tanıtım uygulamalarına uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz; mağaza yayınından entegrasyonlara kadar yanınızdayım.",
+      "Girişim, Profesyonel ve Gelişmiş paketleri farklı ölçeklerdeki tanıtım uygulamalarına uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz; mağaza yayınından entegrasyonlara kadar yanınızdayım.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
-        price: "50.000 ₺",
         revisions: "3",
         supportDays: "15",
         languages: "1",
         featureGroups: [
+          { label: GROUP_DEV, items: [...commonDesignTemelItems] },
+          { label: GROUP_FEATURES, items: [...portfolioFeaturesTemel] },
           {
-            label: "Geliştirme & Altyapı",
-            items: [...commonDesignTemelItems],
+            label: GROUP_INTEGRATION,
+            items: ["REST API bağlantısı", "Harita ve konum gösterimi"],
           },
           {
-            label: "Özellikler & Fonksiyonlar",
-            items: [...portfolioFeaturesTemel],
+            label: GROUP_SECURITY,
+            items: ["Firebase Analytics kurulumu", ...commonSecurityTemelItems],
           },
-          {
-            label: "Entegrasyon & Güvenlik",
-            items: [
-              "REST API bağlantısı",
-              "Harita ve konum gösterimi",
-              "Firebase Analytics kurulumu",
-              ...commonSecurityTemelItems,
-            ],
-          },
-          {
-            label: "Destek",
-            items: [...commonDeliveryBase, "Temel kullanım kılavuzu"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          { label: GROUP_SUPPORT, items: ["Temel kullanım kılavuzu"] },
         ],
       },
       standart: {
         deliveryDays: "30-45",
-        price: "70.000 ₺",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               ...commonDesignTemelItems,
               "Premium UI bileşenleri",
@@ -148,38 +149,34 @@ export const appPackagesTr = {
               "Gelişmiş cihaz ve ekran uyumluluk testleri",
             ],
           },
+          { label: GROUP_FEATURES, items: [...portfolioFeaturesStandart] },
           {
-            label: "Özellikler & Fonksiyonlar",
-            items: [...portfolioFeaturesStandart],
-          },
-          {
-            label: "Entegrasyon & Güvenlik",
+            label: GROUP_INTEGRATION,
             items: [
               "Gelişmiş REST API entegrasyonu",
               "Sosyal medya paylaşım entegrasyonu",
               "Harita ve konum gösterimi",
-              "Firebase Analytics kurulumu",
-              ...commonSecurityTemelItems,
             ],
           },
           {
-            label: "Destek",
-            items: [
-              ...commonDeliveryBase,
-              "Kullanım kılavuzu ve kısa yönetim eğitimi",
-            ],
+            label: GROUP_SECURITY,
+            items: ["Firebase Analytics kurulumu", ...commonSecurityTemelItems],
+          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          {
+            label: GROUP_SUPPORT,
+            items: ["Kullanım kılavuzu ve kısa yönetim eğitimi"],
           },
         ],
       },
       pro: {
         deliveryDays: "45-60",
-        price: "90.000 ₺",
         revisions: "7",
         supportDays: "45",
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               ...commonDesignTemelItems,
               "Koyu / açık mod desteği",
@@ -188,21 +185,22 @@ export const appPackagesTr = {
               "Ölçeklenebilir yüksek hızlı altyapı",
             ],
           },
+          { label: GROUP_FEATURES, items: [...portfolioFeaturesPro] },
           {
-            label: "Özellikler & Fonksiyonlar",
-            items: [...portfolioFeaturesPro],
+            label: GROUP_INTEGRATION,
+            items: ["Özel API ve üçüncü parti entegrasyonlar"],
           },
           {
-            label: "Entegrasyon & Güvenlik",
+            label: GROUP_SECURITY,
             items: [
-              "Özel API ve üçüncü parti entegrasyonlar",
               "Firebase ve GA4 analitik kurulumu",
               "KVKK / GDPR uyumlu güvenlik altyapısı",
             ],
           },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
           {
-            label: "Destek",
-            items: [...commonDeliveryBase, "Kapsamlı eğitim ve dokümantasyon"],
+            label: GROUP_SUPPORT,
+            items: ["Kapsamlı eğitim ve dokümantasyon"],
           },
         ],
       },
@@ -213,17 +211,16 @@ export const appPackagesTr = {
     description:
       "Çalışanlarınız veya müşterileriniz için güvenilir kurumsal mobil deneyim. İçerik, iletişim ve iş süreçlerinizi iOS ve Android'de tutarlı ve erişilebilir bir arayüzle sunun.",
     introP2:
-      "Girişim, Profesyonel ve Premium paketleri kurumsal mobil projelerin farklı ölçeklerine uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz.",
+      "Girişim, Profesyonel ve Gelişmiş paketleri kurumsal mobil projelerin farklı ölçeklerine uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
-        price: "65.000 ₺",
         revisions: "3",
         supportDays: "15",
         languages: "1",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               "Kurumsal kimliğe uygun iOS / Android arayüz",
               "Marka renklerine uyumlu UI/UX",
@@ -231,33 +228,27 @@ export const appPackagesTr = {
               "Performans ve cihaz optimizasyonu",
             ],
           },
+          { label: GROUP_FEATURES, items: [...corporateFeaturesTemel] },
           {
-            label: "Özellikler & Fonksiyonlar",
-            items: [...corporateFeaturesTemel],
-          },
-          {
-            label: "Entegrasyon & Güvenlik",
+            label: GROUP_SECURITY,
             items: [
               "Firebase Analytics kurulumu",
               "Veri şifreleme",
               ...commonSecurityTemelItems,
             ],
           },
-          {
-            label: "Destek",
-            items: [...commonDeliveryBase, "Temel kullanım kılavuzu"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          { label: GROUP_SUPPORT, items: ["Temel kullanım kılavuzu"] },
         ],
       },
       standart: {
         deliveryDays: "42-56",
-        price: "85.000 ₺",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               "Kurumsal özel iOS / Android arayüz",
               "Premium bileşenler ve modern arayüz",
@@ -265,38 +256,40 @@ export const appPackagesTr = {
               "Gelişmiş performans ve pil optimizasyonu",
             ],
           },
+          { label: GROUP_FEATURES, items: [...corporateFeaturesStandart] },
           {
-            label: "Özellikler & Fonksiyonlar",
-            items: [...corporateFeaturesStandart],
+            label: GROUP_INTEGRATION,
+            items: ["Mevcut şirket sistemleri ile API entegrasyonu"],
           },
           {
-            label: "Entegrasyon & Güvenlik",
+            label: GROUP_SECURITY,
             items: [
               "Analitik ve hata takibi (Crashlytics)",
-              "Mevcut şirket sistemleri ile API entegrasyonu",
               "KVKK uyumlu veri işleme",
             ],
           },
           {
-            label: "Destek",
+            label: GROUP_LAUNCH,
             items: [
-              ...commonDeliveryBase.slice(0, 2),
+              ...commonLaunchItems.slice(0, 2),
               "App Store ve Play Store şirket hesabı kurulumu",
-              ...commonDeliveryBase.slice(2),
-              "Kullanım kılavuzu ve kısa yönetim eğitimi",
+              ...commonLaunchItems.slice(2),
             ],
+          },
+          {
+            label: GROUP_SUPPORT,
+            items: ["Kullanım kılavuzu ve kısa yönetim eğitimi"],
           },
         ],
       },
       pro: {
         deliveryDays: "56-84",
-        price: "100.000 ₺",
         revisions: "8",
         supportDays: "45",
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               "Yüksek hızlı kurumsal özel altyapı",
               "Figma’dan piksel uyumlu kurumsal arayüz",
@@ -304,24 +297,19 @@ export const appPackagesTr = {
               "Koyu / açık mod desteği",
             ],
           },
+          { label: GROUP_FEATURES, items: [...corporateFeaturesPro] },
+          { label: GROUP_INTEGRATION, items: ["CRM / ERP entegrasyonu"] },
           {
-            label: "Özellikler & Fonksiyonlar",
-            items: [...corporateFeaturesPro],
-          },
-          {
-            label: "Entegrasyon & Güvenlik",
+            label: GROUP_SECURITY,
             items: [
-              "CRM / ERP entegrasyonu",
               "Biyometrik giriş (Face ID, parmak izi)",
               "KVKK / GDPR uyumlu güvenlik altyapısı",
             ],
           },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
           {
-            label: "Destek",
-            items: [
-              ...commonDeliveryBase,
-              "Kurumsal kullanım kılavuzu ve kapsamlı eğitim",
-            ],
+            label: GROUP_SUPPORT,
+            items: ["Kurumsal kullanım kılavuzu ve kapsamlı eğitim"],
           },
         ],
       },
@@ -332,17 +320,16 @@ export const appPackagesTr = {
     description:
       "Ödeme, ürün ve sipariş yönetimi sunan mağazaya hazır e-ticaret uygulaması. Katalogunuzu, sepet akışınızı ve müşteri yolculuğunu mobilde akıcı ve güven veren bir deneyimle hayata geçirin.",
     introP2:
-      "Girişim, Profesyonel ve Premium seviyeleriyle farklı katalog ve sipariş hacimlerine göre şekillenen e-ticaret uygulamaları sunuyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Gelişmiş seviyeleriyle farklı katalog ve sipariş hacimlerine göre şekillenen e-ticaret uygulamaları sunuyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "42-56",
-        price: "75.000 ₺",
         revisions: "3",
         supportDays: "15",
         languages: "1",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               "E-ticaret odaklı iOS / Android arayüz",
               "Marka renklerine uyumlu UI/UX",
@@ -350,34 +337,31 @@ export const appPackagesTr = {
               "Hızlı ürün görseli yükleme optimizasyonu",
             ],
           },
+          { label: GROUP_STORE, items: [...ecommerceStoreTemel] },
           {
-            label: "Mağaza & Fonksiyonlar",
-            items: [...ecommerceStoreTemel],
+            label: GROUP_INTEGRATION,
+            items: ["Tekil sanal POS entegrasyonu"],
           },
           {
-            label: "Pazarlama & Güvenlik",
+            label: GROUP_SECURITY,
             items: [
-              "Tekil sanal POS entegrasyonu",
               "SSL veri güvenliği ve API iletişimi",
               "Mesafeli satış sözleşmesi ve KVKK modülü",
               "Firebase Analytics kurulumu",
             ],
           },
-          {
-            label: "Destek",
-            items: [...commonDeliveryBase, "Temel mağaza kullanım kılavuzu"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          { label: GROUP_SUPPORT, items: ["Temel mağaza kullanım kılavuzu"] },
         ],
       },
       standart: {
         deliveryDays: "56-77",
-        price: "90.000 ₺",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               "Premium e-ticaret iOS / Android arayüz",
               "Gelişmiş filtreleme ve infinite scroll",
@@ -385,36 +369,34 @@ export const appPackagesTr = {
               "Akıcı kategori geçişleri ve animasyonlar",
             ],
           },
+          { label: GROUP_STORE, items: [...ecommerceStoreStandart] },
           {
-            label: "Mağaza & Fonksiyonlar",
-            items: [...ecommerceStoreStandart],
+            label: GROUP_INTEGRATION,
+            items: ["Tekil sanal POS entegrasyonu"],
           },
           {
-            label: "Pazarlama & Güvenlik",
+            label: GROUP_SECURITY,
             items: [
-              "Sipariş ve kampanya push bildirimleri",
-              "Kupon ve sepet indirimi desteği",
+              "SSL veri güvenliği ve API iletişimi",
               "KVKK ve yasal sözleşme onam altyapısı",
+              "Firebase Analytics kurulumu",
             ],
           },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
           {
-            label: "Destek",
-            items: [
-              ...commonDeliveryBase,
-              "Kullanım kılavuzu ve kısa yönetim eğitimi",
-            ],
+            label: GROUP_SUPPORT,
+            items: ["Kullanım kılavuzu ve kısa yönetim eğitimi"],
           },
         ],
       },
       pro: {
         deliveryDays: "84-120",
-        price: "100.000 ₺",
         revisions: "8",
         supportDays: "45",
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               "Native hisli yüksek hızlı özel altyapı",
               "Figma’dan piksel uyumlu e-ticaret arayüzü",
@@ -422,21 +404,26 @@ export const appPackagesTr = {
               "Koyu / açık mod desteği",
             ],
           },
+          { label: GROUP_STORE, items: [...ecommerceStorePro] },
           {
-            label: "Mağaza & Fonksiyonlar",
-            items: [...ecommerceStorePro],
-          },
-          {
-            label: "Pazarlama & Güvenlik",
+            label: GROUP_INTEGRATION,
             items: [
-              "Terk edilen sepet ve kişiselleştirilmiş bildirimler",
-              "GA4 / Firebase e-ticaret dönüşüm analitiği",
+              "Tekil sanal POS entegrasyonu",
               "Kargo, lojistik ve Apple / Google Pay entegrasyonu",
             ],
           },
           {
-            label: "Destek",
-            items: [...commonDeliveryBase, "Kapsamlı mağaza yönetimi eğitimi"],
+            label: GROUP_SECURITY,
+            items: [
+              "SSL veri güvenliği ve API iletişimi",
+              "KVKK ve yasal sözleşme onam altyapısı",
+              "GA4 / Firebase e-ticaret dönüşüm analitiği",
+            ],
+          },
+          { label: GROUP_LAUNCH, items: [...commonLaunchItems] },
+          {
+            label: GROUP_SUPPORT,
+            items: ["Kapsamlı mağaza yönetimi eğitimi"],
           },
         ],
       },
