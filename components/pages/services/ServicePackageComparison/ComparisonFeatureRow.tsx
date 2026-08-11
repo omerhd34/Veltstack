@@ -21,14 +21,9 @@ export function ComparisonFeatureRow({
   const inclusionCells = valuedFeature
     ? null
     : buildInclusionCells(featureGroup[0].included);
-  const isMulti =
-    featureGroup.length > 1 ||
-    (inclusionCells?.some((c) => c.span > 1) ?? false);
 
   return (
-    <li
-      className={cn(COLS, "items-stretch border-t border-emerald-900/20")}
-    >
+    <li className={cn(COLS, "items-stretch border-t border-emerald-900/20")}>
       <div className="min-w-0">
         {featureGroup.map((feature, index) => (
           <p
@@ -59,10 +54,7 @@ export function ComparisonFeatureRow({
             )}
             aria-label={`${cell.tiers.map((tier) => tierNames[tier]).join(", ")}: ${cell.included ? includedLabel : notIncludedLabel}`}
           >
-            <InclusionIcon
-              included={cell.included}
-              size={isMulti ? "md" : "sm"}
-            />
+            <InclusionIcon included={cell.included} size="md" />
           </span>
         ))
       )}

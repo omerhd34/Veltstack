@@ -24,7 +24,7 @@ export function ComparisonValueCells({
             {value}
           </span>
         ) : (
-          <InclusionIcon included={false} />
+          <InclusionIcon included={false} size="md" />
         )}
       </span>
     );
