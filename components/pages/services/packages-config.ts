@@ -4,19 +4,19 @@ import {
   LuClipboardCheck,
   LuContact,
   LuGlobe,
-  LuLifeBuoy,
   LuRefreshCw,
   LuSearch,
   LuShoppingCart,
   LuSmartphone,
+  LuWrench,
 } from "react-icons/lu";
 
 export const packageCategories = [
   "web",
   "app",
   "refresh",
-  "audit",
   "seo",
+  "audit",
   "maintenance",
 ] as const;
 export type PackageCategory = (typeof packageCategories)[number];
@@ -27,12 +27,12 @@ export const categoryTabIcons: Record<PackageCategory, IconType> = {
   app: LuSmartphone,
   seo: LuSearch,
   audit: LuClipboardCheck,
-  maintenance: LuLifeBuoy,
+  maintenance: LuWrench,
 };
 
 export const webPackageSlugs = ["portfolio", "corporate", "ecommerce"] as const;
 export const refreshPackageSlugs = webPackageSlugs;
-export const auditPackageSlugs = ["webAudit", "appAudit"] as const;
+export const auditPackageSlugs = ["auditServices"] as const;
 export const seoPackageSlugs = ["seoServices"] as const;
 export const maintenancePackageSlugs = ["maintenanceServices"] as const;
 
@@ -63,8 +63,7 @@ export const refreshPackageIcons: Record<RefreshPackageSlug, IconType> = {
 };
 
 export const auditPackageIcons: Record<AuditPackageSlug, IconType> = {
-  webAudit: LuGlobe,
-  appAudit: LuSmartphone,
+  auditServices: LuClipboardCheck,
 };
 
 export const seoPackageIcons: Record<SeoPackageSlug, IconType> = {
@@ -73,7 +72,7 @@ export const seoPackageIcons: Record<SeoPackageSlug, IconType> = {
 
 export const maintenancePackageIcons: Record<MaintenancePackageSlug, IconType> =
   {
-    maintenanceServices: LuLifeBuoy,
+    maintenanceServices: LuWrench,
   };
 
 export const categoryPackageSlugs: Record<PackageCategory, readonly string[]> =
