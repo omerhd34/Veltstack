@@ -10,4 +10,4 @@ export const tierLabelKey: Record<PackageTier, keyof ComparisonLabels> = {
 };
 
 export const COLS =
-  "grid grid-cols-[minmax(11rem,1.2fr)_repeat(3,minmax(8rem,1fr))]";
+  "grid grid-cols-[minmax(14rem,1.65fr)_repeat(3,minmax(7.5rem,1fr))]";
