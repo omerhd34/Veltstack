@@ -126,3 +126,132 @@ export const uygulamaGelistirmeProcessTr = [
       "App Store ve Google Play yayın sürecini yönetiyoruz. Yayın sonrası hata takibi ve güncelleme desteği sağlıyoruz.",
   },
 ] as const;
+
+export const seoHizmetleriProcessTr = [
+  {
+    title: "Site ve Rakip Analizi",
+    description:
+      "Mevcut SEO durumunuzu, teknik altyapınızı ve rakip görünürlüğünü analiz ediyoruz. Fırsat alanları ve öncelikler belirlenir.",
+  },
+  {
+    title: "Anahtar Kelime Stratejisi",
+    description:
+      "Hedef kitlenize uygun, dönüşüm potansiyeli yüksek anahtar kelime haritası oluşturuyoruz. Arama niyeti ve rekabet analizi yapılır.",
+  },
+  {
+    title: "Teknik SEO Düzenlemeleri",
+    description:
+      "Tarama hataları, site hızı, indeksleme ve yapılandırılmış veri sorunlarını gideriyoruz. Altyapı SEO uyumlu hale getirilir.",
+  },
+  {
+    title: "On-Page Optimizasyon",
+    description:
+      "Başlık yapısı, meta etiketler, iç bağlantılar ve içerik düzenini sayfa bazında iyileştiriyoruz.",
+  },
+  {
+    title: "İçerik Planlaması",
+    description:
+      "Blog ve landing page içerikleri için SEO uyumlu editoryal takvim hazırlıyoruz. Konu ve anahtar kelime eşleştirmesi yapılır.",
+  },
+  {
+    title: "Uygulama ve İzleme",
+    description:
+      "Optimizasyonları uygulayıp Search Console ve Analytics ile izlemeye alıyoruz. İndeksleme ve sıralama değişimleri takip edilir.",
+  },
+  {
+    title: "Performans Raporu",
+    description:
+      "Trafik, sıralama ve dönüşüm metriklerini düzenli raporluyoruz. Yapılan işlerin etkisi ölçülür.",
+  },
+  {
+    title: "Sürekli İyileştirme",
+    description:
+      "Veriye dayalı önerilerle stratejiyi güncelliyoruz. Yeni fırsatlar ve içerik ihtiyaçları periyodik olarak değerlendirilir.",
+  },
+] as const;
+
+export const teknikDenetimProcessTr = [
+  {
+    title: "Briefing ve Kapsam",
+    description:
+      "Denetlenecek varlıkları, iş hedeflerinizi ve öncelik alanlarını birlikte netleştiriyoruz. Denetim kapsamı ve teslim formatı belirlenir.",
+  },
+  {
+    title: "Otomatik Tarama",
+    description:
+      "Lighthouse, güvenlik tarayıcıları ve SEO araçlarıyla otomatik analiz yapıyoruz. Temel metrikler ve hata listesi oluşturulur.",
+  },
+  {
+    title: "Manuel İnceleme",
+    description:
+      "Kod kalitesi, mimari yapı, erişilebilirlik ve kullanıcı deneyimini manuel olarak değerlendiriyoruz.",
+  },
+  {
+    title: "Performans Denetimi",
+    description:
+      "Core Web Vitals, yükleme süreleri ve kaynak optimizasyonunu detaylı analiz ediyoruz. Darboğazlar tespit edilir.",
+  },
+  {
+    title: "Güvenlik Değerlendirmesi",
+    description:
+      "HTTPS, header yapılandırması, bağımlılık açıkları ve erişim kontrollerini inceliyoruz. Risk seviyeleri sınıflandırılır.",
+  },
+  {
+    title: "Bulguların Önceliklendirilmesi",
+    description:
+      "Tespit edilen sorunları etki ve aciliyet bazında sıralıyoruz. Hızlı kazanımlar ve uzun vadeli iyileştirmeler ayrılır.",
+  },
+  {
+    title: "Rapor ve Sunum",
+    description:
+      "Detaylı denetim raporunu hazırlayıp bulguları sizinle paylaşıyoruz. Her madde için açıklama ve öneri sunulur.",
+  },
+  {
+    title: "Aksiyon Planı",
+    description:
+      "Uygulanabilir iyileştirme adımlarını zaman çizelgesiyle planlıyoruz. İsterseniz uygulama aşamasına geçiş desteği sağlanır.",
+  },
+] as const;
+
+export const bakimVeDestekProcessTr = [
+  {
+    title: "Proje Devralma",
+    description:
+      "Mevcut kod tabanını, altyapıyı ve erişimleri güvenli şekilde devralıyoruz. Dokümantasyon ve mevcut durum envanteri çıkarılır.",
+  },
+  {
+    title: "Temel Denetim",
+    description:
+      "Güncellik, güvenlik açıkları ve performans durumunu ilk haftada analiz ediyoruz. Acil müdahale gerektiren konular belirlenir.",
+  },
+  {
+    title: "İzleme Kurulumu",
+    description:
+      "Uptime, hata takibi ve performans izleme araçlarını yapılandırıyoruz. Sorunlar anında bildirim alacak şekilde ayarlanır.",
+  },
+  {
+    title: "Güncelleme Planı",
+    description:
+      "Bağımlılık, framework ve güvenlik yamaları için düzenli güncelleme takvimi oluşturuyoruz.",
+  },
+  {
+    title: "Periyodik Bakım",
+    description:
+      "Planlanan güncellemeleri, yedeklemeleri ve güvenlik kontrollerini düzenli uyguluyoruz.",
+  },
+  {
+    title: "Destek Talepleri",
+    description:
+      "Hata bildirimleri, küçük iyileştirmeler ve içerik güncellemelerini öncelik sırasına göre ele alıyoruz.",
+  },
+  {
+    title: "Performans Kontrolü",
+    description:
+      "Sayfa hızları, uptime ve kullanıcı deneyimini periyodik kontrol ediyoruz. Yavaşlama veya regresyon anında müdahale edilir.",
+  },
+  {
+    title: "Aylık Raporlama",
+    description:
+      "Yapılan işler, sistem durumu ve önerileri içeren düzenli durum raporu sunuyoruz.",
+  },
+] as const;

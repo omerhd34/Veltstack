@@ -1,4 +1,7 @@
 import {
+  bakimVeDestekProcessTr,
+  seoHizmetleriProcessTr,
+  teknikDenetimProcessTr,
   uygulamaGelistirmeProcessTr,
   webSitesiGelistirmeProcessTr,
   webSitesiYenilemeProcessTr,
@@ -37,7 +40,7 @@ export const serviceDetailsTr = {
   statSupportHint:
     "Yayın sonrası teknik destek, revizyon ve küçük düzenlemeler için ayrılan süre aralığı.",
   statTiersHint:
-    "Girişim, Profesyonel ve Gelişmiş olmak üzere üç net kapsam seviyesi; ihtiyacınıza göre karşılaştırabilirsiniz.",
+    "Girişim, Profesyonel ve Premium olmak üzere üç net kapsam seviyesi; ihtiyacınıza göre karşılaştırabilirsiniz.",
   statRevisionsHint:
     "Seçtiğiniz pakette tanımlı tasarım ve içerik revizyonu sayısı. Geri bildirimlerinizi liste halinde iletmeniz yeterli; her revizyonda bu maddeler uygulanır.",
   featureDetailLabel: "Özellik detayı",
@@ -46,7 +49,7 @@ export const serviceDetailsTr = {
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
   "web-sitesi-gelistirme": {
-    metaTitle: "Web Sitesi Geliştirme",
+    metaTitle: "Web Sitesi Yapımı",
     metaDesc:
       "Kurumsal web sitesi yapımı, e-ticaret ve portfolyo projelerinde uçtan uca web yapımı. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
     keywords: [
@@ -63,7 +66,7 @@ export const serviceDetailsTr = {
       "ölçeklenebilir web uygulaması",
     ],
     heroBadge: "Web Yapımı",
-    heroTitle: "Web Sitesi Geliştirme",
+    heroTitle: "Web Sitesi Yapımı",
     heroImageAlt:
       "Modern web sitesi yapımını simgeleyen soyut tarayıcı ve layout illüstrasyonu",
     heroSubtitle:
@@ -122,7 +125,7 @@ export const serviceDetailsTr = {
     ],
   },
   "web-sitesi-yenileme": {
-    metaTitle: "Web Sitesi & Uygulama Yenileme",
+    metaTitle: "Web Sitesi Yenileme | Modern Redesign",
     metaDesc:
       "Eski veya yavaş web sitenizi modern tasarım, hızlı altyapı ve SEO iyileştirmeleriyle yenileyin. İçeriklerinizi koruyarak güvenli geçiş.",
     keywords: [
@@ -138,7 +141,7 @@ export const serviceDetailsTr = {
       "site migrasyonu",
     ],
     heroBadge: "Web & Uygulama Yenileme",
-    heroTitle: "Web Sitesi & Uygulama Yenileme",
+    heroTitle: "Dijital Yenileme",
     heroImageAlt:
       "Web sitesi yenilemeyi simgeleyen dönüşen arayüz panelleri illüstrasyonu",
     heroSubtitle:
@@ -197,8 +200,8 @@ export const serviceDetailsTr = {
       "native mobil uygulama",
       "startup mobil uygulama",
     ],
-    heroBadge: "Uygulama Geliştirme",
-    heroTitle: "Uygulama Geliştirme",
+    heroBadge: "Uygulama Yapımı",
+    heroTitle: "Mobil Uygulama Yapımı",
     heroImageAlt:
       "Mobil uygulama yapımını simgeleyen yüzen telefon ve arayüz illüstrasyonu",
     heroSubtitle:
@@ -238,6 +241,187 @@ export const serviceDetailsTr = {
         title: "Bakım ve Güncelleme",
         description:
           "OS güncellemelerine uyum, hata düzeltmeleri ve yeni özellik iterasyonları düzenli plan dahilinde yürütülür. Crash raporları izlenir; kritik sorunlara öncelikli müdahale edilir. Uygulamanız canlıya alındıktan sonra da sürdürülebilir şekilde gelişmeye devam eder. Yeni iOS ve Android sürümleri çıktığında uyumluluk testleri yapılır. Kullanıcı geri bildirimleri ve mağaza yorumları önceliklendirme için değerlendirilir. Sürüm geçmişi ve değişiklik notları düzenli tutularak şeffaf bir yapım süreci sağlanır.",
+      },
+    ],
+  },
+  "seo-hizmetleri": {
+    metaTitle: "SEO Hizmetleri",
+    metaDesc:
+      "Teknik SEO, anahtar kelime ve içerik stratejisiyle organik görünürlüğünüzü ölçülebilir adımlarla büyütüyoruz.",
+    keywords: [
+      "SEO hizmetleri",
+      "organik trafik artırma",
+      "teknik SEO danışmanlığı",
+      "on-page SEO",
+      "anahtar kelime araştırması",
+      "içerik SEO stratejisi",
+      "Search Console",
+      "yerel SEO",
+      "SEO ajansı",
+      "sıralama iyileştirme",
+      "blog SEO",
+    ],
+    heroBadge: "SEO",
+    heroTitle: "SEO Hizmetleri",
+    heroImageAlt:
+      "SEO ve arama görünürlüğünü simgeleyen yükselen sıralama grafiği illüstrasyonu",
+    heroSubtitle:
+      "Teknik altyapıdan içerik stratejisine kadar görünürlüğünüzü artırıyorum; denetimden anahtar kelime planına ve düzenli raporlamaya kadar uçtan uca SEO desteği sunuyorum.",
+    processSubtitle:
+      "Site analizinden sürekli iyileştirmeye kadar SEO çalışmalarını ölçülebilir adımlarla yürütüyoruz. Her aşamada yapılan işleri ve beklenen çıktıları şeffaf şekilde paylaşıyoruz.",
+    techSubtitle:
+      "SEO projelerinde analiz, izleme ve optimizasyon için kullandığımız araçlar.",
+    processItems: seoHizmetleriProcessTr,
+    features: [
+      {
+        title: "Teknik SEO Denetimi",
+        description:
+          "Site hızı, tarama hataları, indeksleme durumu ve yapılandırılmış veri uygulamasını kapsayan kapsamlı bir teknik denetim yapıyoruz. Core Web Vitals, sitemap sağlığı ve robots.txt yapılandırması güncel en iyi uygulamalara göre incelenir. Kritik sorunlar etki düzeyine göre sıralanır; önce neyi düzeltmeniz gerektiği netleşir. Bulgular uygulanabilir adımlarla birlikte anlaşılır bir raporda dokümante edilir. İyileştirmelerin zaman içinde ölçülebilmesi için bir başlangıç çizgisi belirlenir. Mobil öncelikli indeksleme ve sayfa deneyimi sinyalleri ayrıca değerlendirilir.",
+      },
+      {
+        title: "Anahtar Kelime Stratejisi",
+        description:
+          "Hedef kitlenize, arama niyetine ve dönüşüm potansiyeline uygun bir anahtar kelime haritası oluşturuyoruz. Yüksek fırsatlı terimler, alan adı otoritenize göre gerçekçi sıralama zorluğuyla dengelenir. Ticari, bilgilendirici ve yönlendirici sorgular sayfa bazında kümeler halinde gruplanır. Mevsimsel trendler ile yerel ve global arama davranışları plana dahil edilir. Sonuç, anahtar kelimeleri doğrudan landing page'lere ve içerik önceliklerine bağlayan odaklı bir yol haritasıdır. Uzun kuyruk fırsatları ve soru bazlı aramalar da stratejiye entegre edilir.",
+      },
+      {
+        title: "On-Page Optimizasyon",
+        description:
+          "Öncelikli sayfalarda başlık hiyerarşisi, meta başlık ve açıklamalar, iç bağlantılar ve içerik düzeni iyileştirilir. Her sayfa, anahtar kelime doldurma veya zayıf içerik riski olmadan birincil anahtar kelime kümesine göre optimize edilir. Görsel alt metinleri, URL yapısı ve canonical etiketler sayfa sayfa doğrulanır. Zengin arama sonuçlarını desteklediği yerlerde schema işaretlemesi eklenir veya düzeltilir. Değişiklikler öncesi ve sonrası doğrulanarak ölçülebilir on-page kazanımlar takip edilir. İçerik uzunluğu, okunabilirlik ve kullanıcı niyeti uyumu da gözden geçirilir.",
+      },
+      {
+        title: "İçerik Planlaması",
+        description:
+          "Blog yazıları, landing page'ler ve hizmet içerikleri için SEO uyumlu bir editoryal takvim hazırlıyoruz. Konular anahtar kelime boşlukları, hedef kitlenin soruları ve rakip kapsamına göre seçilir. Her içerik net bir yapı izler: niyet eşleşmesi, başlık taslağı ve iç bağlantı hedefleri. Yayın sıklığı, konu otoritesini düzensiz ataklar yerine istikrarlı biçimde inşa edecek şekilde planlanır. Taslaklar marka sesinize uygun kalırken arama görünürlüğü için optimize edilir. Mevcut içeriklerin güncellenmesi ve yeniden optimize edilmesi de plana dahil edilir.",
+      },
+      {
+        title: "Performans İzleme",
+        description:
+          "Sıralama, organik trafik ve dönüşümler Search Console ve Analytics üzerinden düzenli olarak takip edilir. Trafik düşüşleri, tarama hataları ve indeksleme değişiklikleri geliri etkilemeden önce erken incelemeyi tetikler. Aylık özetler, denetim aşamasında belirlenen başlangıç çizgisine göre ilerlemeyi karşılaştırır. Dönüşüm olayları ve kritik landing page'ler saf sıralama metriklerinin yanında izlenir. Ne değişti, neden ve sonraki adımda ne önerdiğimizi açıklayan net raporlar alırsınız. Algoritma güncellemeleri ve sektörel trendler raporlara yansıtılarak yorumlanır.",
+      },
+      {
+        title: "Rakip Analizi",
+        description:
+          "Sektörünüzdeki rakiplerin nasıl sıralandığını, hangi anahtar kelimelere sahip olduklarını ve markanız için hangi boşlukların bulunduğunu analiz ediyoruz. Backlink profilleri, içerik derinliği ve teknik altyapı üst düzeyde karşılaştırılarak fırsat alanları belirlenir. Sürekli sizi geçen sayfalar yapı, niyet kapsamı ve kullanıcı deneyimi açısından incelenir. Bulgular soyut araştırmada kalmaz; doğrudan anahtar kelime ve içerik stratejinize aktarılır. Amaç kopyalamak değil; sitenizin kazanabileceği açıları pratik biçimde belirlemektir. Rakip içerik takvimi ve yeni sayfa lansmanları düzenli olarak izlenir.",
+      },
+    ],
+  },
+  "teknik-denetim": {
+    metaTitle: "Teknik SEO Denetimi | Site Hızı & Güvenlik",
+    metaDesc:
+      "Web sitesi, mobil uygulama ve dijital altyapınız için performans, güvenlik, SEO ve kod kalitesi odaklı teknik denetim hizmeti.",
+    keywords: [
+      "teknik SEO denetimi",
+      "site hızı analizi",
+      "Core Web Vitals denetimi",
+      "web sitesi güvenlik denetimi",
+      "Lighthouse skoru",
+      "erişilebilirlik denetimi",
+      "kod kalitesi incelemesi",
+      "performans audit",
+      "sitemap robots denetimi",
+      "teknik borç analizi",
+    ],
+    heroBadge: "Teknik Denetim",
+    heroTitle: "Teknik Denetim",
+    heroImageAlt:
+      "Teknik denetimi simgeleyen tarama ve güvenlik kontrol illüstrasyonu",
+    heroSubtitle:
+      "Dijital varlıklarınızı performans, güvenlik, SEO ve kod kalitesi açısından analiz edip önceliklendirilmiş aksiyon planı sunuyoruz; Lighthouse’tan teknik borca kadar net bir yol haritası çıkarıyoruz.",
+    processSubtitle:
+      "Denetim sürecini briefing'den aksiyon planına kadar net adımlarla yönetiyoruz. Bulguları öncelik sırasına göre raporlayıp uygulanabilir öneriler sunuyoruz.",
+    techSubtitle:
+      "Teknik denetimlerde performans, güvenlik ve SEO analizi için kullandığımız araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
+    processItems: teknikDenetimProcessTr,
+    features: [
+      {
+        title: "Performans Analizi",
+        description:
+          "Hız ve kullanıcı deneyimi Lighthouse, Core Web Vitals ve gerçek dünya yükleme süreleri üzerinden değerlendirilir. Largest Contentful Paint, Cumulative Layout Shift ve etkileşim gecikmeleri kritik sayfalarda ölçülür. Ağır görseller, render'ı bloke eden scriptler ve yavaş sunucu yanıtları gibi darboğazlar etki skorlarıyla tespit edilir. Mobil ve masaüstü performansı ayrı test edilir; kullanıcı davranışı cihaza göre farklılaşır. Sonuçlar, çaba ve beklenen kazanıma göre sıralanmış somut düzeltmelerle özetlenir. Üçüncü taraf scriptler ve font yüklemeleri performans etkisi açısından ayrıca raporlanır.",
+      },
+      {
+        title: "Güvenlik İncelemesi",
+        description:
+          "Bağımlılık açıkları, HTTPS yapılandırması, erişim kontrolleri ve temel güvenlik riskleri altyapınız genelinde incelenir. Güncel olmayan paketler, açık endpoint'ler ve zayıf kimlik doğrulama kalıpları önem derecesine göre işaretlenir. Header'lar, CORS ayarları ve form koruması yaygın saldırı vektörlerine karşı kontrol edilir. Admin panelleri ve API route'ları yetkilendirme boşlukları için özel olarak gözden geçirilir. Bir sonraki sürüm veya kamuya açılış öncesinde düzeltilmesi gerekenler güvenlik kontrol listesinde vurgulanır. Veri saklama, şifreleme ve oturum yönetimi pratikleri de değerlendirilir.",
+      },
+      {
+        title: "SEO Teknik Denetimi",
+        description:
+          "Tarama hataları, meta yapısı, indeksleme durumu ve yapılandırılmış veri arama motoru yönergelerine göre doğrulanır. Kırık bağlantılar, yinelenen başlıklar, eksik açıklamalar ve yetim sayfalar sayfa sayfa listelenir. Sitemap kapsamı, robots kuralları ve canonical uygulaması çakışmalar için incelenir. Önemli sayfaları gizleyebilecek indeksleme engelleri ve noindex yanlış kullanımları açıkça belirtilir. Denetim, teknik SEO sorunlarını sıralama ve trafik riskiyle ilişkilendirerek düzeltmelerin mantıklı önceliklenmesini sağlar. Mobil uyumluluk ve Core Web Vitals'ın SEO etkisi de rapora dahil edilir.",
+      },
+      {
+        title: "Kod ve Mimari İncelemesi",
+        description:
+          "Kod kalitesi, bakım kolaylığı, teknik borç ve ölçeklenebilirlik kıdemli mühendislik perspektifinden değerlendirilir. Klasör yapısı, sorumluluk ayrımı ve yeniden kullanım kalıpları uzun vadeli sürdürülebilirlik için incelenir. Gelecekteki çalışmaları yavaşlatan anti-pattern'ler, ölü kod ve aşırı bağlı modüller dokümante edilir. Veritabanı sorguları, önbellekleme stratejisi ve API tasarımı performans veya güvenilirliği etkilediğinde değerlendirilir. Öneriler teorik mükemmellik yerine uygulanabilir refaktörlere odaklanır. Test kapsamı, CI/CD yapısı ve deployment süreçleri de mimari değerlendirmenin parçasıdır.",
+      },
+      {
+        title: "Erişilebilirlik Kontrolü",
+        description:
+          "WCAG uyumluluğu, renk kontrastı, klavye navigasyonu ve ekran okuyucu uyumluluğu kritik akışlarda test edilir. Formlar, modallar, odak durumları ve etkileşimli öğeler dışlayıcı engeller için kontrol edilir. Eksik alt metinler, etiketsiz input'lar ve yetersiz kontrast oranları sayfa referanslarıyla listelenir. Belirsiz hata mesajları, küçük dokunma hedefleri ve kafa karıştırıcı navigasyon gibi UX sorunları da not edilir. Düzeltmeler önem derecesine göre gruplanır; yasal ve kullanılabilirlik standartlarına kademeli uyum sağlanır.",
+      },
+      {
+        title: "Aksiyon Planı",
+        description:
+          "Tüm bulgular etki analizi ve uygulanabilir iyileştirme adımlarıyla önceliklendirilmiş bir aksiyon planında birleştirilir. Hızlı kazanımlar, orta çabalı düzeltmeler ve stratejik girişimler ayrılır; kaynak planlaması gerçekçi yapılabilir. Her madde uygun olduğunda bağlam, önerilen yaklaşım ve beklenen sonucu içerir. Güvenlik, SEO veya geliri etkileyen kritik engeller en üstte vurgulanır. Plan, ekibinizin tüm denetimi yeniden okumadan uygulayabileceği ortak bir yol haritası haline gelir. Tahmini çaba, maliyet etkisi ve uygulama sırası her madde için netleştirilir.",
+      },
+    ],
+  },
+  "bakim-ve-destek": {
+    metaTitle: "Bakım ve Destek",
+    metaDesc:
+      "Web sitesi, mobil uygulama ve backend altyapınız için düzenli bakım, güncelleme ve teknik destek hizmeti.",
+    keywords: [
+      "web sitesi bakım",
+      "site bakım destek paketi",
+      "Next.js bakım",
+      "web sitesi teknik destek",
+      "güvenlik güncellemesi",
+      "yedekleme hizmeti",
+      "uptime izleme",
+      "acil müdahale destek",
+      "CMS bakım",
+      "aylık site bakımı",
+    ],
+    heroBadge: "Bakım & Destek",
+    heroTitle: "Bakım & Destek",
+    heroImageAlt:
+      "Bakım ve desteği simgeleyen koruyucu kalkan ve sistem izleme illüstrasyonu",
+    heroSubtitle:
+      "Yayına aldıktan sonra da yanınızdayım: güncelleme, yedekleme, güvenlik ve teknik destek tek çatı altında; web, mobil ve backend için kesintisiz izleme, hızlı müdahale ve düzenli raporlama.",
+    processSubtitle:
+      "Proje devralmadan aylık raporlamaya kadar bakım sürecini düzenli ve öngörülebilir adımlarla yönetiyoruz. Güncelleme, izleme ve destek talepleri net bir takvimle ilerler.",
+    techSubtitle:
+      "Bakım ve destek hizmetlerinde kullandığımız altyapı ve izleme araçları. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
+    processItems: bakimVeDestekProcessTr,
+    features: [
+      {
+        title: "Güncellemeler ve Yamalar",
+        description:
+          "Bağımlılık, framework ve güvenlik güncellemeleri altyapınızı güncel ve korumalı tutmak için düzenli takvimle uygulanır. Kırıcı değişiklikler canlı ortama geçmeden önce staging ortamında test edilir. Yama notları ve sürüm geçmişi takip edilir; sorun çıkarsa geri alma mümkün olur. Kritik güvenlik yayınları gerektiğinde normal döngünün dışında öncelikli ele alınır. Changelog'ları kendiniz takip etmeden neyin, neden güncellendiği hakkında bilgilendirilirsiniz. Major sürüm geçişleri önceden planlanır ve uyumluluk testleri tamamlanır.",
+      },
+      {
+        title: "Yedekleme ve Güvenlik",
+        description:
+          "Planlı veri yedeklemeleri, güvenlik taramaları ve erişim denetimi sitenizi ve kullanıcı verilerinizi sürekli korur. Yedek bütünlüğü periyodik doğrulanır; geri yükleme ihtiyacı doğduğunda süreç başarısız olmaz. SSL sertifikaları, firewall kuralları ve giriş güvenliği süre dolması veya yanlış yapılandırma için izlenir. Şüpheli aktivite, başarısız giriş artışları ve dosya değişiklikleri büyümeden önce incelenir. Kurtarma prosedürleri dokümante edilir; bir sorun çıktığında kesinti süresi minimumda tutulur. Yedekleme sıklığı ve saklama süresi ihtiyacınıza göre yapılandırılır.",
+      },
+      {
+        title: "Performans İzleme",
+        description:
+          "Uptime takibi, sayfa hızı izleme ve yavaşlama anında müdahale dijital varlığınızı ziyaretçiler için güvenilir tutar. Yanıt süreleri belirlenen eşikleri aştığında veya site erişilemez hale geldiğinde uyarılar devreye girer. Güncellemeler sonrası performans gerilemeleri öncesi-sonrası kontrollerle erken yakalanır. Hosting kaynak kullanımı ve hata oranları ön yüz metriklerinin yanında izlenir. Sorun çıktığında teşhis ve ilk müdahale hızla başlar — çoğu zaman kullanıcılar bildirmeden önce. Aylık performans özeti ile trendler ve olası riskler raporlanır.",
+      },
+      {
+        title: "Teknik Destek",
+        description:
+          "Sorun bildirme, hata giderme ve küçük iyileştirmeler net bir iletişim kanalı üzerinden öncelikli destek alır. Hatalar yeniden üretilir, önem ve kullanıcı etkisine göre önceliklendirilir ve düzeltilir. Küçük özellik ayarları, yapılandırma değişiklikleri ve entegrasyon düzenlemeleri bakım kapsamına girer. Yanıt süreleri planınıza göre hizalanır; kritik kesintiler anında ele alınır. Proje mimarinizi zaten bilen tek bir iletişim noktanız olur. Destek talepleri takip edilir; çözüm süresi ve durum güncellemeleri şeffaf paylaşılır.",
+      },
+      {
+        title: "İçerik Güncellemeleri",
+        description:
+          "Metin, görsel ve sayfa içerik değişiklikleri kod veya CMS'e dokunmanız gerekmeden hızlıca uygulanır. Yeni blog yazıları, hizmet açıklamaları, ekip fotoğrafları ve fiyat güncellemeleri kısa bir inceleme sonrası yayına alınır. Görsel optimizasyonu ve responsive biçimlendirme her güncellemenin parçası olarak yapılır. Kampanya zamanlaması önemliyse planlı yayın ve taslak önizleme desteklenir. Rutin içerik işleri sizin üzerinizden alınır; işinizi yönetmeye odaklanırsınız. Toplu güncellemeler ve acil düzeltmeler için esnek kapasite ayrılır.",
+      },
+      {
+        title: "Raporlama",
+        description:
+          "Aylık durum raporu tamamlanan işleri, sistem sağlığını ve önümüzdeki dönem önerilerini kapsar. Uygulanan güncellemeler, çözülen olaylar ve performans trendleri sade bir dille özetlenir. Süresi dolan sertifikalar, bekleyen güncellemeler ve büyüyen teknik borç gibi açık riskler proaktif olarak işaretlenir. Bütçe veya öncelik planlamanıza yardımcı olduğunda gelecek ay önerileri de eklenir. Rapor, günlük kontrol veya teknik bilgi gerektirmeden görünürlük sağlar. İsteğe bağlı çeyreklik özetlerle uzun vadeli trendler de takip edilebilir.",
       },
     ],
   },

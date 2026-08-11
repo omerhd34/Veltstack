@@ -126,3 +126,132 @@ export const uygulamaGelistirmeProcessEn = [
       "We manage App Store and Google Play publishing. Post-launch bug tracking and update support are provided.",
   },
 ] as const;
+
+export const seoHizmetleriProcessEn = [
+  {
+    title: "Site and Competitor Analysis",
+    description:
+      "We analyze your current SEO status, technical infrastructure and competitor visibility. Opportunity areas and priorities are identified.",
+  },
+  {
+    title: "Keyword Strategy",
+    description:
+      "We create a keyword map aligned with your target audience and conversion potential. Search intent and competition analysis are included.",
+  },
+  {
+    title: "Technical SEO Fixes",
+    description:
+      "We resolve crawl errors, site speed, indexing and structured data issues. Infrastructure is made SEO-compliant.",
+  },
+  {
+    title: "On-Page Optimization",
+    description:
+      "We improve heading structure, meta tags, internal links and content layout on a page-by-page basis.",
+  },
+  {
+    title: "Content Planning",
+    description:
+      "We prepare an SEO-friendly editorial calendar for blog and landing page content. Topics are mapped to target keywords.",
+  },
+  {
+    title: "Implementation and Monitoring",
+    description:
+      "We apply optimizations and set up monitoring via Search Console and Analytics. Indexing and ranking changes are tracked.",
+  },
+  {
+    title: "Performance Reporting",
+    description:
+      "We report traffic, ranking and conversion metrics regularly. The impact of work done is measured.",
+  },
+  {
+    title: "Continuous Improvement",
+    description:
+      "We update strategy based on data-driven recommendations. New opportunities and content needs are evaluated periodically.",
+  },
+] as const;
+
+export const teknikDenetimProcessEn = [
+  {
+    title: "Briefing and Scope",
+    description:
+      "We clarify assets to audit, business goals and priority areas together. Audit scope and delivery format are defined.",
+  },
+  {
+    title: "Automated Scanning",
+    description:
+      "We run automated analysis with Lighthouse, security scanners and SEO tools. Baseline metrics and error lists are created.",
+  },
+  {
+    title: "Manual Review",
+    description:
+      "We manually evaluate code quality, architecture, accessibility and user experience.",
+  },
+  {
+    title: "Performance Audit",
+    description:
+      "We analyze Core Web Vitals, load times and resource optimization in detail. Bottlenecks are identified.",
+  },
+  {
+    title: "Security Assessment",
+    description:
+      "We review HTTPS, header configuration, dependency vulnerabilities and access controls. Risk levels are classified.",
+  },
+  {
+    title: "Finding Prioritization",
+    description:
+      "We rank identified issues by impact and urgency. Quick wins and long-term improvements are separated.",
+  },
+  {
+    title: "Report and Presentation",
+    description:
+      "We prepare a detailed audit report and share findings with you. Each item includes explanation and recommendations.",
+  },
+  {
+    title: "Action Plan",
+    description:
+      "We plan actionable improvement steps with a timeline. Implementation support is available if needed.",
+  },
+] as const;
+
+export const bakimVeDestekProcessEn = [
+  {
+    title: "Project Handover",
+    description:
+      "We securely take over the existing codebase, infrastructure and access. Documentation and current state inventory are created.",
+  },
+  {
+    title: "Baseline Audit",
+    description:
+      "We analyze currency, security vulnerabilities and performance status in the first week. Items requiring urgent action are identified.",
+  },
+  {
+    title: "Monitoring Setup",
+    description:
+      "We configure uptime, error tracking and performance monitoring tools. Issues trigger immediate notifications.",
+  },
+  {
+    title: "Update Schedule",
+    description:
+      "We create a regular update calendar for dependencies, frameworks and security patches.",
+  },
+  {
+    title: "Periodic Maintenance",
+    description:
+      "We apply planned updates, backups and security checks on schedule.",
+  },
+  {
+    title: "Support Requests",
+    description:
+      "We handle bug reports, small enhancements and content updates by priority.",
+  },
+  {
+    title: "Performance Check",
+    description:
+      "We periodically monitor page speed, uptime and user experience. Slowdowns or regressions are addressed immediately.",
+  },
+  {
+    title: "Monthly Reporting",
+    description:
+      "We provide regular status reports covering work done, system health and recommendations.",
+  },
+] as const;
