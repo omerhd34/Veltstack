@@ -40,7 +40,7 @@ export const serviceDetailsTr = {
   statSupportHint:
     "Yayın sonrası teknik destek, revizyon ve küçük düzenlemeler için ayrılan süre aralığı.",
   statTiersHint:
-    "Girişim, Profesyonel ve Premium olmak üzere üç net kapsam seviyesi; ihtiyacınıza göre karşılaştırabilirsiniz.",
+    "Girişim, Profesyonel ve Kapsamlı olmak üzere üç net kapsam seviyesi; ihtiyacınıza göre karşılaştırabilirsiniz.",
   statRevisionsHint:
     "Seçtiğiniz pakette tanımlı tasarım ve içerik revizyonu sayısı. Geri bildirimlerinizi liste halinde iletmeniz yeterli; her revizyonda bu maddeler uygulanır.",
   featureDetailLabel: "Özellik detayı",
@@ -308,7 +308,7 @@ export const serviceDetailsTr = {
   "teknik-denetim": {
     metaTitle: "Teknik SEO Denetimi | Site Hızı & Güvenlik",
     metaDesc:
-      "Web sitesi, mobil uygulama ve dijital altyapınız için performans, güvenlik, SEO ve kod kalitesi odaklı teknik denetim hizmeti.",
+      "Web sitesi ve mobil uygulamanız için performans, güvenlik, SEO ve kod kalitesi odaklı teknik denetim hizmeti.",
     keywords: [
       "teknik SEO denetimi",
       "site hızı analizi",

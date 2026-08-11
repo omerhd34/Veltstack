@@ -145,7 +145,7 @@ export const serviceDetailsEn = {
     heroImageAlt:
       "Transforming interface panels illustration symbolizing website redesign",
     heroSubtitle:
-      "We transform outdated, slow or mobile-unfriendly sites into modern, conversion-focused experiences—preserving your content and migrating without putting SEO rankings at risk.", 
+      "We transform outdated, slow or mobile-unfriendly sites into modern, conversion-focused experiences—preserving your content and migrating without putting SEO rankings at risk.",
     processSubtitle:
       "We renew your existing site or app through measurable steps from audit to go-live. Migration planning, design approval and content migration are managed with transparent communication to minimize SEO loss risk.",
     techSubtitle:
@@ -308,7 +308,7 @@ export const serviceDetailsEn = {
   "teknik-denetim": {
     metaTitle: "Technical SEO Audit | Speed & Security",
     metaDesc:
-      "Technical audit for your website, mobile app and digital infrastructure focused on performance, security, SEO and code quality.",
+      "Technical audit for your website and mobile app focused on performance, security, SEO and code quality.",
     keywords: [
       "technical SEO audit",
       "site speed analysis",

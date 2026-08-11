@@ -35,7 +35,7 @@ export const servicesHomeTr = {
   servicesSeoTag: "SEO",
   servicesAuditTitle: "Teknik Denetim",
   servicesAuditDesc:
-    "Web sitesi, uygulama ve altyapınızı performans, güvenlik ve SEO açısından kapsamlı analiz ediyoruz; öncelikli iyileştirme planı ve uygulanabilir adımlar çıkarıyor, bulguları iş etkisine göre sıralayıp net bir yol haritası sunuyoruz.",
+    "Web sitesi ve mobil uygulamanızı performans, güvenlik ve SEO açısından kapsamlı analiz ediyoruz; öncelikli iyileştirme planı ve uygulanabilir adımlar çıkarıyor, bulguları iş etkisine göre sıralayıp net bir yol haritası sunuyoruz.",
   servicesAuditTag: "Performans - Güvenlik - SEO",
   servicesMaintenanceTitle: "Bakım & Destek",
   servicesMaintenanceDesc:

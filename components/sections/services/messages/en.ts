@@ -35,7 +35,7 @@ export const servicesHomeEn = {
   servicesSeoTag: "SEO",
   servicesAuditTitle: "Technical Audit",
   servicesAuditDesc:
-    "We audit your website, app and infrastructure for performance, security and SEO; we deliver a prioritized improvement plan with actionable steps, ranking findings by business impact for a clear roadmap forward.",
+    "We audit your website and mobile app for performance, security and SEO; we deliver a prioritized improvement plan with actionable steps, ranking findings by business impact for a clear roadmap forward.",
   servicesAuditTag: "Performance - Security - SEO",
   servicesMaintenanceTitle: "Maintenance & Support",
   servicesMaintenanceDesc:
