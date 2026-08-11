@@ -9,6 +9,8 @@ export interface ComparisonLabels {
   statSupport: string;
   statLanguages: string;
   statPages: string;
+  statPrice: string;
+  pricingGroupLabel: string;
   getQuote: string;
   deliveryGroupLabel: string;
   featureIncluded: string;
