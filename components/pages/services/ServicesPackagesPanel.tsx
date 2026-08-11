@@ -40,8 +40,6 @@ interface PackagesPanelLabels {
   statPages: string;
   statSupport: string;
   statLanguages: string;
-  statPrice: string;
-  pricingGroupLabel: string;
   getQuote: string;
   featureIncluded: string;
   featureNotIncluded: string;
@@ -197,8 +195,6 @@ export function ServicesPackagesPanel({
     statSupport: labels.statSupport,
     statLanguages: labels.statLanguages,
     statPages: labels.statPages,
-    statPrice: labels.statPrice,
-    pricingGroupLabel: labels.pricingGroupLabel,
     getQuote: labels.getQuote,
     featureIncluded: labels.featureIncluded,
     featureNotIncluded: labels.featureNotIncluded,
