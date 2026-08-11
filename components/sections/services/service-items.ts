@@ -1,10 +1,20 @@
 import type { IconType } from "react-icons";
-import { LuGlobe, LuRefreshCw, LuSmartphone } from "react-icons/lu";
+import {
+  LuClipboardCheck,
+  LuGlobe,
+  LuLifeBuoy,
+  LuRefreshCw,
+  LuSearch,
+  LuSmartphone,
+} from "react-icons/lu";
 
 export const serviceSlugs = [
   "web-sitesi-gelistirme",
-  "uygulama-gelistirme",
   "web-sitesi-yenileme",
+  "uygulama-gelistirme",
+  "seo-hizmetleri",
+  "teknik-denetim",
+  "bakim-ve-destek",
 ] as const;
 
 export type ServiceSlug = (typeof serviceSlugs)[number];
@@ -30,6 +40,15 @@ export const serviceItems: ServiceItemConfig[] = [
     icon: LuGlobe,
   },
   {
+    slug: "web-sitesi-yenileme",
+    href: "/hizmetler/web-sitesi-yenileme",
+    titleKey: "servicesRefreshTitle",
+    descKey: "servicesRefreshDesc",
+    navDescKey: "serviceRefreshDesc",
+    tagKey: "servicesRefreshTag",
+    icon: LuRefreshCw,
+  },
+  {
     slug: "uygulama-gelistirme",
     href: "/hizmetler/uygulama-gelistirme",
     titleKey: "servicesAppTitle",
@@ -39,13 +58,31 @@ export const serviceItems: ServiceItemConfig[] = [
     icon: LuSmartphone,
   },
   {
-    slug: "web-sitesi-yenileme",
-    href: "/hizmetler/web-sitesi-yenileme",
-    titleKey: "servicesRefreshTitle",
-    descKey: "servicesRefreshDesc",
-    navDescKey: "serviceRefreshDesc",
-    tagKey: "servicesRefreshTag",
-    icon: LuRefreshCw,
+    slug: "seo-hizmetleri",
+    href: "/hizmetler/seo-hizmetleri",
+    titleKey: "servicesSeoTitle",
+    descKey: "servicesSeoDesc",
+    navDescKey: "serviceSeoDesc",
+    tagKey: "servicesSeoTag",
+    icon: LuSearch,
+  },
+  {
+    slug: "teknik-denetim",
+    href: "/hizmetler/teknik-denetim",
+    titleKey: "servicesAuditTitle",
+    descKey: "servicesAuditDesc",
+    navDescKey: "serviceAuditDesc",
+    tagKey: "servicesAuditTag",
+    icon: LuClipboardCheck,
+  },
+  {
+    slug: "bakim-ve-destek",
+    href: "/hizmetler/bakim-ve-destek",
+    titleKey: "servicesMaintenanceTitle",
+    descKey: "servicesMaintenanceDesc",
+    navDescKey: "serviceMaintenanceDesc",
+    tagKey: "servicesMaintenanceTag",
+    icon: LuLifeBuoy,
   },
 ];
 

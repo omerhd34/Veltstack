@@ -3,7 +3,7 @@ export const servicesHomeTr = {
   servicesHeadline: "Hedefleriniz için",
   servicesHeadlineAccent: "ölçülebilir hizmetler",
   servicesIntro:
-    "Markanızın dijital ihtiyaçlarını web sitesi, mobil uygulama ve dijital yenileme alanlarında tek çatı altında ele alıyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar her aşamada performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
+    "Markanızın dijital ihtiyaçlarını web, uygulama, SEO ve bakım gibi alanlarda tek çatı altında ele alıyoruz. Her projede kapsamı baştan netleştirir, süreci şeffaf yönetir ve ölçülebilir iş sonuçlarına odaklanırız. Tasarımdan yayına kadar her aşamada performans, erişilebilirlik ve SEO uyumluluğunu önceliklendiririz.",
   servicesBullets: [
     "Tek muhatap, baştan sona şeffaf süreç",
     "Tasarım + yapım + yayın tek pakette",
@@ -17,16 +17,28 @@ export const servicesHomeTr = {
   servicesSliderRegion: "Hizmetler karuseli",
   servicesSliderStatus: "{label}, {current} / {total}",
   servicesSliderActivate: "{title} hizmetini göster",
-  servicesWebTitle: "Web Sitesi Geliştirme",
+  servicesWebTitle: "Web Sitesi Yapımı",
   servicesWebDesc:
     "Kurumsal, e-ticaret ve portfolyo projelerinde tasarımdan yayına kadar hızlı ve SEO uyumlu web yapımı sunuyoruz; performans, erişilebilirliği ve dönüşümü önceliklendirip mobil uyumlu bir altyapıyla yayına alıyoruz.",
   servicesWebTag: "Web - Yapım",
-  servicesRefreshTitle: "Web Sitesi & Uygulama Yenileme",
+  servicesRefreshTitle: "Dijital Yenileme",
   servicesRefreshDesc:
     "Eski veya yavaş web ve mobil uygulamalarınızı modern, hızlı ve dönüşüm odaklı bir deneyime taşıyoruz; altyapı, arayüz ve içeriği birlikte yenileyip iş akışlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
   servicesRefreshTag: "Yenileme - Modernizasyon",
-  servicesAppTitle: "Uygulama Geliştirme",
+  servicesAppTitle: "Uygulama Yapımı",
   servicesAppDesc:
     "iOS ve Android için performanslı, kullanıcı dostu mobil uygulamalar geliştiriyoruz; mağaza yayını, güncelleme ve bakım sürecini baştan sona yönetiyor, entegrasyon ve kullanıcı akışlarını projenize göre kurguluyoruz.",
   servicesAppTag: "iOS - Android",
+  servicesSeoTitle: "SEO Hizmetleri",
+  servicesSeoDesc:
+    "Teknik altyapı, içerik stratejisi ve düzenli optimizasyonla sürdürülebilir organik büyüme sağlıyoruz; ölçülebilir hedeflerle ilerliyor, anahtar kelime çalışmalarını veriye dayalı bir plana dönüştürüp düzenli raporluyoruz.",
+  servicesSeoTag: "SEO",
+  servicesAuditTitle: "Teknik Denetim",
+  servicesAuditDesc:
+    "Web sitesi, uygulama ve altyapınızı performans, güvenlik ve SEO açısından kapsamlı analiz ediyoruz; öncelikli iyileştirme planı ve uygulanabilir adımlar çıkarıyor, bulguları iş etkisine göre sıralayıp net bir yol haritası sunuyoruz.",
+  servicesAuditTag: "Performans - Güvenlik - SEO",
+  servicesMaintenanceTitle: "Bakım & Destek",
+  servicesMaintenanceDesc:
+    "Güncelleme, yedekleme ve teknik destekle web ve uygulama varlıklarınızı güvenli, güncel ve kesintisiz tutuyoruz; acil müdahale süreçlerini yönetiyor, izleme ve bakım ritmini kurarak riskleri yayına yansımadan önce ele alıyoruz.",
+  servicesMaintenanceTag: "Güncelleme - Yedekleme - Destek",
 } as const;
