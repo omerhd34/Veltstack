@@ -2,10 +2,10 @@ import type { IconType } from "react-icons";
 import {
   LuClipboardCheck,
   LuGlobe,
-  LuLifeBuoy,
   LuRefreshCw,
   LuSearch,
   LuSmartphone,
+  LuWrench,
 } from "react-icons/lu";
 
 export const serviceSlugs = [
@@ -82,7 +82,7 @@ export const serviceItems: ServiceItemConfig[] = [
     descKey: "servicesMaintenanceDesc",
     navDescKey: "serviceMaintenanceDesc",
     tagKey: "servicesMaintenanceTag",
-    icon: LuLifeBuoy,
+    icon: LuWrench,
   },
 ];
 
