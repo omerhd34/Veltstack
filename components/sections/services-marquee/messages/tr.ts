@@ -1,11 +1,11 @@
 export const servicesMarqueeHomeTr = {
   servicesMarqueeItems: [
-    "Web Yapımı",
+    "Web Geliştirme",
     "Dijital Yenileme",
-    "Mobil Uygulama Yapımı",
+    "Mobil Uygulama Geliştirme",
     "Kurumsal Web Sitesi",
     "E-Ticaret",
-    "SEO Hizmeti",
+    "SEO Hizmetleri",
     "Teknik Denetim",
     "Portfolyo Sitesi",
     "Bakım ve Destek",

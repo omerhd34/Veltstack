@@ -17,15 +17,15 @@ export const servicesHomeTr = {
   servicesSliderRegion: "Hizmetler karuseli",
   servicesSliderStatus: "{label}, {current} / {total}",
   servicesSliderActivate: "{title} hizmetini göster",
-  servicesWebTitle: "Web Sitesi Yapımı",
+  servicesWebTitle: "Web Sitesi Geliştirme",
   servicesWebDesc:
-    "Kurumsal, e-ticaret ve portfolyo projelerinde tasarımdan yayına kadar hızlı ve SEO uyumlu web yapımı sunuyoruz; performans, erişilebilirliği ve dönüşümü önceliklendirip mobil uyumlu bir altyapıyla yayına alıyoruz.",
-  servicesWebTag: "Web - Yapım",
+    "Kurumsal, e-ticaret ve portfolyo projelerinde tasarımdan yayına kadar hızlı ve SEO uyumlu web geliştirme sunuyoruz; performans, erişilebilirliği ve dönüşümü önceliklendirip mobil uyumlu bir altyapıyla yayına alıyoruz.",
+  servicesWebTag: "Web - Geliştirme",
   servicesRefreshTitle: "Dijital Yenileme",
   servicesRefreshDesc:
     "Eski veya yavaş web ve mobil uygulamalarınızı modern, hızlı ve dönüşüm odaklı bir deneyime taşıyoruz; altyapı, arayüz ve içeriği birlikte yenileyip iş akışlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
   servicesRefreshTag: "Yenileme - Modernizasyon",
-  servicesAppTitle: "Uygulama Yapımı",
+  servicesAppTitle: "Uygulama Geliştirme",
   servicesAppDesc:
     "iOS ve Android için performanslı, kullanıcı dostu mobil uygulamalar geliştiriyoruz; mağaza yayını, güncelleme ve bakım sürecini baştan sona yönetiyor, entegrasyon ve kullanıcı akışlarını projenize göre kurguluyoruz.",
   servicesAppTag: "iOS - Android",

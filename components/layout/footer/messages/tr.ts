@@ -6,10 +6,10 @@ export const footerTr = {
   blogTitle: "Blog",
   legalTitle: "Yasal",
   serviceLabels: {
-    serviceWeb: "Web Sitesi Yapımı",
+    serviceWeb: "Web Sitesi Geliştirme",
     serviceRefresh: "Dijital Yenileme",
-    serviceApp: "Uygulama Yapımı",
-    serviceSeo: "SEO Hizmeti",
+    serviceApp: "Uygulama Geliştirme",
+    serviceSeo: "SEO Hizmetleri",
     serviceAudit: "Teknik Denetim",
     serviceMaintenance: "Bakım & Destek",
   },

@@ -65,10 +65,10 @@ export const serviceDetailsEn = {
       "corporate brochure site",
       "scalable web application",
     ],
-    heroBadge: "Web Building",
-    heroTitle: "Website Building",
+    heroBadge: "Web Development",
+    heroTitle: "Website Development",
     heroImageAlt:
-      "Abstract browser and layout illustration symbolizing modern website building",
+      "Abstract browser and layout illustration symbolizing modern website development",
     heroSubtitle:
       "I build every kind of web project end to end—from corporate sites and e-commerce to portfolios—with a modern, SEO-ready, mobile-first stack for fast, scalable solutions that represent your brand online.",
     processSubtitle:
@@ -200,10 +200,10 @@ export const serviceDetailsEn = {
       "native mobile app",
       "startup mobile app",
     ],
-    heroBadge: "App Building",
-    heroTitle: "Mobile App Building",
+    heroBadge: "App Development",
+    heroTitle: "Mobile App Development",
     heroImageAlt:
-      "Floating phone and interface illustration symbolizing mobile app building",
+      "Floating phone and interface illustration symbolizing mobile app development",
     heroSubtitle:
       "User-friendly, scalable apps for iOS and Android from a single codebase—React Native and Expo for fast delivery, store publishing and backend integrations under one roof.",
     processSubtitle:

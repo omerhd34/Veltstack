@@ -49,26 +49,26 @@ export const serviceDetailsTr = {
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
   "web-sitesi-gelistirme": {
-    metaTitle: "Web Sitesi Yapımı",
+    metaTitle: "Web Sitesi Geliştirme",
     metaDesc:
-      "Kurumsal web sitesi yapımı, e-ticaret ve portfolyo projelerinde uçtan uca web yapımı. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
+      "Kurumsal web sitesi geliştirme, e-ticaret ve portfolyo projelerinde uçtan uca web geliştirme. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
     keywords: [
-      "web sitesi yapımı",
+      "web sitesi geliştirme",
       "web sitesi tasarımı",
       "kurumsal web sitesi",
       "Next.js web sitesi",
-      "e-ticaret web sitesi yapımı",
-      "landing page yapımı",
+      "e-ticaret web sitesi geliştirme",
+      "landing page geliştirme",
       "SSR web sitesi",
       "React web sitesi",
       "portfolyo sitesi",
       "kurumsal tanıtım sitesi",
       "ölçeklenebilir web uygulaması",
     ],
-    heroBadge: "Web Yapımı",
-    heroTitle: "Web Sitesi Yapımı",
+    heroBadge: "Web Geliştirme",
+    heroTitle: "Web Sitesi Geliştirme",
     heroImageAlt:
-      "Modern web sitesi yapımını simgeleyen soyut tarayıcı ve layout illüstrasyonu",
+      "Modern web sitesi geliştirmeyi simgeleyen soyut tarayıcı ve layout illüstrasyonu",
     heroSubtitle:
       "Kurumsal siteden e-ticarete, portfolyodan tanıtım sayfasına kadar her web projesini uçtan uca geliştiriyorum; modern altyapı, SEO uyumlu yapı ve mobil öncelikli tasarımla hızlı, ölçeklenebilir çözümler sunuyorum.",
     processSubtitle:
@@ -191,7 +191,7 @@ export const serviceDetailsTr = {
     keywords: [
       "mobil uygulama geliştirme",
       "React Native uygulama",
-      "iOS Android uygulama yapımı",
+      "iOS Android uygulama geliştirme",
       "Expo mobil uygulama",
       "cross platform uygulama",
       "App Store yayın",
@@ -200,10 +200,10 @@ export const serviceDetailsTr = {
       "native mobil uygulama",
       "startup mobil uygulama",
     ],
-    heroBadge: "Uygulama Yapımı",
-    heroTitle: "Mobil Uygulama Yapımı",
+    heroBadge: "Uygulama Geliştirme",
+    heroTitle: "Mobil Uygulama Geliştirme",
     heroImageAlt:
-      "Mobil uygulama yapımını simgeleyen yüzen telefon ve arayüz illüstrasyonu",
+      "Mobil uygulama geliştirmeyi simgeleyen yüzen telefon ve arayüz illüstrasyonu",
     heroSubtitle:
       "Tek kod tabanıyla iOS ve Android'de çalışan mobil uygulamalar geliştiriyorum; React Native ve Expo ile hızlı teslimat, mağaza yayını ve backend entegrasyonlarını tek çatı altında yönetiyorum.",
     processSubtitle:

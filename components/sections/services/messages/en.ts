@@ -17,15 +17,15 @@ export const servicesHomeEn = {
   servicesSliderRegion: "Services carousel",
   servicesSliderStatus: "{label}, {current} / {total}",
   servicesSliderActivate: "Show {title} service",
-  servicesWebTitle: "Website Building",
+  servicesWebTitle: "Website Development",
   servicesWebDesc:
-    "We deliver fast, SEO-ready web building for corporate, e-commerce and portfolio projects from design to launch, prioritizing performance, accessibility and conversion on a mobile-friendly foundation.",
+    "We deliver fast, SEO-ready web development for corporate, e-commerce and portfolio projects from design to launch, prioritizing performance, accessibility and conversion on a mobile-friendly foundation.",
   servicesWebTag: "Corporate - E-commerce - Portfolio",
   servicesRefreshTitle: "Digital Refresh",
   servicesRefreshDesc:
     "We modernize outdated or slow web and mobile apps into fast, conversion-focused experiences; we refresh infrastructure, interface and content together while preserving your workflows for a smooth transition.",
   servicesRefreshTag: "Web - Mobile - Infrastructure",
-  servicesAppTitle: "App Building",
+  servicesAppTitle: "App Development",
   servicesAppDesc:
     "We build high-performance, user-friendly mobile apps for iOS and Android; we handle store launch, updates and maintenance end to end, shape integrations around your product goals and plan each release carefully.",
   servicesAppTag: "iOS - Android",
