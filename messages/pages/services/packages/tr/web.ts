@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 
 const commonDesignItems = [
-  "Mobil, tablet ve masaüstünde akıcı responsive tasarım",
+  "Tüm cihazlara (telefon, tablet, bilgisayar) tam uyumlu tasarım",
   "SSL / HTTPS ve temel güvenlik yapılandırması",
   "Hızlı yükleme ve Core Web Vitals optimizasyonu",
   "Erişilebilir, modern arayüz ve tipografi",
@@ -60,11 +60,10 @@ export const webPackagesTr = {
     description:
       "Kişisel markanızı veya işletmenizi güven veren modern bir web sitesiyle öne çıkarın. Portföyünüzü, hizmetlerinizi ve hikâyenizi ziyaretçilere net ve etkileyici bir vitrinde sunun.",
     introP2:
-      "Girişim, Profesyonel ve Premium paketleri farklı ölçeklerdeki tanıtım projelerine uyum sağlar. Kapsamı ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri farklı ölçeklerdeki tanıtım projelerine uyum sağlar. Kapsamı ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "10-14",
-        price: "30.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
@@ -85,7 +84,6 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "21-30",
-        price: "45.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
@@ -122,7 +120,6 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "30-45",
-        price: "70.000 ₺",
         revisions: "7",
         supportDays: "45",
         pages: "Sınırsız",
@@ -169,11 +166,10 @@ export const webPackagesTr = {
     description:
       "Kurumsal kimliğinizi yansıtan, güven oluşturan ve müşteri kazandırmaya odaklı web sitesi. Hizmetlerinizi, ekibinizi ve iletişim kanallarınızı profesyonel bir yapıda ziyaretçilerinize sunun.",
     introP2:
-      "Girişim, Profesyonel ve Premium paketleri kurumsal web projelerinin farklı ölçeklerine uyum sağlar. Premium seviyede sayfa sınırı olmadan büyüyebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri kurumsal web projelerinin farklı ölçeklerine uyum sağlar. Kapsamlı seviyede sayfa sınırı olmadan büyüyebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
-        price: "45.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
@@ -194,7 +190,6 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "28-42",
-        price: "70.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
@@ -233,7 +228,6 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "42-60",
-        price: "95.000 ₺",
         revisions: "8",
         supportDays: "45",
         pages: "Sınırsız",
@@ -283,11 +277,10 @@ export const webPackagesTr = {
     description:
       "Online satışa hızlı başlamanız için güvenli ödeme altyapısına sahip modern e-ticaret çözümü. Ürünlerinizi, siparişlerinizi ve müşteri deneyiminizi tek panelden yönetebileceğiniz ölçeklenebilir bir mağaza kurun.",
     introP2:
-      "Girişim, Profesyonel ve Premium paketleri farklı ürün katalogları ve sipariş hacimlerine göre şekillenir. Premium'da ürün ve kategori sınırı olmadan ölçeklenebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri farklı ürün katalogları ve sipariş hacimlerine göre şekillenir. Kapsamlı'da ürün ve kategori sınırı olmadan ölçeklenebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
-        price: "70.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
@@ -316,7 +309,6 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "42-56",
-        price: "85.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
@@ -370,7 +362,6 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "56-84",
-        price: "100.000 ₺",
         revisions: "10",
         supportDays: "45",
         pages: "Sınırsız",

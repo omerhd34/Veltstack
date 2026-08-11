@@ -100,11 +100,10 @@ export const appPackagesTr = {
     description:
       "Markanızı tek dokunuşla tanıtan, güven veren iOS ve Android uygulaması. Portföyünüzü, hizmetlerinizi ve iletişim kanallarınızı kullanıcıların cebine taşıyın.",
     introP2:
-      "Girişim, Profesyonel ve Premium paketleri farklı ölçeklerdeki tanıtım uygulamalarına uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz; mağaza yayınından entegrasyonlara kadar yanınızdayım.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri farklı ölçeklerdeki tanıtım uygulamalarına uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz; mağaza yayınından entegrasyonlara kadar yanınızdayım.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
-        price: "50.000 ₺",
         revisions: "3",
         supportDays: "15",
         languages: "1",
@@ -134,7 +133,6 @@ export const appPackagesTr = {
       },
       standart: {
         deliveryDays: "30-45",
-        price: "70.000 ₺",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
@@ -173,7 +171,6 @@ export const appPackagesTr = {
       },
       pro: {
         deliveryDays: "45-60",
-        price: "90.000 ₺",
         revisions: "7",
         supportDays: "45",
         languages: "Sınırsız",
@@ -213,11 +210,10 @@ export const appPackagesTr = {
     description:
       "Çalışanlarınız veya müşterileriniz için güvenilir kurumsal mobil deneyim. İçerik, iletişim ve iş süreçlerinizi iOS ve Android'de tutarlı ve erişilebilir bir arayüzle sunun.",
     introP2:
-      "Girişim, Profesyonel ve Premium paketleri kurumsal mobil projelerin farklı ölçeklerine uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri kurumsal mobil projelerin farklı ölçeklerine uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
-        price: "65.000 ₺",
         revisions: "3",
         supportDays: "15",
         languages: "1",
@@ -251,7 +247,6 @@ export const appPackagesTr = {
       },
       standart: {
         deliveryDays: "42-56",
-        price: "85.000 ₺",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
@@ -290,7 +285,6 @@ export const appPackagesTr = {
       },
       pro: {
         deliveryDays: "56-84",
-        price: "100.000 ₺",
         revisions: "8",
         supportDays: "45",
         languages: "Sınırsız",
@@ -332,11 +326,10 @@ export const appPackagesTr = {
     description:
       "Ödeme, ürün ve sipariş yönetimi sunan mağazaya hazır e-ticaret uygulaması. Katalogunuzu, sepet akışınızı ve müşteri yolculuğunu mobilde akıcı ve güven veren bir deneyimle hayata geçirin.",
     introP2:
-      "Girişim, Profesyonel ve Premium seviyeleriyle farklı katalog ve sipariş hacimlerine göre şekillenen e-ticaret uygulamaları sunuyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle farklı katalog ve sipariş hacimlerine göre şekillenen e-ticaret uygulamaları sunuyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "42-56",
-        price: "75.000 ₺",
         revisions: "3",
         supportDays: "15",
         languages: "1",
@@ -371,7 +364,6 @@ export const appPackagesTr = {
       },
       standart: {
         deliveryDays: "56-77",
-        price: "90.000 ₺",
         revisions: "5",
         supportDays: "30",
         languages: "1-5",
@@ -408,7 +400,6 @@ export const appPackagesTr = {
       },
       pro: {
         deliveryDays: "84-120",
-        price: "100.000 ₺",
         revisions: "8",
         supportDays: "45",
         languages: "Sınırsız",

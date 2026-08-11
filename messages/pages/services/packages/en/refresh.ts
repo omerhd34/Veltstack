@@ -204,7 +204,6 @@ export const refreshPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "7-14",
-        price: "₺15,000",
         revisions: "2",
         supportDays: "15",
         languages: "1",
@@ -229,7 +228,6 @@ export const refreshPackagesEn = {
       },
       standart: {
         deliveryDays: "14-21",
-        price: "₺30,000",
         revisions: "4",
         supportDays: "30",
         featureGroups: [
@@ -253,7 +251,6 @@ export const refreshPackagesEn = {
       },
       pro: {
         deliveryDays: "21-30",
-        price: "₺40,000",
         revisions: "6",
         supportDays: "45",
         languages: "Unlimited",
@@ -288,7 +285,6 @@ export const refreshPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "10-18",
-        price: "₺25,000",
         revisions: "2",
         supportDays: "15",
         featureGroups: [
@@ -312,7 +308,6 @@ export const refreshPackagesEn = {
       },
       standart: {
         deliveryDays: "18-28",
-        price: "₺40,000",
         revisions: "4",
         supportDays: "30",
         featureGroups: [
@@ -336,7 +331,6 @@ export const refreshPackagesEn = {
       },
       pro: {
         deliveryDays: "28-42",
-        price: "₺65,000",
         revisions: "6",
         supportDays: "45",
         featureGroups: [
@@ -370,7 +364,6 @@ export const refreshPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "14-21",
-        price: "₺35,000",
         revisions: "2",
         supportDays: "15",
         featureGroups: [
@@ -394,7 +387,6 @@ export const refreshPackagesEn = {
       },
       standart: {
         deliveryDays: "21-35",
-        price: "₺55,000",
         revisions: "4",
         supportDays: "30",
         featureGroups: [
@@ -418,7 +410,6 @@ export const refreshPackagesEn = {
       },
       pro: {
         deliveryDays: "35-49",
-        price: "₺80,000",
         revisions: "6",
         supportDays: "45",
         featureGroups: [

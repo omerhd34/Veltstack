@@ -88,51 +88,6 @@ const appAuditReportingPro = [
   "Uygulama kapsamı için teklif önerisi",
 ] as const;
 
-const infraAuditTechnicalTemel = [
-  "Sunucu kaynak kullanımı (CPU, RAM, disk) analizi",
-  "SSL/TLS ve domain yapılandırması kontrolü",
-  "Yedekleme sıklığı ve geri yükleme durumu",
-  "Firewall, port ve temel erişim güvenliği",
-] as const;
-
-const infraAuditTechnicalStandart = [
-  ...infraAuditTechnicalTemel,
-  "Veritabanı performansı ve indeksleme",
-  "CI/CD pipeline güvenliği ve secret yönetimi",
-  "Erişim kontrolü ve IAM incelemesi",
-  "DDoS koruması ve firewall kuralları",
-  "Log, izleme ve uyarı altyapısı",
-] as const;
-
-const infraAuditTechnicalPro = [
-  ...infraAuditTechnicalStandart,
-  "Bulut mimarisi ve maliyet incelemesi (AWS / GCP / Azure)",
-  "Kubernetes ve container güvenlik yapılandırması",
-  "Penetrasyon testine hazırlık değerlendirmesi",
-  "Felaket kurtarma, yedeklilik ve SLA analizi",
-  "Kaynak kullanımı ve maliyet optimizasyonu önerileri",
-] as const;
-
-const infraAuditReportingTemel = [
-  "Risk ve önceliğe göre sıralanmış bulgu listesi",
-  "Acil müdahale gerektiren maddelerin ayrıştırılması",
-  "PDF özet denetim raporu",
-] as const;
-
-const infraAuditReportingStandart = [
-  ...infraAuditReportingTemel,
-  "İş etkisiyle risk matrisi",
-  "Uygulanabilir güvenlik iyileştirme planı",
-  "Detaylı PDF denetim raporu",
-] as const;
-
-const infraAuditReportingPro = [
-  ...infraAuditReportingStandart,
-  "Altyapı modernizasyon yol haritası",
-  "1 saatlik sonuç değerlendirme toplantısı",
-  "Uygulama kapsamı için teklif önerisi",
-] as const;
-
 const AUDIT_GROUP_TECHNICAL = "Teknik Denetim";
 const AUDIT_GROUP_REPORTING = "Raporlama & Destek";
 
@@ -142,11 +97,10 @@ export const auditPackagesTr = {
     description:
       "Web sitenizin performans, güvenlik, SEO ve kod kalitesini uçtan uca analiz ediyoruz; bulguları öncelik sırasına koyarak uygulanabilir iyileştirme planı sunuyoruz.",
     introP2:
-      "Girişim, Profesyonel ve Premium seviyeleriyle web siteniz için farklı derinlikte analiz ve raporlama alırsınız. Bulgular öncelik sırasına göre düzenlenmiş aksiyon planı olarak teslim edilir.",
+      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle web siteniz için farklı derinlikte analiz ve raporlama alırsınız. Bulgular öncelik sırasına göre düzenlenmiş aksiyon planı olarak teslim edilir.",
     tiers: {
       temel: {
         deliveryDays: "3-5",
-        price: "6.000 ₺",
         featureGroups: [
           { label: AUDIT_GROUP_TECHNICAL, items: [...webAuditTechnicalTemel] },
           { label: AUDIT_GROUP_REPORTING, items: [...webAuditReportingTemel] },
@@ -154,7 +108,6 @@ export const auditPackagesTr = {
       },
       standart: {
         deliveryDays: "5-7",
-        price: "10.000 ₺",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -168,7 +121,6 @@ export const auditPackagesTr = {
       },
       pro: {
         deliveryDays: "7-10",
-        price: "15.000 ₺",
         featureGroups: [
           { label: AUDIT_GROUP_TECHNICAL, items: [...webAuditTechnicalPro] },
           { label: AUDIT_GROUP_REPORTING, items: [...webAuditReportingPro] },
@@ -181,11 +133,10 @@ export const auditPackagesTr = {
     description:
       "iOS ve Android uygulamanızın performans, güvenlik ve kullanıcı deneyimini platform bazlı değerlendiriyor; öncelikli aksiyon listesi ve rapor sunuyoruz.",
     introP2:
-      "Girişim, Profesyonel ve Premium seviyeleriyle mobil uygulamanız için farklı derinlikte analiz ve raporlama alırsınız. Platform bazlı bulgular uygulanabilir aksiyon planına dönüştürülür.",
+      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle mobil uygulamanız için farklı derinlikte analiz ve raporlama alırsınız. Platform bazlı bulgular uygulanabilir aksiyon planına dönüştürülür.",
     tiers: {
       temel: {
         deliveryDays: "3-5",
-        price: "8.000 ₺",
         featureGroups: [
           { label: AUDIT_GROUP_TECHNICAL, items: [...appAuditTechnicalTemel] },
           { label: AUDIT_GROUP_REPORTING, items: [...appAuditReportingTemel] },
@@ -193,7 +144,6 @@ export const auditPackagesTr = {
       },
       standart: {
         deliveryDays: "5-7",
-        price: "12.000 ₺",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -207,61 +157,9 @@ export const auditPackagesTr = {
       },
       pro: {
         deliveryDays: "7-10",
-        price: "18.000 ₺",
         featureGroups: [
           { label: AUDIT_GROUP_TECHNICAL, items: [...appAuditTechnicalPro] },
           { label: AUDIT_GROUP_REPORTING, items: [...appAuditReportingPro] },
-        ],
-      },
-    },
-  },
-  infrastructureAudit: {
-    title: "Altyapı ve Güvenlik",
-    description:
-      "Sunucu, veritabanı, CI/CD ve güvenlik altyapınızı sistematik olarak inceliyoruz; riskleri önceliklendirip somut güvenlik aksiyon planı çıkarıyoruz.",
-    introP2:
-      "Girişim, Profesyonel ve Premium seviyeleriyle altyapınız için farklı derinlikte analiz ve raporlama alırsınız. Riskler öncelik sırasına göre somut güvenlik aksiyonlarına dönüştürülür.",
-    tiers: {
-      temel: {
-        deliveryDays: "3-5",
-        price: "10.000 ₺",
-        featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...infraAuditTechnicalTemel],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...infraAuditReportingTemel],
-          },
-        ],
-      },
-      standart: {
-        deliveryDays: "5-7",
-        price: "15.000 ₺",
-        featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...infraAuditTechnicalStandart],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...infraAuditReportingStandart],
-          },
-        ],
-      },
-      pro: {
-        deliveryDays: "7-10",
-        price: "22.000 ₺",
-        featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...infraAuditTechnicalPro],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...infraAuditReportingPro],
-          },
         ],
       },
     },

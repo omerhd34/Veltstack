@@ -132,73 +132,6 @@ const appAuditReportingPro = [
   "Implementation quote preparation",
 ] as const;
 
-// ---------------------------------------------------------------------------
-// Infrastructure & Security Audit
-// ---------------------------------------------------------------------------
-
-const infraAuditTechnicalTemel = [
-  "Server resource usage analysis (CPU, RAM, disk)",
-  "SSL/TLS and domain configuration check",
-  "Backup frequency and restore status",
-  "Firewall and basic access security review",
-] as const;
-
-const infraAuditTechnicalStandart = [
-  "Server resource usage analysis (CPU, RAM, disk)",
-  "SSL/TLS and domain configuration check",
-  "Backup frequency and restore status",
-  "Firewall and basic access security review",
-  "Database performance and indexing check",
-  "CI/CD pipeline security and secret management",
-  "Access control and identity management (IAM)",
-  "DDoS protection and firewall rules",
-  "Log collection and monitoring infrastructure review",
-] as const;
-
-const infraAuditTechnicalPro = [
-  "Server resource usage analysis (CPU, RAM, disk)",
-  "SSL/TLS and domain configuration check",
-  "Backup frequency and restore status",
-  "Firewall and basic access security review",
-  "Database performance and indexing check",
-  "CI/CD pipeline security and secret management",
-  "Access control and identity management (IAM)",
-  "DDoS protection and firewall rules",
-  "Log collection and monitoring infrastructure review",
-  "Cloud infrastructure (AWS/GCP/Azure) architecture and cost review",
-  "Kubernetes and container security configuration",
-  "Penetration test readiness assessment",
-  "Disaster recovery and SLA analysis",
-  "Resource usage and cost optimization",
-] as const;
-
-const infraAuditReportingTemel = [
-  "Prioritized risk list",
-  "Critical items requiring immediate action",
-  "PDF summary report",
-] as const;
-
-const infraAuditReportingStandart = [
-  "Prioritized risk list",
-  "Critical items requiring immediate action",
-  "PDF summary report",
-  "Risk matrix with business impact",
-  "Actionable security improvement plan",
-  "Detailed PDF report",
-] as const;
-
-const infraAuditReportingPro = [
-  "Prioritized risk list",
-  "Critical items requiring immediate action",
-  "PDF summary report",
-  "Risk matrix with business impact",
-  "Actionable security improvement plan",
-  "Detailed PDF report",
-  "Infrastructure modernization roadmap",
-  "1-hour results review call",
-  "Implementation quote preparation",
-] as const;
-
 const AUDIT_GROUP_TECHNICAL = "Technical Audit";
 const AUDIT_GROUP_REPORTING = "Reporting & Support";
 
@@ -212,7 +145,6 @@ export const auditPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
-        price: "₺6,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -226,7 +158,6 @@ export const auditPackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
-        price: "₺10,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -240,7 +171,6 @@ export const auditPackagesEn = {
       },
       pro: {
         deliveryDays: "7-10",
-        price: "₺15,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -263,7 +193,6 @@ export const auditPackagesEn = {
     tiers: {
       temel: {
         deliveryDays: "3-5",
-        price: "₺8,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -277,7 +206,6 @@ export const auditPackagesEn = {
       },
       standart: {
         deliveryDays: "5-7",
-        price: "₺12,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -291,7 +219,6 @@ export const auditPackagesEn = {
       },
       pro: {
         deliveryDays: "7-10",
-        price: "₺18,000",
         featureGroups: [
           {
             label: AUDIT_GROUP_TECHNICAL,
@@ -300,57 +227,6 @@ export const auditPackagesEn = {
           {
             label: AUDIT_GROUP_REPORTING,
             items: [...appAuditReportingPro],
-          },
-        ],
-      },
-    },
-  },
-  infrastructureAudit: {
-    title: "Infrastructure & Security Audit",
-    description:
-      "Comprehensive analysis of your server, database, CI/CD and security infrastructure.",
-    introP2:
-      "Startup, Professional and Premium tiers deliver analysis and reporting at the depth your infrastructure requires. Risks are prioritized into concrete security actions.",
-    tiers: {
-      temel: {
-        deliveryDays: "3-5",
-        price: "₺10,000",
-        featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...infraAuditTechnicalTemel],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...infraAuditReportingTemel],
-          },
-        ],
-      },
-      standart: {
-        deliveryDays: "5-7",
-        price: "₺15,000",
-        featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...infraAuditTechnicalStandart],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...infraAuditReportingStandart],
-          },
-        ],
-      },
-      pro: {
-        deliveryDays: "7-10",
-        price: "₺22,000",
-        featureGroups: [
-          {
-            label: AUDIT_GROUP_TECHNICAL,
-            items: [...infraAuditTechnicalPro],
-          },
-          {
-            label: AUDIT_GROUP_REPORTING,
-            items: [...infraAuditReportingPro],
           },
         ],
       },

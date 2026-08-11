@@ -204,11 +204,10 @@ export const refreshPackagesTr = {
     description:
       "Mevcut tanıtım sitenizi modern tasarım, hızlı altyapı ve SEO korumasıyla yenileyin; içeriklerinizi kaybetmeden güçlü bir dijital vitrin oluşturun.",
     introP2:
-      "Girişim, Profesyonel ve Premium seviyeleriyle tanıtım sitenizin yenileme kapsamını netleştiririz. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
+      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle tanıtım sitenizin yenileme kapsamını netleştiririz. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
     tiers: {
       temel: {
         deliveryDays: "7-14",
-        price: "15.000 ₺",
         revisions: "2",
         supportDays: "15",
         languages: "1",
@@ -233,7 +232,6 @@ export const refreshPackagesTr = {
       },
       standart: {
         deliveryDays: "14-21",
-        price: "30.000 ₺",
         revisions: "4",
         supportDays: "30",
         featureGroups: [
@@ -257,7 +255,6 @@ export const refreshPackagesTr = {
       },
       pro: {
         deliveryDays: "21-30",
-        price: "40.000 ₺",
         revisions: "6",
         supportDays: "45",
         languages: "Sınırsız",
@@ -288,11 +285,10 @@ export const refreshPackagesTr = {
     description:
       "Kurumsal web sitenizi güncel tasarım, güvenli altyapı ve planlı geçişle yenileyin; marka güveninizi ve organik görünürlüğünüzü koruyun.",
     introP2:
-      "Girişim, Profesyonel ve Premium seviyeleriyle kurumsal sitenizin yenileme kapsamını netleştiririz. Mevcut içerik ve entegrasyonlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
+      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle kurumsal sitenizin yenileme kapsamını netleştiririz. Mevcut içerik ve entegrasyonlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
     tiers: {
       temel: {
         deliveryDays: "10-18",
-        price: "25.000 ₺",
         revisions: "2",
         supportDays: "15",
         featureGroups: [
@@ -316,7 +312,6 @@ export const refreshPackagesTr = {
       },
       standart: {
         deliveryDays: "18-28",
-        price: "40.000 ₺",
         revisions: "4",
         supportDays: "30",
         featureGroups: [
@@ -340,7 +335,6 @@ export const refreshPackagesTr = {
       },
       pro: {
         deliveryDays: "28-42",
-        price: "65.000 ₺",
         revisions: "6",
         supportDays: "45",
         featureGroups: [
@@ -370,11 +364,10 @@ export const refreshPackagesTr = {
     description:
       "E-ticaret sitenizi modern altyapı, akıcı ödeme deneyimi ve SEO korumasıyla yenileyin; ürün verilerinizi ve sıralamanızı riske atmadan dönüşüm odaklı bir mağazaya geçin.",
     introP2:
-      "Girişim, Profesyonel ve Premium seviyeleriyle e-ticaret mağazanızın yenileme kapsamını netleştiririz. Ürün verilerinizi ve organik görünürlüğünüzü koruyarak dönüşüm odaklı bir mağazaya geçiyoruz.",
+      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle e-ticaret mağazanızın yenileme kapsamını netleştiririz. Ürün verilerinizi ve organik görünürlüğünüzü koruyarak dönüşüm odaklı bir mağazaya geçiyoruz.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
-        price: "35.000 ₺",
         revisions: "2",
         supportDays: "15",
         featureGroups: [
@@ -398,7 +391,6 @@ export const refreshPackagesTr = {
       },
       standart: {
         deliveryDays: "21-35",
-        price: "55.000 ₺",
         revisions: "4",
         supportDays: "30",
         featureGroups: [
@@ -422,7 +414,6 @@ export const refreshPackagesTr = {
       },
       pro: {
         deliveryDays: "35-49",
-        price: "80.000 ₺",
         revisions: "6",
         supportDays: "45",
         featureGroups: [
