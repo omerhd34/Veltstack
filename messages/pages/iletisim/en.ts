@@ -24,11 +24,11 @@ export const contactEn = {
     "Describe your project, expectations, and any technical requirements…",
 
   serviceOptions: [
-    { value: "web-sitesi-gelistirme", label: "Website Building" },
+    { value: "web-sitesi-gelistirme", label: "Website Development" },
     { value: "web-sitesi-yenileme", label: "Digital Refresh" },
-    { value: "uygulama-gelistirme", label: "App Building" },
-    { value: "teknik-denetim", label: "Technical Audit" },
+    { value: "uygulama-gelistirme", label: "App Development" },
     { value: "seo-hizmetleri", label: "SEO Services" },
+    { value: "teknik-denetim", label: "Technical Audit" },
     { value: "bakim-ve-destek", label: "Maintenance & Support" },
     { value: "diger", label: "Other / Unspecified" },
   ],
@@ -60,8 +60,7 @@ export const contactEn = {
       { value: "seoServices", label: "Digital Marketing & SEO" },
     ],
     "teknik-denetim": [
-      { value: "webAudit", label: "Website Technical Audit" },
-      { value: "appAudit", label: "Mobile App Technical Audit" },
+      { value: "auditServices", label: "Technical Audit Services" },
     ],
     "bakim-ve-destek": [
       { value: "maintenanceServices", label: "Maintenance & Support Services" },

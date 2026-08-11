@@ -107,6 +107,10 @@ export function ContactFormFields({
     });
   }
 
+  const hideTierField =
+    selectedService === "teknik-denetim" ||
+    selectedService === "bakim-ve-destek";
+
   function validateFields(values: {
     name: string;
     email: string;
@@ -120,7 +124,7 @@ export function ContactFormFields({
     if (!EMAIL_RE.test(values.email.trim())) errors.email = true;
     if (!values.service) errors.service = true;
     if (!values.servicePackage) errors.servicePackage = true;
-    if (!values.serviceTier) errors.serviceTier = true;
+    if (!hideTierField && !values.serviceTier) errors.serviceTier = true;
     if (!values.budget) errors.budget = true;
     return errors;
   }
@@ -154,12 +158,14 @@ export function ContactFormFields({
         form.elements.namedItem("content") as HTMLTextAreaElement
       ).value.trim() || "";
 
+    const resolvedTier = hideTierField ? "belirsiz" : selectedTier;
+
     const errors = validateFields({
       name,
       email,
       service: selectedService,
       servicePackage: selectedPackage,
-      serviceTier: selectedTier,
+      serviceTier: resolvedTier,
       budget: selectedBudget,
     });
 
@@ -180,7 +186,7 @@ export function ContactFormFields({
         : undefined,
       service: selectedService,
       servicePackage: selectedPackage,
-      serviceTier: selectedTier,
+      serviceTier: resolvedTier,
       budget: selectedBudget,
       content,
     };
@@ -336,8 +342,10 @@ export function ContactFormFields({
             onChange={(value) => {
               setSelectedService(value);
               setSelectedPackage("");
+              setSelectedTier("");
               clearFieldError("service");
               clearFieldError("servicePackage");
+              clearFieldError("serviceTier");
             }}
           />
         </div>
@@ -364,29 +372,31 @@ export function ContactFormFields({
             }}
           />
         </div>
-        <div>
-          <label htmlFor="cf-tier" className={labelBase}>
-            <span className={labelText}>
-              {labels.fieldTier}
-              <span className="ml-1 text-brand-accent" aria-hidden>
-                *
+        {!hideTierField ? (
+          <div>
+            <label htmlFor="cf-tier" className={labelBase}>
+              <span className={labelText}>
+                {labels.fieldTier}
+                <span className="ml-1 text-brand-accent" aria-hidden>
+                  *
+                </span>
               </span>
-            </span>
-          </label>
-          <ContactFormSelect
-            id="cf-tier"
-            name="serviceTier"
-            required
-            placeholder={labels.fieldTierPlaceholder}
-            options={labels.tierOptions}
-            value={selectedTier}
-            invalid={fieldErrors.serviceTier}
-            onChange={(value) => {
-              setSelectedTier(value);
-              clearFieldError("serviceTier");
-            }}
-          />
-        </div>
+            </label>
+            <ContactFormSelect
+              id="cf-tier"
+              name="serviceTier"
+              required
+              placeholder={labels.fieldTierPlaceholder}
+              options={labels.tierOptions}
+              value={selectedTier}
+              invalid={fieldErrors.serviceTier}
+              onChange={(value) => {
+                setSelectedTier(value);
+                clearFieldError("serviceTier");
+              }}
+            />
+          </div>
+        ) : null}
         <div>
           <label htmlFor="cf-budget" className={labelBase}>
             <span className={labelText}>

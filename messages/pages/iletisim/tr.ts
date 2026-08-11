@@ -24,11 +24,11 @@ export const contactTr = {
     "Projenizi, beklentilerinizi ve varsa teknik gereksinimlerinizi anlatın…",
 
   serviceOptions: [
-    { value: "web-sitesi-gelistirme", label: "Web Sitesi Yapımı" },
+    { value: "web-sitesi-gelistirme", label: "Web Sitesi Geliştirme" },
     { value: "web-sitesi-yenileme", label: "Dijital Yenileme" },
-    { value: "uygulama-gelistirme", label: "Uygulama Yapımı" },
-    { value: "teknik-denetim", label: "Teknik Denetim" },
+    { value: "uygulama-gelistirme", label: "Uygulama Geliştirme" },
     { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
+    { value: "teknik-denetim", label: "Teknik Denetim" },
     { value: "bakim-ve-destek", label: "Bakım & Destek" },
     { value: "diger", label: "Diğer / Belirsiz" },
   ],
@@ -60,8 +60,7 @@ export const contactTr = {
       { value: "seoServices", label: "Dijital Pazarlama & SEO" },
     ],
     "teknik-denetim": [
-      { value: "webAudit", label: "Web Sitesi Teknik Denetimi" },
-      { value: "appAudit", label: "Mobil Uygulama Teknik Denetimi" },
+      { value: "auditServices", label: "Teknik Denetim Hizmetleri" },
     ],
     "bakim-ve-destek": [
       { value: "maintenanceServices", label: "Bakım & Destek Hizmetleri" },
