@@ -200,10 +200,11 @@ export const refreshPackagesEn = {
     description:
       "Refresh your promotional site with modern design, fast infrastructure and SEO protection—without losing your content.",
     introP2:
-      "We clarify redesign scope for your promotional site. We plan a conversion-focused migration while protecting your search rankings.",
+      "Startup, Professional and Premium tiers clarify redesign scope. We plan a conversion-focused migration while protecting your search rankings.",
     tiers: {
       temel: {
         deliveryDays: "7-14",
+        price: "₺15,000",
         revisions: "2",
         supportDays: "15",
         languages: "1",
@@ -228,9 +229,9 @@ export const refreshPackagesEn = {
       },
       standart: {
         deliveryDays: "14-21",
+        price: "₺30,000",
         revisions: "4",
         supportDays: "30",
-        languages: "1-5",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -252,6 +253,7 @@ export const refreshPackagesEn = {
       },
       pro: {
         deliveryDays: "21-30",
+        price: "₺40,000",
         revisions: "6",
         supportDays: "45",
         languages: "Unlimited",
@@ -282,10 +284,11 @@ export const refreshPackagesEn = {
     description:
       "Refresh your corporate site with updated design, secure infrastructure and a planned migration—while protecting brand trust and organic visibility.",
     introP2:
-      "We clarify redesign scope for your corporate site. We migrate existing content and integrations with minimal downtime.",
+      "Startup, Professional and Premium tiers clarify redesign scope. We migrate existing content and integrations with minimal downtime.",
     tiers: {
       temel: {
         deliveryDays: "10-18",
+        price: "₺25,000",
         revisions: "2",
         supportDays: "15",
         featureGroups: [
@@ -309,6 +312,7 @@ export const refreshPackagesEn = {
       },
       standart: {
         deliveryDays: "18-28",
+        price: "₺40,000",
         revisions: "4",
         supportDays: "30",
         featureGroups: [
@@ -332,6 +336,7 @@ export const refreshPackagesEn = {
       },
       pro: {
         deliveryDays: "28-42",
+        price: "₺65,000",
         revisions: "6",
         supportDays: "45",
         featureGroups: [
@@ -361,10 +366,11 @@ export const refreshPackagesEn = {
     description:
       "Refresh your store with modern infrastructure, smoother checkout and SEO protection—without risking product data or rankings.",
     introP2:
-      "We clarify redesign scope for your storefront. We protect catalog data and organic visibility while moving to a conversion-focused store.",
+      "Startup, Professional and Premium tiers clarify redesign scope. We protect catalog data and organic visibility while moving to a conversion-focused storefront.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
+        price: "₺35,000",
         revisions: "2",
         supportDays: "15",
         featureGroups: [
@@ -388,6 +394,7 @@ export const refreshPackagesEn = {
       },
       standart: {
         deliveryDays: "21-35",
+        price: "₺55,000",
         revisions: "4",
         supportDays: "30",
         featureGroups: [
@@ -411,6 +418,7 @@ export const refreshPackagesEn = {
       },
       pro: {
         deliveryDays: "35-49",
+        price: "₺80,000",
         revisions: "6",
         supportDays: "45",
         featureGroups: [

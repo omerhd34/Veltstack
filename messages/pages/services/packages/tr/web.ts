@@ -5,7 +5,7 @@
 const commonDesignItems = [
   "Mobil, tablet ve masaüstünde akıcı responsive tasarım",
   "SSL / HTTPS ve temel güvenlik yapılandırması",
-  "Hızlı açılan sayfalar (Google hız skorları)",
+  "Hızlı yükleme ve Core Web Vitals optimizasyonu",
   "Erişilebilir, modern arayüz ve tipografi",
 ] as const;
 
@@ -28,44 +28,30 @@ const commonSupportStandartItems = [
   "Kullanım kılavuzu ve kısa yönetim eğitimi",
 ] as const;
 
-const GROUP_DEV = "Geliştirme & Altyapı";
-const GROUP_SEO = "SEO & Analitik";
-const GROUP_INTEGRATION = "Entegrasyonlar";
 const GROUP_PANEL = "İçerik & Yönetim";
 const GROUP_LAUNCH = "Yayın & Teslimat";
 const GROUP_SUPPORT = "Teknik Destek";
-const GROUP_STORE = "Mağaza & Ödeme";
 
-const tierSeoTemelItems = [...commonSeoItems] as const;
+const tierSeoTemelItems = [
+  ...commonSeoItems,
+  ...commonIntegrationItems,
+] as const;
 
 const tierSeoStandartItems = [
   ...commonSeoItems,
-  "Arama ve sosyal medyada doğru önizleme görünümü",
+  "Meta, Open Graph ve temel schema optimizasyonu",
+  ...commonIntegrationItems,
   "Aramada görünürlük takibi (Google Search Console)",
-  "Ziyaretçi ve trafik ölçümü (Google Analytics)",
+  "Ziyaretçi ve trafik ölçümü (Google Analytics 4)",
 ] as const;
 
 const tierSeoProItems = [
   ...tierSeoStandartItems,
   "Kapsamlı teknik SEO ve indeksleme optimizasyonu",
-  "Arama sonuçlarında zengin ve öne çıkan görünüm",
+  "Organization, BreadcrumbList ve zengin sonuç schema",
   "Dönüşüm takibi (form, tıklama, CTA)",
-] as const;
-
-const tierIntegrationTemelItems = [...commonIntegrationItems] as const;
-
-const tierIntegrationStandartItems = [...commonIntegrationItems] as const;
-
-const tierIntegrationProItems = [
-  ...commonIntegrationItems,
   "Canlı destek veya WhatsApp entegrasyonu",
   "CRM / e-posta pazarlama aracı bağlantısı",
-] as const;
-
-const tierIntegrationEcommerceProItems = [
-  ...commonIntegrationItems,
-  "Canlı destek veya WhatsApp entegrasyonu",
-  "CRM, SMS ve pazarlama aracı entegrasyonu",
 ] as const;
 
 export const webPackagesTr = {
@@ -74,18 +60,18 @@ export const webPackagesTr = {
     description:
       "Kişisel markanızı veya işletmenizi güven veren modern bir web sitesiyle öne çıkarın. Portföyünüzü, hizmetlerinizi ve hikâyenizi ziyaretçilere net ve etkileyici bir vitrinde sunun.",
     introP2:
-      "Girişim, Profesyonel ve Gelişmiş paketleri farklı ölçeklerdeki tanıtım projelerine uyum sağlar. Kapsamı ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Premium paketleri farklı ölçeklerdeki tanıtım projelerine uyum sağlar. Kapsamı ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "10-14",
+        price: "30.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
         languages: "1",
         featureGroups: [
-          { label: GROUP_DEV, items: [...commonDesignItems] },
-          { label: GROUP_SEO, items: [...tierSeoTemelItems] },
-          { label: GROUP_INTEGRATION, items: [...tierIntegrationTemelItems] },
+          { label: "Geliştirme & Altyapı", items: [...commonDesignItems] },
+          { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -99,24 +85,21 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "21-30",
+        price: "45.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
         languages: "1-5",
         featureGroups: [
           {
-            label: GROUP_DEV,
+            label: "Geliştirme & Altyapı",
             items: [
               ...commonDesignItems,
               "Koyu / açık mod desteği",
               "Akıcı sayfa geçişleri ve mikro etkileşimler",
             ],
           },
-          { label: GROUP_SEO, items: [...tierSeoStandartItems] },
-          {
-            label: GROUP_INTEGRATION,
-            items: [...tierIntegrationStandartItems],
-          },
+          { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -127,7 +110,10 @@ export const webPackagesTr = {
               "İçerik yönetim paneli",
             ],
           },
-          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          {
+            label: GROUP_LAUNCH,
+            items: [...commonDeliveryItems],
+          },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -136,13 +122,14 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "30-45",
+        price: "70.000 ₺",
         revisions: "7",
         supportDays: "45",
         pages: "Sınırsız",
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: GROUP_DEV,
+            label: "Geliştirme & Altyapı",
             items: [
               ...commonDesignItems,
               "Koyu / açık mod desteği",
@@ -151,8 +138,7 @@ export const webPackagesTr = {
               "Yüksek trafiğe hazır ölçeklenebilir altyapı",
             ],
           },
-          { label: GROUP_SEO, items: [...tierSeoProItems] },
-          { label: GROUP_INTEGRATION, items: [...tierIntegrationProItems] },
+          { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -165,7 +151,10 @@ export const webPackagesTr = {
               "Proje filtreleme ve kategori yönetimi",
             ],
           },
-          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          {
+            label: GROUP_LAUNCH,
+            items: [...commonDeliveryItems],
+          },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -180,18 +169,18 @@ export const webPackagesTr = {
     description:
       "Kurumsal kimliğinizi yansıtan, güven oluşturan ve müşteri kazandırmaya odaklı web sitesi. Hizmetlerinizi, ekibinizi ve iletişim kanallarınızı profesyonel bir yapıda ziyaretçilerinize sunun.",
     introP2:
-      "Girişim, Profesyonel ve Gelişmiş paketleri kurumsal web projelerinin farklı ölçeklerine uyum sağlar. Gelişmiş seviyede sayfa sınırı olmadan büyüyebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Premium paketleri kurumsal web projelerinin farklı ölçeklerine uyum sağlar. Premium seviyede sayfa sınırı olmadan büyüyebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
+        price: "45.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
         languages: "1",
         featureGroups: [
-          { label: GROUP_DEV, items: [...commonDesignItems] },
-          { label: GROUP_SEO, items: [...tierSeoTemelItems] },
-          { label: GROUP_INTEGRATION, items: [...tierIntegrationTemelItems] },
+          { label: "Geliştirme & Altyapı", items: [...commonDesignItems] },
+          { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -205,24 +194,21 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "28-42",
+        price: "70.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
         languages: "1-5",
         featureGroups: [
           {
-            label: GROUP_DEV,
+            label: "Geliştirme & Altyapı",
             items: [
               ...commonDesignItems,
               "Koyu / açık mod desteği",
               "Akıcı sayfa geçişleri ve mikro etkileşimler",
             ],
           },
-          { label: GROUP_SEO, items: [...tierSeoStandartItems] },
-          {
-            label: GROUP_INTEGRATION,
-            items: [...tierIntegrationStandartItems],
-          },
+          { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -235,7 +221,10 @@ export const webPackagesTr = {
               "Medya / basın kiti ve doküman alanı",
             ],
           },
-          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          {
+            label: GROUP_LAUNCH,
+            items: [...commonDeliveryItems],
+          },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -244,13 +233,14 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "42-60",
+        price: "95.000 ₺",
         revisions: "8",
         supportDays: "45",
         pages: "Sınırsız",
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: GROUP_DEV,
+            label: "Geliştirme & Altyapı",
             items: [
               ...commonDesignItems,
               "Koyu / açık mod desteği",
@@ -259,8 +249,7 @@ export const webPackagesTr = {
               "Yüksek trafiğe hazır ölçeklenebilir altyapı",
             ],
           },
-          { label: GROUP_SEO, items: [...tierSeoProItems] },
-          { label: GROUP_INTEGRATION, items: [...tierIntegrationProItems] },
+          { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
             label: GROUP_PANEL,
             items: [
@@ -276,7 +265,10 @@ export const webPackagesTr = {
               "Video galeri ve medya yönetimi",
             ],
           },
-          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          {
+            label: GROUP_LAUNCH,
+            items: [...commonDeliveryItems],
+          },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -291,20 +283,20 @@ export const webPackagesTr = {
     description:
       "Online satışa hızlı başlamanız için güvenli ödeme altyapısına sahip modern e-ticaret çözümü. Ürünlerinizi, siparişlerinizi ve müşteri deneyiminizi tek panelden yönetebileceğiniz ölçeklenebilir bir mağaza kurun.",
     introP2:
-      "Girişim, Profesyonel ve Gelişmiş paketleri farklı ürün katalogları ve sipariş hacimlerine göre şekillenir. Gelişmiş'te ürün ve kategori sınırı olmadan ölçeklenebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Premium paketleri farklı ürün katalogları ve sipariş hacimlerine göre şekillenir. Premium'da ürün ve kategori sınırı olmadan ölçeklenebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
+        price: "70.000 ₺",
         revisions: "3",
         supportDays: "15",
         pages: "0-10",
         languages: "1",
         featureGroups: [
-          { label: GROUP_DEV, items: [...commonDesignItems] },
-          { label: GROUP_SEO, items: [...tierSeoTemelItems] },
-          { label: GROUP_INTEGRATION, items: [...tierIntegrationTemelItems] },
+          { label: "Geliştirme & Altyapı", items: [...commonDesignItems] },
+          { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
           {
-            label: GROUP_STORE,
+            label: "Mağaza & Ödeme",
             items: [
               "Ürün listeleme ve detay sayfaları",
               "Kategori yönetimi",
@@ -324,26 +316,23 @@ export const webPackagesTr = {
       },
       standart: {
         deliveryDays: "42-56",
+        price: "85.000 ₺",
         revisions: "5",
         supportDays: "30",
         pages: "10-50",
         languages: "1-5",
         featureGroups: [
           {
-            label: GROUP_DEV,
+            label: "Geliştirme & Altyapı",
             items: [
               ...commonDesignItems,
               "Koyu / açık mod desteği",
               "Akıcı sayfa geçişleri ve mikro etkileşimler",
             ],
           },
-          { label: GROUP_SEO, items: [...tierSeoStandartItems] },
+          { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
-            label: GROUP_INTEGRATION,
-            items: [...tierIntegrationStandartItems],
-          },
-          {
-            label: GROUP_STORE,
+            label: "Mağaza & Ödeme",
             items: [
               "Ürün listeleme ve detay sayfaları",
               "Kategori yönetimi",
@@ -369,7 +358,10 @@ export const webPackagesTr = {
               "Müşteri ve stok yönetimi",
             ],
           },
-          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          {
+            label: GROUP_LAUNCH,
+            items: [...commonDeliveryItems],
+          },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
@@ -378,13 +370,14 @@ export const webPackagesTr = {
       },
       pro: {
         deliveryDays: "56-84",
+        price: "100.000 ₺",
         revisions: "10",
         supportDays: "45",
         pages: "Sınırsız",
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: GROUP_DEV,
+            label: "Geliştirme & Altyapı",
             items: [
               ...commonDesignItems,
               "Koyu / açık mod desteği",
@@ -393,13 +386,9 @@ export const webPackagesTr = {
               "Yüksek trafiğe hazır ölçeklenebilir altyapı",
             ],
           },
-          { label: GROUP_SEO, items: [...tierSeoProItems] },
+          { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
-            label: GROUP_INTEGRATION,
-            items: [...tierIntegrationEcommerceProItems],
-          },
-          {
-            label: GROUP_STORE,
+            label: "Mağaza & Ödeme",
             items: [
               "Ürün listeleme ve detay sayfaları",
               "Kategori yönetimi",
@@ -433,9 +422,13 @@ export const webPackagesTr = {
               "Müşteri ve stok yönetimi",
               "Çoklu para birimi desteği",
               "Blog ve içerik pazarlama modülü",
+              "CRM, SMS ve pazarlama aracı entegrasyonu",
             ],
           },
-          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          {
+            label: GROUP_LAUNCH,
+            items: [...commonDeliveryItems],
+          },
           {
             label: GROUP_SUPPORT,
             items: [...commonSupportStandartItems],
