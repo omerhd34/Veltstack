@@ -13,11 +13,11 @@ export const servicesPackagesTr = {
   packagesTitleSuffix: "Paketleri",
   packagesSubtitle:
     "Web sitesi, mobil uygulama, dijital yenileme, SEO, teknik denetim ve bakım alanlarında sunduğumuz hizmet paketlerini inceleyin. Sekmeler arasında geçerek Girişim, Profesyonel ve Kapsamlı seviyelerini karşılaştırın; teslim süresi, kapsam ve dahil özellikleri yan yana görüp projenize en uygun seviyeyi kolayca belirleyin.",
-  tabWeb: "Web Sitesi",
-  tabRefresh: "Yenileme",
-  tabApp: "Uygulama",
-  tabSeo: "SEO",
-  tabAudit: "Denetim",
+  tabWeb: "Web Sitesi Geliştirme",
+  tabRefresh: "Dijital Yenileme",
+  tabApp: "Uygulama Geliştirme",
+  tabSeo: "SEO Hizmetleri",
+  tabAudit: "Teknik Denetim",
   tabMaintenance: "Bakım & Destek",
   tierTemel: "Girişim",
   tierStandart: "Profesyonel",
@@ -36,7 +36,7 @@ export const servicesPackagesTr = {
   featureIncluded: "dahil",
   featureNotIncluded: "dahil değil",
   deliveryGroupLabel: "Yayın & Teslimat",
-  webIntroTitle: "İhtiyacınıza göre web yapımı",
+  webIntroTitle: "İhtiyacınıza göre web geliştirme",
   webIntroP1:
     "Tanıtım sitesinden kurumsal portala, e-ticaret mağazasından özel iş akışlarına, ne hedefliyorsanız ona uygun web çözümünü birlikte şekillendiriyoruz. Tasarımdan yayına almaya kadar tüm süreci tek elden yönetiyorum.",
   webIntroP2:
@@ -53,19 +53,19 @@ export const servicesPackagesTr = {
     "Üç paket seviyesiyle farklı bütçe ve kapsamlara hitap ediyorum. Mağaza yayınından entegrasyonlara kadar ihtiyacınız olan her adımda yanınızdayım.",
   seoIntroTitle: "Arama sonuçlarında görünür olun",
   seoIntroP1:
-    "Teknik denetimden aylık optimizasyona, anahtar kelime stratejisinden kurumsal SEO yönetimine kadar tüm süreci tek çatı altında yürütüyorum. Girişim, Profesyonel ve Kapsamlı paket seviyeleri farklı ölçek ve hedeflere göre şekilleniyor.",
+    "Teknik denetimden aylık optimizasyona, yerel görünürlükten reklam kampanyalarına kadar arama motorlarında sürdürülebilir büyüme için uçtan uca SEO ve dijital pazarlama desteği sunuyoruz.",
   seoIntroP2:
-    "Hangi tierden başlarsanız başlayın; denetim, optimizasyon ve raporlama her seviyede dahildir. Büyüdükçe tier değiştirip kapsamı genişletebilirsiniz.",
+    "Kapsamı ihtiyacınıza göre netleştiriyoruz. Öncelikli aksiyon listesi ve ilerleme raporu ile neyin ne zaman yapılacağı netleşir; büyüdükçe kapsamı genişletebilirsiniz.",
   auditIntroTitle: "Dijital varlıklarınızı kapsamlı analiz edin",
   auditIntroP1:
     "Web sitesi ve mobil uygulamanızı performans, güvenlik ve SEO açısından kapsamlı analiz ediyoruz. Öncelikli iyileştirme planı ve uygulanabilir adım listesi sunuyoruz.",
   auditIntroP2:
-    "Web sitesi ve mobil uygulama denetim paketleri farklı kapsamlarda sunulur. Girişim, Profesyonel ve Kapsamlı seviyeleriyle ihtiyacınıza uygun derinlikte analiz ve raporlama alırsınız.",
+    "Web sitesi veya mobil uygulama için kapsamlı teknik denetim sunuyoruz. Bulgular önceliklendirilmiş aksiyon planı ve uygulanabilir iyileştirme adımları olarak teslim edilir.",
   maintenanceIntroTitle: "Yayın sonrası da yanınızdayım",
   maintenanceIntroP1:
-    "Güncelleme, yedekleme, güvenlik takibi ve acil müdahale, web sitesi, mobil uygulama ve backend altyapınız için tek çatı altında sürekli destek sunuyorum. Girişim, Profesyonel ve Kapsamlı paket seviyeleri farklı ölçek ve ihtiyaçlara göre şekilleniyor.",
+    "Güncelleme, yedekleme, güvenlik takibi ve acil müdahale, web sitesi, mobil uygulama ve backend altyapınız için tek çatı altında sürekli destek sunuyorum.",
   maintenanceIntroP2:
-    "Her seviyede izleme, yedekleme ve teknik destek dahildir. İhtiyaçlarınız büyüdükçe bir üst seviyeye geçerek genişletilmiş SLA ve öncelikli teknik destekten yararlanabilirsiniz.",
+    "İzleme, yedekleme ve teknik destek bakım kapsamına dahildir. İhtiyaçlarınıza göre kapsam ve SLA netleştirilir.",
   webPackages: webPackagesTr,
   refreshPackages: refreshPackagesTr,
   appPackages: appPackagesTr,
