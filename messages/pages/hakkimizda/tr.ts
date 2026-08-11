@@ -2,7 +2,7 @@ export const aboutTr = {
   heroBadge: "Hakkımızda",
   heroTitle: "Hedef odaklı çözümler",
   heroSubtitle:
-    "Veltstack; web sitesi, mobil uygulama ve dijital yenileme odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eder. Kurumsal web ve e-ticaretten performans odaklı altyapılara kadar tasarım, yazılım ve büyüme hedeflerini tek bir teslim çizgisinde birleştiriyoruz.",
+    "Veltstack; web sitesi, mobil uygulama ve SEO odaklı dijital ürünleri fikirden canlıya net süreç ve ölçülebilir sonuçla teslim eder. Kurumsal web ve e-ticaretten performans odaklı altyapılara kadar tasarım, yazılım ve büyüme hedeflerini tek bir teslim çizgisinde birleştiriyoruz.",
   heroImageAlt:
     "Vizyon ve büyümeyi simgeleyen soyut dijital yapı illüstrasyonu",
   scrollLabel: "Devamını oku",
@@ -26,10 +26,10 @@ export const aboutTr = {
       hint: "Keşiften canlıya alıma kadar tüm süreçleri tek çizgide yönetiyoruz; parçalı teslim yerine bütüncül yaklaşım.",
     },
     {
-      value: "3",
+      value: "6",
       label: "Hizmet Alanı",
       labelShort: "Hizmet",
-      hint: "Web sitesi, mobil uygulama ve dijital yenileme hizmetlerinde uçtan uca destek sunuyoruz.",
+      hint: "Web, mobil, SEO, dijital yenileme, denetim ve bakım hizmetlerinde uçtan uca destek sunuyoruz.",
     },
   ],
   profileBadge: "Temel İlkemiz",

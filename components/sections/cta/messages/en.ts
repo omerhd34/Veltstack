@@ -3,7 +3,7 @@ export const ctaHomeEn = {
   ctaTitleLead: "Let's Clarify Your",
   ctaTitleAccent: "Idea Together",
   ctaSubtitle:
-    "From websites and mobile apps to digital refresh and publishing workflows, we plan and deliver your digital needs under one roof. In our first call we clarify your goals and outline a tailored roadmap.",
+    "From websites and mobile apps to SEO and publishing workflows, we plan and deliver your digital needs under one roof. In our first call we clarify your goals and outline a tailored roadmap.",
   ctaPoint1: "Free discovery call",
   ctaPoint2: "Response within 24 hours",
   ctaButton: "Get in Touch",

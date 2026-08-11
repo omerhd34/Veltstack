@@ -2,7 +2,7 @@ export const aboutEn = {
   heroBadge: "About Us",
   heroTitle: "We build digital solutions aligned with your business goals.",
   heroSubtitle:
-    "Veltstack delivers websites, mobile apps and digital refresh from idea to launch with a clear process and measurable outcomes—uniting design, software and growth goals from corporate web to performance-driven infrastructure in a single delivery line.",
+    "Veltstack delivers websites, mobile apps and SEO-focused digital products from idea to launch with a clear process and measurable outcomes—uniting design, software and growth goals from corporate web to performance-driven infrastructure in a single delivery line.",
   heroImageAlt:
     "Abstract digital structure illustration symbolizing vision and growth",
   scrollLabel: "Read more",
@@ -26,10 +26,10 @@ export const aboutEn = {
       hint: "We manage the full process from discovery to launch in one line — holistic delivery instead of fragmented handoffs.",
     },
     {
-      value: "3",
+      value: "6",
       label: "Service Areas",
       labelShort: "Services",
-      hint: "End-to-end support across website building, mobile apps and digital refresh.",
+      hint: "End-to-end support across web, mobile, SEO, digital refresh, audit and maintenance services.",
     },
   ],
   profileBadge: "Veltstack DNA",

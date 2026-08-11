@@ -145,7 +145,7 @@ export const legalEn = {
         id: "service-definition",
         title: "3. What We Offer",
         paragraphs: [
-          "Veltstack provides website building, mobile app building, and digital refresh services.",
+          "Veltstack provides website building, digital refresh, mobile app building, SEO, technical audit, and maintenance and support services.",
           "Information on the site is for promotional purposes and does not constitute a binding offer or commitment. Exact scope, timeline and fees are defined per project in a separate written agreement or quotation.",
         ],
       },
