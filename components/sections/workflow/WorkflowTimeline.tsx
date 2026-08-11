@@ -65,7 +65,7 @@ export function WorkflowTimeline({
         {showConnector ? (
           <div
             aria-hidden
-            className="pointer-events-none absolute top-5 right-[calc((100%-4.5rem)/4-1.25rem)] left-5 hidden h-px bg-border lg:block"
+            className="pointer-events-none absolute top-5 right-0 left-5 hidden h-px bg-border lg:block"
           />
         ) : null}
 
