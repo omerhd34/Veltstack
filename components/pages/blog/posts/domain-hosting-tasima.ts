@@ -146,7 +146,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>Domain ve hosting taşıma teknik bilgi ve dikkat gerektirir. Veltstack olarak site migration, Vercel deploy, DNS yapılandırması ve SSL kurulumu konularında proje kapsamında destek sunuyoruz. Mevcut sitenizi modern altyapıya taşımak istiyorsanız bizimle iletişime geçin.</p>
 
 <h2>Sonuç</h2>
-<p>Domain ve hosting taşıma; yedek, test, DNS güncelleme ve doğrulama adımlarıyla güvenle yapılabilir. Taşıma türünüze göre (sadece hosting, domain transfer veya platform değişikliği) süreci planlayın, düşük trafik saatinde uygulayın ve eski ortamı bir süre daha aktif tutun. Temel kavramlar için <a href="/blog/domain-hosting">Domain & Hosting</a> yazımız da yardımcı olacaktır.</p>
+<p>Domain ve hosting taşıma; yedek, test, DNS güncelleme ve doğrulama adımlarıyla güvenle yapılabilir. Taşıma türünüze göre (sadece hosting, domain transfer veya platform değişikliği) süreci planlayın, düşük trafik saatinde uygulayın ve eski ortamı bir süre daha aktif tutun. Temel kavramlar için <a href="/blog/domain-hosting">Domain & Hosting Nedir?</a> yazımız da yardımcı olacaktır.</p>
 `,
     en: `
 <p>If you are unhappy with your current provider, need faster infrastructure or are moving to a modern platform like Vercel, planning <strong>domain and hosting migration</strong> correctly is critical. Wrong steps cause downtime, email loss and SEO drops. This guide covers migration types, preparation and step-by-step process.</p>
@@ -276,7 +276,7 @@ export const blogPostEntry: BlogPostEntry = {
 <p>Domain and hosting migration requires technical care. At Veltstack we support site migration, Vercel deploy, DNS configuration and SSL setup within project scope. Contact us if you want to move your site to modern infrastructure.</p>
 
 <h2>Conclusion</h2>
-<p>Domain and hosting migration is safe with backup, testing, DNS update and verification. Plan by migration type (hosting only, domain transfer or platform change), run during low traffic and keep the old environment active for a while. Our <a href="/blog/domain-hosting">Domain & Hosting</a> article covers the basics.</p>
+<p>Domain and hosting migration is safe with backup, testing, DNS update and verification. Plan by migration type (hosting only, domain transfer or platform change), run during low traffic and keep the old environment active for a while. Our <a href="/blog/domain-hosting">What Is Domain & Hosting?</a> article covers the basics.</p>
 `,
   },
 };

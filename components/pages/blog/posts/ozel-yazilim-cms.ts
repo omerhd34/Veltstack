@@ -132,7 +132,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Domain & Hosting ile Bağlantı</h2>
-<p>Özel yazılım kararı, altyapı hazır olduktan sonra devreye girer. Domain, DNS, SSL ve Vercel/hosting yapılandırması tamamlanmadan kaliteli bir yayın süreci yürütülemez. Temel kavramlar için <a href="/blog/domain-hosting">Domain & Hosting</a> yazımıza, insan geliştirici ve AI dengesi için <a href="/blog/geleneksel-yazilim-yapay-zeka">Geleneksel Yazılım | Yapay Zeka</a> rehberimize, modern stack için <a href="/blog/react-nextjs">React & Next.js</a> yazımıza göz atabilirsiniz.</p>
+<p>Özel yazılım kararı, altyapı hazır olduktan sonra devreye girer. Domain, DNS, SSL ve Vercel/hosting yapılandırması tamamlanmadan kaliteli bir yayın süreci yürütülemez. Temel kavramlar için <a href="/blog/domain-hosting">Domain & Hosting Nedir?</a> yazımıza, insan geliştirici ve AI dengesi için <a href="/blog/geleneksel-yazilim-yapay-zeka">Geleneksel Yazılım | Yapay Zeka</a> rehberimize, modern stack için <a href="/blog/react-nextjs">React & Next.js</a> yazımıza göz atabilirsiniz.</p>
 
 <h2>Veltstack'te Yaklaşımımız</h2>
 <p>Veltstack olarak tüm ciddi projelerde <strong>kodu biz yazıyoruz</strong>. TypeScript, Next.js, Tailwind CSS, Prisma ve Vercel ile markanıza özel, hızlı, güvenli ve SEO uyumlu çözümler sunuyoruz. İçerik yönetimi gerektiğinde bunu özel yazılımın içine gömülü admin paneli olarak tasarlıyoruz, hazır CMS'e bağımlı kalmıyoruz. Mimari, güvenlik, review ve teslim kalitesi tamamen insan geliştiricide. IQfinansAI, Yazıcı Ticaret ve Gardossi projelerimizde farkı yaratan şey deneyimli geliştirici emeğidir.</p>
@@ -248,7 +248,7 @@ export const blogPostEntry: BlogPostEntry = {
 </ul>
 
 <h2>Connection to Domain & Hosting</h2>
-<p>The custom software decision comes after infrastructure is ready. A quality launch cannot run without domain, DNS, SSL and Vercel or hosting configuration. See our <a href="/blog/domain-hosting">Domain & Hosting</a> article for the basics, our <a href="/blog/geleneksel-yazilim-yapay-zeka">Traditional Software | AI</a> guide for the human developer vs AI balance, and our <a href="/blog/react-nextjs">React & Next.js</a> article for the modern stack.</p>
+<p>The custom software decision comes after infrastructure is ready. A quality launch cannot run without domain, DNS, SSL and Vercel or hosting configuration. See our <a href="/blog/domain-hosting">What Is Domain & Hosting?</a> article for the basics, our <a href="/blog/geleneksel-yazilim-yapay-zeka">Traditional Software | AI</a> guide for the human developer vs AI balance, and our <a href="/blog/react-nextjs">React & Next.js</a> article for the modern stack.</p>
 
 <h2>Our Approach at Veltstack</h2>
 <p>At Veltstack <strong>we write the code</strong> on every serious project. With TypeScript, Next.js, Tailwind CSS, Prisma and Vercel we deliver tailored, fast, secure and SEO-friendly solutions. When content management is needed, we design it as an embedded admin panel inside custom software, we do not depend on off-the-shelf CMS. Architecture, security, review and delivery quality are entirely human. Projects like IQfinansAI, Yazıcı Ticaret and Gardossi show that experienced developer craft makes the difference.</p>

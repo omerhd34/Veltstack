@@ -79,7 +79,7 @@ export const blogPostEntry: BlogPostEntry = {
 </tbody>
 </table>
 </div>
-<p>Teknik altyapı için <a href="/blog/domain-hosting">Domain & Hosting</a> ve <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a> rehberlerimizde HTTPS, hız ve deploy konularını detaylandırdık.</p>
+<p>Teknik altyapı için <a href="/blog/domain-hosting">Domain & Hosting Nedir?</a> ve <a href="/blog/vercel-de-yayin">Vercel'de Yayın</a> rehberlerimizde HTTPS, hız ve deploy konularını detaylandırdık.</p>
 
 <h2>On-Page SEO: Sayfa Bazında Optimizasyon</h2>
 <ol class="blog-steps">
@@ -215,7 +215,7 @@ export const blogPostEntry: BlogPostEntry = {
 </tbody>
 </table>
 </div>
-<p>See our <a href="/blog/domain-hosting">Domain & Hosting</a> and <a href="/blog/vercel-de-yayin">Deploying on Vercel</a> guides for HTTPS, speed and deploy topics.</p>
+<p>See our <a href="/blog/domain-hosting">What Is Domain & Hosting?</a> and <a href="/blog/vercel-de-yayin">Deploying on Vercel</a> guides for HTTPS, speed and deploy topics.</p>
 
 <h2>On-Page SEO: Page-Level Optimization</h2>
 <ol class="blog-steps">
