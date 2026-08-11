@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Kurumsal web sitesi, e-ticaret, mobil uygulama ve dijital yenileme hizmetleri.",
+    "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
   authors: [{ name: "Ömer Halis Demir", url: SITE_URL }],
