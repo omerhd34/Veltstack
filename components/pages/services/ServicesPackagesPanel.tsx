@@ -40,6 +40,8 @@ interface PackagesPanelLabels {
   statPages: string;
   statSupport: string;
   statLanguages: string;
+  statPrice: string;
+  pricingGroupLabel: string;
   getQuote: string;
   featureIncluded: string;
   featureNotIncluded: string;
@@ -50,12 +52,18 @@ interface CategoryPackages {
   web: Record<string, PackageCardData>;
   refresh: Record<string, PackageCardData>;
   app: Record<string, PackageCardData>;
+  seo: Record<string, PackageCardData>;
+  audit: Record<string, PackageCardData>;
+  maintenance: Record<string, PackageCardData>;
 }
 
 interface CategoryIntros {
   web: PackagesIntro;
   refresh: PackagesIntro;
   app: PackagesIntro;
+  seo: PackagesIntro;
+  audit: PackagesIntro;
+  maintenance: PackagesIntro;
 }
 
 interface ServicesPackagesPanelProps {
@@ -72,12 +80,18 @@ const deliveryLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   web: "statDelivery",
   refresh: "statDelivery",
   app: "statDelivery",
+  seo: "statDeliveryStart",
+  audit: "statDeliveryAudit",
+  maintenance: "statDeliverySetup",
 };
 
 const revisionLabelKey: Record<PackageCategory, keyof PackagesPanelLabels> = {
   web: "statRevision",
   refresh: "statRevision",
   app: "statRevision",
+  seo: "statPages",
+  audit: "statPages",
+  maintenance: "statMonthlyRequests",
 };
 
 export function ServicesPackagesPanel({
@@ -97,8 +111,7 @@ export function ServicesPackagesPanel({
   const [openGroups, setOpenGroups] = useState<Set<string>>(new Set());
   const gridRef = useRef<HTMLDivElement>(null);
 
-  const hidePackageTable = activeCategory === "refresh";
-  const useTierComparison = !hidePackageTable;
+  const useTierComparison = true;
   const resolvedPackageSlug = slugs.includes(activePackageSlug)
     ? activePackageSlug
     : slugs[0];
@@ -159,7 +172,7 @@ export function ServicesPackagesPanel({
       resolvedPackageSlug,
       useTierComparison ? "compare" : activeTier,
     ],
-    useTierComparison || hidePackageTable ? "" : openGroupsKey,
+    useTierComparison ? "" : openGroupsKey,
   );
 
   const toggleGroup = (label: string) => {
@@ -184,23 +197,24 @@ export function ServicesPackagesPanel({
     statSupport: labels.statSupport,
     statLanguages: labels.statLanguages,
     statPages: labels.statPages,
+    statPrice: labels.statPrice,
+    pricingGroupLabel: labels.pricingGroupLabel,
     getQuote: labels.getQuote,
     featureIncluded: labels.featureIncluded,
     featureNotIncluded: labels.featureNotIncluded,
     deliveryGroupLabel: labels.deliveryGroupLabel,
-    hideMiddleStat: false,
+    hideMiddleStat: activeCategory === "audit",
   };
 
   const showCategoryTabs = !lockedCategory;
-  const showPackageTypeTabs = slugs.length > 1 && !hidePackageTable;
-  const displayIntro =
-    hidePackageTable || !showPackageTypeTabs
-      ? intro
-      : {
-          title: intro.title,
-          p1: selectedPackage.description,
-          p2: selectedPackage.introP2 ?? intro.p2,
-        };
+  const showPackageTypeTabs = slugs.length > 1;
+  const displayIntro = showPackageTypeTabs
+    ? {
+        title: intro.title,
+        p1: selectedPackage.description,
+        p2: selectedPackage.introP2 ?? intro.p2,
+      }
+    : intro;
   const showUnifiedNav =
     (showCategoryTabs && showPackageTypeTabs) ||
     (!showCategoryTabs && showPackageTypeTabs);
@@ -259,12 +273,10 @@ export function ServicesPackagesPanel({
       <ServicesPackagesIntro
         className={
           lockedCategory
-            ? hidePackageTable
+            ? useTierComparison
               ? "mt-6 md:mt-8"
-              : useTierComparison
-                ? "mt-6 md:mt-8"
-                : "mt-0"
-            : hidePackageTable || useTierComparison
+              : "mt-0"
+            : useTierComparison
               ? "mt-10 md:mt-12"
               : "mt-12 md:mt-14"
         }
@@ -274,7 +286,7 @@ export function ServicesPackagesPanel({
         p2={displayIntro.p2}
       />
 
-      {hidePackageTable ? null : useTierComparison ? (
+      {useTierComparison ? (
         <ServicePackageComparison
           className={lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"}
           data={selectedPackage}
