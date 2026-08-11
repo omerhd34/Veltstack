@@ -34,8 +34,8 @@ export async function ServicesPackagesSection({
     { id: "web", label: t("tabWeb") },
     { id: "app", label: t("tabApp") },
     { id: "refresh", label: t("tabRefresh") },
-    { id: "audit", label: t("tabAudit") },
     { id: "seo", label: t("tabSeo") },
+    { id: "audit", label: t("tabAudit") },
     { id: "maintenance", label: t("tabMaintenance") },
   ];
 

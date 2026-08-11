@@ -1,9 +1,17 @@
 "use client";
 
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import {
+  Fragment,
+  useCallback,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { cn } from "@/lib/utils";
 import { categoryTabIcons, type PackageCategory } from "./packages-config";
 import { ServicesTabScrollFade } from "./ServicesTabScrollFade";
+
+const CATEGORY_GROUP_DIVIDER_BEFORE: PackageCategory = "seo";
 
 interface TabItem {
   id: PackageCategory;
@@ -114,35 +122,42 @@ export function ServicesCategoryTabs({
           const isActive = active === tab.id;
 
           return (
-            <button
-              key={tab.id}
-              ref={(el) => {
-                if (el) tabRefs.current.set(tab.id, el);
-                else tabRefs.current.delete(tab.id);
-              }}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              onClick={() => onChange(tab.id)}
-              className={cn(
-                "group relative z-10 flex shrink-0 items-center gap-2 rounded-full px-3.5 py-2.5 text-xs font-semibold tracking-tight transition-[color,transform] duration-300 sm:px-4 sm:py-2.5 sm:text-sm",
-                isActive
-                  ? "text-white"
-                  : "text-emerald-200/50 hover:text-emerald-100/90 active:scale-[0.98]",
-              )}
-            >
-              <Icon
+            <Fragment key={tab.id}>
+              {tab.id === CATEGORY_GROUP_DIVIDER_BEFORE ? (
+                <span
+                  aria-hidden
+                  className="mx-1.5 h-8 w-px shrink-0 self-center bg-emerald-400/35 sm:mx-2.5 sm:h-9"
+                />
+              ) : null}
+              <button
+                ref={(el) => {
+                  if (el) tabRefs.current.set(tab.id, el);
+                  else tabRefs.current.delete(tab.id);
+                }}
+                type="button"
+                role="tab"
+                aria-selected={isActive}
+                onClick={() => onChange(tab.id)}
                 className={cn(
-                  "size-3.5 shrink-0 transition-all duration-300 sm:size-4",
+                  "group relative z-10 flex shrink-0 items-center gap-2 rounded-full px-3.5 py-2.5 text-xs font-semibold tracking-tight transition-[color,transform] duration-300 sm:px-4 sm:py-2.5 sm:text-sm",
                   isActive
-                    ? "text-white drop-shadow-[0_0_8px_rgb(255_255_255/0.25)]"
-                    : "text-emerald-400/40 group-hover:text-emerald-300/65",
+                    ? "text-white"
+                    : "text-emerald-200/50 hover:text-emerald-100/90 active:scale-[0.98]",
                 )}
-                strokeWidth={isActive ? 2.25 : 1.75}
-                aria-hidden
-              />
-              <span className="whitespace-nowrap">{tab.label}</span>
-            </button>
+              >
+                <Icon
+                  className={cn(
+                    "size-3.5 shrink-0 transition-all duration-300 sm:size-4",
+                    isActive
+                      ? "text-white drop-shadow-[0_0_8px_rgb(255_255_255/0.25)]"
+                      : "text-emerald-400/40 group-hover:text-emerald-300/65",
+                  )}
+                  strokeWidth={isActive ? 2.25 : 1.75}
+                  aria-hidden
+                />
+                <span className="whitespace-nowrap">{tab.label}</span>
+              </button>
+            </Fragment>
           );
         })}
       </div>
