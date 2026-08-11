@@ -18,7 +18,6 @@ export function NavbarServicesMegaMenuPanel() {
       allHref="/hizmetler"
       allLabel={tNav("servicesAll")}
       onNavigate={closeMenu}
-      columns={3}
     >
       {serviceItems.map((item) => (
         <NavbarMegaMenuItem

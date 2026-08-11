@@ -16,7 +16,6 @@ interface NavbarMegaMenuShellProps {
   allHref: string;
   allLabel: string;
   onNavigate: () => void;
-  columns?: 2 | 3;
   children: ReactNode;
 }
 
@@ -24,7 +23,6 @@ export function NavbarMegaMenuShell({
   allHref,
   allLabel,
   onNavigate,
-  columns = 2,
   children,
 }: NavbarMegaMenuShellProps) {
   return (
@@ -37,14 +35,7 @@ export function NavbarMegaMenuShell({
         aria-hidden
         className="pointer-events-none absolute -bottom-14 -left-10 size-32 rounded-full bg-brand-accent/8 blur-3xl"
       />
-      <div
-        className={cn(
-          "relative grid gap-2",
-          columns === 3 ? "grid-cols-3" : "grid-cols-2",
-        )}
-      >
-        {children}
-      </div>
+      <div className="relative grid grid-cols-2 gap-2">{children}</div>
       <div className="relative mt-3 border-t border-border/50 pt-3 group-data-[overlay=true]/header:border-white/20">
         <StardustShell
           className="w-full rounded-lg"
