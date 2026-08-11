@@ -115,7 +115,7 @@ export const faqTr = {
           slug: "fiyatlar-sabit-mi",
           question: "Fiyatlar sabit mi?",
           answer:
-            "Hizmet sayfalarındaki paketler referans fiyat aralıkları sunar. Kesin teklif, proje kapsamı, entegrasyonlar ve teslim süresine göre özelleştirilir. İletişim formu veya doğrudan e-posta ile ücretsiz ön değerlendirme alabilirsiniz.",
+            "Paket fiyatları proje kapsamına göre belirlenir. Kesin teklif; entegrasyonlar, teslim süresi ve ihtiyaçlarınıza göre özelleştirilir. İletişim formu veya doğrudan e-posta ile ücretsiz ön değerlendirme alabilirsiniz.",
         },
         {
           slug: "odeme-nasil-yapilir",
@@ -133,7 +133,7 @@ export const faqTr = {
           slug: "proje-fiyatlari-nasil-belirleniyor",
           question: "Proje fiyatları nasıl belirleniyor?",
           answer:
-            "Fiyat; proje kapsamı, sayfa veya özellik sayısı, tasarım karmaşıklığı, üçüncü taraf entegrasyonlar, içerik hazırlığı ve teslim süresine göre belirlenir. Hizmet sayfalarındaki paketler referans aralık sunar; kesin teklif keşif görüşmesi sonrası yazılı olarak paylaşılır. Beklenmedik kapsam değişiklikleri önceden onayınıza sunulur.",
+            "Fiyat; proje kapsamı, sayfa veya özellik sayısı, tasarım karmaşıklığı, üçüncü taraf entegrasyonlar, içerik hazırlığı ve teslim süresine göre belirlenir. Kesin teklif keşif görüşmesi sonrası yazılı olarak paylaşılır. Beklenmedik kapsam değişiklikleri önceden onayınıza sunulur.",
         },
       ],
     },

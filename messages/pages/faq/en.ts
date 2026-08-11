@@ -115,7 +115,7 @@ export const faqEn = {
           slug: "fiyatlar-sabit-mi",
           question: "Are prices fixed?",
           answer:
-            "Service pages show reference price ranges. The final quote is customized based on scope, integrations and delivery timeline. You can request a free initial assessment via the contact form or email.",
+            "Package pricing depends on project scope. The final quote is customized based on integrations, delivery timeline and your needs. You can request a free initial assessment via the contact form or email.",
         },
         {
           slug: "odeme-nasil-yapilir",
@@ -133,7 +133,7 @@ export const faqEn = {
           slug: "proje-fiyatlari-nasil-belirleniyor",
           question: "How are project prices determined?",
           answer:
-            "Pricing depends on project scope, page or feature count, design complexity, third-party integrations, content preparation and delivery timeline. Service pages show reference ranges; the final quote is shared in writing after the discovery call. Unexpected scope changes are presented for your approval before proceeding.",
+            "Pricing depends on project scope, page or feature count, design complexity, third-party integrations, content preparation and delivery timeline. The final quote is shared in writing after the discovery call. Unexpected scope changes are presented for your approval before proceeding.",
         },
       ],
     },
