@@ -3,34 +3,50 @@
 // ---------------------------------------------------------------------------
 
 const commonDesignItems = [
-  "Tüm cihazlara (telefon, tablet, bilgisayar) tam uyumlu tasarım",
-  "SSL / HTTPS ve temel güvenlik yapılandırması",
-  "Hızlı yükleme ve Core Web Vitals optimizasyonu",
-  "Erişilebilir, modern arayüz ve tipografi",
+  "Tüm cihazlara (telefon, tablet, bilgisayar) uyumlu tasarım",
+  "Güvenli bağlantı (HTTPS) ve temel güvenlik",
+  "Hızlı açılış ve Core Web Vitals optimizasyonu",
+  "Erişilebilir, modern ve okunaklı arayüz",
 ] as const;
 
-const commonSeoItems = ["Sitemap ve robots.txt yapılandırması"] as const;
-
-const commonIntegrationItems = [
-  "KVKK uyumlu çerez bildirimi ve gizlilik sayfası",
-  "İletişim formu, harita ve hızlı ulaşım bağlantıları",
+const standartDesignExtras = [
+  "Koyu / açık tema seçeneği",
+  "Akıcı sayfa geçişleri ve ince animasyonlar",
 ] as const;
 
 const commonDeliveryItems = [
-  "Kaynak kodu ve proje dosyalarının teslimi",
-  "Canlı yayına alma desteği",
-  "Domain, www ve yönlendirme ayarları",
-  "Hosting kurulum ve yayın rehberi",
-  "Performans Garantisi (PageSpeed)",
+  "Sitenin tüm dosyalarının size teslimi",
+  "Sitenin yayına alınması",
+  "Alan adı (domain) ve www yönlendirme ayarları",
+  "Sunucu / hosting kurulum ve yayın rehberi",
+  "Performans hedefi doğrulaması (Google PageSpeed)",
+] as const;
+
+const proDeliveryExtras = ["1 yıllık alan adı ve hosting ücretsiz"] as const;
+
+const proDeliveryItems = [
+  ...proDeliveryExtras,
+  ...commonDeliveryItems,
 ] as const;
 
 const commonSupportStandartItems = [
   "Kullanım kılavuzu ve kısa yönetim eğitimi",
 ] as const;
 
+const GROUP_DEV = "Tasarım & Altyapı";
 const GROUP_PANEL = "İçerik & Yönetim";
 const GROUP_LAUNCH = "Yayın & Teslimat";
 const GROUP_SUPPORT = "Teknik Destek";
+const GROUP_STORE = "Mağaza & Ödeme";
+
+const commonSeoItems = [
+  "Site haritası (sitemap) ve robots.txt ayarları",
+] as const;
+
+const commonIntegrationItems = [
+  "KVKK’ya uygun çerez uyarısı ve gizlilik sayfası",
+  "İletişim formu, harita ve telefon / e-posta gibi hızlı iletişim bağlantıları",
+] as const;
 
 const tierSeoTemelItems = [
   ...commonSeoItems,
@@ -39,19 +55,66 @@ const tierSeoTemelItems = [
 
 const tierSeoStandartItems = [
   ...commonSeoItems,
-  "Meta, Open Graph ve temel schema optimizasyonu",
   ...commonIntegrationItems,
+  "Arama ve sosyal medyada düzgün görünen başlık, açıklama ve önizleme",
   "Aramada görünürlük takibi (Google Search Console)",
   "Ziyaretçi ve trafik ölçümü (Google Analytics 4)",
 ] as const;
 
 const tierSeoProItems = [
   ...tierSeoStandartItems,
-  "Kapsamlı teknik SEO ve indeksleme optimizasyonu",
-  "Organization, BreadcrumbList ve zengin sonuç schema",
-  "Dönüşüm takibi (form, tıklama, CTA)",
-  "Canlı destek veya WhatsApp entegrasyonu",
-  "CRM / e-posta pazarlama aracı bağlantısı",
+  "Arama sonuçlarında daha iyi yer almak için teknik SEO iyileştirmesi",
+  "Firma bilgisi, yol haritası gibi zengin sonuç (schema) görünümü",
+  "Form doldurma ve buton tıklamalarını ölçme",
+  "Canlı destek veya WhatsApp bağlantısı",
+  "CRM / e-posta pazarlama araçlarına bağlantı",
+] as const;
+
+const ecommerceStoreCommonItems = [
+  "Ürün listesi ve ürün detay sayfaları",
+  "Sepet ve ödeme adımları",
+  "Kargo firması bağlantısı",
+  "Otomatik sipariş e-posta bildirimleri",
+  "Mesafeli satış sözleşmesi ve yasal sayfalar",
+  "Sipariş takip ekranı",
+  "Havale / EFT ödeme seçeneği",
+] as const;
+
+const ecommerceStoreStandartExtras = [
+  "iyzico, PayTR gibi sanal POS entegrasyonu",
+  "Üyelik, giriş ve profil sayfaları",
+  "Favoriler / istek listesi",
+  "Ürün yorumu, puanlama ve fotoğraflı değerlendirme",
+] as const;
+
+const ecommerceStoreProExtras = [
+  "Üye olmadan alışveriş (misafir ödeme)",
+  "Birden fazla kargo firması bağlantısı",
+  "Yarım bırakılan sepet hatırlatma e-postaları",
+  "“Bunu da beğenebilirsiniz” ürün önerileri",
+  "Fatura ve e-arşiv bağlantısına hazır yapı",
+] as const;
+
+const ecommercePanelCommonItems = [
+  "Ürün, kategori ve sipariş yönetimi",
+  "Kategori düzenleme",
+  "Temel stok takibi",
+] as const;
+
+const ecommercePanelStandartExtras = [
+  "Mağaza yönetim paneli",
+  "Müşteri ve stok yönetimi",
+  "Renk, beden gibi ürün seçenekleri ve etiketler",
+  "Düşük stok uyarıları",
+  "Kupon ve kampanya yönetimi",
+] as const;
+
+const ecommercePanelProExtras = [
+  "Ürün seçeneklerine göre değişen fiyat yönetimi",
+  "Excel ile toplu ürün yükleme / indirme",
+  "Birden fazla para birimi desteği (₺, $, € ...)",
+  "Blog ve içerik yayınlama",
+  "SMS ve pazarlama araçlarına bağlantı",
 ] as const;
 
 export const webPackagesTr = {
@@ -60,22 +123,22 @@ export const webPackagesTr = {
     description:
       "Kişisel markanızı veya işletmenizi güven veren modern bir web sitesiyle öne çıkarın. Portföyünüzü, hizmetlerinizi ve hikâyenizi ziyaretçilere net ve etkileyici bir vitrinde sunun.",
     introP2:
-      "Girişim, Profesyonel ve Kapsamlı paketleri farklı ölçeklerdeki tanıtım projelerine uyum sağlar. Kapsamı ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyorum. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri farklı ölçeklerdeki tanıtım projelerine uyum sağlar. Kapsamı ihtiyaçlarınıza göre netleştirip, büyüdükçe genişleyebilecek bir yapı kuruyoruz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "10-14",
         revisions: "3",
         supportDays: "15",
-        pages: "0-10",
+        pages: "1-10",
         languages: "1",
         featureGroups: [
-          { label: "Geliştirme & Altyapı", items: [...commonDesignItems] },
+          { label: GROUP_DEV, items: [...commonDesignItems] },
           { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
           {
             label: GROUP_PANEL,
             items: [
-              "Hizmet ve proje tanıtım bölümleri",
-              "İletişim ve çağrıya yönlendirme alanları",
+              "Hizmet, proje ve hakkımda tanıtım bölümleri",
+              "İletişim ve “hemen ara / yaz” yönlendirme alanları",
             ],
           },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
@@ -90,22 +153,18 @@ export const webPackagesTr = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
-            items: [
-              ...commonDesignItems,
-              "Koyu / açık mod desteği",
-              "Akıcı sayfa geçişleri ve mikro etkileşimler",
-            ],
+            label: GROUP_DEV,
+            items: [...commonDesignItems, ...standartDesignExtras],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
             items: [
-              "Hizmet ve proje tanıtım bölümleri",
-              "İletişim ve çağrıya yönlendirme alanları",
-              "Düzenlenebilir portföy / proje galerisi",
+              "Hizmet, proje ve hakkımda tanıtım bölümleri",
+              "İletişim ve “hemen ara / yaz” yönlendirme alanları",
+              "Kendiniz güncelleyebileceğiniz portföy / proje galerisi",
               "Referans ve müşteri yorumu alanları",
-              "İçerik yönetim paneli",
+              "İçerikleri kendiniz düzenleyebileceğiniz yönetim paneli",
             ],
           },
           {
@@ -126,31 +185,30 @@ export const webPackagesTr = {
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
-              "Koyu / açık mod desteği",
-              "Figma’dan piksel uyumlu arayüz kodlama",
-              "Akıcı sayfa geçişleri ve mikro etkileşimler",
-              "Yüksek trafiğe hazır ölçeklenebilir altyapı",
+              ...standartDesignExtras,
+              "Sağladığınız tasarım dosyasıyla birebir arayüz",
+              "Yoğun ziyaretçiye dayanıklı, büyümeye hazır altyapı",
             ],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
             label: GROUP_PANEL,
             items: [
-              "Hizmet ve proje tanıtım bölümleri",
-              "İletişim ve çağrıya yönlendirme alanları",
-              "Düzenlenebilir portföy / proje galerisi",
+              "Hizmet, proje ve hakkımda tanıtım bölümleri",
+              "İletişim ve “hemen ara / yaz” yönlendirme alanları",
+              "Kendiniz güncelleyebileceğiniz portföy / proje galerisi",
               "Referans ve müşteri yorumu alanları",
-              "İçerik yönetim paneli",
-              "Blog ve makale yayınlama modülü",
-              "Proje filtreleme ve kategori yönetimi",
+              "İçerikleri kendiniz düzenleyebileceğiniz yönetim paneli",
+              "Blog ve makale yayınlama",
+              "Proje filtreleme ve kategori düzenleme",
             ],
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...proDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
@@ -172,16 +230,16 @@ export const webPackagesTr = {
         deliveryDays: "14-21",
         revisions: "3",
         supportDays: "15",
-        pages: "0-10",
+        pages: "1-10",
         languages: "1",
         featureGroups: [
-          { label: "Geliştirme & Altyapı", items: [...commonDesignItems] },
+          { label: GROUP_DEV, items: [...commonDesignItems] },
           { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
           {
             label: GROUP_PANEL,
             items: [
               "Hizmetler, hakkımızda ve iletişim sayfaları",
-              "Kurumsal e-posta yönlendirmeli formlar",
+              "Kurumsal e-postanıza düşen iletişim formları",
             ],
           },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
@@ -196,24 +254,20 @@ export const webPackagesTr = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
-            items: [
-              ...commonDesignItems,
-              "Koyu / açık mod desteği",
-              "Akıcı sayfa geçişleri ve mikro etkileşimler",
-            ],
+            label: GROUP_DEV,
+            items: [...commonDesignItems, ...standartDesignExtras],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
             items: [
               "Hizmetler, hakkımızda ve iletişim sayfaları",
-              "Kurumsal e-posta yönlendirmeli formlar",
-              "İçerik yönetim paneli",
+              "Kurumsal e-postanıza düşen iletişim formları",
+              "İçerikleri kendiniz düzenleyebileceğiniz yönetim paneli",
               "Blog, haber ve duyuru yayınlama",
               "Ekip ve kadro tanıtım sayfaları",
               "Referanslar ve başarı hikâyeleri",
-              "Medya / basın kiti ve doküman alanı",
+              "Basın / medya doküman alanı",
             ],
           },
           {
@@ -234,13 +288,12 @@ export const webPackagesTr = {
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
-              "Koyu / açık mod desteği",
-              "Figma’dan piksel uyumlu kurumsal arayüz",
-              "Akıcı sayfa geçişleri ve mikro etkileşimler",
-              "Yüksek trafiğe hazır ölçeklenebilir altyapı",
+              ...standartDesignExtras,
+              "Sağladığınız tasarım dosyasıyla birebir kurumsal arayüz",
+              "Yoğun ziyaretçiye dayanıklı, büyümeye hazır altyapı",
             ],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
@@ -248,20 +301,20 @@ export const webPackagesTr = {
             label: GROUP_PANEL,
             items: [
               "Hizmetler, hakkımızda ve iletişim sayfaları",
-              "Kurumsal e-posta yönlendirmeli formlar",
-              "İçerik yönetim paneli",
+              "Kurumsal e-postanıza düşen iletişim formları",
+              "İçerikleri kendiniz düzenleyebileceğiniz yönetim paneli",
               "Blog, haber ve duyuru yayınlama",
               "Ekip ve kadro tanıtım sayfaları",
               "Referanslar ve başarı hikâyeleri",
-              "Medya / basın kiti ve doküman alanı",
-              "Kariyer / iş ilanı modülü ve başvuru formu",
+              "Basın / medya doküman alanı",
+              "İş ilanı ve başvuru formu",
               "Etkinlik ve duyuru takvimi",
               "Video galeri ve medya yönetimi",
             ],
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...proDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
@@ -283,25 +336,18 @@ export const webPackagesTr = {
         deliveryDays: "21-30",
         revisions: "3",
         supportDays: "15",
-        pages: "0-10",
+        pages: "1-10",
         languages: "1",
         featureGroups: [
-          { label: "Geliştirme & Altyapı", items: [...commonDesignItems] },
+          { label: GROUP_DEV, items: [...commonDesignItems] },
           { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
           {
-            label: "Mağaza & Ödeme",
-            items: [
-              "Ürün listeleme ve detay sayfaları",
-              "Kategori yönetimi",
-              "Sepet ve ödeme akışı",
-              "Tekil sanal POS entegrasyonu",
-              "Temel stok takibi",
-              "Tek kargo firması entegrasyonu",
-            ],
+            label: GROUP_STORE,
+            items: [...ecommerceStoreCommonItems],
           },
           {
             label: GROUP_PANEL,
-            items: ["Ürün, kategori ve sipariş yönetimi"],
+            items: [...ecommercePanelCommonItems],
           },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           { label: GROUP_SUPPORT, items: [] },
@@ -315,39 +361,22 @@ export const webPackagesTr = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
-            items: [
-              ...commonDesignItems,
-              "Koyu / açık mod desteği",
-              "Akıcı sayfa geçişleri ve mikro etkileşimler",
-            ],
+            label: GROUP_DEV,
+            items: [...commonDesignItems, ...standartDesignExtras],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
-            label: "Mağaza & Ödeme",
+            label: GROUP_STORE,
             items: [
-              "Ürün listeleme ve detay sayfaları",
-              "Kategori yönetimi",
-              "Sepet ve ödeme akışı",
-              "Tekil sanal POS entegrasyonu",
-              "Temel stok takibi",
-              "Tek kargo firması entegrasyonu",
-              "Otomatik sipariş e-posta bildirimleri",
-              "Mesafeli satış sözleşmesi ve yasal sayfalar",
-              "Gelişmiş ürün, etiket ve varyasyon yönetimi",
-              "Düşük stok uyarıları",
-              "Üyelik, giriş ve profil sayfaları",
-              "Sipariş takip paneli",
-              "Kupon ve kampanya yönetimi",
-              "Favoriler / istek listesi",
+              ...ecommerceStoreCommonItems,
+              ...ecommerceStoreStandartExtras,
             ],
           },
           {
             label: GROUP_PANEL,
             items: [
-              "Ürün, kategori ve sipariş yönetimi",
-              "Mağaza yönetim paneli",
-              "Müşteri ve stok yönetimi",
+              ...ecommercePanelCommonItems,
+              ...ecommercePanelStandartExtras,
             ],
           },
           {
@@ -368,57 +397,34 @@ export const webPackagesTr = {
         languages: "Sınırsız",
         featureGroups: [
           {
-            label: "Geliştirme & Altyapı",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
-              "Koyu / açık mod desteği",
-              "Figma’dan piksel uyumlu e-ticaret arayüzü",
-              "Akıcı sayfa geçişleri ve mikro etkileşimler",
-              "Yüksek trafiğe hazır ölçeklenebilir altyapı",
+              ...standartDesignExtras,
+              "Sağladığınız tasarım dosyasıyla birebir mağaza arayüzü",
+              "Yoğun ziyaretçiye dayanıklı, büyümeye hazır altyapı",
             ],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
-            label: "Mağaza & Ödeme",
+            label: GROUP_STORE,
             items: [
-              "Ürün listeleme ve detay sayfaları",
-              "Kategori yönetimi",
-              "Sepet ve ödeme akışı",
-              "Tekil sanal POS entegrasyonu",
-              "Temel stok takibi",
-              "Tek kargo firması entegrasyonu",
-              "Otomatik sipariş e-posta bildirimleri",
-              "Mesafeli satış sözleşmesi ve yasal sayfalar",
-              "Gelişmiş ürün, etiket ve varyasyon yönetimi",
-              "Düşük stok uyarıları",
-              "Üyelik, giriş ve profil sayfaları",
-              "Sipariş takip paneli",
-              "Kupon ve kampanya yönetimi",
-              "Favoriler / istek listesi",
-              "Çoklu ödeme: sanal POS ve havale / EFT",
-              "Çoklu kargo ve lojistik entegrasyonu",
-              "Dinamik varyasyon ve fiyat yönetimi",
-              "Terk edilen sepet hatırlatma e-postaları",
-              "Ürün yorumu, puanlama ve fotoğraflı değerlendirme",
-              "Çapraz satış ve ürün önerileri",
-              "Toplu ürün import / export (Excel / CSV)",
-              "Fatura ve e-arşiv entegrasyon hazırlığı",
+              ...ecommerceStoreCommonItems,
+              ...ecommerceStoreStandartExtras,
+              ...ecommerceStoreProExtras,
             ],
           },
           {
             label: GROUP_PANEL,
             items: [
-              "Ürün, kategori ve sipariş yönetimi",
-              "Mağaza yönetim paneli",
-              "Müşteri ve stok yönetimi",
-              "Çoklu para birimi desteği",
-              "Blog ve içerik pazarlama modülü",
-              "CRM, SMS ve pazarlama aracı entegrasyonu",
+              ...ecommercePanelCommonItems,
+              ...ecommercePanelStandartExtras,
+              ...ecommercePanelProExtras,
             ],
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...proDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,

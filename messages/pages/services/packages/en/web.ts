@@ -3,11 +3,41 @@
 // ---------------------------------------------------------------------------
 
 const commonDesignItems = [
-  "Fluid responsive design for mobile, tablet and desktop",
-  "SSL / HTTPS and baseline security configuration",
+  "Responsive design for mobile, tablet and desktop",
+  "HTTPS and baseline security configuration",
   "Fast loading and Core Web Vitals optimization",
-  "Accessible, modern UI and typography",
+  "Accessible, modern and readable UI",
 ] as const;
+
+const standartDesignExtras = [
+  "Dark / light mode support",
+  "Smooth page transitions and micro-interactions",
+] as const;
+
+const commonDeliveryItems = [
+  "Source code and project file delivery",
+  "Go-live deployment support",
+  "Domain, www and redirect configuration",
+  "Hosting setup and launch guide",
+  "Performance target verification (Google PageSpeed)",
+] as const;
+
+const proDeliveryExtras = ["1 year free domain and hosting"] as const;
+
+const proDeliveryItems = [
+  ...proDeliveryExtras,
+  ...commonDeliveryItems,
+] as const;
+
+const commonSupportStandartItems = [
+  "User guide and short admin training",
+] as const;
+
+const GROUP_DEV = "Design & Infrastructure";
+const GROUP_PANEL = "Content & Admin";
+const GROUP_LAUNCH = "Launch & Delivery";
+const GROUP_SUPPORT = "Technical Support";
+const GROUP_STORE = "Store & Payment";
 
 const commonSeoItems = ["Sitemap and robots.txt configuration"] as const;
 
@@ -16,22 +46,6 @@ const commonIntegrationItems = [
   "Contact form, map and quick-reach links",
 ] as const;
 
-const commonDeliveryItems = [
-  "Source code and project file delivery",
-  "Go-live deployment support",
-  "Domain, www and redirect configuration",
-  "Hosting setup and launch guide",
-  "Performance Guarantee (PageSpeed)",
-] as const;
-
-const commonSupportStandartItems = [
-  "User guide and short admin training",
-] as const;
-
-const GROUP_PANEL = "Content & Admin";
-const GROUP_LAUNCH = "Launch & Delivery";
-const GROUP_SUPPORT = "Technical Support";
-
 const tierSeoTemelItems = [
   ...commonSeoItems,
   ...commonIntegrationItems,
@@ -39,19 +53,66 @@ const tierSeoTemelItems = [
 
 const tierSeoStandartItems = [
   ...commonSeoItems,
-  "Meta, Open Graph and baseline schema optimization",
   ...commonIntegrationItems,
+  "Meta, Open Graph and social preview optimization",
   "Search visibility tracking (Google Search Console)",
   "Visitor and traffic measurement (Google Analytics 4)",
 ] as const;
 
 const tierSeoProItems = [
   ...tierSeoStandartItems,
-  "Comprehensive technical SEO and indexing optimization",
-  "Organization, BreadcrumbList & rich-result schema",
+  "Technical SEO improvements for better search visibility",
+  "Organization, BreadcrumbList and rich-result schema",
   "Conversion tracking (forms, clicks, CTAs)",
   "Live chat or WhatsApp integration",
   "CRM / email marketing tool connection",
+] as const;
+
+const ecommerceStoreCommonItems = [
+  "Product listing and detail pages",
+  "Cart and checkout flow",
+  "Shipping carrier integration",
+  "Automated order email notifications",
+  "Distance sales agreement and legal pages",
+  "Order tracking panel",
+  "Bank transfer / EFT payment option",
+] as const;
+
+const ecommerceStoreStandartExtras = [
+  "Virtual POS integration (iyzico, PayTR and similar)",
+  "Membership, login and profile pages",
+  "Favorites / wishlist",
+  "Product reviews, ratings and photo feedback",
+] as const;
+
+const ecommerceStoreProExtras = [
+  "Guest checkout (shop without an account)",
+  "Multi-carrier shipping integration",
+  "Abandoned cart reminder emails",
+  "Cross-sell and product recommendations",
+  "Invoicing and e-archive integration readiness",
+] as const;
+
+const ecommercePanelCommonItems = [
+  "Product, category and order management",
+  "Category management",
+  "Basic stock tracking",
+] as const;
+
+const ecommercePanelStandartExtras = [
+  "Store management panel",
+  "Customer and stock management",
+  "Product options, tags and variants",
+  "Low-stock alerts",
+  "Coupon and campaign management",
+] as const;
+
+const ecommercePanelProExtras = [
+  "Dynamic variant and pricing management",
+  "Bulk product import / export (Excel / CSV)",
+  "Multi-currency support (₺, $, € ...)",
+  "Blog and content marketing module",
+  "SMS and marketing tool integration",
 ] as const;
 
 export const webPackagesEn = {
@@ -60,24 +121,24 @@ export const webPackagesEn = {
     description:
       "Present your personal brand or business with a modern website that builds trust. Showcase your portfolio, services and story in a clear, compelling digital storefront.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to promotional projects of different scales. I clarify scope around your needs and build a structure that can grow with you. If none of the packages fit, feel free to get in touch.",
+      "Startup, Professional and Premium tiers adapt to promotional projects of different scales. We clarify scope around your needs and build a structure that can grow with you. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "10-14",
         revisions: "3",
         supportDays: "15",
-        pages: "0-10",
+        pages: "1-10",
         languages: "1",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [...commonDesignItems],
           },
           { label: "SEO & Integration", items: [...tierSeoTemelItems] },
           {
             label: GROUP_PANEL,
             items: [
-              "Services and project showcase sections",
+              "Services, projects and about sections",
               "Contact and call-to-action areas",
             ],
           },
@@ -93,18 +154,14 @@ export const webPackagesEn = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
-            items: [
-              ...commonDesignItems,
-              "Dark / light mode support",
-              "Smooth page transitions and micro-interactions",
-            ],
+            label: GROUP_DEV,
+            items: [...commonDesignItems, ...standartDesignExtras],
           },
           { label: "SEO & Integration", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
             items: [
-              "Services and project showcase sections",
+              "Services, projects and about sections",
               "Contact and call-to-action areas",
               "Editable portfolio / project gallery",
               "References and client testimonial areas",
@@ -129,12 +186,11 @@ export const webPackagesEn = {
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
-              "Dark / light mode support",
-              "Pixel-perfect Figma-to-code UI implementation",
-              "Smooth page transitions and micro-interactions",
+              ...standartDesignExtras,
+              "Pixel-perfect UI from your design files (when provided)",
               "Scalable infrastructure for high traffic",
             ],
           },
@@ -142,7 +198,7 @@ export const webPackagesEn = {
           {
             label: GROUP_PANEL,
             items: [
-              "Services and project showcase sections",
+              "Services, projects and about sections",
               "Contact and call-to-action areas",
               "Editable portfolio / project gallery",
               "References and client testimonial areas",
@@ -153,7 +209,7 @@ export const webPackagesEn = {
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...proDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
@@ -175,11 +231,11 @@ export const webPackagesEn = {
         deliveryDays: "14-21",
         revisions: "3",
         supportDays: "15",
-        pages: "0-10",
+        pages: "1-10",
         languages: "1",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [...commonDesignItems],
           },
           { label: "SEO & Integration", items: [...tierSeoTemelItems] },
@@ -202,12 +258,8 @@ export const webPackagesEn = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
-            items: [
-              ...commonDesignItems,
-              "Dark / light mode support",
-              "Smooth page transitions and micro-interactions",
-            ],
+            label: GROUP_DEV,
+            items: [...commonDesignItems, ...standartDesignExtras],
           },
           { label: "SEO & Integration", items: [...tierSeoStandartItems] },
           {
@@ -240,12 +292,11 @@ export const webPackagesEn = {
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
-              "Dark / light mode support",
-              "Pixel-perfect corporate Figma-to-code UI",
-              "Smooth page transitions and micro-interactions",
+              ...standartDesignExtras,
+              "Pixel-perfect corporate UI from your design files (when provided)",
               "Scalable infrastructure for high traffic",
             ],
           },
@@ -267,7 +318,7 @@ export const webPackagesEn = {
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...proDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
@@ -289,28 +340,21 @@ export const webPackagesEn = {
         deliveryDays: "21-30",
         revisions: "3",
         supportDays: "15",
-        pages: "0-10",
+        pages: "1-10",
         languages: "1",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [...commonDesignItems],
           },
           { label: "SEO & Integration", items: [...tierSeoTemelItems] },
           {
-            label: "Store & Payment",
-            items: [
-              "Product listing and detail pages",
-              "Category management",
-              "Cart and checkout flow",
-              "Single payment gateway integration",
-              "Basic stock tracking",
-              "Single shipping carrier integration",
-            ],
+            label: GROUP_STORE,
+            items: [...ecommerceStoreCommonItems],
           },
           {
             label: GROUP_PANEL,
-            items: ["Product, category and order management"],
+            items: [...ecommercePanelCommonItems],
           },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           { label: GROUP_SUPPORT, items: [] },
@@ -324,39 +368,22 @@ export const webPackagesEn = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
-            items: [
-              ...commonDesignItems,
-              "Dark / light mode support",
-              "Smooth page transitions and micro-interactions",
-            ],
+            label: GROUP_DEV,
+            items: [...commonDesignItems, ...standartDesignExtras],
           },
           { label: "SEO & Integration", items: [...tierSeoStandartItems] },
           {
-            label: "Store & Payment",
+            label: GROUP_STORE,
             items: [
-              "Product listing and detail pages",
-              "Category management",
-              "Cart and checkout flow",
-              "Single payment gateway integration",
-              "Basic stock tracking",
-              "Single shipping carrier integration",
-              "Automated order email notifications",
-              "Distance sales agreement and legal pages",
-              "Advanced product, tag and variant management",
-              "Low-stock alerts",
-              "Membership, login and profile pages",
-              "Order tracking panel",
-              "Coupon and campaign management",
-              "Favorites / wishlist",
+              ...ecommerceStoreCommonItems,
+              ...ecommerceStoreStandartExtras,
             ],
           },
           {
             label: GROUP_PANEL,
             items: [
-              "Product, category and order management",
-              "Store management panel",
-              "Customer and stock management",
+              ...ecommercePanelCommonItems,
+              ...ecommercePanelStandartExtras,
             ],
           },
           {
@@ -377,57 +404,34 @@ export const webPackagesEn = {
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
               ...commonDesignItems,
-              "Dark / light mode support",
-              "Pixel-perfect ecommerce Figma-to-code UI",
-              "Smooth page transitions and micro-interactions",
+              ...standartDesignExtras,
+              "Pixel-perfect storefront UI from your design files (when provided)",
               "Scalable infrastructure for high traffic",
             ],
           },
           { label: "SEO & Integration", items: [...tierSeoProItems] },
           {
-            label: "Store & Payment",
+            label: GROUP_STORE,
             items: [
-              "Product listing and detail pages",
-              "Category management",
-              "Cart and checkout flow",
-              "Single payment gateway integration",
-              "Basic stock tracking",
-              "Single shipping carrier integration",
-              "Automated order email notifications",
-              "Distance sales agreement and legal pages",
-              "Advanced product, tag and variant management",
-              "Low-stock alerts",
-              "Membership, login and profile pages",
-              "Order tracking panel",
-              "Coupon and campaign management",
-              "Favorites / wishlist",
-              "Multiple payments: gateway and bank transfer / EFT",
-              "Multi-carrier shipping and logistics integration",
-              "Dynamic variant and pricing management",
-              "Abandoned cart reminder emails",
-              "Product reviews, ratings and photo feedback",
-              "Cross-sell and product recommendations",
-              "Bulk product import / export (Excel / CSV)",
-              "Invoicing and e-archive integration readiness",
+              ...ecommerceStoreCommonItems,
+              ...ecommerceStoreStandartExtras,
+              ...ecommerceStoreProExtras,
             ],
           },
           {
             label: GROUP_PANEL,
             items: [
-              "Product, category and order management",
-              "Store management panel",
-              "Customer and stock management",
-              "Multi-currency support",
-              "Blog and content marketing module",
-              "CRM, SMS and marketing tool integration",
+              ...ecommercePanelCommonItems,
+              ...ecommercePanelStandartExtras,
+              ...ecommercePanelProExtras,
             ],
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...proDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
