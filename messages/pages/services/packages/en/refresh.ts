@@ -230,6 +230,7 @@ export const refreshPackagesEn = {
         deliveryDays: "14-21",
         revisions: "4",
         supportDays: "30",
+        languages: "1-5",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
