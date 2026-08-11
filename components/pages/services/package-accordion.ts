@@ -249,16 +249,30 @@ function getDisplayOrderIndex(item: string, ordered: string[]): number {
   return anchorIndex >= 0 ? anchorIndex : ordered.indexOf(item);
 }
 
-export function buildFeatureGroupComparison(
+function collectGroupItemMeta(
   tiers: Record<PackageTier, PackageTierData>,
   groupLabel: string,
-  activeTier: PackageTier,
-): PackageFeatureItem[] {
-  const ordered: string[] = [];
-  const seen = new Set<string>();
+) {
   const minTierIndex = new Map<string, number>();
+  const exactTiers = new Map<string, Set<PackageTier>>();
 
   tierOrder.forEach((tierKey, tierIndex) => {
+    const group = tiers[tierKey].featureGroups?.find(
+      (entry) => entry.label === groupLabel,
+    );
+    for (const item of group?.items ?? []) {
+      if (!minTierIndex.has(item)) {
+        minTierIndex.set(item, tierIndex);
+      }
+      const set = exactTiers.get(item) ?? new Set();
+      set.add(tierKey);
+      exactTiers.set(item, set);
+    }
+  });
+
+  const ordered: string[] = [];
+  const seen = new Set<string>();
+  for (const tierKey of [...tierOrder].reverse()) {
     const group = tiers[tierKey].featureGroups?.find(
       (entry) => entry.label === groupLabel,
     );
@@ -266,10 +280,19 @@ export function buildFeatureGroupComparison(
       if (!seen.has(item)) {
         seen.add(item);
         ordered.push(item);
-        minTierIndex.set(item, tierIndex);
       }
     }
-  });
+  }
+
+  return { ordered, minTierIndex, exactTiers };
+}
+
+export function buildFeatureGroupComparison(
+  tiers: Record<PackageTier, PackageTierData>,
+  groupLabel: string,
+  activeTier: PackageTier,
+): PackageFeatureItem[] {
+  const { ordered, minTierIndex } = collectGroupItemMeta(tiers, groupLabel);
 
   const activeItems = new Set(
     tiers[activeTier].featureGroups?.find((entry) => entry.label === groupLabel)
@@ -318,26 +341,10 @@ export function buildFeatureGroupMatrix(
   tiers: Record<PackageTier, PackageTierData>,
   groupLabel: string,
 ): PackageFeatureMatrixItem[] {
-  const ordered: string[] = [];
-  const seen = new Set<string>();
-  const exactTiers = new Map<string, Set<PackageTier>>();
-  const minTierIndex = new Map<string, number>();
-
-  tierOrder.forEach((tierKey, tierIndex) => {
-    const group = tiers[tierKey].featureGroups?.find(
-      (entry) => entry.label === groupLabel,
-    );
-    for (const item of group?.items ?? []) {
-      if (!seen.has(item)) {
-        seen.add(item);
-        ordered.push(item);
-        minTierIndex.set(item, tierIndex);
-      }
-      const set = exactTiers.get(item) ?? new Set();
-      set.add(tierKey);
-      exactTiers.set(item, set);
-    }
-  });
+  const { ordered, minTierIndex, exactTiers } = collectGroupItemMeta(
+    tiers,
+    groupLabel,
+  );
 
   return ordered.map((text) => {
     const pattern = matchExclusivePattern(text);
@@ -413,7 +420,6 @@ export function sortFeatureGroupsForDisplay(
 
   return [...common, ...rest];
 }
-
 
 export function collectAllTierGroupLabels(pkg: PackageCardData): string[] {
   const labels: string[] = [];
