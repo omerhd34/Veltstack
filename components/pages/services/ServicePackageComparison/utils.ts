@@ -1,7 +1,7 @@
 import type { PackageFeatureMatrixItem } from "../package-accordion";
 import type { PackageTier } from "../packages-config";
 import type {
-  PackageCardData,
+  PackageCardWithTiers,
   PackageFeatureGroup,
 } from "../ServicePackageCard";
 import { tierOrder } from "./constants";
@@ -69,7 +69,7 @@ export function groupFeaturesByInclusion(
 }
 
 export function collectTierGroups(
-  data: PackageCardData,
+  data: PackageCardWithTiers,
 ): PackageFeatureGroup[] {
   const byLabel = new Map<string, PackageFeatureGroup>();
   for (const tierKey of tierOrder) {
@@ -83,7 +83,7 @@ export function collectTierGroups(
 }
 
 export function buildDeliveryMatrixItem(
-  data: PackageCardData,
+  data: PackageCardWithTiers,
   labels: ComparisonLabels,
 ): PackageFeatureMatrixItem | null {
   if (!tierOrder.some((tier) => Boolean(data.tiers[tier].deliveryDays))) {

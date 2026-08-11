@@ -1,6 +1,6 @@
 import type { PackageTier } from "./packages-config";
 import type {
-  PackageCardData,
+  PackageCardWithTiers,
   PackageFeatureGroup,
   PackageTierData,
 } from "./ServicePackageCard";
@@ -13,7 +13,11 @@ export interface PackageFeatureItem {
   value?: string | null;
 }
 
-const exclusiveItemPatterns: RegExp[] = [/^\d+\s*(g[üu]n|days?)\b/i];
+const exclusiveItemPatterns: RegExp[] = [
+  /^\d+\s*(g[üu]n|days?)\b/i,
+  /iOS veya Android yayın|iOS or Android publishing/i,
+  /iOS ve Android yayın|iOS and Android publishing/i,
+];
 
 const languagesGroupNeedles = [
   "geliştirme",
@@ -365,7 +369,7 @@ export const desktopGridQuery = "(min-width: 1024px)";
 export const packageAccordionDurationMs = 500;
 
 export function collectFeatureGroupLabels(
-  packages: PackageCardData[],
+  packages: PackageCardWithTiers[],
   tier: PackageTier,
 ): string[] {
   const labels: string[] = [];
@@ -382,7 +386,7 @@ export function collectFeatureGroupLabels(
 }
 
 export function collectCommonFeatureGroupLabels(
-  packages: PackageCardData[],
+  packages: PackageCardWithTiers[],
   tier: PackageTier,
 ): string[] {
   return collectFeatureGroupLabels(packages, tier).filter((label) =>
@@ -421,7 +425,7 @@ export function sortFeatureGroupsForDisplay(
   return [...common, ...rest];
 }
 
-export function collectAllTierGroupLabels(pkg: PackageCardData): string[] {
+export function collectAllTierGroupLabels(pkg: PackageCardWithTiers): string[] {
   const labels: string[] = [];
 
   for (const tierKey of tierOrder) {

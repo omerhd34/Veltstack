@@ -1,4 +1,4 @@
-import type { PackageCardData } from "../ServicePackageCard";
+import type { PackageCardData, PackageCardWithTiers } from "../ServicePackageCard";
 
 export interface ComparisonLabels {
   tierTemel: string;
@@ -17,7 +17,7 @@ export interface ComparisonLabels {
 }
 
 export interface ServicePackageComparisonProps {
-  data: PackageCardData;
+  data: PackageCardWithTiers;
   labels: ComparisonLabels;
   categoryLabel: string;
   openGroups: Set<string>;

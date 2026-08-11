@@ -15,7 +15,11 @@ import {
 import { ServicesCategoryTabs } from "./ServicesCategoryTabs";
 import { ServicesPackageTypeTabs } from "./ServicesPackageTypeTabs";
 import { ServicesPackagesIntro } from "./ServicesPackagesIntro";
-import { ServicePackageCard, type PackageCardData } from "./ServicePackageCard";
+import {
+  ServicePackageCard,
+  type PackageCardData,
+  type PackageCardWithTiers,
+} from "./ServicePackageCard";
 import { ServicePackageComparison } from "./ServicePackageComparison";
 import { usePackageGroupHeightSync } from "./usePackageGroupHeightSync";
 
@@ -121,6 +125,11 @@ export function ServicesPackagesPanel({
   const deliveryKey = deliveryLabelKey[activeCategory];
 
   const selectedPackage = categoryPackages[resolvedPackageSlug];
+  const selectedPackageWithTiers = useMemo<PackageCardWithTiers | null>(() => {
+    if (!selectedPackage.tiers) return null;
+    return { ...selectedPackage, tiers: selectedPackage.tiers };
+  }, [selectedPackage]);
+  const showPackageComparison = selectedPackageWithTiers !== null;
 
   const packageTypeTabs = useMemo(
     () =>
@@ -145,11 +154,24 @@ export function ServicesPackagesPanel({
   };
 
   const commonGroupLabels = useMemo(() => {
-    if (useTierComparison) {
-      return collectAllTierGroupLabels(selectedPackage);
+    if (!selectedPackageWithTiers) {
+      return [];
     }
-    return collectCommonFeatureGroupLabels(visiblePackages, activeTier);
-  }, [activeTier, selectedPackage, useTierComparison, visiblePackages]);
+    if (useTierComparison) {
+      return collectAllTierGroupLabels(selectedPackageWithTiers);
+    }
+    return collectCommonFeatureGroupLabels(
+      visiblePackages.filter((pkg): pkg is PackageCardWithTiers =>
+        Boolean(pkg.tiers),
+      ),
+      activeTier,
+    );
+  }, [
+    activeTier,
+    selectedPackageWithTiers,
+    useTierComparison,
+    visiblePackages,
+  ]);
 
   useLayoutEffect(() => {
     setOpenGroups(new Set());
@@ -204,28 +226,18 @@ export function ServicesPackagesPanel({
 
   const showCategoryTabs = !lockedCategory;
   const showPackageTypeTabs = slugs.length > 1;
-  const displayIntro = showPackageTypeTabs
+  const usePackageIntro = showPackageTypeTabs || !selectedPackage.tiers;
+  const displayIntro = usePackageIntro
     ? {
         title: intro.title,
         p1: selectedPackage.description,
         p2: selectedPackage.introP2 ?? intro.p2,
       }
     : intro;
-  const showUnifiedNav =
-    (showCategoryTabs && showPackageTypeTabs) ||
-    (!showCategoryTabs && showPackageTypeTabs);
+  const showUnifiedNav = showCategoryTabs || showPackageTypeTabs;
 
   return (
     <div className={`min-w-0 ${className ?? ""}`}>
-      {showCategoryTabs && !showPackageTypeTabs ? (
-        <ServicesCategoryTabs
-          tabs={labels.tabs}
-          active={activeCategory}
-          onChange={handleCategoryChange}
-          className="mx-auto w-full max-w-full sm:w-fit"
-        />
-      ) : null}
-
       {showUnifiedNav ? (
         <div className="relative mx-auto w-full max-w-6xl rounded-[1.75rem] p-px bg-linear-to-r from-emerald-500/30 via-brand-accent/25 to-emerald-600/30 shadow-[0_12px_48px_rgb(0_0_0/0.12),0_4px_16px_rgb(58_107_82/0.08)]">
           <div className="relative min-w-0 overflow-hidden rounded-[calc(1.75rem-1px)] bg-[#071510]/97 backdrop-blur-xl">
@@ -282,10 +294,10 @@ export function ServicesPackagesPanel({
         p2={displayIntro.p2}
       />
 
-      {useTierComparison ? (
+      {showPackageComparison && selectedPackageWithTiers ? (
         <ServicePackageComparison
           className={lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"}
-          data={selectedPackage}
+          data={selectedPackageWithTiers}
           labels={cardLabels}
           categoryLabel={
             labels.tabs.find((tab) => tab.id === activeCategory)?.label ?? ""
@@ -293,7 +305,7 @@ export function ServicesPackagesPanel({
           openGroups={openGroups}
           onToggleGroup={toggleGroup}
         />
-      ) : (
+      ) : !useTierComparison ? (
         <div
           ref={gridRef}
           key={`${activeCategory}-${resolvedPackageSlug}-${activeTier}`}
@@ -301,21 +313,25 @@ export function ServicesPackagesPanel({
             lockedCategory ? "mt-8 md:mt-10" : "mt-10 md:mt-12"
           } grid items-stretch gap-6 lg:grid-cols-3 lg:gap-5 xl:gap-6`}
         >
-          {slugs.map((slug) => (
-            <ServicePackageCard
-              key={`${activeCategory}-${slug}`}
-              icon={icons[slug]}
-              data={categoryPackages[slug]}
-              labels={cardLabels}
-              activeTier={activeTier}
-              onTierChange={setActiveTier}
-              openGroups={openGroups}
-              onToggleGroup={toggleGroup}
-              commonGroupLabels={commonGroupLabels}
-            />
-          ))}
+          {slugs.map((slug) => {
+            const pkg = categoryPackages[slug];
+            if (!pkg.tiers) return null;
+            return (
+              <ServicePackageCard
+                key={`${activeCategory}-${slug}`}
+                icon={icons[slug]}
+                data={{ ...pkg, tiers: pkg.tiers }}
+                labels={cardLabels}
+                activeTier={activeTier}
+                onTierChange={setActiveTier}
+                openGroups={openGroups}
+                onToggleGroup={toggleGroup}
+                commonGroupLabels={commonGroupLabels}
+              />
+            );
+          })}
         </div>
-      )}
+      ) : null}
     </div>
   );
 }

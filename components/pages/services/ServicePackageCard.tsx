@@ -1,10 +1,7 @@
 "use client";
 
 import type { IconType } from "react-icons";
-import {
-  LuChevronDown,
-  LuMessageCircle,
-} from "react-icons/lu";
+import { LuChevronDown, LuMessageCircle } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { StardustShell } from "@/components/lightswind/stardust-button";
 import {
@@ -46,8 +43,12 @@ export interface PackageCardData {
   title: string;
   description: string;
   introP2?: string;
-  tiers: Record<PackageTier, PackageTierData>;
+  tiers?: Record<PackageTier, PackageTierData>;
 }
+
+export type PackageCardWithTiers = Omit<PackageCardData, "tiers"> & {
+  tiers: Record<PackageTier, PackageTierData>;
+};
 
 interface PackageCardLabels {
   tierTemel: string;
@@ -66,7 +67,7 @@ interface PackageCardLabels {
 
 interface ServicePackageCardProps {
   icon: IconType;
-  data: PackageCardData;
+  data: PackageCardWithTiers;
   labels: PackageCardLabels;
   activeTier: PackageTier;
   onTierChange?: (tier: PackageTier) => void;
