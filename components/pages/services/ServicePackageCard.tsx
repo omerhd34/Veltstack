@@ -3,8 +3,6 @@
 import type { IconType } from "react-icons";
 import {
   LuChevronDown,
-  LuCircleCheck,
-  LuCircleX,
   LuMessageCircle,
 } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
@@ -26,6 +24,7 @@ import {
   sortFeatureGroupsForDisplay,
 } from "./package-accordion";
 import type { PackageTier } from "./packages-config";
+import { InclusionIcon } from "./InclusionIcon";
 import { cn } from "@/lib/utils";
 
 export interface PackageFeatureGroup {
@@ -224,17 +223,9 @@ export function ServicePackageCard({
                       {feature.value}
                     </span>
                   ) : feature.included ? (
-                    <LuCircleCheck
-                      className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
-                      strokeWidth={2.5}
-                      aria-hidden
-                    />
+                    <InclusionIcon included className="mt-0.5" />
                   ) : (
-                    <LuCircleX
-                      className="mt-0.5 size-3.5 shrink-0 text-red-400"
-                      strokeWidth={2.5}
-                      aria-hidden
-                    />
+                    <InclusionIcon included={false} className="mt-0.5" />
                   )}
                 </li>
               ))}
@@ -366,11 +357,7 @@ export function ServicePackageCard({
                   className="flex items-start justify-between gap-3 text-[0.8125rem] leading-snug text-emerald-50/85"
                 >
                   <span className="min-w-0 flex-1">{feature}</span>
-                  <LuCircleCheck
-                    className="mt-0.5 size-3.5 shrink-0 text-brand-accent"
-                    strokeWidth={2.5}
-                    aria-hidden
-                  />
+                  <InclusionIcon included className="mt-0.5" />
                 </li>
               ))}
             </ul>

@@ -1,5 +1,5 @@
-import { LuCircleX } from "react-icons/lu";
 import type { PackageTier } from "../packages-config";
+import { InclusionIcon } from "../InclusionIcon";
 import { tierOrder } from "./constants";
 
 export function ComparisonValueCells({
@@ -24,11 +24,7 @@ export function ComparisonValueCells({
             {value}
           </span>
         ) : (
-          <LuCircleX
-            className="size-3.5 text-red-400/70"
-            strokeWidth={2.5}
-            aria-hidden
-          />
+          <InclusionIcon included={false} />
         )}
       </span>
     );
