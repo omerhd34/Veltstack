@@ -1,4 +1,4 @@
-const commonDesignTemelItems = [
+const commonDesignItems = [
   "Cross-platform iOS and Android build",
   "Brand-aligned UI/UX",
   "Splash screen and app icon",
@@ -6,41 +6,74 @@ const commonDesignTemelItems = [
   "Fast launch and performance optimization",
 ] as const;
 
-const commonDeliveryBase = [
-  "Source code and project file delivery",
-  "App Store and Play Store publishing support",
-  "Store listing screenshots and descriptions",
-  "Technical Support",
+const standartDesignExtras = [
+  "Dark / light mode support",
+  "Premium UI components",
+  "Compatibility across all phones and tablets",
 ] as const;
 
-const commonSecurityTemelItems = [
-  "SSL communication and data encryption",
+const commonDeliveryItems = ["Source code and project file delivery"] as const;
+
+const standartDeliveryItems = [
+  ...commonDeliveryItems,
+  "iOS or Android publishing support",
+] as const;
+
+const proDeliveryItems = [
+  ...commonDeliveryItems,
+  "iOS and Android publishing support",
+] as const;
+
+const commonSupportStandartItems = [
+  "User guide and short admin training",
+] as const;
+
+const GROUP_DEV = "Design & Infrastructure";
+const GROUP_FEATURES = "Content & Features";
+const GROUP_INTEGRATION = "Integration & Security";
+const GROUP_LAUNCH = "Launch & Delivery";
+const GROUP_SUPPORT = "Technical Support";
+const GROUP_STORE = "Store & Payment";
+
+const commonSecurityItems = [
   "Privacy consent screen (KVKK/GDPR)",
 ] as const;
 
-const portfolioFeaturesTemel = [
+const tierIntegrationTemelItems = [
+  "Basic usage analytics",
+  ...commonSecurityItems,
+] as const;
+
+const tierIntegrationStandartItems = [
+  ...tierIntegrationTemelItems,
+  "Social sharing integration",
+] as const;
+
+const tierIntegrationProItems = [
+  ...tierIntegrationStandartItems,
+  "Custom API and third-party integrations",
+  "Advanced analytics and conversion tracking",
+  "KVKK / GDPR compliant security stack",
+] as const;
+
+const portfolioFeaturesCommon = [
   "About, services and portfolio gallery",
   "Contact form and quick-access buttons",
-  "Gallery and video content support",
   "References and client testimonials",
 ] as const;
 
-const portfolioFeaturesStandart = [
-  ...portfolioFeaturesTemel,
+const portfolioFeaturesStandartExtras = [
   "Push notification infrastructure",
   "Offline usage and caching",
 ] as const;
 
-const portfolioFeaturesPro = [
-  ...portfolioFeaturesTemel,
-  "Push notification infrastructure",
-  "Offline usage and caching",
+const portfolioFeaturesProExtras = [
   "Advanced push and announcement management",
   "CMS connection for dynamic content",
   "Deep link and content sharing",
 ] as const;
 
-const corporateFeaturesTemel = [
+const corporateFeaturesCommon = [
   "Announcement, news and content screens",
   "Services, corporate info and contact pages",
   "User login and contact forms",
@@ -49,24 +82,37 @@ const corporateFeaturesTemel = [
   "PDF and document viewing",
 ] as const;
 
-const corporateFeaturesStandart = [
-  ...corporateFeaturesTemel,
+const corporateFeaturesStandartExtras = [
   "Grouped push notification system",
   "User roles and permissions",
   "Offline content viewing and sync",
 ] as const;
 
-const corporateFeaturesPro = [
-  ...corporateFeaturesTemel,
-  "Grouped push notification system",
-  "User roles and permissions",
-  "Offline content viewing and sync",
+const corporateFeaturesProExtras = [
   "Rich-media announcements",
   "Advanced role-based access control",
   "Survey and feedback module",
 ] as const;
 
-const ecommerceStoreTemel = [
+const corporateIntegrationTemelItems = [
+  "Basic usage analytics",
+  ...commonSecurityItems,
+] as const;
+
+const corporateIntegrationStandartItems = [
+  ...corporateIntegrationTemelItems,
+  "App crash and error tracking",
+  "API integration with existing company systems",
+] as const;
+
+const corporateIntegrationProItems = [
+  ...corporateIntegrationStandartItems,
+  "CRM / ERP integration",
+  "Biometric login (Face ID, fingerprint)",
+  "KVKK / GDPR compliant security stack",
+] as const;
+
+const ecommerceStoreCommonItems = [
   "Category and product listing",
   "Product detail, gallery and zoom",
   "Product search and basic filtering",
@@ -77,21 +123,36 @@ const ecommerceStoreTemel = [
   "Delivery and shipping cost display",
 ] as const;
 
-const ecommerceStoreStandart = [
-  ...ecommerceStoreTemel,
+const ecommerceStoreStandartExtras = [
   "Favorites and order history",
   "Saved address management",
   "Multiple payments (card, bank transfer)",
 ] as const;
 
-const ecommerceStorePro = [
-  ...ecommerceStoreTemel,
-  "Favorites and order history",
-  "Saved address management",
-  "Multiple payments (card, bank transfer)",
+const ecommerceStoreProExtras = [
   "Advanced stock and dynamic variant management",
   "Product reviews and star ratings",
   "Multi-currency support",
+] as const;
+
+const ecommerceIntegrationTemelItems = [
+  "Single payment gateway integration",
+  "Basic usage analytics",
+  "Distance sales agreement module",
+  ...commonSecurityItems,
+] as const;
+
+const ecommerceIntegrationStandartItems = [
+  ...ecommerceIntegrationTemelItems,
+  "Order and campaign push notifications",
+  "Coupon and cart discount support",
+] as const;
+
+const ecommerceIntegrationProItems = [
+  ...ecommerceIntegrationStandartItems,
+  "Abandoned cart and personalized notifications",
+  "Advanced ecommerce conversion analytics",
+  "Shipping, logistics and Apple / Google Pay integration",
 ] as const;
 
 export const appPackagesEn = {
@@ -100,7 +161,7 @@ export const appPackagesEn = {
     description:
       "A trusted iOS and Android app that introduces your brand in one tap. Bring your portfolio, services and contact channels to users’ pockets.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to promotional apps of different scales. We build once for iOS and Android—from store publishing to integrations.",
+      "Startup, Professional and Premium tiers adapt to promotional apps of different scales. We build once for iOS and Android—from store publishing to integrations. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
@@ -108,27 +169,14 @@ export const appPackagesEn = {
         supportDays: "15",
         languages: "1",
         featureGroups: [
+          { label: GROUP_DEV, items: [...commonDesignItems] },
+          { label: GROUP_FEATURES, items: [...portfolioFeaturesCommon] },
           {
-            label: "Development & Infrastructure",
-            items: [...commonDesignTemelItems],
+            label: GROUP_INTEGRATION,
+            items: [...tierIntegrationTemelItems],
           },
-          {
-            label: "Features & Functions",
-            items: [...portfolioFeaturesTemel],
-          },
-          {
-            label: "Integration & Security",
-            items: [
-              "REST API connection",
-              "Map and location display",
-              "Firebase Analytics setup",
-              ...commonSecurityTemelItems,
-            ],
-          },
-          {
-            label: "Support",
-            items: [...commonDeliveryBase, "Basic user guide"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          { label: GROUP_SUPPORT, items: [] },
         ],
       },
       standart: {
@@ -138,34 +186,24 @@ export const appPackagesEn = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
+            items: [...commonDesignItems, ...standartDesignExtras],
+          },
+          {
+            label: GROUP_FEATURES,
             items: [
-              ...commonDesignTemelItems,
-              "Premium UI components",
-              "Dark / light mode support",
-              "Advanced device and screen compatibility testing",
+              ...portfolioFeaturesCommon,
+              ...portfolioFeaturesStandartExtras,
             ],
           },
           {
-            label: "Features & Functions",
-            items: [...portfolioFeaturesStandart],
+            label: GROUP_INTEGRATION,
+            items: [...tierIntegrationStandartItems],
           },
+          { label: GROUP_LAUNCH, items: [...standartDeliveryItems] },
           {
-            label: "Integration & Security",
-            items: [
-              "Advanced REST API integration",
-              "Social sharing integration",
-              "Map and location display",
-              "Firebase Analytics setup",
-              ...commonSecurityTemelItems,
-            ],
-          },
-          {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "User guide and short admin training",
-            ],
+            label: GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
           },
         ],
       },
@@ -176,44 +214,43 @@ export const appPackagesEn = {
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
-              ...commonDesignTemelItems,
-              "Dark / light mode support",
-              "Pixel-perfect Figma-to-code UI",
+              ...commonDesignItems,
+              ...standartDesignExtras,
+              "Design-accurate custom UI",
               "Advanced animations and micro-interactions",
-              "Scalable high-performance infrastructure",
+              "High-performance, growth-ready infrastructure",
             ],
           },
           {
-            label: "Features & Functions",
-            items: [...portfolioFeaturesPro],
-          },
-          {
-            label: "Integration & Security",
+            label: GROUP_FEATURES,
             items: [
-              "Custom API and third-party integrations",
-              "Firebase and GA4 analytics setup",
-              "KVKK / GDPR compliant security stack",
+              ...portfolioFeaturesCommon,
+              ...portfolioFeaturesStandartExtras,
+              ...portfolioFeaturesProExtras,
             ],
           },
           {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "Comprehensive training and documentation",
-            ],
+            label: GROUP_INTEGRATION,
+            items: [...tierIntegrationProItems],
+          },
+          { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
+          {
+            label: GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
           },
         ],
       },
     },
   },
+
   corporate: {
     title: "Corporate",
     description:
       "A reliable corporate mobile experience for employees or customers. Deliver content, communication and workflows in a consistent iOS and Android interface.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to corporate mobile projects of different scales. We build once for iOS and Android.",
+      "Startup, Professional and Premium tiers adapt to corporate mobile projects of different scales. We build once for iOS and Android. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
@@ -221,31 +258,14 @@ export const appPackagesEn = {
         supportDays: "15",
         languages: "1",
         featureGroups: [
+          { label: GROUP_DEV, items: [...commonDesignItems] },
+          { label: GROUP_FEATURES, items: [...corporateFeaturesCommon] },
           {
-            label: "Development & Infrastructure",
-            items: [
-              "Brand-aligned iOS / Android UI",
-              "Brand-aligned UI/UX",
-              "Splash screen and app icon",
-              "Performance and device optimization",
-            ],
+            label: GROUP_INTEGRATION,
+            items: [...corporateIntegrationTemelItems],
           },
-          {
-            label: "Features & Functions",
-            items: [...corporateFeaturesTemel],
-          },
-          {
-            label: "Integration & Security",
-            items: [
-              "Firebase Analytics setup",
-              "Data encryption",
-              ...commonSecurityTemelItems,
-            ],
-          },
-          {
-            label: "Support",
-            items: [...commonDeliveryBase, "Basic user guide"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          { label: GROUP_SUPPORT, items: [] },
         ],
       },
       standart: {
@@ -255,34 +275,24 @@ export const appPackagesEn = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
+            items: [...commonDesignItems, ...standartDesignExtras],
+          },
+          {
+            label: GROUP_FEATURES,
             items: [
-              "Custom corporate iOS / Android UI",
-              "Premium components and modern interface",
-              "Dark / light mode support",
-              "Advanced performance and battery optimization",
+              ...corporateFeaturesCommon,
+              ...corporateFeaturesStandartExtras,
             ],
           },
           {
-            label: "Features & Functions",
-            items: [...corporateFeaturesStandart],
+            label: GROUP_INTEGRATION,
+            items: [...corporateIntegrationStandartItems],
           },
+          { label: GROUP_LAUNCH, items: [...standartDeliveryItems] },
           {
-            label: "Integration & Security",
-            items: [
-              "Analytics and crash tracking (Crashlytics)",
-              "API integration with existing company systems",
-              "KVKK-compliant data processing",
-            ],
-          },
-          {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase.slice(0, 2),
-              "App Store and Play Store organization account setup",
-              ...commonDeliveryBase.slice(2),
-              "User guide and short admin training",
-            ],
+            label: GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
           },
         ],
       },
@@ -293,43 +303,43 @@ export const appPackagesEn = {
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
-              "High-performance custom corporate stack",
-              "Pixel-perfect corporate Figma-to-code UI",
+              ...commonDesignItems,
+              ...standartDesignExtras,
+              "Design-accurate corporate UI",
               "Tablet optimization",
-              "Dark / light mode support",
+              "High-performance, growth-ready infrastructure",
             ],
           },
           {
-            label: "Features & Functions",
-            items: [...corporateFeaturesPro],
-          },
-          {
-            label: "Integration & Security",
+            label: GROUP_FEATURES,
             items: [
-              "CRM / ERP integration",
-              "Biometric login (Face ID, fingerprint)",
-              "KVKK / GDPR compliant security stack",
+              ...corporateFeaturesCommon,
+              ...corporateFeaturesStandartExtras,
+              ...corporateFeaturesProExtras,
             ],
           },
           {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "Corporate user guide and comprehensive training",
-            ],
+            label: GROUP_INTEGRATION,
+            items: [...corporateIntegrationProItems],
+          },
+          { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
+          {
+            label: GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
           },
         ],
       },
     },
   },
+
   ecommerce: {
     title: "Ecommerce",
     description:
       "A store-ready ecommerce app with payments, catalog and order management. Bring your cart flow and customer journey to mobile with a smooth, trustworthy experience.",
     introP2:
-      "Startup, Professional and Premium tiers scale with different catalogs and order volumes. If you are unsure which package to choose, feel free to get in touch.",
+      "Startup, Professional and Premium tiers scale with different catalogs and order volumes. We build once for iOS and Android. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "42-56",
@@ -337,32 +347,14 @@ export const appPackagesEn = {
         supportDays: "15",
         languages: "1",
         featureGroups: [
+          { label: GROUP_DEV, items: [...commonDesignItems] },
+          { label: GROUP_STORE, items: [...ecommerceStoreCommonItems] },
           {
-            label: "Development & Infrastructure",
-            items: [
-              "Ecommerce-focused iOS / Android UI",
-              "Brand-aligned UI/UX",
-              "Splash screen and app icon",
-              "Fast product image loading optimization",
-            ],
+            label: GROUP_INTEGRATION,
+            items: [...ecommerceIntegrationTemelItems],
           },
-          {
-            label: "Store & Functions",
-            items: [...ecommerceStoreTemel],
-          },
-          {
-            label: "Marketing & Security",
-            items: [
-              "Single payment gateway integration",
-              "SSL data security and API communication",
-              "Distance sales agreement and privacy module",
-              "Firebase Analytics setup",
-            ],
-          },
-          {
-            label: "Support",
-            items: [...commonDeliveryBase, "Basic store user guide"],
-          },
+          { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
+          { label: GROUP_SUPPORT, items: [] },
         ],
       },
       standart: {
@@ -372,32 +364,28 @@ export const appPackagesEn = {
         languages: "1-5",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
-              "Premium ecommerce iOS / Android UI",
+              ...commonDesignItems,
+              ...standartDesignExtras,
               "Advanced filtering and infinite scroll",
-              "Dark / light mode support",
-              "Smooth category transitions and animations",
             ],
           },
           {
-            label: "Store & Functions",
-            items: [...ecommerceStoreStandart],
-          },
-          {
-            label: "Marketing & Security",
+            label: GROUP_STORE,
             items: [
-              "Order and campaign push notifications",
-              "Coupon and cart discount support",
-              "Privacy and legal consent infrastructure",
+              ...ecommerceStoreCommonItems,
+              ...ecommerceStoreStandartExtras,
             ],
           },
           {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "User guide and short admin training",
-            ],
+            label: GROUP_INTEGRATION,
+            items: [...ecommerceIntegrationStandartItems],
+          },
+          { label: GROUP_LAUNCH, items: [...standartDeliveryItems] },
+          {
+            label: GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
           },
         ],
       },
@@ -408,32 +396,31 @@ export const appPackagesEn = {
         languages: "Unlimited",
         featureGroups: [
           {
-            label: "Development & Infrastructure",
+            label: GROUP_DEV,
             items: [
-              "Native-feel high-performance custom stack",
-              "Pixel-perfect ecommerce Figma-to-code UI",
+              ...commonDesignItems,
+              ...standartDesignExtras,
+              "Design-accurate ecommerce UI",
               "Custom cart and checkout animations",
-              "Dark / light mode support",
+              "High-performance, growth-ready infrastructure",
             ],
           },
           {
-            label: "Store & Functions",
-            items: [...ecommerceStorePro],
-          },
-          {
-            label: "Marketing & Security",
+            label: GROUP_STORE,
             items: [
-              "Abandoned cart and personalized notifications",
-              "GA4 / Firebase ecommerce conversion analytics",
-              "Shipping, logistics and Apple / Google Pay integration",
+              ...ecommerceStoreCommonItems,
+              ...ecommerceStoreStandartExtras,
+              ...ecommerceStoreProExtras,
             ],
           },
           {
-            label: "Support",
-            items: [
-              ...commonDeliveryBase,
-              "Comprehensive store management training",
-            ],
+            label: GROUP_INTEGRATION,
+            items: [...ecommerceIntegrationProItems],
+          },
+          { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
+          {
+            label: GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
           },
         ],
       },
