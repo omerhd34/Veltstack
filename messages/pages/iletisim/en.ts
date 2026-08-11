@@ -62,10 +62,6 @@ export const contactEn = {
     "teknik-denetim": [
       { value: "webAudit", label: "Website Technical Audit" },
       { value: "appAudit", label: "Mobile App Technical Audit" },
-      {
-        value: "infrastructureAudit",
-        label: "Infrastructure & Security Audit",
-      },
     ],
     "bakim-ve-destek": [
       { value: "maintenanceServices", label: "Maintenance & Support Services" },

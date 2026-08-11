@@ -36,7 +36,7 @@ export const contactTr = {
   tierOptions: [
     { value: "temel", label: "Girişim" },
     { value: "standart", label: "Profesyonel" },
-    { value: "pro", label: "Premium" },
+    { value: "pro", label: "Kapsamlı" },
     { value: "belirsiz", label: "Belirsiz" },
   ],
 
@@ -62,7 +62,6 @@ export const contactTr = {
     "teknik-denetim": [
       { value: "webAudit", label: "Web Sitesi Teknik Denetimi" },
       { value: "appAudit", label: "Mobil Uygulama Teknik Denetimi" },
-      { value: "infrastructureAudit", label: "Altyapı ve Güvenlik Denetimi" },
     ],
     "bakim-ve-destek": [
       { value: "maintenanceServices", label: "Bakım & Destek Hizmetleri" },
