@@ -22,7 +22,7 @@ export const faqTr = {
     support: {
       label: "Yayın Sonrası Destek",
       labelShort: "Destek",
-      hint: "Yayın sonrası destek, kaynak kod devri ve mevcut site yenileme gibi süreçlere dair sorular.",
+      hint: "Bakım paketleri, kaynak kod devri ve mevcut site yenileme gibi yayın sonrası süreçlere dair sorular.",
     },
   },
   scrollLabel: "Soruları incele",
@@ -39,7 +39,7 @@ export const faqTr = {
           slug: "velstack-nedir",
           question: "Veltstack nedir?",
           answer:
-            "Veltstack adını iki parçadan alır: Velt, velocity (hız ve çeviklik); Stack ise teknoloji yığınını ifade eder. Veltstack, Ömer Halis Demir tarafından yönetilen bir full stack geliştirici markasıdır. Web sitesi yapımı, mobil uygulama ve dijital yenileme hizmetlerini tek çatı altında sunar; ajans tarzı profesyonel sunumla solo geliştirici esnekliğini birleştirir.",
+            "Veltstack adını iki parçadan alır: Velt, velocity (hız ve çeviklik); Stack ise teknoloji yığınını ifade eder. Veltstack, Ömer Halis Demir tarafından yönetilen bir full stack geliştirici markasıdır. Web sitesi, mobil uygulama, SEO, teknik denetim ve bakım hizmetlerini tek çatı altında sunar; ajans tarzı profesyonel sunumla solo geliştirici esnekliğini birleştirir.",
         },
         {
           slug: "projelerde-kim-calisyor",
@@ -74,13 +74,13 @@ export const faqTr = {
           slug: "hangi-hizmetler",
           question: "Hangi hizmetleri sunuyorsunuz?",
           answer:
-            "Web sitesi yapımı, mobil uygulama yapımı ve dijital yenileme sunuyoruz. Her hizmetin kapsamı ve paket detayları ilgili hizmet sayfalarında yer alır.",
+            "Web sitesi yapımı, dijital yenileme, mobil uygulama yapımı, SEO hizmetleri, teknik denetim ile bakım ve destek paketleri sunuyoruz. Her hizmetin kapsamı ve paket detayları ilgili hizmet sayfalarında yer alır.",
         },
         {
           slug: "proje-sureci",
           question: "Proje süreci nasıl işliyor?",
           answer:
-            "İlk adımda ihtiyaç analizi ve keşif görüşmesi yapılır. Ardından kapsam, takvim ve teklif paylaşılır. Onay sonrası tasarım ve yapım aşamalarına geçilir; düzenli demo ve geri bildirim döngüleriyle ilerlenir. Yayın sonrası teknik destek süreci pakete göre planlanır.",
+            "İlk adımda ihtiyaç analizi ve keşif görüşmesi yapılır. Ardından kapsam, takvim ve teklif paylaşılır. Onay sonrası tasarım ve yapım aşamalarına geçilir; düzenli demo ve geri bildirim döngüleriyle ilerlenir. Yayın sonrası bakım ve destek seçenekleri sunulur.",
         },
         {
           slug: "teslim-suresi",
@@ -115,7 +115,7 @@ export const faqTr = {
           slug: "fiyatlar-sabit-mi",
           question: "Fiyatlar sabit mi?",
           answer:
-            "Paket sayfalarında sabit fiyat yayınlamıyoruz; her proje kapsamına göre özel teklif hazırlanır. Kesin tutar; kapsam, entegrasyonlar ve teslim süresine göre belirlenir. İletişim formu veya e-posta ile ücretsiz ön değerlendirme alabilirsiniz.",
+            "Hizmet sayfalarındaki paketler referans fiyat aralıkları sunar. Kesin teklif, proje kapsamı, entegrasyonlar ve teslim süresine göre özelleştirilir. İletişim formu veya doğrudan e-posta ile ücretsiz ön değerlendirme alabilirsiniz.",
         },
         {
           slug: "odeme-nasil-yapilir",
@@ -133,7 +133,7 @@ export const faqTr = {
           slug: "proje-fiyatlari-nasil-belirleniyor",
           question: "Proje fiyatları nasıl belirleniyor?",
           answer:
-            "Fiyat; proje kapsamı, sayfa veya özellik sayısı, tasarım karmaşıklığı, üçüncü taraf entegrasyonlar, içerik hazırlığı ve teslim süresine göre belirlenir. Sabit paket fiyatı yayınlamıyoruz; kesin teklif keşif görüşmesi sonrası yazılı olarak paylaşılır. Beklenmedik kapsam değişiklikleri önceden onayınıza sunulur.",
+            "Fiyat; proje kapsamı, sayfa veya özellik sayısı, tasarım karmaşıklığı, üçüncü taraf entegrasyonlar, içerik hazırlığı ve teslim süresine göre belirlenir. Hizmet sayfalarındaki paketler referans aralık sunar; kesin teklif keşif görüşmesi sonrası yazılı olarak paylaşılır. Beklenmedik kapsam değişiklikleri önceden onayınıza sunulur.",
         },
       ],
     },
@@ -144,7 +144,7 @@ export const faqTr = {
           slug: "yayin-sonrasi-destek",
           question: "Yayın sonrası destek veriyor musunuz?",
           answer:
-            "Evet. Yayın sonrası güvenlik güncellemeleri, küçük içerik değişiklikleri, performans izleme ve teknik destek sunuyoruz. Destek kapsamı ve süresi proje paketinde baştan netleştirilir.",
+            "Evet. Bakım ve destek paketleriyle güvenlik güncellemeleri, küçük içerik değişiklikleri, performans izleme ve teknik destek sunuyoruz. Paket kapsamı ihtiyacınıza göre aylık veya yıllık olarak planlanabilir.",
         },
         {
           slug: "kaynak-kod-ve-erisimler",
@@ -162,7 +162,7 @@ export const faqTr = {
           slug: "veri-guvenligi-yedekleme",
           question: "Verilerim güvende mi? Yedekleme yapıyor musunuz?",
           answer:
-            "Evet. Projelerde HTTPS, güvenli kimlik doğrulama ve erişim kontrolü gibi temel güvenlik uygulamalarını standart olarak ele alıyoruz. Barındırma ve veritabanı tarafında sağlayıcıların otomatik yedekleme seçeneklerini yapılandırıyor; kritik projelerde ek yedekleme ve geri yükleme prosedürlerini devreye alıyoruz. Yayın sonrası destek sürecinde düzenli yedekleme kontrolü ve güvenlik güncellemeleri yer alır.",
+            "Evet. Projelerde HTTPS, güvenli kimlik doğrulama ve erişim kontrolü gibi temel güvenlik uygulamalarını standart olarak ele alıyoruz. Barındırma ve veritabanı tarafında sağlayıcıların otomatik yedekleme seçeneklerini yapılandırıyor; kritik projelerde ek yedekleme ve geri yükleme prosedürlerini devreye alıyoruz. Bakım paketlerinde düzenli yedekleme kontrolü ve güvenlik güncellemeleri yer alır.",
         },
       ],
     },
@@ -196,13 +196,13 @@ export const faqTr = {
           slug: "seo-dahil-mi",
           question: "SEO projede dahil mi?",
           answer:
-            "Tüm web projelerinde temel SEO altyapısını standart olarak kurarız: anlamlı URL yapısı, meta etiketler, site haritası, robots.txt ve mobil uyumluluk. Daha kapsamlı anahtar kelime araştırması, içerik optimizasyonu ve sürekli SEO takibi ihtiyacı proje kapsamında ayrıca netleştirilir.",
+            "Tüm web projelerinde temel SEO altyapısını standart olarak kurarız: anlamlı URL yapısı, meta etiketler, site haritası, robots.txt ve mobil uyumluluk. Kapsamlı anahtar kelime araştırması, içerik optimizasyonu ve sürekli SEO takibi için ayrı SEO hizmet paketlerimiz mevcuttur.",
         },
         {
           slug: "performans-optimizasyonu",
           question: "Site hızı ve performansa önem veriyor musunuz?",
           answer:
-            "Evet. Görsel optimizasyonu, kod bölme, önbellekleme stratejileri ve modern barındırma altyapısı ile Core Web Vitals metriklerini hedefleriz. Yayın öncesi performans testleri yapılır; yayın sonrası destek sürecinde izleme ve iyileştirme önerileri sunulur.",
+            "Evet. Görsel optimizasyonu, kod bölme, önbellekleme stratejileri ve modern barındırma altyapısı ile Core Web Vitals metriklerini hedefleriz. Yayın öncesi performans testleri yapılır; bakım paketlerinde düzenli izleme ve iyileştirme önerileri sunulur.",
         },
         {
           slug: "analitik-kurulumu",
