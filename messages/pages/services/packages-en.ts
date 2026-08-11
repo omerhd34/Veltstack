@@ -32,8 +32,6 @@ export const servicesPackagesEn = {
   statPages: "Page count",
   statSupport: "Support days",
   statLanguages: "Languages",
-  statPrice: "Price",
-  pricingGroupLabel: "Pricing",
   getQuote: "Get a Quote",
   featureIncluded: "included",
   featureNotIncluded: "not included",
@@ -60,9 +58,9 @@ export const servicesPackagesEn = {
     "Every tier includes audit, optimization and reporting. Start where you are and move up as you grow, no need to switch providers or rebuild strategy from scratch.",
   auditIntroTitle: "Comprehensive analysis of your digital assets",
   auditIntroP1:
-    "We comprehensively audit your website, mobile app and infrastructure for performance, security and SEO. You get a prioritized improvement plan with actionable next steps.",
+    "We comprehensively audit your website and mobile app for performance, security and SEO. You get a prioritized improvement plan with actionable next steps.",
   auditIntroP2:
-    "Web, mobile app and infrastructure audit packages are offered at different scopes. Startup, Professional and Premium tiers deliver analysis and reporting at the depth your project requires.",
+    "Website and mobile app audit packages are offered at different scopes. Startup, Professional and Premium tiers deliver analysis and reporting at the depth your project requires.",
   maintenanceIntroTitle: "Always-on digital assets",
   maintenanceIntroP1:
     "Updates, backups, security monitoring and emergency response, ongoing support for your website, mobile app and backend infrastructure all in one place. Startup, Professional and Premium tiers scale with your needs.",

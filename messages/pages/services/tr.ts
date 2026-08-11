@@ -4,7 +4,7 @@ export const servicesPageTr = {
   heroBadge: "Dijital Hizmetler",
   heroTitle: "Net paketler, net kapsam",
   heroSubtitle:
-    "Her proje tipi üç kademede sunulur: Girişim, Profesyonel ve Premium. Kapsam baştan netleştirilir; web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım paketleri arasından size uygun kapsamı seçebilirsiniz.",
+    "Her proje tipi üç kademede sunulur: Girişim, Profesyonel ve Kapsamlı. Kapsam baştan netleştirilir; web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım paketleri arasından size uygun kapsamı seçebilirsiniz.",
   heroImageAlt:
     "Dijital hizmetleri temsil eden bağlantılı modüler arayüz illüstrasyonu",
   scrollLabel: "Paketleri incele",
