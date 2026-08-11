@@ -20,7 +20,7 @@ export const servicesPageTr = {
   ctaButton: "Görüşme Planla",
   stats: [
     {
-      value: "3-112",
+      value: "7-112",
       label: "Teslim Süresi (Gün)",
       labelShort: "Teslim (Gün)",
       hint: "Tüm hizmet kategorilerindeki paketlerin tahmini teslim aralığı. Kapsam netleştikten sonra kesin takvim paylaşılır.",
@@ -38,7 +38,7 @@ export const servicesPageTr = {
       hint: "Web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım dahil altı farklı hizmet kategorisi.",
     },
     {
-      value: "14",
+      value: "30",
       label: "Hazır Paketler",
       labelShort: "Paketler",
       hint: "Altı kategoride sunulan toplam hazır paket sayısı. Her paket farklı kapsam ve ölçek hedefler.",
