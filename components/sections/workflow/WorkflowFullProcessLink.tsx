@@ -1,5 +1,6 @@
 import { LuClock, LuMessageCircle } from "react-icons/lu";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
+import { pageAnchorHref } from "@/lib/page-anchors";
 
 interface WorkflowFullProcessLinkProps {
   label: string;
@@ -13,7 +14,7 @@ export function WorkflowFullProcessLink({
   return (
     <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
       <PrimaryCtaLink
-        href="/hizmetler#approach"
+        href={`/hizmetler${pageAnchorHref("approach")}`}
         showArrow={false}
         leadingIcon={<LuClock className="size-5" aria-hidden />}
       >

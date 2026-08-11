@@ -1,6 +1,7 @@
 import { getLocale } from "next-intl/server";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { PageHeroListing } from "@/components/ui/page-hero";
+import { pageAnchorHref } from "@/lib/page-anchors";
 import { toLatinUppercase } from "@/lib/utils";
 
 interface BlogPageHeroProps {
@@ -30,7 +31,7 @@ export async function BlogPageHero({
       imageAlt={imageAlt}
       imageSrc="/images/pages/blog/hero.webp"
       imageMobileSrc="/images/pages/blog/hero-mobile.webp"
-      scrollHref="#blog-grid"
+      scrollHref={pageAnchorHref("blogGrid")}
       scrollLabel={scrollLabel}
       stats={stats}
       badgeVariant="emerald-muted"

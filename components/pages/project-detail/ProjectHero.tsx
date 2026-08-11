@@ -1,5 +1,6 @@
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { PageHeroListing } from "@/components/ui/page-hero";
+import { pageAnchorHref } from "@/lib/page-anchors";
 
 interface ProjectHeroProps {
   badge: string;
@@ -32,7 +33,7 @@ export function ProjectHero({
       imageAlt={imageAlt}
       imageSrc={imageSrc}
       imageMobileSrc={imageMobileSrc}
-      scrollHref="#project-overview"
+      scrollHref={pageAnchorHref("projectOverview")}
       scrollLabel={scrollLabel}
       stats={metrics}
       className={className}

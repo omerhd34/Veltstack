@@ -1,5 +1,6 @@
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { PageHeroListing } from "@/components/ui/page-hero";
+import { pageAnchorHref } from "@/lib/page-anchors";
 
 interface ServicesPageHeroProps {
   badge: string;
@@ -28,7 +29,7 @@ export function ServicesPageHero({
       imageAlt={imageAlt}
       imageSrc="/images/pages/services/hero.webp"
       imageMobileSrc="/images/pages/services/hero-mobile.webp"
-      scrollHref="#services-packages"
+      scrollHref={pageAnchorHref("servicesPackages")}
       scrollLabel={scrollLabel}
       stats={stats}
       className={className}

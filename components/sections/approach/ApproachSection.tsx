@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { LuClock } from "react-icons/lu";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { pageAnchorId } from "@/lib/page-anchors";
 import { cn } from "@/lib/utils";
 import { ApproachScrollTimelineLazy } from "./ApproachScrollTimelineLazy";
 import type { ApproachTimelineStep } from "./ApproachScrollTimeline";
@@ -16,7 +17,7 @@ export async function ApproachSection({ className }: ApproachSectionProps) {
 
   return (
     <section
-      id="approach"
+      id={pageAnchorId("approach")}
       className={cn(
         "relative scroll-mt-16 overflow-hidden bg-[#E4F0EA] py-16 sm:py-24 md:py-32",
         className,

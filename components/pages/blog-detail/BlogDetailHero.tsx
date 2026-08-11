@@ -10,6 +10,7 @@ import {
   PageHeroFooter,
   PageHeroShell,
 } from "@/components/ui/page-hero";
+import { pageAnchorHref, pageAnchorId } from "@/lib/page-anchors";
 import { toLatinUppercase } from "@/lib/utils";
 
 const AUTHOR = {
@@ -118,12 +119,15 @@ export async function BlogDetailHero({
             />
           </div>
 
-          <PageHeroFooter scrollHref="#blog-article" scrollLabel={scrollLabel}>
+          <PageHeroFooter
+            scrollHref={pageAnchorHref("blogArticle")}
+            scrollLabel={scrollLabel}
+          >
             <div className="flex justify-center">{authorCard}</div>
           </PageHeroFooter>
         </SiteContainer>
       </PageHeroShell>
-      <PageScrollAnchor id="blog-article" />
+      <PageScrollAnchor id={pageAnchorId("blogArticle")} />
     </>
   );
 }

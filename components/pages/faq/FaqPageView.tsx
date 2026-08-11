@@ -3,6 +3,7 @@ import { SiteContainer } from "@/components/layout/SiteContainer";
 import type { HeroStat } from "@/components/ui/HeroStatsCards";
 import { FAQSchema } from "@/components/seo";
 import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
+import { pageAnchorId } from "@/lib/page-anchors";
 import type { FaqItem } from "./FaqAccordion";
 import { FaqCategorySection } from "./FaqCategorySection";
 import { FaqContactHint } from "./FaqContactHint";
@@ -74,7 +75,7 @@ export async function FaqPageView({ className }: FaqPageViewProps) {
         stats={heroStats}
       />
       <section
-        id="faq-content"
+        id={pageAnchorId("faqContent")}
         className="relative overflow-hidden bg-[#f7faf8] py-16 sm:py-24 dark:bg-background"
       >
         <div
