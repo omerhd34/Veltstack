@@ -7,7 +7,6 @@ import {
   LuLifeBuoy,
   LuRefreshCw,
   LuSearch,
-  LuServer,
   LuShoppingCart,
   LuSmartphone,
 } from "react-icons/lu";
@@ -33,11 +32,7 @@ export const categoryTabIcons: Record<PackageCategory, IconType> = {
 
 export const webPackageSlugs = ["portfolio", "corporate", "ecommerce"] as const;
 export const refreshPackageSlugs = webPackageSlugs;
-export const auditPackageSlugs = [
-  "webAudit",
-  "appAudit",
-  "infrastructureAudit",
-] as const;
+export const auditPackageSlugs = ["webAudit", "appAudit"] as const;
 export const seoPackageSlugs = ["seoServices"] as const;
 export const maintenancePackageSlugs = ["maintenanceServices"] as const;
 
@@ -70,7 +65,6 @@ export const refreshPackageIcons: Record<RefreshPackageSlug, IconType> = {
 export const auditPackageIcons: Record<AuditPackageSlug, IconType> = {
   webAudit: LuGlobe,
   appAudit: LuSmartphone,
-  infrastructureAudit: LuServer,
 };
 
 export const seoPackageIcons: Record<SeoPackageSlug, IconType> = {
