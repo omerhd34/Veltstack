@@ -5,6 +5,7 @@ export const workflowTr = {
   subtitle:
     "Her adımı önceden planlıyor, süreci şeffaf şekilde yönetiyor ve sizi her aşamada bilgilendiriyoruz.",
   fullProcess: "Tam Süreç",
+  contactCta: "Görüşme Planla",
   steps: [
     {
       step: "1",

@@ -5,6 +5,7 @@ export const workflowEn = {
   subtitle:
     "From submission to proposal to kickoff, we tell you what happens at each stage upfront.",
   fullProcess: "Full Process",
+  contactCta: "Schedule a Call",
   steps: [
     {
       step: "1",
