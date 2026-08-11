@@ -142,7 +142,7 @@ export const appPackagesTr = {
             items: [
               ...commonDesignTemelItems,
               "Premium UI bileşenleri",
-              "Koyu / açık mod desteği",
+              "Koyu / açık tema seçeneği",
               "Gelişmiş cihaz ve ekran uyumluluk testleri",
             ],
           },
@@ -179,7 +179,7 @@ export const appPackagesTr = {
             label: "Geliştirme & Altyapı",
             items: [
               ...commonDesignTemelItems,
-              "Koyu / açık mod desteği",
+              "Koyu / açık tema seçeneği",
               "Figma’dan piksel uyumlu arayüz",
               "Gelişmiş animasyonlar ve mikro etkileşimler",
               "Ölçeklenebilir yüksek hızlı altyapı",
@@ -256,7 +256,7 @@ export const appPackagesTr = {
             items: [
               "Kurumsal özel iOS / Android arayüz",
               "Premium bileşenler ve modern arayüz",
-              "Koyu / açık mod desteği",
+              "Koyu / açık tema seçeneği",
               "Gelişmiş performans ve pil optimizasyonu",
             ],
           },
@@ -295,7 +295,7 @@ export const appPackagesTr = {
               "Yüksek hızlı kurumsal özel altyapı",
               "Figma’dan piksel uyumlu kurumsal arayüz",
               "Tablet optimizasyonu",
-              "Koyu / açık mod desteği",
+              "Koyu / açık tema seçeneği",
             ],
           },
           {
@@ -373,7 +373,7 @@ export const appPackagesTr = {
             items: [
               "Premium e-ticaret iOS / Android arayüz",
               "Gelişmiş filtreleme ve infinite scroll",
-              "Koyu / açık mod desteği",
+              "Koyu / açık tema seçeneği",
               "Akıcı kategori geçişleri ve animasyonlar",
             ],
           },
@@ -410,7 +410,7 @@ export const appPackagesTr = {
               "Native hisli yüksek hızlı özel altyapı",
               "Figma’dan piksel uyumlu e-ticaret arayüzü",
               "Özel sepet ve ödeme animasyonları",
-              "Koyu / açık mod desteği",
+              "Koyu / açık tema seçeneği",
             ],
           },
           {

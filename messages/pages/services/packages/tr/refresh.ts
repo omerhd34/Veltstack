@@ -9,13 +9,11 @@ const commonRedesignItems = [
 ] as const;
 
 const standartDesignExtras = [
-  "Koyu / açık mod desteği",
+  "Koyu / açık tema seçeneği",
   "Akıcı sayfa geçişleri ve mikro etkileşimler",
 ] as const;
 
-const commonDeliveryTemel = [
-  "Canlıya alma ve DNS geçiş desteği",
-] as const;
+const commonDeliveryTemel = ["Canlıya alma ve DNS geçiş desteği"] as const;
 
 const commonDeliveryStandart = [
   "Kaynak kodu ve proje dosyalarının teslimi",
