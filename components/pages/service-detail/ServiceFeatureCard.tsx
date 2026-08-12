@@ -5,6 +5,7 @@ import {
   LuArrowUpRight,
   LuChartLine,
   LuChevronDown,
+  LuCloudUpload,
   LuLanguages,
   LuLayoutDashboard,
   LuSearch,
@@ -18,6 +19,7 @@ import { cn } from "@/lib/utils";
 
 export const featureIcons = [
   LuSearch,
+  LuCloudUpload,
   LuSparkles,
   LuZap,
   LuSmartphone,
