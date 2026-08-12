@@ -123,15 +123,15 @@ export function ServiceFeaturesCarousel({
         )}
       </div>
 
-      <div className="relative mt-8 min-h-74">
+      <div className="mt-8 grid">
         {features.map((feature, index) => (
           <div
             key={feature.title}
             className={cn(
-              "w-full transition-all duration-300 ease-out motion-reduce:transition-none",
+              "col-start-1 row-start-1 h-full w-full transition-all duration-300 ease-out motion-reduce:transition-none",
               index === activeIndex
-                ? "relative translate-y-0 opacity-100"
-                : "pointer-events-none absolute inset-0 translate-y-2 opacity-0",
+                ? "relative z-10 translate-y-0 opacity-100"
+                : "pointer-events-none z-0 translate-y-2 opacity-0",
             )}
             aria-hidden={index !== activeIndex}
           >
