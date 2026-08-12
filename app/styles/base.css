@@ -6,6 +6,12 @@
     @apply bg-background text-foreground;
     overflow-x: clip;
   }
+  input,
+  textarea,
+  select,
+  [contenteditable="true"] {
+    @apply select-text;
+  }
   a[href],
   button:not(:disabled) {
     cursor: pointer;
