@@ -30,7 +30,7 @@ export async function WorkflowSection({
     return (
       <div className={className}>
         {timeline}
-        <div className="mt-10 flex justify-center md:mt-12">
+        <div className="mt-10 flex w-full justify-center md:mt-12">
           <WorkflowFullProcessLink
             label={t("fullProcess")}
             contactLabel={t("contactCta")}
@@ -48,7 +48,7 @@ export async function WorkflowSection({
       <SiteContainer>
         <div className="rounded-3xl border border-border/60 bg-card p-8 shadow-[0_2px_16px_rgb(0_0_0/0.04)] md:p-12">
           {timeline}
-          <div className="mt-10 flex justify-center md:mt-12">
+          <div className="mt-10 flex w-full justify-center md:mt-12">
             <WorkflowFullProcessLink
               label={t("fullProcess")}
               contactLabel={t("contactCta")}
