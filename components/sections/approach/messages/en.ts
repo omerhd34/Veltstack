@@ -16,7 +16,7 @@ export const approachEn = {
     {
       step: "2",
       title: "Needs & Discovery",
-      desc: "We review your goals, expectations, and technical requirements together. We clarify the problem, success criteria, and constraints upfront. Then we read business goals, user needs, and opportunities to define the strategic framework with a shared decision.",
+      desc: "We review your goals, expectations, and technical requirements together. We clarify the problem, success criteria, and constraints upfront. We read business goals, user needs, and opportunities to define the strategic framework jointly.",
       timing: "Within 48 hours",
     },
     {

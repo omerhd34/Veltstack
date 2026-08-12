@@ -16,7 +16,7 @@ export const approachTr = {
     {
       step: "2",
       title: "İhtiyaç & Keşif",
-      desc: "Hedeflerinizi, beklentilerinizi ve teknik gereksinimlerinizi birlikte değerlendiririz. Hangi problemin çözüleceğini, başarı ölçütünün ne olacağını ve kısıtları baştan netleştiririz. İş hedefleri, kullanıcı ihtiyaçları ve fırsat alanlarını okuyarak projenin stratejik çerçevesini ortak kararla belirleriz.",
+      desc: "Hedeflerinizi, beklentilerinizi ve teknik gereksinimlerinizi birlikte değerlendiririz. Problemi, başarı ölçütünü ve kısıtları baştan netleştiririz. İş hedefleri, kullanıcı ihtiyaçları ve fırsat alanlarını okuyarak projenin stratejik çerçevesini ortak kararla belirleriz.",
       timing: "En geç 48 saat",
     },
     {
