@@ -162,7 +162,7 @@ export function FeatureShowcase({
   const totalNumber = String(total).padStart(2, "0");
 
   return (
-    <div className="relative overflow-hidden rounded-[2rem] bg-linear-to-br from-[#071510] via-[#0f2a1e] to-[#0a1f17] px-8 py-10 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-300 lg:px-12 lg:py-12">
+    <div className="relative flex h-full min-h-88 flex-col overflow-hidden rounded-[2rem] bg-linear-to-br from-[#071510] via-[#0f2a1e] to-[#0a1f17] px-8 pt-12 pb-0 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-300 lg:px-12 lg:pt-14">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_50%,rgb(58_107_82/0.22),transparent_52%)]"
@@ -187,7 +187,7 @@ export function FeatureShowcase({
         {slideNumber}
       </span>
 
-      <div className="relative grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-14">
+      <div className="relative grid flex-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-14">
         <div className="relative z-10 min-w-0">
           <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-emerald-400/80">
             {detailLabel}
@@ -213,15 +213,17 @@ export function FeatureShowcase({
 
       <div
         aria-hidden
-        className="relative z-10 mt-8 flex items-center justify-center gap-3 border-t border-white/10 pt-6"
+        className="relative z-10 mt-8 border-t border-white/10 lg:mt-10"
       >
-        <span className="text-xs font-semibold tabular-nums text-emerald-300/90">
-          {slideNumber}
-        </span>
-        <span className="h-px w-12 bg-linear-to-r from-transparent via-emerald-400/40 to-transparent" />
-        <span className="text-xs font-medium tabular-nums text-emerald-400/45">
-          {totalNumber}
-        </span>
+        <div className="flex items-center justify-center gap-3 py-6 lg:py-7">
+          <span className="text-xs font-semibold tabular-nums text-emerald-300/90">
+            {slideNumber}
+          </span>
+          <span className="h-px w-12 bg-linear-to-r from-transparent via-emerald-400/40 to-transparent" />
+          <span className="text-xs font-medium tabular-nums text-emerald-400/45">
+            {totalNumber}
+          </span>
+        </div>
       </div>
     </div>
   );
