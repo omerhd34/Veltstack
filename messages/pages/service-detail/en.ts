@@ -83,6 +83,11 @@ export const serviceDetailsEn = {
           "Your site ships search-ready with SSR, meta tags, sitemap and structured data. Open Graph, canonical URLs and robots configuration prevent indexing issues from day one. Separate meta templates are prepared for blog, service and product pages. Google Search Console integration tracks crawl status before go-live. Title and description copy is optimized so you stand out more in search results. Language, locale and hreflang settings are planned upfront based on your local and international search goals.",
       },
       {
+        title: "Launch & Hosting",
+        description:
+          "Domain registration, DNS and SSL configuration are handled end to end; final checks run in staging before go-live. Hosting is set up for performance and reliability, with CDN to speed up access. The Premium package includes 1 year of free domain and hosting. Production deploy is repeatable and reversible. Environment variables, email and third-party connections are verified before launch. Launch day follows a cutover plan that keeps downtime minimal; after go-live, availability and SSL status are monitored. Baseline backups and DNS propagation are checked so your site opens smoothly from day one.",
+      },
+      {
         title: "E-Commerce",
         description:
           "Product catalog, cart, order management and secure checkout flows built end to end. Mobile-friendly, conversion-focused sales with gateways such as PayTR, Iyzico and Stripe. Inventory, shipping and order status can be tracked from a single panel. The checkout page is protected with SSL and 3D Secure; PCI-compliant infrastructure is preferred. Order confirmation emails and simple reporting screens make day-to-day operations easier. Coupon, campaign and variant management scenarios are configured based on your scope.",
