@@ -85,7 +85,7 @@ export const serviceDetailsTr = {
       {
         title: "Yayın & Hosting",
         description:
-          "Domain tescili, DNS ve SSL yapılandırması uçtan uca yönetilir; canlıya alma öncesi staging’de son kontroller tamamlanır. Hosting performans ve erişilebilirlik odaklı kurulur; CDN ile erişim hızlandırılır. Kapsamlı pakette 1 yıllık alan adı ve hosting ücretsizdir. Deploy tekrarlanabilir ve geri alınabilir şekilde hazırlanır. Ortam değişkenleri ve üçüncü taraf bağlantıları yayın öncesi doğrulanır. Canlıya alma günü kesintiyi azaltan bir geçiş planı uygulanır; sonrasında erişilebilirlik, SSL ve DNS yayılımı izlenir.",
+          "Domain tescili, DNS ve SSL yapılandırması uçtan uca yönetilir; canlıya alma öncesi staging’de son kontroller tamamlanır. Hosting performans ve erişilebilirlik odaklı kurulur; CDN ile erişim hızlandırılır. Profesyonel ve Kapsamlı paketlerde 1 yıllık alan adı ve hosting ücretsizdir. Deploy tekrarlanabilir ve geri alınabilir şekilde hazırlanır. Ortam değişkenleri ve üçüncü taraf bağlantıları yayın öncesi doğrulanır. Canlıya alma günü kesintiyi azaltan bir geçiş planı uygulanır; sonrasında erişilebilirlik, SSL ve DNS yayılımı izlenir.",
       },
       {
         title: "E-Ticaret",

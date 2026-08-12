@@ -22,10 +22,15 @@ const commonDeliveryItems = [
   "Performance target verification (Google PageSpeed)",
 ] as const;
 
-const proDeliveryExtras = ["1 year free domain and hosting"] as const;
+const freeDomainHosting = ["1 year free domain and hosting"] as const;
+
+const standartDeliveryItems = [
+  ...freeDomainHosting,
+  ...commonDeliveryItems,
+] as const;
 
 const proDeliveryItems = [
-  ...proDeliveryExtras,
+  ...freeDomainHosting,
   ...commonDeliveryItems,
 ] as const;
 
@@ -170,7 +175,7 @@ export const webPackagesEn = {
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...standartDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
@@ -276,7 +281,7 @@ export const webPackagesEn = {
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...standartDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
@@ -388,7 +393,7 @@ export const webPackagesEn = {
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...standartDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,

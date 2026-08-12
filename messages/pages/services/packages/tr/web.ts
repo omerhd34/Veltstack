@@ -22,10 +22,15 @@ const commonDeliveryItems = [
   "Performans hedefi doğrulaması (Google PageSpeed)",
 ] as const;
 
-const proDeliveryExtras = ["1 yıllık alan adı ve hosting ücretsiz"] as const;
+const freeDomainHosting = ["1 yıllık alan adı ve hosting ücretsiz"] as const;
+
+const standartDeliveryItems = [
+  ...freeDomainHosting,
+  ...commonDeliveryItems,
+] as const;
 
 const proDeliveryItems = [
-  ...proDeliveryExtras,
+  ...freeDomainHosting,
   ...commonDeliveryItems,
 ] as const;
 
@@ -169,7 +174,7 @@ export const webPackagesTr = {
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...standartDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
@@ -272,7 +277,7 @@ export const webPackagesTr = {
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...standartDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
@@ -381,7 +386,7 @@ export const webPackagesTr = {
           },
           {
             label: GROUP_LAUNCH,
-            items: [...commonDeliveryItems],
+            items: [...standartDeliveryItems],
           },
           {
             label: GROUP_SUPPORT,
