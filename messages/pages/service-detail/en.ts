@@ -85,7 +85,7 @@ export const serviceDetailsEn = {
       {
         title: "Launch & Hosting",
         description:
-          "Domain registration, DNS and SSL configuration are handled end to end; final checks run in staging before go-live. Hosting is set up for performance and reliability, with CDN to speed up access. The Premium package includes 1 year of free domain and hosting. Production deploy is repeatable and reversible. Environment variables, email and third-party connections are verified before launch. Launch day follows a cutover plan that keeps downtime minimal; after go-live, availability and SSL status are monitored. Baseline backups and DNS propagation are checked so your site opens smoothly from day one.",
+          "Domain registration, DNS and SSL are handled end to end; final checks run in staging before go-live. Hosting is set up for performance and reliability, with CDN for faster access. The Premium package includes 1 year of free domain and hosting. Deploy is repeatable and reversible. Environment variables and third-party connections are verified before launch. Launch day follows a low-downtime cutover plan; afterward, availability, SSL and DNS propagation are monitored.",
       },
       {
         title: "E-Commerce",
