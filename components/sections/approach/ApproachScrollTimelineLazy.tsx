@@ -14,11 +14,15 @@ const ApproachScrollTimeline = dynamic(
 
 interface ApproachScrollTimelineLazyProps {
   steps: ApproachTimelineStep[];
+  contactCta: string;
+  scrollMoreLabel: string;
   className?: string;
 }
 
 export function ApproachScrollTimelineLazy({
   steps,
+  contactCta,
+  scrollMoreLabel,
   className,
 }: ApproachScrollTimelineLazyProps) {
   return (
@@ -26,12 +30,16 @@ export function ApproachScrollTimelineLazy({
       className={className}
       fallback={
         <div
-          className="min-h-112 w-full rounded-2xl bg-background/40"
+          className="min-h-80 w-full rounded-2xl bg-background/40 lg:min-h-112"
           aria-hidden
         />
       }
     >
-      <ApproachScrollTimeline steps={steps} />
+      <ApproachScrollTimeline
+        steps={steps}
+        contactCta={contactCta}
+        scrollMoreLabel={scrollMoreLabel}
+      />
     </DeferredMount>
   );
 }

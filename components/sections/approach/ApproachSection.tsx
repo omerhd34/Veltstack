@@ -66,6 +66,8 @@ export async function ApproachSection({ className }: ApproachSectionProps) {
 
         <ApproachScrollTimelineLazy
           steps={steps}
+          contactCta={t("contactCta")}
+          scrollMoreLabel={t("scrollMoreLabel")}
           className="mt-10 md:mt-14"
         />
       </SiteContainer>
