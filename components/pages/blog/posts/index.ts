@@ -20,24 +20,24 @@ import { blogPostEntry as webdenMobileGecis } from "./webden-mobile-gecis";
 import { blogPostEntry as uiVeUxNedir } from "./ui-ve-ux-nedir";
 
 export const blogPostEntries: BlogPostEntry[] = [
-  geo,
   gelenekselYazilimYapayZeka,
   ozelYazilimCms,
   domainHosting,
   seo,
+  geo,
   vercelDeYayin,
   nedenIxirhost,
   dogruDomainSecimi,
+  domainHostingTasima,
   uiVeUxNedir,
   webdenMobileGecis,
-  nodeJsVePrismaIleBackend,
-  nedenTailwindCss,
-  domainHostingTasima,
-  enIyiSanalPosFirmalari,
   veritabaniSecimi,
   responsiveTasarim,
-  enIyiFreelancerSiteleri,
   reactNextjs,
+  enIyiSanalPosFirmalari,
+  enIyiFreelancerSiteleri,
+  nodeJsVePrismaIleBackend,
+  nedenTailwindCss,
 ];
 
 export const blogPosts: BlogPost[] = blogPostEntries.map(

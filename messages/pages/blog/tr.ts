@@ -41,7 +41,7 @@ export const blogPageTr = {
     "Tümü",
     "Web Yapımı",
     "Mobil",
-    "SEO",
+    "SEO & GEO",
     "E-Ticaret",
     "Araçlar & İpuçları",
   ],

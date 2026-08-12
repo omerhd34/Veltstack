@@ -12,8 +12,8 @@ export const blogPostEntry: BlogPostEntry = {
     "GEO'nun ne olduğunu, SEO'dan farkını ve yapay zeka arama motorlarında görünürlük kazanmanın yolunu anlatıyoruz.",
   excerptShortEn:
     "What GEO is, how it differs from SEO, and how to gain visibility in AI search engines.",
-  category: "SEO",
-  categoryEn: "SEO",
+  category: "SEO & GEO",
+  categoryEn: "SEO & GEO",
   imageUrl: "/images/pages/blog/geo.png",
   readingTime: 9,
   publishedAt: "2026-07-12",

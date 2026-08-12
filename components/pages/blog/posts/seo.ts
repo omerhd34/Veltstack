@@ -12,8 +12,8 @@ export const blogPostEntry: BlogPostEntry = {
     "SEO'nun temellerini, türlerini ve sıralamanızı yükseltecek uygulanabilir adımları kapsamlı bir rehberde topluyoruz.",
   excerptShortEn:
     "A comprehensive guide to SEO basics, types and actionable steps to climb the search rankings.",
-  category: "SEO",
-  categoryEn: "SEO",
+  category: "SEO & GEO",
+  categoryEn: "SEO & GEO",
   imageUrl: "/images/pages/blog/seo.png",
   readingTime: 8,
   publishedAt: "2026-06-05",

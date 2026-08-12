@@ -41,7 +41,7 @@ export const blogPageEn = {
     "All",
     "Web Building",
     "Mobile",
-    "SEO",
+    "SEO & GEO",
     "E-Commerce",
     "Tools & Tips",
   ],
