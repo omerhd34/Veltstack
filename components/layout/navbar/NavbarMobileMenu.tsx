@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { LuGithub, LuLinkedin, LuMail, LuPhone, LuX } from "react-icons/lu";
+import { LuLinkedin, LuMail, LuPhone, LuX } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
 import { useUiStore } from "@/store/uiSlice";
@@ -77,7 +77,7 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
             />
           </div>
           <div className="flex shrink-0 flex-col gap-3 border-t border-brand-accent/15 p-4">
-            <div className="grid grid-cols-5 gap-2">
+            <div className="grid grid-cols-4 gap-2">
               <Link
                 href="tel:+905078492903"
                 aria-label="Telefon"
@@ -109,15 +109,6 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >
                 <LuLinkedin className="size-4.5" aria-hidden />
-              </Link>
-              <Link
-                href="https://github.com/omerhd34"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
-              >
-                <LuGithub className="size-4.5" aria-hidden />
               </Link>
             </div>
             <NavbarLangSwitcher
