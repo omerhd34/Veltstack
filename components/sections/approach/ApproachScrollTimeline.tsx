@@ -1,6 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useId, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useId,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+} from "react";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { cn } from "@/lib/utils";
@@ -32,7 +39,11 @@ const approachIcons = [
   LuHeadset,
 ] as const;
 
-const panelHeightClass = "lg:h-[calc(3.25rem*6+0.25rem*5+1.25rem+3rem)]";
+const panelHeightClass =
+  "h-[22.5rem] sm:h-[24rem] lg:h-[26rem] xl:h-[calc(3.25rem*6+0.25rem*5+1.25rem+3rem)]";
+
+const SWIPE_THRESHOLD = 48;
+const SWIPE_AXIS_LOCK = 10;
 
 export interface ApproachTimelineStep {
   step: string;
@@ -56,11 +67,27 @@ export function ApproachScrollTimeline({
 }: ApproachScrollTimelineProps) {
   const baseId = useId();
   const listRef = useRef<HTMLOListElement>(null);
+  const pointerOrigin = useRef<{ x: number; y: number } | null>(null);
+  const swipeAxis = useRef<"x" | "y" | null>(null);
+  const dragDeltaX = useRef(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [canScrollDown, setCanScrollDown] = useState(false);
   const active = steps[activeIndex] ?? steps[0];
   const ActiveIcon = approachIcons[activeIndex] ?? LuCompass;
   const year = active?.step.padStart(2, "0") ?? "01";
+
+  const isSwipeViewport = useCallback(
+    () =>
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 1279px)").matches,
+    [],
+  );
+
+  const resetSwipe = useCallback(() => {
+    pointerOrigin.current = null;
+    swipeAxis.current = null;
+    dragDeltaX.current = 0;
+  }, []);
 
   const updateScrollHint = useCallback(() => {
     const list = listRef.current;
@@ -110,19 +137,86 @@ export function ApproachScrollTimeline({
     });
   }, []);
 
+  const onPanelPointerDown = useCallback(
+    (e: ReactPointerEvent<HTMLDivElement>) => {
+      if (e.button !== 0 || steps.length <= 1 || !isSwipeViewport()) return;
+      if ((e.target as HTMLElement).closest("a, button")) return;
+
+      pointerOrigin.current = { x: e.clientX, y: e.clientY };
+      swipeAxis.current = null;
+      dragDeltaX.current = 0;
+    },
+    [isSwipeViewport, steps.length],
+  );
+
+  const onPanelPointerMove = useCallback(
+    (e: ReactPointerEvent<HTMLDivElement>) => {
+      if (!pointerOrigin.current) return;
+
+      const dx = e.clientX - pointerOrigin.current.x;
+      const dy = e.clientY - pointerOrigin.current.y;
+
+      if (!swipeAxis.current) {
+        if (Math.abs(dx) < SWIPE_AXIS_LOCK && Math.abs(dy) < SWIPE_AXIS_LOCK) {
+          return;
+        }
+        swipeAxis.current = Math.abs(dx) >= Math.abs(dy) ? "x" : "y";
+        if (swipeAxis.current === "x") {
+          e.currentTarget.setPointerCapture(e.pointerId);
+        }
+      }
+
+      if (swipeAxis.current === "x") {
+        dragDeltaX.current = dx;
+      }
+    },
+    [],
+  );
+
+  const onPanelPointerUp = useCallback(
+    (e: ReactPointerEvent<HTMLDivElement>) => {
+      if (!pointerOrigin.current) return;
+
+      if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+        e.currentTarget.releasePointerCapture(e.pointerId);
+      }
+
+      const delta = dragDeltaX.current;
+      const swiped =
+        swipeAxis.current === "x" && Math.abs(delta) >= SWIPE_THRESHOLD;
+      resetSwipe();
+
+      if (!swiped) return;
+      if (delta < 0) goTo(activeIndex + 1);
+      else goTo(activeIndex - 1);
+    },
+    [activeIndex, goTo, resetSwipe],
+  );
+
+  const onPanelPointerCancel = useCallback(
+    (e: ReactPointerEvent<HTMLDivElement>) => {
+      if (!pointerOrigin.current) return;
+      if (e.currentTarget.hasPointerCapture(e.pointerId)) {
+        e.currentTarget.releasePointerCapture(e.pointerId);
+      }
+      resetSwipe();
+    },
+    [resetSwipe],
+  );
+
   if (!active) return null;
 
   return (
     <div
       className={cn(
-        "grid items-stretch gap-6 lg:grid-cols-[minmax(16rem,20rem)_minmax(0,1fr)] lg:gap-8 xl:grid-cols-[minmax(17rem,22rem)_minmax(0,1fr)]",
+        "grid items-stretch gap-6 xl:grid-cols-[minmax(17rem,22rem)_minmax(0,1fr)] xl:gap-8",
         className,
       )}
     >
       <nav
         aria-label="Süreç adımları"
         className={cn(
-          "relative flex flex-col overflow-hidden rounded-2xl border border-brand-accent/15 bg-white/55 p-2 shadow-[0_8px_28px_rgb(58,107,82,0.06)] backdrop-blur-sm sm:p-2.5",
+          "relative hidden flex-col overflow-hidden rounded-2xl border border-brand-accent/15 bg-white/55 p-2 shadow-[0_8px_28px_rgb(58,107,82,0.06)] backdrop-blur-sm sm:p-2.5 xl:flex",
           panelHeightClass,
         )}
       >
@@ -130,7 +224,7 @@ export function ApproachScrollTimeline({
           ref={listRef}
           role="tablist"
           aria-orientation="vertical"
-          className="flex min-h-0 max-h-none flex-1 flex-row gap-1 overflow-x-auto overscroll-x-contain pb-0.5 [-ms-overflow-style:none] scrollbar-none lg:flex-col lg:overflow-y-auto lg:overflow-x-hidden lg:pb-0 [&::-webkit-scrollbar]:hidden"
+          className="flex min-h-0 max-h-none flex-1 flex-col gap-1 overflow-y-auto overflow-x-hidden pb-0 [-ms-overflow-style:none] scrollbar-none [&::-webkit-scrollbar]:hidden"
         >
           {steps.map((item, index) => {
             const isActive = index === activeIndex;
@@ -140,7 +234,7 @@ export function ApproachScrollTimeline({
             return (
               <li
                 key={item.step}
-                className="shrink-0 lg:w-full"
+                className="w-full shrink-0"
                 role="presentation"
               >
                 <button
@@ -171,7 +265,7 @@ export function ApproachScrollTimeline({
                   >
                     {stepNo}
                   </span>
-                  <span className="hidden min-w-0 flex-1 truncate text-sm font-semibold tracking-tight lg:block">
+                  <span className="min-w-0 flex-1 truncate text-sm font-semibold tracking-tight">
                     {item.title}
                   </span>
                 </button>
@@ -181,7 +275,7 @@ export function ApproachScrollTimeline({
         </ol>
 
         {canScrollDown ? (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 hidden lg:block">
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 hidden xl:block">
             <div
               aria-hidden
               className="h-20 bg-linear-to-t from-[#F7FBF8] from-35% via-[#F7FBF8]/85 to-transparent"
@@ -214,8 +308,12 @@ export function ApproachScrollTimeline({
         id={`${baseId}-panel`}
         role="tabpanel"
         aria-labelledby={`${baseId}-tab-${activeIndex}`}
+        onPointerDown={onPanelPointerDown}
+        onPointerMove={onPanelPointerMove}
+        onPointerUp={onPanelPointerUp}
+        onPointerCancel={onPanelPointerCancel}
         className={cn(
-          "border-trace-hover-fallback relative flex min-h-72 flex-col overflow-hidden rounded-2xl border-[3px] border-solid border-brand-accent/35 bg-white p-6 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_16px_40px_rgb(58,107,82,0.08)] sm:min-h-80 sm:p-8 md:p-10",
+          "border-trace-hover-fallback relative flex touch-pan-y flex-col overflow-hidden rounded-2xl border-[3px] border-solid border-brand-accent/35 bg-white p-5 shadow-[0_2px_8px_rgb(0,0,0,0.04),0_16px_40px_rgb(58,107,82,0.08)] select-none sm:p-8 md:p-10 xl:select-auto",
           panelHeightClass,
         )}
       >
@@ -223,14 +321,14 @@ export function ApproachScrollTimeline({
 
         <span
           aria-hidden
-          className="pointer-events-none absolute top-4 right-8 font-mono text-[7rem] font-bold leading-none tracking-tighter text-brand-accent/[0.07] sm:top-6 sm:right-10 sm:text-[8.5rem] md:top-8 md:right-12"
+          className="pointer-events-none absolute top-6 right-10 hidden font-mono text-[8.5rem] font-bold leading-none tracking-tighter text-brand-accent/[0.07] sm:block md:-top-2 md:right-4 xl:top-6 xl:right-8"
         >
           {year}
         </span>
 
         <div className="relative flex min-h-0 flex-1 flex-col">
-          <div className="flex shrink-0 items-start gap-4 pr-16 sm:gap-5">
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 sm:size-14">
+          <div className="flex shrink-0 items-start gap-3 pr-12 sm:gap-5 sm:pr-16">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent ring-1 ring-brand-accent/20 sm:size-14">
               <ActiveIcon
                 className="size-5 sm:size-6"
                 strokeWidth={1.75}
@@ -241,61 +339,64 @@ export function ApproachScrollTimeline({
               <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-brand-accent/75">
                 {year} / {String(steps.length).padStart(2, "0")}
               </p>
-              <h3 className="mt-1.5 font-(family-name:--font-heading) text-2xl font-bold leading-snug tracking-tight text-[#0A0A0F] sm:text-3xl">
+              <h3 className="mt-1.5 font-(family-name:--font-heading) text-xl font-bold leading-snug tracking-tight text-[#0A0A0F] sm:text-3xl">
                 {active.title}
               </h3>
             </div>
           </div>
 
-          <div className="relative mt-5 min-h-0 flex-1 overflow-y-auto sm:mt-6">
-            <p className="max-w-2xl text-base leading-[1.75] text-foreground/65 sm:text-lg sm:leading-[1.8]">
+          <div className="relative mt-4 min-h-0 flex-1 overflow-y-auto sm:mt-6">
+            <p className="max-w-2xl text-[0.9375rem] leading-[1.7] text-foreground/65 sm:text-lg sm:leading-[1.8]">
               {active.desc}
             </p>
           </div>
 
-          <div className="relative mt-5 flex shrink-0 items-center justify-between gap-4 sm:mt-6">
-            <span className="inline-flex rounded-full border border-brand-accent/15 bg-brand-accent/6 px-3.5 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-brand-accent/85">
+          <div className="relative mt-auto flex shrink-0 items-center justify-between gap-3 pt-5 sm:gap-4 sm:pt-6">
+            <span className="inline-flex w-fit shrink-0 rounded-full border border-brand-accent/15 bg-brand-accent/6 px-3.5 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-brand-accent/85">
               {active.timing}
             </span>
 
-            <div className="flex flex-wrap items-center justify-end gap-2 sm:gap-3">
+            <div className="flex min-w-0 items-center justify-end gap-2 sm:gap-3">
               <PrimaryCtaLink
                 href="/iletisim"
                 size="sm"
                 variant="accent"
                 showArrow={false}
+                wrapperClassName="hidden sm:inline-flex"
                 leadingIcon={<LuMessageCircle className="size-4" aria-hidden />}
               >
                 {contactCta}
               </PrimaryCtaLink>
-              <button
-                type="button"
-                onClick={() => goTo(activeIndex - 1)}
-                disabled={activeIndex === 0}
-                aria-label={steps[activeIndex - 1]?.title ?? "Previous"}
-                className={cn(
-                  "flex size-10 items-center justify-center rounded-full border border-brand-accent/20 bg-white text-brand-accent transition-all duration-300",
-                  "hover:border-brand-accent hover:bg-brand-accent hover:text-white",
-                  "disabled:pointer-events-none disabled:opacity-35",
-                  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent",
-                )}
-              >
-                <LuChevronLeft className="size-5" aria-hidden />
-              </button>
-              <button
-                type="button"
-                onClick={() => goTo(activeIndex + 1)}
-                disabled={activeIndex === steps.length - 1}
-                aria-label={steps[activeIndex + 1]?.title ?? "Next"}
-                className={cn(
-                  "flex size-10 items-center justify-center rounded-full border border-brand-accent/20 bg-white text-brand-accent transition-all duration-300",
-                  "hover:border-brand-accent hover:bg-brand-accent hover:text-white",
-                  "disabled:pointer-events-none disabled:opacity-35",
-                  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent",
-                )}
-              >
-                <LuChevronRight className="size-5" aria-hidden />
-              </button>
+              <div className="flex shrink-0 items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => goTo(activeIndex - 1)}
+                  disabled={activeIndex === 0}
+                  aria-label={steps[activeIndex - 1]?.title ?? "Previous"}
+                  className={cn(
+                    "flex size-10 items-center justify-center rounded-full border border-brand-accent/20 bg-white text-brand-accent transition-all duration-300",
+                    "hover:border-brand-accent hover:bg-brand-accent hover:text-white",
+                    "disabled:pointer-events-none disabled:opacity-35",
+                    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent",
+                  )}
+                >
+                  <LuChevronLeft className="size-5" aria-hidden />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => goTo(activeIndex + 1)}
+                  disabled={activeIndex === steps.length - 1}
+                  aria-label={steps[activeIndex + 1]?.title ?? "Next"}
+                  className={cn(
+                    "flex size-10 items-center justify-center rounded-full border border-brand-accent/20 bg-white text-brand-accent transition-all duration-300",
+                    "hover:border-brand-accent hover:bg-brand-accent hover:text-white",
+                    "disabled:pointer-events-none disabled:opacity-35",
+                    "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent",
+                  )}
+                >
+                  <LuChevronRight className="size-5" aria-hidden />
+                </button>
+              </div>
             </div>
           </div>
         </div>
