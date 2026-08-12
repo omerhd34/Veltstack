@@ -20,7 +20,7 @@ export const servicesPageEn = {
   ctaButton: "Schedule a Call",
   stats: [
     {
-      value: "3-112",
+      value: "7-112",
       label: "Delivery (Days)",
       labelShort: "Delivery",
       hint: "Estimated delivery range across all service categories. A clear timeline is shared once scope is defined.",
