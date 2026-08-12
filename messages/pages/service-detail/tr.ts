@@ -83,6 +83,11 @@ export const serviceDetailsTr = {
           "SSR, meta etiketleri, sitemap ve yapılandırılmış veri ile siteniz arama motorlarına hazır teslim edilir. Open Graph, canonical URL ve robots yapılandırması sayesinde indeksleme sorunları en baştan önlenir. Blog, hizmet ve ürün sayfaları için ayrı meta şablonları hazırlanır. Google Search Console entegrasyonu ile tarama durumu yayın öncesinden takip edilir. Arama sonuçlarında daha çekici görünmeniz için başlık ve açıklama metinleri optimize edilir. Yerel ve uluslararası arama hedeflerinize göre dil, bölge ve hreflang ayarları proje başında planlanır.",
       },
       {
+        title: "Yayın & Hosting",
+        description:
+          "Domain tescili, DNS ve SSL yapılandırması proje kapsamında uçtan uca yönetilir; canlıya alma öncesi staging ortamında son kontroller tamamlanır. Hosting altyapısı performans ve erişilebilirlik odaklı kurulur; CDN ile erişim hızlandırılır. Kapsamlı pakette 1 yıllık alan adı ve hosting ücretsizdir. Production deploy tekrarlanabilir ve geri alınabilir şekilde hazırlanır. Ortam değişkenleri, e-posta ve üçüncü taraf bağlantıları yayın öncesi doğrulanır. Canlıya alma günü kesintiyi minimize eden bir geçiş planı uygulanır; yayın sonrası erişilebilirlik ve SSL durumu izlenir. Temel yedekleme ve DNS yayılımı kontrol edilerek sitenizin ilk günden sorunsuz açılması sağlanır.",
+      },
+      {
         title: "E-Ticaret",
         description:
           "Ürün kataloğu, sepet, sipariş yönetimi ve güvenli ödeme akışları uçtan uca kurulur. PayTR, İyzico ve Stripe gibi altyapılarla mobil uyumlu, dönüşüm odaklı bir satış deneyimi sunulur. Stok, kargo ve sipariş durumu tek panelden takip edilebilir. Ödeme sayfası SSL ve 3D Secure ile korunur; PCI uyumlu altyapılar tercih edilir. Sipariş onay e-postaları ve basit raporlama ekranları günlük operasyonları kolaylaştırır. Kupon, kampanya ve varyant yönetimi gibi satış senaryoları kapsama göre yapılandırılır.",
