@@ -115,10 +115,5 @@ export const contactEn = {
       value: "ömer-halis-demir-7a9b79169",
       href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
     },
-    {
-      label: "GitHub",
-      value: "omerhd34",
-      href: "https://github.com/omerhd34",
-    },
   ],
 } as const;
