@@ -56,6 +56,7 @@ const footerBlogCategoryIcons: Record<string, IconType> = {
   Mobil: LuSmartphone,
   Mobile: LuSmartphone,
   SEO: LuSearch,
+  "SEO & GEO": LuSearch,
   "E-Ticaret": LuShoppingCart,
   "E-Commerce": LuShoppingCart,
   "Araçlar & İpuçları": LuWrench,
