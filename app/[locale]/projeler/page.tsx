@@ -1,6 +1,10 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ProjectsPageView } from "@/components/pages/projects";
+import { projectItems } from "@/components/sections/projects/project-items";
+import { BreadcrumbSchema, CollectionPageSchema } from "@/components/seo";
 import { createPageMetadata } from "@/lib/create-page-metadata";
+import type { Locale } from "@/i18n/routing";
+import { SITE_URL, absoluteUrl, localizedPath } from "@/lib/seo";
 
 interface ProjectsPageProps {
   params: Promise<{ locale: string }>;
@@ -23,5 +27,32 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ProjectsPageView />;
+  const loc = locale as Locale;
+  const tPages = await getTranslations("pages");
+  const tProjects = await getTranslations("projectDetails");
+  const tHome = await getTranslations("home");
+  const projectsUrl = absoluteUrl(localizedPath(loc, "/projeler"));
+
+  return (
+    <>
+      <BreadcrumbSchema
+        items={[
+          { name: tProjects("breadcrumbHome"), url: SITE_URL },
+          { name: tProjects("breadcrumbProjects"), url: projectsUrl },
+        ]}
+      />
+      <CollectionPageSchema
+        name={tPages("projectsTitle")}
+        description={tPages("projectsSubtitle")}
+        url={projectsUrl}
+        inLanguage={loc === "tr" ? "tr-TR" : "en-US"}
+        items={projectItems.map((project, index) => ({
+          name: tHome(project.titleKey),
+          url: absoluteUrl(localizedPath(loc, project.href)),
+          position: index + 1,
+        }))}
+      />
+      <ProjectsPageView />
+    </>
+  );
 }
