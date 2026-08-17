@@ -89,7 +89,7 @@ export function ProjectShowcaseCard({
         </span>
       </div>
 
-      <div className="flex flex-col justify-center p-5 sm:p-6">
+      <div className="flex flex-col justify-center p-5 sm:p-6" data-nosnippet>
         <h3 className="font-(family-name:--font-heading) text-xl font-bold leading-tight tracking-tight transition-colors group-hover:text-brand-accent">
           {title}
         </h3>
