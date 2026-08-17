@@ -15,7 +15,7 @@ Admin paneli ise site içeriğinin, projelerin, blog yazılarının ve gelen mes
 - **İletişim formu** — Rate limit (Upstash) ve e-posta bildirimi (Resend)
 - **Admin panel** — İçerik yönetimi, mesajlar ve site ayarları (`next-auth`)
 - **Premium UI** — Tailwind CSS 4, shadcn/ui, dark mode, glassmorphism detayları
-- **Veritabanı** — Prisma + MySQL; çok dilli alanlar `_tr` / `_en` suffix ile
+- **Veritabanı** — Prisma + PostgreSQL (Neon); çok dilli alanlar `_tr` / `_en` suffix ile
 
 ## Teknoloji Yığını
 
@@ -24,7 +24,7 @@ Admin paneli ise site içeriğinin, projelerin, blog yazılarının ve gelen mes
 | Framework | Next.js 16 (App Router), React 19 |
 | Dil | TypeScript |
 | Stil | Tailwind CSS 4, shadcn/ui, Lightswind |
-| Veritabanı | Prisma, MySQL |
+| Veritabanı | Prisma, PostgreSQL (Neon) |
 | i18n | next-intl |
 | Auth | next-auth |
 | Doğrulama | Zod |
