@@ -1,7 +1,7 @@
 const commonDesignItems = [
-  "iOS ve Android uyumlu yapım",
-  "Marka renklerine uyumlu UI/UX",
-  "Splash screen ve uygulama ikonu",
+  "iOS ve Android için çapraz platform geliştirme",
+  "Marka kimliğine uyumlu UI/UX",
+  "Açılış ekranı ve uygulama ikonu",
   "Temel sayfa geçişleri ve navigasyon",
   "Hızlı açılış ve performans optimizasyonu",
 ] as const;
@@ -9,7 +9,29 @@ const commonDesignItems = [
 const standartDesignExtras = [
   "Koyu / açık tema seçeneği",
   "Premium UI bileşenleri",
-  "Tüm telefon ve tabletlerde uyumluluk",
+  "Farklı ekran boyutlarına uyum (telefon ve tablet)",
+] as const;
+
+const proDesignExtrasPortfolio = [
+  "Tasarıma birebir uyumlu arayüz",
+  "Gelişmiş animasyonlar ve mikro etkileşimler",
+  "Yüksek performanslı, büyümeye hazır altyapı",
+] as const;
+
+const proDesignExtrasCorporate = [
+  "Tasarıma birebir uyumlu kurumsal arayüz",
+  "Tablet optimizasyonu",
+  "Yüksek performanslı, büyümeye hazır altyapı",
+] as const;
+
+const proDesignExtrasEcommerce = [
+  "Tasarıma birebir uyumlu e-ticaret arayüzü",
+  "Özel sepet ve ödeme animasyonları",
+  "Yüksek performanslı, büyümeye hazır altyapı",
+] as const;
+
+const standartDevExtrasEcommerce = [
+  "Gelişmiş filtreleme ve kaydırarak yükleme",
 ] as const;
 
 const commonDeliveryItems = [
@@ -21,14 +43,22 @@ const standartDeliveryItems = [
   "iOS veya Android yayın desteği",
 ] as const;
 
+const proDeliveryExtras = [
+  "Mağaza listeleme materyalleri desteği (açıklama, ekran görüntüsü)",
+  "TestFlight / kapalı beta dağıtım desteği",
+] as const;
+
 const proDeliveryItems = [
   ...commonDeliveryItems,
-  "iOS ve Android yayın desteği",
+  "iOS ve Android mağaza yayın desteği",
+  ...proDeliveryExtras,
 ] as const;
 
 const commonSupportStandartItems = [
   "Kullanım kılavuzu ve kısa yönetim eğitimi",
 ] as const;
+
+const proSupportExtras = ["Öncelikli teknik destek"] as const;
 
 const GROUP_DEV = "Tasarım & Altyapı";
 const GROUP_FEATURES = "İçerik & Özellikler";
@@ -58,6 +88,7 @@ const tierIntegrationProItems = [
 
 const portfolioFeaturesCommon = [
   "Hakkında, hizmetler ve portföy galerisi",
+  "Hizmet ve yetenek vitrin ekranları",
   "İletişim formu ve hızlı ulaşım butonları",
   "Referans ve müşteri yorumu alanı",
 ] as const;
@@ -69,13 +100,15 @@ const portfolioFeaturesStandartExtras = [
 
 const portfolioFeaturesProExtras = [
   "Gelişmiş push ve duyuru yönetimi",
-  "Dinamik içerik için CMS bağlantısı",
-  "Deep link ve içerik paylaşımı",
+  "Dinamik içerik için CMS entegrasyonu",
+  "Derin bağlantı (deep link) ve içerik paylaşımı",
 ] as const;
 
 const corporateFeaturesCommon = [
   "Duyuru, haber ve içerik ekranları",
   "Hizmetler, kurumsal bilgi ve iletişim sayfaları",
+  "Ekip ve departman bilgi ekranları",
+  "SSS (sık sorulan sorular) bölümü",
   "Kullanıcı girişi ve iletişim formları",
   "Kurumsal destek kanalları (telefon, e-posta, canlı destek)",
   "Galeri ve video içerik desteği",
@@ -94,10 +127,7 @@ const corporateFeaturesProExtras = [
   "Anket ve geri bildirim modülü",
 ] as const;
 
-const corporateIntegrationTemelItems = [
-  "Temel kullanım analitiği",
-  ...commonSecurityItems,
-] as const;
+const corporateIntegrationTemelItems = [...tierIntegrationTemelItems] as const;
 
 const corporateIntegrationStandartItems = [
   ...corporateIntegrationTemelItems,
@@ -218,9 +248,7 @@ export const appPackagesTr = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Tasarıma birebir uyumlu arayüz",
-              "Gelişmiş animasyonlar ve mikro etkileşimler",
-              "Yüksek performanslı, büyümeye hazır altyapı",
+              ...proDesignExtrasPortfolio,
             ],
           },
           {
@@ -238,7 +266,7 @@ export const appPackagesTr = {
           { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -248,9 +276,9 @@ export const appPackagesTr = {
   corporate: {
     title: "Kurumsal",
     description:
-      "Çalışanlarınız veya müşterileriniz için güvenilir kurumsal mobil deneyim. İçerik, iletişim ve iş süreçlerinizi iOS ve Android'de tutarlı ve erişilebilir bir arayüzle sunun.",
+      "Çalışanlarınız veya müşterileriniz için güvenilir kurumsal mobil deneyim. İçerik, iletişim ve iş süreçlerinizi iOS ve Android’de tutarlı ve erişilebilir bir arayüzle sunun.",
     introP2:
-      "Girişim, Profesyonel ve Kapsamlı paketleri kurumsal mobil projelerin farklı ölçeklerine uyum sağlar. iOS ve Android için tek bir projede ilerliyoruz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri kurumsal mobil projelerin farklı ölçeklerine uyum sağlar. Kapsamlı pakette dil sınırı olmadan ölçeklenebilirsiniz. iOS ve Android için tek bir projede ilerliyoruz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
@@ -307,9 +335,7 @@ export const appPackagesTr = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Tasarıma birebir uyumlu kurumsal arayüz",
-              "Tablet optimizasyonu",
-              "Yüksek performanslı, büyümeye hazır altyapı",
+              ...proDesignExtrasCorporate,
             ],
           },
           {
@@ -327,7 +353,7 @@ export const appPackagesTr = {
           { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -339,7 +365,7 @@ export const appPackagesTr = {
     description:
       "Ödeme, ürün ve sipariş yönetimi sunan mağazaya hazır e-ticaret uygulaması. Katalogunuzu, sepet akışınızı ve müşteri yolculuğunu mobilde akıcı ve güven veren bir deneyimle hayata geçirin.",
     introP2:
-      "Girişim, Profesyonel ve Kapsamlı paketleri farklı katalog ve sipariş hacimlerine göre şekillenir. iOS ve Android için tek bir projede ilerliyoruz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri farklı katalog ve sipariş hacimlerine göre şekillenir. Kapsamlı pakette dil sınırı olmadan ölçeklenebilirsiniz. iOS ve Android için tek bir projede ilerliyoruz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "42-56",
@@ -368,7 +394,7 @@ export const appPackagesTr = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Gelişmiş filtreleme ve infinite scroll",
+              ...standartDevExtrasEcommerce,
             ],
           },
           {
@@ -400,9 +426,8 @@ export const appPackagesTr = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Tasarıma birebir uyumlu e-ticaret arayüzü",
-              "Özel sepet ve ödeme animasyonları",
-              "Yüksek performanslı, büyümeye hazır altyapı",
+              ...standartDevExtrasEcommerce,
+              ...proDesignExtrasEcommerce,
             ],
           },
           {
@@ -420,7 +445,7 @@ export const appPackagesTr = {
           { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
