@@ -16,7 +16,7 @@ import {
   buildPagesFeatureItem,
   buildRevisionFeatureItem,
   buildSupportFeatureItem,
-  findLanguagesGroupLabel,
+  findPanelGroupLabel,
   findSupportGroupLabel,
   sortFeatureGroupsForDisplay,
 } from "./package-accordion";
@@ -122,7 +122,7 @@ export function ServicePackageCard({
     },
   ];
 
-  const languagesGroupLabel = findLanguagesGroupLabel(featureGroups);
+  const panelGroupLabel = findPanelGroupLabel(featureGroups);
   const languageFeature = buildLanguageFeatureItem(
     data.tiers,
     activeTier,
@@ -189,8 +189,10 @@ export function ServicePackageCard({
           <div className="overflow-hidden" data-package-group-content>
             <ul className="flex flex-col gap-2.5 px-2 pb-3.5">
               {[
-                ...(pagesFeature && groupIndex === 0 ? [pagesFeature] : []),
-                ...(languageFeature && group.label === languagesGroupLabel
+                ...(pagesFeature && group.label === panelGroupLabel
+                  ? [pagesFeature]
+                  : []),
+                ...(languageFeature && group.label === panelGroupLabel
                   ? [languageFeature]
                   : []),
                 ...(group.label === supportGroupLabel

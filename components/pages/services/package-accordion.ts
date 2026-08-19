@@ -19,34 +19,51 @@ const exclusiveItemPatterns: RegExp[] = [
   /iOS ve Android yayın|iOS and Android publishing/i,
 ];
 
-const languagesGroupNeedles = [
-  "geliştirme",
-  "development",
+const devGroupNeedles = [
+  "tasarım & altyapı",
+  "design & infrastructure",
+  "tasarım & yenileme",
+  "design & redesign",
   "altyapı",
   "infrastructure",
-  "içerik",
-  "content",
-  "özellik",
-  "feature",
   "tasarım",
   "design",
+  "yenileme",
   "redesign",
-];
+] as const;
+
+const panelGroupNeedles = [
+  "içerik & yönetim",
+  "content & admin",
+  "content & management",
+  "içerik & özellikler",
+  "content & features",
+] as const;
 
 function normalizeGroupLabel(label: string): string {
   return label.toLocaleLowerCase("tr-TR");
 }
 
-export function findLanguagesGroupLabel(
-  groups: { label: string }[],
-): string | null {
-  for (const needle of languagesGroupNeedles) {
+export function findDevGroupLabel(groups: { label: string }[]): string | null {
+  for (const needle of devGroupNeedles) {
     const match = groups.find((group) =>
       normalizeGroupLabel(group.label).includes(needle),
     );
     if (match) return match.label;
   }
   return null;
+}
+
+export function findPanelGroupLabel(
+  groups: { label: string }[],
+): string | null {
+  for (const needle of panelGroupNeedles) {
+    const match = groups.find((group) =>
+      normalizeGroupLabel(group.label).includes(needle),
+    );
+    if (match) return match.label;
+  }
+  return findDevGroupLabel(groups);
 }
 
 export function buildLanguageFeatureItem(

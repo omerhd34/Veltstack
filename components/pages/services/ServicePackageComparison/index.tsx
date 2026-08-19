@@ -7,7 +7,7 @@ import {
   buildRevisionMatrixItem,
   buildSupportMatrixItem,
   collectAllTierGroupLabels,
-  findLanguagesGroupLabel,
+  findPanelGroupLabel,
   findSupportGroupLabel,
   sortFeatureGroupsForDisplay,
 } from "../package-accordion";
@@ -47,7 +47,7 @@ export function ServicePackageComparison({
   const hasDeliveryGroup = sortedGroups.some(
     (group) => group.label === labels.deliveryGroupLabel,
   );
-  const languagesGroupLabel = findLanguagesGroupLabel(sortedGroups);
+  const panelGroupLabel = findPanelGroupLabel(sortedGroups);
   const supportGroupLabel = findSupportGroupLabel(
     sortedGroups,
     labels.deliveryGroupLabel,
@@ -57,15 +57,13 @@ export function ServicePackageComparison({
     .map((group, index) => ({
       ...group,
       features: [
-        ...(index === 0 && pagesRow ? [pagesRow] : []),
+        ...(group.label === panelGroupLabel && pagesRow ? [pagesRow] : []),
+        ...(group.label === panelGroupLabel && languageRow ? [languageRow] : []),
         ...(index === 0 && !hasDeliveryGroup && deliveryRow
           ? [deliveryRow]
           : []),
         ...(group.label === labels.deliveryGroupLabel && deliveryRow
           ? [deliveryRow]
-          : []),
-        ...(languageRow && group.label === languagesGroupLabel
-          ? [languageRow]
           : []),
         ...(group.label === supportGroupLabel
           ? [
