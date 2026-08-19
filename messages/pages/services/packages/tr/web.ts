@@ -1,42 +1,76 @@
 // ---------------------------------------------------------------------------
 // Ortak (paylaşılan) özellik grupları
 // ---------------------------------------------------------------------------
-
 const commonDesignItems = [
-  "Tüm cihazlara (telefon, tablet, bilgisayar) uyumlu tasarım",
-  "Güvenli bağlantı (HTTPS) ve temel güvenlik",
+  "Telefon, tablet ve bilgisayarda uyumlu (responsive) tasarım",
+  "Güvenli bağlantı (HTTPS) ve temel güvenlik yapılandırması",
   "Hızlı açılış ve Core Web Vitals optimizasyonu",
   "Erişilebilir, modern ve okunaklı arayüz",
 ] as const;
 
 const standartDesignExtras = [
-  "Koyu / açık tema seçeneği",
-  "Akıcı sayfa geçişleri ve ince animasyonlar",
+  "Akıcı sayfa geçişleri ve mikro animasyonlar",
+] as const;
+
+const proDesignExtras = [
+  "Özel tasarım detayları ve gelişmiş animasyonlar",
+  "Yüksek trafiğe hazır ölçeklenebilir altyapı",
+] as const;
+
+const standartPanelExtras = ["Koyu / açık tema seçeneği"] as const;
+
+const portfolioPanelExtras = [
+  "Proje ve portföy galerisi yönetimi",
+  "Hizmet ve yetenek vitrin yönetimi",
+  "Müşteri yorumu ve referans yönetimi",
+  "Blog yazısı ekleme ve düzenleme",
+  "Görsel yükleme ve medya kütüphanesi",
+  "Kod bilmeden metin düzenleme (zengin editör)",
+  "Taslak kaydetme ve yayınlama",
+  "Panelden sayfa başlığı ve açıklama düzenleme",
+] as const;
+
+const corporatePanelExtras = [
+  "Referans ve proje galerisi yönetimi",
+  "Ekip ve departman sayfası yönetimi",
+  "SSS (sık sorulan sorular) yönetimi",
+  "Blog yazısı ekleme ve düzenleme",
+  "Görsel yükleme ve medya kütüphanesi",
+  "Kod bilmeden metin düzenleme (zengin editör)",
+  "Taslak kaydetme ve yayınlama",
+  "Panelden sayfa başlığı ve açıklama düzenleme",
 ] as const;
 
 const commonDeliveryItems = [
-  "Sitenin tüm dosyalarının size teslimi",
-  "Sitenin yayına alınması",
-  "Alan adı (domain) ve www yönlendirme ayarları",
-  "Sunucu / hosting kurulum ve yayın rehberi",
+  "Kaynak kodu ve proje dosyalarının teslimi",
+  "Canlıya alma ve yayına geçiş desteği",
+  "Alan adı (domain), www ve yönlendirme ayarları",
+  "Hosting kurulumu ve yayın rehberi",
   "Performans hedefi doğrulaması (Google PageSpeed)",
 ] as const;
 
-const freeDomainHosting = ["1 yıllık alan adı ve hosting ücretsiz"] as const;
+const freeDomainHosting = ["1 yıl ücretsiz alan adı ve hosting"] as const;
 
 const standartDeliveryItems = [
   ...freeDomainHosting,
   ...commonDeliveryItems,
 ] as const;
 
+const proDeliveryExtras = [
+  "Staging ortamı kurulumu ve kontrollü canlıya geçiş",
+] as const;
+
 const proDeliveryItems = [
   ...freeDomainHosting,
   ...commonDeliveryItems,
+  ...proDeliveryExtras,
 ] as const;
 
 const commonSupportStandartItems = [
   "Kullanım kılavuzu ve kısa yönetim eğitimi",
 ] as const;
+
+const proSupportExtras = ["Öncelikli teknik destek"] as const;
 
 const GROUP_DEV = "Tasarım & Altyapı";
 const GROUP_PANEL = "İçerik & Yönetim";
@@ -61,7 +95,7 @@ const tierSeoTemelItems = [
 const tierSeoStandartItems = [
   ...commonSeoItems,
   ...commonIntegrationItems,
-  "Arama ve sosyal medyada düzgün görünen başlık, açıklama ve önizleme",
+  "Meta, Open Graph ve sosyal medya önizleme optimizasyonu",
   "Aramada görünürlük takibi (Google Search Console)",
   "Ziyaretçi ve trafik ölçümü (Google Analytics 4)",
 ] as const;
@@ -69,16 +103,16 @@ const tierSeoStandartItems = [
 const tierSeoProItems = [
   ...tierSeoStandartItems,
   "Arama sonuçlarında daha iyi yer almak için teknik SEO iyileştirmesi",
-  "Firma bilgisi, yol haritası gibi zengin sonuç (schema) görünümü",
-  "Form doldurma ve buton tıklamalarını ölçme",
-  "Canlı destek veya WhatsApp bağlantısı",
-  "CRM / e-posta pazarlama araçlarına bağlantı",
+  "Kurumsal bilgi, breadcrumb ve zengin sonuç (schema) yapılandırması",
+  "Dönüşüm takibi (form, tıklama, CTA)",
+  "Canlı destek veya WhatsApp entegrasyonu",
+  "CRM / e-posta pazarlama araçları entegrasyonu",
 ] as const;
 
 const ecommerceStoreCommonItems = [
   "Ürün listesi ve ürün detay sayfaları",
   "Sepet ve ödeme adımları",
-  "Kargo firması bağlantısı",
+  "Kargo firması entegrasyonu",
   "Otomatik sipariş e-posta bildirimleri",
   "Mesafeli satış sözleşmesi ve yasal sayfalar",
   "Sipariş takip ekranı",
@@ -94,15 +128,14 @@ const ecommerceStoreStandartExtras = [
 
 const ecommerceStoreProExtras = [
   "Üye olmadan alışveriş (misafir ödeme)",
-  "Birden fazla kargo firması bağlantısı",
+  "Birden fazla kargo firması entegrasyonu",
   "Yarım bırakılan sepet hatırlatma e-postaları",
   "“Bunu da beğenebilirsiniz” ürün önerileri",
-  "Fatura ve e-arşiv bağlantısına hazır yapı",
+  "Fatura ve e-arşiv entegrasyonuna hazır altyapı",
 ] as const;
 
 const ecommercePanelCommonItems = [
   "Ürün, kategori ve sipariş yönetimi",
-  "Kategori düzenleme",
   "Temel stok takibi",
 ] as const;
 
@@ -119,7 +152,7 @@ const ecommercePanelProExtras = [
   "Excel ile toplu ürün yükleme / indirme",
   "Birden fazla para birimi desteği (₺, $, € ...)",
   "Blog ve içerik yayınlama",
-  "SMS ve pazarlama araçlarına bağlantı",
+  "SMS ve pazarlama araçları entegrasyonu",
 ] as const;
 
 export const webPackagesTr = {
@@ -139,13 +172,7 @@ export const webPackagesTr = {
         featureGroups: [
           { label: GROUP_DEV, items: [...commonDesignItems] },
           { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
-          {
-            label: GROUP_PANEL,
-            items: [
-              "Hizmet, proje ve hakkımda tanıtım bölümleri",
-              "İletişim ve “hemen ara / yaz” yönlendirme alanları",
-            ],
-          },
+          { label: GROUP_PANEL, items: [] },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           { label: GROUP_SUPPORT, items: [] },
         ],
@@ -154,7 +181,7 @@ export const webPackagesTr = {
         deliveryDays: "21-30",
         revisions: "5",
         supportDays: "30",
-        pages: "10-50",
+        pages: "1-50",
         languages: "1-5",
         featureGroups: [
           {
@@ -164,13 +191,7 @@ export const webPackagesTr = {
           { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
-            items: [
-              "Hizmet, proje ve hakkımda tanıtım bölümleri",
-              "İletişim ve “hemen ara / yaz” yönlendirme alanları",
-              "Kendiniz güncelleyebileceğiniz portföy / proje galerisi",
-              "Referans ve müşteri yorumu alanları",
-              "İçerikleri kendiniz düzenleyebileceğiniz yönetim paneli",
-            ],
+            items: [...standartPanelExtras, ...portfolioPanelExtras],
           },
           {
             label: GROUP_LAUNCH,
@@ -194,22 +215,13 @@ export const webPackagesTr = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Sağladığınız tasarım dosyasıyla birebir arayüz",
-              "Yoğun ziyaretçiye dayanıklı, büyümeye hazır altyapı",
+              ...proDesignExtras,
             ],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
             label: GROUP_PANEL,
-            items: [
-              "Hizmet, proje ve hakkımda tanıtım bölümleri",
-              "İletişim ve “hemen ara / yaz” yönlendirme alanları",
-              "Kendiniz güncelleyebileceğiniz portföy / proje galerisi",
-              "Referans ve müşteri yorumu alanları",
-              "İçerikleri kendiniz düzenleyebileceğiniz yönetim paneli",
-              "Blog ve makale yayınlama",
-              "Proje filtreleme ve kategori düzenleme",
-            ],
+            items: [...standartPanelExtras, ...portfolioPanelExtras],
           },
           {
             label: GROUP_LAUNCH,
@@ -217,7 +229,7 @@ export const webPackagesTr = {
           },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -229,7 +241,7 @@ export const webPackagesTr = {
     description:
       "Kurumsal kimliğinizi yansıtan, güven oluşturan ve müşteri kazandırmaya odaklı web sitesi. Hizmetlerinizi, ekibinizi ve iletişim kanallarınızı profesyonel bir yapıda ziyaretçilerinize sunun.",
     introP2:
-      "Girişim, Profesyonel ve Kapsamlı paketleri kurumsal web projelerinin farklı ölçeklerine uyum sağlar. Kapsamlı seviyede sayfa sınırı olmadan büyüyebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri kurumsal web projelerinin farklı ölçeklerine uyum sağlar. Kapsamlı pakette sayfa sınırı olmadan büyüyebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
@@ -240,13 +252,7 @@ export const webPackagesTr = {
         featureGroups: [
           { label: GROUP_DEV, items: [...commonDesignItems] },
           { label: "SEO & Entegrasyon", items: [...tierSeoTemelItems] },
-          {
-            label: GROUP_PANEL,
-            items: [
-              "Hizmetler, hakkımızda ve iletişim sayfaları",
-              "Kurumsal e-postanıza düşen iletişim formları",
-            ],
-          },
+          { label: GROUP_PANEL, items: [] },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           { label: GROUP_SUPPORT, items: [] },
         ],
@@ -255,7 +261,7 @@ export const webPackagesTr = {
         deliveryDays: "28-42",
         revisions: "5",
         supportDays: "30",
-        pages: "10-50",
+        pages: "1-50",
         languages: "1-5",
         featureGroups: [
           {
@@ -265,15 +271,7 @@ export const webPackagesTr = {
           { label: "SEO & Entegrasyon", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
-            items: [
-              "Hizmetler, hakkımızda ve iletişim sayfaları",
-              "Kurumsal e-postanıza düşen iletişim formları",
-              "İçerikleri kendiniz düzenleyebileceğiniz yönetim paneli",
-              "Blog, haber ve duyuru yayınlama",
-              "Ekip ve kadro tanıtım sayfaları",
-              "Referanslar ve başarı hikâyeleri",
-              "Basın / medya doküman alanı",
-            ],
+            items: [...standartPanelExtras, ...corporatePanelExtras],
           },
           {
             label: GROUP_LAUNCH,
@@ -297,25 +295,13 @@ export const webPackagesTr = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Sağladığınız tasarım dosyasıyla birebir kurumsal arayüz",
-              "Yoğun ziyaretçiye dayanıklı, büyümeye hazır altyapı",
+              ...proDesignExtras,
             ],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
           {
             label: GROUP_PANEL,
-            items: [
-              "Hizmetler, hakkımızda ve iletişim sayfaları",
-              "Kurumsal e-postanıza düşen iletişim formları",
-              "İçerikleri kendiniz düzenleyebileceğiniz yönetim paneli",
-              "Blog, haber ve duyuru yayınlama",
-              "Ekip ve kadro tanıtım sayfaları",
-              "Referanslar ve başarı hikâyeleri",
-              "Basın / medya doküman alanı",
-              "İş ilanı ve başvuru formu",
-              "Etkinlik ve duyuru takvimi",
-              "Video galeri ve medya yönetimi",
-            ],
+            items: [...standartPanelExtras, ...corporatePanelExtras],
           },
           {
             label: GROUP_LAUNCH,
@@ -323,7 +309,7 @@ export const webPackagesTr = {
           },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -335,7 +321,7 @@ export const webPackagesTr = {
     description:
       "Online satışa hızlı başlamanız için güvenli ödeme altyapısına sahip modern e-ticaret çözümü. Ürünlerinizi, siparişlerinizi ve müşteri deneyiminizi tek panelden yönetebileceğiniz ölçeklenebilir bir mağaza kurun.",
     introP2:
-      "Girişim, Profesyonel ve Kapsamlı paketleri farklı ürün katalogları ve sipariş hacimlerine göre şekillenir. Kapsamlı'da ürün ve kategori sınırı olmadan ölçeklenebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleri farklı ürün katalogları ve sipariş hacimlerine göre şekillenir. Kapsamlı pakette ürün ve kategori sınırı olmadan ölçeklenebilirsiniz. Paketlerden birini seçemiyorsanız bizimle iletişime geçebilirsiniz.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
@@ -362,7 +348,7 @@ export const webPackagesTr = {
         deliveryDays: "42-56",
         revisions: "5",
         supportDays: "30",
-        pages: "10-50",
+        pages: "1-50",
         languages: "1-5",
         featureGroups: [
           {
@@ -380,6 +366,7 @@ export const webPackagesTr = {
           {
             label: GROUP_PANEL,
             items: [
+              ...standartPanelExtras,
               ...ecommercePanelCommonItems,
               ...ecommercePanelStandartExtras,
             ],
@@ -406,8 +393,7 @@ export const webPackagesTr = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Sağladığınız tasarım dosyasıyla birebir mağaza arayüzü",
-              "Yoğun ziyaretçiye dayanıklı, büyümeye hazır altyapı",
+              ...proDesignExtras,
             ],
           },
           { label: "SEO & Entegrasyon", items: [...tierSeoProItems] },
@@ -422,6 +408,7 @@ export const webPackagesTr = {
           {
             label: GROUP_PANEL,
             items: [
+              ...standartPanelExtras,
               ...ecommercePanelCommonItems,
               ...ecommercePanelStandartExtras,
               ...ecommercePanelProExtras,
@@ -433,7 +420,7 @@ export const webPackagesTr = {
           },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
