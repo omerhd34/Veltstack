@@ -20,9 +20,22 @@ const commonDeliveryStandart = [
   "Go-live and migration support",
 ] as const;
 
+const proDeliveryExtras = [
+  "Preview environment testing and planned go-live",
+] as const;
+
 const commonDeliveryPro = [
-  "Source code and project file delivery",
-  "Go-live and migration support",
+  ...commonDeliveryStandart,
+  ...proDeliveryExtras,
+] as const;
+
+const commonSupportStandartItems = [
+  "Post-migration technical support",
+] as const;
+
+const proSupportExtras = [
+  "User guide and short admin training",
+  "Priority technical support",
 ] as const;
 
 const seoMigrationStandartItems = [
@@ -42,6 +55,7 @@ const REFRESH_GROUP_ANALYSIS = "Analysis & Planning";
 const REFRESH_GROUP_DESIGN = "Design & Redesign";
 const REFRESH_GROUP_SEO = "SEO & Migration Protection";
 const REFRESH_GROUP_DELIVERY = "Launch & Delivery";
+const REFRESH_GROUP_SUPPORT = "Technical Support";
 
 // ---------------------------------------------------------------------------
 // Portfolio / Promotional
@@ -76,10 +90,9 @@ const portfolioDesignPro = [
   "Dynamic content management panel",
 ] as const;
 
-const portfolioSeoTemel = ["301 redirect setup"] as const;
-
-const portfolioDeliveryProExtras = [
-  "User guide and short admin training",
+const portfolioSeoTemel = [
+  "301 redirect setup",
+  "Existing meta title and description preservation plan",
 ] as const;
 
 // ---------------------------------------------------------------------------
@@ -115,12 +128,10 @@ const corporateDesignPro = [
   ...standartDesignExtras,
   "Scalable infrastructure for high traffic",
   "Advanced CMS and content management",
-  "Support for up to 5 languages and multi-department structure",
+  "Multi-language and multi-department structure",
   "API and third-party integrations",
   "CDN and cache optimization",
   "Comprehensive security audit and hardening",
-  "Form and integration updates",
-  "Privacy-compliant cookie notice",
 ] as const;
 
 const corporateSeoTemel = ["301 redirect setup"] as const;
@@ -166,16 +177,18 @@ const ecommerceDesignPro = [
   ...commonRedesignItems,
   ...standartDesignExtras,
   "Migration to a scalable modern stack",
-  "Support for up to 5 languages and multi-currency",
+  "Multi-language and multi-currency support",
   "Advanced campaign and promotion module",
   "ERP, accounting and invoicing integration readiness",
   "PCI-DSS compliant payment gateway infrastructure",
   "Advanced security and fraud protection",
   "Real-time stock synchronization",
-  "Abandoned cart reminder infrastructure",
 ] as const;
 
-const ecommerceSeoTemel = ["Product URL and meta preservation plan"] as const;
+const ecommerceSeoTemel = [
+  "Product URL and meta preservation plan",
+  "301 redirect setup",
+] as const;
 
 const ecommerceSeoStandart = [
   "Product URL and meta preservation plan",
@@ -200,7 +213,7 @@ export const refreshPackagesEn = {
     description:
       "Refresh your promotional site with modern design, fast infrastructure and SEO protection—without losing your content.",
     introP2:
-      "Startup, Professional and Premium tiers clarify redesign scope. We plan a conversion-focused migration while protecting your search rankings.",
+      "Startup, Professional and Premium tiers clarify redesign scope. On the Premium tier, you can scale without language limits. We plan a conversion-focused migration while protecting your search rankings.",
     tiers: {
       temel: {
         deliveryDays: "7-14",
@@ -224,6 +237,7 @@ export const refreshPackagesEn = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryTemel],
           },
+          { label: REFRESH_GROUP_SUPPORT, items: [] },
         ],
       },
       standart: {
@@ -248,6 +262,10 @@ export const refreshPackagesEn = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryStandart],
           },
+          {
+            label: REFRESH_GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
+          },
         ],
       },
       pro: {
@@ -270,7 +288,11 @@ export const refreshPackagesEn = {
           },
           {
             label: REFRESH_GROUP_DELIVERY,
-            items: [...commonDeliveryPro, ...portfolioDeliveryProExtras],
+            items: [...commonDeliveryPro],
+          },
+          {
+            label: REFRESH_GROUP_SUPPORT,
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -282,7 +304,7 @@ export const refreshPackagesEn = {
     description:
       "Refresh your corporate site with updated design, secure infrastructure and a planned migration—while protecting brand trust and organic visibility.",
     introP2:
-      "Startup, Professional and Premium tiers clarify redesign scope. We migrate existing content and integrations with minimal downtime.",
+      "Startup, Professional and Premium tiers clarify redesign scope. On the Premium tier, you can scale without language limits. We migrate existing content and integrations with minimal downtime.",
     tiers: {
       temel: {
         deliveryDays: "10-18",
@@ -361,7 +383,7 @@ export const refreshPackagesEn = {
     description:
       "Refresh your store with modern infrastructure, smoother checkout and SEO protection—without risking product data or rankings.",
     introP2:
-      "Startup, Professional and Premium tiers clarify redesign scope. We protect catalog data and organic visibility while moving to a conversion-focused storefront.",
+      "Startup, Professional and Premium tiers clarify redesign scope. On the Premium tier, you can scale without language limits. We protect catalog data and organic visibility while moving to a conversion-focused storefront.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
