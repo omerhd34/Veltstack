@@ -1,7 +1,7 @@
 const commonDesignItems = [
-  "Cross-platform iOS and Android build",
+  "Cross-platform iOS and Android development",
   "Brand-aligned UI/UX",
-  "Splash screen and app icon",
+  "Launch screen and app icon",
   "Basic page transitions and navigation",
   "Fast launch and performance optimization",
 ] as const;
@@ -9,7 +9,29 @@ const commonDesignItems = [
 const standartDesignExtras = [
   "Dark / light mode support",
   "Premium UI components",
-  "Compatibility across all phones and tablets",
+  "Adaptation to different screen sizes (phone and tablet)",
+] as const;
+
+const proDesignExtrasPortfolio = [
+  "Design-accurate custom UI",
+  "Advanced animations and micro-interactions",
+  "High-performance, growth-ready infrastructure",
+] as const;
+
+const proDesignExtrasCorporate = [
+  "Design-accurate corporate UI",
+  "Tablet optimization",
+  "High-performance, growth-ready infrastructure",
+] as const;
+
+const proDesignExtrasEcommerce = [
+  "Design-accurate ecommerce UI",
+  "Custom cart and checkout animations",
+  "High-performance, growth-ready infrastructure",
+] as const;
+
+const standartDevExtrasEcommerce = [
+  "Advanced filtering and infinite scroll",
 ] as const;
 
 const commonDeliveryItems = ["Source code and project file delivery"] as const;
@@ -19,14 +41,22 @@ const standartDeliveryItems = [
   "iOS or Android publishing support",
 ] as const;
 
+const proDeliveryExtras = [
+  "Store listing assets support (description, screenshots)",
+  "TestFlight / closed beta distribution support",
+] as const;
+
 const proDeliveryItems = [
   ...commonDeliveryItems,
-  "iOS and Android publishing support",
+  "iOS and Android store publishing support",
+  ...proDeliveryExtras,
 ] as const;
 
 const commonSupportStandartItems = [
   "User guide and short admin training",
 ] as const;
+
+const proSupportExtras = ["Priority technical support"] as const;
 
 const GROUP_DEV = "Design & Infrastructure";
 const GROUP_FEATURES = "Content & Features";
@@ -35,9 +65,7 @@ const GROUP_LAUNCH = "Launch & Delivery";
 const GROUP_SUPPORT = "Technical Support";
 const GROUP_STORE = "Store & Payment";
 
-const commonSecurityItems = [
-  "Privacy consent screen (KVKK/GDPR)",
-] as const;
+const commonSecurityItems = ["Privacy consent screen (KVKK/GDPR)"] as const;
 
 const tierIntegrationTemelItems = [
   "Basic usage analytics",
@@ -58,6 +86,7 @@ const tierIntegrationProItems = [
 
 const portfolioFeaturesCommon = [
   "About, services and portfolio gallery",
+  "Service and skills showcase screens",
   "Contact form and quick-access buttons",
   "References and client testimonials",
 ] as const;
@@ -69,13 +98,15 @@ const portfolioFeaturesStandartExtras = [
 
 const portfolioFeaturesProExtras = [
   "Advanced push and announcement management",
-  "CMS connection for dynamic content",
+  "CMS integration for dynamic content",
   "Deep link and content sharing",
 ] as const;
 
 const corporateFeaturesCommon = [
   "Announcement, news and content screens",
   "Services, corporate info and contact pages",
+  "Team and department info screens",
+  "FAQ section",
   "User login and contact forms",
   "Corporate support channels (phone, email, live chat)",
   "Gallery and video content support",
@@ -94,10 +125,7 @@ const corporateFeaturesProExtras = [
   "Survey and feedback module",
 ] as const;
 
-const corporateIntegrationTemelItems = [
-  "Basic usage analytics",
-  ...commonSecurityItems,
-] as const;
+const corporateIntegrationTemelItems = [...tierIntegrationTemelItems] as const;
 
 const corporateIntegrationStandartItems = [
   ...corporateIntegrationTemelItems,
@@ -218,9 +246,7 @@ export const appPackagesEn = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Design-accurate custom UI",
-              "Advanced animations and micro-interactions",
-              "High-performance, growth-ready infrastructure",
+              ...proDesignExtrasPortfolio,
             ],
           },
           {
@@ -238,7 +264,7 @@ export const appPackagesEn = {
           { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -250,7 +276,7 @@ export const appPackagesEn = {
     description:
       "A reliable corporate mobile experience for employees or customers. Deliver content, communication and workflows in a consistent iOS and Android interface.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to corporate mobile projects of different scales. We build once for iOS and Android. If none of the packages fit, feel free to get in touch.",
+      "Startup, Professional and Premium tiers adapt to corporate mobile projects of different scales. On the Premium tier, you can scale without language limits. We build once for iOS and Android. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "28-42",
@@ -307,9 +333,7 @@ export const appPackagesEn = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Design-accurate corporate UI",
-              "Tablet optimization",
-              "High-performance, growth-ready infrastructure",
+              ...proDesignExtrasCorporate,
             ],
           },
           {
@@ -327,7 +351,7 @@ export const appPackagesEn = {
           { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -339,7 +363,7 @@ export const appPackagesEn = {
     description:
       "A store-ready ecommerce app with payments, catalog and order management. Bring your cart flow and customer journey to mobile with a smooth, trustworthy experience.",
     introP2:
-      "Startup, Professional and Premium tiers scale with different catalogs and order volumes. We build once for iOS and Android. If none of the packages fit, feel free to get in touch.",
+      "Startup, Professional and Premium tiers scale with different catalogs and order volumes. On the Premium tier, you can scale without language limits. We build once for iOS and Android. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "42-56",
@@ -368,7 +392,7 @@ export const appPackagesEn = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Advanced filtering and infinite scroll",
+              ...standartDevExtrasEcommerce,
             ],
           },
           {
@@ -400,9 +424,8 @@ export const appPackagesEn = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Design-accurate ecommerce UI",
-              "Custom cart and checkout animations",
-              "High-performance, growth-ready infrastructure",
+              ...standartDevExtrasEcommerce,
+              ...proDesignExtrasEcommerce,
             ],
           },
           {
@@ -420,7 +443,7 @@ export const appPackagesEn = {
           { label: GROUP_LAUNCH, items: [...proDeliveryItems] },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
