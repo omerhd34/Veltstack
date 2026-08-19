@@ -20,9 +20,22 @@ const commonDeliveryStandart = [
   "Canlıya alma ve geçiş desteği",
 ] as const;
 
+const proDeliveryExtras = [
+  "Ön izleme ortamında test ve planlı canlıya geçiş",
+] as const;
+
 const commonDeliveryPro = [
-  "Kaynak kodu ve proje dosyalarının teslimi",
-  "Canlıya alma ve geçiş desteği",
+  ...commonDeliveryStandart,
+  ...proDeliveryExtras,
+] as const;
+
+const commonSupportStandartItems = [
+  "Geçiş sonrası teknik destek",
+] as const;
+
+const proSupportExtras = [
+  "Kullanım kılavuzu ve kısa yönetim eğitimi",
+  "Öncelikli teknik destek",
 ] as const;
 
 const seoMigrationStandartItems = [
@@ -42,6 +55,7 @@ const REFRESH_GROUP_ANALYSIS = "Analiz & Planlama";
 const REFRESH_GROUP_DESIGN = "Tasarım & Yenileme";
 const REFRESH_GROUP_SEO = "SEO & Geçiş Koruması";
 const REFRESH_GROUP_DELIVERY = "Yayın & Teslimat";
+const REFRESH_GROUP_SUPPORT = "Teknik Destek";
 
 // ---------------------------------------------------------------------------
 // Portföy / Tanıtım
@@ -76,10 +90,9 @@ const portfolioDesignPro = [
   "Dinamik içerik yönetim paneli",
 ] as const;
 
-const portfolioSeoTemel = ["301 yönlendirme kurulumu"] as const;
-
-const portfolioDeliveryProExtras = [
-  "Kullanım kılavuzu ve kısa yönetim eğitimi",
+const portfolioSeoTemel = [
+  "301 yönlendirme kurulumu",
+  "Mevcut meta başlık ve açıklama koruma planı",
 ] as const;
 
 // ---------------------------------------------------------------------------
@@ -115,12 +128,10 @@ const corporateDesignPro = [
   ...standartDesignExtras,
   "Yüksek trafiğe hazır ölçeklenebilir altyapı",
   "Gelişmiş CMS ve içerik yönetimi",
-  "En Fazla 5 Dil Desteği ve çoklu departman yapısı",
+  "Çoklu dil ve departman yapısı",
   "API ve üçüncü taraf entegrasyonları",
   "CDN ve önbellek optimizasyonu",
   "Kapsamlı güvenlik denetimi ve iyileştirme",
-  "Form ve entegrasyon güncellemesi",
-  "KVKK uyumlu çerez bildirimi",
 ] as const;
 
 const corporateSeoTemel = ["301 yönlendirme kurulumu"] as const;
@@ -166,16 +177,18 @@ const ecommerceDesignPro = [
   ...commonRedesignItems,
   ...standartDesignExtras,
   "Ölçeklenebilir modern altyapıya geçiş",
-  "En Fazla 5 Dil ve çoklu para birimi desteği",
+  "Çoklu dil ve para birimi desteği",
   "Gelişmiş kampanya ve promosyon modülü",
   "ERP, muhasebe ve fatura entegrasyon hazırlığı",
   "PCI-DSS uyumlu sanal POS entegrasyon altyapısı",
-  "Gelişmiş güvenlik ve fraud koruması",
+  "Gelişmiş güvenlik ve dolandırıcılık koruması",
   "Anlık stok senkronizasyonu",
-  "Terk edilen sepet hatırlatma altyapısı",
 ] as const;
 
-const ecommerceSeoTemel = ["Ürün URL ve meta koruma planı"] as const;
+const ecommerceSeoTemel = [
+  "Ürün URL ve meta koruma planı",
+  "301 yönlendirme kurulumu",
+] as const;
 
 const ecommerceSeoStandart = [
   "Ürün URL ve meta koruma planı",
@@ -202,7 +215,7 @@ export const refreshPackagesTr = {
     description:
       "Mevcut tanıtım sitenizi modern tasarım, hızlı altyapı ve SEO korumasıyla yenileyin; içeriklerinizi kaybetmeden güçlü bir dijital vitrin oluşturun.",
     introP2:
-      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle tanıtım sitenizin yenileme kapsamını netleştiririz. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleriyle tanıtım sitenizin yenileme kapsamını netleştiririz. Kapsamlı pakette dil sınırı olmadan ölçeklenebilirsiniz. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
     tiers: {
       temel: {
         deliveryDays: "7-14",
@@ -226,6 +239,7 @@ export const refreshPackagesTr = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryTemel],
           },
+          { label: REFRESH_GROUP_SUPPORT, items: [] },
         ],
       },
       standart: {
@@ -250,6 +264,10 @@ export const refreshPackagesTr = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryStandart],
           },
+          {
+            label: REFRESH_GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
+          },
         ],
       },
       pro: {
@@ -272,7 +290,11 @@ export const refreshPackagesTr = {
           },
           {
             label: REFRESH_GROUP_DELIVERY,
-            items: [...commonDeliveryPro, ...portfolioDeliveryProExtras],
+            items: [...commonDeliveryPro],
+          },
+          {
+            label: REFRESH_GROUP_SUPPORT,
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -284,12 +306,13 @@ export const refreshPackagesTr = {
     description:
       "Kurumsal web sitenizi güncel tasarım, güvenli altyapı ve planlı geçişle yenileyin; marka güveninizi ve organik görünürlüğünüzü koruyun.",
     introP2:
-      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle kurumsal sitenizin yenileme kapsamını netleştiririz. Mevcut içerik ve entegrasyonlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleriyle kurumsal sitenizin yenileme kapsamını netleştiririz. Kapsamlı pakette dil sınırı olmadan ölçeklenebilirsiniz. Mevcut içerik ve entegrasyonlarınızı koruyarak kesintisiz geçiş sağlıyoruz.",
     tiers: {
       temel: {
         deliveryDays: "10-18",
         revisions: "2",
         supportDays: "15",
+        languages: "1",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -307,12 +330,14 @@ export const refreshPackagesTr = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryTemel],
           },
+          { label: REFRESH_GROUP_SUPPORT, items: [] },
         ],
       },
       standart: {
         deliveryDays: "18-28",
         revisions: "4",
         supportDays: "30",
+        languages: "1-5",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -330,12 +355,17 @@ export const refreshPackagesTr = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryStandart],
           },
+          {
+            label: REFRESH_GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
+          },
         ],
       },
       pro: {
         deliveryDays: "28-42",
         revisions: "6",
         supportDays: "45",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -353,6 +383,10 @@ export const refreshPackagesTr = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryPro, ...corporateDeliveryProExtras],
           },
+          {
+            label: REFRESH_GROUP_SUPPORT,
+            items: [...commonSupportStandartItems, ...proSupportExtras],
+          },
         ],
       },
     },
@@ -363,12 +397,13 @@ export const refreshPackagesTr = {
     description:
       "E-ticaret sitenizi modern altyapı, akıcı ödeme deneyimi ve SEO korumasıyla yenileyin; ürün verilerinizi ve sıralamanızı riske atmadan dönüşüm odaklı bir mağazaya geçin.",
     introP2:
-      "Girişim, Profesyonel ve Kapsamlı seviyeleriyle e-ticaret mağazanızın yenileme kapsamını netleştiririz. Ürün verilerinizi ve organik görünürlüğünüzü koruyarak dönüşüm odaklı bir mağazaya geçiyoruz.",
+      "Girişim, Profesyonel ve Kapsamlı paketleriyle e-ticaret mağazanızın yenileme kapsamını netleştiririz. Kapsamlı pakette dil sınırı olmadan ölçeklenebilirsiniz. Ürün verilerinizi ve organik görünürlüğünüzü koruyarak dönüşüm odaklı bir mağazaya geçiyoruz.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
         revisions: "2",
         supportDays: "15",
+        languages: "1",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -386,12 +421,14 @@ export const refreshPackagesTr = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...ecommerceDeliveryTemel],
           },
+          { label: REFRESH_GROUP_SUPPORT, items: [] },
         ],
       },
       standart: {
         deliveryDays: "21-35",
         revisions: "4",
         supportDays: "30",
+        languages: "1-5",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -409,12 +446,17 @@ export const refreshPackagesTr = {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryStandart],
           },
+          {
+            label: REFRESH_GROUP_SUPPORT,
+            items: [...commonSupportStandartItems],
+          },
         ],
       },
       pro: {
         deliveryDays: "35-49",
         revisions: "6",
         supportDays: "45",
+        languages: "Sınırsız",
         featureGroups: [
           {
             label: REFRESH_GROUP_ANALYSIS,
@@ -431,6 +473,10 @@ export const refreshPackagesTr = {
           {
             label: REFRESH_GROUP_DELIVERY,
             items: [...commonDeliveryPro, ...ecommerceDeliveryProExtras],
+          },
+          {
+            label: REFRESH_GROUP_SUPPORT,
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
