@@ -10,8 +10,36 @@ const commonDesignItems = [
 ] as const;
 
 const standartDesignExtras = [
-  "Dark / light mode support",
   "Smooth page transitions and micro-interactions",
+] as const;
+
+const proDesignExtras = [
+  "Custom design details and advanced animations",
+  "Scalable infrastructure ready for high traffic",
+] as const;
+
+const standartPanelExtras = ["Dark / light mode support"] as const;
+
+const portfolioPanelExtras = [
+  "Project and portfolio gallery management",
+  "Service and skills showcase management",
+  "Client testimonials and reference management",
+  "Blog post creation and editing",
+  "Image upload and media library",
+  "No-code text editing (rich editor)",
+  "Draft save and publish workflow",
+  "Page title and description editing from the panel",
+] as const;
+
+const corporatePanelExtras = [
+  "Reference and project gallery management",
+  "Team and department page management",
+  "FAQ management",
+  "Blog post creation and editing",
+  "Image upload and media library",
+  "No-code text editing (rich editor)",
+  "Draft save and publish workflow",
+  "Page title and description editing from the panel",
 ] as const;
 
 const commonDeliveryItems = [
@@ -29,14 +57,21 @@ const standartDeliveryItems = [
   ...commonDeliveryItems,
 ] as const;
 
+const proDeliveryExtras = [
+  "Staging environment setup and controlled go-live",
+] as const;
+
 const proDeliveryItems = [
   ...freeDomainHosting,
   ...commonDeliveryItems,
+  ...proDeliveryExtras,
 ] as const;
 
 const commonSupportStandartItems = [
   "User guide and short admin training",
 ] as const;
+
+const proSupportExtras = ["Priority technical support"] as const;
 
 const GROUP_DEV = "Design & Infrastructure";
 const GROUP_PANEL = "Content & Admin";
@@ -70,7 +105,7 @@ const tierSeoProItems = [
   "Organization, BreadcrumbList and rich-result schema",
   "Conversion tracking (forms, clicks, CTAs)",
   "Live chat or WhatsApp integration",
-  "CRM / email marketing tool connection",
+  "CRM / email marketing tool integration",
 ] as const;
 
 const ecommerceStoreCommonItems = [
@@ -100,7 +135,6 @@ const ecommerceStoreProExtras = [
 
 const ecommercePanelCommonItems = [
   "Product, category and order management",
-  "Category management",
   "Basic stock tracking",
 ] as const;
 
@@ -140,13 +174,7 @@ export const webPackagesEn = {
             items: [...commonDesignItems],
           },
           { label: "SEO & Integration", items: [...tierSeoTemelItems] },
-          {
-            label: GROUP_PANEL,
-            items: [
-              "Services, projects and about sections",
-              "Contact and call-to-action areas",
-            ],
-          },
+          { label: GROUP_PANEL, items: [] },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           { label: GROUP_SUPPORT, items: [] },
         ],
@@ -155,7 +183,7 @@ export const webPackagesEn = {
         deliveryDays: "21-30",
         revisions: "5",
         supportDays: "30",
-        pages: "10-50",
+        pages: "1-50",
         languages: "1-5",
         featureGroups: [
           {
@@ -165,13 +193,7 @@ export const webPackagesEn = {
           { label: "SEO & Integration", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
-            items: [
-              "Services, projects and about sections",
-              "Contact and call-to-action areas",
-              "Editable portfolio / project gallery",
-              "References and client testimonial areas",
-              "Content management panel",
-            ],
+            items: [...standartPanelExtras, ...portfolioPanelExtras],
           },
           {
             label: GROUP_LAUNCH,
@@ -195,22 +217,13 @@ export const webPackagesEn = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Pixel-perfect UI from your design files (when provided)",
-              "Scalable infrastructure for high traffic",
+              ...proDesignExtras,
             ],
           },
           { label: "SEO & Integration", items: [...tierSeoProItems] },
           {
             label: GROUP_PANEL,
-            items: [
-              "Services, projects and about sections",
-              "Contact and call-to-action areas",
-              "Editable portfolio / project gallery",
-              "References and client testimonial areas",
-              "Content management panel",
-              "Blog and article publishing module",
-              "Project filtering and category management",
-            ],
+            items: [...standartPanelExtras, ...portfolioPanelExtras],
           },
           {
             label: GROUP_LAUNCH,
@@ -218,7 +231,7 @@ export const webPackagesEn = {
           },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -230,7 +243,7 @@ export const webPackagesEn = {
     description:
       "A trustworthy corporate website aligned with your brand identity and built to win customers. Present your services, team and contact channels in a professional structure.",
     introP2:
-      "Startup, Professional and Premium tiers adapt to corporate web projects of different scales. On Premium, you can grow without page limits. If none of the packages fit, feel free to get in touch.",
+      "Startup, Professional and Premium tiers adapt to corporate web projects of different scales. On the Premium tier, you can grow without page limits. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "14-21",
@@ -244,13 +257,7 @@ export const webPackagesEn = {
             items: [...commonDesignItems],
           },
           { label: "SEO & Integration", items: [...tierSeoTemelItems] },
-          {
-            label: GROUP_PANEL,
-            items: [
-              "Services, about and contact pages",
-              "Forms routed to corporate email",
-            ],
-          },
+          { label: GROUP_PANEL, items: [] },
           { label: GROUP_LAUNCH, items: [...commonDeliveryItems] },
           { label: GROUP_SUPPORT, items: [] },
         ],
@@ -259,7 +266,7 @@ export const webPackagesEn = {
         deliveryDays: "28-42",
         revisions: "5",
         supportDays: "30",
-        pages: "10-50",
+        pages: "1-50",
         languages: "1-5",
         featureGroups: [
           {
@@ -269,15 +276,7 @@ export const webPackagesEn = {
           { label: "SEO & Integration", items: [...tierSeoStandartItems] },
           {
             label: GROUP_PANEL,
-            items: [
-              "Services, about and contact pages",
-              "Forms routed to corporate email",
-              "Content management panel",
-              "Blog, news and announcement publishing",
-              "Team and staff profile pages",
-              "References and success stories",
-              "Media / press kit and document area",
-            ],
+            items: [...standartPanelExtras, ...corporatePanelExtras],
           },
           {
             label: GROUP_LAUNCH,
@@ -301,25 +300,13 @@ export const webPackagesEn = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Pixel-perfect corporate UI from your design files (when provided)",
-              "Scalable infrastructure for high traffic",
+              ...proDesignExtras,
             ],
           },
           { label: "SEO & Integration", items: [...tierSeoProItems] },
           {
             label: GROUP_PANEL,
-            items: [
-              "Services, about and contact pages",
-              "Forms routed to corporate email",
-              "Content management panel",
-              "Blog, news and announcement publishing",
-              "Team and staff profile pages",
-              "References and success stories",
-              "Media / press kit and document area",
-              "Career / job posting module and application form",
-              "Event and announcement calendar",
-              "Video gallery and media management",
-            ],
+            items: [...standartPanelExtras, ...corporatePanelExtras],
           },
           {
             label: GROUP_LAUNCH,
@@ -327,7 +314,7 @@ export const webPackagesEn = {
           },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
@@ -339,7 +326,7 @@ export const webPackagesEn = {
     description:
       "A modern ecommerce solution with secure payments so you can start selling online fast. Manage products, orders and the customer experience from a single scalable storefront.",
     introP2:
-      "Startup, Professional and Premium tiers scale with different product catalogs and order volumes. On Premium, you can scale without product or category limits. If none of the packages fit, feel free to get in touch.",
+      "Startup, Professional and Premium tiers scale with different product catalogs and order volumes. On the Premium tier, you can scale without product or category limits. If none of the packages fit, feel free to get in touch.",
     tiers: {
       temel: {
         deliveryDays: "21-30",
@@ -369,7 +356,7 @@ export const webPackagesEn = {
         deliveryDays: "42-56",
         revisions: "5",
         supportDays: "30",
-        pages: "10-50",
+        pages: "1-50",
         languages: "1-5",
         featureGroups: [
           {
@@ -387,6 +374,7 @@ export const webPackagesEn = {
           {
             label: GROUP_PANEL,
             items: [
+              ...standartPanelExtras,
               ...ecommercePanelCommonItems,
               ...ecommercePanelStandartExtras,
             ],
@@ -413,8 +401,7 @@ export const webPackagesEn = {
             items: [
               ...commonDesignItems,
               ...standartDesignExtras,
-              "Pixel-perfect storefront UI from your design files (when provided)",
-              "Scalable infrastructure for high traffic",
+              ...proDesignExtras,
             ],
           },
           { label: "SEO & Integration", items: [...tierSeoProItems] },
@@ -429,6 +416,7 @@ export const webPackagesEn = {
           {
             label: GROUP_PANEL,
             items: [
+              ...standartPanelExtras,
               ...ecommercePanelCommonItems,
               ...ecommercePanelStandartExtras,
               ...ecommercePanelProExtras,
@@ -440,7 +428,7 @@ export const webPackagesEn = {
           },
           {
             label: GROUP_SUPPORT,
-            items: [...commonSupportStandartItems],
+            items: [...commonSupportStandartItems, ...proSupportExtras],
           },
         ],
       },
