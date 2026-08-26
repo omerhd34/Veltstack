@@ -49,32 +49,32 @@ export const serviceDetailsTr = {
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
   "web-sitesi-gelistirme": {
-    metaTitle: "Web Sitesi Geliştirme",
+    metaTitle: "Web Sitesi Yapımı",
     metaDesc:
-      "Kurumsal web sitesi geliştirme, e-ticaret ve portfolyo projelerinde uçtan uca web geliştirme. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
+      "Kurumsal web sitesi yapımı, e-ticaret ve portfolyo projelerinde uçtan uca web sitesi yapımı. Next.js ile hızlı, SEO uyumlu ve ölçeklenebilir çözümler.",
     keywords: [
-      "web sitesi geliştirme",
+      "web sitesi yapımı",
       "web sitesi tasarımı",
       "kurumsal web sitesi",
       "Next.js web sitesi",
-      "e-ticaret web sitesi geliştirme",
-      "landing page geliştirme",
+      "e-ticaret web sitesi yapımı",
+      "landing page yapımı",
       "SSR web sitesi",
       "React web sitesi",
       "portfolyo sitesi",
       "kurumsal tanıtım sitesi",
       "ölçeklenebilir web uygulaması",
     ],
-    heroBadge: "Web Geliştirme",
-    heroTitle: "Web Sitesi Geliştirme",
+    heroBadge: "Web",
+    heroTitle: "Web Sitesi Yapımı",
     heroImageAlt:
-      "Modern web sitesi geliştirmeyi simgeleyen soyut tarayıcı ve layout illüstrasyonu",
+      "Modern web sitesi yapımını simgeleyen soyut tarayıcı ve layout illüstrasyonu",
     heroSubtitle:
       "Kurumsal siteden e-ticarete, portfolyodan tanıtım sayfasına kadar her web projesini uçtan uca geliştiriyorum; modern altyapı, SEO uyumlu yapı ve mobil öncelikli tasarımla hızlı, ölçeklenebilir çözümler sunuyorum.",
     processSubtitle:
       "Keşiften yayına kadar her aşamada ne yapılacağını, ne zaman teslim edileceğini ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve canlıya alma adımlarını öngörülebilir bir planla yönetiyor; proje boyunca düzenli iletişimle sizi bilgilendiriyoruz.",
     techSubtitle:
-      "Projenizin ihtiyacına göre seçilmiş, güncel ve ölçeklenebilir araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
+      "Projenizin ihtiyacına göre seçilmiş, güncel ve ölçeklenebilir araçlar.",
     processItems: webSitesiGelistirmeProcessTr,
     features: [
       {
@@ -129,7 +129,7 @@ export const serviceDetailsTr = {
       },
     ],
   },
-  "web-sitesi-yenileme": {
+  "dijital-yenileme": {
     metaTitle: "Web Sitesi Yenileme | Modern Redesign",
     metaDesc:
       "Eski veya yavaş web sitenizi modern tasarım, hızlı altyapı ve SEO iyileştirmeleriyle yenileyin. İçeriklerinizi koruyarak güvenli geçiş.",
@@ -190,13 +190,13 @@ export const serviceDetailsTr = {
     ],
   },
   "uygulama-gelistirme": {
-    metaTitle: "Mobil Uygulama Geliştirme",
+    metaTitle: "Uygulama Yapımı",
     metaDesc:
-      "iOS ve Android için React Native ve Expo ile performanslı mobil uygulama geliştirme hizmeti.",
+      "iOS ve Android için React Native ve Expo ile performanslı mobil uygulama yapımı hizmeti.",
     keywords: [
-      "mobil uygulama geliştirme",
+      "mobil uygulama yapımı",
       "React Native uygulama",
-      "iOS Android uygulama geliştirme",
+      "iOS Android uygulama yapımı",
       "Expo mobil uygulama",
       "cross platform uygulama",
       "App Store yayın",
@@ -205,16 +205,16 @@ export const serviceDetailsTr = {
       "native mobil uygulama",
       "startup mobil uygulama",
     ],
-    heroBadge: "Uygulama Geliştirme",
-    heroTitle: "Mobil Uygulama Geliştirme",
+    heroBadge: "Uygulama",
+    heroTitle: "Uygulama Yapımı",
     heroImageAlt:
-      "Mobil uygulama geliştirmeyi simgeleyen yüzen telefon ve arayüz illüstrasyonu",
+      "Mobil uygulama yapımını simgeleyen yüzen telefon ve arayüz illüstrasyonu",
     heroSubtitle:
       "Tek kod tabanıyla iOS ve Android'de çalışan mobil uygulamalar geliştiriyorum; React Native ve Expo ile hızlı teslimat, mağaza yayını ve backend entegrasyonlarını tek çatı altında yönetiyorum.",
     processSubtitle:
       "Uygulama fikrinden mağaza yayınına kadar her aşamada ne yapılacağını ve hangi çıktının alınacağını netleştiriyoruz. Tasarım, yapım, test ve yayın adımlarını öngörülebilir bir planla yönetiyoruz.",
     techSubtitle:
-      "Mobil uygulama projelerinde kullandığımız güncel ve ölçeklenebilir araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
+      "Mobil uygulama projelerinde kullandığımız güncel ve ölçeklenebilir araçlar.",
     processItems: uygulamaGelistirmeProcessTr,
     features: [
       {
@@ -326,7 +326,7 @@ export const serviceDetailsTr = {
       "sitemap robots denetimi",
       "teknik borç analizi",
     ],
-    heroBadge: "Teknik Denetim",
+    heroBadge: "Denetim",
     heroTitle: "Teknik Denetim",
     heroImageAlt:
       "Teknik denetimi simgeleyen tarama ve güvenlik kontrol illüstrasyonu",
@@ -335,7 +335,7 @@ export const serviceDetailsTr = {
     processSubtitle:
       "Denetim sürecini briefing'den aksiyon planına kadar net adımlarla yönetiyoruz. Bulguları öncelik sırasına göre raporlayıp uygulanabilir öneriler sunuyoruz.",
     techSubtitle:
-      "Teknik denetimlerde performans, güvenlik ve SEO analizi için kullandığımız araçlar. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
+      "Teknik denetimlerde performans, güvenlik ve SEO analizi için kullandığımız araçlar.",
     processItems: teknikDenetimProcessTr,
     features: [
       {
@@ -395,7 +395,7 @@ export const serviceDetailsTr = {
     processSubtitle:
       "Proje devralmadan aylık raporlamaya kadar bakım sürecini düzenli ve öngörülebilir adımlarla yönetiyoruz. Güncelleme, izleme ve destek talepleri net bir takvimle ilerler.",
     techSubtitle:
-      "Bakım ve destek hizmetlerinde kullandığımız altyapı ve izleme araçları. Renkli ikonlar projelerimizde asıl kullandığımız teknolojileri; soluk ikonlar ise talep etmeniz halinde kullanabileceğimiz alternatifleri gösterir.",
+      "Bakım ve destek hizmetlerinde kullandığımız altyapı ve izleme araçları.",
     processItems: bakimVeDestekProcessTr,
     features: [
       {
