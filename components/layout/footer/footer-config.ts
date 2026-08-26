@@ -1,7 +1,7 @@
 import type { NavProjectKey } from "@/components/layout/navbar/nav-projects";
 import type { NavServiceKey } from "@/components/layout/navbar/nav-services";
 import { serviceItems } from "@/components/sections/services/service-items";
-import { projectItems } from "@/components/sections/projects/project-items";
+import { projectItems, hasProjectHref } from "@/components/sections/projects/project-items";
 import type { IconType } from "react-icons";
 import {
   LuBot,
@@ -40,11 +40,13 @@ export const footerServiceItems = [
   };
 });
 
-export const footerProjectItems = projectItems.map((project) => ({
-  href: project.href,
-  navKey: project.navDescKey.replace(/Desc$/, "") as NavProjectKey,
-  icon: project.icon,
-}));
+export const footerProjectItems = projectItems
+  .filter(hasProjectHref)
+  .map((project) => ({
+    href: project.href,
+    navKey: project.navDescKey.replace(/Desc$/, "") as NavProjectKey,
+    icon: project.icon,
+  }));
 
 const footerBlogCategoryIcons: Record<string, IconType> = {
   "Web Yapımı": LuCode,

@@ -11,6 +11,9 @@ import { getNavBlogPosts } from "@/components/pages/blog/blog-data";
 import { getFooterBlogCategoryIcon } from "@/components/layout/footer/footer-config";
 import { serviceItems } from "@/components/sections/services/service-items";
 import { projectItems } from "@/components/sections/projects/project-items";
+import {
+  hasProjectHref,
+} from "@/components/sections/projects/project-items";
 import type { NavServiceKey } from "./nav-services";
 import type { NavProjectKey } from "./nav-projects";
 import { navItemClass } from "./nav-link-styles";
@@ -225,7 +228,7 @@ export function NavbarLinks({
           </div>
           {projectsOpen && (
             <ul className={mobileNestedListClass}>
-              {projectItems.map((item, index) => {
+              {projectItems.filter(hasProjectHref).map((item, index, list) => {
                 const navKey = item.navDescKey.replace(
                   /Desc$/,
                   "",
@@ -247,7 +250,7 @@ export function NavbarLinks({
                 return (
                   <MobileNavTreeItem
                     key={item.href}
-                    isLast={index === projectItems.length - 1}
+                    isLast={index === list.length - 1}
                   >
                     <SoftPrefetchLink
                       href={item.href}

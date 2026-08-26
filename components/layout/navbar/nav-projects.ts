@@ -1,4 +1,7 @@
-import { projectItems } from "@/components/sections/projects/project-items";
+import {
+  hasProjectHref,
+  projectItems,
+} from "@/components/sections/projects/project-items";
 
 export type NavProjectKey =
   | "projectIqfinans"
@@ -13,9 +16,9 @@ export type NavProjectItem = {
   navKey: NavProjectKey;
 };
 
-export const navProjectItems: NavProjectItem[] = projectItems.map(
-  (project) => ({
+export const navProjectItems: NavProjectItem[] = projectItems
+  .filter(hasProjectHref)
+  .map((project) => ({
     href: project.href,
     navKey: project.navDescKey.replace(/Desc$/, "") as NavProjectKey,
-  }),
-);
+  }));

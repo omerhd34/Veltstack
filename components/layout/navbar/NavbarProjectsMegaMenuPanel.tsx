@@ -1,7 +1,10 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { projectItems } from "@/components/sections/projects/project-items";
+import {
+  hasProjectHref,
+  projectItems,
+} from "@/components/sections/projects/project-items";
 import { useUiStore } from "@/store/uiSlice";
 import { NavbarMegaMenuItem } from "./NavbarMegaMenuItem";
 import { NavbarMegaMenuShell } from "./NavbarMegaMenuShell";
@@ -12,6 +15,7 @@ export function NavbarProjectsMegaMenuPanel() {
   const setProjectsMenuOpen = useUiStore((state) => state.setProjectsMenuOpen);
 
   const closeMenu = () => setProjectsMenuOpen(false);
+  const linkedProjects = projectItems.filter(hasProjectHref);
 
   return (
     <NavbarMegaMenuShell
@@ -19,7 +23,7 @@ export function NavbarProjectsMegaMenuPanel() {
       allLabel={tNav("projectsAll")}
       onNavigate={closeMenu}
     >
-      {projectItems.map((project) => (
+      {linkedProjects.map((project) => (
         <NavbarMegaMenuItem
           key={project.href}
           href={project.href}
