@@ -1,9 +1,3 @@
-import {
-  flattenTechCategories,
-  seoHizmetleriTechCategories,
-  webSitesiTechCategories,
-} from "./service-tech-categories";
-
 export const webSitesiPrimaryTech = [
   "Next.js",
   "React",
@@ -17,23 +11,22 @@ export const webSitesiPrimaryTech = [
   "Framer Motion",
   "Node.js",
   "REST API",
-  "Zustand",
   "Vercel",
   "ixirhost",
-  "cPanel",
   "Git",
   "GitHub",
   "Google Analytics",
-  "Google Search",
+  "Google Search Console",
+  "Google Tag Manager",
+  "Google Ads",
+  "Google Business Profile",
   "Lighthouse",
   "PageSpeed Insights",
   "Postman",
   "PayTR",
 ] as const;
 
-export const webSitesiYenilemePrimaryTech = flattenTechCategories(
-  webSitesiTechCategories,
-);
+export const webSitesiYenilemePrimaryTech = webSitesiPrimaryTech;
 
 export const uygulamaGelistirmePrimaryTech = [
   "React Native",
@@ -60,47 +53,68 @@ export const uygulamaGelistirmePrimaryTech = [
   "Sentry",
 ] as const;
 
-export const seoHizmetleriPrimaryTech = flattenTechCategories(
-  seoHizmetleriTechCategories,
-);
-
-export const teknikDenetimPrimaryTech = [
+export const seoHizmetleriPrimaryTech = [
+  "Next.js",
+  "React",
+  "Google Analytics",
+  "Google Search Console",
+  "Google Tag Manager",
+  "Google Ads",
+  "Google Business Profile",
   "Lighthouse",
   "PageSpeed Insights",
-  "Google Search Console",
-  "Google Analytics",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "Prisma",
-  "GitHub",
+  "Meta Pixel",
   "Vercel",
-  "Postman",
 ] as const;
 
-export const bakimVeDestekPrimaryTech = [
+/** Web sitesi + uygulama primary birleşimi (teknik denetim & bakım). */
+export const teknikVeBakimPrimaryTech = [
   "Next.js",
   "React",
   "TypeScript",
-  "Node.js",
+  "Redux",
+  "React Native",
+  "Expo",
+  "Zustand",
+  "TanStack Query",
   "MySQL",
-  "Prisma",
   "PostgreSQL",
+  "Prisma",
+  "Tailwind CSS",
+  "Sass & SCSS",
+  "Shadcn",
+  "Framer Motion",
+  "Node.js",
+  "REST API",
+  "Firebase",
   "Vercel",
   "ixirhost",
-  "GitHub",
   "Git",
-  "Postman",
+  "GitHub",
+  "Google Analytics",
+  "Google Search Console",
+  "Google Tag Manager",
+  "Google Ads",
+  "Google Business Profile",
   "Lighthouse",
-  "Upstash",
-  "Redis",
+  "PageSpeed Insights",
+  "Postman",
+  "PayTR",
+  "App Store",
+  "Google Play",
+  "Figma",
+  "Google Maps",
+  "Sentry",
 ] as const;
+
+export const teknikDenetimPrimaryTech = teknikVeBakimPrimaryTech;
+export const bakimVeDestekPrimaryTech = teknikVeBakimPrimaryTech;
 
 export const servicePrimaryTechStacks: Partial<
   Record<string, readonly string[]>
 > = {
   "web-sitesi-gelistirme": webSitesiPrimaryTech,
-  "web-sitesi-yenileme": webSitesiYenilemePrimaryTech,
+  "dijital-yenileme": webSitesiYenilemePrimaryTech,
   "uygulama-gelistirme": uygulamaGelistirmePrimaryTech,
   "seo-hizmetleri": seoHizmetleriPrimaryTech,
   "teknik-denetim": teknikDenetimPrimaryTech,
@@ -145,8 +159,10 @@ export const techIconColors: Record<string, string> = {
   Vercel: "text-[#0A0A0F]",
   Zustand: "text-[#443F43]",
   cPanel: "text-[#FF6C2C]",
+  Netlify: "text-[#00C7B7]",
+  "Cloudflare Pages": "text-[#F38020]",
+  "AWS Amplify": "text-[#FF9900]",
   Postman: "text-[#FF6C37]",
-  "Google Search": "text-[#4285F4]",
   "Google Search Console": "text-[#458CF5]",
   "Google Analytics": "text-[#E37400]",
   Lighthouse: "text-[#F44B21]",
@@ -169,6 +185,8 @@ export const techIconColors: Record<string, string> = {
   Upstash: "text-[#00E9A3]",
   Semrush: "text-[#FF642D]",
   "Google Tag Manager": "text-[#246FDB]",
+  "Google Ads": "text-[#F9AB00]",
+  "Google Business Profile": "text-[#1A73E8]",
   "JSON-LD": "text-[#6366F1]",
   "App Store": "text-[#0D96F6]",
   "Google Play": "text-[#414141]",
