@@ -8,10 +8,10 @@ export const projectsPageTr = {
   scrollLabel: "Projeleri İncele",
   stats: [
     {
-      value: "6",
+      value: "38",
       label: "Seçilmiş Proje",
       labelShort: "Projeler",
-      hint: "Portföyümüzde detaylı inceleme sunulan seçilmiş proje sayısı. Her biri gerçek iş hedeflerine yönelik teslim edilmiştir.",
+      hint: "Portföyümüzde yer alan seçilmiş proje sayısı. Her biri gerçek iş hedeflerine yönelik teslim edilmiştir.",
     },
     {
       value: "__techCount__",
@@ -37,4 +37,6 @@ export const projectsPageTr = {
   showcaseSubtitle:
     "İş hedeflerine odaklı, performans ve ölçülebilir sonuçlarla dengelenmiş yapım projeleri.",
   featuredLabel: "Öne Çıkan",
+  carouselPrev: "Önceki projeler",
+  carouselNext: "Sonraki projeler",
 } as const;
