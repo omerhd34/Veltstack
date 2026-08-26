@@ -11,11 +11,13 @@ export const servicesPackagesTr = {
   packagesTitleLead: "Hizmetler &",
   packagesTitleAccent: "Paketler",
   packagesTitleSuffix: "Paketleri",
+  packagesTitleWeb: "Web Sitesi Paketleri",
+  packagesTitleApp: "Uygulama Paketleri",
   packagesSubtitle:
     "Web sitesi, mobil uygulama, dijital yenileme, SEO, teknik denetim ve bakım alanlarında sunduğumuz hizmet paketlerini inceleyin. Sekmeler arasında geçerek Girişim, Profesyonel ve Kapsamlı seviyelerini karşılaştırın; teslim süresi, kapsam ve dahil özellikleri yan yana görüp projenize en uygun seviyeyi kolayca belirleyin.",
-  tabWeb: "Web Sitesi Geliştirme",
+  tabWeb: "Web Sitesi Yapımı",
   tabRefresh: "Dijital Yenileme",
-  tabApp: "Uygulama Geliştirme",
+  tabApp: "Uygulama Yapımı",
   tabSeo: "SEO Hizmetleri",
   tabAudit: "Teknik Denetim",
   tabMaintenance: "Bakım & Destek",
@@ -36,7 +38,7 @@ export const servicesPackagesTr = {
   featureIncluded: "dahil",
   featureNotIncluded: "dahil değil",
   deliveryGroupLabel: "Yayın & Teslimat",
-  webIntroTitle: "İhtiyacınıza göre web geliştirme",
+  webIntroTitle: "İhtiyacınıza göre web sitesi yapımı",
   webIntroP1:
     "Tanıtım sitesinden kurumsal portala, e-ticaret mağazasından özel iş akışlarına, ne hedefliyorsanız ona uygun web çözümünü birlikte şekillendiriyoruz. Tasarımdan yayına almaya kadar tüm süreci tek elden yönetiyorum.",
   webIntroP2:
@@ -45,7 +47,7 @@ export const servicesPackagesTr = {
   refreshIntroP1:
     "Eski veya yavaş web ve mobil uygulamalarını modern, hızlı deneyimlere dönüştürüyoruz. Altyapı, arayüz ve içerik katmanlarını birlikte yenileyerek mevcut verilerinizi koruyarak kesintisiz geçiş sağlıyoruz.",
   refreshIntroP2:
-    "Portföy, kurumsal ve e-ticaret sitelerine yönelik dijital yenileme paketleri Girişim, Profesyonel ve Kapsamlı seviyelerinde sunulur. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
+    "Tek sayfalık, portfolyo, kurumsal, e-ticaret, katalog, ilan, rezervasyon ve eğitim sitelerine yönelik dijital yenileme paketleri Girişim, Profesyonel ve Kapsamlı seviyelerinde sunulur. SEO sıralamanızı koruyarak performans ve dönüşüm odaklı bir yapıya geçiş planlıyoruz.",
   appIntroTitle: "Vizyonunuza uygun mobil uygulama",
   appIntroP1:
     "Tanıtım uygulamasından kurumsal çözüme, sipariş ve rezervasyon sistemlerinden karmaşık iş süreçlerine, istediğiniz deneyimi tasarlayıp geliştiriyorum. iOS ve Android için tek bir projede ilerliyoruz.",
