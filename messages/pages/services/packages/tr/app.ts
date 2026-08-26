@@ -187,7 +187,7 @@ const ecommerceIntegrationProItems = [
 
 export const appPackagesTr = {
   portfolio: {
-    title: "Portföy / Tanıtım",
+    title: "Portfolyo / Kişisel",
     description:
       "Markanızı tek dokunuşla tanıtan, güven veren iOS ve Android uygulaması. Portföyünüzü, hizmetlerinizi ve iletişim kanallarınızı kullanıcıların cebine taşıyın.",
     introP2:
