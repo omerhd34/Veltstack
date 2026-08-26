@@ -2,6 +2,7 @@ export {
   projectItems,
   projectSlugs,
   isProjectSlug,
+  hasProjectHref,
   type ProjectItemConfig,
   type ProjectSlug,
 } from "./project-items";
