@@ -101,7 +101,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 <p>Müşteri projelerinde sıklıkla karşılaştığımız bu sorun, çoğu zaman küçük bir yapılandırma değişikliğiyle çözülebilir hale geliyor. Biz de bu içeriği hazırlarken benzer durumla karşılaşan herkesin faydalanabileceği bir kılavuz oluşturmayı hedefledik.</p>
 
 <h2>Teknik Detaylar</h2>
-<p>Modern web geliştirme pratiklerini takip eden bir ekip olarak, her konuya hem teorik hem de pratik bir bakış açısıyla yaklaşıyoruz. Araçlarımızı, kütüphanelerimizi ve süreçlerimizi sürekli güncelliyoruz.</p>
+<p>Modern web sitesi yapımı pratiklerini takip eden bir ekip olarak, her konuya hem teorik hem de pratik bir bakış açısıyla yaklaşıyoruz. Araçlarımızı, kütüphanelerimizi ve süreçlerimizi sürekli güncelliyoruz.</p>
 
 <h2>Gerçek Proje Deneyimleri</h2>
 <p>IQfinansAI, Yazıcı Ticaret ve Gardossi gibi projelerimizde öğrendiklerimizi bu yazıda paylaşıyoruz. Her proje bize yeni bir bakış açısı kazandırdı.</p>
