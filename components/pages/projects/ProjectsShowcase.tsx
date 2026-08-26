@@ -9,7 +9,7 @@ import {
 } from "@/components/sections/projects/project-items";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
-import { ProjectShowcaseCard } from "./ProjectShowcaseCard";
+import { ProjectsShowcaseCarouselLazy } from "./ProjectsShowcaseCarouselLazy";
 
 const featuredProjectSlugs = new Set<ProjectSlug>([
   "iqfinansai",
@@ -24,6 +24,17 @@ interface ProjectsShowcaseProps {
 export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
   const tPage = await getTranslations("projectsPage");
   const tHome = await getTranslations("home");
+
+  const projects = projectItems.map((project, i) => ({
+    slug: project.slug,
+    href: project.href,
+    title: tHome(project.titleKey),
+    description: tHome(project.descKey),
+    imageUrl: projectImageUrls[project.slug],
+    coverGradient: projectCoverGradients[project.slug],
+    showFeaturedBadge: featuredProjectSlugs.has(project.slug),
+    index: i + 1,
+  }));
 
   return (
     <section className={`bg-[#F8F9FA] py-24 md:py-32 ${className ?? ""}`}>
@@ -41,22 +52,15 @@ export async function ProjectsShowcase({ className }: ProjectsShowcaseProps) {
             </p>
           </header>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {projectItems.map((project, i) => (
-              <ProjectShowcaseCard
-                key={project.slug}
-                index={i + 1}
-                href={project.href}
-                title={tHome(project.titleKey)}
-                description={tHome(project.descKey)}
-                icon={project.icon}
-                imageUrl={projectImageUrls[project.slug]}
-                coverGradient={projectCoverGradients[project.slug]}
-                featuredLabel={tPage("featuredLabel")}
-                showFeaturedBadge={featuredProjectSlugs.has(project.slug)}
-              />
-            ))}
-          </div>
+          <ProjectsShowcaseCarouselLazy
+            className="mt-14"
+            projects={projects}
+            featuredLabel={tPage("featuredLabel")}
+            navLabels={{
+              prev: tPage("carouselPrev"),
+              next: tPage("carouselNext"),
+            }}
+          />
         </SectionScrollReveal>
       </SiteContainer>
     </section>
