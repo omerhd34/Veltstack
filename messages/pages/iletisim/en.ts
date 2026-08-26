@@ -24,9 +24,9 @@ export const contactEn = {
     "Describe your project, expectations, and any technical requirements…",
 
   serviceOptions: [
-    { value: "web-sitesi-gelistirme", label: "Website Development" },
-    { value: "web-sitesi-yenileme", label: "Digital Refresh" },
-    { value: "uygulama-gelistirme", label: "App Development" },
+    { value: "web-sitesi-gelistirme", label: "Website Building" },
+    { value: "dijital-yenileme", label: "Digital Refresh" },
+    { value: "uygulama-gelistirme", label: "App Building" },
     { value: "seo-hizmetleri", label: "SEO Services" },
     { value: "teknik-denetim", label: "Technical Audit" },
     { value: "bakim-ve-destek", label: "Maintenance & Support" },
@@ -42,17 +42,27 @@ export const contactEn = {
 
   servicePackages: {
     "web-sitesi-gelistirme": [
-      { value: "portfolio", label: "Portfolio / Showcase Website" },
+      { value: "onePage", label: "One-Page Website" },
+      { value: "portfolio", label: "Portfolio / Personal Website" },
       { value: "corporate", label: "Corporate Website" },
       { value: "ecommerce", label: "E-Commerce Website" },
+      { value: "catalog", label: "Catalog / B2B Website" },
+      { value: "listing", label: "Listings / Real Estate Website" },
+      { value: "booking", label: "Booking Website" },
+      { value: "education", label: "Education / Course Website" },
     ],
-    "web-sitesi-yenileme": [
-      { value: "portfolio", label: "Portfolio / Showcase Site Redesign" },
+    "dijital-yenileme": [
+      { value: "onePage", label: "One-Page Site Redesign" },
+      { value: "portfolio", label: "Portfolio / Personal Site Redesign" },
       { value: "corporate", label: "Corporate Website Redesign" },
       { value: "ecommerce", label: "E-Commerce Website Redesign" },
+      { value: "catalog", label: "Catalog / B2B Site Redesign" },
+      { value: "listing", label: "Listings / Real Estate Site Redesign" },
+      { value: "booking", label: "Booking Site Redesign" },
+      { value: "education", label: "Education / Course Site Redesign" },
     ],
     "uygulama-gelistirme": [
-      { value: "portfolio", label: "Showcase / Portfolio App" },
+      { value: "portfolio", label: "Portfolio / Personal App" },
       { value: "corporate", label: "Corporate Mobile App" },
       { value: "ecommerce", label: "E-Commerce Mobile App" },
     ],
