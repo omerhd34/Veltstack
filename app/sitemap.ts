@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { serviceSlugs } from "@/components/sections/services/service-items";
-import { projectSlugs } from "@/components/sections/projects/project-items";
+import { projectItems } from "@/components/sections/projects/project-items";
 import { blogPosts } from "@/components/pages/blog/posts";
 import { SITE_URL, buildLanguageAlternates } from "@/lib/seo";
 
@@ -58,13 +58,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
-  const projectEntries = projectSlugs.flatMap((slug) =>
-    entriesForHref(`/projeler/${slug}`, {
-      lastModified: now,
-      changeFrequency: "yearly",
-      priority: 0.7,
-    }),
-  );
+  const projectEntries = projectItems
+    .filter((project) => !project.external)
+    .flatMap((project) =>
+      entriesForHref(`/projeler/${project.slug}`, {
+        lastModified: now,
+        changeFrequency: "yearly",
+        priority: 0.7,
+      }),
+    );
 
   const postEntries = blogPosts.flatMap((post) =>
     entriesForHref(`/blog/${post.slug}`, {

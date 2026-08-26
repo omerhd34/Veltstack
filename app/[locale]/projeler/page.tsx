@@ -1,6 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { ProjectsPageView } from "@/components/pages/projects";
-import { projectItems } from "@/components/sections/projects/project-items";
+import { projectItems, hasProjectHref } from "@/components/sections/projects/project-items";
 import { BreadcrumbSchema, CollectionPageSchema } from "@/components/seo";
 import { createPageMetadata } from "@/lib/create-page-metadata";
 import type { Locale } from "@/i18n/routing";
@@ -46,7 +46,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
         description={tPages("projectsSubtitle")}
         url={projectsUrl}
         inLanguage={loc === "tr" ? "tr-TR" : "en-US"}
-        items={projectItems.map((project, index) => ({
+        items={projectItems.filter(hasProjectHref).map((project, index) => ({
           name: tHome(project.titleKey),
           url: absoluteUrl(localizedPath(loc, project.href)),
           position: index + 1,
