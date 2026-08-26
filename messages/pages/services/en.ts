@@ -38,7 +38,7 @@ export const servicesPageEn = {
       hint: "Six service categories including website, app, digital refresh, SEO, technical audit and maintenance.",
     },
     {
-      value: "30",
+      value: "60",
       label: "Ready Packages",
       labelShort: "Packages",
       hint: "Total ready-made packages across all categories, each targeting different scope and scale.",
