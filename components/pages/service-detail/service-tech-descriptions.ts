@@ -54,6 +54,11 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
   SQLite:
     "Hafif, dosya tabanlı ilişkisel veritabanı; küçük ölçekli projeler için.",
   cPanel: "Klasik hosting ortamlarında site ve e-posta yönetimi.",
+  Netlify: "Statik site ve JAMstack deploy için Vercel alternatifi.",
+  "Cloudflare Pages":
+    "CDN destekli hızlı frontend hosting; Vercel/Netlify alternatifi.",
+  "AWS Amplify":
+    "AWS tabanlı frontend ve fullstack deploy platformu alternatifi.",
   Postman: "API test, dokümantasyon ve entegrasyon doğrulama aracı.",
   "Sass & SCSS":
     "Değişken, mixin ve modüler stil yapısı için CSS ön işlemcisi.",
@@ -70,10 +75,10 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
   Tools: "Yapım, test ve bakım süreçlerinde kullanılan yardımcı araçlar.",
   Flutter:
     "Google'ın cross-platform mobil framework'ü; alternatif mobil yapım seçeneği.",
-  "Android Studio":
-    "Android build, emülatör ve native modül yapım ortamı.",
+  "Android Studio": "Android build, emülatör ve native modül yapım ortamı.",
   Figma: "UI/UX tasarım, prototipleme ve tasarım-dev handoff aracı.",
-  Railway: "PostgreSQL, MySQL ve Redis dahil yönetilen veritabanı barındırma altyapısı.",
+  Railway:
+    "PostgreSQL, MySQL ve Redis dahil yönetilen veritabanı barındırma altyapısı.",
   Render: "Web servisleri ve API hosting için alternatif bulut platformu.",
   Redis:
     "Önbellekleme, oturum yönetimi ve hızlı veri erişimi için bellek içi veritabanı.",
@@ -82,6 +87,10 @@ export const serviceTechDescriptionsTr: Record<string, string> = {
   Semrush: "Anahtar kelime, rakip analizi ve SEO araştırma aracı.",
   "Google Tag Manager":
     "Etiket yönetimi, dönüşüm izleme ve analitik entegrasyonu.",
+  "Google Ads":
+    "Arama ve display reklamları, dönüşüm takibi ve kampanya yönetimi.",
+  "Google Business Profile":
+    "Yerel arama görünürlüğü, Haritalar listesi ve işletme profili yönetimi.",
   "JSON-LD": "Yapılandırılmış veri işaretlemesi; zengin arama sonuçları için.",
   "App Store": "iOS uygulama yayınlama ve dağıtım platformu.",
   "Google Play": "Android uygulama yayınlama ve dağıtım platformu.",
@@ -155,6 +164,11 @@ export const serviceTechDescriptionsEn: Record<string, string> = {
   SQLite:
     "Lightweight file-based relational database for smaller-scale projects.",
   cPanel: "Site and email management on classic hosting environments.",
+  Netlify: "Vercel alternative for static site and JAMstack deployment.",
+  "Cloudflare Pages":
+    "CDN-backed fast frontend hosting; Vercel/Netlify alternative.",
+  "AWS Amplify":
+    "AWS-based frontend and fullstack deployment platform alternative.",
   Postman: "API testing, documentation and integration validation.",
   "Sass & SCSS": "CSS preprocessor for variables, mixins and modular styling.",
   UI: "Interface development with Shadcn, Material UI and similar component libraries.",
@@ -185,6 +199,10 @@ export const serviceTechDescriptionsEn: Record<string, string> = {
   Semrush: "Keyword, competitor analysis and SEO research tool.",
   "Google Tag Manager":
     "Tag management, conversion tracking and analytics integration.",
+  "Google Ads":
+    "Search and display ads, conversion tracking and campaign management.",
+  "Google Business Profile":
+    "Local search visibility, Maps listing and business profile management.",
   "JSON-LD": "Structured data markup for rich search results.",
   "App Store": "iOS app publishing and distribution platform.",
   "Google Play": "Android app publishing and distribution platform.",
@@ -196,8 +214,7 @@ export const serviceTechDescriptionsEn: Record<string, string> = {
     "Authentication, push notifications and real-time data infrastructure.",
   Supabase: "PostgreSQL-based backend-as-a-service alternative.",
   Sentry: "Error tracking, crash reporting and performance monitoring.",
-  NativeWind:
-    "Tailwind CSS-based styling approach for React Native projects.",
+  NativeWind: "Tailwind CSS-based styling approach for React Native projects.",
   Ahrefs: "Backlink analysis, keyword research and competitor tracking.",
   Moz: "Domain authority, rank tracking and technical SEO auditing.",
   "Google Looker Studio":
