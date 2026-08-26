@@ -3,6 +3,10 @@ import { serviceItems } from "@/components/sections/services/service-items";
 import type { ServiceSlug } from "@/components/sections/services/service-items";
 import { ServicesPackagesSection } from "@/components/pages/services/ServicesPackagesSection";
 import {
+  categoriesWithPackageComparison,
+  type PackageCategory,
+} from "@/components/pages/services/packages-config";
+import {
   serviceHeroStats,
   servicePackageCategories,
   serviceTechStacks,
@@ -77,6 +81,10 @@ export async function ServiceDetailView({
     label: t(serviceTechCategoryMessageKeys[category.key]),
     items: [...category.items],
   }));
+  const packageCategory = servicePackageCategories[slug];
+  const showPackages = (
+    categoriesWithPackageComparison as readonly PackageCategory[]
+  ).includes(packageCategory);
 
   return (
     <div className={className}>
@@ -101,9 +109,9 @@ export async function ServiceDetailView({
         }}
         features={features}
       />
-      <ServicesPackagesSection
-        lockedCategory={servicePackageCategories[slug]}
-      />
+      {showPackages ? (
+        <ServicesPackagesSection lockedCategory={packageCategory} />
+      ) : null}
       <ServiceProcess
         title={t("processTitle")}
         subtitle={t(`${slug}.processSubtitle`)}
