@@ -64,6 +64,8 @@ export interface ScrollCarouselProps {
   progressStyle?: "bar" | "pages" | "pagination" | "none";
   navPlacement?: "inline" | "outside" | "bottom";
   showNavigation?: boolean;
+  paginationTheme?: "light" | "dark";
+  navButtonTone?: "glass" | "light";
 }
 
 export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
@@ -83,6 +85,8 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
       progressStyle = "bar",
       navPlacement = "inline",
       showNavigation = true,
+      paginationTheme = "dark",
+      navButtonTone = "glass",
     },
     ref,
   ) => {
@@ -290,7 +294,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
             {navOutside && showNavigation ? (
               <StardustIconButton
                 type="button"
-                tone="glass"
+                tone={navButtonTone}
                 onClick={() => scrollByCard(-1)}
                 aria-label={navLabels.prev}
                 className={navButtonClass}
@@ -317,7 +321,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                 {!navOutside && !navBottom && showNavigation ? (
                   <StardustIconButton
                     type="button"
-                    tone="glass"
+                    tone={navButtonTone}
                     onClick={() => scrollByCard(-1)}
                     aria-label={navLabels.prev}
                     className={navButtonClass}
@@ -413,7 +417,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                 {!navOutside && !navBottom && showNavigation ? (
                   <StardustIconButton
                     type="button"
-                    tone="glass"
+                    tone={navButtonTone}
                     onClick={() => scrollByCard(1)}
                     aria-label={navLabels.next}
                     className={navButtonClass}
@@ -428,7 +432,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
             {navOutside && showNavigation ? (
               <StardustIconButton
                 type="button"
-                tone="glass"
+                tone={navButtonTone}
                 onClick={() => scrollByCard(1)}
                 aria-label={navLabels.next}
                 className={navButtonClass}
@@ -445,7 +449,7 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                 {navBottom && showNavigation ? (
                   <StardustIconButton
                     type="button"
-                    tone="glass"
+                    tone={navButtonTone}
                     onClick={() => scrollByCard(-1)}
                     aria-label={navLabels.prev}
                     className={navButtonClass}
@@ -459,13 +463,13 @@ export const ScrollCarousel = forwardRef<HTMLDivElement, ScrollCarouselProps>(
                   activeIndex={pageIndicator.current - 1}
                   total={pageIndicator.total}
                   onSelect={scrollToPage}
-                  theme="dark"
+                  theme={paginationTheme}
                 />
 
                 {navBottom && showNavigation ? (
                   <StardustIconButton
                     type="button"
-                    tone="glass"
+                    tone={navButtonTone}
                     onClick={() => scrollByCard(1)}
                     aria-label={navLabels.next}
                     className={navButtonClass}
