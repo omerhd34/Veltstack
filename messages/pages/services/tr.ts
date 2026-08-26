@@ -38,7 +38,7 @@ export const servicesPageTr = {
       hint: "Web sitesi, uygulama, dijital yenileme, SEO, teknik denetim ve bakım dahil altı farklı hizmet kategorisi.",
     },
     {
-      value: "30",
+      value: "60",
       label: "Hazır Paketler",
       labelShort: "Paketler",
       hint: "Altı kategoride sunulan toplam hazır paket sayısı. Her paket farklı kapsam ve ölçek hedefler.",
