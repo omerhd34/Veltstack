@@ -28,7 +28,7 @@ export const footerServiceItems = [
   "web-sitesi-gelistirme",
   "uygulama-gelistirme",
   "seo-hizmetleri",
-  "web-sitesi-yenileme",
+  "dijital-yenileme",
   "teknik-denetim",
   "bakim-ve-destek",
 ].map((slug) => {
