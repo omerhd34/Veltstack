@@ -1,9 +1,9 @@
 export const navEn = {
   services: "Services",
   servicesAll: "View Packages",
-  serviceWeb: "Website",
+  serviceWeb: "Website Building",
   serviceRefresh: "Digital Refresh",
-  serviceApp: "App",
+  serviceApp: "App Building",
   serviceSeo: "SEO Services",
   serviceAudit: "Technical Audit",
   serviceMaintenance: "Maintenance & Support",
