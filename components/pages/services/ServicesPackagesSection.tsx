@@ -73,8 +73,16 @@ export async function ServicesPackagesSection({
     },
   }[activeCategory];
 
+  const lockedTitles: Partial<Record<PackageCategory, string>> = {
+    web: t("packagesTitleWeb"),
+    app: t("packagesTitleApp"),
+    seo: t("tabSeo"),
+    audit: t("tabAudit"),
+    maintenance: t("tabMaintenance"),
+  };
   const sectionTitle = lockedCategory
-    ? `${tabs.find((tab) => tab.id === lockedCategory)?.label ?? ""} ${t("packagesTitleSuffix")}`
+    ? (lockedTitles[lockedCategory] ??
+      `${tabs.find((tab) => tab.id === lockedCategory)?.label ?? ""} ${t("packagesTitleSuffix")}`)
     : t("packagesTitle");
   const sectionSubtitle = lockedCategory
     ? activeIntro.p1
@@ -107,7 +115,9 @@ export async function ServicesPackagesSection({
               <span className="text-brand-accent">{sectionTitle}</span>
             ) : (
               <>
-                <span className="text-foreground">{t("packagesTitleLead")} </span>
+                <span className="text-foreground">
+                  {t("packagesTitleLead")}{" "}
+                </span>
                 <span className="bg-linear-to-r from-brand-accent via-emerald-600 to-emerald-500 bg-clip-text text-transparent">
                   {t("packagesTitleAccent")}
                 </span>
