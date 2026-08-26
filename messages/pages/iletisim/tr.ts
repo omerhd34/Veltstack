@@ -24,9 +24,9 @@ export const contactTr = {
     "Projenizi, beklentilerinizi ve varsa teknik gereksinimlerinizi anlatın…",
 
   serviceOptions: [
-    { value: "web-sitesi-gelistirme", label: "Web Sitesi Geliştirme" },
-    { value: "web-sitesi-yenileme", label: "Dijital Yenileme" },
-    { value: "uygulama-gelistirme", label: "Uygulama Geliştirme" },
+    { value: "web-sitesi-gelistirme", label: "Web Sitesi Yapımı" },
+    { value: "dijital-yenileme", label: "Dijital Yenileme" },
+    { value: "uygulama-gelistirme", label: "Uygulama Yapımı" },
     { value: "seo-hizmetleri", label: "SEO Hizmetleri" },
     { value: "teknik-denetim", label: "Teknik Denetim" },
     { value: "bakim-ve-destek", label: "Bakım & Destek" },
@@ -42,17 +42,27 @@ export const contactTr = {
 
   servicePackages: {
     "web-sitesi-gelistirme": [
-      { value: "portfolio", label: "Portföy / Tanıtım Web Sitesi" },
+      { value: "onePage", label: "Tek Sayfalık Web Sitesi" },
+      { value: "portfolio", label: "Portfolyo / Kişisel Web Sitesi" },
       { value: "corporate", label: "Kurumsal Web Sitesi" },
       { value: "ecommerce", label: "E-Ticaret Web Sitesi" },
+      { value: "catalog", label: "Katalog / B2B Web Sitesi" },
+      { value: "listing", label: "İlan / Emlak Web Sitesi" },
+      { value: "booking", label: "Rezervasyon Web Sitesi" },
+      { value: "education", label: "Eğitim / Kurs Web Sitesi" },
     ],
-    "web-sitesi-yenileme": [
-      { value: "portfolio", label: "Portföy / Tanıtım Sitesi Yenileme" },
+    "dijital-yenileme": [
+      { value: "onePage", label: "Tek Sayfalık Site Yenileme" },
+      { value: "portfolio", label: "Portfolyo / Kişisel Sitesi Yenileme" },
       { value: "corporate", label: "Kurumsal Site Yenileme" },
       { value: "ecommerce", label: "E-Ticaret Sitesi Yenileme" },
+      { value: "catalog", label: "Katalog / B2B Site Yenileme" },
+      { value: "listing", label: "İlan / Emlak Site Yenileme" },
+      { value: "booking", label: "Rezervasyon Site Yenileme" },
+      { value: "education", label: "Eğitim / Kurs Site Yenileme" },
     ],
     "uygulama-gelistirme": [
-      { value: "portfolio", label: "Portföy / Tanıtım Uygulaması" },
+      { value: "portfolio", label: "Portfolyo / Kişisel Uygulaması" },
       { value: "corporate", label: "Kurumsal Mobil Uygulama" },
       { value: "ecommerce", label: "E-Ticaret Mobil Uygulama" },
     ],
