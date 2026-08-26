@@ -1,8 +1,8 @@
 export const servicesMarqueeHomeEn = {
   servicesMarqueeItems: [
-    "Web Development",
+    "Website Building",
     "Digital Refresh",
-    "Mobile App Development",
+    "App Building",
     "Corporate Website",
     "E-Commerce",
     "SEO Services",
