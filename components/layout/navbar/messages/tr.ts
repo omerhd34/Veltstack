@@ -1,9 +1,9 @@
 export const navTr = {
   services: "Hizmetler",
   servicesAll: "Paketleri İncele",
-  serviceWeb: "Web Sitesi",
+  serviceWeb: "Web Sitesi Yapımı",
   serviceRefresh: "Dijital Yenileme",
-  serviceApp: "Uygulama",
+  serviceApp: "Uygulama Yapımı",
   serviceSeo: "SEO Hizmetleri",
   serviceAudit: "Teknik Denetim",
   serviceMaintenance: "Bakım & Destek",
