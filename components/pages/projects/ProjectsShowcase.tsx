@@ -15,6 +15,9 @@ const featuredProjectSlugs = new Set<ProjectSlug>([
   "iqfinansai",
   "yazici-ticaret",
   "gardossi",
+  "uzman-klinik-psikolog",
+  "portfolio",
+  "onlinemuhasebe",
 ]);
 
 interface ProjectsShowcaseProps {
