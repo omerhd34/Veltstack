@@ -89,6 +89,10 @@ export async function ProjectDetailView({
     );
   }
 
+  const heroImage = projectHeroImages[slug];
+  const heroMobileImage = projectHeroMobileImages[slug];
+  if (!heroImage || !heroMobileImage) return null;
+
   return (
     <div className={className}>
       <ProjectHero
@@ -97,8 +101,8 @@ export async function ProjectDetailView({
         subtitle={t(`${slug}.heroSubtitle`)}
         metrics={metrics}
         scrollLabel={t("scrollLabel")}
-        imageSrc={projectHeroImages[slug]}
-        imageMobileSrc={projectHeroMobileImages[slug]}
+        imageSrc={heroImage}
+        imageMobileSrc={heroMobileImage}
         imageAlt={t(`${slug}.heroTitle`)}
       />
       <ProjectPreview
@@ -127,7 +131,7 @@ export async function ProjectDetailView({
       <ProjectRelated
         title={t("relatedServicesTitle")}
         subtitle={t("relatedServicesSubtitle")}
-        serviceSlugs={projectRelatedServices[slug]}
+        serviceSlugs={projectRelatedServices[slug] ?? []}
       />
       <ServicesConsultationCTA />
     </div>

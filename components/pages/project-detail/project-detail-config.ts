@@ -1,7 +1,9 @@
 import type { ProjectSlug } from "@/components/sections/projects/project-items";
 import type { ServiceSlug } from "@/components/sections/services/service-items";
 
-export const projectRelatedServices: Record<ProjectSlug, ServiceSlug[]> = {
+export const projectRelatedServices: Partial<
+  Record<ProjectSlug, ServiceSlug[]>
+> = {
   iqfinansai: ["web-sitesi-gelistirme", "seo-hizmetleri", "bakim-ve-destek"],
   "yazici-ticaret": [
     "web-sitesi-gelistirme",

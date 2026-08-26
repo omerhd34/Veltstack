@@ -1,6 +1,6 @@
 import type { ProjectSlug } from "@/components/sections/projects/project-items";
 
-export const projectHeroImages: Record<ProjectSlug, string> = {
+export const projectHeroImages: Partial<Record<ProjectSlug, string>> = {
   iqfinansai: "/images/pages/projects/iqfinansai.webp",
   "yazici-ticaret": "/images/pages/projects/yazici-ticaret.webp",
   gardossi: "/images/pages/projects/gardossi.webp",
@@ -9,7 +9,7 @@ export const projectHeroImages: Record<ProjectSlug, string> = {
   onlinemuhasebe: "/images/pages/projects/onlinemuhasebe.webp",
 };
 
-export const projectHeroMobileImages: Record<ProjectSlug, string> = {
+export const projectHeroMobileImages: Partial<Record<ProjectSlug, string>> = {
   iqfinansai: "/images/pages/projects/iqfinansai-mobile.webp",
   "yazici-ticaret": "/images/pages/projects/yazici-ticaret-mobile.webp",
   gardossi: "/images/pages/projects/gardossi-mobile.webp",

@@ -1,6 +1,6 @@
 import type { ProjectSlug } from "./project-items";
 
-export const projectTechStacks: Record<ProjectSlug, string[]> = {
+export const projectTechStacks: Partial<Record<ProjectSlug, string[]>> = {
   iqfinansai: [
     "TypeScript",
     "React",
@@ -69,7 +69,7 @@ export const projectTechStacks: Record<ProjectSlug, string[]> = {
   ],
 };
 
-export const projectDemoUrls: Record<ProjectSlug, string> = {
+export const projectDemoUrls: Partial<Record<ProjectSlug, string>> = {
   iqfinansai: "https://www.iqfinansai.com/",
   "yazici-ticaret": "https://yazici.gen.tr/",
   gardossi: "https://www.gardossi.com/",
@@ -94,4 +94,36 @@ export const projectCoverGradients: Record<ProjectSlug, string> = {
   "uzman-klinik-psikolog": "from-[#2a2540] via-[#3d3560] to-[#5a4f85]",
   portfolio: "from-[#1a2a3a] via-[#2a4058] to-[#3a5878]",
   onlinemuhasebe: "from-[#0a1628] via-[#1a3a6a] to-[#2563eb]",
+  orivis: "from-[#0f2744] via-[#1a4a6e] to-[#2d7aa8]",
+  kargona: "from-[#1a1f2e] via-[#2c3548] to-[#4a5568]",
+  leafmint: "from-[#14301f] via-[#1f5c36] to-[#2f8f52]",
+  brewknot: "from-[#3b2218] via-[#6b3f2a] to-[#a66b45]",
+  kurviva: "from-[#1a2744] via-[#2a4570] to-[#3d6aa8]",
+  lensmark: "from-[#1c1c1c] via-[#3a3a3a] to-[#5c5c5c]",
+  ironpine: "from-[#1a0f24] via-[#3b1d5c] to-[#6b3fa0]",
+  softhearth: "from-[#1f2a32] via-[#3a5160] to-[#5a7a8f]",
+  loomora: "from-[#2a1520] via-[#5a2a3a] to-[#8f4058]",
+  gridvolt: "from-[#0f1f2a] via-[#1a4a5c] to-[#2a7a8f]",
+  rosethread: "from-[#2a1a24] via-[#5a3550] to-[#8f5a78]",
+  inkspire: "from-[#0f1a14] via-[#1f3d2e] to-[#2f6b4a]",
+  "emlak-ofisi": "from-[#1a2438] via-[#2d4060] to-[#4a6080]",
+  "hukuk-burosu": "from-[#1c1a14] via-[#3d3528] to-[#6b5a40]",
+  "mimarlik-studyosu": "from-[#242018] via-[#4a4030] to-[#706050]",
+  "veteriner-klinigi": "from-[#1a2820] via-[#2d5040] to-[#4a7860]",
+  anaokulu: "from-[#2a2038] via-[#503870] to-[#7858a0]",
+  "oto-galeri": "from-[#141820] via-[#283040] to-[#404860]",
+  "insaat-firmasi": "from-[#2a2018] via-[#504030] to-[#786050]",
+  "kisisel-antrenor": "from-[#180f28] via-[#301858] to-[#502888]",
+  "etkinlik-organizasyon": "from-[#281828] via-[#503050] to-[#784878]",
+  "catering-hizmeti": "from-[#281810] via-[#503020] to-[#784838]",
+  "mobilya-atolyesi": "from-[#201810] via-[#403020] to-[#604838]",
+  "teknik-servis": "from-[#101820] via-[#203040] to-[#304860]",
+  "danismanlik-firmasi": "from-[#101828] via-[#203050] to-[#304878]",
+  "saglik-klinigi": "from-[#0f2028] via-[#1f4050] to-[#2f6078]",
+  "yatirim-danismanligi": "from-[#0a1820] via-[#143040] to-[#204860]",
+  "ceviri-burosu": "from-[#181828] via-[#303050] to-[#484878]",
+  "sosyal-medya-ajansi": "from-[#201028] via-[#402050] to-[#603078]",
+  "ozel-ders-merkezi": "from-[#182028] via-[#304060] to-[#486090]",
+  "restoran-zinciri": "from-[#281410] via-[#502820] to-[#783c30]",
+  "saglik-turizmi": "from-[#0f1828] via-[#1f3050] to-[#2f4878]",
 };
