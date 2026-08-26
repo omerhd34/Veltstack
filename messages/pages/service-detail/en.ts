@@ -49,9 +49,9 @@ export const serviceDetailsEn = {
   breadcrumbHome: "Home",
   breadcrumbServices: "Services",
   "web-sitesi-gelistirme": {
-    metaTitle: "Website Development | Next.js Corporate Sites",
+    metaTitle: "Website Building | Next.js Corporate Sites",
     metaDesc:
-      "End-to-end website development for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
+      "End-to-end website building for corporate, e-commerce and portfolio projects. Fast, SEO-friendly and scalable solutions with Next.js.",
     keywords: [
       "website development",
       "website design",
@@ -65,16 +65,15 @@ export const serviceDetailsEn = {
       "corporate brochure site",
       "scalable web application",
     ],
-    heroBadge: "Web Development",
-    heroTitle: "Website Development",
+    heroBadge: "Web",
+    heroTitle: "Website Building",
     heroImageAlt:
       "Abstract browser and layout illustration symbolizing modern website development",
     heroSubtitle:
       "I build every kind of web project end to end—from corporate sites and e-commerce to portfolios—with a modern, SEO-ready, mobile-first stack for fast, scalable solutions that represent your brand online.",
     processSubtitle:
       "At every stage from discovery to launch, we clarify what will be done, when it will be delivered and what outcome you can expect. Design, building, testing and go-live follow a predictable plan, with regular updates throughout the project.",
-    techSubtitle:
-      "Modern, scalable tools selected for your project needs. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+    techSubtitle: "Modern, scalable tools selected for your project needs.",
     processItems: webSitesiGelistirmeProcessEn,
     features: [
       {
@@ -129,7 +128,7 @@ export const serviceDetailsEn = {
       },
     ],
   },
-  "web-sitesi-yenileme": {
+  "dijital-yenileme": {
     metaTitle: "Website Redesign | Digital Refresh",
     metaDesc:
       "Refresh your outdated or slow website and mobile app with modern design, fast infrastructure and SEO improvements. Secure migration while preserving your content.",
@@ -190,7 +189,7 @@ export const serviceDetailsEn = {
     ],
   },
   "uygulama-gelistirme": {
-    metaTitle: "Mobile App Development",
+    metaTitle: "App Building",
     metaDesc:
       "High-performance mobile apps for iOS and Android with React Native and Expo.",
     keywords: [
@@ -205,16 +204,15 @@ export const serviceDetailsEn = {
       "native mobile app",
       "startup mobile app",
     ],
-    heroBadge: "App Development",
-    heroTitle: "Mobile App Development",
+    heroBadge: "App",
+    heroTitle: "App Building",
     heroImageAlt:
       "Floating phone and interface illustration symbolizing mobile app development",
     heroSubtitle:
       "User-friendly, scalable apps for iOS and Android from a single codebase—React Native and Expo for fast delivery, store publishing and backend integrations under one roof.",
     processSubtitle:
       "From app concept to store launch, we clarify what will be done and what deliverable you can expect at each stage. Design, building, testing and publishing follow a predictable plan.",
-    techSubtitle:
-      "Modern, scalable tools we use in mobile app projects. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+    techSubtitle: "Modern, scalable tools we use in mobile app projects.",
     processItems: uygulamaGelistirmeProcessEn,
     features: [
       {
@@ -335,7 +333,7 @@ export const serviceDetailsEn = {
     processSubtitle:
       "We manage the audit process through clear steps from briefing to action plan. Findings are reported by priority with actionable recommendations.",
     techSubtitle:
-      "Tools we use for performance, security and SEO analysis in technical audits. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+      "Tools we use for performance, security and SEO analysis in technical audits.",
     processItems: teknikDenetimProcessEn,
     features: [
       {
@@ -395,7 +393,7 @@ export const serviceDetailsEn = {
     processSubtitle:
       "We manage maintenance from project handover to monthly reporting through regular, predictable steps. Updates, monitoring and support requests follow a clear schedule.",
     techSubtitle:
-      "Infrastructure and monitoring tools we use in maintenance and support services. Colored icons are the core technologies we use in most projects; muted icons show alternatives we can adopt when your requirements call for them.",
+      "Infrastructure and monitoring tools we use in maintenance and support services.",
     processItems: bakimVeDestekProcessEn,
     features: [
       {
