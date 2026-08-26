@@ -8,9 +8,9 @@ export const footerTr = {
   blogTitle: "Blog",
   legalTitle: "Yasal",
   serviceLabels: {
-    serviceWeb: "Web Sitesi Geliştirme",
+    serviceWeb: "Web Sitesi Yapımı",
     serviceRefresh: "Dijital Yenileme",
-    serviceApp: "Uygulama Geliştirme",
+    serviceApp: "Uygulama Yapımı",
     serviceSeo: "SEO Hizmetleri",
     serviceAudit: "Teknik Denetim",
     serviceMaintenance: "Bakım & Destek",
