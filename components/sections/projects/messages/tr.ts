@@ -7,7 +7,7 @@ export const projectsHomeTr = {
     "Beyaz eşya ve elektronik kategorilerinde uçtan uca e-ticaret deneyimi kurduk. Ürün keşfinden ödeme ve sipariş takibine kadar dönüşüm odaklı bir satış altyapısı tasarladık.",
   projectGardossiTitle: "Gardossi | Kurumsal Web Sitesi",
   projectGardossiDesc:
-    "Bahçe ve balkon mobilyaları için premium kurumsal ürün kataloğu. Oturma gruplarından şezlonglara altı kategoride zengin görsel vitrin sunuyor; WhatsApp ile hızlı teklif ve iletişim akışı sağlıyor.",
+    "Bahçe ve balkon mobilyaları için premium kurumsal katalog. Altı kategoride görsel vitrin; WhatsApp ile hızlı teklif ve iletişim.",
   projectUzmanPsikologTitle: "Klinik Psikolog | Kurumsal Web Sitesi",
   projectUzmanPsikologDesc:
     "Uzman Klinik Psikolog için güven odaklı kurumsal web sitesi. Yüz yüze ve online terapi hizmetlerini tanıtır; randevu talebi, psikoloji içerikleri ve hizmet vitrini tek akışta sunar.",
@@ -16,7 +16,7 @@ export const projectsHomeTr = {
     "Full stack geliştirici portfolyo sitesi. Projeler, deneyim geçmişi ve hizmet paketlerini tek vitrinde sunarak yetkinlikleri net biçimde aktarıyor.",
   projectOnlinemuhasebeTitle: "Online Muhasebe | Kurumsal Web Sitesi",
   projectOnlinemuhasebeDesc:
-    "Şahin Demir Mali Müşavirlik için kurumsal web sitesi. Muhasebe ve vergi danışmanlığı hizmetlerini tanıtır; pratik mevzuat kaynakları, resmi platform kısayolları ve danışma talebi sunar.",
+    "Mali Müşavirlik için kurumsal web sitesi. Muhasebe ve vergi danışmanlığı hizmetlerini tanıtır; pratik mevzuat kaynakları, resmi platform kısayolları ve danışma talebi sunar.",
   projectOrivisTitle: "Diş Kliniği | Kurumsal Web Sitesi",
   projectOrivisDesc:
     "Diş kliniği için randevu odaklı kurumsal site. Tedavi paketleri, hekim kadrosu ve hasta bilgilendirme içeriklerini sade bir akışta bir araya getirir.",
@@ -77,8 +77,7 @@ export const projectsHomeTr = {
   projectKisiselAntrenorTitle: "Kişisel Antrenör | Kurumsal Web Sitesi",
   projectKisiselAntrenorDesc:
     "Kişisel antrenör için program odaklı kurumsal site. Paketler, dönüşüm hikâyeleri ve deneme seansı başvurusunu motive edici bir yapıda sunar.",
-  projectEtkinlikOrganizasyonTitle:
-    "Etkinlik Organizasyon | Kurumsal Web Sitesi",
+  projectEtkinlikOrganizasyonTitle: "Etkinlik Ajansı | Kurumsal Web Sitesi",
   projectEtkinlikOrganizasyonDesc:
     "Etkinlik organizasyon firması için hizmet vitrini. Düğün, kurumsal etkinlik ve özel gün paketlerini görsel galeriyle destekleyerek teklif talebine yönlendirir.",
   projectCateringHizmetiTitle: "Catering Hizmeti | Kurumsal Web Sitesi",
@@ -90,19 +89,19 @@ export const projectsHomeTr = {
   projectTeknikServisTitle: "Teknik Servis | Kurumsal Web Sitesi",
   projectTeknikServisDesc:
     "Beyaz eşya teknik servisi için hizmet odaklı kurumsal site. Arıza türleri, servis bölgeleri ve randevu talebini hızlı erişilebilir bir yapıda birleştirir.",
-  projectDanismanlikFirmasiTitle: "Danışmanlık Firması | Kurumsal Web Sitesi",
+  projectDanismanlikFirmasiTitle: "Danışmanlık | Kurumsal Web Sitesi",
   projectDanismanlikFirmasiDesc:
     "İş danışmanlığı firması için güven odaklı kurumsal site. Hizmet alanları, metodoloji ve keşif görüşmesi talebini net bir anlatımla sunar.",
   projectSaglikKlinigiTitle: "Sağlık Kliniği | Kurumsal Web Sitesi",
   projectSaglikKlinigiDesc:
     "Poliklinik için randevu odaklı kurumsal site. Branşlar, hekim kadrosu ve online randevu talebini hasta yolculuğuna uygun biçimde yapılandırır.",
-  projectYatirimDanismanligiTitle: "Yatırım Danışmanlığı | Kurumsal Web Sitesi",
+  projectYatirimDanismanligiTitle: "Yatırım Ofisi | Kurumsal Web Sitesi",
   projectYatirimDanismanligiDesc:
     "Yatırım danışmanlığı firması için güven odaklı kurumsal site. Hizmet kapsamı, süreç anlatımı ve görüşme talebini profesyonel bir dilde sunar.",
   projectCeviriBurosuTitle: "Çeviri Bürosu | Kurumsal Web Sitesi",
   projectCeviriBurosuDesc:
     "Çeviri bürosu için hizmet odaklı kurumsal site. Dil çiftleri, sektör uzmanlıkları ve teklif talebini net bir yapıda bir araya getirir.",
-  projectSosyalMedyaAjansiTitle: "Sosyal Medya Ajansı | Kurumsal Web Sitesi",
+  projectSosyalMedyaAjansiTitle: "Sosyal Medya | Kurumsal Web Sitesi",
   projectSosyalMedyaAjansiDesc:
     "Sosyal medya ajansı için hizmet vitrini. İçerik üretimi, reklam yönetimi ve strateji paketlerini case study’lerle destekleyerek iletişime yönlendirir.",
   projectOzelDersMerkeziTitle: "Özel Ders Merkezi | Kurs Platformu",
