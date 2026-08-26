@@ -1,9 +1,14 @@
 import type { IconType } from "react-icons";
+import { DiMsqlServer } from "react-icons/di";
+import { FaAws } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import {
   SiAppstore,
   SiAndroid,
+  SiAngular,
   SiBootstrap,
+  SiCloudflarepages,
+  SiCpanel,
   SiCss,
   SiExpress,
   SiExpo,
@@ -11,7 +16,9 @@ import {
   SiFlutter,
   SiGit,
   SiGithub,
+  SiGoogleads,
   SiGoogleanalytics,
+  SiGoogle,
   SiGoogleplay,
   SiGoogletagmanager,
   SiGooglesearchconsole,
@@ -23,6 +30,7 @@ import {
   SiMeta,
   SiMongodb,
   SiNestjs,
+  SiNetlify,
   SiNextdotjs,
   SiNodedotjs,
   SiPagespeedinsights,
@@ -32,12 +40,16 @@ import {
   SiRailway,
   SiReact,
   SiRedux,
+  SiRender,
   SiSass,
+  SiSqlite,
   SiTailwindcss,
   SiTypescript,
   SiVercel,
+  SiVuedotjs,
 } from "react-icons/si";
 import { TbApi, TbBrandReactNative, TbComponents } from "react-icons/tb";
+import { GoogleBusinessProfileIcon } from "./GoogleBusinessProfileIcon";
 import { IxirhostIcon } from "./IxirhostIcon";
 import { ZustandIcon } from "./ZustandIcon";
 
@@ -89,6 +101,8 @@ export const techCategories: TechCategory[] = [
         icon: SiNextdotjs,
       },
       { name: "React", icon: SiReact },
+      { name: "Angular", icon: SiAngular },
+      { name: "Vue", icon: SiVuedotjs },
       { name: "Redux", icon: SiRedux },
       {
         name: "Zustand",
@@ -140,6 +154,9 @@ export const techCategories: TechCategory[] = [
         icon: SiPostgresql,
       },
       { name: "Prisma", icon: SiPrisma },
+      { name: "SQLite", icon: SiSqlite },
+      { name: "MSSQL", icon: DiMsqlServer },
+      { name: "Railway", icon: SiRailway },
     ],
   },
   {
@@ -179,7 +196,11 @@ export const techCategories: TechCategory[] = [
         icon: IxirhostIcon,
         brandIcon: true,
       },
-      { name: "Railway", icon: SiRailway },
+      { name: "Netlify", icon: SiNetlify },
+      { name: "Cloudflare Pages", icon: SiCloudflarepages },
+      { name: "Render", icon: SiRender },
+      { name: "AWS Amplify", icon: FaAws },
+      { name: "cPanel", icon: SiCpanel },
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
     ],
@@ -190,6 +211,10 @@ export const techCategories: TechCategory[] = [
       {
         name: "Google Analytics",
         icon: SiGoogleanalytics,
+      },
+      {
+        name: "Google Search",
+        icon: SiGoogle,
       },
       {
         name: "Meta Pixel",
@@ -210,6 +235,14 @@ export const techCategories: TechCategory[] = [
       {
         name: "Google Tag Manager",
         icon: SiGoogletagmanager,
+      },
+      {
+        name: "Google Ads",
+        icon: SiGoogleads,
+      },
+      {
+        name: "Google Business Profile",
+        icon: GoogleBusinessProfileIcon,
       },
     ],
   },
