@@ -1,3 +1,5 @@
+"use client";
+
 import type { IconType } from "react-icons";
 import Image from "next/image";
 import { SoftPrefetchLink } from "@/components/ui/SoftPrefetchLink";
@@ -7,7 +9,7 @@ interface ProjectShowcaseCardProps {
   index: number;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   icon: IconType;
   imageUrl?: string;
   coverGradient: string;
@@ -29,7 +31,10 @@ export function ProjectShowcaseCard({
   className,
 }: ProjectShowcaseCardProps) {
   const cardClassName = cn(
-    "group relative flex flex-col overflow-hidden rounded-3xl border border-border/70 bg-white shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-300 hover:border-brand-accent/35 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]",
+    "group relative flex flex-col overflow-hidden rounded-3xl border border-border/70 bg-white shadow-[0_2px_12px_rgb(0_0_0/0.04)] transition-all duration-300",
+    href
+      ? "hover:border-brand-accent/35 hover:shadow-[0_24px_56px_rgb(58_107_82/0.14)]"
+      : "cursor-default",
     className,
   );
 
@@ -54,7 +59,10 @@ export function ProjectShowcaseCard({
             />
             <div className="flex h-full min-h-48 items-center justify-center">
               <Icon
-                className="size-16 text-white/20 transition-transform duration-300 group-hover:scale-110 group-hover:text-white/35"
+                className={cn(
+                  "size-16 text-white/20 transition-transform duration-300",
+                  href && "group-hover:scale-110 group-hover:text-white/35",
+                )}
                 strokeWidth={1.25}
                 aria-hidden
               />
@@ -65,14 +73,20 @@ export function ProjectShowcaseCard({
             src={imageUrl}
             alt={title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className={cn(
+              "object-cover transition-transform duration-300",
+              href && "group-hover:scale-105",
+            )}
             sizes="(max-width: 768px) 100vw, 33vw"
           />
         )}
 
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className={cn(
+            "pointer-events-none absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300",
+            href && "group-hover:opacity-100",
+          )}
         />
 
         {showFeaturedBadge && featuredLabel ? (
@@ -83,23 +97,35 @@ export function ProjectShowcaseCard({
 
         <span
           aria-hidden
-          className="pointer-events-none absolute bottom-3 right-4 font-(family-name:--font-heading) text-6xl font-bold leading-none text-white/10 transition-colors duration-300 group-hover:text-white/15"
+          className={cn(
+            "pointer-events-none absolute bottom-3 right-4 font-(family-name:--font-heading) text-6xl font-bold leading-none text-white/10 transition-colors duration-300",
+            href && "group-hover:text-white/15",
+          )}
         >
           {String(index).padStart(2, "0")}
         </span>
       </div>
 
       <div className="flex flex-col justify-center p-5 sm:p-6" data-nosnippet>
-        <h3 className="font-(family-name:--font-heading) text-xl font-bold leading-tight tracking-tight transition-colors group-hover:text-brand-accent">
+        <h3
+          className={cn(
+            "font-(family-name:--font-heading) text-xl font-bold leading-tight tracking-tight transition-colors",
+            href && "group-hover:text-brand-accent",
+          )}
+        >
           {title}
         </h3>
 
-        <p className="mt-3 text-sm leading-relaxed text-foreground/60">
+        <p className="mt-3 min-h-[4lh] text-sm leading-relaxed text-foreground/60">
           {description}
         </p>
       </div>
     </>
   );
+
+  if (!href) {
+    return <article className={cardClassName}>{content}</article>;
+  }
 
   return (
     <SoftPrefetchLink
