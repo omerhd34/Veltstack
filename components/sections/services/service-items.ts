@@ -10,7 +10,7 @@ import {
 
 export const serviceSlugs = [
   "web-sitesi-gelistirme",
-  "web-sitesi-yenileme",
+  "dijital-yenileme",
   "uygulama-gelistirme",
   "seo-hizmetleri",
   "teknik-denetim",
@@ -40,8 +40,8 @@ export const serviceItems: ServiceItemConfig[] = [
     icon: LuGlobe,
   },
   {
-    slug: "web-sitesi-yenileme",
-    href: "/hizmetler/web-sitesi-yenileme",
+    slug: "dijital-yenileme",
+    href: "/hizmetler/dijital-yenileme",
     titleKey: "servicesRefreshTitle",
     descKey: "servicesRefreshDesc",
     navDescKey: "serviceRefreshDesc",
