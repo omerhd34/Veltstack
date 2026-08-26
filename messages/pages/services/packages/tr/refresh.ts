@@ -49,6 +49,8 @@ const seoMigrationProItems = [
   ...seoMigrationStandartItems,
   "Kapsamlı teknik SEO ve indeksleme optimizasyonu",
   "Google Analytics 4 ve dönüşüm takibi",
+  "Google Ads dönüşüm takibi ve etiket kurulumu",
+  "Meta Pixel ve dönüşüm olayları (Facebook / Instagram)",
 ] as const;
 
 const REFRESH_GROUP_ANALYSIS = "Analiz & Planlama";
@@ -58,7 +60,7 @@ const REFRESH_GROUP_DELIVERY = "Yayın & Teslimat";
 const REFRESH_GROUP_SUPPORT = "Teknik Destek";
 
 // ---------------------------------------------------------------------------
-// Portföy / Tanıtım
+// Portfolyo / Kişisel
 // ---------------------------------------------------------------------------
 
 const portfolioAnalysis = [
@@ -209,9 +211,263 @@ const ecommerceDeliveryProExtras = [
   "Mağaza yönetimi eğitimi ve dokümantasyon",
 ] as const;
 
+// ---------------------------------------------------------------------------
+// Tek Sayfalık
+// ---------------------------------------------------------------------------
+
+const onePageAnalysis = [
+  "Mevcut landing page performans ve dönüşüm analizi",
+  "Bölüm / CTA envanteri ve migrasyon planı",
+  "URL ve 301 yönlendirme stratejisi",
+] as const;
+
+const onePageDesignTemel = [
+  ...commonRedesignItems,
+  "Tek sayfa içeriğinin güvenli aktarımı",
+  "Görsel sıkıştırma ve önbellek optimizasyonu",
+] as const;
+
+const onePageDesignStandart = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Dönüşüm odaklı bölüm ve CTA yenileme",
+  "Video arka plan / gömülü demo desteği",
+  "Core Web Vitals iyileştirmesi",
+] as const;
+
+const onePageDesignPro = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Next.js tabanlı modern altyapıya geçiş",
+  "Özel tasarım ve animasyonlar",
+  "Canlı chat entegrasyonu",
+  "İstenilen hosting kullanımı (Vercel, Ixirhost, AWS vb.)",
+] as const;
+
+// ---------------------------------------------------------------------------
+// Katalog / B2B
+// ---------------------------------------------------------------------------
+
+const catalogAnalysis = [
+  "Mevcut katalog yapısı ve teklif akışı analizi",
+  "Ürün / hizmet ve kategori migrasyon planı",
+  "Bayi / B2B erişim ve fiyat görünürlüğü denetimi",
+] as const;
+
+const catalogDesignTemel = [
+  ...commonRedesignItems,
+  "Katalog listesi ve detay sayfalarının yenilenmesi",
+  "Ürün / hizmet verilerinin aktarımı",
+  "Teklif formu güncellemesi",
+] as const;
+
+const catalogDesignStandart = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Gelişmiş filtre ve arama yenileme",
+  "İstenilen ödeme altyapısı kullanımı (iyzico, PayTR…)",
+  "Teklif takip ve B2B fiyat görünümü iyileştirmesi",
+] as const;
+
+const catalogDesignPro = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Ölçeklenebilir modern altyapıya geçiş",
+  "Bayi özel fiyat / stok görünümü",
+  "İstenilen hosting kullanımı (Vercel, Ixirhost, AWS vb.)",
+  "CRM entegrasyonuna hazır teklif akışı",
+] as const;
+
+// ---------------------------------------------------------------------------
+// İlan / Emlak
+// ---------------------------------------------------------------------------
+
+const listingAnalysis = [
+  "Mevcut ilan yapısı ve arama deneyimi analizi",
+  "İlan, fotoğraf ve özellik migrasyon planı",
+  "Danışman / ofis yapısı ve yetkilendirme denetimi",
+] as const;
+
+const listingDesignTemel = [
+  ...commonRedesignItems,
+  "İlan listesi ve detay sayfalarının yenilenmesi",
+  "İlan verilerinin güvenli aktarımı",
+  "Talep / iletişim formu güncellemesi",
+] as const;
+
+const listingDesignStandart = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Harita ve gelişmiş filtre yenileme",
+  "Favori / karşılaştırma deneyimi iyileştirmesi",
+  "Danışman profil sayfalarının güncellenmesi",
+] as const;
+
+const listingDesignPro = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Ölçeklenebilir modern altyapıya geçiş",
+  "Üye paneli ile ilan yönetimi yenileme",
+  "İstenilen hosting kullanımı (Vercel, Ixirhost, AWS vb.)",
+  "Öne çıkan ilan ve çoklu danışman yetkilendirmesi",
+] as const;
+
+// ---------------------------------------------------------------------------
+// Rezervasyon
+// ---------------------------------------------------------------------------
+
+const bookingAnalysis = [
+  "Mevcut rezervasyon ve takvim akışı analizi",
+  "Hizmet / kaynak ve müsaitlik migrasyon planı",
+  "Ödeme ve bildirim süreçlerinin denetimi",
+] as const;
+
+const bookingDesignTemel = [
+  ...commonRedesignItems,
+  "Rezervasyon sayfalarının yenilenmesi",
+  "Takvim ve müsaitlik aktarımı",
+  "Rezervasyon bildirimlerinin güncellenmesi",
+] as const;
+
+const bookingDesignStandart = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Online ödeme ile rezervasyon onay akışı yenileme",
+  "İstenilen ödeme altyapısı kullanımı (iyzico, PayTR…)",
+  "Kapasite ve iptal kurallarının güncellenmesi",
+] as const;
+
+const bookingDesignPro = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Ölçeklenebilir modern altyapıya geçiş",
+  "Çoklu şube / kaynak takvimi yenileme",
+  "İstenilen hosting kullanımı (Vercel, Ixirhost, AWS vb.)",
+  "Otomatik hatırlatma ve depozito / iade akışı",
+] as const;
+
+// ---------------------------------------------------------------------------
+// Eğitim / Kurs
+// ---------------------------------------------------------------------------
+
+const educationAnalysis = [
+  "Mevcut kurs / eğitim yapısı ve kayıt akışı analizi",
+  "Kurs, müfredat ve öğrenci verisi migrasyon planı",
+  "Ödeme ve içerik erişim süreçlerinin denetimi",
+] as const;
+
+const educationDesignTemel = [
+  ...commonRedesignItems,
+  "Kurs listesi ve detay sayfalarının yenilenmesi",
+  "Kurs / program verilerinin aktarımı",
+  "Kayıt / başvuru formu güncellemesi",
+] as const;
+
+const educationDesignStandart = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Öğrenci üyelik ve kayıt akışı yenileme",
+  "İstenilen ödeme altyapısı kullanımı (iyzico, PayTR…)",
+  "Ders materyali erişiminin güncellenmesi",
+] as const;
+
+const educationDesignPro = [
+  ...commonRedesignItems,
+  ...standartDesignExtras,
+  "Ölçeklenebilir modern altyapıya geçiş",
+  "Video ders ve içerik koruması yenileme",
+  "İstenilen hosting kullanımı (Vercel, Ixirhost, AWS vb.)",
+  "Sertifika / quiz ve eğitmen paneli iyileştirmesi",
+] as const;
+
+const makeRefreshTiers = ({
+  analysis,
+  designTemel,
+  designStandart,
+  designPro,
+  seoTemel,
+  deliveryTemel = commonDeliveryTemel,
+  deliveryStandart = commonDeliveryStandart,
+  deliveryPro = commonDeliveryPro,
+  deliveryDays,
+}: {
+  analysis: readonly string[];
+  designTemel: readonly string[];
+  designStandart: readonly string[];
+  designPro: readonly string[];
+  seoTemel: readonly string[];
+  deliveryTemel?: readonly string[];
+  deliveryStandart?: readonly string[];
+  deliveryPro?: readonly string[];
+  deliveryDays: { temel: string; standart: string; pro: string };
+}) =>
+  ({
+    temel: {
+      deliveryDays: deliveryDays.temel,
+      revisions: "2",
+      supportDays: "15",
+      languages: "1",
+      featureGroups: [
+        { label: REFRESH_GROUP_ANALYSIS, items: [...analysis] },
+        { label: REFRESH_GROUP_DESIGN, items: [...designTemel] },
+        { label: REFRESH_GROUP_SEO, items: [...seoTemel] },
+        { label: REFRESH_GROUP_DELIVERY, items: [...deliveryTemel] },
+        { label: REFRESH_GROUP_SUPPORT, items: [] },
+      ],
+    },
+    standart: {
+      deliveryDays: deliveryDays.standart,
+      revisions: "4",
+      supportDays: "30",
+      languages: "1-5",
+      featureGroups: [
+        { label: REFRESH_GROUP_ANALYSIS, items: [...analysis] },
+        { label: REFRESH_GROUP_DESIGN, items: [...designStandart] },
+        { label: REFRESH_GROUP_SEO, items: [...seoMigrationStandartItems] },
+        { label: REFRESH_GROUP_DELIVERY, items: [...deliveryStandart] },
+        {
+          label: REFRESH_GROUP_SUPPORT,
+          items: [...commonSupportStandartItems],
+        },
+      ],
+    },
+    pro: {
+      deliveryDays: deliveryDays.pro,
+      revisions: "6",
+      supportDays: "45",
+      languages: "Sınırsız",
+      featureGroups: [
+        { label: REFRESH_GROUP_ANALYSIS, items: [...analysis] },
+        { label: REFRESH_GROUP_DESIGN, items: [...designPro] },
+        { label: REFRESH_GROUP_SEO, items: [...seoMigrationProItems] },
+        { label: REFRESH_GROUP_DELIVERY, items: [...deliveryPro] },
+        {
+          label: REFRESH_GROUP_SUPPORT,
+          items: [...commonSupportStandartItems, ...proSupportExtras],
+        },
+      ],
+    },
+  }) as const;
+
 export const refreshPackagesTr = {
+  onePage: {
+    title: "Tek Sayfalık",
+    description:
+      "Mevcut landing page’inizi modern tasarım, hızlı altyapı ve SEO korumasıyla yenileyin; dönüşüm odaklı tek sayfalık bir vitrine geçin.",
+    introP2:
+      "Girişim, Profesyonel ve Kapsamlı paketleriyle tek sayfalık sitenizin yenileme kapsamını netleştiririz. Kısa sürede yayına alınabilir, SEO sıralamanızı koruyan bir geçiş planlıyoruz.",
+    tiers: makeRefreshTiers({
+      analysis: onePageAnalysis,
+      designTemel: onePageDesignTemel,
+      designStandart: onePageDesignStandart,
+      designPro: onePageDesignPro,
+      seoTemel: portfolioSeoTemel,
+      deliveryDays: { temel: "5-10", standart: "10-14", pro: "14-21" },
+    }),
+  },
+
   portfolio: {
-    title: "Portföy / Tanıtım",
+    title: "Portfolyo / Kişisel",
     description:
       "Mevcut tanıtım sitenizi modern tasarım, hızlı altyapı ve SEO korumasıyla yenileyin; içeriklerinizi kaybetmeden güçlü bir dijital vitrin oluşturun.",
     introP2:
@@ -481,5 +737,69 @@ export const refreshPackagesTr = {
         ],
       },
     },
+  },
+
+  catalog: {
+    title: "Katalog / B2B",
+    description:
+      "Mevcut katalog veya B2B vitrininizi modern arayüz, teklif akışı ve SEO korumasıyla yenileyin; ürün verilerinizi kaybetmeden büyümeye hazır hale getirin.",
+    introP2:
+      "Girişim, Profesyonel ve Kapsamlı paketleriyle katalog yenileme kapsamını netleştiririz. Kapsamlı pakette bayi fiyatı ve CRM hazırlığıyla ölçeklenebilirsiniz.",
+    tiers: makeRefreshTiers({
+      analysis: catalogAnalysis,
+      designTemel: catalogDesignTemel,
+      designStandart: catalogDesignStandart,
+      designPro: catalogDesignPro,
+      seoTemel: portfolioSeoTemel,
+      deliveryDays: { temel: "10-18", standart: "18-28", pro: "28-42" },
+    }),
+  },
+
+  listing: {
+    title: "İlan / Emlak",
+    description:
+      "İlan veya emlak sitenizi modern arama, galeri ve talep akışıyla yenileyin; mevcut ilanlarınızı ve organik görünürlüğünüzü koruyun.",
+    introP2:
+      "Girişim, Profesyonel ve Kapsamlı paketleriyle ilan sitenizin yenileme kapsamını netleştiririz. Kapsamlı pakette üye paneli ve çoklu danışman yönetimiyle büyüyebilirsiniz.",
+    tiers: makeRefreshTiers({
+      analysis: listingAnalysis,
+      designTemel: listingDesignTemel,
+      designStandart: listingDesignStandart,
+      designPro: listingDesignPro,
+      seoTemel: portfolioSeoTemel,
+      deliveryDays: { temel: "10-18", standart: "18-28", pro: "28-42" },
+    }),
+  },
+
+  booking: {
+    title: "Rezervasyon",
+    description:
+      "Rezervasyon sisteminizi modern takvim, ödeme ve bildirim akışıyla yenileyin; mevcut randevu verilerinizi kaybetmeden geçiş yapın.",
+    introP2:
+      "Girişim, Profesyonel ve Kapsamlı paketleriyle rezervasyon yenileme kapsamını netleştiririz. Kapsamlı pakette çoklu şube ve otomatik hatırlatmalarla ölçeklenebilirsiniz.",
+    tiers: makeRefreshTiers({
+      analysis: bookingAnalysis,
+      designTemel: bookingDesignTemel,
+      designStandart: bookingDesignStandart,
+      designPro: bookingDesignPro,
+      seoTemel: portfolioSeoTemel,
+      deliveryDays: { temel: "10-18", standart: "18-28", pro: "28-42" },
+    }),
+  },
+
+  education: {
+    title: "Eğitim / Kurs",
+    description:
+      "Kurs veya eğitim platformunuzu modern kayıt, içerik ve ödeme deneyimiyle yenileyin; öğrenci ve kurs verilerinizi koruyarak geçiş yapın.",
+    introP2:
+      "Girişim, Profesyonel ve Kapsamlı paketleriyle eğitim sitenizin yenileme kapsamını netleştiririz. Kapsamlı pakette video ders ve eğitmen paneliyle büyüyebilirsiniz.",
+    tiers: makeRefreshTiers({
+      analysis: educationAnalysis,
+      designTemel: educationDesignTemel,
+      designStandart: educationDesignStandart,
+      designPro: educationDesignPro,
+      seoTemel: portfolioSeoTemel,
+      deliveryDays: { temel: "10-18", standart: "18-28", pro: "28-42" },
+    }),
   },
 } as const;
