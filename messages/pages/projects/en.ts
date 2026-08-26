@@ -8,10 +8,10 @@ export const projectsPageEn = {
   scrollLabel: "Browse projects",
   stats: [
     {
-      value: "4",
+      value: "38",
       label: "Selected Projects",
       labelShort: "Projects",
-      hint: "Selected projects with detailed case studies in our portfolio, each delivered against real business goals.",
+      hint: "Selected projects in our portfolio, each delivered against real business goals.",
     },
     {
       value: "__techCount__",
@@ -37,4 +37,6 @@ export const projectsPageEn = {
   showcaseSubtitle:
     "Building projects focused on business goals, balanced with performance and measurable results.",
   featuredLabel: "Featured",
+  carouselPrev: "Previous projects",
+  carouselNext: "Next projects",
 } as const;
