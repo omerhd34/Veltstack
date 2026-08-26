@@ -7,7 +7,7 @@ export const projectsHomeEn = {
     "End-to-end e-commerce for home appliances and electronics. A conversion-focused sales flow from product discovery through checkout and order tracking.",
   projectGardossiTitle: "Gardossi | Corporate Website",
   projectGardossiDesc:
-    "Premium corporate product catalog for garden and balcony furniture. Rich visual showcase across six categories; WhatsApp for fast quotes and contact.",
+    "Premium corporate catalog for garden and balcony furniture. Visual showcase across six categories; WhatsApp for fast quotes.",
   projectUzmanPsikologTitle: "Clinical Psychologist | Corporate Website",
   projectUzmanPsikologDesc:
     "Trust-focused corporate site for a clinical psychologist. In-person and online therapy, appointment requests, psychology content and service showcase in one flow.",
@@ -16,7 +16,7 @@ export const projectsHomeEn = {
     "Full stack developer portfolio. Projects, experience and service packages in one showcase that communicates capabilities clearly.",
   projectOnlinemuhasebeTitle: "Online Muhasebe | Corporate Website",
   projectOnlinemuhasebeDesc:
-    "Corporate site for Şahin Demir accounting consultancy. Accounting and tax advisory, practical regulation resources, official platform shortcuts and consultation requests.",
+    "Corporate site for accounting consultancy. Accounting and tax advisory, practical regulation resources, official platform shortcuts and consultation requests.",
   projectOrivisTitle: "Dental Clinic | Corporate Website",
   projectOrivisDesc:
     "Appointment-focused corporate site for a dental clinic. Treatment packages, clinician profiles and patient guides in a clear, calm flow.",
@@ -77,7 +77,7 @@ export const projectsHomeEn = {
   projectKisiselAntrenorTitle: "Personal Trainer | Corporate Website",
   projectKisiselAntrenorDesc:
     "Program-focused corporate site for a personal trainer. Packages, transformation stories and trial session requests in a motivating flow.",
-  projectEtkinlikOrganizasyonTitle: "Event Planning | Corporate Website",
+  projectEtkinlikOrganizasyonTitle: "Event Agency | Corporate Website",
   projectEtkinlikOrganizasyonDesc:
     "Service showcase for an event planning firm. Wedding, corporate and private event packages with visual galleries leading to quote requests.",
   projectCateringHizmetiTitle: "Catering Service | Corporate Website",
@@ -89,19 +89,19 @@ export const projectsHomeEn = {
   projectTeknikServisTitle: "Technical Service | Corporate Website",
   projectTeknikServisDesc:
     "Service-focused corporate site for an appliance repair company. Fault types, service regions and appointment requests in a fast-access layout.",
-  projectDanismanlikFirmasiTitle: "Consulting Firm | Corporate Website",
+  projectDanismanlikFirmasiTitle: "Consulting | Corporate Website",
   projectDanismanlikFirmasiDesc:
     "Trust-focused corporate site for a business consultancy. Service areas, methodology and discovery call requests in a clear narrative.",
   projectSaglikKlinigiTitle: "Medical Clinic | Corporate Website",
   projectSaglikKlinigiDesc:
     "Appointment-focused corporate site for a polyclinic. Departments, clinician profiles and online booking aligned with the patient journey.",
-  projectYatirimDanismanligiTitle: "Investment Advisory | Corporate Website",
+  projectYatirimDanismanligiTitle: "Investment Office | Corporate Website",
   projectYatirimDanismanligiDesc:
     "Trust-focused corporate site for an investment advisory firm. Service scope, process overview and meeting requests in a professional tone.",
   projectCeviriBurosuTitle: "Translation Agency | Corporate Website",
   projectCeviriBurosuDesc:
     "Service-focused corporate site for a translation agency. Language pairs, industry expertise and quote requests in a clear structure.",
-  projectSosyalMedyaAjansiTitle: "Social Media Agency | Corporate Website",
+  projectSosyalMedyaAjansiTitle: "Media Agency | Corporate Website",
   projectSosyalMedyaAjansiDesc:
     "Service showcase for a social media agency. Content production, ad management and strategy packages supported by case studies.",
   projectOzelDersMerkeziTitle: "Tutoring Center | Course Platform",
