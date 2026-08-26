@@ -57,25 +57,28 @@ export const webSitesiTechCategories: ServiceTechCategoryDefinition[] = [
   },
   {
     key: "database",
-    items: [
-      "MySQL",
-      "Prisma",
-      "MongoDB",
-      "PostgreSQL",
-      "MSSQL",
-      "SQLite",
-      "Railway",
-    ],
+    items: ["MySQL", "Prisma", "MongoDB", "PostgreSQL", "MSSQL", "SQLite"],
   },
   {
     key: "devops",
-    items: ["Vercel", "ixirhost", "cPanel"],
+    items: [
+      "Vercel",
+      "ixirhost",
+      "Netlify",
+      "Cloudflare Pages",
+      "Render",
+      "AWS Amplify",
+      "cPanel",
+    ],
   },
   {
     key: "analytics",
     items: [
       "Google Analytics",
-      "Google Search",
+      "Google Search Console",
+      "Google Tag Manager",
+      "Google Ads",
+      "Google Business Profile",
       "Lighthouse",
       "PageSpeed Insights",
     ],
@@ -154,22 +157,13 @@ export const seoHizmetleriTechCategories: ServiceTechCategoryDefinition[] = [
     items: [
       "Google Analytics",
       "Google Search Console",
-      "Google Search",
       "Google Tag Manager",
+      "Google Ads",
+      "Google Business Profile",
       "Lighthouse",
       "PageSpeed Insights",
-      "Semrush",
-      "Ahrefs",
-      "Moz",
-      "Google Looker Studio",
       "Meta Pixel",
-      "Google Trends",
-      "Screaming Frog SEO Spider",
     ],
-  },
-  {
-    key: "tools",
-    items: ["JSON-LD"],
   },
   {
     key: "devops",
@@ -177,77 +171,111 @@ export const seoHizmetleriTechCategories: ServiceTechCategoryDefinition[] = [
   },
 ];
 
-export const teknikDenetimTechCategories: ServiceTechCategoryDefinition[] = [
+/** Web sitesi + uygulama teknolojilerinin birleşimi (teknik denetim & bakım). */
+export const teknikVeBakimTechCategories: ServiceTechCategoryDefinition[] = [
   {
-    key: "analytics",
-    items: [
-      "Lighthouse",
-      "PageSpeed Insights",
-      "Google Search Console",
-      "Google Analytics",
-    ],
+    key: "mobile",
+    items: ["React Native", "Expo", "Flutter", "Kotlin", "Swift"],
   },
   {
     key: "frontend",
-    items: ["Next.js", "React", "TypeScript", "React Native", "Expo"],
+    items: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Sass & SCSS",
+      "Framer Motion",
+      "Redux",
+      "Zustand",
+      "Bootstrap",
+      "Angular",
+      "Vue",
+    ],
+  },
+  {
+    key: "ui",
+    items: [
+      "Shadcn",
+      "Lightswind UI",
+      "HeroUI",
+      "Chakra UI",
+      "Headless UI",
+      "HyperUI",
+      "Radix UI",
+      "mapcn",
+      "NextUI",
+      "TanStack Query",
+      "NativeWind",
+    ],
   },
   {
     key: "backend",
-    items: ["Node.js", "REST API", "Express.js"],
+    items: ["Node.js", "REST API", "Express.js", "Firebase", "Supabase"],
   },
   {
     key: "database",
-    items: ["MySQL", "PostgreSQL", "Prisma", "MongoDB", "Railway"],
+    items: [
+      "MySQL",
+      "Prisma",
+      "MongoDB",
+      "PostgreSQL",
+      "MSSQL",
+      "SQLite",
+      "Redis",
+      "Railway",
+    ],
   },
   {
     key: "devops",
-    items: ["Vercel", "GitHub", "Docker", "ixirhost", "cPanel"],
+    items: [
+      "Vercel",
+      "ixirhost",
+      "Netlify",
+      "Cloudflare Pages",
+      "Render",
+      "AWS Amplify",
+      "cPanel",
+      "Docker",
+    ],
+  },
+  {
+    key: "analytics",
+    items: [
+      "Google Analytics",
+      "Google Search Console",
+      "Google Tag Manager",
+      "Google Ads",
+      "Google Business Profile",
+      "Lighthouse",
+      "PageSpeed Insights",
+    ],
+  },
+  {
+    key: "payment",
+    items: ["Shopier", "PayTR", "iyzico", "Stripe"],
+  },
+  {
+    key: "store",
+    items: ["App Store", "Google Play", "Android Studio", "Figma"],
   },
   {
     key: "tools",
-    items: ["Postman", "Git", "Swagger / OpenAPI"],
+    items: ["Postman", "Google Maps", "Git", "GitHub", "Sentry"],
   },
 ];
 
-export const bakimVeDestekTechCategories: ServiceTechCategoryDefinition[] = [
-  {
-    key: "frontend",
-    items: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "React Native",
-      "Expo",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    key: "backend",
-    items: ["Node.js", "REST API", "Express.js"],
-  },
-  {
-    key: "database",
-    items: ["MySQL", "PostgreSQL", "Prisma", "MongoDB", "Redis", "Railway"],
-  },
-  {
-    key: "devops",
-    items: ["Vercel", "ixirhost", "cPanel", "Docker"],
-  },
-  {
-    key: "analytics",
-    items: ["Google Analytics", "Lighthouse", "PageSpeed Insights"],
-  },
-  {
-    key: "tools",
-    items: ["Git", "GitHub", "Postman", "Upstash"],
-  },
-];
+export const teknikDenetimTechCategories = teknikVeBakimTechCategories;
+export const bakimVeDestekTechCategories = teknikVeBakimTechCategories;
 
 export const serviceTechCategories: Partial<
   Record<ServiceSlug, ServiceTechCategoryDefinition[]>
 > = {
   "web-sitesi-gelistirme": webSitesiTechCategories,
-  "web-sitesi-yenileme": webSitesiTechCategories,
+  "dijital-yenileme": webSitesiTechCategories,
   "uygulama-gelistirme": uygulamaGelistirmeTechCategories,
   "seo-hizmetleri": seoHizmetleriTechCategories,
   "teknik-denetim": teknikDenetimTechCategories,
