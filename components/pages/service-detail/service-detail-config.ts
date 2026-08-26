@@ -11,7 +11,7 @@ import {
 
 export const servicePackageCategories: Record<ServiceSlug, PackageCategory> = {
   "web-sitesi-gelistirme": "web",
-  "web-sitesi-yenileme": "refresh",
+  "dijital-yenileme": "refresh",
   "uygulama-gelistirme": "app",
   "seo-hizmetleri": "seo",
   "teknik-denetim": "audit",
@@ -28,7 +28,7 @@ export const serviceHeroStats: Record<
     tiers: "3",
     revisions: "2-10",
   },
-  "web-sitesi-yenileme": {
+  "dijital-yenileme": {
     delivery: "7-49",
     support: "15-45",
     tiers: "3",
@@ -62,7 +62,7 @@ export const serviceHeroStats: Record<
 
 export const serviceTechStacks: Record<ServiceSlug, string[]> = {
   "web-sitesi-gelistirme": flattenTechCategories(webSitesiTechCategories),
-  "web-sitesi-yenileme": flattenTechCategories(webSitesiTechCategories),
+  "dijital-yenileme": flattenTechCategories(webSitesiTechCategories),
   "uygulama-gelistirme": flattenTechCategories(uygulamaGelistirmeTechCategories),
   "seo-hizmetleri": flattenTechCategories(seoHizmetleriTechCategories),
   "teknik-denetim": flattenTechCategories(teknikDenetimTechCategories),
