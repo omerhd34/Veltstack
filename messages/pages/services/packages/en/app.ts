@@ -185,7 +185,7 @@ const ecommerceIntegrationProItems = [
 
 export const appPackagesEn = {
   portfolio: {
-    title: "Portfolio / Promotional",
+    title: "Portfolio / Personal",
     description:
       "A trusted iOS and Android app that introduces your brand in one tap. Bring your portfolio, services and contact channels to users’ pockets.",
     introP2:
