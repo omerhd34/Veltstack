@@ -116,7 +116,7 @@ export function ProjectShowcaseCard({
           {title}
         </h3>
 
-        <p className="mt-3 min-h-[4lh] text-sm leading-relaxed text-foreground/60">
+        <p className="mt-3 line-clamp-3 min-h-[3lh] text-sm leading-relaxed text-foreground/60">
           {description}
         </p>
       </div>
