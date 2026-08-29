@@ -18,7 +18,7 @@ const preferredPaymentExtras = [
 const proDesignExtras = [
   "Custom design details and advanced animations",
   "Scalable infrastructure ready for high traffic",
-  "Preferred hosting (Vercel, Ixirhost, AWS, etc.)",
+  "Preferred hosting (Vercel, AWS, etc.)",
   "Live chat",
 ] as const;
 
