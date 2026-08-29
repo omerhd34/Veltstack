@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { LocaleHtmlLang } from "@/components/layout/LocaleHtmlLang";
 import { LocaleScrollRestoration } from "@/components/layout/LocaleScrollRestoration";
+import { MetaPixel } from "@/components/layout/MetaPixel";
 import { LocalBusinessSchema } from "@/components/seo";
 
 interface LocaleLayoutProps {
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
       <LocaleHtmlLang />
       <LocaleScrollRestoration />
       <LocalBusinessSchema />
+      <MetaPixel />
       <div className="flex min-h-dvh flex-col select-none">
         <Navbar />
         <main className="flex flex-1 flex-col">{children}</main>
