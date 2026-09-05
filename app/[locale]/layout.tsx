@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { BackToTop } from "@/components/layout/BackToTop";
+import { BackToTopLazy } from "@/components/layout/BackToTopLazy";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
@@ -44,7 +44,7 @@ export default async function LocaleLayout({
         <main className="flex flex-1 flex-col">{children}</main>
         <Footer />
       </div>
-      <BackToTop />
+      <BackToTopLazy />
       <WhatsAppButton />
     </NextIntlClientProvider>
   );
