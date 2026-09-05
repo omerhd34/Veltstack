@@ -13,7 +13,7 @@ const MOBILE_QUERY = "(max-width: 767px)";
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
 
   useEffect(() => {
     const mql = window.matchMedia(MOBILE_QUERY);
@@ -27,7 +27,7 @@ function useIsMobile() {
 }
 
 function usePrefersReducedMotion() {
-  const [reduced, setReduced] = useState(false);
+  const [reduced, setReduced] = useState(true);
 
   useEffect(() => {
     const mql = window.matchMedia(REDUCED_MOTION_QUERY);
