@@ -12,11 +12,13 @@ const nextConfig: NextConfig = {
       "react-icons/lu",
       "react-icons/si",
       "react-icons/fa6",
+      "react-icons/pi",
       "react-icons/ri",
       "react-icons/gr",
       "react-icons/tb",
       "lucide-react",
       "framer-motion",
+      "radix-ui",
     ],
   },
   images: {
