@@ -50,7 +50,7 @@ export async function BlogPreviewSection({
                 className="mt-5 max-w-2xl font-(family-name:--font-heading) text-[clamp(2rem,5vw,3rem)] font-bold leading-[1.08] tracking-tight text-white sm:mt-6"
               >
                 {t("blogHeadline")}{" "}
-                <span className="text-brand-accent">
+                <span className="text-brand-accent-bright">
                   {t("blogHeadlineAccent")}
                 </span>
               </h2>

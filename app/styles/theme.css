@@ -42,6 +42,7 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-bright: var(--brand-accent-bright);
   --color-brand-accent-foreground: var(--brand-accent-foreground);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
@@ -89,6 +90,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
   --brand-accent: #3a6b52;
+  --brand-accent-bright: #6ee7b7;
   --brand-accent-foreground: #ffffff;
   --brand-accent-rgb: 58 107 82;
   --border-trace-stroke: #a8dfc4;
