@@ -1,6 +1,6 @@
 "use client";
 
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 import { usePathname } from "@/i18n/navigation";
 import {
   clearLocaleSwitchScroll,
@@ -10,15 +10,21 @@ import {
 export function LocaleScrollRestoration() {
   const pathname = usePathname();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const savedY = resolveLocaleSwitchScroll();
     const isLocaleSwitch = savedY !== null;
+    const hash = window.location.hash.replace(/^#/, "");
+
+    if (!isLocaleSwitch && !hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      return;
+    }
 
     const scrollToHash = () => {
       const id = window.location.hash.replace(/^#/, "");
@@ -26,11 +32,7 @@ export function LocaleScrollRestoration() {
       const el = document.getElementById(id);
       if (!el) return false;
 
-      const header = document.querySelector("header");
-      const headerHeight = header?.getBoundingClientRect().height ?? 72;
-      const gap = 16;
-      const top =
-        window.scrollY + el.getBoundingClientRect().top - headerHeight - gap;
+      const top = el.getBoundingClientRect().top + window.scrollY - 88;
 
       window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "smooth" });
       return true;
@@ -42,9 +44,7 @@ export function LocaleScrollRestoration() {
         return;
       }
 
-      if (scrollToHash()) return;
-
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      scrollToHash();
     };
 
     applyScroll();
@@ -56,7 +56,6 @@ export function LocaleScrollRestoration() {
         clearLocaleSwitchScroll();
       }
     }, 0);
-    // FAQ accordion açıldıktan sonra yüksekliği netleşince yeniden hizala
     const hashRetryId = window.setTimeout(applyScroll, 320);
 
     const onHashChange = () => {
