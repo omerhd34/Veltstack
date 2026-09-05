@@ -1,7 +1,8 @@
 /* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { RiMenu3Line } from "react-icons/ri";
 import { usePathname } from "@/i18n/navigation";
 import { useUiStore } from "@/store/uiSlice";
@@ -13,11 +14,26 @@ import { NavbarDesktopLinks } from "./NavbarDesktopLinks";
 import { NavbarMobileMenu } from "./NavbarMobileMenu";
 import { NavbarLangSwitcher } from "./NavbarLangSwitcher";
 import { NavbarCta } from "./NavbarCta";
-import { NavbarServicesMegaMenuPanel } from "./NavbarServicesMegaMenuPanel";
-import { NavbarProjectsMegaMenuPanel } from "./NavbarProjectsMegaMenuPanel";
-import { NavbarBlogMegaMenuPanel } from "./NavbarBlogMegaMenuPanel";
-import { NavbarFaqMegaMenuPanel } from "./NavbarFaqMegaMenuPanel";
 import { isHeroOverlayPath } from "./navbar-overlay";
+
+const NavbarServicesMegaMenuPanel = dynamic(() =>
+  import("./NavbarServicesMegaMenuPanel").then(
+    (mod) => mod.NavbarServicesMegaMenuPanel,
+  ),
+);
+const NavbarProjectsMegaMenuPanel = dynamic(() =>
+  import("./NavbarProjectsMegaMenuPanel").then(
+    (mod) => mod.NavbarProjectsMegaMenuPanel,
+  ),
+);
+const NavbarBlogMegaMenuPanel = dynamic(() =>
+  import("./NavbarBlogMegaMenuPanel").then(
+    (mod) => mod.NavbarBlogMegaMenuPanel,
+  ),
+);
+const NavbarFaqMegaMenuPanel = dynamic(() =>
+  import("./NavbarFaqMegaMenuPanel").then((mod) => mod.NavbarFaqMegaMenuPanel),
+);
 
 interface NavbarProps {
   className?: string;
@@ -26,7 +42,6 @@ interface NavbarProps {
 export function Navbar({ className }: NavbarProps) {
   const pathname = usePathname();
   const heroOverlayPage = isHeroOverlayPath(pathname);
-  const headerRef = useRef<HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const [hasPageHero, setHasPageHero] = useState(heroOverlayPage);
   const mobileMenuOpen = useUiStore((state) => state.mobileMenuOpen);
@@ -52,10 +67,25 @@ export function Navbar({ className }: NavbarProps) {
     (state) => state.scheduleCloseFaqMenu,
   );
 
+  const [showDesktopNav, setShowDesktopNav] = useState(false);
+  const [showMobileNav, setShowMobileNav] = useState(false);
+
   const megaMenuOpen =
     servicesMenuOpen || projectsMenuOpen || blogMenuOpen || faqMenuOpen;
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    const desktopQuery = window.matchMedia("(min-width: 1200px)");
+    const sync = () => {
+      const isDesktop = desktopQuery.matches;
+      setShowDesktopNav(isDesktop);
+      setShowMobileNav(!isDesktop);
+    };
+    sync();
+    desktopQuery.addEventListener("change", sync);
+    return () => desktopQuery.removeEventListener("change", sync);
+  }, []);
+
+  useEffect(() => {
     if (!heroOverlayPage) {
       setHasPageHero(false);
       const updateScrolled = () => setScrolled(window.scrollY > 48);
@@ -72,7 +102,6 @@ export function Navbar({ className }: NavbarProps) {
       setHasPageHero(true);
       setScrolled(false);
 
-      const headerHeight = headerRef.current?.offsetHeight ?? 72;
       io = new IntersectionObserver(
         ([entry]) => {
           setScrolled(!entry.isIntersecting);
@@ -80,7 +109,7 @@ export function Navbar({ className }: NavbarProps) {
         {
           root: null,
           threshold: 0,
-          rootMargin: `-${headerHeight + 1}px 0px 0px 0px`,
+          rootMargin: "-73px 0px 0px 0px",
         },
       );
       io.observe(hero);
@@ -123,7 +152,6 @@ export function Navbar({ className }: NavbarProps) {
 
   return (
     <header
-      ref={headerRef}
       data-overlay={overlay ? "true" : undefined}
       className={cn(
         "group/header top-0 z-50 w-full transition-[background-color,box-shadow,border-color] duration-300",
@@ -164,51 +192,51 @@ export function Navbar({ className }: NavbarProps) {
         </div>
       </SiteContainer>
 
-      <div
-        data-state={servicesMenuOpen ? "open" : "closed"}
-        className={megaMenuPanelClass}
-        onMouseEnter={openServicesMenu}
-        onMouseLeave={scheduleCloseServicesMenu}
-        aria-hidden={!servicesMenuOpen}
-        inert={!servicesMenuOpen ? true : undefined}
-      >
-        <NavbarServicesMegaMenuPanel />
-      </div>
+      {showDesktopNav && servicesMenuOpen ? (
+        <div
+          data-state="open"
+          className={megaMenuPanelClass}
+          onMouseEnter={openServicesMenu}
+          onMouseLeave={scheduleCloseServicesMenu}
+        >
+          <NavbarServicesMegaMenuPanel />
+        </div>
+      ) : null}
 
-      <div
-        data-state={projectsMenuOpen ? "open" : "closed"}
-        className={megaMenuPanelClass}
-        onMouseEnter={openProjectsMenu}
-        onMouseLeave={scheduleCloseProjectsMenu}
-        aria-hidden={!projectsMenuOpen}
-        inert={!projectsMenuOpen ? true : undefined}
-      >
-        <NavbarProjectsMegaMenuPanel />
-      </div>
+      {showDesktopNav && projectsMenuOpen ? (
+        <div
+          data-state="open"
+          className={megaMenuPanelClass}
+          onMouseEnter={openProjectsMenu}
+          onMouseLeave={scheduleCloseProjectsMenu}
+        >
+          <NavbarProjectsMegaMenuPanel />
+        </div>
+      ) : null}
 
-      <div
-        data-state={blogMenuOpen ? "open" : "closed"}
-        className={megaMenuPanelClass}
-        onMouseEnter={openBlogMenu}
-        onMouseLeave={scheduleCloseBlogMenu}
-        aria-hidden={!blogMenuOpen}
-        inert={!blogMenuOpen ? true : undefined}
-      >
-        <NavbarBlogMegaMenuPanel />
-      </div>
+      {showDesktopNav && blogMenuOpen ? (
+        <div
+          data-state="open"
+          className={megaMenuPanelClass}
+          onMouseEnter={openBlogMenu}
+          onMouseLeave={scheduleCloseBlogMenu}
+        >
+          <NavbarBlogMegaMenuPanel />
+        </div>
+      ) : null}
 
-      <div
-        data-state={faqMenuOpen ? "open" : "closed"}
-        className={megaMenuPanelClass}
-        onMouseEnter={openFaqMenu}
-        onMouseLeave={scheduleCloseFaqMenu}
-        aria-hidden={!faqMenuOpen}
-        inert={!faqMenuOpen ? true : undefined}
-      >
-        <NavbarFaqMegaMenuPanel />
-      </div>
+      {showDesktopNav && faqMenuOpen ? (
+        <div
+          data-state="open"
+          className={megaMenuPanelClass}
+          onMouseEnter={openFaqMenu}
+          onMouseLeave={scheduleCloseFaqMenu}
+        >
+          <NavbarFaqMegaMenuPanel />
+        </div>
+      ) : null}
 
-      <NavbarMobileMenu />
+      {showMobileNav || mobileMenuOpen ? <NavbarMobileMenu /> : null}
     </header>
   );
 }

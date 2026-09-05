@@ -44,7 +44,10 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
             return (
               <li key={item.href}>
-                <SoftPrefetchLink href={item.href} className={footerLinkClassName}>
+                <SoftPrefetchLink
+                  href={item.href}
+                  className={footerLinkClassName}
+                >
                   <span className="inline-flex size-4 shrink-0 items-center justify-center">
                     <Icon className="size-4" aria-hidden />
                   </span>
@@ -66,7 +69,10 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
             return (
               <li key={item.href}>
-                <SoftPrefetchLink href={item.href} className={footerLinkClassName}>
+                <SoftPrefetchLink
+                  href={item.href}
+                  className={footerLinkClassName}
+                >
                   <span className="inline-flex size-4 shrink-0 items-center justify-center">
                     <Icon className="size-4" aria-hidden />
                   </span>
@@ -113,7 +119,10 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
             return (
               <li key={item.href}>
-                <SoftPrefetchLink href={item.href} className={footerLinkClassName}>
+                <SoftPrefetchLink
+                  href={item.href}
+                  className={footerLinkClassName}
+                >
                   <span className="inline-flex size-4 shrink-0 items-center justify-center">
                     <Icon className="size-4" aria-hidden />
                   </span>
