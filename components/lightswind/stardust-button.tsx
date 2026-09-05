@@ -9,8 +9,14 @@ import {
   type FocusEvent,
   type ReactNode,
 } from "react";
-import { BorderBeam } from "@/components/lightswind/border-beam";
+import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
+
+const BorderBeam = dynamic(
+  () =>
+    import("@/components/lightswind/border-beam").then((mod) => mod.BorderBeam),
+  { ssr: false },
+);
 
 interface StardustShellProps {
   children: ReactNode;
@@ -55,6 +61,7 @@ export function StardustShell({
   const frameRef = useRef<number | null>(null);
   const hoveringRef = useRef(false);
   const reducedMotionRef = useRef(false);
+  const sizeRef = useRef({ width: 0, height: 0 });
   const startLoopRef = useRef<() => void>(() => {});
   const [hovered, setHovered] = useState(false);
   const isControlled = active !== undefined;
@@ -95,6 +102,8 @@ export function StardustShell({
   );
 
   useEffect(() => {
+    if (!isEffectActive) return;
+
     const canvas = canvasRef.current;
     const root = rootRef.current;
     if (!canvas || !root) return;
@@ -115,19 +124,19 @@ export function StardustShell({
       }
     };
 
-    const clearCanvas = () => {
-      const rect = root.getBoundingClientRect();
-      ctx.clearRect(0, 0, rect.width, rect.height);
+    const applySize = (width: number, height: number) => {
+      sizeRef.current = { width, height };
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.max(1, Math.floor(width * dpr));
+      canvas.height = Math.max(1, Math.floor(height * dpr));
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
-    const resize = () => {
-      const rect = root.getBoundingClientRect();
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.max(1, Math.floor(rect.width * dpr));
-      canvas.height = Math.max(1, Math.floor(rect.height * dpr));
-      canvas.style.width = `${rect.width}px`;
-      canvas.style.height = `${rect.height}px`;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const clearCanvas = () => {
+      const { width, height } = sizeRef.current;
+      ctx.clearRect(0, 0, width, height);
     };
 
     const tick = () => {
@@ -139,9 +148,7 @@ export function StardustShell({
         return;
       }
 
-      const rect = root.getBoundingClientRect();
-      const width = rect.width;
-      const height = rect.height;
+      const { width, height } = sizeRef.current;
 
       ctx.clearRect(0, 0, width, height);
 
@@ -199,8 +206,11 @@ export function StardustShell({
     };
     startLoopRef.current = startLoop;
 
-    resize();
-    const observer = new ResizeObserver(resize);
+    const observer = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (!entry) return;
+      applySize(entry.contentRect.width, entry.contentRect.height);
+    });
     observer.observe(root);
 
     const onVisibility = () => {
@@ -236,7 +246,7 @@ export function StardustShell({
       particlesRef.current = [];
       startLoopRef.current = () => {};
     };
-  }, [particleColor, spawnParticle]);
+  }, [isControlled, isEffectActive, particleColor, spawnParticle]);
 
   useEffect(() => {
     hoveringRef.current = Boolean(isEffectActive);
@@ -250,8 +260,8 @@ export function StardustShell({
       if (canvas && root) {
         const ctx = canvas.getContext("2d");
         if (ctx) {
-          const rect = root.getBoundingClientRect();
-          ctx.clearRect(0, 0, rect.width, rect.height);
+          const { width, height } = sizeRef.current;
+          ctx.clearRect(0, 0, width, height);
         }
       }
     } else {
