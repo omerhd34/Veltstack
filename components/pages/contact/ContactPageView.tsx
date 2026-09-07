@@ -59,9 +59,6 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
         fieldMessagePlaceholder={t("fieldMessagePlaceholder")}
         submitButton={t("submitButton")}
         submitting={t("submitting")}
-        successTitle={t("successTitle")}
-        successMessage={t("successMessage")}
-        successButtonBack={t("successButtonBack")}
         errorMessage={t("errorMessage")}
         serviceOptions={serviceOptions}
         tierOptions={tierOptions}

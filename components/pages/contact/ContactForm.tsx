@@ -45,9 +45,6 @@ interface ContactFormProps {
   fieldMessagePlaceholder: string;
   submitButton: string;
   submitting: string;
-  successTitle: string;
-  successMessage: string;
-  successButtonBack: string;
   errorMessage: string;
   serviceOptions: SelectOption[];
   tierOptions: SelectOption[];

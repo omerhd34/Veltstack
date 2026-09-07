@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { LuCheck, LuLoader, LuRotateCcw } from "react-icons/lu";
+import { useState } from "react";
+import { LuLoader } from "react-icons/lu";
 import { BorderTrace } from "@/components/ui/BorderTrace";
+import { useRouter } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { ContactFormFieldShell } from "./ContactFormFieldShell";
 import { ContactFormSelect } from "./ContactFormSelect";
@@ -37,9 +38,6 @@ interface ContactFormFieldsProps {
     fieldMessagePlaceholder: string;
     submitButton: string;
     submitting: string;
-    successTitle: string;
-    successMessage: string;
-    successButtonBack: string;
     errorMessage: string;
     serviceOptions: SelectOption[];
     tierOptions: SelectOption[];
@@ -49,7 +47,7 @@ interface ContactFormFieldsProps {
   className?: string;
 }
 
-type FormState = "idle" | "submitting" | "success" | "error";
+type FormState = "idle" | "submitting" | "error";
 
 type FieldKey =
   | "name"
@@ -74,6 +72,7 @@ export function ContactFormFields({
   labels,
   className,
 }: ContactFormFieldsProps) {
+  const router = useRouter();
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
@@ -128,25 +127,6 @@ export function ContactFormFields({
     if (!values.budget) errors.budget = true;
     return errors;
   }
-
-  function resetToIdle() {
-    setFormState("idle");
-    setFieldErrors({});
-    setName("");
-    setEmail("");
-    setSelectedService("");
-    setSelectedPackage("");
-    setSelectedTier("");
-    setSelectedBudget("");
-    setPhoneCountryCode(defaultPhoneCountryCode);
-    setPhoneNumber("");
-  }
-
-  useEffect(() => {
-    if (formState !== "success") return;
-    const timer = window.setTimeout(resetToIdle, 10_000);
-    return () => window.clearTimeout(timer);
-  }, [formState]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -203,42 +183,11 @@ export function ContactFormFields({
         throw new Error(json?.error ?? "Server error");
       }
 
-      setFormState("success");
+      router.push("/tesekkurler");
     } catch {
       setFormState("error");
       setErrorMsg(labels.errorMessage);
     }
-  }
-
-  if (formState === "success") {
-    return (
-      <div
-        className={cn(
-          "flex h-full min-h-0 flex-col items-center justify-center gap-5 rounded-2xl border border-brand-accent/25 bg-brand-accent/5 px-8 py-16 text-center",
-          className,
-        )}
-      >
-        <div className="flex size-16 items-center justify-center rounded-full border border-brand-accent/30 bg-brand-accent/10 text-brand-accent">
-          <LuCheck className="size-7" strokeWidth={2.5} />
-        </div>
-        <div>
-          <h3 className="font-(family-name:--font-heading) text-xl font-bold text-foreground">
-            {labels.successTitle}
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            {labels.successMessage}
-          </p>
-        </div>
-        <button
-          type="button"
-          onClick={resetToIdle}
-          className="mt-2 inline-flex items-center gap-2 rounded-full border border-border/70 bg-background px-5 py-2 text-sm font-medium text-foreground transition-colors hover:border-brand-accent/40 hover:text-brand-accent"
-        >
-          <LuRotateCcw className="size-3.5" aria-hidden />
-          {labels.successButtonBack}
-        </button>
-      </div>
-    );
   }
 
   return (
