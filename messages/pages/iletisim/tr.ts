@@ -92,11 +92,6 @@ export const contactTr = {
   submitButton: "Gönder ve Teklif Al",
   submitting: "Gönderiliyor…",
 
-  successTitle: "Mesajınız iletildi!",
-  successMessage:
-    "En kısa sürede, genellikle 24 saat içinde uzman ekibimiz size özel yol haritasıyla dönüş yapacak. Teşekkürler!",
-  successButtonBack: "Yeni mesaj gönder",
-
   errorMessage:
     "Bir hata oluştu. Lütfen tekrar deneyin veya doğrudan e-posta gönderin.",
 
