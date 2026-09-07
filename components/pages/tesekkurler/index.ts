@@ -1,0 +1,1 @@
+export { ThankYouPageView } from "./ThankYouPageView";
