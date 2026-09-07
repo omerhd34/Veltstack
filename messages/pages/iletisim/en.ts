@@ -92,11 +92,6 @@ export const contactEn = {
   submitButton: "Send and Get a Quote",
   submitting: "Sending…",
 
-  successTitle: "Your message has been sent!",
-  successMessage:
-    "Our expert team will get back to you as soon as possible, usually within 24 hours with a customized roadmap. Thank you!",
-  successButtonBack: "Send another message",
-
   errorMessage:
     "Something went wrong. Please try again or send an email directly.",
 
