@@ -68,6 +68,9 @@ export const pagesTr = {
     "web ajansı ekibi",
     "güvenilir yazılım firması",
   ],
+  thanksTitle: "Teşekkürler | Talebiniz Alındı",
+  thanksSubtitle:
+    "Talebiniz başarıyla alındı. En kısa sürede sizinle iletişime geçeceğiz.",
   contactTitle: "İletişim | Web & Mobil Proje Teklifi",
   contactSubtitle:
     "Web sitesi, mobil uygulama veya SEO için teklif alın. Hedefinizi paylaşın, size net bir yol haritası çıkaralım.",

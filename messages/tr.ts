@@ -18,6 +18,7 @@ import { servicesPageTr } from "@/messages/pages/services/tr";
 import { projectsPageTr } from "@/messages/pages/projects/tr";
 import { pagesTr } from "@/messages/pages/meta/tr";
 import { contactTr } from "@/messages/pages/iletisim/tr";
+import { thanksTr } from "@/messages/pages/tesekkurler/tr";
 import { aboutTr } from "@/messages/pages/hakkimizda/tr";
 import { blogPageTr } from "@/messages/pages/blog/tr";
 import { workflowTr } from "@/components/sections/workflow/messages/tr";
@@ -48,6 +49,7 @@ const messages = {
   servicesPage: servicesPageTr,
   projectsPage: projectsPageTr,
   contact: contactTr,
+  thanks: thanksTr,
   about: {
     ...aboutTr,
     ...techMarqueeHomeTr,
