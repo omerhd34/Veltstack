@@ -19,6 +19,7 @@ import { servicesPageEn } from "@/messages/pages/services/en";
 import { projectsPageEn } from "@/messages/pages/projects/en";
 import { pagesEn } from "@/messages/pages/meta/en";
 import { contactEn } from "@/messages/pages/iletisim/en";
+import { thanksEn } from "@/messages/pages/tesekkurler/en";
 import { aboutEn } from "@/messages/pages/hakkimizda/en";
 import { workflowEn } from "@/components/sections/workflow/messages/en";
 import { approachEn } from "@/components/sections/approach/messages/en";
@@ -48,6 +49,7 @@ const messages = {
   servicesPage: servicesPageEn,
   projectsPage: projectsPageEn,
   contact: contactEn,
+  thanks: thanksEn,
   about: {
     ...aboutEn,
     ...techMarqueeHomeEn,

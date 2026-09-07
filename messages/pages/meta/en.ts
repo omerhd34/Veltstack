@@ -62,6 +62,9 @@ export const pagesEn = {
     "SEO specialist",
     "trusted software company",
   ],
+  thanksTitle: "Thank You | Request Received",
+  thanksSubtitle:
+    "Your request has been received successfully. We will get in touch as soon as possible.",
   contactTitle: "Contact | Web & Mobile Project Quote",
   contactSubtitle:
     "Request a quote for website development, mobile app and SEO projects. Share your goal and we will outline a clear roadmap.",
