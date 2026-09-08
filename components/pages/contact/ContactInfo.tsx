@@ -1,6 +1,7 @@
 import {
   LuCircleCheck,
   LuClock,
+  LuGithub,
   LuGlobe,
   LuLinkedin,
   LuMail,
@@ -128,6 +129,7 @@ function getContactIcon(item: ContactItem): IconType {
   if (item.href?.startsWith("tel:")) return LuPhone;
   if (item.href?.startsWith("mailto:")) return LuMail;
   if (item.href?.includes("linkedin.com")) return LuLinkedin;
+  if (item.href?.includes("github.com")) return LuGithub;
   if (!item.href) return LuMapPin;
   return LuGlobe;
 }

@@ -32,6 +32,7 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         },
         sameAs: [
           "https://www.linkedin.com/in/omerhd1/",
+          "https://github.com/omerhd34",
           "https://www.omerhalisdemir.com.tr/",
         ],
         areaServed: "TR",

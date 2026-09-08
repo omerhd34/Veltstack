@@ -120,5 +120,10 @@ export const contactTr = {
       value: "omerhd1",
       href: "https://www.linkedin.com/in/omerhd1/",
     },
+    {
+      label: "GitHub",
+      value: "omerhd34",
+      href: "https://github.com/omerhd34",
+    },
   ],
 } as const;
