@@ -4,7 +4,7 @@ import { routing } from "./i18n/routing";
 
 const handleI18n = createMiddleware(routing);
 
-export default function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   if (request.nextUrl.pathname === "/llms.txt") {
     return NextResponse.next();
   }
