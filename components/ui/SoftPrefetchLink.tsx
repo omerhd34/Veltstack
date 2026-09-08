@@ -21,6 +21,7 @@ export function SoftPrefetchLink({
   const router = useRouter();
 
   const warm = useCallback(() => {
+    if (process.env.NODE_ENV !== "production") return;
     if (typeof href !== "string" || isExternalHref(href)) return;
     router.prefetch(href);
   }, [href, router]);
@@ -28,8 +29,8 @@ export function SoftPrefetchLink({
   return (
     <Link
       href={href}
-      prefetch={prefetch}
       {...props}
+      prefetch={prefetch}
       onMouseEnter={(event: MouseEvent<HTMLAnchorElement>) => {
         warm();
         onMouseEnter?.(event);
