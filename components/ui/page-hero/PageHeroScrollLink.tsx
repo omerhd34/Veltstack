@@ -1,5 +1,4 @@
 import { LuChevronDown } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
 interface PageHeroScrollLinkProps {
@@ -14,7 +13,7 @@ export function PageHeroScrollLink({
   className,
 }: PageHeroScrollLinkProps) {
   return (
-    <Link
+    <a
       href={href}
       className={cn(
         "flex flex-col items-center gap-1.5 text-emerald-300/70 transition-colors hover:text-emerald-300",
@@ -25,6 +24,6 @@ export function PageHeroScrollLink({
         {label}
       </span>
       <LuChevronDown className="size-4 animate-bounce" aria-hidden />
-    </Link>
+    </a>
   );
 }

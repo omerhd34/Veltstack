@@ -1,10 +1,8 @@
 import { getLocale } from "next-intl/server";
 import type { IconType } from "react-icons";
-import { LuChevronDown } from "react-icons/lu";
-import { Link } from "@/i18n/navigation";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
-import { PageHeroShell } from "@/components/ui/page-hero";
+import { PageHeroShell, PageHeroScrollLink } from "@/components/ui/page-hero";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { toLatinUppercase } from "@/lib/utils";
 
@@ -68,15 +66,11 @@ export async function LegalPageHero({
         </SectionScrollReveal>
       </SiteContainer>
 
-      <Link
+      <PageHeroScrollLink
         href="#legal-content"
-        className="absolute inset-x-0 bottom-7 z-20 mx-auto flex w-fit flex-col items-center gap-1.5 text-emerald-100/85 transition-colors hover:text-white sm:bottom-9"
-      >
-        <span className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em]">
-          {scrollLabel}
-        </span>
-        <LuChevronDown className="size-4 animate-bounce" aria-hidden />
-      </Link>
+        label={scrollLabel}
+        className="absolute inset-x-0 bottom-7 z-20 mx-auto text-emerald-100/85 hover:text-white sm:bottom-9"
+      />
     </PageHeroShell>
   );
 }
