@@ -238,3 +238,11 @@
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+
+@media (max-width: 767px) {
+  .section-scroll-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
