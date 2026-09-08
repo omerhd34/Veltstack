@@ -57,6 +57,7 @@ export const metadata: Metadata = {
     title: SITE_NAME,
     images: [DEFAULT_OG_IMAGE],
   },
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
