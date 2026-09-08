@@ -6,7 +6,6 @@ import {
   ContactInfo,
   ContactSectionBadge,
   ContactSectionDescription,
-  ContactSectionHeader,
   ContactSectionTitle,
 } from "./ContactInfo";
 
@@ -76,12 +75,6 @@ export function ContactForm({
     budgetOptions: fieldLabels.budgetOptions,
   };
 
-  const formCard = (
-    <div className="flex h-full flex-col rounded-2xl border border-border/60 bg-card p-6 shadow-[0_2px_16px_rgb(0_0_0/0.04)] sm:p-8">
-      <ContactFormFields labels={formLabels} className="h-full" />
-    </div>
-  );
-
   return (
     <section
       id="contact-form"
@@ -89,55 +82,35 @@ export function ContactForm({
       className={`scroll-mt-16 bg-[#F8F9FA] pt-10 pb-16 md:pt-12 md:pb-20 ${className ?? ""}`}
     >
       <SiteContainer>
-        <div className="flex flex-col gap-12 lg:hidden">
-          <section>
-            <SectionScrollReveal direction="up">
-              <ContactSectionHeader
-                badge={formBadge}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_380px] lg:grid-rows-[auto_1fr] lg:items-stretch lg:gap-x-16 lg:gap-y-10 xl:gap-x-20">
+          <SectionScrollReveal direction="up" className="lg:col-start-1 lg:row-start-1">
+            <ContactSectionBadge badge={formBadge} />
+            <div className="mt-5">
+              <ContactSectionTitle
                 title={formTitle}
-                description={formDescription}
                 titleAs="h1"
                 titleId="contact-form-title"
               />
-            </SectionScrollReveal>
-            <SectionScrollReveal direction="left" delay={0.06} trigger="entry">
-              <div className="mt-10">{formCard}</div>
-            </SectionScrollReveal>
-          </section>
-
-          <SectionScrollReveal direction="right" trigger="entry">
-            <ContactInfo
-              badge={infoBadge}
-              title={infoTitle}
-              items={contactItems}
-              showHeader={false}
-            />
-          </SectionScrollReveal>
-        </div>
-
-        <div className="hidden lg:grid lg:grid-cols-[1fr_380px] lg:grid-rows-[auto_1fr] lg:items-stretch lg:gap-x-16 lg:gap-y-10 xl:gap-x-20">
-          <SectionScrollReveal direction="left">
-            <div>
-              <ContactSectionBadge badge={formBadge} />
-              <div className="mt-5">
-                <ContactSectionTitle
-                  title={formTitle}
-                  titleAs="h1"
-                  titleId="contact-form-title"
-                />
-                <ContactSectionDescription description={formDescription} />
-              </div>
+              <ContactSectionDescription description={formDescription} />
             </div>
           </SectionScrollReveal>
-          <div aria-hidden />
-          <SectionScrollReveal direction="left" delay={0.06} className="h-full">
-            <div className="h-full">{formCard}</div>
+
+          <SectionScrollReveal
+            direction="left"
+            delay={0.06}
+            trigger="entry"
+            className="h-full lg:col-start-1 lg:row-start-2"
+          >
+            <div className="flex h-full flex-col rounded-2xl border border-border/60 bg-card p-6 shadow-[0_2px_16px_rgb(0_0_0/0.04)] sm:p-8">
+              <ContactFormFields labels={formLabels} className="h-full" />
+            </div>
           </SectionScrollReveal>
+
           <SectionScrollReveal
             direction="right"
             delay={0.06}
             trigger="entry"
-            className="h-full"
+            className="h-full lg:col-start-2 lg:row-start-1 lg:row-span-2"
           >
             <ContactInfo
               badge={infoBadge}
