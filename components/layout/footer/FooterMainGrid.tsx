@@ -26,7 +26,7 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
   const footerLinkClassName =
     "inline-flex items-center gap-2.5 text-sm text-background/60 transition-colors hover:text-background";
 
-  const footerColumnClassName = "w-full sm:w-fit";
+  const footerColumnClassName = "w-full lg:w-fit";
 
   const footerListClassName = "space-y-3";
 
@@ -36,7 +36,7 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
     >
       <FooterColumn
         title={t("servicesTitle")}
-        className={`${footerColumnClassName} sm:justify-self-start`}
+        className={`${footerColumnClassName} lg:justify-self-start`}
       >
         <ul className={footerListClassName}>
           {footerServiceItems.map((item) => {
@@ -111,7 +111,7 @@ export function FooterMainGrid({ className }: FooterMainGridProps) {
 
       <FooterColumn
         title={t("legalTitle")}
-        className={`${footerColumnClassName} sm:justify-self-end lg:justify-self-end`}
+        className={`${footerColumnClassName} lg:justify-self-end`}
       >
         <ul className={footerListClassName}>
           {footerLegalItems.map((item) => {
