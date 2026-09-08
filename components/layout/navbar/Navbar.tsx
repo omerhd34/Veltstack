@@ -1,8 +1,6 @@
-/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 import { RiMenu3Line } from "react-icons/ri";
 import { usePathname } from "@/i18n/navigation";
 import { useUiStore } from "@/store/uiSlice";
@@ -15,25 +13,10 @@ import { NavbarMobileMenu } from "./NavbarMobileMenu";
 import { NavbarLangSwitcher } from "./NavbarLangSwitcher";
 import { NavbarCta } from "./NavbarCta";
 import { isHeroOverlayPath } from "./navbar-overlay";
-
-const NavbarServicesMegaMenuPanel = dynamic(() =>
-  import("./NavbarServicesMegaMenuPanel").then(
-    (mod) => mod.NavbarServicesMegaMenuPanel,
-  ),
-);
-const NavbarProjectsMegaMenuPanel = dynamic(() =>
-  import("./NavbarProjectsMegaMenuPanel").then(
-    (mod) => mod.NavbarProjectsMegaMenuPanel,
-  ),
-);
-const NavbarBlogMegaMenuPanel = dynamic(() =>
-  import("./NavbarBlogMegaMenuPanel").then(
-    (mod) => mod.NavbarBlogMegaMenuPanel,
-  ),
-);
-const NavbarFaqMegaMenuPanel = dynamic(() =>
-  import("./NavbarFaqMegaMenuPanel").then((mod) => mod.NavbarFaqMegaMenuPanel),
-);
+import { NavbarServicesMegaMenuPanel } from "./NavbarServicesMegaMenuPanel";
+import { NavbarProjectsMegaMenuPanel } from "./NavbarProjectsMegaMenuPanel";
+import { NavbarBlogMegaMenuPanel } from "./NavbarBlogMegaMenuPanel";
+import { NavbarFaqMegaMenuPanel } from "./NavbarFaqMegaMenuPanel";
 
 interface NavbarProps {
   className?: string;
@@ -42,8 +25,11 @@ interface NavbarProps {
 export function Navbar({ className }: NavbarProps) {
   const pathname = usePathname();
   const heroOverlayPage = isHeroOverlayPath(pathname);
-  const [scrolled, setScrolled] = useState(false);
-  const [hasPageHero, setHasPageHero] = useState(heroOverlayPage);
+  const [scrollNav, setScrollNav] = useState({ pathname, scrolled: false });
+  if (scrollNav.pathname !== pathname) {
+    setScrollNav({ pathname, scrolled: false });
+  }
+  const scrolled = scrollNav.scrolled;
   const mobileMenuOpen = useUiStore((state) => state.mobileMenuOpen);
   const setMobileMenuOpen = useUiStore((state) => state.setMobileMenuOpen);
   const servicesMenuOpen = useUiStore((state) => state.servicesMenuOpen);
@@ -86,64 +72,39 @@ export function Navbar({ className }: NavbarProps) {
   }, []);
 
   useEffect(() => {
-    if (!heroOverlayPage) {
-      setHasPageHero(false);
-      const updateScrolled = () => setScrolled(window.scrollY > 48);
-      updateScrolled();
-      window.addEventListener("scroll", updateScrolled, { passive: true });
-      return () => window.removeEventListener("scroll", updateScrolled);
-    }
+    const measure = () => {
+      if (!heroOverlayPage) {
+        const next = window.scrollY > 48;
+        setScrollNav((state) =>
+          state.pathname === pathname && state.scrolled === next
+            ? state
+            : { pathname, scrolled: next },
+        );
+        return;
+      }
 
-    let cancelled = false;
-    let io: IntersectionObserver | null = null;
+      const hero = document.querySelector<HTMLElement>("[data-page-hero]");
+      if (!hero) return;
 
-    const bindHero = (hero: HTMLElement) => {
-      if (cancelled) return;
-      setHasPageHero(true);
-      setScrolled(false);
-
-      io = new IntersectionObserver(
-        ([entry]) => {
-          setScrolled(!entry.isIntersecting);
-        },
-        {
-          root: null,
-          threshold: 0,
-          rootMargin: "-73px 0px 0px 0px",
-        },
+      const next = hero.getBoundingClientRect().bottom <= 72;
+      setScrollNav((state) =>
+        state.pathname === pathname && state.scrolled === next
+          ? state
+          : { pathname, scrolled: next },
       );
-      io.observe(hero);
     };
 
-    setHasPageHero(true);
-    setScrolled(true);
-
-    const hero = document.querySelector<HTMLElement>("[data-page-hero]");
-    if (hero) {
-      bindHero(hero);
-      return () => {
-        cancelled = true;
-        io?.disconnect();
-      };
-    }
-
-    const mo = new MutationObserver(() => {
-      const el = document.querySelector<HTMLElement>("[data-page-hero]");
-      if (!el) return;
-      mo.disconnect();
-      bindHero(el);
-    });
-    mo.observe(document.body, { childList: true, subtree: true });
-
+    measure();
+    window.addEventListener("scroll", measure, { passive: true });
+    window.addEventListener("resize", measure);
     return () => {
-      cancelled = true;
-      mo.disconnect();
-      io?.disconnect();
+      window.removeEventListener("scroll", measure);
+      window.removeEventListener("resize", measure);
     };
   }, [pathname, heroOverlayPage]);
 
-  const overlay = heroOverlayPage && hasPageHero && !scrolled;
-  const fixedOverlayNav = heroOverlayPage && hasPageHero;
+  const overlay = heroOverlayPage && !scrolled;
+  const fixedOverlayNav = heroOverlayPage;
 
   const megaMenuPanelClass = cn(
     "navbar-mega-menu-panel absolute left-1/2 top-full z-50 isolate mt-2 w-[min(calc(100%-1.5rem),50rem)] -translate-x-1/2 overflow-hidden rounded-2xl backdrop-blur-xl data-[state=open]:overflow-visible",
@@ -192,48 +153,41 @@ export function Navbar({ className }: NavbarProps) {
         </div>
       </SiteContainer>
 
-      {showDesktopNav && servicesMenuOpen ? (
-        <div
-          data-state="open"
-          className={megaMenuPanelClass}
-          onMouseEnter={openServicesMenu}
-          onMouseLeave={scheduleCloseServicesMenu}
-        >
-          <NavbarServicesMegaMenuPanel />
-        </div>
-      ) : null}
-
-      {showDesktopNav && projectsMenuOpen ? (
-        <div
-          data-state="open"
-          className={megaMenuPanelClass}
-          onMouseEnter={openProjectsMenu}
-          onMouseLeave={scheduleCloseProjectsMenu}
-        >
-          <NavbarProjectsMegaMenuPanel />
-        </div>
-      ) : null}
-
-      {showDesktopNav && blogMenuOpen ? (
-        <div
-          data-state="open"
-          className={megaMenuPanelClass}
-          onMouseEnter={openBlogMenu}
-          onMouseLeave={scheduleCloseBlogMenu}
-        >
-          <NavbarBlogMegaMenuPanel />
-        </div>
-      ) : null}
-
-      {showDesktopNav && faqMenuOpen ? (
-        <div
-          data-state="open"
-          className={megaMenuPanelClass}
-          onMouseEnter={openFaqMenu}
-          onMouseLeave={scheduleCloseFaqMenu}
-        >
-          <NavbarFaqMegaMenuPanel />
-        </div>
+      {showDesktopNav ? (
+        <>
+          <div
+            data-state={servicesMenuOpen ? "open" : "closed"}
+            className={megaMenuPanelClass}
+            onMouseEnter={openServicesMenu}
+            onMouseLeave={scheduleCloseServicesMenu}
+          >
+            <NavbarServicesMegaMenuPanel />
+          </div>
+          <div
+            data-state={projectsMenuOpen ? "open" : "closed"}
+            className={megaMenuPanelClass}
+            onMouseEnter={openProjectsMenu}
+            onMouseLeave={scheduleCloseProjectsMenu}
+          >
+            <NavbarProjectsMegaMenuPanel />
+          </div>
+          <div
+            data-state={blogMenuOpen ? "open" : "closed"}
+            className={megaMenuPanelClass}
+            onMouseEnter={openBlogMenu}
+            onMouseLeave={scheduleCloseBlogMenu}
+          >
+            <NavbarBlogMegaMenuPanel />
+          </div>
+          <div
+            data-state={faqMenuOpen ? "open" : "closed"}
+            className={megaMenuPanelClass}
+            onMouseEnter={openFaqMenu}
+            onMouseLeave={scheduleCloseFaqMenu}
+          >
+            <NavbarFaqMegaMenuPanel />
+          </div>
+        </>
       ) : null}
 
       {showMobileNav || mobileMenuOpen ? <NavbarMobileMenu /> : null}
