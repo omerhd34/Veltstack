@@ -21,7 +21,7 @@ export function WhatsAppButton({ className }: WhatsAppButtonProps) {
       aria-label={t("whatsApp")}
       title={t("whatsApp")}
       className={cn(
-        "fixed right-6 bottom-[max(1.5rem,calc(env(safe-area-inset-bottom)+1rem))] z-50 flex size-12 items-center justify-center rounded-full bg-[#25D366] text-white sm:right-8 sm:bottom-8",
+        "fixed right-6 bottom-[max(0.75rem,calc(env(safe-area-inset-bottom)+0.5rem))] z-50 flex size-12 items-center justify-center rounded-full bg-[#25D366] text-white sm:right-8 sm:bottom-4",
         "shadow-[0_6px_22px_rgb(37_211_102/0.42)]",
         "transition-[transform,background-color,box-shadow] duration-300 ease-out",
         "hover:scale-105 hover:bg-[#20bd5a] hover:shadow-[0_8px_26px_rgb(37_211_102/0.55)]",

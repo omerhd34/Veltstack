@@ -49,7 +49,7 @@ export function BackToTop({ className }: BackToTopProps) {
   return (
     <div
       className={cn(
-        "fixed left-3 bottom-3 z-50 print:hidden",
+        "fixed left-6 bottom-[max(0.75rem,calc(env(safe-area-inset-bottom)+0.5rem))] z-50 print:hidden sm:left-8 sm:bottom-4",
         "transition-[opacity,transform,visibility] duration-300 ease-out",
         visible
           ? "visible translate-y-0 opacity-100"
