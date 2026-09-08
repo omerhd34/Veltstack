@@ -9,14 +9,8 @@ import {
   type FocusEvent,
   type ReactNode,
 } from "react";
-import dynamic from "next/dynamic";
 import { cn } from "@/lib/utils";
-
-const BorderBeam = dynamic(
-  () =>
-    import("@/components/lightswind/border-beam").then((mod) => mod.BorderBeam),
-  { ssr: false },
-);
+import { BorderBeam } from "@/components/lightswind/border-beam";
 
 interface StardustShellProps {
   children: ReactNode;
