@@ -10,9 +10,9 @@ const IXIRHOST_LINK =
 const IXIRHOST_COMPANY_LINK =
   '<a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">İksir İnternet Hizmetleri A.Ş.</a>';
 const IXIRHOST_DOMAIN_SEARCH_LINK =
-  '<a href="https://www.ixirhost.com/domain-sorgulama" target="_blank" rel="noopener noreferrer">Domain Sorgulama</a>';
+  '<a href="https://www.ixirhost.com/cart.php?a=add&domain=register" target="_blank" rel="noopener noreferrer">Domain Sorgulama</a>';
 const IXIRHOST_DOMAIN_SEARCH_LINK_EN =
-  '<a href="https://www.ixirhost.com/domain-sorgulama" target="_blank" rel="noopener noreferrer">Domain Search</a>';
+  '<a href="https://www.ixirhost.com/cart.php?a=add&domain=register" target="_blank" rel="noopener noreferrer">Domain Search</a>';
 const IXIRHOST_DOMAIN_TRANSFER_LINK =
   '<a href="https://www.ixirhost.com/cart.php?a=add&domain=transfer" target="_blank" rel="noopener noreferrer">Domain Transferi</a>';
 const IXIRHOST_DOMAIN_TRANSFER_LINK_EN =
