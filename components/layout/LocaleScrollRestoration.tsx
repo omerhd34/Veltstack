@@ -18,12 +18,20 @@ export function LocaleScrollRestoration() {
 
   useEffect(() => {
     const savedY = resolveLocaleSwitchScroll();
-    const isLocaleSwitch = savedY !== null;
-    const hash = window.location.hash.replace(/^#/, "");
-
-    if (!isLocaleSwitch && !hash) {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-      return;
+    if (savedY !== null) {
+      const apply = () => {
+        window.scrollTo({ top: savedY, left: 0, behavior: "auto" });
+      };
+      apply();
+      const rafId = requestAnimationFrame(apply);
+      const timeoutId = window.setTimeout(() => {
+        apply();
+        clearLocaleSwitchScroll();
+      }, 0);
+      return () => {
+        cancelAnimationFrame(rafId);
+        window.clearTimeout(timeoutId);
+      };
     }
 
     const scrollToHash = () => {
@@ -33,41 +41,23 @@ export function LocaleScrollRestoration() {
       if (!el) return false;
 
       const top = el.getBoundingClientRect().top + window.scrollY - 88;
-
       window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "smooth" });
       return true;
     };
 
-    const applyScroll = () => {
-      if (isLocaleSwitch) {
-        window.scrollTo({ top: savedY, left: 0, behavior: "auto" });
-        return;
-      }
+    if (!window.location.hash) return;
 
-      scrollToHash();
-    };
-
-    applyScroll();
-
-    const rafId = requestAnimationFrame(applyScroll);
-    const timeoutId = window.setTimeout(() => {
-      applyScroll();
-      if (isLocaleSwitch) {
-        clearLocaleSwitchScroll();
-      }
-    }, 0);
-    const hashRetryId = window.setTimeout(applyScroll, 320);
-
+    scrollToHash();
+    const rafId = requestAnimationFrame(scrollToHash);
+    const timeoutId = window.setTimeout(scrollToHash, 100);
     const onHashChange = () => {
       scrollToHash();
-      window.setTimeout(scrollToHash, 320);
     };
     window.addEventListener("hashchange", onHashChange);
 
     return () => {
       cancelAnimationFrame(rafId);
       window.clearTimeout(timeoutId);
-      window.clearTimeout(hashRetryId);
       window.removeEventListener("hashchange", onHashChange);
     };
   }, [pathname]);
