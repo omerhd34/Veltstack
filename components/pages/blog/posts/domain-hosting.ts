@@ -10,9 +10,9 @@ import type { BlogPostEntry } from "./types";
 const IXIRHOST_LINK =
   '<a href="https://www.ixirhost.com/" target="_blank" rel="noopener noreferrer">ixirhost</a>';
 const IXIRHOST_DOMAIN_SEARCH_LINK =
-  '<a href="https://www.ixirhost.com/domain-sorgulama" target="_blank" rel="noopener noreferrer">Domain Sorgulama</a>';
+  '<a href="https://www.ixirhost.com/cart.php?a=add&domain=register" target="_blank" rel="noopener noreferrer">Domain Sorgulama</a>';
 const IXIRHOST_DOMAIN_SEARCH_LINK_EN =
-  '<a href="https://www.ixirhost.com/domain-sorgulama" target="_blank" rel="noopener noreferrer">Domain Search</a>';
+  '<a href="https://www.ixirhost.com/cart.php?a=add&domain=register" target="_blank" rel="noopener noreferrer">Domain Search</a>';
 const CPANEL_LINK =
   '<a href="https://www.cpanel.net/" target="_blank" rel="noopener noreferrer">cPanel</a>';
 const VERCEL_LINK =
