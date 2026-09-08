@@ -43,7 +43,10 @@ function RatingStars({ rating }: { rating: number }) {
             className="absolute inset-0 size-full text-brand-accent/25"
             strokeWidth={1.5}
           />
-          <span className="absolute inset-0 overflow-hidden" style={{ width: "50%" }}>
+          <span
+            className="absolute inset-0 overflow-hidden"
+            style={{ width: "50%" }}
+          >
             <LuStar
               aria-hidden
               className="size-3.5 fill-brand-accent text-brand-accent md:size-4"
@@ -113,7 +116,7 @@ export function TestimonialCard({
             aria-hidden
             className="absolute -inset-0.5 rounded-full bg-linear-to-br from-brand-accent/40 to-brand-accent/10"
           />
-          <div className="relative flex size-10 items-center justify-center rounded-full bg-white text-sm font-bold text-brand-accent ring-2 ring-white sm:size-12">
+          <div className="relative flex size-10 items-center justify-center rounded-full border border-brand-accent/30 bg-white text-sm font-bold text-brand-accent sm:size-12">
             {getInitials(clientName)}
           </div>
         </div>
