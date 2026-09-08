@@ -5,6 +5,7 @@ const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export function GoogleAnalytics() {
   if (!GA_MEASUREMENT_ID) return null;
+  if (process.env.NODE_ENV !== "production") return null;
 
   return (
     <>
