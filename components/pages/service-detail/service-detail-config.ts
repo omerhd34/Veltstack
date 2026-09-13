@@ -68,3 +68,36 @@ export const serviceTechStacks: Record<ServiceSlug, string[]> = {
   "teknik-denetim": flattenTechCategories(teknikDenetimTechCategories),
   "bakim-ve-destek": flattenTechCategories(bakimVeDestekTechCategories),
 };
+
+export const serviceRelatedServices: Record<ServiceSlug, ServiceSlug[]> = {
+  "web-sitesi-gelistirme": [
+    "seo-hizmetleri",
+    "dijital-yenileme",
+    "bakim-ve-destek",
+  ],
+  "dijital-yenileme": [
+    "web-sitesi-gelistirme",
+    "seo-hizmetleri",
+    "teknik-denetim",
+  ],
+  "uygulama-gelistirme": [
+    "web-sitesi-gelistirme",
+    "bakim-ve-destek",
+    "seo-hizmetleri",
+  ],
+  "seo-hizmetleri": [
+    "web-sitesi-gelistirme",
+    "teknik-denetim",
+    "dijital-yenileme",
+  ],
+  "teknik-denetim": [
+    "seo-hizmetleri",
+    "dijital-yenileme",
+    "bakim-ve-destek",
+  ],
+  "bakim-ve-destek": [
+    "web-sitesi-gelistirme",
+    "uygulama-gelistirme",
+    "teknik-denetim",
+  ],
+};

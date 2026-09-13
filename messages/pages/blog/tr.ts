@@ -35,6 +35,9 @@ export const blogPageTr = {
   readMore: "Devamını oku",
   readingTime: "{minutes} dk",
   writtenByLabel: "Yazan",
+  relatedServicesTitle: "İlgili Hizmetler",
+  relatedServicesSubtitle:
+    "Bu yazının konusuna doğrudan bağlı hizmet sayfaları. Uygulamaya geçmek isterseniz buradan devam edebilirsiniz.",
   noResults: "Arama kriterlerinize uygun blog yazısı bulunamadı.",
   noResultsSub: "Farklı bir anahtar kelime veya kategori deneyin.",
   categories: [

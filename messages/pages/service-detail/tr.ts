@@ -48,6 +48,9 @@ export const serviceDetailsTr = {
   featuresCarouselNext: "Sonraki özellik",
   breadcrumbHome: "Ana Sayfa",
   breadcrumbServices: "Hizmetler",
+  relatedServicesTitle: "İlgili Hizmetler",
+  relatedServicesSubtitle:
+    "Bu hizmetle birlikte sık talep edilen kardeş hizmetler. Kapsamı netleştirmek için yan yana inceleyebilirsiniz.",
   "web-sitesi-gelistirme": {
     metaTitle: "Web Sitesi Yapımı",
     metaDesc:

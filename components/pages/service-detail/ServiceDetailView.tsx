@@ -9,6 +9,7 @@ import {
 import {
   serviceHeroStats,
   servicePackageCategories,
+  serviceRelatedServices,
   serviceTechStacks,
 } from "./service-detail-config";
 import {
@@ -19,6 +20,7 @@ import { ServiceHero } from "./ServiceHero";
 import { ServiceFeatures } from "./ServiceFeatures";
 import { ServiceProcess } from "./ServiceProcess";
 import { ServicesConsultationCTA } from "@/components/pages/services/ServicesConsultationCTA";
+import { ProjectRelated } from "@/components/pages/project-detail/ProjectRelated";
 import { ServiceTech } from "./ServiceTech";
 import { getServiceTechDescriptions } from "./service-tech-descriptions";
 import { servicePrimaryTechStacks } from "./service-tech-primary";
@@ -134,6 +136,11 @@ export async function ServiceDetailView({
         techDescriptions={techDescriptions}
         primaryTech={servicePrimaryTechStacks[slug]}
         categories={techCategories}
+      />
+      <ProjectRelated
+        title={t("relatedServicesTitle")}
+        subtitle={t("relatedServicesSubtitle")}
+        serviceSlugs={serviceRelatedServices[slug]}
       />
       <ServicesConsultationCTA />
     </div>

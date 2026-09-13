@@ -48,6 +48,9 @@ export const serviceDetailsEn = {
   featuresCarouselNext: "Next feature",
   breadcrumbHome: "Home",
   breadcrumbServices: "Services",
+  relatedServicesTitle: "Related Services",
+  relatedServicesSubtitle:
+    "Sibling services often requested together with this one. Review them side by side to clarify scope.",
   "web-sitesi-gelistirme": {
     metaTitle: "Website Building | Next.js Corporate Sites",
     metaDesc:

@@ -35,6 +35,9 @@ export const blogPageEn = {
   readMore: "Read more",
   readingTime: "{minutes} min",
   writtenByLabel: "Written by",
+  relatedServicesTitle: "Related Services",
+  relatedServicesSubtitle:
+    "Service pages directly tied to this article. Continue here if you want to put the ideas into practice.",
   noResults: "No articles found matching your search criteria.",
   noResultsSub: "Try a different keyword or category.",
   categories: [

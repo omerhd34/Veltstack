@@ -14,6 +14,8 @@ import {
   getBlogDetailImageUrl,
 } from "@/components/pages/blog/blog-data";
 import { getBlogArticleContent } from "@/components/pages/blog/blog-articles";
+import { blogRelatedServices } from "@/components/pages/blog/blog-related-services";
+import { ProjectRelated } from "@/components/pages/project-detail/ProjectRelated";
 import { toLatinUppercase } from "@/lib/utils";
 import type { Locale } from "@/i18n/routing";
 import {
@@ -28,6 +30,8 @@ import {
 interface BlogDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
+
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -215,6 +219,11 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           </SiteContainer>
         </section>
       )}
+      <ProjectRelated
+        title={t("relatedServicesTitle")}
+        subtitle={t("relatedServicesSubtitle")}
+        serviceSlugs={blogRelatedServices[slug] ?? []}
+      />
       <ServicesConsultationCTA />
     </>
   );
