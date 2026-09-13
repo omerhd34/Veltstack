@@ -14,7 +14,6 @@ export async function generateMetadata({ params }: PageProps) {
     titleKey: "title",
     descriptionKey: "subtitle",
     href: "/kvkk-aydinlatma-metni",
-    noIndex: true,
   });
 }
 

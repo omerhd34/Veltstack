@@ -16,6 +16,13 @@ const staticPages = [
   "/sss",
 ] as const;
 
+const legalPages = [
+  "/gizlilik-politikasi",
+  "/kullanim-sartlari",
+  "/cerez-politikasi",
+  "/kvkk-aydinlatma-metni",
+] as const;
+
 function localizedUrl(locale: (typeof routing.locales)[number], href: string) {
   return `${SITE_URL}${getPathname({ locale, href })}`;
 }
@@ -50,6 +57,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   );
 
+  const legalEntries = legalPages.flatMap((page) =>
+    entriesForHref(page, {
+      lastModified: now,
+      changeFrequency: "yearly",
+      priority: 0.3,
+    }),
+  );
+
   const serviceEntries = serviceSlugs.flatMap((slug) =>
     entriesForHref(`/hizmetler/${slug}`, {
       lastModified: now,
@@ -81,5 +96,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...serviceEntries,
     ...projectEntries,
     ...postEntries,
+    ...legalEntries,
   ];
 }
