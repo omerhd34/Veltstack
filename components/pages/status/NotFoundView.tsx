@@ -1,11 +1,14 @@
-"use client";
-
+import { getTranslations } from "next-intl/server";
 import { LuArrowUpRight, LuHouse, LuMessageCircle } from "react-icons/lu";
-import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { PrimaryCtaLink } from "@/components/ui/PrimaryCtaLink";
 import { cn } from "@/lib/utils";
 import { StatusPage } from "./StatusPage";
+
+const primaryClassName = cn(
+  "inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-brand-accent px-8 text-base font-semibold text-white",
+  "shadow-[0_8px_24px_rgb(58_107_82/0.24)] transition-all duration-300",
+  "hover:-translate-y-0.5 hover:bg-brand-accent/92 hover:shadow-[0_12px_32px_rgb(58_107_82/0.3)]",
+);
 
 const secondaryLinkClassName = cn(
   "inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-border/70 bg-white/80 px-6 text-base font-medium text-foreground backdrop-blur-sm",
@@ -13,8 +16,8 @@ const secondaryLinkClassName = cn(
   "hover:-translate-y-0.5 hover:border-brand-accent/35 hover:text-brand-accent",
 );
 
-export function NotFoundView() {
-  const t = useTranslations("status.notFound");
+export async function NotFoundView() {
+  const t = await getTranslations("status.notFound");
 
   return (
     <StatusPage
@@ -24,14 +27,11 @@ export function NotFoundView() {
       description={t("description")}
       actions={
         <>
-          <PrimaryCtaLink
-            href="/"
-            size="lg"
-            variant="accent"
-            leadingIcon={<LuHouse className="size-4" aria-hidden />}
-          >
+          <Link href="/" className={primaryClassName}>
+            <LuHouse className="size-4" aria-hidden />
             {t("homeCta")}
-          </PrimaryCtaLink>
+            <LuArrowUpRight className="size-4" aria-hidden />
+          </Link>
           <Link href="/iletisim" className={secondaryLinkClassName}>
             <LuMessageCircle className="size-4" aria-hidden />
             {t("contactCta")}

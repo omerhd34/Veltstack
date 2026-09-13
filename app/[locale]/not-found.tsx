@@ -5,6 +5,6 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function LocaleNotFoundPage() {
+export default async function LocaleNotFoundPage() {
   return <NotFoundView />;
 }

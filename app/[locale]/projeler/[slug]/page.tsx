@@ -21,6 +21,7 @@ interface ProjectDetailPageProps {
 }
 
 export const revalidate = 86400;
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getProjectStaticSlugs().map((slug) => ({ slug }));

@@ -22,6 +22,7 @@ interface ServiceDetailPageProps {
 }
 
 export const revalidate = 86400;
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return getServiceStaticSlugs().map((slug) => ({ slug }));
