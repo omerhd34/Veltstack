@@ -19,7 +19,7 @@ export const legalEn = {
         id: "data-controller",
         title: "2. Data Controller",
         paragraphs: [
-          "The data controller under this Privacy Policy is **Ömer Halis Demir**, operating under the **Veltstack** brand.",
+          "The data controller under this Privacy Policy is **Ömer Halis Demir**, operating under the **Veltstack** brand. Address: Çekmeköy, Istanbul, Turkey.",
         ],
       },
       {
@@ -306,7 +306,7 @@ export const legalEn = {
         ],
         items: [
           "**Data controller:** Ömer Halis Demir (**Veltstack**)",
-          "**Address:** Turkey",
+          "**Address:** Çekmeköy, Istanbul, Turkey",
           "**Email:** [veltstack@outlook.com](mailto:veltstack@outlook.com)",
           "**Phone:** [+90 507 849 29 03](tel:+905078492903)",
         ],

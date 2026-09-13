@@ -1,3 +1,9 @@
+import {
+  BUSINESS_ADDRESS_TEXT_TR,
+  BUSINESS_HOURS_TR,
+  GOOGLE_MAPS_URL,
+} from "@/lib/business";
+
 export const contactTr = {
   formBadge: "Teklif Talebi",
   formTitle: "Net ihtiyaç, net yol haritası",
@@ -98,17 +104,26 @@ export const contactTr = {
   infoBadge: "İletişim Kanalları",
   infoTitle: "Tercih ettiğiniz kanaldan ulaşın.",
 
+  mapTitle: "Konum",
+  mapIframeTitle: "Çekmeköy, İstanbul haritası",
+
   contactItems: [
-    { label: "Telefon", value: "+90 507 849 29 03", href: "tel:+905078492903" },
     {
-      label: "WhatsApp",
-      href: "https://wa.me/905078492903",
-      value: "+90 507 849 29 03",
+      label: "Çalışma saatleri",
+      value: BUSINESS_HOURS_TR,
+      icon: "clock" as const,
     },
+    { label: "Telefon", value: "+90 507 849 29 03", href: "tel:+905078492903" },
     {
       label: "E-posta",
       value: "veltstack@outlook.com",
       href: "mailto:veltstack@outlook.com",
+    },
+    {
+      label: "Adres",
+      value: BUSINESS_ADDRESS_TEXT_TR,
+      href: GOOGLE_MAPS_URL,
+      icon: "location" as const,
     },
     {
       label: "Portfolyo",

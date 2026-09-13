@@ -1,4 +1,14 @@
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
+import {
+  BUSINESS_ADDRESS_COUNTRY,
+  BUSINESS_ADDRESS_LOCALITY,
+  BUSINESS_ADDRESS_REGION,
+  BUSINESS_EMAIL,
+  BUSINESS_OPENING_HOURS,
+  BUSINESS_PHONE_SCHEMA,
+  BUSINESS_SAME_AS,
+  GOOGLE_MAPS_URL,
+} from "@/lib/business";
 
 interface LocalBusinessSchemaProps {
   className?: string;
@@ -6,6 +16,12 @@ interface LocalBusinessSchemaProps {
 
 export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
   const homeUrl = `${SITE_URL}/`;
+  const postalAddress = {
+    "@type": "PostalAddress",
+    addressLocality: BUSINESS_ADDRESS_LOCALITY,
+    addressRegion: BUSINESS_ADDRESS_REGION,
+    addressCountry: BUSINESS_ADDRESS_COUNTRY,
+  };
 
   const schema = {
     "@context": "https://schema.org",
@@ -23,19 +39,19 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         image: `${SITE_URL}/hero/veltstack.png`,
         description:
           "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
-        email: "veltstack@outlook.com",
-        telephone: "+90-507-849-29-03",
+        email: BUSINESS_EMAIL,
+        telephone: BUSINESS_PHONE_SCHEMA,
+        address: postalAddress,
         founder: {
           "@type": "Person",
           name: "Ömer Halis Demir",
           url: "https://www.omerhalisdemir.com.tr/",
         },
-        sameAs: [
-          "https://www.linkedin.com/in/omerhd1/",
-          "https://github.com/omerhd34",
-          "https://www.omerhalisdemir.com.tr/",
+        sameAs: [...BUSINESS_SAME_AS],
+        areaServed: [
+          { "@type": "Country", name: "Türkiye" },
+          { "@type": "City", name: "İstanbul" },
         ],
-        areaServed: "TR",
         knowsLanguage: ["tr", "en"],
       },
       {
@@ -54,13 +70,22 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
         image: `${SITE_URL}/hero/veltstack.png`,
         description:
           "Kurumsal web sitesi, e-ticaret, mobil uygulama ve SEO hizmetleri.",
-        telephone: "+90-507-849-29-03",
-        email: "veltstack@outlook.com",
+        telephone: BUSINESS_PHONE_SCHEMA,
+        email: BUSINESS_EMAIL,
         priceRange: "$$",
-        address: {
-          "@type": "PostalAddress",
-          addressCountry: "TR",
+        currenciesAccepted: "TRY",
+        address: postalAddress,
+        hasMap: GOOGLE_MAPS_URL,
+        openingHoursSpecification: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [...BUSINESS_OPENING_HOURS.dayOfWeek],
+          opens: BUSINESS_OPENING_HOURS.opens,
+          closes: BUSINESS_OPENING_HOURS.closes,
         },
+        areaServed: [
+          { "@type": "Country", name: "Türkiye" },
+          { "@type": "City", name: "İstanbul" },
+        ],
         parentOrganization: { "@id": `${SITE_URL}/#organization` },
       },
     ],

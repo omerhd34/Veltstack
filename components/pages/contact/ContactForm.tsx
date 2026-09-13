@@ -18,6 +18,7 @@ interface ContactItem {
   label: string;
   value?: string;
   href?: string;
+  icon?: "location" | "clock";
 }
 
 interface ContactFormProps {
@@ -83,7 +84,10 @@ export function ContactForm({
     >
       <SiteContainer>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_380px] lg:grid-rows-[auto_1fr] lg:items-stretch lg:gap-x-16 lg:gap-y-10 xl:gap-x-20">
-          <SectionScrollReveal direction="up" className="lg:col-start-1 lg:row-start-1">
+          <SectionScrollReveal
+            direction="up"
+            className="lg:col-start-1 lg:row-start-1"
+          >
             <ContactSectionBadge badge={formBadge} />
             <div className="mt-5">
               <ContactSectionTitle

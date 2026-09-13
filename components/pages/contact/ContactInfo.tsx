@@ -123,6 +123,12 @@ export function ContactSectionHeader({
 function getContactIcon(item: ContactItem): IconType {
   if (item.icon === "clock") return LuClock;
   if (item.icon === "location") return LuMapPin;
+  if (
+    item.href?.includes("google.com/maps") ||
+    item.href?.includes("maps.google.com")
+  ) {
+    return LuMapPin;
+  }
   if (item.href?.includes("wa.me") || item.href?.includes("whatsapp.com")) {
     return FaWhatsapp;
   }
@@ -184,7 +190,7 @@ export function ContactInfo({
                   {item.label}
                 </p>
                 {item.value ? (
-                  <p className="mt-0.5 truncate text-sm font-medium text-foreground">
+                  <p className="mt-0.5 text-sm font-medium wrap-break-word text-foreground">
                     {item.value}
                   </p>
                 ) : null}

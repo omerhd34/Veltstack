@@ -32,6 +32,7 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
     label: string;
     value?: string;
     href?: string;
+    icon?: "location" | "clock";
   }[];
 
   return (
