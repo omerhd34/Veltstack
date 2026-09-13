@@ -32,8 +32,6 @@ export function HeroImage({ alt = "", className }: HeroImageProps) {
         src="/hero/veltstack.webp"
         alt={alt}
         fill
-        priority
-        fetchPriority="high"
         quality={HERO_IMAGE_QUALITY}
         placeholder="blur"
         blurDataURL={HERO_BLUR_DATA_URL}
