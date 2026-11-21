@@ -1,13 +1,13 @@
 export const BUSINESS_EMAIL = "veltstack@outlook.com";
-export const BUSINESS_PHONE_DISPLAY = "+90 507 849 29 03";
-export const BUSINESS_PHONE_TEL = "+905078492903";
-export const BUSINESS_PHONE_SCHEMA = "+90-507-849-29-03";
 
-export const BUSINESS_ADDRESS_LOCALITY = "Çekmeköy";
+export const BUSINESS_PHONE_DISPLAY = "+90 537 799 74 39";
+export const BUSINESS_PHONE_TEL = "+905377997439";
+export const BUSINESS_PHONE_SCHEMA = "+90-537-799-74-39";
+
 export const BUSINESS_ADDRESS_REGION = "İstanbul";
 export const BUSINESS_ADDRESS_COUNTRY = "TR";
-export const BUSINESS_ADDRESS_TEXT_TR = "Çekmeköy, İstanbul, Türkiye";
-export const BUSINESS_ADDRESS_TEXT_EN = "Çekmeköy, Istanbul, Turkey";
+export const BUSINESS_ADDRESS_TEXT_TR = "İstanbul, Türkiye";
+export const BUSINESS_ADDRESS_TEXT_EN = "Istanbul, Turkey";
 
 export const BUSINESS_HOURS_TR = "Pazartesi-Cumartesi 09:00-19:00";
 export const BUSINESS_HOURS_EN = "Monday-Saturday 09:00-19:00";
@@ -27,7 +27,7 @@ export const BUSINESS_OPENING_HOURS = {
 
 export const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent("Çekmeköy İstanbul");
+  encodeURIComponent("İstanbul");
 
 export const BUSINESS_SAME_AS = [
   "https://www.linkedin.com/in/omerhd1/",

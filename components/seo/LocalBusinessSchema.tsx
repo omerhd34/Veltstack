@@ -1,7 +1,6 @@
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
 import {
   BUSINESS_ADDRESS_COUNTRY,
-  BUSINESS_ADDRESS_LOCALITY,
   BUSINESS_ADDRESS_REGION,
   BUSINESS_EMAIL,
   BUSINESS_OPENING_HOURS,
@@ -18,7 +17,6 @@ export function LocalBusinessSchema({ className }: LocalBusinessSchemaProps) {
   const homeUrl = `${SITE_URL}/`;
   const postalAddress = {
     "@type": "PostalAddress",
-    addressLocality: BUSINESS_ADDRESS_LOCALITY,
     addressRegion: BUSINESS_ADDRESS_REGION,
     addressCountry: BUSINESS_ADDRESS_COUNTRY,
   };
