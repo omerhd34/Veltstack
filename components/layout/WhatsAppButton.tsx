@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 
-const WHATSAPP_NUMBER = "905078492903";
+const WHATSAPP_NUMBER = "95377997439";
 
 interface WhatsAppButtonProps {
   className?: string;
