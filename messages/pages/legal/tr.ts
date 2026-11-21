@@ -19,7 +19,7 @@ export const legalTr = {
         id: "veri-sorumlusu",
         title: "2. Veri Sorumlusu",
         paragraphs: [
-          "Bu Gizlilik Politikası kapsamında veri sorumlusu, **Veltstack** markası altında faaliyet gösteren **Ömer Halis Demir**'dir. Açık adres: Çekmeköy, İstanbul, Türkiye.",
+          "Bu Gizlilik Politikası kapsamında veri sorumlusu, **Veltstack** markası altında faaliyet gösteren **Ömer Halis Demir**'dir. Açık adres: İstanbul, Türkiye.",
         ],
       },
       {
@@ -304,9 +304,9 @@ export const legalTr = {
         ],
         items: [
           "**Veri sorumlusu:** Ömer Halis Demir (**Veltstack**)",
-          "**Adres:** Çekmeköy, İstanbul, Türkiye",
+          "**Adres:** İstanbul, Türkiye",
           "**E-posta:** [veltstack@outlook.com](mailto:veltstack@outlook.com)",
-          "**Telefon:** [+90 507 849 29 03](tel:+905078492903)",
+          "**Telefon:** [+90 537 799 74 39](tel:+905377997439)",
         ],
       },
       {
