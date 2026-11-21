@@ -79,14 +79,14 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
           <div className="flex shrink-0 flex-col gap-3 border-t border-brand-accent/15 p-4">
             <div className="grid grid-cols-4 gap-2">
               <Link
-                href="tel:+905078492903"
+                href="tel:+905377997439"
                 aria-label="Telefon"
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >
                 <LuPhone className="size-4.5" aria-hidden />
               </Link>
               <Link
-                href="https://wa.me/905078492903"
+                href="https://wa.me/905377997439"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
