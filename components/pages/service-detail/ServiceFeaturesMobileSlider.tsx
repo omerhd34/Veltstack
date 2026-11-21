@@ -30,7 +30,7 @@ export function ServiceFeaturesMobileSlider({
 }: ServiceFeaturesMobileSliderProps) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(true);
   const count = features.length;
 
   const syncActiveFromScroll = useCallback(() => {
@@ -46,7 +46,6 @@ export function ServiceFeaturesMobileSlider({
     );
 
     if (nextIndex !== activeIndex) {
-      setExpandedIndex(null);
       setActiveIndex(nextIndex);
     }
   }, [activeIndex, count]);
@@ -77,7 +76,6 @@ export function ServiceFeaturesMobileSlider({
         left: nextIndex * scroller.clientWidth,
         behavior: "smooth",
       });
-      setExpandedIndex(null);
       setActiveIndex(nextIndex);
     },
     [count],
@@ -102,12 +100,8 @@ export function ServiceFeaturesMobileSlider({
               detailLabel={detailLabel}
               showFullDescription
               collapsible
-              expanded={expandedIndex === index}
-              onToggle={() =>
-                setExpandedIndex((current) =>
-                  current === index ? null : index,
-                )
-              }
+              expanded={index === activeIndex && isExpanded}
+              onToggle={() => setIsExpanded((current) => !current)}
             />
             <ServiceFeatureCard
               className="hidden h-full md:block"
