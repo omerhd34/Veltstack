@@ -104,16 +104,13 @@ export const contactTr = {
   infoBadge: "İletişim Kanalları",
   infoTitle: "Tercih ettiğiniz kanaldan ulaşın.",
 
-  mapTitle: "Konum",
-  mapIframeTitle: "Çekmeköy, İstanbul haritası",
-
   contactItems: [
     {
       label: "Çalışma saatleri",
       value: BUSINESS_HOURS_TR,
       icon: "clock" as const,
     },
-    { label: "Telefon", value: "+90 507 849 29 03", href: "tel:+905078492903" },
+    { label: "Telefon", value: "+90 537 799 74 39", href: "tel:+905377997439" },
     {
       label: "E-posta",
       value: "veltstack@outlook.com",
