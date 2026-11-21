@@ -110,7 +110,7 @@ export const contactEn = {
       value: BUSINESS_HOURS_EN,
       icon: "clock" as const,
     },
-    { label: "Phone", value: "+90 507 849 29 03", href: "tel:+905078492903" },
+    { label: "Phone", value: "+90 537 799 74 39", href: "tel:+905377997439" },
     {
       label: "Email",
       value: "veltstack@outlook.com",
