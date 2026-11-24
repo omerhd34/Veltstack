@@ -3,6 +3,20 @@ export const BUSINESS_EMAIL = "veltstack@outlook.com";
 export const BUSINESS_PHONE_DISPLAY = "+90 537 799 74 39";
 export const BUSINESS_PHONE_TEL = "+905377997439";
 export const BUSINESS_PHONE_SCHEMA = "+90-537-799-74-39";
+export const BUSINESS_WHATSAPP_NUMBER = BUSINESS_PHONE_TEL.replace(/\D/g, "");
+
+export function whatsAppHref(prefilledText?: string): string {
+  const params = new URLSearchParams({
+    phone: BUSINESS_WHATSAPP_NUMBER,
+    type: "phone_number",
+    app_absent: "0",
+  });
+  const text = prefilledText?.trim();
+  if (text) {
+    params.set("text", text);
+  }
+  return `https://api.whatsapp.com/send/?${params.toString()}`;
+}
 
 export const BUSINESS_ADDRESS_REGION = "İstanbul";
 export const BUSINESS_ADDRESS_COUNTRY = "TR";
