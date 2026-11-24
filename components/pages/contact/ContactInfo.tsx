@@ -1,7 +1,7 @@
 import {
   LuCircleCheck,
   LuClock,
-  LuGithub,
+  LuInstagram,
   LuGlobe,
   LuLinkedin,
   LuMail,
@@ -11,6 +11,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa6";
 import type { IconType } from "react-icons";
 import { BorderTrace } from "@/components/ui/BorderTrace";
+import type { BusinessHoursLine } from "@/lib/business";
 import { cn } from "@/lib/utils";
 
 type ContactItemIcon = "location" | "clock";
@@ -18,6 +19,7 @@ type ContactItemIcon = "location" | "clock";
 interface ContactItem {
   label: string;
   value?: string;
+  hoursLines?: BusinessHoursLine[];
   href?: string;
   icon?: ContactItemIcon;
 }
@@ -134,7 +136,7 @@ function getContactIcon(item: ContactItem): IconType {
   if (item.href?.startsWith("tel:")) return LuPhone;
   if (item.href?.startsWith("mailto:")) return LuMail;
   if (item.href?.includes("linkedin.com")) return LuLinkedin;
-  if (item.href?.includes("github.com")) return LuGithub;
+  if (item.href?.includes("instagram.com")) return LuInstagram;
   if (!item.href) return LuMapPin;
   return LuGlobe;
 }
@@ -188,7 +190,16 @@ export function ContactInfo({
                 <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
                   {item.label}
                 </p>
-                {item.value ? (
+                {item.hoursLines?.length ? (
+                  <div className="mt-0.5 space-y-0.5 text-sm text-foreground">
+                    {item.hoursLines.map((line) => (
+                      <p key={line.days}>
+                        <span className="font-medium">{line.days}</span>{" "}
+                        <span className="font-normal">{line.hours}</span>
+                      </p>
+                    ))}
+                  </div>
+                ) : item.value ? (
                   <p className="mt-0.5 text-sm font-medium wrap-break-word text-foreground">
                     {item.value}
                   </p>
