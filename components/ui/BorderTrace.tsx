@@ -106,18 +106,19 @@ export function BorderTrace({
       const style = getComputedStyle(target);
       const strokeWidth =
         Number.parseFloat(style.borderTopWidth) || borderWidth;
-      const width = target.clientWidth;
-      const height = target.clientHeight;
+      const borderTop = Number.parseFloat(style.borderTopWidth) || 0;
+      const borderLeft = Number.parseFloat(style.borderLeftWidth) || 0;
+      const width = target.offsetWidth;
+      const height = target.offsetHeight;
       const outerRadius = readBorderRadius(target, radius);
-      const innerRadius = Math.max(0, outerRadius - strokeWidth);
 
       setLayout({
         width,
         height,
-        radius: innerRadius,
+        radius: outerRadius,
         strokeWidth,
-        offsetTop: 0,
-        offsetLeft: 0,
+        offsetTop: -borderTop,
+        offsetLeft: -borderLeft,
       });
 
       if (width > 0) setIsReady(true);
