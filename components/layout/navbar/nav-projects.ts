@@ -4,12 +4,14 @@ import {
 } from "@/components/sections/projects/project-items";
 
 export type NavProjectKey =
-  | "projectIqfinans"
+  | "projectVeltstack"
   | "projectYazici"
+  | "projectDilAtolyesi"
   | "projectGardossi"
   | "projectUzmanPsikolog"
-  | "projectPortfolio"
-  | "projectOnlinemuhasebe";
+  | "projectOnlinemuhasebe"
+  | "projectIqfinans"
+  | "projectPortfolio";
 
 export type NavProjectItem = {
   href: string;

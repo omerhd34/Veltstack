@@ -15,7 +15,7 @@ export function NavbarProjectsMegaMenuPanel() {
   const setProjectsMenuOpen = useUiStore((state) => state.setProjectsMenuOpen);
 
   const closeMenu = () => setProjectsMenuOpen(false);
-  const linkedProjects = projectItems.filter(hasProjectHref);
+  const linkedProjects = projectItems.filter(hasProjectHref).slice(0, 6);
 
   return (
     <NavbarMegaMenuShell

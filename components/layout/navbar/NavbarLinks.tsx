@@ -11,9 +11,7 @@ import { getNavBlogPosts } from "@/components/pages/blog/blog-data";
 import { getFooterBlogCategoryIcon } from "@/components/layout/footer/footer-config";
 import { serviceItems } from "@/components/sections/services/service-items";
 import { projectItems } from "@/components/sections/projects/project-items";
-import {
-  hasProjectHref,
-} from "@/components/sections/projects/project-items";
+import { hasProjectHref } from "@/components/sections/projects/project-items";
 import type { NavServiceKey } from "./nav-services";
 import type { NavProjectKey } from "./nav-projects";
 import { navItemClass } from "./nav-link-styles";
@@ -100,12 +98,14 @@ export function NavbarLinks({
   };
 
   const projectLabels: Record<NavProjectKey, string> = {
-    projectIqfinans: tNav("projectIqfinans"),
+    projectVeltstack: tNav("projectVeltstack"),
     projectYazici: tNav("projectYazici"),
+    projectDilAtolyesi: tNav("projectDilAtolyesi"),
     projectGardossi: tNav("projectGardossi"),
     projectUzmanPsikolog: tNav("projectUzmanPsikolog"),
-    projectPortfolio: tNav("projectPortfolio"),
     projectOnlinemuhasebe: tNav("projectOnlinemuhasebe"),
+    projectIqfinans: tNav("projectIqfinans"),
+    projectPortfolio: tNav("projectPortfolio"),
   };
 
   const links = [
