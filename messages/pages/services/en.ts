@@ -13,7 +13,7 @@ export const servicesPageEn = {
   ctaTitleLead: "Need help",
   ctaTitleAccent: "choosing a package?",
   ctaSubtitle:
-    "In a free call we'll discuss your project, recommend the right tier, and get back to you within 24 hours.",
+    "In a free call we'll discuss your project, recommend the right tier, and get back to you **within 24 hours**.",
   ctaPoint1: "Free discovery call",
   ctaPoint2: "Tailored package recommendation",
   ctaPoint3: "Clear scope and pricing",
