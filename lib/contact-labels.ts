@@ -1,4 +1,7 @@
+import { contactEn } from "@/messages/pages/iletisim/en";
 import { contactTr } from "@/messages/pages/iletisim/tr";
+
+export type ContactLocale = "tr" | "en";
 
 type ContactLabelFields = {
   service: string;
@@ -17,16 +20,20 @@ function findLabel(
   return value.charAt(0).toLocaleUpperCase("tr-TR") + value.slice(1);
 }
 
-export function resolveContactLabels(data: ContactLabelFields) {
+export function resolveContactLabels(
+  data: ContactLabelFields,
+  locale: ContactLocale = "tr",
+) {
+  const contact = locale === "en" ? contactEn : contactTr;
   const packages =
-    contactTr.servicePackages[
-      data.service as keyof typeof contactTr.servicePackages
+    contact.servicePackages[
+      data.service as keyof typeof contact.servicePackages
     ];
 
   return {
-    service: findLabel(contactTr.serviceOptions, data.service),
+    service: findLabel(contact.serviceOptions, data.service),
     servicePackage: findLabel(packages, data.servicePackage),
-    serviceTier: findLabel(contactTr.tierOptions, data.serviceTier),
-    budget: findLabel(contactTr.budgetOptions, data.budget),
+    serviceTier: findLabel(contact.tierOptions, data.serviceTier),
+    budget: findLabel(contact.budgetOptions, data.budget),
   };
 }
