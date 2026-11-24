@@ -7,6 +7,7 @@ import {
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
+import { LegalRichText } from "@/components/pages/legal/LegalRichText";
 import { cn } from "@/lib/utils";
 
 interface ProjectContentProps {
@@ -31,7 +32,9 @@ export function ProjectContent({
   className,
 }: ProjectContentProps) {
   return (
-    <section className={cn("bg-background pt-10 pb-24 md:pt-14 md:pb-32", className)}>
+    <section
+      className={cn("bg-background pt-10 pb-24 md:pt-14 md:pb-32", className)}
+    >
       <SiteContainer>
         <SectionScrollReveal direction="left" trigger="entry">
           <div className="mx-auto max-w-3xl text-center">
@@ -52,7 +55,7 @@ export function ProjectContent({
                 </h2>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                {challengeText}
+                <LegalRichText text={challengeText} />
               </p>
             </article>
 
@@ -66,7 +69,7 @@ export function ProjectContent({
                 </h2>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                {solutionText}
+                <LegalRichText text={solutionText} />
               </p>
             </article>
 
@@ -80,7 +83,7 @@ export function ProjectContent({
                 </h3>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground md:text-base">
-                {details}
+                <LegalRichText text={details} />
               </p>
             </article>
           </div>

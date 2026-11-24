@@ -14,6 +14,7 @@ import {
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
+import { LegalRichText } from "@/components/pages/legal/LegalRichText";
 import { cn } from "@/lib/utils";
 
 const featureIcons = [
@@ -65,7 +66,7 @@ function ProjectFeatureItem({
         </h3>
 
         <p className="mt-3 text-sm leading-[1.75] text-muted-foreground">
-          {description}
+          <LegalRichText text={description} />
         </p>
       </div>
     </article>

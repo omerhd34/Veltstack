@@ -11,6 +11,7 @@ import {
 } from "react-icons/lu";
 import { Link } from "@/i18n/navigation";
 import { HeroStatsCards, type HeroStat } from "@/components/ui/HeroStatsCards";
+import { LegalRichText } from "@/components/pages/legal/LegalRichText";
 import { cn } from "@/lib/utils";
 
 export interface ProjectDetailCardProps {
@@ -104,7 +105,7 @@ export function ProjectDetailCard({
                 {labels.detailsTitle}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-emerald-50/70">
-                {details}
+                <LegalRichText text={details} />
               </p>
             </section>
 
