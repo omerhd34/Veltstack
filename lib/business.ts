@@ -21,10 +21,30 @@ export function whatsAppHref(prefilledText?: string): string {
 export const BUSINESS_ADDRESS_REGION = "İstanbul";
 export const BUSINESS_ADDRESS_COUNTRY = "TR";
 export const BUSINESS_ADDRESS_TEXT_TR = "İstanbul, Türkiye";
-export const BUSINESS_ADDRESS_TEXT_EN = "Istanbul, Turkey";
+export const BUSINESS_ADDRESS_TEXT_EN = "İstanbul, Türkiye";
 
-export const BUSINESS_HOURS_TR = "Pazartesi-Cumartesi 09:00-19:00";
-export const BUSINESS_HOURS_EN = "Monday-Saturday 09:00-19:00";
+export type BusinessHoursLine = {
+  days: string;
+  hours: string;
+};
+
+export const BUSINESS_HOURS_LINES_TR: BusinessHoursLine[] = [
+  { days: "Pazartesi-Perşembe", hours: "09:00 - 19:00" },
+  { days: "Cuma", hours: "09:00 - 12:00 & 13:00 - 19:00" },
+  { days: "Cumartesi", hours: "09:00 - 17:00" },
+];
+
+export const BUSINESS_HOURS_LINES_EN: BusinessHoursLine[] = [
+  { days: "Monday-Thursday", hours: "09:00 - 19:00" },
+  { days: "Friday", hours: "09:00 - 12:00 & 13:00 - 19:00" },
+  { days: "Saturday", hours: "09:00 - 17:00" },
+];
+
+const formatBusinessHours = (lines: BusinessHoursLine[]) =>
+  lines.map((line) => `${line.days} ${line.hours}`).join("\n");
+
+export const BUSINESS_HOURS_TR = formatBusinessHours(BUSINESS_HOURS_LINES_TR);
+export const BUSINESS_HOURS_EN = formatBusinessHours(BUSINESS_HOURS_LINES_EN);
 
 export const BUSINESS_OPENING_HOURS = {
   dayOfWeek: [
@@ -45,7 +65,7 @@ export const GOOGLE_MAPS_URL =
 
 export const BUSINESS_SAME_AS = [
   "https://www.linkedin.com/in/omerhd1/",
-  "https://github.com/omerhd34",
+  "https://www.instagram.com/veltstack/",
   "https://www.omerhalisdemir.com.tr/",
   GOOGLE_MAPS_URL,
 ] as const;
