@@ -1,9 +1,7 @@
 import { useTranslations } from "next-intl";
 import { FaWhatsapp } from "react-icons/fa6";
-import { Link } from "@/i18n/navigation";
+import { whatsAppHref } from "@/lib/business";
 import { cn } from "@/lib/utils";
-
-const WHATSAPP_NUMBER = "95377997439";
 
 interface WhatsAppButtonProps {
   className?: string;
@@ -11,10 +9,10 @@ interface WhatsAppButtonProps {
 
 export function WhatsAppButton({ className }: WhatsAppButtonProps) {
   const t = useTranslations("footer");
-  const href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(t("whatsAppMessage"))}`;
+  const href = whatsAppHref(t("whatsAppMessage"));
 
   return (
-    <Link
+    <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -36,6 +34,6 @@ export function WhatsAppButton({ className }: WhatsAppButtonProps) {
         aria-hidden
       />
       <FaWhatsapp className="relative size-6" aria-hidden />
-    </Link>
+    </a>
   );
 }
