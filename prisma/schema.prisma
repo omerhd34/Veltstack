@@ -19,6 +19,9 @@ model Message {
   serviceTier    String?
   budget         String?
   content        String   @db.Text
+  attachmentUrl  String?
+  attachmentName String?
+  attachmentSize Int?
   isRead         Boolean  @default(false)
   createdAt      DateTime @default(now())
 }
