@@ -2,7 +2,8 @@ export const footerEn = {
   copyright: "© {year} <brand>VeltStack</brand>. All rights reserved.",
   backToTop: "Back to top",
   whatsApp: "Chat on WhatsApp",
-  whatsAppMessage: "Hello. I'm writing to ask for information.",
+  whatsAppMessage:
+    "Hello, I'm reaching out via the VeltStack website. I'd like to learn more about your website, mobile app, or digital refresh services. When you're available, could we chat briefly about my project?",
   servicesTitle: "Services",
   corporateTitle: "Explore",
   blogTitle: "Blog",

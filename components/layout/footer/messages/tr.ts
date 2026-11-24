@@ -2,7 +2,8 @@ export const footerTr = {
   copyright: "© {year} <brand>VeltStack</brand>. Tüm hakları saklıdır.",
   backToTop: "Sayfanın en üstüne çık",
   whatsApp: "WhatsApp ile yazın",
-  whatsAppMessage: "Merhabalar. Bilgi almak için yazıyorum.",
+  whatsAppMessage:
+    "Merhaba, VeltStack web siteniz üzerinden ulaşıyorum. Web sitesi, mobil uygulama veya dijital yenileme hizmetleriniz hakkında bilgi almak istiyorum. İhtiyacımı kısaca paylaşmak için müsait olduğunuzda yazabilir misiniz?",
   servicesTitle: "Hizmetler",
   corporateTitle: "Keşfet",
   blogTitle: "Blog",
