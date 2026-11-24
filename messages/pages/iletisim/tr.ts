@@ -1,8 +1,13 @@
 import {
   BUSINESS_ADDRESS_TEXT_TR,
   BUSINESS_HOURS_TR,
+  BUSINESS_PHONE_DISPLAY,
   GOOGLE_MAPS_URL,
+  whatsAppHref,
 } from "@/lib/business";
+
+const contactWhatsAppMessage =
+  "Merhaba, VeltStack web siteniz üzerinden ulaşıyorum. Web sitesi, mobil uygulama veya dijital yenileme hizmetleriniz hakkında bilgi almak istiyorum. İhtiyacımı kısaca paylaşmak için müsait olduğunuzda yazabilir misiniz?";
 
 export const contactTr = {
   formBadge: "Teklif Talebi",
@@ -110,7 +115,11 @@ export const contactTr = {
       value: BUSINESS_HOURS_TR,
       icon: "clock" as const,
     },
-    { label: "Telefon", value: "+90 537 799 74 39", href: "tel:+905377997439" },
+    {
+      label: "WhatsApp",
+      value: BUSINESS_PHONE_DISPLAY,
+      href: whatsAppHref(contactWhatsAppMessage),
+    },
     {
       label: "E-posta",
       value: "veltstack@outlook.com",

@@ -1,8 +1,13 @@
 import {
   BUSINESS_ADDRESS_TEXT_EN,
   BUSINESS_HOURS_EN,
+  BUSINESS_PHONE_DISPLAY,
   GOOGLE_MAPS_URL,
+  whatsAppHref,
 } from "@/lib/business";
+
+const contactWhatsAppMessage =
+  "Hello, I'm reaching out via the VeltStack website. I'd like to learn more about your website, mobile app, or digital refresh services. When you're available, could we chat briefly about my project?";
 
 export const contactEn = {
   formBadge: "Get a Quote",
@@ -110,7 +115,11 @@ export const contactEn = {
       value: BUSINESS_HOURS_EN,
       icon: "clock" as const,
     },
-    { label: "Phone", value: "+90 537 799 74 39", href: "tel:+905377997439" },
+    {
+      label: "WhatsApp",
+      value: BUSINESS_PHONE_DISPLAY,
+      href: whatsAppHref(contactWhatsAppMessage),
+    },
     {
       label: "Email",
       value: "veltstack@outlook.com",
