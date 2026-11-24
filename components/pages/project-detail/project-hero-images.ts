@@ -1,6 +1,8 @@
 import type { ProjectSlug } from "@/components/sections/projects/project-items";
 
 export const projectHeroImages: Partial<Record<ProjectSlug, string>> = {
+  veltstack: "/hero/veltstack.webp",
+  "dil-atolyesi": "/images/pages/projects/dil-atolyesi.webp",
   iqfinansai: "/images/pages/projects/iqfinansai.webp",
   "yazici-ticaret": "/images/pages/projects/yazici-ticaret.webp",
   gardossi: "/images/pages/projects/gardossi.webp",
@@ -10,6 +12,8 @@ export const projectHeroImages: Partial<Record<ProjectSlug, string>> = {
 };
 
 export const projectHeroMobileImages: Partial<Record<ProjectSlug, string>> = {
+  veltstack: "/hero/veltstack-mobile.webp",
+  "dil-atolyesi": "/images/pages/projects/dil-atolyesi-mobile.webp",
   iqfinansai: "/images/pages/projects/iqfinansai-mobile.webp",
   "yazici-ticaret": "/images/pages/projects/yazici-ticaret-mobile.webp",
   gardossi: "/images/pages/projects/gardossi-mobile.webp",

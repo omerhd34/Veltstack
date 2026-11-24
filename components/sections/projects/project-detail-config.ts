@@ -1,6 +1,27 @@
 import type { ProjectSlug } from "./project-items";
 
 export const projectTechStacks: Partial<Record<ProjectSlug, string[]>> = {
+  veltstack: [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "next-intl",
+    "Vercel",
+    "SEO",
+    "Google Analytics",
+  ],
+  "dil-atolyesi": [
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "Node.js",
+    "Prisma",
+    "PostgreSQL",
+    "REST API",
+    "Vercel",
+  ],
   iqfinansai: [
     "TypeScript",
     "React",
@@ -70,6 +91,8 @@ export const projectTechStacks: Partial<Record<ProjectSlug, string[]>> = {
 };
 
 export const projectDemoUrls: Partial<Record<ProjectSlug, string>> = {
+  veltstack: "https://www.veltstack.com/",
+  "dil-atolyesi": "https://www.dilatolyesi.com/",
   iqfinansai: "https://www.iqfinansai.com/",
   "yazici-ticaret": "https://yazici.gen.tr/",
   gardossi: "https://www.gardossi.com/",
@@ -79,6 +102,8 @@ export const projectDemoUrls: Partial<Record<ProjectSlug, string>> = {
 };
 
 export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {
+  veltstack: "/images/websites/veltstack.jpg",
+  "dil-atolyesi": "/images/websites/dil-atolyesi.png",
   iqfinansai: "/images/websites/IQfinansAI.png",
   "yazici-ticaret": "/images/websites/YaziciTicaret.png",
   gardossi: "/images/websites/gardossi.png",
@@ -88,6 +113,8 @@ export const projectImageUrls: Partial<Record<ProjectSlug, string>> = {
 };
 
 export const projectCoverGradients: Record<ProjectSlug, string> = {
+  veltstack: "from-[#1a2a22] via-[#2d4a3a] to-[#3a6b52]",
+  "dil-atolyesi": "from-[#1e2d4a] via-[#2d4570] to-[#3d6090]",
   iqfinansai: "from-[#0a2e1f] via-[#145c3a] to-[#1a7a4a]",
   "yazici-ticaret": "from-[#1a2f4f] via-[#2a4a72] to-[#3a6090]",
   gardossi: "from-[#1e3d24] via-[#2d5c35] to-[#4a8f55]",

@@ -12,11 +12,11 @@ import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { ProjectsShowcaseCarouselLazy } from "./ProjectsShowcaseCarouselLazy";
 
 const featuredProjectSlugs = new Set<ProjectSlug>([
-  "iqfinansai",
+  "veltstack",
   "yazici-ticaret",
+  "dil-atolyesi",
   "gardossi",
   "uzman-klinik-psikolog",
-  "portfolio",
   "onlinemuhasebe",
 ]);
 

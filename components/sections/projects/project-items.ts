@@ -39,8 +39,10 @@ import {
 } from "react-icons/lu";
 
 export const projectSlugs = [
-  "iqfinansai",
+  "veltstack",
   "yazici-ticaret",
+  "dil-atolyesi",
+  "iqfinansai",
   "gardossi",
   "uzman-klinik-psikolog",
   "portfolio",
@@ -93,12 +95,12 @@ export interface ProjectItemConfig {
 
 export const projectItems: ProjectItemConfig[] = [
   {
-    slug: "iqfinansai",
-    href: "/projeler/iqfinansai",
-    titleKey: "projectIqfinansTitle",
-    descKey: "projectIqfinansDesc",
-    navDescKey: "projectIqfinansDesc",
-    icon: LuChartLine,
+    slug: "veltstack",
+    href: "/projeler/veltstack",
+    titleKey: "projectVeltstackTitle",
+    descKey: "projectVeltstackDesc",
+    navDescKey: "projectVeltstackDesc",
+    icon: LuBriefcase,
   },
   {
     slug: "yazici-ticaret",
@@ -107,6 +109,14 @@ export const projectItems: ProjectItemConfig[] = [
     descKey: "projectYaziciDesc",
     navDescKey: "projectYaziciDesc",
     icon: LuShoppingCart,
+  },
+  {
+    slug: "dil-atolyesi",
+    href: "/projeler/dil-atolyesi",
+    titleKey: "projectDilAtolyesiTitle",
+    descKey: "projectDilAtolyesiDesc",
+    navDescKey: "projectDilAtolyesiDesc",
+    icon: LuLanguages,
   },
   {
     slug: "gardossi",
@@ -125,20 +135,28 @@ export const projectItems: ProjectItemConfig[] = [
     icon: LuBrain,
   },
   {
-    slug: "portfolio",
-    href: "/projeler/portfolio",
-    titleKey: "projectPortfolioTitle",
-    descKey: "projectPortfolioDesc",
-    navDescKey: "projectPortfolioDesc",
-    icon: LuGlobe,
-  },
-  {
     slug: "onlinemuhasebe",
     href: "/projeler/onlinemuhasebe",
     titleKey: "projectOnlinemuhasebeTitle",
     descKey: "projectOnlinemuhasebeDesc",
     navDescKey: "projectOnlinemuhasebeDesc",
     icon: LuCalculator,
+  },
+  {
+    slug: "iqfinansai",
+    href: "/projeler/iqfinansai",
+    titleKey: "projectIqfinansTitle",
+    descKey: "projectIqfinansDesc",
+    navDescKey: "projectIqfinansDesc",
+    icon: LuChartLine,
+  },
+  {
+    slug: "portfolio",
+    href: "/projeler/portfolio",
+    titleKey: "projectPortfolioTitle",
+    descKey: "projectPortfolioDesc",
+    navDescKey: "projectPortfolioDesc",
+    icon: LuGlobe,
   },
   {
     slug: "orivis",
