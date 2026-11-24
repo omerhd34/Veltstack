@@ -23,6 +23,9 @@ export default async function AdminMessagesPage() {
     serviceTier: message.serviceTier,
     budget: message.budget,
     content: message.content,
+    attachmentUrl: message.attachmentUrl,
+    attachmentName: message.attachmentName,
+    attachmentSize: message.attachmentSize,
     isRead: message.isRead,
     createdAt: message.createdAt.toISOString(),
   }));

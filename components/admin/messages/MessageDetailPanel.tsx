@@ -1,7 +1,18 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
-import { Check, Loader2, Mail, Phone, Send, Trash2, X } from "lucide-react";
+import {
+  Check,
+  ExternalLink,
+  Loader2,
+  Mail,
+  Paperclip,
+  Phone,
+  Send,
+  Trash2,
+  X,
+} from "lucide-react";
 import { resolveContactLabels } from "@/lib/contact-labels";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/shadcn/button";
@@ -224,6 +235,26 @@ export function MessageDetailPanel({
               {message.content?.trim() || "—"}
             </p>
           </div>
+
+          {message.attachmentUrl ? (
+            <div className="rounded-2xl border border-border/60 bg-white p-4 sm:p-5">
+              <p className="text-[10px] font-semibold tracking-widest text-muted-foreground">
+                EK DOSYA
+              </p>
+              <a
+                href={message.attachmentUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex max-w-full items-center gap-2 rounded-xl border border-border/60 bg-[#F8FAF9] px-3 py-2.5 text-sm font-medium text-foreground hover:bg-muted/40"
+              >
+                <Paperclip className="size-4 shrink-0 text-brand-accent" />
+                <span className="truncate">
+                  {message.attachmentName ?? "Dosyayı aç"}
+                </span>
+                <ExternalLink className="ml-auto size-3.5 shrink-0 text-muted-foreground" />
+              </a>
+            </div>
+          ) : null}
         </div>
 
         <div className="border-t border-border/60 bg-[#F8FAF9]/80 px-5 py-4 sm:px-6">

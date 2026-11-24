@@ -8,6 +8,9 @@ export type AdminMessageItem = {
   serviceTier: string | null;
   budget: string | null;
   content: string;
+  attachmentUrl: string | null;
+  attachmentName: string | null;
+  attachmentSize: number | null;
   isRead: boolean;
   createdAt: string;
 };
