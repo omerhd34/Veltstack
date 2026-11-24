@@ -1,6 +1,6 @@
 import {
   BUSINESS_ADDRESS_TEXT_TR,
-  BUSINESS_HOURS_TR,
+  BUSINESS_HOURS_LINES_TR,
   BUSINESS_PHONE_DISPLAY,
   GOOGLE_MAPS_URL,
   whatsAppHref,
@@ -15,24 +15,34 @@ export const contactTr = {
   formDescription:
     "Hedefinizi, zaman planınızı ve varsa mevcut altyapınızı kısaca yazın. Size en uygun çözümü ve net bir yol haritasını paylaşalım.",
 
-  fieldName: "Ad Soyad",
-  fieldNamePlaceholder: "Adınız ve soyadınız",
+  fieldName: "Ad ve Soyad",
+  fieldNamePlaceholder: "Adınızı ve soyadınızı giriniz",
   fieldEmail: "E-posta",
   fieldEmailPlaceholder: "ornek@sirket.com",
-  fieldPhone: "Telefon",
+  fieldPhone: "Telefon Numarası",
   fieldPhonePlaceholder: "5XX XXX XX XX",
-  fieldPhoneCountryLabel: "Ülke kodu",
+  fieldPhoneCountryLabel: "Ülke Kodu",
   fieldService: "Hizmet Türü",
-  fieldServicePlaceholder: "Hizmet seçin.",
+  fieldServicePlaceholder: "Hizmet seçiniz",
   fieldPackage: "Paket Seçimi",
-  fieldPackagePlaceholder: "Paket seçin.",
+  fieldPackagePlaceholder: "Paket seçiniz",
   fieldTier: "Kademe Tipi",
-  fieldTierPlaceholder: "Kademe seçin.",
+  fieldTierPlaceholder: "Kademe seçiniz",
   fieldBudget: "Bütçe Aralığı",
-  fieldBudgetPlaceholder: "Bütçe seçin.",
+  fieldBudgetPlaceholder: "Bütçe seçiniz",
   fieldMessage: "Mesajınız",
   fieldMessagePlaceholder:
     "Projenizi, beklentilerinizi ve varsa teknik gereksinimlerinizi anlatın…",
+  fieldAttachment: "Dosya ekle",
+  fieldAttachmentHint:
+    "Brief, logo veya referans dosyası paylaşırsanız teklifi daha net hazırlarız. PDF, görsel veya Word · en fazla 10 MB.",
+  fieldAttachmentButton: "Dosya seçiniz",
+  fieldAttachmentRemove: "Kaldır",
+  errorAttachmentSize: "Dosya en fazla 10 MB olabilir.",
+  errorAttachmentType:
+    "Desteklenen formatlar: PDF, PNG, JPG, WEBP, DOC, DOCX, ZIP.",
+  errorAttachmentUnavailable:
+    "Dosya yükleme şu an kullanılamıyor. Formu dosyasız gönderebilir veya e-posta ile iletebilirsiniz.",
 
   serviceOptions: [
     { value: "web-sitesi-gelistirme", label: "Web Sitesi Yapımı" },
@@ -112,7 +122,7 @@ export const contactTr = {
   contactItems: [
     {
       label: "Çalışma saatleri",
-      value: BUSINESS_HOURS_TR,
+      hoursLines: BUSINESS_HOURS_LINES_TR,
       icon: "clock" as const,
     },
     {
@@ -137,14 +147,14 @@ export const contactTr = {
       href: "https://www.omerhalisdemir.com.tr/",
     },
     {
-      label: "LinkedIn",
+      label: "LınkedIn",
       value: "omerhd1",
       href: "https://www.linkedin.com/in/omerhd1/",
     },
     {
-      label: "GitHub",
-      value: "omerhd34",
-      href: "https://github.com/omerhd34",
+      label: "Instagram",
+      value: "veltstack",
+      href: "https://www.instagram.com/veltstack/",
     },
   ],
 } as const;

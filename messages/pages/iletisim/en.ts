@@ -1,6 +1,6 @@
 import {
   BUSINESS_ADDRESS_TEXT_EN,
-  BUSINESS_HOURS_EN,
+  BUSINESS_HOURS_LINES_EN,
   BUSINESS_PHONE_DISPLAY,
   GOOGLE_MAPS_URL,
   whatsAppHref,
@@ -33,6 +33,16 @@ export const contactEn = {
   fieldMessage: "Your Message",
   fieldMessagePlaceholder:
     "Describe your project, expectations, and any technical requirements…",
+  fieldAttachment: "Attach a file",
+  fieldAttachmentHint:
+    "A brief, logo, or reference file helps us shape your quote. PDF, image, or Word · up to 10 MB.",
+  fieldAttachmentButton: "Choose file",
+  fieldAttachmentRemove: "Remove",
+  errorAttachmentSize: "The file must be 10 MB or smaller.",
+  errorAttachmentType:
+    "Supported formats: PDF, PNG, JPG, WEBP, DOC, DOCX, ZIP.",
+  errorAttachmentUnavailable:
+    "File upload is temporarily unavailable. Submit without a file or email us directly.",
 
   serviceOptions: [
     { value: "web-sitesi-gelistirme", label: "Website Building" },
@@ -112,7 +122,7 @@ export const contactEn = {
   contactItems: [
     {
       label: "Opening hours",
-      value: BUSINESS_HOURS_EN,
+      hoursLines: BUSINESS_HOURS_LINES_EN,
       icon: "clock" as const,
     },
     {
@@ -132,19 +142,19 @@ export const contactEn = {
       icon: "location" as const,
     },
     {
-      label: "Ömer Halis Demir | Portfolio",
+      label: "Portfolio",
       value: "omerhalisdemir.com.tr",
       href: "https://www.omerhalisdemir.com.tr/",
     },
     {
       label: "LinkedIn",
-      value: "ömer-halis-demir-7a9b79169",
+      value: "omerhd1",
       href: "https://www.linkedin.com/in/%C3%B6mer-halis-demir-7a9b79169",
     },
     {
-      label: "GitHub",
-      value: "omerhd34",
-      href: "https://github.com/omerhd34",
+      label: "Instagram",
+      value: "veltstack",
+      href: "https://www.instagram.com/veltstack/",
     },
   ],
 } as const;
