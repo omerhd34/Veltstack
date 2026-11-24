@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { Link } from "@/i18n/navigation";
 import { useUiStore } from "@/store/uiSlice";
 import { Button } from "@/components/ui/shadcn";
+import { whatsAppHref } from "@/lib/business";
 import { cn } from "@/lib/utils";
 import { NavbarLinks } from "./NavbarLinks";
 import { NavbarCta } from "./NavbarCta";
@@ -85,15 +86,15 @@ export function NavbarMobileMenu({ className }: NavbarMobileMenuProps) {
               >
                 <LuPhone className="size-4.5" aria-hidden />
               </Link>
-              <Link
-                href="https://wa.me/905377997439"
+              <a
+                href={whatsAppHref()}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
                 className="flex h-12 items-center justify-center rounded-full border border-brand-accent/15 bg-white/40 text-brand-accent transition-colors hover:border-brand-accent hover:bg-brand-accent hover:text-white"
               >
                 <FaWhatsapp className="size-4.5" aria-hidden />
-              </Link>
+              </a>
               <Link
                 href="mailto:veltstack@outlook.com"
                 aria-label="E-posta"
