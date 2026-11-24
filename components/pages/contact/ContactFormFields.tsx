@@ -1,10 +1,19 @@
 "use client";
 
-import { useState } from "react";
-import { LuLoader } from "react-icons/lu";
+import { useRef, useState } from "react";
+import { LuLoader, LuPaperclip, LuSend, LuX } from "react-icons/lu";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { useRouter } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
+import {
+  CONTACT_ATTACHMENT_ACCEPT,
+  validateContactAttachment,
+} from "@/lib/contact-attachment-policy";
 import { cn } from "@/lib/utils";
+import {
+  getContactPackageIcon,
+  getContactServiceIcon,
+} from "./contact-select-icons";
 import { ContactFormFieldShell } from "./ContactFormFieldShell";
 import { ContactFormSelect } from "./ContactFormSelect";
 import { ContactPhoneField } from "./ContactPhoneField";
@@ -36,6 +45,13 @@ interface ContactFormFieldsProps {
     fieldBudgetPlaceholder: string;
     fieldMessage: string;
     fieldMessagePlaceholder: string;
+    fieldAttachment: string;
+    fieldAttachmentHint: string;
+    fieldAttachmentButton: string;
+    fieldAttachmentRemove: string;
+    errorAttachmentSize: string;
+    errorAttachmentType: string;
+    errorAttachmentUnavailable: string;
     submitButton: string;
     submitting: string;
     errorMessage: string;
@@ -73,6 +89,8 @@ export function ContactFormFields({
   className,
 }: ContactFormFieldsProps) {
   const router = useRouter();
+  const locale = useLocale();
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [formState, setFormState] = useState<FormState>("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
@@ -86,6 +104,7 @@ export function ContactFormFields({
     defaultPhoneCountryCode,
   );
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [attachment, setAttachment] = useState<File | null>(null);
 
   const basePackageOptions =
     selectedService && labels.servicePackages[selectedService]
@@ -96,6 +115,21 @@ export function ContactFormFields({
     (o) => o.value === "belirsiz",
   )!;
   const packageOptions = [...basePackageOptions, unknownOption];
+
+  const serviceOptionsWithIcons = labels.serviceOptions.map((opt) => ({
+    ...opt,
+    icon: getContactServiceIcon(opt.value),
+  }));
+
+  const packageServiceKey =
+    selectedService && labels.servicePackages[selectedService]
+      ? selectedService
+      : "web-sitesi-gelistirme";
+
+  const packageOptionsWithIcons = packageOptions.map((opt) => ({
+    ...opt,
+    icon: getContactPackageIcon(packageServiceKey, opt.value),
+  }));
 
   function clearFieldError(key: FieldKey) {
     setFieldErrors((prev) => {
@@ -158,35 +192,101 @@ export function ContactFormFields({
     setFieldErrors({});
     setFormState("submitting");
 
-    const data = {
-      name: name.trim(),
-      email: email.trim(),
-      phone: phoneNumber.trim()
-        ? `${phoneCountryCode} ${phoneNumber.trim()}`
-        : undefined,
-      service: selectedService,
-      servicePackage: selectedPackage,
-      serviceTier: resolvedTier,
-      budget: selectedBudget,
-      content,
-    };
+    if (attachment) {
+      const validation = validateContactAttachment(attachment);
+      if (validation === "size") {
+        setFormState("error");
+        setErrorMsg(labels.errorAttachmentSize);
+        return;
+      }
+      if (validation === "type") {
+        setFormState("error");
+        setErrorMsg(labels.errorAttachmentType);
+        return;
+      }
+    }
+
+    const formData = new FormData();
+    formData.append("name", name.trim());
+    formData.append("email", email.trim());
+    if (phoneNumber.trim()) {
+      formData.append("phone", `${phoneCountryCode} ${phoneNumber.trim()}`);
+    }
+    formData.append("service", selectedService);
+    formData.append("servicePackage", selectedPackage);
+    formData.append("serviceTier", resolvedTier);
+    formData.append("budget", selectedBudget);
+    formData.append("content", content);
+    formData.append("locale", locale === "en" ? "en" : "tr");
+    if (attachment) {
+      formData.append("attachment", attachment);
+    }
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: formData,
       });
 
       if (!res.ok) {
-        const json = await res.json().catch(() => ({}));
-        throw new Error(json?.error ?? "Server error");
+        const json = (await res.json().catch(() => ({}))) as {
+          error?: string;
+          code?: string;
+        };
+        if (json.error === "attachment") {
+          if (json.code === "size") {
+            setErrorMsg(labels.errorAttachmentSize);
+          } else if (json.code === "type") {
+            setErrorMsg(labels.errorAttachmentType);
+          } else if (json.code === "blob_not_configured") {
+            setErrorMsg(labels.errorAttachmentUnavailable);
+          } else {
+            setErrorMsg(labels.errorAttachmentType);
+          }
+          setFormState("error");
+          return;
+        }
+        throw new Error("Server error");
       }
 
       router.push("/tesekkurler");
     } catch {
       setFormState("error");
       setErrorMsg(labels.errorMessage);
+    }
+  }
+
+  function handleAttachmentChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    setErrorMsg("");
+    if (!file) {
+      setAttachment(null);
+      return;
+    }
+    const validation = validateContactAttachment(file);
+    if (validation === "size") {
+      setAttachment(null);
+      setFormState("error");
+      setErrorMsg(labels.errorAttachmentSize);
+      e.target.value = "";
+      return;
+    }
+    if (validation === "type") {
+      setAttachment(null);
+      setFormState("error");
+      setErrorMsg(labels.errorAttachmentType);
+      e.target.value = "";
+      return;
+    }
+    setFieldErrors({});
+    setFormState("idle");
+    setAttachment(file);
+  }
+
+  function clearAttachment() {
+    setAttachment(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
     }
   }
 
@@ -285,7 +385,7 @@ export function ContactFormFields({
             name="service"
             required
             placeholder={labels.fieldServicePlaceholder}
-            options={labels.serviceOptions}
+            options={serviceOptionsWithIcons}
             value={selectedService}
             invalid={fieldErrors.service}
             onChange={(value) => {
@@ -312,7 +412,7 @@ export function ContactFormFields({
             name="servicePackage"
             required
             placeholder={labels.fieldPackagePlaceholder}
-            options={packageOptions}
+            options={packageOptionsWithIcons}
             value={selectedPackage}
             invalid={fieldErrors.servicePackage}
             onChange={(value) => {
@@ -393,6 +493,52 @@ export function ContactFormFields({
         </ContactFormFieldShell>
       </div>
 
+      <div>
+        <label htmlFor="cf-attachment" className={labelBase}>
+          <span className={labelText}>{labels.fieldAttachment}</span>
+        </label>
+        <p className="mb-2 text-xs leading-relaxed text-muted-foreground">
+          {labels.fieldAttachmentHint}
+        </p>
+        <input
+          ref={fileInputRef}
+          id="cf-attachment"
+          name="attachment"
+          type="file"
+          accept={CONTACT_ATTACHMENT_ACCEPT}
+          className="sr-only"
+          onChange={handleAttachmentChange}
+        />
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+          <button
+            type="button"
+            onClick={() => fileInputRef.current?.click()}
+            className={cn(
+              "inline-flex h-11 items-center justify-center gap-2 rounded-xl border border-border/60 bg-background px-4 text-sm font-semibold text-foreground",
+              "transition-colors hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-brand-accent/25",
+            )}
+          >
+            <LuPaperclip className="size-4 shrink-0" aria-hidden />
+            {labels.fieldAttachmentButton}
+          </button>
+          {attachment ? (
+            <div className="flex min-h-11 flex-1 items-center justify-between gap-2 rounded-xl border border-border/60 bg-background px-3 py-2 text-sm">
+              <span className="truncate text-foreground/90">
+                {attachment.name}
+              </span>
+              <button
+                type="button"
+                onClick={clearAttachment}
+                className="inline-flex shrink-0 items-center gap-1 rounded-lg px-2 py-1 text-xs font-semibold text-muted-foreground hover:bg-muted/50 hover:text-foreground"
+              >
+                <LuX className="size-3.5" aria-hidden />
+                {labels.fieldAttachmentRemove}
+              </button>
+            </div>
+          ) : null}
+        </div>
+      </div>
+
       {formState === "error" && errorMsg && (
         <p
           role="alert"
@@ -431,7 +577,10 @@ export function ContactFormFields({
               {labels.submitting}
             </>
           ) : (
-            labels.submitButton
+            <>
+              <LuSend className="size-4 shrink-0" aria-hidden />
+              {labels.submitButton}
+            </>
           )}
         </span>
       </button>

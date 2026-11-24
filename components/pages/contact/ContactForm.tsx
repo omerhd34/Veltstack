@@ -17,6 +17,7 @@ interface SelectOption {
 interface ContactItem {
   label: string;
   value?: string;
+  hoursLines?: { days: string; hours: string }[];
   href?: string;
   icon?: "location" | "clock";
 }
@@ -43,6 +44,13 @@ interface ContactFormProps {
   fieldBudgetPlaceholder: string;
   fieldMessage: string;
   fieldMessagePlaceholder: string;
+  fieldAttachment: string;
+  fieldAttachmentHint: string;
+  fieldAttachmentButton: string;
+  fieldAttachmentRemove: string;
+  errorAttachmentSize: string;
+  errorAttachmentType: string;
+  errorAttachmentUnavailable: string;
   submitButton: string;
   submitting: string;
   errorMessage: string;

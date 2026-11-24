@@ -31,6 +31,7 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
   const contactItems = t.raw("contactItems") as {
     label: string;
     value?: string;
+    hoursLines?: { days: string; hours: string }[];
     href?: string;
     icon?: "location" | "clock";
   }[];
@@ -58,6 +59,13 @@ export async function ContactPageView({ className }: ContactPageViewProps) {
         fieldBudgetPlaceholder={t("fieldBudgetPlaceholder")}
         fieldMessage={t("fieldMessage")}
         fieldMessagePlaceholder={t("fieldMessagePlaceholder")}
+        fieldAttachment={t("fieldAttachment")}
+        fieldAttachmentHint={t("fieldAttachmentHint")}
+        fieldAttachmentButton={t("fieldAttachmentButton")}
+        fieldAttachmentRemove={t("fieldAttachmentRemove")}
+        errorAttachmentSize={t("errorAttachmentSize")}
+        errorAttachmentType={t("errorAttachmentType")}
+        errorAttachmentUnavailable={t("errorAttachmentUnavailable")}
         submitButton={t("submitButton")}
         submitting={t("submitting")}
         errorMessage={t("errorMessage")}
