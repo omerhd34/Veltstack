@@ -135,20 +135,20 @@ export const projectItems: ProjectItemConfig[] = [
     icon: LuBrain,
   },
   {
-    slug: "onlinemuhasebe",
-    href: "/projeler/onlinemuhasebe",
-    titleKey: "projectOnlinemuhasebeTitle",
-    descKey: "projectOnlinemuhasebeDesc",
-    navDescKey: "projectOnlinemuhasebeDesc",
-    icon: LuCalculator,
-  },
-  {
     slug: "iqfinansai",
     href: "/projeler/iqfinansai",
     titleKey: "projectIqfinansTitle",
     descKey: "projectIqfinansDesc",
     navDescKey: "projectIqfinansDesc",
     icon: LuChartLine,
+  },
+  {
+    slug: "onlinemuhasebe",
+    href: "/projeler/onlinemuhasebe",
+    titleKey: "projectOnlinemuhasebeTitle",
+    descKey: "projectOnlinemuhasebeDesc",
+    navDescKey: "projectOnlinemuhasebeDesc",
+    icon: LuCalculator,
   },
   {
     slug: "portfolio",
