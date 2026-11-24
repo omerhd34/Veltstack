@@ -89,9 +89,10 @@ export async function ProjectDetailView({
     );
   }
 
-  const heroImage = projectHeroImages[slug];
-  const heroMobileImage = projectHeroMobileImages[slug];
-  if (!heroImage || !heroMobileImage) return null;
+  const heroImage =
+    projectHeroImages[slug] ?? "/images/pages/projects/hero.webp";
+  const heroMobileImage =
+    projectHeroMobileImages[slug] ?? "/images/pages/projects/hero-mobile.webp";
 
   return (
     <div className={className}>
