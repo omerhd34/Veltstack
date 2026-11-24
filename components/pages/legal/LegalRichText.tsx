@@ -5,14 +5,20 @@ const TOKEN_RE = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
 const BOLD_RE = /^\*\*([^*]+)\*\*$/;
 const LINK_RE = /^\[([^\]]+)\]\(([^)]+)\)$/;
 
-export function LegalRichText({ text }: { text: string }): ReactNode {
+export function LegalRichText({
+  text,
+  strongClassName = "font-semibold text-foreground",
+}: {
+  text: string;
+  strongClassName?: string;
+}): ReactNode {
   const parts = text.split(TOKEN_RE);
 
   return parts.map((part, index) => {
     const bold = part.match(BOLD_RE);
     if (bold) {
       return (
-        <strong key={index} className="font-semibold text-foreground">
+        <strong key={index} className={strongClassName}>
           {bold[1]}
         </strong>
       );
