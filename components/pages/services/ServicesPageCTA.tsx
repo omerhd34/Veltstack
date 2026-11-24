@@ -5,6 +5,7 @@ import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SectionScrollReveal } from "@/components/ui/SectionScrollReveal";
 import { SiteContainer } from "@/components/layout/SiteContainer";
 import { CTAHighlights } from "@/components/sections/cta/CTAHighlights";
+import { LegalRichText } from "@/components/pages/legal/LegalRichText";
 import { toLatinUppercase } from "@/lib/utils";
 
 interface ServicesPageCTAProps {
@@ -53,61 +54,66 @@ export async function ServicesPageCTA({
       <SiteContainer className="relative">
         <SectionScrollReveal direction="left">
           <div className="relative overflow-hidden rounded-3xl border border-border/70 bg-[#0A0A0F] px-6 py-14 shadow-[0_24px_80px_rgb(58_107_82/0.12)] md:px-14 md:py-20">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute left-1/2 top-0 size-120 -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgb(58_107_82/0.12),transparent_60%)]"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-emerald-400/30 to-transparent md:inset-x-12"
-          />
-
-          <div
-            className={`relative mx-auto text-center ${highlights ? "max-w-5xl" : "max-w-4xl"}`}
-          >
-            {badge ? (
-              <SectionBadge>{toLatinUppercase(badge, locale)}</SectionBadge>
-            ) : null}
-
-            <h2
-              id="page-cta-title"
-              className={`font-(family-name:--font-heading) text-3xl font-bold leading-[1.08] tracking-tight text-white md:text-4xl lg:text-5xl ${badge ? "mt-5" : ""}`}
-            >
-              {hasSplitTitle ? (
-                <>
-                  {titleLead}{" "}
-                  <span className="bg-linear-to-r from-emerald-200 via-emerald-300 to-brand-accent bg-clip-text text-transparent">
-                    {titleAccent}
-                  </span>
-                </>
-              ) : (
-                title
-              )}
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-4xl text-base leading-relaxed text-emerald-50/60 md:max-w-5xl md:text-lg lg:max-w-6xl">
-              {subtitle}
-            </p>
-
-            {highlights ? <CTAHighlights points={highlights} /> : null}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute left-1/2 top-0 size-120 -translate-x-1/2 rounded-full bg-brand-accent/12 blur-[90px]"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgb(58_107_82/0.12),transparent_60%)]"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-8 top-0 h-px bg-linear-to-r from-transparent via-emerald-400/30 to-transparent md:inset-x-12"
+            />
 
             <div
-              className={`flex flex-col items-center ${highlights ? "mt-10" : "mt-8"}`}
+              className={`relative mx-auto text-center ${highlights ? "max-w-5xl" : "max-w-4xl"}`}
             >
-              <PrimaryCtaLink
-                href="/iletisim"
-                variant="accent"
-                className="h-13 px-10"
-                showArrow={false}
-                leadingIcon={<LuMessageCircle className="size-5" aria-hidden />}
+              {badge ? (
+                <SectionBadge>{toLatinUppercase(badge, locale)}</SectionBadge>
+              ) : null}
+
+              <h2
+                id="page-cta-title"
+                className={`font-(family-name:--font-heading) text-3xl font-bold leading-[1.08] tracking-tight text-white md:text-4xl lg:text-5xl ${badge ? "mt-5" : ""}`}
               >
-                {buttonLabel}
-              </PrimaryCtaLink>
-            </div>
+                {hasSplitTitle ? (
+                  <>
+                    {titleLead}{" "}
+                    <span className="bg-linear-to-r from-emerald-200 via-emerald-300 to-brand-accent bg-clip-text text-transparent">
+                      {titleAccent}
+                    </span>
+                  </>
+                ) : (
+                  title
+                )}
+              </h2>
+
+              <p className="mx-auto mt-6 max-w-4xl text-base leading-relaxed text-emerald-50/60 md:max-w-5xl md:text-lg lg:max-w-6xl">
+                <LegalRichText
+                  text={subtitle}
+                  strongClassName="font-semibold text-emerald-50"
+                />
+              </p>
+
+              {highlights ? <CTAHighlights points={highlights} /> : null}
+
+              <div
+                className={`flex flex-col items-center ${highlights ? "mt-10" : "mt-8"}`}
+              >
+                <PrimaryCtaLink
+                  href="/iletisim"
+                  variant="accent"
+                  className="h-13 px-10"
+                  showArrow={false}
+                  leadingIcon={
+                    <LuMessageCircle className="size-5" aria-hidden />
+                  }
+                >
+                  {buttonLabel}
+                </PrimaryCtaLink>
+              </div>
             </div>
           </div>
         </SectionScrollReveal>
