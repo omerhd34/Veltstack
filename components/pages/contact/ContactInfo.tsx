@@ -10,7 +10,6 @@ import {
 } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa6";
 import type { IconType } from "react-icons";
-import { Link } from "@/i18n/navigation";
 import { BorderTrace } from "@/components/ui/BorderTrace";
 import { cn } from "@/lib/utils";
 
@@ -204,7 +203,7 @@ export function ContactInfo({
                 key={item.label}
                 className={cn(stretchItems && "flex min-h-0 flex-1")}
               >
-                <Link
+                <a
                   href={item.href}
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel={
@@ -219,7 +218,7 @@ export function ContactInfo({
                 >
                   <BorderTrace durationSec={1.4} />
                   {content}
-                </Link>
+                </a>
               </li>
             );
           }
