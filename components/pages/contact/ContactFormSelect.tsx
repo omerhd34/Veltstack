@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/role-supports-aria-props */
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { IconType } from "react-icons";
 import { LuCheck, LuChevronDown } from "react-icons/lu";
 import { ContactFormFieldShell } from "./ContactFormFieldShell";
 import { cn } from "@/lib/utils";
@@ -8,6 +10,7 @@ import { cn } from "@/lib/utils";
 export interface ContactSelectOption {
   value: string;
   label: string;
+  icon?: IconType;
 }
 
 interface ContactFormSelectProps {
@@ -38,7 +41,9 @@ export function ContactFormSelect({
 }: ContactFormSelectProps) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const selectedLabel = options.find((o) => o.value === value)?.label;
+  const selectedOption = options.find((o) => o.value === value);
+  const selectedLabel = selectedOption?.label;
+  const SelectedIcon = selectedOption?.icon;
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -85,8 +90,15 @@ export function ContactFormSelect({
             !selectedLabel && "text-muted-foreground/50",
           )}
         >
-          <span className="truncate pr-2 text-left">
-            {selectedLabel ?? placeholder}
+          <span className="flex min-w-0 flex-1 items-center gap-2.5 truncate pr-2 text-left">
+            {SelectedIcon ? (
+              <SelectedIcon
+                className="size-4 shrink-0 text-brand-accent"
+                strokeWidth={2}
+                aria-hidden
+              />
+            ) : null}
+            <span className="truncate">{selectedLabel ?? placeholder}</span>
           </span>
           <LuChevronDown
             className={cn(
@@ -106,6 +118,7 @@ export function ContactFormSelect({
         >
           {options.map((opt) => {
             const isSelected = value === opt.value;
+            const OptionIcon = opt.icon;
 
             return (
               <li key={opt.value} role="presentation">
@@ -124,7 +137,21 @@ export function ContactFormSelect({
                       : "text-foreground hover:bg-muted/50",
                   )}
                 >
-                  <span className="leading-snug">{opt.label}</span>
+                  <span className="flex min-w-0 flex-1 items-center gap-2.5 leading-snug">
+                    {OptionIcon ? (
+                      <OptionIcon
+                        className={cn(
+                          "size-4 shrink-0",
+                          isSelected
+                            ? "text-brand-accent"
+                            : "text-muted-foreground",
+                        )}
+                        strokeWidth={isSelected ? 2.25 : 2}
+                        aria-hidden
+                      />
+                    ) : null}
+                    <span>{opt.label}</span>
+                  </span>
                   {isSelected && (
                     <LuCheck className="size-4 shrink-0" strokeWidth={2.5} />
                   )}
