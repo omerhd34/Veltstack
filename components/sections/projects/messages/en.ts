@@ -1,4 +1,10 @@
 export const projectsHomeEn = {
+  projectVeltstackTitle: "VeltStack | Corporate Website",
+  projectVeltstackDesc:
+    "Software agency corporate site. Service packages, project showcase, blog, and schedule-a-call flow under one brand.",
+  projectDilAtolyesiTitle: "Dil Atölyesi | Learning Platform",
+  projectDilAtolyesiDesc:
+    "English learning platform. A1–C2 level path, AI-powered exercises, and a progress dashboard in one workshop.",
   projectIqfinansTitle: "IQfinansAI | SaaS Platform",
   projectIqfinansDesc:
     "AI-powered personal finance platform. Income, expenses, budgets and debt management in one dashboard; spending insights that clarify financial decisions.",

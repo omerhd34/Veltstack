@@ -1,4 +1,10 @@
 export const projectsHomeTr = {
+  projectVeltstackTitle: "VeltStack | Kurumsal Web Sitesi",
+  projectVeltstackDesc:
+    "Yazılım ajansı kurumsal sitesi. Hizmet paketleri, proje vitrini, blog ve görüşme planlama akışını tek marka çatısında sunar.",
+  projectDilAtolyesiTitle: "Dil Atölyesi | Eğitim Platformu",
+  projectDilAtolyesiDesc:
+    "İngilizce öğrenim platformu. A1–C2 seviye yolu, yapay zeka destekli alıştırmalar ve ilerleme paneli tek atölyede birleşir.",
   projectIqfinansTitle: "IQfinansAI | AI Finans Platformu",
   projectIqfinansDesc:
     "Yapay zekâ destekli kişisel finans platformu. Gelir, gider, bütçe ve borç-alacak yönetimini tek panelde sunuyor; harcama analizleri finansal kararları netleştiriyor.",
